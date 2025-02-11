@@ -79,7 +79,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableKernelVersions.
+         * <p>The minor versions to which you can update the current minor version of the cluster.</p>
          */
         public Builder availableKernelVersions(java.util.List<AvailableKernelVersions> availableKernelVersions) {
             this.availableKernelVersions = availableKernelVersions;
@@ -87,7 +87,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireDate.
+         * <p>The maintenance expiration time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. After the time arrives, the system no longer maintains the version. If any issues occur, update the minor version of the cluster to a later version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-12T16:00:00Z</p>
          */
         public Builder expireDate(String expireDate) {
             this.expireDate = expireDate;
@@ -95,7 +98,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * KernelVersion.
+         * <p>The minor version of the cluster. Example: <strong>3.1.8</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1.8</p>
          */
         public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = kernelVersion;
@@ -103,7 +109,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +182,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
             private String releaseDate; 
 
             /**
-             * ExpireDate.
+             * <p>The maintenance expiration time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. After the time arrives, the system no longer maintains the version. If any issues occur, update the minor version of the cluster to a later version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-17T16:00:00Z</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -181,7 +193,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
             }
 
             /**
-             * KernelVersion.
+             * <p>The minor version. Example: <strong>3.1.9</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.1.9</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -189,7 +204,10 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseDate.
+             * <p>The time when the minor version was released. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-17T16:00:00Z</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;

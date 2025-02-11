@@ -103,7 +103,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Items.
+         * <p>The queried suggestions.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -111,7 +111,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,15 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +138,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96A55627-28E9-5E47-B8F6-D786BE551349</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +149,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * SchemaTableNames.
+         * <p>The name of the table in the DatabaseName.TableName format.</p>
          */
         public Builder schemaTableNames(java.util.List<String> schemaTableNames) {
             this.schemaTableNames = schemaTableNames;
@@ -143,7 +157,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10192</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -309,7 +326,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * AdviceDate.
+             * <p>The date when the suggestion is generated.The date is in the yyyyMMdd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20221124</p>
              */
             public Builder adviceDate(String adviceDate) {
                 this.adviceDate = adviceDate;
@@ -317,7 +337,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * AdviceId.
+             * <p>The suggestion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcd04135-0925-4aed-a5a7-e7d92cb1****</p>
              */
             public Builder adviceId(String adviceId) {
                 this.adviceId = adviceId;
@@ -325,7 +348,14 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * AdviceType.
+             * <p>The type of the suggestion. Valid values:</p>
+             * <ul>
+             * <li><strong>INDEX</strong>: index optimization.</li>
+             * <li><strong>TIERING</strong>: hot and cold data optimization.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INDEX</p>
              */
             public Builder adviceType(String adviceType) {
                 this.adviceType = adviceType;
@@ -333,7 +363,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * Benefit.
+             * <p>The benefit of the suggestion.</p>
              */
             public Builder benefit(String benefit) {
                 this.benefit = benefit;
@@ -341,7 +371,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Pages start from page 1. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -349,7 +382,15 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Valid values:</p>
+             * <ul>
+             * <li><strong>30</strong> (default)</li>
+             * <li><strong>50</strong></li>
+             * <li><strong>100</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -357,7 +398,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason why the suggestion was generated.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -365,7 +406,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * <p>The SQL statement that is used to apply the suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alter table <code>schema1</code>.<code>table1</code> drop key col1_1_idx</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -373,7 +417,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -381,7 +428,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -389,7 +439,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10192</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

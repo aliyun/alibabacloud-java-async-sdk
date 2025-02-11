@@ -67,7 +67,10 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The status code. The value 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -75,7 +78,7 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -83,7 +86,10 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>494486CE-6F49-574E-B304-29127EA12E36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +159,10 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
             private java.util.List<String> instances; 
 
             /**
-             * Capacity.
+             * <p>The size of the lake cache space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -161,7 +170,10 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * <p>The size of the data that occupies the lake cache space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -169,7 +181,7 @@ public class ModifyLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * <p>The clusters that share the lake cache space.</p>
              */
             public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;

@@ -55,7 +55,7 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * <p>The queried storage nodes.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -63,7 +63,10 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0BF6685-0519-543E-90F8-DB8949E4D5F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +124,10 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
             private String node; 
 
             /**
-             * DiskUsageRatio.
+             * <p>The disk usage of the storage node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90.5</p>
              */
             public Builder diskUsageRatio(String diskUsageRatio) {
                 this.diskUsageRatio = diskUsageRatio;
@@ -129,7 +135,10 @@ public class DescribeInclinedNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Node.
+             * <p>The number of the storage node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node1</p>
              */
             public Builder node(String node) {
                 this.node = node;

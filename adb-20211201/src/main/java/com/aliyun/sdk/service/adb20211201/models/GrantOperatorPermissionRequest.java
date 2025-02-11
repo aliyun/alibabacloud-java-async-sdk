@@ -146,6 +146,7 @@ public class GrantOperatorPermissionRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,7 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
+         * <p>The expiration time of the service account permissions. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +190,11 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
+         * <p>The name of the permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>Control</strong>: the configuration permissions. The service account is granted the permissions to query and modify cluster configurations.</li>
+         * <li><strong>Data</strong>: the data permissions. The service account is granted the permissions to query schemas, indexes, and SQL statements.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -159,7 +159,10 @@ public class DescribeApsDatasourcesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -168,7 +171,10 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
-         * DatasourceName.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder datasourceName(String datasourceName) {
             this.putBodyParameter("DatasourceName", datasourceName);
@@ -177,7 +183,10 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
-         * DatasourceType.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder datasourceType(String datasourceType) {
             this.putBodyParameter("DatasourceType", datasourceType);
@@ -186,7 +195,10 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-30</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -195,6 +207,7 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +220,7 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +233,10 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -228,7 +245,10 @@ public class DescribeApsDatasourcesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

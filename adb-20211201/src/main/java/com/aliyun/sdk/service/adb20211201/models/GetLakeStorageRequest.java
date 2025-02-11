@@ -87,7 +87,10 @@ public class GetLakeStorageRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-*******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -96,7 +99,12 @@ public class GetLakeStorageRequest extends Request {
         }
 
         /**
-         * LakeStorageId.
+         * <p>The lake storage ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder lakeStorageId(String lakeStorageId) {
             this.putQueryParameter("LakeStorageId", lakeStorageId);
@@ -105,7 +113,10 @@ public class GetLakeStorageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

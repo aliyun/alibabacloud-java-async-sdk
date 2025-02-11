@@ -55,7 +55,12 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * APSJobDetail.
+         * <p>The queried job.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder APSJobDetail(APSJobDetail APSJobDetail) {
             this.APSJobDetail = APSJobDetail;
@@ -63,7 +68,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-E606-4A42-BF6D-</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +201,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             private String targetTableMode; 
 
             /**
-             * DbList.
+             * <p>The objects that are synchronized.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -201,7 +212,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointInstanceID.
+             * <p>The ID of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-******</p>
              */
             public Builder destinationEndpointInstanceID(String destinationEndpointInstanceID) {
                 this.destinationEndpointInstanceID = destinationEndpointInstanceID;
@@ -209,7 +223,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpointRegion.
+             * <p>The region of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder destinationEndpointRegion(String destinationEndpointRegion) {
                 this.destinationEndpointRegion = destinationEndpointRegion;
@@ -217,7 +234,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionList.
+             * <p>The partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder partitionList(String partitionList) {
                 this.partitionList = partitionList;
@@ -225,7 +245,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointInstanceID.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*******</p>
              */
             public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
                 this.sourceEndpointInstanceID = sourceEndpointInstanceID;
@@ -233,7 +256,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpointRegion.
+             * <p>The region of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder sourceEndpointRegion(String sourceEndpointRegion) {
                 this.sourceEndpointRegion = sourceEndpointRegion;
@@ -241,7 +267,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -249,7 +278,10 @@ public class DescribeApsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetTableMode.
+             * <p>The mode of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder targetTableMode(String targetTableMode) {
                 this.targetTableMode = targetTableMode;

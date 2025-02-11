@@ -88,7 +88,10 @@ public class DeleteLakeStorageRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp*********</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -97,6 +100,7 @@ public class DeleteLakeStorageRequest extends Request {
         }
 
         /**
+         * <p>The ID of the lake storage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +115,10 @@ public class DeleteLakeStorageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

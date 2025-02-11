@@ -67,7 +67,10 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The status code. The value 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -75,7 +78,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -83,7 +86,10 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +183,10 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             private java.util.List<String> instances; 
 
             /**
-             * Capacity.
+             * <p>The size of the lake cache space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -185,7 +194,10 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-bp10b6646l07akdt</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -193,7 +205,10 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * <p>The size of the data that occupies the lake cache space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -201,7 +216,10 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * EnableLakeCache.
+             * <p>Indicates whether the lake cache feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableLakeCache(Boolean enableLakeCache) {
                 this.enableLakeCache = enableLakeCache;
@@ -209,7 +227,7 @@ public class DescribeLakeCacheSizeResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * <p>The clusters that share the lake cache space.</p>
              */
             public Builder instances(java.util.List<String> instances) {
                 this.instances = instances;

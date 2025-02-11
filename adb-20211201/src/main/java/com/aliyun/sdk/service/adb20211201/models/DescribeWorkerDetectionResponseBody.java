@@ -79,7 +79,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-xxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -87,7 +90,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -95,7 +98,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5B37B61-E6C9-5FE0-9374-45BAA548AEF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -197,7 +206,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private Long totalValue; 
 
             /**
-             * AvgValue.
+             * <p>The average value of the operator metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2234</p>
              */
             public Builder avgValue(Double avgValue) {
                 this.avgValue = avgValue;
@@ -205,7 +217,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value of the operator metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>444</p>
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -213,7 +228,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCount.
+             * <p>The number of occurrences of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder operatorCount(Long operatorCount) {
                 this.operatorCount = operatorCount;
@@ -221,7 +239,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aggregation</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -229,7 +250,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalValue.
+             * <p>The cumulative value of the operator metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder totalValue(Long totalValue) {
                 this.totalValue = totalValue;
@@ -288,7 +312,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private java.util.List<SearchResults> searchResults; 
 
             /**
-             * MetricName.
+             * <p>The detection result items of operator metric aggregation.</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -296,7 +320,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SearchResults.
+             * <p>The detection result items of operator metric aggregation.</p>
              */
             public Builder searchResults(java.util.List<SearchResults> searchResults) {
                 this.searchResults = searchResults;
@@ -451,7 +475,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String stageId; 
 
             /**
-             * InputRows.
+             * <p>The number of rows input by the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -459,7 +486,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * InputSize.
+             * <p>The amount of data input by the operator. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputSize(Long inputSize) {
                 this.inputSize = inputSize;
@@ -467,7 +497,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCost.
+             * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -475,7 +508,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorInfo.
+             * <p>The property information about the operator.</p>
              */
             public Builder operatorInfo(String operatorInfo) {
                 this.operatorInfo = operatorInfo;
@@ -483,7 +516,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TableScan</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -491,7 +527,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OutputRows.
+             * <p>The number of rows output by the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -499,7 +538,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OutputSize.
+             * <p>The amount of data output by the operator. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outputSize(Long outputSize) {
                 this.outputSize = outputSize;
@@ -507,7 +549,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * <p>The peak memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -515,7 +560,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The query ID that can be used for diagnostics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024041909301402103302422803151411141</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -523,7 +571,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * <p>The stage ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stage[2]</p>
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -582,7 +633,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private java.util.List<OperatorDetailsSearchResults> searchResults; 
 
             /**
-             * MetricName.
+             * <p>The name of the detection metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PeakMemory</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -590,7 +644,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SearchResults.
+             * <p>The detection result items of abnormal operators.</p>
              */
             public Builder searchResults(java.util.List<OperatorDetailsSearchResults> searchResults) {
                 this.searchResults = searchResults;
@@ -697,7 +751,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private Long totalDataSize; 
 
             /**
-             * DDL.
+             * <p>The SQL statement that is used to create the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create table test(id varchar)</p>
              */
             public Builder DDL(String DDL) {
                 this.DDL = DDL;
@@ -705,7 +762,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionCount.
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder partitionCount(String partitionCount) {
                 this.partitionCount = partitionCount;
@@ -713,7 +773,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionIds.
+             * <p>The ID of the improper partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[2024,2025]</p>
              */
             public Builder partitionIds(String partitionIds) {
                 this.partitionIds = partitionIds;
@@ -721,7 +784,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nxg</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -729,7 +795,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhw_place_order</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -737,7 +806,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSize.
+             * <p>The total data size of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder totalDataSize(Long totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -892,7 +964,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private Long totalRowCount; 
 
             /**
-             * DDL.
+             * <p>The SQL statement that is used to create the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create table test(id varchar)</p>
              */
             public Builder DDL(String DDL) {
                 this.DDL = DDL;
@@ -900,7 +975,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionCount.
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder partitionCount(Integer partitionCount) {
                 this.partitionCount = partitionCount;
@@ -908,7 +986,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>platfunc</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -916,7 +997,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * ShardSkewedRows.
+             * <p>The number of skewed rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder shardSkewedRows(String shardSkewedRows) {
                 this.shardSkewedRows = shardSkewedRows;
@@ -924,7 +1008,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls_log_cheat_action</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -932,7 +1019,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDataSize.
+             * <p>The total data size of the table. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder totalDataSize(Long totalDataSize) {
                 this.totalDataSize = totalDataSize;
@@ -940,7 +1030,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLocalDataSize.
+             * <p>The size of hot data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder totalLocalDataSize(String totalLocalDataSize) {
                 this.totalLocalDataSize = totalLocalDataSize;
@@ -948,7 +1041,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPkSize.
+             * <p>The data size of the primary key. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder totalPkSize(Long totalPkSize) {
                 this.totalPkSize = totalPkSize;
@@ -956,7 +1052,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRemoteDataSize.
+             * <p>The size of cold data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder totalRemoteDataSize(Long totalRemoteDataSize) {
                 this.totalRemoteDataSize = totalRemoteDataSize;
@@ -964,7 +1063,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRowCount.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder totalRowCount(Long totalRowCount) {
                 this.totalRowCount = totalRowCount;
@@ -1071,7 +1173,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * AccessCount.
+             * <p>The number of accesses to the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111</p>
              */
             public Builder accessCount(Long accessCount) {
                 this.accessCount = accessCount;
@@ -1079,7 +1184,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * AvgScanCost.
+             * <p>The average amount of time for scanning. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder avgScanCost(Double avgScanCost) {
                 this.avgScanCost = avgScanCost;
@@ -1087,7 +1195,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * AvgScanSize.
+             * <p>The average data size for scanning. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder avgScanSize(Double avgScanSize) {
                 this.avgScanSize = avgScanSize;
@@ -1095,7 +1206,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScanCost.
+             * <p>The maximum amount of time for scanning. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345</p>
              */
             public Builder maxScanCost(Long maxScanCost) {
                 this.maxScanCost = maxScanCost;
@@ -1103,7 +1217,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScanSize.
+             * <p>The maximum data size for scanning. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder maxScanSize(Long maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -1111,7 +1228,10 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tiberias_2copt_origin_order_goods_info</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1170,7 +1290,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private java.util.List<TopAccessTablesSearchResults> searchResults; 
 
             /**
-             * MetricName.
+             * <p>The name of the detection metric.</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1178,7 +1298,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SearchResults.
+             * <p>The detection result items of table access.</p>
              */
             public Builder searchResults(java.util.List<TopAccessTablesSearchResults> searchResults) {
                 this.searchResults = searchResults;
@@ -1273,7 +1393,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private java.util.List<TopAccessTables> topAccessTables; 
 
             /**
-             * OperatorAgg.
+             * <p>The detection result items of operator metric aggregation.</p>
              */
             public Builder operatorAgg(java.util.List<OperatorAgg> operatorAgg) {
                 this.operatorAgg = operatorAgg;
@@ -1281,7 +1401,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorDetails.
+             * <p>The detection result items of abnormal operators.</p>
              */
             public Builder operatorDetails(java.util.List<OperatorDetails> operatorDetails) {
                 this.operatorDetails = operatorDetails;
@@ -1289,7 +1409,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionedTables.
+             * <p>The detection result items of improper partitioned tables.</p>
              */
             public Builder partitionedTables(java.util.List<PartitionedTables> partitionedTables) {
                 this.partitionedTables = partitionedTables;
@@ -1297,7 +1417,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SkewedTables.
+             * <p>The detection result items of skewed tables.</p>
              */
             public Builder skewedTables(java.util.List<SkewedTables> skewedTables) {
                 this.skewedTables = skewedTables;
@@ -1305,7 +1425,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TopAccessTables.
+             * <p>The detection result items of table access.</p>
              */
             public Builder topAccessTables(java.util.List<TopAccessTables> topAccessTables) {
                 this.topAccessTables = topAccessTables;
@@ -1388,7 +1508,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The information about the detection result.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1396,7 +1516,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1404,7 +1524,7 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The detection result items.</p>
              */
             public Builder results(Results results) {
                 this.results = results;
@@ -1412,7 +1532,15 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

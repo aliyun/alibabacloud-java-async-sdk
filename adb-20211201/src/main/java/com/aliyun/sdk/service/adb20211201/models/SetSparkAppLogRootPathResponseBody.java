@@ -160,7 +160,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
             private String recordedLogPath; 
 
             /**
-             * <p>The recommended default OSS log path.</p>
+             * <p>The default log path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://path/to/log</p>
@@ -171,7 +171,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an OSS log path exists.</p>
+             * <p>Indicates whether a log path exists.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -182,7 +182,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the modification was last modified.</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1675236908</p>
@@ -204,7 +204,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS log path.</p>
+             * <p>The recorded log path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://path/to/log</p>

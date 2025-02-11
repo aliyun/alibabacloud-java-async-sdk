@@ -67,7 +67,18 @@ public class DescribeSparkAppTypeResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why the access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -75,7 +86,10 @@ public class DescribeSparkAppTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>596AF63B-8798-501E-BA06-CD2184D48A35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +97,14 @@ public class DescribeSparkAppTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the Spark application. Valid values:</p>
+         * <ul>
+         * <li>BATCH</li>
+         * <li>SQLENGINE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Batch</p>
          */
         public Builder type(String type) {
             this.type = type;

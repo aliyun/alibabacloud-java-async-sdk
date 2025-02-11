@@ -364,7 +364,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String stepStatus; 
 
             /**
-             * EndTime.
+             * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-10T10:28:34Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -372,7 +375,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-10T09:28:34Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -380,7 +386,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StepDesc.
+             * <p>The description of the job step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apply resource</p>
              */
             public Builder stepDesc(String stepDesc) {
                 this.stepDesc = stepDesc;
@@ -388,7 +397,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The name of the job step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplyResource</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -396,7 +408,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StepProgress.
+             * <p>The progress of the job step. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder stepProgress(String stepProgress) {
                 this.stepProgress = stepProgress;
@@ -404,7 +419,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StepStatus.
+             * <p>The status of the job step. Valid values:</p>
+             * <ul>
+             * <li><strong>NOT_RUN</strong></li>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>SUCCEED</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEED</p>
              */
             public Builder stepStatus(String stepStatus) {
                 this.stepStatus = stepStatus;
@@ -534,7 +557,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private TaskInfoStepList stepList; 
 
             /**
-             * Name.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analyticDBFlexibleScaleOut</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +568,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the job. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -550,7 +579,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>NOT_RUN</strong></li>
+             * <li><strong>RUNNING</strong></li>
+             * <li><strong>SUCCEED</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -558,7 +595,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StepList.
+             * <p>The job steps.</p>
              */
             public Builder stepList(TaskInfoStepList stepList) {
                 this.stepList = stepList;
@@ -1109,7 +1146,18 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Category.
+             * <p>The mode of the cluster. This parameter is returned only for Data Warehouse Edition clusters. Valid values:</p>
+             * <ul>
+             * <li><strong>BASIC</strong>: reserved mode for Basic Edition.</li>
+             * <li><strong>CLUSTER</strong>: reserved mode for Cluster Edition.</li>
+             * <li><strong>MIXED_STORAGE</strong>: elastic mode for Cluster Edition.</li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about cluster editions, see <a href="https://help.aliyun.com/document_detail/205001.html">Editions</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>MIXED_STORAGE</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1176,7 +1224,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+             * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>amv-bp163885f8q21****</p>
@@ -1243,7 +1291,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeClass.
+             * <p>The node specifications of the cluster. This parameter is returned only for Data Warehouse Edition clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E8</p>
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -1251,7 +1302,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeCount.
+             * <p>The number of node groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder DBNodeCount(Long DBNodeCount) {
                 this.DBNodeCount = DBNodeCount;
@@ -1259,7 +1313,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStorage.
+             * <p>The storage capacity of the cluster. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder DBNodeStorage(Long DBNodeStorage) {
                 this.DBNodeStorage = DBNodeStorage;
@@ -1278,7 +1335,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>The disk type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>local_ssd</strong>: local disk.</li>
+             * <li><strong>cloud</strong>: basic disk.</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+             * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+             * <li><strong>cloud_essd</strong>: PL1 Enterprise SSD (ESSD).</li>
+             * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
+             * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
+             * </ul>
+             * <blockquote>
+             * <p> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1286,7 +1358,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * <p>The ID of the Data Transmission Service (DTS) synchronization job This parameter is returned only for MySQL analytic instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsb1578j90XXXX</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -1294,7 +1369,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticIOResource.
+             * <p>The number of elastic I/O units (EIUs). For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/189505.html">EIUs</a>&quot; section of the Scale out elastic I/O resources topic.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for clusters in elastic mode.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder elasticIOResource(Integer elasticIOResource) {
                 this.elasticIOResource = elasticIOResource;
@@ -1313,7 +1394,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorCount.
+             * <p>The number of compute nodes that are used by the cluster in elastic mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executorCount(String executorCount) {
                 this.executorCount = executorCount;
@@ -1363,7 +1447,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIp.
+             * <p>The internal IP address of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.xx.xx</p>
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -1371,7 +1458,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InnerPort.
+             * <p>The internal port of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder innerPort(String innerPort) {
                 this.innerPort = innerPort;
@@ -1446,7 +1536,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProductForm.
+             * <p>The service type of the cluster. Valid values:</p>
+             * <ul>
+             * <li>LegacyForm</li>
+             * <li>IntegrationForm</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IntegrationForm</p>
              */
             public Builder productForm(String productForm) {
                 this.productForm = productForm;
@@ -1454,7 +1551,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersion.
+             * <p>The edition of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>BasicVersion</strong>: Basic Edition.</li>
+             * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EnterpriseVersion</p>
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -1462,7 +1566,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RdsInstanceId.
+             * <p>The ID of the ApsaraDB RDS instance from which data is synchronized to the cluster. This parameter is returned only for MySQL analytic instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp11q28kvl688****</p>
              */
             public Builder rdsInstanceId(String rdsInstanceId) {
                 this.rdsInstanceId = rdsInstanceId;
@@ -1492,7 +1599,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedNodeCount.
+             * <p>The number of reserved resource nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reservedNodeCount(Integer reservedNodeCount) {
                 this.reservedNodeCount = reservedNodeCount;
@@ -1500,7 +1610,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedNodeSize.
+             * <p>The single-node specifications of reserved resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ACU</p>
              */
             public Builder reservedNodeSize(String reservedNodeSize) {
                 this.reservedNodeSize = reservedNodeSize;
@@ -1538,7 +1651,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInfo.
+             * <p>The job progress.</p>
              */
             public Builder taskInfo(TaskInfo taskInfo) {
                 this.taskInfo = taskInfo;
@@ -1546,7 +1659,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VPCCloudInstanceId.
+             * <p>The ID of the cluster that resides in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>am-bp163885f8q21****-controller</p>
              */
             public Builder VPCCloudInstanceId(String VPCCloudInstanceId) {
                 this.VPCCloudInstanceId = VPCCloudInstanceId;

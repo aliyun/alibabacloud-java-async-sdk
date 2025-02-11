@@ -151,7 +151,18 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -159,7 +170,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-bp171g24yvbxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -167,7 +181,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -175,7 +189,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The queried partition diagnostic information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -183,7 +197,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -191,7 +208,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -199,7 +219,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +230,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * SuggestMaxRecordsPerPartition.
+         * <p>The recommended maximum number of rows in each partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>640000000</p>
          */
         public Builder suggestMaxRecordsPerPartition(Long suggestMaxRecordsPerPartition) {
             this.suggestMaxRecordsPerPartition = suggestMaxRecordsPerPartition;
@@ -215,7 +241,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * SuggestMinRecordsPerPartition.
+         * <p>The recommended minimum number of rows in each partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64000000</p>
          */
         public Builder suggestMinRecordsPerPartition(Long suggestMinRecordsPerPartition) {
             this.suggestMinRecordsPerPartition = suggestMinRecordsPerPartition;
@@ -223,7 +252,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -293,7 +325,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The detection result.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -301,7 +333,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +341,15 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -416,7 +456,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * PartitionDetail.
+             * <p>The improper partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[20210110, 20210113,20210123]</p>
              */
             public Builder partitionDetail(String partitionDetail) {
                 this.partitionDetail = partitionDetail;
@@ -424,7 +467,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionNumber.
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder partitionNumber(Integer partitionNumber) {
                 this.partitionNumber = partitionNumber;
@@ -432,7 +478,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -440,7 +489,13 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceRatio.
+             * <p>The storage percentage of the table. Unit: %.</p>
+             * <blockquote>
+             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>66.23</p>
              */
             public Builder spaceRatio(Double spaceRatio) {
                 this.spaceRatio = spaceRatio;
@@ -448,7 +503,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -456,7 +514,10 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * <p>The total data size of the table. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42949672960</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

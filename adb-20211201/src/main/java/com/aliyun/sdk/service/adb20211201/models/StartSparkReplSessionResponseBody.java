@@ -55,7 +55,7 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1797FEA-B7D6-5ED6-A24B-2C8C5F4D7361</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +172,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             private String webUiAddress; 
 
             /**
-             * AliyunUid.
+             * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>178157466******</p>
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -177,7 +183,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * AttemptId.
+             * <p>The attempt ID of the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s202301061000h****</p>
              */
             public Builder attemptId(String attemptId) {
                 this.attemptId = attemptId;
@@ -185,7 +194,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>session time out</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -193,7 +205,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The ID of the session that executes the code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sessionId(Long sessionId) {
                 this.sessionId = sessionId;
@@ -201,7 +216,15 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status of the session. Valid values:</p>
+             * <ul>
+             * <li>IDLE</li>
+             * <li>BUSY</li>
+             * <li>DEAD</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IDLE</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -209,7 +232,10 @@ public class StartSparkReplSessionResponseBody extends TeaModel {
             }
 
             /**
-             * WebUiAddress.
+             * <p>The URL of the web UI for the Spark application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>
              */
             public Builder webUiAddress(String webUiAddress) {
                 this.webUiAddress = webUiAddress;

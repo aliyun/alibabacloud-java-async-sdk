@@ -87,7 +87,13 @@ public class GetSparkReplStatementRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>s202411071444hzdvk486d9d200****</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -96,7 +102,10 @@ public class GetSparkReplStatementRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The ID of the session that executes the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sessionId(Long sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -105,7 +114,10 @@ public class GetSparkReplStatementRequest extends Request {
         }
 
         /**
-         * StatementId.
+         * <p>The unique ID of the code block in the Spark job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder statementId(Long statementId) {
             this.putBodyParameter("StatementId", statementId);

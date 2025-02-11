@@ -161,7 +161,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried execution records.</p>
+         * <p>The queried result set export jobs.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -608,7 +608,12 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ExportType.
+             * <p>The type of the result set export job.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -616,7 +621,11 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * IsExpired.
+             * <p>Indicates whether the result set export job has expired. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              */
             public Builder isExpired(Boolean isExpired) {
                 this.isExpired = isExpired;

@@ -74,7 +74,13 @@ public class GetSparkReplSessionRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>s202411071444hzdvk486d9d200****</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -83,6 +89,7 @@ public class GetSparkReplSessionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the session that executes the code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

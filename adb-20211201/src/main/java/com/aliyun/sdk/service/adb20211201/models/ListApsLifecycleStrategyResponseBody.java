@@ -139,7 +139,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Code.
+         * <p>The HTTP status code or the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -147,7 +150,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -155,7 +161,7 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The queried lifecycle management policies.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -163,7 +169,14 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +184,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -179,7 +195,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -187,7 +206,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -195,7 +217,14 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,7 +232,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -273,7 +305,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             private java.util.List<String> tableNames; 
 
             /**
-             * DatabaseName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -281,7 +316,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessAll.
+             * <p>Indicates whether all tables in the database are selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder processAll(String processAll) {
                 this.processAll = processAll;
@@ -289,7 +327,7 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * TableNames.
+             * <p>The names of the tables.</p>
              */
             public Builder tableNames(java.util.List<String> tableNames) {
                 this.tableNames = tableNames;
@@ -468,7 +506,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             private String strategyValue; 
 
             /**
-             * ApsJobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aps-******</p>
              */
             public Builder apsJobId(String apsJobId) {
                 this.apsJobId = apsJobId;
@@ -476,7 +517,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T02:44:27Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -484,7 +528,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-*******</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -492,7 +539,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the policy was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-03T06:33:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -510,7 +560,14 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the lifecycle management policy. Valid values:</p>
+             * <ol>
+             * <li>on: enables the current policy.</li>
+             * <li>off: disables the current policy.</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -518,7 +575,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDatabases.
+             * <p>The number of databases that are managed during the lifecycle management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder strategyDatabases(Long strategyDatabases) {
                 this.strategyDatabases = strategyDatabases;
@@ -526,7 +586,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyDesc.
+             * <p>The description of the lifecycle management policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder strategyDesc(String strategyDesc) {
                 this.strategyDesc = strategyDesc;
@@ -534,7 +597,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The name of the lifecycle management policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -542,7 +608,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyTables.
+             * <p>The number of tables that are managed during the lifecycle management.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder strategyTables(Long strategyTables) {
                 this.strategyTables = strategyTables;
@@ -550,7 +619,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyType.
+             * <p>The type of the lifecycle management policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KEEP_BY_TIME</p>
              */
             public Builder strategyType(String strategyType) {
                 this.strategyType = strategyType;
@@ -558,7 +630,10 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyValue.
+             * <p>The value of the lifecycle management policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder strategyValue(String strategyValue) {
                 this.strategyValue = strategyValue;

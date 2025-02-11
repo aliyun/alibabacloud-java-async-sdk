@@ -187,7 +187,13 @@ public class DescribeAvailableAdvicesRequest extends Request {
         } 
 
         /**
-         * AdviceDate.
+         * <p>The date when the suggestion is generated. Specify the date in the yyyyMMdd format.</p>
+         * <blockquote>
+         * <p> Suggestions are generated after analysis after midnight every day. You must specify a date that is at least one day earlier than the current date. For example, if the current date is 20240627, you must specify 20240626 or an earlier date.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20221124</p>
          */
         public Builder adviceDate(Long adviceDate) {
             this.putQueryParameter("AdviceDate", adviceDate);
@@ -196,7 +202,14 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * AdviceType.
+         * <p>The type of the suggestion. Valid values:</p>
+         * <ul>
+         * <li><strong>INDEX</strong>: index optimization.</li>
+         * <li><strong>TIERING</strong>: hot and cold data optimization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INDEX</p>
          */
         public Builder adviceType(String adviceType) {
             this.putQueryParameter("AdviceType", adviceType);
@@ -205,6 +218,7 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +231,10 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword that is used to query information by table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>you_table_name</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -226,7 +243,16 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The display language of suggestions. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): simplified Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -235,7 +261,28 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>.</p>
+         * <ul>
+         * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+         * <ul>
+         * <li><code>SchemaName</code>: the name of the database.</li>
+         * <li><code>TableName</code>: the name of the table.</li>
+         * <li><code>Benefit</code>: the expected benefits of the applied optimization suggestion.</li>
+         * </ul>
+         * </li>
+         * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+         * <ul>
+         * <li><code>Asc</code>: ascending order.</li>
+         * <li><code>Desc</code>: descending order.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the query results are sorted in descending order based on the Benefit field.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;AdviceType&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -244,7 +291,10 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,7 +303,15 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,6 +320,7 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +333,10 @@ public class DescribeAvailableAdvicesRequest extends Request {
         }
 
         /**
-         * SchemaTableName.
+         * <p>The name of the table in the DatabaseName.TableName format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpch.lineitem</p>
          */
         public Builder schemaTableName(String schemaTableName) {
             this.putQueryParameter("SchemaTableName", schemaTableName);

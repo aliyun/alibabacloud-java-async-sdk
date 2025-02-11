@@ -43,7 +43,10 @@ public class EnableAdviceServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1745C03-7CCE-55CF-932E-08121AAFA6AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

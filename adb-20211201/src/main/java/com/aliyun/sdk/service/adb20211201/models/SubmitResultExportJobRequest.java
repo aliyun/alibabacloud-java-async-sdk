@@ -163,7 +163,7 @@ public class SubmitResultExportJobRequest extends Request {
         }
 
         /**
-         * <p>The engine that is used to execute the result set export job. Set the value to XIHE.</p>
+         * <p>The engine that is used to run the result set export job. Set the value to XIHE.</p>
          * 
          * <strong>example:</strong>
          * <p>XIHE</p>

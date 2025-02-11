@@ -43,7 +43,10 @@ public class ModifyEssdCacheConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115F9CCA-EF2E-5F91-AB60-4961D52FEAB4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

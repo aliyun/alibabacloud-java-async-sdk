@@ -103,7 +103,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Items.
+         * <p>The queried applied optimization suggestions.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -111,7 +111,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,15 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong>(Default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +138,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84489769-3065-5A28-A4CB-977CD426F1C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +149,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * SchemaTableNames.
+         * <p>The name of the table in the DatabaseName.TableName format.</p>
          */
         public Builder schemaTableNames(java.util.List<String> schemaTableNames) {
             this.schemaTableNames = schemaTableNames;
@@ -143,7 +157,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -333,7 +350,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * AdviceId.
+             * <p>The suggestion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7417db9c-914d-43f3-a123-4d0e448f****</p>
              */
             public Builder adviceId(String adviceId) {
                 this.adviceId = adviceId;
@@ -341,7 +361,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * Benefit.
+             * <p>The benefit of the suggestion.</p>
              */
             public Builder benefit(String benefit) {
                 this.benefit = benefit;
@@ -349,7 +369,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * BuildSQL.
+             * <p>The SQL statement that is used to execute the BUILD job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>build table <code>schema1</code>.<code>table1</code></p>
              */
             public Builder buildSQL(String buildSQL) {
                 this.buildSQL = buildSQL;
@@ -357,7 +380,14 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The status of the suggestion execution job. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCEED</strong></li>
+             * <li><strong>FAILED</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEED</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -365,7 +395,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Pages start from page 1. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -373,7 +406,15 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Valid values:</p>
+             * <ul>
+             * <li><strong>30</strong>(Default)</li>
+             * <li><strong>50</strong></li>
+             * <li><strong>100</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -381,7 +422,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * RollbackSQL.
+             * <p>The SQL statement that is used to roll back the suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alter table <code>schema1</code>.<code>table1</code> add key col1_1_idx(col1)</p>
              */
             public Builder rollbackSQL(String rollbackSQL) {
                 this.rollbackSQL = rollbackSQL;
@@ -389,7 +433,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * <p>The SQL statement that is used to apply the suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alter table <code>schema1</code>.<code>table1</code> drop key col1_1_idx</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -397,7 +444,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -405,7 +455,14 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitStatus.
+             * <p>The submission status of the suggestion. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCEED</strong></li>
+             * <li><strong>FAILED</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEED</p>
              */
             public Builder submitStatus(String submitStatus) {
                 this.submitStatus = submitStatus;
@@ -413,7 +470,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitTime.
+             * <p>The time when the suggestion was submitted. The time follows the ISO 8601 standard in the yyMMddHHmm format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2208131600</p>
              */
             public Builder submitTime(String submitTime) {
                 this.submitTime = submitTime;
@@ -421,7 +481,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -429,7 +492,10 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -188,6 +188,7 @@ public class ModifyApsDatasoureRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,10 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * DatasourceDescription.
+         * <p>The description of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder datasourceDescription(String datasourceDescription) {
             this.putBodyParameter("DatasourceDescription", datasourceDescription);
@@ -209,6 +213,7 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,10 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * DatasourceName.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls-******</p>
          */
         public Builder datasourceName(String datasourceName) {
             this.putBodyParameter("DatasourceName", datasourceName);
@@ -247,7 +255,7 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * <p>Lakehouse ID。</p>
+         * <p>The lakehouse ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -260,7 +268,12 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * PolarDBMysqlInfo.
+         * <p>The retired data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder polarDBMysqlInfo(PolarDBMysqlInfo polarDBMysqlInfo) {
             String polarDBMysqlInfoShrink = shrink(polarDBMysqlInfo, "PolarDBMysqlInfo", "json");
@@ -270,7 +283,12 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * RdsMysqlInfo.
+         * <p>The retired data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder rdsMysqlInfo(RdsMysqlInfo rdsMysqlInfo) {
             String rdsMysqlInfoShrink = shrink(rdsMysqlInfo, "RdsMysqlInfo", "json");
@@ -280,6 +298,7 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +311,12 @@ public class ModifyApsDatasoureRequest extends Request {
         }
 
         /**
-         * SlsInfo.
+         * <p>The information about Simple Log Service (SLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder slsInfo(SlsInfo slsInfo) {
             String slsInfoShrink = shrink(slsInfo, "SlsInfo", "json");
@@ -353,7 +377,12 @@ public class ModifyApsDatasoureRequest extends Request {
             private String kafkaTopic; 
 
             /**
-             * KafkaClusterId.
+             * <p>The ID of the Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder kafkaClusterId(String kafkaClusterId) {
                 this.kafkaClusterId = kafkaClusterId;
@@ -361,7 +390,10 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * KafkaTopic.
+             * <p>The topic of the Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-topic</p>
              */
             public Builder kafkaTopic(String kafkaTopic) {
                 this.kafkaTopic = kafkaTopic;
@@ -432,7 +464,10 @@ public class ModifyApsDatasoureRequest extends Request {
             private String vswitch; 
 
             /**
-             * SecurityGroup.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-******</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -440,7 +475,7 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * <p>vpc id。</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-******</p>
@@ -451,7 +486,10 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * Vswitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-******</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -804,7 +842,14 @@ public class ModifyApsDatasoureRequest extends Request {
             private String sourceRegionId; 
 
             /**
-             * Across.
+             * <p>Specifies whether to use a cross-account resource as the data source. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder across(Boolean across) {
                 this.across = across;
@@ -812,7 +857,10 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * AcrossRole.
+             * <p>The name of the cross-account role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-role</p>
              */
             public Builder acrossRole(String acrossRole) {
                 this.acrossRole = acrossRole;
@@ -820,7 +868,10 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * AcrossUid.
+             * <p>The cross-account UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder acrossUid(String acrossUid) {
                 this.acrossUid = acrossUid;
@@ -828,7 +879,10 @@ public class ModifyApsDatasoureRequest extends Request {
             }
 
             /**
-             * SourceRegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;

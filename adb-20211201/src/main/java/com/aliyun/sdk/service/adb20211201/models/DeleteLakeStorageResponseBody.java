@@ -103,7 +103,10 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +114,10 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the delete operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -119,7 +125,10 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -127,7 +136,10 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the operation is asynchronously implemented, the job ID is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +147,10 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2******-B2C1-408E-AA73-DB8D59******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +158,14 @@ public class DeleteLakeStorageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -23,6 +23,10 @@ public class ListSparkAppsRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
+    private String filters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long pageNumber;
@@ -39,6 +43,7 @@ public class ListSparkAppsRequest extends Request {
     private ListSparkAppsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.filters = builder.filters;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupName = builder.resourceGroupName;
@@ -65,6 +70,13 @@ public class ListSparkAppsRequest extends Request {
     }
 
     /**
+     * @return filters
+     */
+    public String getFilters() {
+        return this.filters;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -87,6 +99,7 @@ public class ListSparkAppsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSparkAppsRequest, Builder> {
         private String DBClusterId; 
+        private String filters; 
         private Long pageNumber; 
         private Long pageSize; 
         private String resourceGroupName; 
@@ -98,6 +111,7 @@ public class ListSparkAppsRequest extends Request {
         private Builder(ListSparkAppsRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.filters = request.filters;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupName = request.resourceGroupName;
@@ -113,6 +127,15 @@ public class ListSparkAppsRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Filters.
+         */
+        public Builder filters(String filters) {
+            this.putQueryParameter("Filters", filters);
+            this.filters = filters;
             return this;
         }
 

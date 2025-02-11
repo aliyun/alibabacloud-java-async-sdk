@@ -115,7 +115,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-bp16t5ci7r74s****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -123,7 +126,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -131,7 +134,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -139,7 +145,15 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -147,7 +161,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +172,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * Tables.
+         * <p>The queried oversized non-partitioned tables.</p>
          */
         public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
@@ -163,7 +180,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -233,7 +253,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             private String status; 
 
             /**
-             * Message.
+             * <p>The information about the detection result.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -241,7 +261,7 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -249,7 +269,12 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL
+             * WARNING
+             * CRITICAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -392,7 +417,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             private String tableName; 
 
             /**
-             * DataSize.
+             * <p>The data size of the table. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2921132457984</p>
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -400,7 +428,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * IndexSize.
+             * <p>The data size of regular indexes. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -408,7 +439,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * LocalDataSize.
+             * <p>The size of hot data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1223</p>
              */
             public Builder localDataSize(Long localDataSize) {
                 this.localDataSize = localDataSize;
@@ -416,7 +450,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * PrimaryKeySize.
+             * <p>The data size of the primary key index. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder primaryKeySize(Long primaryKeySize) {
                 this.primaryKeySize = primaryKeySize;
@@ -424,7 +461,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * RemoteDataSize.
+             * <p>The size of cold data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder remoteDataSize(Long remoteDataSize) {
                 this.remoteDataSize = remoteDataSize;
@@ -432,7 +472,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * RowCount.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1222</p>
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -440,7 +483,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adb_demo</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -448,7 +494,13 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * SpaceRatio.
+             * <p>The percentage of the table size. Unit: %.</p>
+             * <blockquote>
+             * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder spaceRatio(Double spaceRatio) {
                 this.spaceRatio = spaceRatio;
@@ -456,7 +508,10 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

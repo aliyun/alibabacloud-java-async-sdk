@@ -196,7 +196,14 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The type of the compute engine. Valid values:</p>
+         * <ul>
+         * <li>XIHE (<strong>default</strong>)</li>
+         * <li>SPARK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>XIHE</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);

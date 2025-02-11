@@ -43,7 +43,10 @@ public class GrantOperatorPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A438072A-E2E7-5509-9A3F-66293512A820</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

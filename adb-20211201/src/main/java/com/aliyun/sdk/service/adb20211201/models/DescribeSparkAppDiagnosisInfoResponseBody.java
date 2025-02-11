@@ -187,7 +187,18 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         private String state; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -195,7 +206,13 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>s202404141952sz6a1391200****</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -203,7 +220,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CpuUtilization.
+         * <p>The CPU utilization. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder cpuUtilization(Double cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
@@ -211,7 +231,7 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DiagnosisInfoList.
+         * <p>The queried diagnostic information.</p>
          */
         public Builder diagnosisInfoList(java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfoList) {
             this.diagnosisInfoList = diagnosisInfoList;
@@ -219,7 +239,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DurationInMillis.
+         * <p>The execution duration of the application. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>281063</p>
          */
         public Builder durationInMillis(Long durationInMillis) {
             this.durationInMillis = durationInMillis;
@@ -227,7 +250,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * JVMGcCostInMillis.
+         * <p>The amount of time consumed by the Java virtual machine to perform garbage collection operations. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81055</p>
          */
         public Builder JVMGcCostInMillis(Long JVMGcCostInMillis) {
             this.JVMGcCostInMillis = JVMGcCostInMillis;
@@ -235,7 +261,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PeakMemoryInByte.
+         * <p>The peak memory usage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096000</p>
          */
         public Builder peakMemoryInByte(Long peakMemoryInByte) {
             this.peakMemoryInByte = peakMemoryInByte;
@@ -243,7 +272,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB5AC339-91F6-5000-8E5A-F47065B01B87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +283,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ShuffleReadInByte.
+         * <p>The amount of data used for shuffle reads. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096000</p>
          */
         public Builder shuffleReadInByte(Long shuffleReadInByte) {
             this.shuffleReadInByte = shuffleReadInByte;
@@ -259,7 +294,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ShuffleWriteInByte.
+         * <p>The amount of data used for shuffle writes. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096000</p>
          */
         public Builder shuffleWriteInByte(Long shuffleWriteInByte) {
             this.shuffleWriteInByte = shuffleWriteInByte;
@@ -267,7 +305,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SpillInByte.
+         * <p>The amount of data spilled to disks when the memory is insufficient. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder spillInByte(Long spillInByte) {
             this.spillInByte = spillInByte;
@@ -275,7 +316,10 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * StartedTime.
+         * <p>The time when the application started to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718329831000</p>
          */
         public Builder startedTime(Long startedTime) {
             this.startedTime = startedTime;
@@ -283,7 +327,15 @@ public class DescribeSparkAppDiagnosisInfoResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The status of the asynchronous import or export job. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>FINISHED</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         public Builder state(String state) {
             this.state = state;

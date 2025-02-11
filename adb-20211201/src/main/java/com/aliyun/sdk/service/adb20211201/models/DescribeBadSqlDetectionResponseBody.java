@@ -91,7 +91,18 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -99,7 +110,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-xxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -107,7 +121,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -115,7 +129,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>584CFCAE-E3C8-5BBB-B46C-724E77A830A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +140,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -205,7 +225,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             private String stageId; 
 
             /**
-             * Code.
+             * <p>The diagnostic code.</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -213,7 +233,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The information about the diagnostic result.</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -221,7 +241,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorId.
+             * <p>The operator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TableScan[234]</p>
              */
             public Builder operatorId(String operatorId) {
                 this.operatorId = operatorId;
@@ -229,7 +252,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>StageID。</p>
+             * <p>The stage ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Stage[67]</p>
@@ -399,7 +422,13 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             private Integer totalStages; 
 
             /**
-             * Cost.
+             * <p>The total execution duration. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>709</p>
              */
             public Builder cost(Long cost) {
                 this.cost = cost;
@@ -407,7 +436,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnosisResults.
+             * <p>The diagnostic result items.</p>
              */
             public Builder diagnosisResults(java.util.List<DiagnosisResults> diagnosisResults) {
                 this.diagnosisResults = diagnosisResults;
@@ -415,7 +444,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCost.
+             * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -423,7 +455,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSize.
+             * <p>The amount of returned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>235433</p>
              */
             public Builder outputDataSize(Long outputDataSize) {
                 this.outputDataSize = outputDataSize;
@@ -431,7 +466,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PatternId.
+             * <p>The SQL pattern ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3467484070025860498</p>
              */
             public Builder patternId(String patternId) {
                 this.patternId = patternId;
@@ -439,7 +477,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * <p>The peak memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -447,7 +488,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202410161002191720161451770345363xxxx</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -455,7 +499,13 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SQL.
+             * <p>The SQL statement.</p>
+             * <blockquote>
+             * <p> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM device WHERE product_key = &quot;h66zXfxet2X&quot; AND name = &quot;device@zntbtfptv5_9237117&quot;</p>
              */
             public Builder SQL(String SQL) {
                 this.SQL = SQL;
@@ -463,7 +513,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * ScanSize.
+             * <p>The amount of scanned data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2342</p>
              */
             public Builder scanSize(Long scanSize) {
                 this.scanSize = scanSize;
@@ -471,7 +524,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-06T02:11:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -479,7 +535,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalStages.
+             * <p>The total number of stages generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalStages(Integer totalStages) {
                 this.totalStages = totalStages;
@@ -562,7 +621,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The information about the detection result.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -570,7 +629,10 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cost</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -578,7 +640,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The detection result items.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -586,7 +648,15 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

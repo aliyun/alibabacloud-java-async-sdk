@@ -105,6 +105,9 @@ public class ModifyDBClusterVipRequest extends Request {
 
         /**
          * <p>The endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</p>
          */
         public Builder connectString(String connectString) {
             this.putQueryParameter("ConnectString", connectString);

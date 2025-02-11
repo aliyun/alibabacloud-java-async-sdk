@@ -79,7 +79,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-xxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -87,7 +90,7 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -95,7 +98,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19B824E0-690D-5A78-9992-5398C2F43694</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -245,7 +254,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * AccessIp.
+             * <p>The IP address of the SQL client that submits the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.133.168</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -253,7 +265,7 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The description of the detection result.</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -261,7 +273,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * <p>The number of failed SQL patterns within the time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -269,7 +284,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PatternId.
+             * <p>The SQL pattern ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2803084667741875187</p>
              */
             public Builder patternId(String patternId) {
                 this.patternId = patternId;
@@ -277,7 +295,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCount.
+             * <p>The number of executed SQL patterns within the time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder queryCount(Long queryCount) {
                 this.queryCount = queryCount;
@@ -285,7 +306,7 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedMetrics.
+             * <p>The metrics related to the SQL pattern.</p>
              */
             public Builder relatedMetrics(String relatedMetrics) {
                 this.relatedMetrics = relatedMetrics;
@@ -293,7 +314,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SQLPattern.
+             * <p>The SQL statement that represents the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT <code>tsid</code>nFROM <code>prod_ods_marketing_engine_material</code>nWHERE <code>tsid</code> = ?nLIMIT ?</p>
              */
             public Builder SQLPattern(String SQLPattern) {
                 this.SQLPattern = SQLPattern;
@@ -301,7 +325,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * <p>The names of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dw_student_exam.ods_school_queanal</p>
              */
             public Builder tables(String tables) {
                 this.tables = tables;
@@ -309,7 +336,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The name of the database account that is used to submit the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -368,7 +398,10 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             private java.util.List<Results> results; 
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cost</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -376,7 +409,7 @@ public class DescribeAbnormalPatternDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The detection result.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;

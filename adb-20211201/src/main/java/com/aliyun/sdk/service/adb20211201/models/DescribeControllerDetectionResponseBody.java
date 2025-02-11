@@ -79,7 +79,10 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-xxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -87,7 +90,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -95,7 +98,10 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257FAE29-ED5F-586C-94E4-43BD1392F238</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -173,7 +182,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The information about the detection result.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -181,7 +190,7 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +198,17 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL
+             * WARNING
+             * CRITICAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

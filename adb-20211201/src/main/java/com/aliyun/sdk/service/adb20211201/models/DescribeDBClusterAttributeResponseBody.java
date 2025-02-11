@@ -55,7 +55,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The queried information about the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The queried cluster.</p>
          */
         public Builder items(Items items) {
             this.items = items;

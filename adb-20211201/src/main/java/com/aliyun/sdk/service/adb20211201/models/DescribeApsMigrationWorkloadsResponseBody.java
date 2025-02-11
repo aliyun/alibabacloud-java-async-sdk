@@ -101,7 +101,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -109,7 +112,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -117,7 +123,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-3EEC-57F0-9F06-</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,7 +134,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -291,7 +303,12 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             private String workloadSubType; 
 
             /**
-             * AcuCount.
+             * <p>The number of AnalyticDB compute units (ACUs).</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder acuCount(Integer acuCount) {
                 this.acuCount = acuCount;
@@ -299,7 +316,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T02:15:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -307,7 +327,12 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder failedMsg(String failedMsg) {
                 this.failedMsg = failedMsg;
@@ -315,7 +340,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -323,7 +351,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRT.
+             * <p>The maximum response time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxRT(String maxRT) {
                 this.maxRT = maxRT;
@@ -331,7 +362,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the migration job was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-21T02:15:16Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -339,7 +373,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST-001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -347,7 +384,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * OssLocation.
+             * <p>The OSS URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://******</p>
              */
             public Builder ossLocation(String ossLocation) {
                 this.ossLocation = ossLocation;
@@ -355,7 +395,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -363,7 +406,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The destination type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -371,7 +417,10 @@ public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkloadSubType.
+             * <p>The sub-type of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workloadSubType(String workloadSubType) {
                 this.workloadSubType = workloadSubType;

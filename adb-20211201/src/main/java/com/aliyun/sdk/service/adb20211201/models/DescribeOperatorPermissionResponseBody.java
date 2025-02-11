@@ -91,7 +91,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreatedTime.
+         * <p>The time when the permissions take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-02-25T03:35:02Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -99,7 +102,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-uf6wjk5xxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -107,7 +113,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The time when the permissions expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-10T02:19:00Z</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -115,7 +124,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Privileges.
+         * <p>The queried permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Control,Data</p>
          */
         public Builder privileges(String privileges) {
             this.privileges = privileges;
@@ -123,7 +135,10 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

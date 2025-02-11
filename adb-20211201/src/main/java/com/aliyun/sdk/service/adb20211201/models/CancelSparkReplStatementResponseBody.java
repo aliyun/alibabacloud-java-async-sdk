@@ -55,7 +55,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +232,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             private Long statementId; 
 
             /**
-             * AliyunUid.
+             * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>190063530332****</p>
              */
             public Builder aliyunUid(Long aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -237,7 +243,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The code that is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>print(1+1)</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -245,7 +254,16 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * CodeState.
+             * <p>The code execution status. Valid values:</p>
+             * <ul>
+             * <li>CANCELLED</li>
+             * <li>RUNNING</li>
+             * <li>SUCCEEDED</li>
+             * <li>ERROR</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder codeState(String codeState) {
                 this.codeState = codeState;
@@ -253,7 +271,14 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * CodeType.
+             * <p>The code type. Valid values:</p>
+             * <ul>
+             * <li>SCALA</li>
+             * <li>PYTHON</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PYTHON</p>
              */
             public Builder codeType(String codeType) {
                 this.codeType = codeType;
@@ -261,7 +286,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * Columns.
+             * <p>The column names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -269,7 +294,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730968056000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -277,7 +305,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>StackOverflow Exception：</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -285,7 +316,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The code execution result, which is a JSON string that conforms to Apache Livy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;text/plain&quot;: &quot;2&quot;}</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -293,7 +327,14 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * OutputType.
+             * <p>The execution result type, which is in the JSON format. Valid values:</p>
+             * <ul>
+             * <li>TEXT: the text content that conforms to Apache Livy.</li>
+             * <li>TABLE: the table content that conforms to Apache Livy.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder outputType(String outputType) {
                 this.outputType = outputType;
@@ -301,7 +342,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730968056000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -309,7 +353,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
             }
 
             /**
-             * StatementId.
+             * <p>The unique ID of the code block in the Spark job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder statementId(Long statementId) {
                 this.statementId = statementId;

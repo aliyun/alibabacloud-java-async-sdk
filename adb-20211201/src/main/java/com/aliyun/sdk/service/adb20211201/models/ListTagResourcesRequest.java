@@ -173,7 +173,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707ec21345</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -200,6 +203,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +216,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The cluster ID. You can specify N cluster IDs. Valid values of N: 1 to 50.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</p>
+         * </blockquote>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -239,6 +246,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Set the value to <strong>dbclusterlakeversion</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +259,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -311,7 +319,13 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. You can specify N tag keys. The tag key cannot be an empty string. Valid values of N: 1 to 20.</p>
+             * <blockquote>
+             * <p> You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -319,7 +333,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify N tag values. The tag value can be an empty string. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

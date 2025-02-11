@@ -55,7 +55,7 @@ public class DownloadInstanceCACertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DownloadUrl.
+         * <p>The OSS URL of the downloaded certificate.</p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -63,7 +63,10 @@ public class DownloadInstanceCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CCFAAB4-97B7-5800-B9F2-685EB596E3EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

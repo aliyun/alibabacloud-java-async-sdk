@@ -79,7 +79,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>am-xxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -87,7 +90,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * DetectionItems.
+         * <p>The queried detection items and detection results.</p>
          */
         public Builder detectionItems(java.util.List<DetectionItems> detectionItems) {
             this.detectionItems = detectionItems;
@@ -95,7 +98,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFF5F54-162B-5860-80A5-411FF550B347</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -197,7 +206,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private Long totalValue; 
 
             /**
-             * AvgValue.
+             * <p>The average value of the operator metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder avgValue(Double avgValue) {
                 this.avgValue = avgValue;
@@ -205,7 +217,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value of the operator metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -213,7 +228,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCount.
+             * <p>The number of occurrences of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder operatorCount(Long operatorCount) {
                 this.operatorCount = operatorCount;
@@ -221,7 +239,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Window</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -229,7 +250,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalValue.
+             * <p>The cumulative value of the operator metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345</p>
              */
             public Builder totalValue(Long totalValue) {
                 this.totalValue = totalValue;
@@ -288,7 +312,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private java.util.List<SearchResults> searchResults; 
 
             /**
-             * MetricName.
+             * <p>The name of the detection metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperatorCost</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -296,7 +323,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SearchResults.
+             * <p>The detection result items of operator metric aggregation.</p>
              */
             public Builder searchResults(java.util.List<SearchResults> searchResults) {
                 this.searchResults = searchResults;
@@ -451,7 +478,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private String stageId; 
 
             /**
-             * InputRows.
+             * <p>The number of rows input by the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -459,7 +489,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * InputSize.
+             * <p>The amount of data input by the operator. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345</p>
              */
             public Builder inputSize(Long inputSize) {
                 this.inputSize = inputSize;
@@ -467,7 +500,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCost.
+             * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder operatorCost(Double operatorCost) {
                 this.operatorCost = operatorCost;
@@ -475,7 +511,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorInfo.
+             * <p>The property information about the operator.</p>
              */
             public Builder operatorInfo(String operatorInfo) {
                 this.operatorInfo = operatorInfo;
@@ -483,7 +519,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Join</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -491,7 +530,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OutputRows.
+             * <p>The number of rows output by the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2345</p>
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -499,7 +541,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OutputSize.
+             * <p>The amount of data output by the operator. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder outputSize(Long outputSize) {
                 this.outputSize = outputSize;
@@ -507,7 +552,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * <p>The peak memory. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234</p>
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -515,7 +563,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The query ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024080110010002102500023803151627972</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -523,7 +574,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>StageID。</p>
+             * <p>The stage ID.</p>
              * 
              * <strong>example:</strong>
              * <p>Stage[3]</p>
@@ -585,7 +636,10 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private java.util.List<OperatorDetailsSearchResults> searchResults; 
 
             /**
-             * MetricName.
+             * <p>The name of the detection metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PeakMemory</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -593,7 +647,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * SearchResults.
+             * <p>The detection result items of abnormal operators.</p>
              */
             public Builder searchResults(java.util.List<OperatorDetailsSearchResults> searchResults) {
                 this.searchResults = searchResults;
@@ -652,7 +706,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private java.util.List<OperatorDetails> operatorDetails; 
 
             /**
-             * OperatorAgg.
+             * <p>The detection result items of operator metric aggregation.</p>
              */
             public Builder operatorAgg(java.util.List<OperatorAgg> operatorAgg) {
                 this.operatorAgg = operatorAgg;
@@ -660,7 +714,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorDetails.
+             * <p>The detection result items of abnormal operators.</p>
              */
             public Builder operatorDetails(java.util.List<OperatorDetails> operatorDetails) {
                 this.operatorDetails = operatorDetails;
@@ -743,7 +797,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * <p>The information about the detection result.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -751,7 +805,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the detection item.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -759,7 +813,7 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The detection result items.</p>
              */
             public Builder results(Results results) {
                 this.results = results;
@@ -767,7 +821,15 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The severity level of the detection result. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WARNING</li>
+             * <li>CRITICAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WARNING</p>
              */
             public Builder status(String status) {
                 this.status = status;

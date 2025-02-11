@@ -67,7 +67,7 @@ public class ModifyClusterAccessWhiteListResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp11q28kvl688****</p>

@@ -106,6 +106,9 @@ public class ModifyApsWorkloadNameRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-*******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -115,6 +118,9 @@ public class ModifyApsWorkloadNameRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -124,6 +130,9 @@ public class ModifyApsWorkloadNameRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aps-******</p>
          */
         public Builder workloadId(String workloadId) {
             this.putBodyParameter("WorkloadId", workloadId);
@@ -133,6 +142,9 @@ public class ModifyApsWorkloadNameRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls-2024***93014</p>
          */
         public Builder workloadName(String workloadName) {
             this.putBodyParameter("WorkloadName", workloadName);

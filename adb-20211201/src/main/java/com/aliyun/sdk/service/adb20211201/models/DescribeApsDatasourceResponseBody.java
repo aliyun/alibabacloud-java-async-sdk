@@ -65,7 +65,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>******-<strong>D8-5</strong><em>-A</em>**-****587</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +126,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String workspaceURL; 
 
             /**
-             * accessToken.
+             * <p>The token that is used to access Databricks.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -131,7 +137,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceURL.
+             * <p>The URL of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder workspaceURL(String workspaceURL) {
                 this.workspaceURL = workspaceURL;
@@ -214,7 +225,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String vswitch; 
 
             /**
-             * EmrClusterId.
+             * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder emrClusterId(String emrClusterId) {
                 this.emrClusterId = emrClusterId;
@@ -222,7 +238,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>hive meta store url。</p>
+             * <p>The URL of the Hive Metastore.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -235,7 +251,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroup.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-******</p>
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -243,7 +262,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * Vswitch.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-******</p>
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -302,7 +324,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String kafkaTopic; 
 
             /**
-             * KafkaClusterId.
+             * <p>The ID of the Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder kafkaClusterId(String kafkaClusterId) {
                 this.kafkaClusterId = kafkaClusterId;
@@ -310,7 +337,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>kafka topic</p>
+             * <p>The topic of the Kafka instance.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;value&quot;: &quot;hongxian_test&quot;}]</p>
@@ -825,14 +852,14 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private String store; 
 
             /**
+             * <p>Indicates whether the data source is a cross-account resource. Valid values:</p>
              * <ul>
-             * <li></li>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>false</p>
              */
             public Builder across(Boolean across) {
                 this.across = across;
@@ -840,14 +867,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The name of the cross-account role.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>test</p>
              */
             public Builder acrossRole(String acrossRole) {
                 this.acrossRole = acrossRole;
@@ -855,14 +878,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>The cross-account UID.</p>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>123456</p>
              */
             public Builder acrossUid(String acrossUid) {
                 this.acrossUid = acrossUid;
@@ -870,7 +889,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -878,7 +900,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
@@ -886,7 +911,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * Store.
+             * <p>The name of the SLS Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder store(String store) {
                 this.store = store;
@@ -1053,7 +1081,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             private SlsInfo slsInfo; 
 
             /**
-             * CreateTime.
+             * <p>The time when the data source was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-12T15:03:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1061,7 +1092,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-******</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -1069,7 +1103,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DatabricksInfo.
+             * <p>The information about Databricks.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder databricksInfo(DatabricksInfo databricksInfo) {
                 this.databricksInfo = databricksInfo;
@@ -1077,7 +1116,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceDescription.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceDescription(String datasourceDescription) {
                 this.datasourceDescription = datasourceDescription;
@@ -1085,7 +1127,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka-2024***</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -1093,7 +1138,10 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceType.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KAFKA</p>
              */
             public Builder datasourceType(String datasourceType) {
                 this.datasourceType = datasourceType;
@@ -1101,7 +1149,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * HiveInfo.
+             * <p>The information about the Hive data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder hiveInfo(HiveInfo hiveInfo) {
                 this.hiveInfo = hiveInfo;
@@ -1109,7 +1162,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaInfo.
+             * <p>The information about the Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder kafkaInfo(KafkaInfo kafkaInfo) {
                 this.kafkaInfo = kafkaInfo;
@@ -1117,7 +1175,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * PolarDBMysqlInfo.
+             * <p>The parameter is no longer supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder polarDBMysqlInfo(PolarDBMysqlInfo polarDBMysqlInfo) {
                 this.polarDBMysqlInfo = polarDBMysqlInfo;
@@ -1125,7 +1188,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * RdsMysqlInfo.
+             * <p>The parameter is no longer supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder rdsMysqlInfo(RdsMysqlInfo rdsMysqlInfo) {
                 this.rdsMysqlInfo = rdsMysqlInfo;
@@ -1133,7 +1201,12 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
             }
 
             /**
-             * SlsInfo.
+             * <p>The Simple Log Service (SLS) project.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder slsInfo(SlsInfo slsInfo) {
                 this.slsInfo = slsInfo;

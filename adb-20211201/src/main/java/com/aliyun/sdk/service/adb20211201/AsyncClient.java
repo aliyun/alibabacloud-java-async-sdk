@@ -29,6 +29,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of ApplyAdviceById  ApplyAdviceByIdRequest
      * @return ApplyAdviceByIdResponse
      */
@@ -72,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CancelSparkReplStatementResponse
      */
     CompletableFuture<CancelSparkReplStatementResponse> cancelSparkReplStatement(CancelSparkReplStatementRequest request);
+
+    /**
+     * @param request the request parameters of CancelSparkWarehouseBatchSQL  CancelSparkWarehouseBatchSQLRequest
+     * @return CancelSparkWarehouseBatchSQLResponse
+     */
+    CompletableFuture<CancelSparkWarehouseBatchSQLResponse> cancelSparkWarehouseBatchSQL(CancelSparkWarehouseBatchSQLRequest request);
 
     /**
      * <b>description</b> :
@@ -132,7 +141,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * <p>CreateDBCluster</p>
      * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -207,6 +216,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of DeleteApsDatasoure  DeleteApsDatasoureRequest
      * @return DeleteApsDatasoureResponse
      */
@@ -234,7 +246,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h3><a href="#"></a></h3>
      * <ul>
-     * <li>You can call this operation to delete only subscription clusters.</li>
+     * <li>You can delete only pay-as-you-go clusters.</li>
+     * <li>The cluster that you want to delete must be in the Running state.</li>
      * <li>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</li>
      * </ul>
      * 
@@ -262,6 +275,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteElasticPlanResponse> deleteElasticPlan(DeleteElasticPlanRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of DeleteLakeStorage  DeleteLakeStorageRequest
      * @return DeleteLakeStorageResponse
      */
@@ -397,6 +413,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAdbMySqlTablesResponse> describeAdbMySqlTables(DescribeAdbMySqlTablesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of DescribeAdviceServiceEnabled  DescribeAdviceServiceEnabledRequest
      * @return DescribeAdviceServiceEnabledResponse
      */
@@ -557,6 +576,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterResourceDetailResponse> describeClusterResourceDetail(DescribeClusterResourceDetailRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of DescribeClusterResourceUsage  DescribeClusterResourceUsageRequest
      * @return DescribeClusterResourceUsageResponse
      */
@@ -582,7 +604,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeComputeResourceUsage  DescribeComputeResourceUsageRequest
      * @return DescribeComputeResourceUsageResponse
@@ -755,6 +777,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExecutorDetectionResponse> describeExecutorDetection(DescribeExecutorDetectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * @param request the request parameters of DescribeInclinedNodes  DescribeInclinedNodesRequest
      * @return DescribeInclinedNodesResponse
      */
@@ -901,6 +926,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSparkCodeWebUiResponse> describeSparkCodeWebUi(DescribeSparkCodeWebUiRequest request);
 
     /**
+     * @param request the request parameters of DescribeSparkSQLDiagnosisAttribute  DescribeSparkSQLDiagnosisAttributeRequest
+     * @return DescribeSparkSQLDiagnosisAttributeResponse
+     */
+    CompletableFuture<DescribeSparkSQLDiagnosisAttributeResponse> describeSparkSQLDiagnosisAttribute(DescribeSparkSQLDiagnosisAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSparkSQLDiagnosisList  DescribeSparkSQLDiagnosisListRequest
+     * @return DescribeSparkSQLDiagnosisListResponse
+     */
+    CompletableFuture<DescribeSparkSQLDiagnosisListResponse> describeSparkSQLDiagnosisList(DescribeSparkSQLDiagnosisListRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -911,7 +948,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * @param request the request parameters of DescribeStorageResourceUsage  DescribeStorageResourceUsageRequest
      * @return DescribeStorageResourceUsageResponse
@@ -1027,11 +1064,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteSparkReplStatementResponse> executeSparkReplStatement(ExecuteSparkReplStatementRequest request);
 
     /**
+     * @param request the request parameters of ExecuteSparkWarehouseBatchSQL  ExecuteSparkWarehouseBatchSQLRequest
+     * @return ExecuteSparkWarehouseBatchSQLResponse
+     */
+    CompletableFuture<ExecuteSparkWarehouseBatchSQLResponse> executeSparkWarehouseBatchSQL(ExecuteSparkWarehouseBatchSQLRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of ExistRunningSQLEngine  ExistRunningSQLEngineRequest
@@ -1174,10 +1219,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of GetSparkLogAnalyzeTask  GetSparkLogAnalyzeTaskRequest
@@ -1256,6 +1303,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSparkTemplateFullTreeResponse
      */
     CompletableFuture<GetSparkTemplateFullTreeResponse> getSparkTemplateFullTree(GetSparkTemplateFullTreeRequest request);
+
+    /**
+     * @param request the request parameters of GetSparkWarehouseBatchSQL  GetSparkWarehouseBatchSQLRequest
+     * @return GetSparkWarehouseBatchSQLResponse
+     */
+    CompletableFuture<GetSparkWarehouseBatchSQLResponse> getSparkWarehouseBatchSQL(GetSparkWarehouseBatchSQLRequest request);
 
     /**
      * @param request the request parameters of GetTable  GetTableRequest
@@ -1346,10 +1399,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of KillSparkLogAnalyzeTask  KillSparkLogAnalyzeTaskRequest
@@ -1425,10 +1480,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of ListSparkLogAnalyzeTasks  ListSparkLogAnalyzeTasksRequest
@@ -1450,6 +1507,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSparkTemplateFileIdsResponse
      */
     CompletableFuture<ListSparkTemplateFileIdsResponse> listSparkTemplateFileIds(ListSparkTemplateFileIdsRequest request);
+
+    /**
+     * @param request the request parameters of ListSparkWarehouseBatchSQL  ListSparkWarehouseBatchSQLRequest
+     * @return ListSparkWarehouseBatchSQLResponse
+     */
+    CompletableFuture<ListSparkWarehouseBatchSQLResponse> listSparkWarehouseBatchSQL(ListSparkWarehouseBatchSQLRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
@@ -1485,6 +1548,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountPrivilegesResponse> modifyAccountPrivileges(ModifyAccountPrivilegesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <ul>
+     * <li>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</li>
+     * <li>You cannot modify the number of nodes for the USER_DEFAULT resource group.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyApsDatasoure  ModifyApsDatasoureRequest
      * @return ModifyApsDatasoureResponse
      */
@@ -1749,10 +1819,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  General endpoint: <code>adb.aliyuncs.com</code>.</p>
+     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
-     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
+     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
+     * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of SubmitSparkLogAnalyzeTask  SubmitSparkLogAnalyzeTaskRequest

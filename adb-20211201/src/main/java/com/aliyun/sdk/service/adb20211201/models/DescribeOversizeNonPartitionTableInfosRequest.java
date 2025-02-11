@@ -217,6 +217,7 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +230,13 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time. The specified time range must be less than seven days.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-11T05:44Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -238,7 +245,16 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of file titles and error messages. Valid values:</p>
+         * <ul>
+         * <li><strong>zh (default)</strong>: simplified Chinese.</li>
+         * <li><strong>en</strong>: English</li>
+         * <li><strong>ja</strong>: Japanese.</li>
+         * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -247,7 +263,25 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order by which to sort query results. Specify the parameter value in the JSON format.</p>
+         * <p>Example:</p>
+         * <pre><code>[
+         * 
+         *     {
+         * 
+         *         &quot;Field&quot;:&quot;Name&quot;,
+         * 
+         *         &quot;Type&quot;:&quot;Asc&quot;
+         * 
+         *     }
+         * 
+         * ]
+         * </code></pre>
+         * <p>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</p>
+         * <p>Field and Type are case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -274,7 +308,10 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -283,7 +320,16 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,6 +338,10 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +372,12 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-11T05:44Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

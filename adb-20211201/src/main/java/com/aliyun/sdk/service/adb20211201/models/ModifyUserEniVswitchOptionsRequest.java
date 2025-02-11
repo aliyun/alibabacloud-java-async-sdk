@@ -145,6 +145,7 @@ public class ModifyUserEniVswitchOptionsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +176,13 @@ public class ModifyUserEniVswitchOptionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,6 +209,15 @@ public class ModifyUserEniVswitchOptionsRequest extends Request {
         }
 
         /**
+         * <p>The vSwitches that you want to use. The vSwitches must reside in the same virtual private cloud (VPC) and zone as ENIs. You can specify up to three vSwitches. Separate multiple vSwitches with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The vSwitches that you specify overwrite the existing vSwitches that are connected to ENIs.</p>
+         * </li>
+         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/612399.html">DescribeDBClusterAttribute</a> operation to query the network information about ENIs in a cluster.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

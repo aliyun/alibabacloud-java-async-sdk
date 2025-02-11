@@ -305,8 +305,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * <blockquote>
              * </blockquote>
              * <ul>
-             * <li>If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.</li>
-             * <li>If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.</li>
+             * <li><p>If Type is set to EXECUTOR, ElasticAcu indicates the amount of elastic resources in the current resource group.</p>
+             * </li>
+             * <li><p>If Type is set to WORKER, ElasticAcu indicates the total amount of elastic storage resources in the current cluster.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -347,8 +349,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * <blockquote>
              * </blockquote>
              * <ul>
-             * <li>If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.</li>
-             * <li>If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.</li>
+             * <li><p>If Type is set to EXECUTOR, InstanceSize indicates the number of compute nodes in the cluster.</p>
+             * </li>
+             * <li><p>If Type is set to EXECUTOR, InstanceSize indicates the number of storage replica sets in the cluster.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -364,8 +368,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * <blockquote>
              * </blockquote>
              * <ul>
-             * <li>If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.</li>
-             * <li>If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.</li>
+             * <li><p>If Type is set to EXECUTOR, ReserveAcu indicates the amount of reserved resources in the current resource group.</p>
+             * </li>
+             * <li><p>If Type is set to WORKER, ReserveAcu indicates the total amount of reserved storage resources in the current cluster.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -433,8 +439,10 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
              * <blockquote>
              * </blockquote>
              * <ul>
-             * <li>If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.</li>
-             * <li>If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.</li>
+             * <li><p>If Type is set to EXECUTOR, TotalAcu indicates the total amount of computing resources in the current resource group.</p>
+             * </li>
+             * <li><p>If Type is set to WORKER, TotalAcu indicates the total amount of storage resources in the cluster.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

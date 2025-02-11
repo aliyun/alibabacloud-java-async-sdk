@@ -103,7 +103,10 @@ public class DeleteApsDatasoureResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +114,10 @@ public class DeleteApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -119,7 +125,10 @@ public class DeleteApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -127,7 +136,14 @@ public class DeleteApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,7 +151,10 @@ public class DeleteApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAE98A4F-<strong><strong>-</strong></strong>-BF6D-67EEAC9C39DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +162,14 @@ public class DeleteApsDatasoureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(String success) {
             this.success = success;

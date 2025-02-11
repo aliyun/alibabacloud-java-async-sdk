@@ -106,7 +106,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>-5213-</strong></strong></strong>-B608-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -236,7 +248,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             private Boolean hasJob; 
 
             /**
-             * CreateTime.
+             * <p>The time when the data source was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-10 14:44:33</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -244,7 +259,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceDescription.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceDescription(String datasourceDescription) {
                 this.datasourceDescription = datasourceDescription;
@@ -252,7 +270,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder datasourceId(Long datasourceId) {
                 this.datasourceId = datasourceId;
@@ -260,7 +281,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -268,7 +292,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceType.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS</p>
              */
             public Builder datasourceType(String datasourceType) {
                 this.datasourceType = datasourceType;
@@ -276,7 +303,10 @@ public class DescribeApsDatasourcesResponseBody extends TeaModel {
             }
 
             /**
-             * HasJob.
+             * <p>Indicates whether a job is using the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasJob(Boolean hasJob) {
                 this.hasJob = hasJob;

@@ -79,10 +79,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp1r053byu48p****</p>
+         * DBClusterId.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -90,10 +87,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>202353278****</p>
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -101,10 +95,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,10 +103,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default resource group ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-4690g37929****</p>
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

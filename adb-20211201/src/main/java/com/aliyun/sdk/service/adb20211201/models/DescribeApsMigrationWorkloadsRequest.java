@@ -145,7 +145,10 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-*******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);
@@ -154,7 +157,10 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-20T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -163,7 +169,10 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         }
 
         /**
-         * OssLocation.
+         * <p>The Object Storage Service (OSS) URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://******</p>
          */
         public Builder ossLocation(String ossLocation) {
             this.putBodyParameter("OssLocation", ossLocation);
@@ -172,6 +181,7 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +194,7 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +207,10 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-20T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -205,7 +219,10 @@ public class DescribeApsMigrationWorkloadsRequest extends Request {
         }
 
         /**
-         * WorkloadName.
+         * <p>The name of the workload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder workloadName(String workloadName) {
             this.putBodyParameter("WorkloadName", workloadName);

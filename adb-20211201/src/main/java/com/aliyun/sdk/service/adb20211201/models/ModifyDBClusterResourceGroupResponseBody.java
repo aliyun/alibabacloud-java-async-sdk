@@ -43,7 +43,10 @@ public class ModifyDBClusterResourceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65BDA532-28AF-4122-AA39-B382721EEE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

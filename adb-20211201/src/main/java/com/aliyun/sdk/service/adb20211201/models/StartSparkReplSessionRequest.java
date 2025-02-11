@@ -90,6 +90,7 @@ public class StartSparkReplSessionRequest extends Request {
         } 
 
         /**
+         * <p>The configuration parameters that are used to start the Spark session, which are in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/471203.html">Spark application configuration parameters</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class StartSparkReplSessionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class StartSparkReplSessionRequest extends Request {
         }
 
         /**
+         * <p>The name of the job resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

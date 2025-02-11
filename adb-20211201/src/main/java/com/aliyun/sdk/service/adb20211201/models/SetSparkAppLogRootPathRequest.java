@@ -88,7 +88,7 @@ public class SetSparkAppLogRootPathRequest extends Request {
         } 
 
         /**
-         * <p>The database ID.</p>
+         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class SetSparkAppLogRootPathRequest extends Request {
         }
 
         /**
-         * <p>The Object Storage Service (OSS) log path.</p>
+         * <p>The path of Object Storage Service (OSS) logs.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://path/to/log</p>

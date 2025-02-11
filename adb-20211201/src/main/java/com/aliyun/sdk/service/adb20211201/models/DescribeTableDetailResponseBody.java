@@ -115,7 +115,18 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The detailed reason why the access was denied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
+         *     &quot;AuthPrincipalOwnerId&quot;: &quot;1**<em><strong><strong><strong><strong><strong><strong><strong>7&quot;,
+         *     &quot;EncodedDiagnosticMessage&quot;: &quot;AQIBIAAAAOPdwKY2QLOvgMEc7SkkoJfj1kvZwsaRqNYMh10Tv0wTe0fCzaCdrvgazfNb0EnJKETgXyhR+3BIQjx9WAqZryejBsp1Bl4qI5En/D9dEhcXAtKCxCmE2kZCiEzpy8BoEUt+bs0DmlaGWO5xkEpttypLIB4rUhDvZd+zwPg4EXk4KSSWSWsurxtqDkKEMshKlQFBTKvJcKwyhk62IeYly4hQ+5IpXjkh1GQXuDRCQ==&quot;,
+         *     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,
+         *     &quot;AuthPrincipalDisplayName&quot;: &quot;2</strong></strong></strong></strong></strong></strong></strong></em>9&quot;,
+         *     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,
+         *     &quot;AuthAction&quot;: &quot;adb:DescribeExcessivePrimaryKeys&quot;
+         * }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -123,7 +134,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AvgSize.
+         * <p>The average number of rows in a shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160</p>
          */
         public Builder avgSize(String avgSize) {
             this.avgSize = avgSize;
@@ -131,7 +145,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The queried data distribution.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -139,7 +153,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -147,7 +164,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -155,7 +175,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +186,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -221,7 +247,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * Id.
+             * <p>The shard ID. Only the numeric part of the shard name is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -229,7 +258,10 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9484858</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -276,7 +308,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             private java.util.List<Shard> shard; 
 
             /**
-             * Shard.
+             * <p>The queried shards.</p>
              */
             public Builder shard(java.util.List<Shard> shard) {
                 this.shard = shard;
