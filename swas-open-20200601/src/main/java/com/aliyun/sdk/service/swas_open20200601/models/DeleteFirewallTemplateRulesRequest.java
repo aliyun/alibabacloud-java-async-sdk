@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DeleteFirewallTemplateRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallTemplateRuleId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > firewallTemplateRuleId;
+    private java.util.List<String> firewallTemplateRuleId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -69,7 +74,7 @@ public class DeleteFirewallTemplateRulesRequest extends Request {
     /**
      * @return firewallTemplateRuleId
      */
-    public java.util.List < String > getFirewallTemplateRuleId() {
+    public java.util.List<String> getFirewallTemplateRuleId() {
         return this.firewallTemplateRuleId;
     }
 
@@ -83,7 +88,7 @@ public class DeleteFirewallTemplateRulesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteFirewallTemplateRulesRequest, Builder> {
         private String clientToken; 
         private String firewallTemplateId; 
-        private java.util.List < String > firewallTemplateRuleId; 
+        private java.util.List<String> firewallTemplateRuleId; 
         private String regionId; 
 
         private Builder() {
@@ -127,7 +132,7 @@ public class DeleteFirewallTemplateRulesRequest extends Request {
          * <p>The IDs of the firewall template rules.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder firewallTemplateRuleId(java.util.List < String > firewallTemplateRuleId) {
+        public Builder firewallTemplateRuleId(java.util.List<String> firewallTemplateRuleId) {
             this.putQueryParameter("FirewallTemplateRuleId", firewallTemplateRuleId);
             this.firewallTemplateRuleId = firewallTemplateRuleId;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudAssistantStatus")
-    private java.util.List < CloudAssistantStatus> cloudAssistantStatus;
+    private java.util.List<CloudAssistantStatus> cloudAssistantStatus;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     /**
      * @return cloudAssistantStatus
      */
-    public java.util.List < CloudAssistantStatus> getCloudAssistantStatus() {
+    public java.util.List<CloudAssistantStatus> getCloudAssistantStatus() {
         return this.cloudAssistantStatus;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudAssistantStatus> cloudAssistantStatus; 
+        private java.util.List<CloudAssistantStatus> cloudAssistantStatus; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Cloud Assistant client is installed on the server.</p>
          */
-        public Builder cloudAssistantStatus(java.util.List < CloudAssistantStatus> cloudAssistantStatus) {
+        public Builder cloudAssistantStatus(java.util.List<CloudAssistantStatus> cloudAssistantStatus) {
             this.cloudAssistantStatus = cloudAssistantStatus;
             return this;
         }

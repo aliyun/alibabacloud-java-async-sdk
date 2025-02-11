@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFirewallTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FirewallTemplates")
-    private java.util.List < FirewallTemplates> firewallTemplates;
+    private java.util.List<FirewallTemplates> firewallTemplates;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
     /**
      * @return firewallTemplates
      */
-    public java.util.List < FirewallTemplates> getFirewallTemplates() {
+    public java.util.List<FirewallTemplates> getFirewallTemplates() {
         return this.firewallTemplates;
     }
 
@@ -79,7 +84,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FirewallTemplates> firewallTemplates; 
+        private java.util.List<FirewallTemplates> firewallTemplates; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         /**
          * <p>The information about the queried firewall templates.</p>
          */
-        public Builder firewallTemplates(java.util.List < FirewallTemplates> firewallTemplates) {
+        public Builder firewallTemplates(java.util.List<FirewallTemplates> firewallTemplates) {
             this.firewallTemplates = firewallTemplates;
             return this;
         }
@@ -316,7 +321,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         private String firewallTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("FirewallTemplateRules")
-        private java.util.List < FirewallTemplateRules> firewallTemplateRules;
+        private java.util.List<FirewallTemplateRules> firewallTemplateRules;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -369,7 +374,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         /**
          * @return firewallTemplateRules
          */
-        public java.util.List < FirewallTemplateRules> getFirewallTemplateRules() {
+        public java.util.List<FirewallTemplateRules> getFirewallTemplateRules() {
             return this.firewallTemplateRules;
         }
 
@@ -385,7 +390,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private String firewallTemplateId; 
-            private java.util.List < FirewallTemplateRules> firewallTemplateRules; 
+            private java.util.List<FirewallTemplateRules> firewallTemplateRules; 
             private String name; 
 
             /**
@@ -438,7 +443,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             /**
              * <p>The details of the firewall template rules.</p>
              */
-            public Builder firewallTemplateRules(java.util.List < FirewallTemplateRules> firewallTemplateRules) {
+            public Builder firewallTemplateRules(java.util.List<FirewallTemplateRules> firewallTemplateRules) {
                 this.firewallTemplateRules = firewallTemplateRules;
                 return this;
             }

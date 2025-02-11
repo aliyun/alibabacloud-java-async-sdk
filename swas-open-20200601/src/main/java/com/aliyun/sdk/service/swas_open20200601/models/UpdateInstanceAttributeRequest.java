@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -137,7 +142,7 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the simple application server. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>The name of the simple application server. The name must be 2 to 50 characters in length. It can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter or digit. Domain names are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test-InstanceName</p>
@@ -149,12 +154,12 @@ public class UpdateInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new password of the simple application server. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:</p>
+         * <p>The new password of the simple application server. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
          * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
          * </code></pre>
          * <p>For Windows instances, the password cannot start with a forward slash (/).</p>
          * <blockquote>
-         * <p> For security reasons, we recommend that you use HTTPS to send requests if the <code>Password parameter</code> is specified.</p>
+         * <p> For security reasons, we recommend that you use HTTPS to send requests if <code>Password</code> is specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

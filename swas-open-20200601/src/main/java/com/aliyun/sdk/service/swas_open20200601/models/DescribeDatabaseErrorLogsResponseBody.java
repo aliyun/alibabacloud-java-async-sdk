@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorLogs")
-    private java.util.List < ErrorLogs> errorLogs;
+    private java.util.List<ErrorLogs> errorLogs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
     /**
      * @return errorLogs
      */
-    public java.util.List < ErrorLogs> getErrorLogs() {
+    public java.util.List<ErrorLogs> getErrorLogs() {
         return this.errorLogs;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ErrorLogs> errorLogs; 
+        private java.util.List<ErrorLogs> errorLogs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -91,7 +96,7 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
          * <p>The time displayed in the Simple Application Server console is in the format of UTC+8.</p>
          * </blockquote>
          */
-        public Builder errorLogs(java.util.List < ErrorLogs> errorLogs) {
+        public Builder errorLogs(java.util.List<ErrorLogs> errorLogs) {
             this.errorLogs = errorLogs;
             return this;
         }

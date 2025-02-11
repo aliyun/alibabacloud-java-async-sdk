@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -79,7 +84,7 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>Details about the simple application servers.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -242,7 +247,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String diskName;
 
         @com.aliyun.core.annotation.NameInMap("DiskTags")
-        private java.util.List < DiskTags> diskTags;
+        private java.util.List<DiskTags> diskTags;
 
         @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
@@ -331,7 +336,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return diskTags
          */
-        public java.util.List < DiskTags> getDiskTags() {
+        public java.util.List<DiskTags> getDiskTags() {
             return this.diskTags;
         }
 
@@ -384,7 +389,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String diskChargeType; 
             private String diskId; 
             private String diskName; 
-            private java.util.List < DiskTags> diskTags; 
+            private java.util.List<DiskTags> diskTags; 
             private String diskType; 
             private String regionId; 
             private String remark; 
@@ -466,7 +471,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the disk.</p>
              */
-            public Builder diskTags(java.util.List < DiskTags> diskTags) {
+            public Builder diskTags(java.util.List<DiskTags> diskTags) {
                 this.diskTags = diskTags;
                 return this;
             }
@@ -479,7 +484,7 @@ public class ListInstancesResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>System</p>
+             * <p>system</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -520,7 +525,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size. Unit: GB.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -819,7 +824,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Double memory; 
 
             /**
-             * <p>The bandwidth of the server.</p>
+             * <p>The bandwidth of the server. Unit: Mbps.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -857,7 +862,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -883,7 +888,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size of the server.</p>
+             * <p>The memory size of the server. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1002,7 +1007,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String disableReason;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -1041,7 +1046,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
@@ -1131,7 +1136,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -1222,7 +1227,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1241,7 +1246,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String creationTime; 
             private String ddosStatus; 
             private String disableReason; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private String expiredTime; 
             private Image image; 
             private String imageId; 
@@ -1254,7 +1259,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private ResourceSpec resourceSpec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String uuid; 
 
             /**
@@ -1352,7 +1357,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The disks that are attached to the simple application server.</p>
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -1496,7 +1501,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the simple application server.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

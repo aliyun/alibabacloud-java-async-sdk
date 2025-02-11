@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Account")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > account;
+    private java.util.List<Long> account;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -55,7 +60,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
     /**
      * @return account
      */
-    public java.util.List < Long > getAccount() {
+    public java.util.List<Long> getAccount() {
         return this.account;
     }
 
@@ -81,7 +86,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveCustomImageShareAccountRequest, Builder> {
-        private java.util.List < Long > account; 
+        private java.util.List<Long> account; 
         private String clientToken; 
         private String imageId; 
         private String regionId; 
@@ -102,7 +107,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
          * <p>The IDs of the Alibaba Cloud accounts with which you want to unshare the image.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder account(java.util.List < Long > account) {
+        public Builder account(java.util.List<Long> account) {
             this.putQueryParameter("Account", account);
             this.account = account;
             return this;

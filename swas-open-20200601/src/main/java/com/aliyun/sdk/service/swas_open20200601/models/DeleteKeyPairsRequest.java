@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteKeyPairsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > keyPairNames;
+    private java.util.List<String> keyPairNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class DeleteKeyPairsRequest extends Request {
     /**
      * @return keyPairNames
      */
-    public java.util.List < String > getKeyPairNames() {
+    public java.util.List<String> getKeyPairNames() {
         return this.keyPairNames;
     }
 
@@ -69,7 +74,7 @@ public class DeleteKeyPairsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteKeyPairsRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > keyPairNames; 
+        private java.util.List<String> keyPairNames; 
         private String regionId; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class DeleteKeyPairsRequest extends Request {
          * <p>The names of the SSH key pairs. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter and cannot start with http:// or https://. You can specify the names of a maximum of 50 SSH key pairs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder keyPairNames(java.util.List < String > keyPairNames) {
+        public Builder keyPairNames(java.util.List<String> keyPairNames) {
             this.putQueryParameter("KeyPairNames", keyPairNames);
             this.keyPairNames = keyPairNames;
             return this;

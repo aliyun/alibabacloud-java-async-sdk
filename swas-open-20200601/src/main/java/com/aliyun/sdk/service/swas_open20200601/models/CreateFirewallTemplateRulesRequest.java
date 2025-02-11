@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateFirewallTemplateRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallRule")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < FirewallRule> firewallRule;
+    private java.util.List<FirewallRule> firewallRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallTemplateId")
@@ -50,7 +55,7 @@ public class CreateFirewallTemplateRulesRequest extends Request {
     /**
      * @return firewallRule
      */
-    public java.util.List < FirewallRule> getFirewallRule() {
+    public java.util.List<FirewallRule> getFirewallRule() {
         return this.firewallRule;
     }
 
@@ -69,7 +74,7 @@ public class CreateFirewallTemplateRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFirewallTemplateRulesRequest, Builder> {
-        private java.util.List < FirewallRule> firewallRule; 
+        private java.util.List<FirewallRule> firewallRule; 
         private String firewallTemplateId; 
         private String regionId; 
 
@@ -88,7 +93,7 @@ public class CreateFirewallTemplateRulesRequest extends Request {
          * <p>The details of the firewall rule.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder firewallRule(java.util.List < FirewallRule> firewallRule) {
+        public Builder firewallRule(java.util.List<FirewallRule> firewallRule) {
             this.putQueryParameter("FirewallRule", firewallRule);
             this.firewallRule = firewallRule;
             return this;

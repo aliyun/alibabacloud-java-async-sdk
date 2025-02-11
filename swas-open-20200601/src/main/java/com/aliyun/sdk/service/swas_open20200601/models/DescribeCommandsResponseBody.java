@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCommandsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Commands")
-    private java.util.List < Commands> commands;
+    private java.util.List<Commands> commands;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     /**
      * @return commands
      */
-    public java.util.List < Commands> getCommands() {
+    public java.util.List<Commands> getCommands() {
         return this.commands;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Commands> commands; 
+        private java.util.List<Commands> commands; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * <p>The queried commands.</p>
          */
-        public Builder commands(java.util.List < Commands> commands) {
+        public Builder commands(java.util.List<Commands> commands) {
             this.commands = commands;
             return this;
         }
@@ -160,7 +165,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private String parameterName;
 
         @com.aliyun.core.annotation.NameInMap("PossibleValues")
-        private java.util.List < String > possibleValues;
+        private java.util.List<String> possibleValues;
 
         @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
@@ -205,7 +210,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return possibleValues
          */
-        public java.util.List < String > getPossibleValues() {
+        public java.util.List<String> getPossibleValues() {
             return this.possibleValues;
         }
 
@@ -220,7 +225,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String defaultValue; 
             private String description; 
             private String parameterName; 
-            private java.util.List < String > possibleValues; 
+            private java.util.List<String> possibleValues; 
             private Boolean required; 
 
             /**
@@ -259,7 +264,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             /**
              * <p>The valid values of the custom parameter.</p>
              */
-            public Builder possibleValues(java.util.List < String > possibleValues) {
+            public Builder possibleValues(java.util.List<String> possibleValues) {
                 this.possibleValues = possibleValues;
                 return this;
             }
@@ -386,10 +391,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
-        private java.util.List < ParameterDefinitions> parameterDefinitions;
+        private java.util.List<ParameterDefinitions> parameterDefinitions;
 
         @com.aliyun.core.annotation.NameInMap("ParameterNames")
-        private java.util.List < String > parameterNames;
+        private java.util.List<String> parameterNames;
 
         @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
@@ -398,7 +403,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
@@ -479,14 +484,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return parameterDefinitions
          */
-        public java.util.List < ParameterDefinitions> getParameterDefinitions() {
+        public java.util.List<ParameterDefinitions> getParameterDefinitions() {
             return this.parameterDefinitions;
         }
 
         /**
          * @return parameterNames
          */
-        public java.util.List < String > getParameterNames() {
+        public java.util.List<String> getParameterNames() {
             return this.parameterNames;
         }
 
@@ -507,7 +512,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -539,11 +544,11 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String description; 
             private Boolean enableParameter; 
             private String name; 
-            private java.util.List < ParameterDefinitions> parameterDefinitions; 
-            private java.util.List < String > parameterNames; 
+            private java.util.List<ParameterDefinitions> parameterDefinitions; 
+            private java.util.List<String> parameterNames; 
             private String provider; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long timeout; 
             private String type; 
             private String workingDir; 
@@ -617,7 +622,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             /**
              * <p>Details of the custom parameter.</p>
              */
-            public Builder parameterDefinitions(java.util.List < ParameterDefinitions> parameterDefinitions) {
+            public Builder parameterDefinitions(java.util.List<ParameterDefinitions> parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
                 return this;
             }
@@ -625,7 +630,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             /**
              * <p>The custom parameter names that are parsed from the command content specified when the command was created. The custom parameter names are returned in the list format. If the custom parameter feature is disabled, an empty list is returned.</p>
              */
-            public Builder parameterNames(java.util.List < String > parameterNames) {
+            public Builder parameterNames(java.util.List<String> parameterNames) {
                 this.parameterNames = parameterNames;
                 return this;
             }
@@ -655,7 +660,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             /**
              * <p>The tags that are bound to the command.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

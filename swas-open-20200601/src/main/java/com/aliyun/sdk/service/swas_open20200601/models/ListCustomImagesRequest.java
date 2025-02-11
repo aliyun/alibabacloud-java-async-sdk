@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -59,7 +64,7 @@ public class ListCustomImagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListCustomImagesRequest(Builder builder) {
         super(builder);
@@ -170,7 +175,7 @@ public class ListCustomImagesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -186,7 +191,7 @@ public class ListCustomImagesRequest extends Request {
         private String resourceGroupId; 
         private Boolean share; 
         private String systemSnapshotId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -257,7 +262,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Simple Application Server instance that the image originates from.</p>
+         * <p>The ID of the simple application server from which the image is derived.</p>
          * 
          * <strong>example:</strong>
          * <p>ace0706b2ac4454d984295a94213****</p>
@@ -322,14 +327,12 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * <p>Whether to query shared images. Value range:</p>
+         * <p>Specifies whether to query shared images. Valid values:</p>
          * <ul>
-         * <li><p>False: No. Indicates that shared images are not included in the returned results.</p>
-         * </li>
-         * <li><p>True: Yes. Indicates that only shared images are returned.</p>
-         * </li>
+         * <li>False: do not query shared images. The shared images are not included in the response.</li>
+         * <li>True: query shared images. The shared images are included in the response.</li>
          * </ul>
-         * <p>If not filled, all images are returned by default.</p>
+         * <p>If you do not specify this parameter, all images are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -355,7 +358,7 @@ public class ListCustomImagesRequest extends Request {
         /**
          * <p>Tag N of the custom image.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

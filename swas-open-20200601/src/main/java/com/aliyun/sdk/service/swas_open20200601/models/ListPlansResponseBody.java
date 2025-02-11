@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPlansResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Plans")
-    private java.util.List < Plans> plans;
+    private java.util.List<Plans> plans;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPlansResponseBody extends TeaModel {
     /**
      * @return plans
      */
-    public java.util.List < Plans> getPlans() {
+    public java.util.List<Plans> getPlans() {
         return this.plans;
     }
 
@@ -46,13 +51,13 @@ public class ListPlansResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Plans> plans; 
+        private java.util.List<Plans> plans; 
         private String requestId; 
 
         /**
-         * <p>The operating system types supported by the plan.</p>
+         * <p>Details about the plans.</p>
          */
-        public Builder plans(java.util.List < Plans> plans) {
+        public Builder plans(java.util.List<Plans> plans) {
             this.plans = plans;
             return this;
         }
@@ -108,6 +113,9 @@ public class ListPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
+        @com.aliyun.core.annotation.NameInMap("PlanType")
+        private String planType;
+
         @com.aliyun.core.annotation.NameInMap("SupportPlatform")
         private String supportPlatform;
 
@@ -121,6 +129,7 @@ public class ListPlansResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.originPrice = builder.originPrice;
             this.planId = builder.planId;
+            this.planType = builder.planType;
             this.supportPlatform = builder.supportPlatform;
         }
 
@@ -196,6 +205,13 @@ public class ListPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return planType
+         */
+        public String getPlanType() {
+            return this.planType;
+        }
+
+        /**
          * @return supportPlatform
          */
         public String getSupportPlatform() {
@@ -212,6 +228,7 @@ public class ListPlansResponseBody extends TeaModel {
             private Integer memory; 
             private Double originPrice; 
             private String planId; 
+            private String planType; 
             private String supportPlatform; 
 
             /**
@@ -321,6 +338,14 @@ public class ListPlansResponseBody extends TeaModel {
              */
             public Builder planId(String planId) {
                 this.planId = planId;
+                return this;
+            }
+
+            /**
+             * PlanType.
+             */
+            public Builder planType(String planType) {
+                this.planType = planType;
                 return this;
             }
 

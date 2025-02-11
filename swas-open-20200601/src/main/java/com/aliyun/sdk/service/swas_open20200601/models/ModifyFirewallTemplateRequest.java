@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ModifyFirewallTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallTemplateRule")
-    private java.util.List < FirewallTemplateRule> firewallTemplateRule;
+    private java.util.List<FirewallTemplateRule> firewallTemplateRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -85,7 +90,7 @@ public class ModifyFirewallTemplateRequest extends Request {
     /**
      * @return firewallTemplateRule
      */
-    public java.util.List < FirewallTemplateRule> getFirewallTemplateRule() {
+    public java.util.List<FirewallTemplateRule> getFirewallTemplateRule() {
         return this.firewallTemplateRule;
     }
 
@@ -107,7 +112,7 @@ public class ModifyFirewallTemplateRequest extends Request {
         private String clientToken; 
         private String description; 
         private String firewallTemplateId; 
-        private java.util.List < FirewallTemplateRule> firewallTemplateRule; 
+        private java.util.List<FirewallTemplateRule> firewallTemplateRule; 
         private String name; 
         private String regionId; 
 
@@ -165,7 +170,7 @@ public class ModifyFirewallTemplateRequest extends Request {
         /**
          * <p>The firewall rule in the template.</p>
          */
-        public Builder firewallTemplateRule(java.util.List < FirewallTemplateRule> firewallTemplateRule) {
+        public Builder firewallTemplateRule(java.util.List<FirewallTemplateRule> firewallTemplateRule) {
             this.putQueryParameter("FirewallTemplateRule", firewallTemplateRule);
             this.firewallTemplateRule = firewallTemplateRule;
             return this;

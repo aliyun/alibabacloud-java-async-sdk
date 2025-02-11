@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudAssistant")
-    private java.util.List < CloudAssistant> cloudAssistant;
+    private java.util.List<CloudAssistant> cloudAssistant;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
     /**
      * @return cloudAssistant
      */
-    public java.util.List < CloudAssistant> getCloudAssistant() {
+    public java.util.List<CloudAssistant> getCloudAssistant() {
         return this.cloudAssistant;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudAssistant> cloudAssistant; 
+        private java.util.List<CloudAssistant> cloudAssistant; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         /**
          * <p>The Command Assistant information.</p>
          */
-        public Builder cloudAssistant(java.util.List < CloudAssistant> cloudAssistant) {
+        public Builder cloudAssistant(java.util.List<CloudAssistant> cloudAssistant) {
             this.cloudAssistant = cloudAssistant;
             return this;
         }

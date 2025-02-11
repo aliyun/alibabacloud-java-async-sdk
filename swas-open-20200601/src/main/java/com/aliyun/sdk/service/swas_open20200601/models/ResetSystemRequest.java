@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,6 +31,10 @@ public class ResetSystemRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginCredentials")
+    private LoginCredentials loginCredentials;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -35,6 +44,7 @@ public class ResetSystemRequest extends Request {
         this.clientToken = builder.clientToken;
         this.imageId = builder.imageId;
         this.instanceId = builder.instanceId;
+        this.loginCredentials = builder.loginCredentials;
         this.regionId = builder.regionId;
     }
 
@@ -73,6 +83,13 @@ public class ResetSystemRequest extends Request {
     }
 
     /**
+     * @return loginCredentials
+     */
+    public LoginCredentials getLoginCredentials() {
+        return this.loginCredentials;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -83,6 +100,7 @@ public class ResetSystemRequest extends Request {
         private String clientToken; 
         private String imageId; 
         private String instanceId; 
+        private LoginCredentials loginCredentials; 
         private String regionId; 
 
         private Builder() {
@@ -94,6 +112,7 @@ public class ResetSystemRequest extends Request {
             this.clientToken = request.clientToken;
             this.imageId = request.imageId;
             this.instanceId = request.instanceId;
+            this.loginCredentials = request.loginCredentials;
             this.regionId = request.regionId;
         } 
 
@@ -135,6 +154,15 @@ public class ResetSystemRequest extends Request {
         }
 
         /**
+         * LoginCredentials.
+         */
+        public Builder loginCredentials(LoginCredentials loginCredentials) {
+            this.putQueryParameter("LoginCredentials", loginCredentials);
+            this.loginCredentials = loginCredentials;
+            return this;
+        }
+
+        /**
          * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
@@ -154,4 +182,71 @@ public class ResetSystemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ResetSystemRequest} extends {@link TeaModel}
+     *
+     * <p>ResetSystemRequest</p>
+     */
+    public static class LoginCredentials extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
+        private String keyPairName;
+
+        @com.aliyun.core.annotation.NameInMap("Password")
+        private String password;
+
+        private LoginCredentials(Builder builder) {
+            this.keyPairName = builder.keyPairName;
+            this.password = builder.password;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LoginCredentials create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        public static final class Builder {
+            private String keyPairName; 
+            private String password; 
+
+            /**
+             * KeyPairName.
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(String password) {
+                this.password = password;
+                return this;
+            }
+
+            public LoginCredentials build() {
+                return new LoginCredentials(this);
+            } 
+
+        } 
+
+    }
 }

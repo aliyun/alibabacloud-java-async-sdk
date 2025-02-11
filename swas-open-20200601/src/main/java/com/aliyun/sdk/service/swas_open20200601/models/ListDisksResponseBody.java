@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDisksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Disks")
-    private java.util.List < Disks> disks;
+    private java.util.List<Disks> disks;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListDisksResponseBody extends TeaModel {
     /**
      * @return disks
      */
-    public java.util.List < Disks> getDisks() {
+    public java.util.List<Disks> getDisks() {
         return this.disks;
     }
 
@@ -79,7 +84,7 @@ public class ListDisksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Disks> disks; 
+        private java.util.List<Disks> disks; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListDisksResponseBody extends TeaModel {
         /**
          * <p>The queried disks.</p>
          */
-        public Builder disks(java.util.List < Disks> disks) {
+        public Builder disks(java.util.List<Disks> disks) {
             this.disks = disks;
             return this;
         }
@@ -266,7 +271,7 @@ public class ListDisksResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Disks(Builder builder) {
             this.category = builder.category;
@@ -395,7 +400,7 @@ public class ListDisksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -414,7 +419,7 @@ public class ListDisksResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Integer size; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The category of the disk. Valid values:</p>
@@ -590,7 +595,7 @@ public class ListDisksResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the disks.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

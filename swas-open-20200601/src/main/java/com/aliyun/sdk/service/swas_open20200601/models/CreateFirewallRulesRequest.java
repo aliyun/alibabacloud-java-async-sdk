@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateFirewallRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallRules")
-    private java.util.List < FirewallRules> firewallRules;
+    private java.util.List<FirewallRules> firewallRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -32,7 +37,7 @@ public class CreateFirewallRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateFirewallRulesRequest(Builder builder) {
         super(builder);
@@ -66,7 +71,7 @@ public class CreateFirewallRulesRequest extends Request {
     /**
      * @return firewallRules
      */
-    public java.util.List < FirewallRules> getFirewallRules() {
+    public java.util.List<FirewallRules> getFirewallRules() {
         return this.firewallRules;
     }
 
@@ -87,16 +92,16 @@ public class CreateFirewallRulesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateFirewallRulesRequest, Builder> {
         private String clientToken; 
-        private java.util.List < FirewallRules> firewallRules; 
+        private java.util.List<FirewallRules> firewallRules; 
         private String instanceId; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -126,7 +131,7 @@ public class CreateFirewallRulesRequest extends Request {
         /**
          * <p>Details about the firewall rules.</p>
          */
-        public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
+        public Builder firewallRules(java.util.List<FirewallRules> firewallRules) {
             String firewallRulesShrink = shrink(firewallRules, "FirewallRules", "json");
             this.putQueryParameter("FirewallRules", firewallRulesShrink);
             this.firewallRules = firewallRules;
@@ -162,7 +167,7 @@ public class CreateFirewallRulesRequest extends Request {
         /**
          * <p>The tags that you want to add to the firewall. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

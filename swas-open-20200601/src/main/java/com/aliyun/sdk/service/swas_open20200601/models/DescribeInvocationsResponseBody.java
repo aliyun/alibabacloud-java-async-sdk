@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInvocationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Invocations")
-    private java.util.List < Invocations> invocations;
+    private java.util.List<Invocations> invocations;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     /**
      * @return invocations
      */
-    public java.util.List < Invocations> getInvocations() {
+    public java.util.List<Invocations> getInvocations() {
         return this.invocations;
     }
 
@@ -79,7 +84,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Invocations> invocations; 
+        private java.util.List<Invocations> invocations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * <p>The command name.</p>
          */
-        public Builder invocations(java.util.List < Invocations> invocations) {
+        public Builder invocations(java.util.List<Invocations> invocations) {
             this.invocations = invocations;
             return this;
         }
@@ -172,7 +177,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private String invokeStatus;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.Map < String, ? > parameters;
+        private java.util.Map<String, ?> parameters;
 
         private Invocations(Builder builder) {
             this.commandContent = builder.commandContent;
@@ -245,7 +250,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, ? > getParameters() {
+        public java.util.Map<String, ?> getParameters() {
             return this.parameters;
         }
 
@@ -257,7 +262,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invocationStatus; 
             private String invokeId; 
             private String invokeStatus; 
-            private java.util.Map < String, ? > parameters; 
+            private java.util.Map<String, ?> parameters; 
 
             /**
              * <p>The content of the command, which is Base64-encoded.</p>
@@ -366,7 +371,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder parameters(java.util.Map < String, ? > parameters) {
+            public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
                 return this;
             }

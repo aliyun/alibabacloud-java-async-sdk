@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class ListFirewallRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListFirewallRulesRequest(Builder builder) {
         super(builder);
@@ -101,7 +106,7 @@ public class ListFirewallRulesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -111,7 +116,7 @@ public class ListFirewallRulesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -196,7 +201,7 @@ public class ListFirewallRulesRequest extends Request {
         /**
          * <p>The tags of the firewall rule.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -254,7 +259,7 @@ public class ListFirewallRulesRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+             * <p>The tag key. A tag key must be 1 to 64 characters in length. You can add up to 20 tags.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -265,7 +270,7 @@ public class ListFirewallRulesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+             * <p>The tag value. A tag value must be 1 to 64 characters in length. You can add up to 20 tags.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

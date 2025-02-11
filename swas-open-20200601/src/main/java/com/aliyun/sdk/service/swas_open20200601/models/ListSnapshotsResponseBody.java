@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
@@ -82,7 +87,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         /**
          * <p>Details about the snapshots.</p>
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -260,7 +265,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Snapshots(Builder builder) {
             this.creationTime = builder.creationTime;
@@ -373,7 +378,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -390,7 +395,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String sourceDiskId; 
             private String sourceDiskType; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -537,7 +542,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             /**
              * <p>The tags of the snapshot.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

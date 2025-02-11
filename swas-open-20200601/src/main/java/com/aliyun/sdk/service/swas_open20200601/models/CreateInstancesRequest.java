@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -217,7 +222,7 @@ public class CreateInstancesRequest extends Request {
         }
 
         /**
-         * <p>The auto-renewal period. This parameter is required only when you set <code>AutoRenew</code> to true. Unit: months. Valid values: 1, 3, 6, 12, 24, and 36.</p>
+         * <p>The auto-renewal period. This parameter is required only when you set <code>AutoRenew</code> to true. Unit: month. Valid values: 1, 3, 6, 12, 24, and 36.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

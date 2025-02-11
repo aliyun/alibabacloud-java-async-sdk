@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListKeyPairsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("KeyPairs")
-    private java.util.List < KeyPairs> keyPairs;
+    private java.util.List<KeyPairs> keyPairs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
     /**
      * @return keyPairs
      */
-    public java.util.List < KeyPairs> getKeyPairs() {
+    public java.util.List<KeyPairs> getKeyPairs() {
         return this.keyPairs;
     }
 
@@ -79,7 +84,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < KeyPairs> keyPairs; 
+        private java.util.List<KeyPairs> keyPairs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         /**
          * <p>Details about the queried AccessKey pairs.</p>
          */
-        public Builder keyPairs(java.util.List < KeyPairs> keyPairs) {
+        public Builder keyPairs(java.util.List<KeyPairs> keyPairs) {
             this.keyPairs = keyPairs;
             return this;
         }
@@ -154,7 +159,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         private String creationTime;
 
         @com.aliyun.core.annotation.NameInMap("InstanceIds")
-        private java.util.List < String > instanceIds;
+        private java.util.List<String> instanceIds;
 
         @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
@@ -187,7 +192,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         /**
          * @return instanceIds
          */
-        public java.util.List < String > getInstanceIds() {
+        public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
         }
 
@@ -207,7 +212,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String creationTime; 
-            private java.util.List < String > instanceIds; 
+            private java.util.List<String> instanceIds; 
             private String keyPairName; 
             private String publicKey; 
 
@@ -225,7 +230,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
             /**
              * <p>The IDs of simple application servers. A maximum of 50 IDs of simple application servers can be returned.</p>
              */
-            public Builder instanceIds(java.util.List < String > instanceIds) {
+            public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
                 return this;
             }

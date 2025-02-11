@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SlowLogs")
-    private java.util.List < SlowLogs> slowLogs;
+    private java.util.List<SlowLogs> slowLogs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -89,7 +94,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
     /**
      * @return slowLogs
      */
-    public java.util.List < SlowLogs> getSlowLogs() {
+    public java.util.List<SlowLogs> getSlowLogs() {
         return this.slowLogs;
     }
 
@@ -106,7 +111,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         private Integer pageSize; 
         private Long physicalIORead; 
         private String requestId; 
-        private java.util.List < SlowLogs> slowLogs; 
+        private java.util.List<SlowLogs> slowLogs; 
         private Integer totalCount; 
 
         /**
@@ -170,7 +175,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         /**
          * <p>The slow query logs returned.</p>
          */
-        public Builder slowLogs(java.util.List < SlowLogs> slowLogs) {
+        public Builder slowLogs(java.util.List<SlowLogs> slowLogs) {
             this.slowLogs = slowLogs;
             return this;
         }

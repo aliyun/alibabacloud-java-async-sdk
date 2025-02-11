@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteFirewallTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallTemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > firewallTemplateId;
+    private java.util.List<String> firewallTemplateId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class DeleteFirewallTemplatesRequest extends Request {
     /**
      * @return firewallTemplateId
      */
-    public java.util.List < String > getFirewallTemplateId() {
+    public java.util.List<String> getFirewallTemplateId() {
         return this.firewallTemplateId;
     }
 
@@ -69,7 +74,7 @@ public class DeleteFirewallTemplatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteFirewallTemplatesRequest, Builder> {
         private String clientToken; 
-        private java.util.List < String > firewallTemplateId; 
+        private java.util.List<String> firewallTemplateId; 
         private String regionId; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class DeleteFirewallTemplatesRequest extends Request {
          * <p>The IDs of the firewall templates.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder firewallTemplateId(java.util.List < String > firewallTemplateId) {
+        public Builder firewallTemplateId(java.util.List<String> firewallTemplateId) {
             this.putQueryParameter("FirewallTemplateId", firewallTemplateId);
             this.firewallTemplateId = firewallTemplateId;
             return this;

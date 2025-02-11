@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceStatusList")
-    private java.util.List < InstanceStatusList> instanceStatusList;
+    private java.util.List<InstanceStatusList> instanceStatusList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
     /**
      * @return instanceStatusList
      */
-    public java.util.List < InstanceStatusList> getInstanceStatusList() {
+    public java.util.List<InstanceStatusList> getInstanceStatusList() {
         return this.instanceStatusList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceStatusList> instanceStatusList; 
+        private java.util.List<InstanceStatusList> instanceStatusList; 
         private String requestId; 
 
         /**
          * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server.</p>
          */
-        public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
+        public Builder instanceStatusList(java.util.List<InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
             return this;
         }

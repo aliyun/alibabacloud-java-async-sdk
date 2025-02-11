@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCommandInvocationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CommandInvocations")
-    private java.util.List < CommandInvocations> commandInvocations;
+    private java.util.List<CommandInvocations> commandInvocations;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
     /**
      * @return commandInvocations
      */
-    public java.util.List < CommandInvocations> getCommandInvocations() {
+    public java.util.List<CommandInvocations> getCommandInvocations() {
         return this.commandInvocations;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CommandInvocations> commandInvocations; 
+        private java.util.List<CommandInvocations> commandInvocations; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
         /**
          * <p>The command executions.</p>
          */
-        public Builder commandInvocations(java.util.List < CommandInvocations> commandInvocations) {
+        public Builder commandInvocations(java.util.List<CommandInvocations> commandInvocations) {
             this.commandInvocations = commandInvocations;
             return this;
         }
@@ -460,7 +465,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
         private String invokeId;
 
         @com.aliyun.core.annotation.NameInMap("InvokeInstances")
-        private java.util.List < InvokeInstances> invokeInstances;
+        private java.util.List<InvokeInstances> invokeInstances;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
@@ -557,7 +562,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
         /**
          * @return invokeInstances
          */
-        public java.util.List < InvokeInstances> getInvokeInstances() {
+        public java.util.List<InvokeInstances> getInvokeInstances() {
             return this.invokeInstances;
         }
 
@@ -598,7 +603,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
             private String creationTime; 
             private String invocationStatus; 
             private String invokeId; 
-            private java.util.List < InvokeInstances> invokeInstances; 
+            private java.util.List<InvokeInstances> invokeInstances; 
             private String parameters; 
             private Long timeout; 
             private String username; 
@@ -708,7 +713,7 @@ public class DescribeCommandInvocationsResponseBody extends TeaModel {
             /**
              * <p>The instances on which the command is run.</p>
              */
-            public Builder invokeInstances(java.util.List < InvokeInstances> invokeInstances) {
+            public Builder invokeInstances(java.util.List<InvokeInstances> invokeInstances) {
                 this.invokeInstances = invokeInstances;
                 return this;
             }

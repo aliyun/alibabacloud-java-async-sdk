@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeFirewallTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallTemplateId")
-    private java.util.List < String > firewallTemplateId;
+    private java.util.List<String> firewallTemplateId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -58,7 +63,7 @@ public class DescribeFirewallTemplatesRequest extends Request {
     /**
      * @return firewallTemplateId
      */
-    public java.util.List < String > getFirewallTemplateId() {
+    public java.util.List<String> getFirewallTemplateId() {
         return this.firewallTemplateId;
     }
 
@@ -91,7 +96,7 @@ public class DescribeFirewallTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFirewallTemplatesRequest, Builder> {
-        private java.util.List < String > firewallTemplateId; 
+        private java.util.List<String> firewallTemplateId; 
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -113,7 +118,7 @@ public class DescribeFirewallTemplatesRequest extends Request {
         /**
          * <p>The IDs of the firewall templates.</p>
          */
-        public Builder firewallTemplateId(java.util.List < String > firewallTemplateId) {
+        public Builder firewallTemplateId(java.util.List<String> firewallTemplateId) {
             this.putQueryParameter("FirewallTemplateId", firewallTemplateId);
             this.firewallTemplateId = firewallTemplateId;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -84,7 +89,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A collection of resource IDs and tags. The information includes the resource IDs, resource types, and key-value pairs.</p>
+         * <p>A collection of resources and the tags of the resources. The information includes the resource IDs, resource types, and key-value pairs of tags.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -177,7 +182,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li>instance</li>
+             * <li>snapshot</li>
+             * <li>customimage</li>
+             * <li>command</li>
+             * <li>firewallrule</li>
+             * <li>disk</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::SWAS::INSTANCE</p>
@@ -224,7 +237,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
      */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagResource")
-        private java.util.List < TagResource> tagResource;
+        private java.util.List<TagResource> tagResource;
 
         private TagResources(Builder builder) {
             this.tagResource = builder.tagResource;
@@ -241,17 +254,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * @return tagResource
          */
-        public java.util.List < TagResource> getTagResource() {
+        public java.util.List<TagResource> getTagResource() {
             return this.tagResource;
         }
 
         public static final class Builder {
-            private java.util.List < TagResource> tagResource; 
+            private java.util.List<TagResource> tagResource; 
 
             /**
              * TagResource.
              */
-            public Builder tagResource(java.util.List < TagResource> tagResource) {
+            public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceTrafficPackageUsages")
-    private java.util.List < InstanceTrafficPackageUsages> instanceTrafficPackageUsages;
+    private java.util.List<InstanceTrafficPackageUsages> instanceTrafficPackageUsages;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     /**
      * @return instanceTrafficPackageUsages
      */
-    public java.util.List < InstanceTrafficPackageUsages> getInstanceTrafficPackageUsages() {
+    public java.util.List<InstanceTrafficPackageUsages> getInstanceTrafficPackageUsages() {
         return this.instanceTrafficPackageUsages;
     }
 
@@ -46,13 +51,13 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceTrafficPackageUsages> instanceTrafficPackageUsages; 
+        private java.util.List<InstanceTrafficPackageUsages> instanceTrafficPackageUsages; 
         private String requestId; 
 
         /**
          * <p>The data transfers that exceed the quota of the data transfer plan in the current month. Unit: bytes.</p>
          */
-        public Builder instanceTrafficPackageUsages(java.util.List < InstanceTrafficPackageUsages> instanceTrafficPackageUsages) {
+        public Builder instanceTrafficPackageUsages(java.util.List<InstanceTrafficPackageUsages> instanceTrafficPackageUsages) {
             this.instanceTrafficPackageUsages = instanceTrafficPackageUsages;
             return this;
         }

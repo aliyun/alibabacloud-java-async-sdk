@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFirewallRulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FirewallRules")
-    private java.util.List < FirewallRules> firewallRules;
+    private java.util.List<FirewallRules> firewallRules;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     /**
      * @return firewallRules
      */
-    public java.util.List < FirewallRules> getFirewallRules() {
+    public java.util.List<FirewallRules> getFirewallRules() {
         return this.firewallRules;
     }
 
@@ -79,16 +84,16 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FirewallRules> firewallRules; 
+        private java.util.List<FirewallRules> firewallRules; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * <p>The array of firewall rules.</p>
+         * <p>Details of the firewall rules.</p>
          */
-        public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
+        public Builder firewallRules(java.util.List<FirewallRules> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
@@ -188,7 +193,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * <p>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -199,7 +204,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -242,7 +247,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         private String sourceCidrIp;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private FirewallRules(Builder builder) {
             this.policy = builder.policy;
@@ -307,7 +312,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -318,7 +323,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The firewall policy. Valid values:</p>
@@ -398,7 +403,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             /**
              * <p>The tags of the firewall rule.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

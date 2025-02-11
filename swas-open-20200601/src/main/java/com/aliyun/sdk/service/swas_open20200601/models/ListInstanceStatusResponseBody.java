@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceStatuses")
-    private java.util.List < InstanceStatuses> instanceStatuses;
+    private java.util.List<InstanceStatuses> instanceStatuses;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
     /**
      * @return instanceStatuses
      */
-    public java.util.List < InstanceStatuses> getInstanceStatuses() {
+    public java.util.List<InstanceStatuses> getInstanceStatuses() {
         return this.instanceStatuses;
     }
 
@@ -79,7 +84,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceStatuses> instanceStatuses; 
+        private java.util.List<InstanceStatuses> instanceStatuses; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         /**
          * <p>The ID of the simple application server.</p>
          */
-        public Builder instanceStatuses(java.util.List < InstanceStatuses> instanceStatuses) {
+        public Builder instanceStatuses(java.util.List<InstanceStatuses> instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
             return this;
         }

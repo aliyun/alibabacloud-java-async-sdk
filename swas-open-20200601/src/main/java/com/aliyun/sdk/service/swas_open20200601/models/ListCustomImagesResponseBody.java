@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCustomImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomImages")
-    private java.util.List < CustomImages> customImages;
+    private java.util.List<CustomImages> customImages;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -46,7 +51,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
     /**
      * @return customImages
      */
-    public java.util.List < CustomImages> getCustomImages() {
+    public java.util.List<CustomImages> getCustomImages() {
         return this.customImages;
     }
 
@@ -79,7 +84,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CustomImages> customImages; 
+        private java.util.List<CustomImages> customImages; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         /**
          * <p>The array of queried custom images.</p>
          */
-        public Builder customImages(java.util.List < CustomImages> customImages) {
+        public Builder customImages(java.util.List<CustomImages> customImages) {
             this.customImages = customImages;
             return this;
         }
@@ -224,7 +229,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
      */
     public static class CustomImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateInstances")
-        private java.util.List < String > createInstances;
+        private java.util.List<String> createInstances;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -287,7 +292,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         private String systemSnapshotName;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
@@ -329,7 +334,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         /**
          * @return createInstances
          */
-        public java.util.List < String > getCreateInstances() {
+        public java.util.List<String> getCreateInstances() {
             return this.createInstances;
         }
 
@@ -476,7 +481,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -488,7 +493,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > createInstances; 
+            private java.util.List<String> createInstances; 
             private String creationTime; 
             private String dataSnapshotId; 
             private String dataSnapshotName; 
@@ -509,13 +514,13 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String status; 
             private String systemSnapshotId; 
             private String systemSnapshotName; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long userId; 
 
             /**
-             * <p>The Information about instances created using the image.</p>
+             * <p>The simple application servers created from the image.</p>
              */
-            public Builder createInstances(java.util.List < String > createInstances) {
+            public Builder createInstances(java.util.List<String> createInstances) {
                 this.createInstances = createInstances;
                 return this;
             }
@@ -587,7 +592,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the custom image is cross-account shared.</p>
+             * <p>Indicates whether the custom image is shared across accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -598,7 +603,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the simple application server.</p>
+             * <p>The ID of the simple application server from which the image is derived.</p>
              * 
              * <strong>example:</strong>
              * <p>2d06ee0520b44de1ae88d4be****</p>
@@ -631,23 +636,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><p>Linux</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>Windows</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
-             * </ul>
+             * <p>The operating system type of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>Linux</p>
@@ -669,7 +658,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RequiredDataDiskSize.
+             * <p>The size of the image data disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder requiredDataDiskSize(Integer requiredDataDiskSize) {
                 this.requiredDataDiskSize = requiredDataDiskSize;
@@ -677,7 +669,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RequiredSystemDiskSize.
+             * <p>The size of the image system disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder requiredSystemDiskSize(Integer requiredSystemDiskSize) {
                 this.requiredSystemDiskSize = requiredSystemDiskSize;
@@ -696,7 +691,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceImageName.
+             * <p>The name of the source image that is used to create the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder sourceImageName(String sourceImageName) {
                 this.sourceImageName = sourceImageName;
@@ -704,7 +702,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceImageVersion.
+             * <p>The version of the source image that is used to create the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder sourceImageVersion(String sourceImageVersion) {
                 this.sourceImageVersion = sourceImageVersion;
@@ -712,7 +713,14 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the custom image.</p>
+             * <p>The status of the custom image. Valid values:</p>
+             * <ul>
+             * <li>0: copying</li>
+             * <li>1: available</li>
+             * <li>2: unavailable</li>
+             * <li>3: creation failed</li>
+             * <li>4: creating</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -747,13 +755,13 @@ public class ListCustomImagesResponseBody extends TeaModel {
             /**
              * <p>The tags of the custom image.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * <p>The Primary Alibaba Cloud account ID of the image owner.</p>
+             * <p>The ID of the Alibaba Cloud account to which the image belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>180185828710****</p>

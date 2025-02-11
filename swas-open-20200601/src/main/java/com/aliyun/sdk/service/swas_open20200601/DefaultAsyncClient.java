@@ -66,8 +66,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of AllocatePublicConnection  AllocatePublicConnectionRequest
      * @return AllocatePublicConnectionResponse
@@ -148,21 +146,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A custom image is created based on a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
+     * <p>A custom image is created from a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
      * You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</p>
      * <blockquote>
-     * <p>If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+     * <p> If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
      * Before you create a custom image, take note of the following items:</p>
      * </blockquote>
      * <ul>
      * <li>The custom image and the corresponding simple application server must reside in the same region.</li>
-     * <li>The maximum number of custom images that can be maintained in an Alibaba Cloud account is triple the number of simple application servers in the account. The value cannot be greater than 15.</li>
-     * <li>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot when you create the custom image.</li>
-     * <li>If a simple application server is released due to expiration or refunds, the custom images that are created based on a snapshot of the server are also released.</li>
-     * <li>If you reset a simple application server by changing the application system or OS of the server or replacing the image of the server, the disk data on the server is cleared. Back up the disk data as needed.</li>
+     * <li>The maximum number of custom images that you can create is 3 times the number of simple application servers that you have, but cannot exceed 15.</li>
+     * <li>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot in addition to a system disk snapshot when you create the custom image.</li>
+     * <li>If a simple application server is released due to expiration or refunds, the custom images that are created based on the server are also released.</li>
+     * <li>Resetting the system or changing the image of a simple application server clears the disk data on the server. Back up the data as needed.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of CreateCustomImage  CreateCustomImageRequest
      * @return CreateCustomImageResponse
@@ -184,8 +180,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of CreateFirewallRule  CreateFirewallRuleRequest
      * @return CreateFirewallRuleResponse
@@ -287,13 +281,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <p>  Before you call this operation, we recommend that you understand the billing rules of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <blockquote>
+     * <p> If you have coupons in your Alibaba Cloud account, the coupons are preferentially used to pay for the simple application servers.</p>
+     * </blockquote>
      * <ul>
-     * <li>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</li>
+     * <li>You can create a maximum of 50 simple application servers in a region for an Alibaba Cloud account.</li>
      * <li>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of CreateInstances  CreateInstancesRequest
      * @return CreateInstancesResponse
@@ -340,19 +335,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after accidental operations on instances, recover data after network attacks, and create custom images.</p>
+     * <p>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after misoperations on servers, recover data after network attacks, and create custom images.</p>
      * <blockquote>
-     * <p>You are not charged for creating snapshots for disks of simple application servers.</p>
+     * <p> You are not charged for creating snapshots in Simple Application Server.</p>
      * </blockquote>
-     * <h3>Precautions</h3>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>You can create up to three snapshots for disks of each simple application server.</li>
-     * <li>The maximum number of snapshots that can be retained in an Alibaba Cloud account is triple the number of simple application servers that you maintain. The value cannot be greater than 15.</li>
+     * <li>You can create up to three snapshots for each simple application server.</li>
+     * <li>The maximum number of snapshots that you create per Alibaba Cloud account is triple of the number of simple application servers that are created. The value cannot be greater than 15.</li>
      * <li>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</li>
-     * <li>If you reset the simple application server after you create a snapshot for a server, the snapshot is retained but cannot be used to roll back the disks of the server.</li>
+     * <li>If you reset a simple application server after you create a snapshot for the server, the snapshot is retained but cannot be used to restore the disks of the server.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
      * @return CreateSnapshotResponse
@@ -396,10 +389,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</p>
      * <blockquote>
-     * <p>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</p>
+     * <p> To delete a shared image, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or API. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</p>
      * </blockquote>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of DeleteCustomImage  DeleteCustomImageRequest
      * @return DeleteCustomImageResponse
@@ -420,7 +411,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see the &quot;Copy custom images&quot; topic.</p>
+     * <p>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a custom image</a>.</p>
      * 
      * @param request the request parameters of DeleteCustomImages  DeleteCustomImagesRequest
      * @return DeleteCustomImagesResponse
@@ -442,8 +433,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of DeleteFirewallRule  DeleteFirewallRuleRequest
      * @return DeleteFirewallRuleResponse
@@ -568,10 +557,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>You can delete a snapshot if you no longer need it.</p>
      * <blockquote>
-     * <p>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</p>
+     * <p> If a custom image was created from the snapshot, delete the custom image before you delete the snapshot.</p>
      * </blockquote>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
@@ -703,8 +690,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-     * \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <p>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.</p>
      * 
      * @param request the request parameters of DescribeDatabaseErrorLogs  DescribeDatabaseErrorLogsRequest
      * @return DescribeDatabaseErrorLogsResponse
@@ -725,9 +711,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <p>After you create a Simple Database Service instance, you can query the details about the instance, including CPU, memory, and disk usage, storage IOPS, and total number of connections.</p>
      * 
      * @param request the request parameters of DescribeDatabaseInstanceMetricData  DescribeDatabaseInstanceMetricDataRequest
      * @return DescribeDatabaseInstanceMetricDataResponse
@@ -769,9 +753,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <p>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoints, internal endpoints, creation time, and expiration time of the instances.</p>
      * 
      * @param request the request parameters of DescribeDatabaseInstances  DescribeDatabaseInstancesRequest
      * @return DescribeDatabaseInstancesResponse
@@ -794,10 +776,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</p>
      * <blockquote>
-     * <p>Slow query log details are retained for 7 days.</p>
+     * <p> Slow query log details are retained for 7 days.</p>
      * </blockquote>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of DescribeDatabaseSlowLogRecords  DescribeDatabaseSlowLogRecordsRequest
      * @return DescribeDatabaseSlowLogRecordsResponse
@@ -1192,9 +1172,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can specify multiple request parameters that you want to query, such as <code>InstanceId</code>, <code>DiskIds</code>, and <code>ResourceGroupId</code>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <p>The <code>InstanceId</code>, <code>DiskIds</code>, and <code>ResourceGroupId</code> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter disks that you want to query.</p>
      * 
      * @param request the request parameters of ListDisks  ListDisksRequest
      * @return ListDisksResponse
@@ -1216,8 +1194,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ListFirewallRules  ListFirewallRulesRequest
      * @return ListFirewallRulesResponse
@@ -1238,9 +1214,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can query information about images in a region, including the IDs, names, and types of the images.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <p>You can query details about one or more images in a specified region, including the IDs, names, and types of the images.</p>
      * 
      * @param request the request parameters of ListImages  ListImagesRequest
      * @return ListImagesResponse
@@ -1261,13 +1235,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</p>
+     * <p>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans that can be upgraded for your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the plan.</p>
      * <blockquote>
-     * <p>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+     * <p> We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the plan. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
      * For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</p>
      * </blockquote>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ListInstancePlansModification  ListInstancePlansModificationRequest
      * @return ListInstancePlansModificationResponse
@@ -1307,8 +1279,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
@@ -1329,16 +1299,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-     * Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</p>
+     * <p>You can query the details of data transfer plans of simple application servers, including the total quota, used quota, unused quota, and excess data transfers in the current month.
+     * Simple Application Server provides data transfer plans that can be used to offset data transfer fees. You are charged for excess data transfers. Take note of the following items:</p>
      * <ul>
      * <li>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</li>
      * <li>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</li>
      * <li>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
      * For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ListInstancesTrafficPackages  ListInstancesTrafficPackagesRequest
      * @return ListInstancesTrafficPackagesResponse
@@ -1378,8 +1346,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ListPlans  ListPlansRequest
      * @return ListPlansResponse
@@ -1401,8 +1367,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
@@ -1423,9 +1387,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can specify multiple request parameters that you want to query, such as <code>InstanceId</code>, <code>DiskId</code>, <code>SnapshotIds</code>, and <code>ResourceGroupId</code>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <p>The <code>InstanceId</code>, <code>DiskId</code>, <code>SnapshotIds</code>, and <code>ResourceGroupId</code> parameters are optional. However, you can specify them as filter conditions and combine them with the logical AND operator to filter snapshots that you want to query.</p>
      * 
      * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
      * @return ListSnapshotsResponse
@@ -1570,17 +1532,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</p>
+     * <p>Custom images can be shared to ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to deploy your business on ECS instances, you can share your custom image to ECS to transfer your business from Simple Application Server to ECS.</p>
      * <blockquote>
-     * <p>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-     * You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</p>
+     * <p> The region in which the shared image resides in ECS is the same as the region in which the custom image resides in Simple Application Server.
+     * You can unshare a custom image based on your business requirements or when you want to delete the custom image. After you unshare a custom image, take note of the following items:</p>
      * </blockquote>
      * <ul>
-     * <li>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</li>
-     * <li>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</li>
+     * <li>You cannot query or use the custom image by using the ECS console or API.</li>
+     * <li>You cannot re-initialize the disks of the ECS instances that were created based on the shared image.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ModifyImageShareStatus  ModifyImageShareStatusRequest
      * @return ModifyImageShareStatusResponse
@@ -1623,8 +1583,6 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>After you restart a simple application server, it enters the Starting state.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of RebootInstance  RebootInstanceRequest
      * @return RebootInstanceResponse
@@ -1706,10 +1664,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
      * <ul>
-     * <li>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</li>
+     * <li>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the renewal fails.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -1753,14 +1709,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</p>
+     * <p>  You can call this operation only if the associated simple application server is in the Stopped state.</p>
      * <ul>
-     * <li>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</li>
+     * <li>If you restore a disk from a snapshot, the incremental data after the snapshot is created is lost. We recommend that you back up the data before you perform this operation.</li>
      * </ul>
-     * <h3>Precautions</h3>
-     * <p>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>Resetting the system or changing the image of a simple application server clears the disk data on the server. Snapshots created before the reset or change are retained but cannot be used to restore disks.</p>
      * 
      * @param request the request parameters of ResetDisk  ResetDiskRequest
      * @return ResetDiskResponse
@@ -1781,41 +1735,38 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can reset a simple application server to re-install its application system or OS and re-initialize the server. You can reset a simple application server by resetting the current system or replacing the image.
-     * You can use one of the following methods to reset a simple application server:</p>
+     * <p>You can reset a simple application server to re-install its applications or operating system and re-initialize the server. You can reset a simple application server by resetting the current system or changing the image.</p>
      * <ul>
-     * <li>Reset the current system. You can re-install the operating system without replacing the image.</li>
-     * <li>Replace the image. You can select an Alibaba Cloud image or a custom image that is different from the existing image of the server to reinstall the OS of the server.</li>
+     * <li>Reset the current system: You can re-install the operating system without changing the image.</li>
+     * <li>Change the image: You can select another Alibaba Cloud image or a custom image to re-install the operating system.</li>
      * </ul>
-     * <h3>Precautions</h3>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>After you reset a simple application server, the disk data on the server is cleared. Back up the data as needed.</li>
-     * <li>After you reset a simple application server, the monitoring operations that are performed on the server may fail. In this case, you can use one of the following methods to install the CloudMonitor agent on the server:<ul>
+     * <li>Resetting the system or changing the image of a simple application server clears the disk data on the server. Back up the data as needed.</li>
+     * <li>After you reset a simple application server, monitoring may fail. In this case, you can use one of the following methods to install the CloudMonitor agent on the server:<ul>
      * <li>Connect to the server: For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Manually install the CloudMonitor agent for C++ on an ECS instance</a>.</li>
      * <li>Use Command Assistant: For more information, see <a href="https://help.aliyun.com/document_detail/438681.html">Use Command Assistant</a>. You can obtain the command that can be used to install CloudMonitor from the &quot;Common commands&quot; section of the <a href="https://help.aliyun.com/document_detail/438681.html">Use Command Assistant</a> topic.</li>
      * </ul>
      * </li>
      * </ul>
-     * <h3>Limits</h3>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
-     * <li>Snapshots that are created before a server is reset are retained, but the snapshots cannot be used to roll back the disks of the server.</li>
-     * <li>You cannot reset simple application servers that were created based on custom images that contain data of data disks.</li>
-     * <li>Before you reset a simple application server by replacing the existing image with a custom image, take note of the following items:<ul>
+     * <li>Snapshots that are created before the reset are retained, but the snapshots cannot be used to restore the disks of the server.</li>
+     * <li>You cannot reset simple application servers that were created from custom images that contain data of data disks.</li>
+     * <li>If you reset a simple application server by replacing the existing image with a custom image, the following limits apply:<ul>
      * <li>The custom image must reside in the same region as the current server.</li>
-     * <li>The custom image cannot be created based on the current server. If you want to recover the data on the server, you can use a snapshot of the server to roll back the disks of the server.</li>
-     * <li>If your simple application server resides outside the Chinese mainland, you cannot switch the OS of the server between Windows Server and Linux. You cannot use a Windows Server custom image to reset a Linux simple application server. You also cannot use a Linux custom image to reset a Windows Server simple application server. You can switch the OSs of simple application servers only between Windows Server OSs or between Linux distributions.</li>
+     * <li>The custom image cannot be created based on the current server. If you want to restore the data on the server, you can use a snapshot of the server to restore disk data.</li>
+     * <li>If your simple application server resides in a region outside the Chinese mainland, you cannot switch the operating system of the server between Windows Server and Linux. You cannot use a Windows Server custom image to reset a Linux simple application server. Similarly, you cannot use a Linux custom image to reset a Windows Server simple application server. You can switch the operating systems of simple application servers only between Windows Server versions or between Linux distributions.</li>
      * <li>The following limits apply to the disks attached to the simple application server:<ul>
-     * <li>If the custom image contains a system disk and a data disk but only a system disk is attached to the simple application server and no data disk is attached, you cannot use the custom image to reset the simple application server.</li>
+     * <li>If the custom image contains a system disk and a data disk but only a system disk is attached to the simple application server, you cannot use the custom image to reset the simple application server.</li>
      * <li>If the system disk size of the custom image is greater than the system disk size of the simple application server, you cannot directly use the custom image to reset the simple application server.</li>
-     * <li>Only if the system disk size of the simple application server is greater than or equal to the system disk size of the custom image, you can use the custom image to reset the simple application server. To increase the system disk size of your simple application server, you can upgrade the server. For more information, see Upgrade a simple application server.</li>
+     * <li>Only if the system disk size of the simple application server is greater than or equal to the system disk size of the custom image, you can use the custom image to reset the simple application server. To increase the system disk size of your server, you can upgrade the server configuration. For more information, see Upgrade a simple application server.</li>
      * <li>If the data disk size of the custom image is greater than the data disk size of the simple application server, you cannot use the custom image to reset the simple application server.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of ResetSystem  ResetSystemRequest
      * @return ResetSystemResponse
@@ -1886,8 +1837,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of StartDatabaseInstance  StartDatabaseInstanceRequest
      * @return StartDatabaseInstanceResponse
@@ -1909,8 +1858,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can call this operation to start a simple application server that is in the Stopped state.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of StartInstance  StartInstanceRequest
      * @return StartInstanceResponse
@@ -1968,8 +1915,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</p>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of StopDatabaseInstance  StopDatabaseInstanceRequest
      * @return StopDatabaseInstanceResponse
@@ -1992,10 +1937,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>You can stop a simple application server that you do not use for the time being.</p>
      * <blockquote>
-     * <p> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</p>
+     * <p> Stopping a simple application server may interrupt your business. We recommend that you perform this operation during off-peak hours.</p>
      * </blockquote>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of StopInstance  StopInstanceRequest
      * @return StopInstanceResponse
@@ -2106,10 +2049,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
-     * <p>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</p>
-     * <h3>QPS limits</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation for the new password to take effect.</p>
      * 
      * @param request the request parameters of UpdateInstanceAttribute  UpdateInstanceAttributeRequest
      * @return UpdateInstanceAttributeResponse
@@ -2148,12 +2089,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <p>  The plan of a simple application server can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
      * <ul>
-     * <li>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</li>
+     * <li>Before you call this operation, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the upgrade fails.</li>
      * </ul>
-     * <h3>QPS limit</h3>
-     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
      * 
      * @param request the request parameters of UpgradeInstance  UpgradeInstanceRequest
      * @return UpgradeInstanceResponse

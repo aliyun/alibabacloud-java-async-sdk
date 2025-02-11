@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class RunCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -120,7 +125,7 @@ public class RunCommandRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -171,7 +176,7 @@ public class RunCommandRequest extends Request {
         private Boolean enableParameter; 
         private String instanceId; 
         private String name; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private Integer timeout; 
         private String type; 
@@ -271,7 +276,7 @@ public class RunCommandRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -324,8 +329,8 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The name of the password to be used to run the command on a Windows server.</p>
-         * <p>If you want to use a username other than the default &quot;system&quot; username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. To mitigate the risk of password leaks, the password is stored in plaintext in Operation Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName.</p>
+         * <p>The name of the password used to run the command on a Windows simple application server.</p>
+         * <p>If you want to use a username other than the default &quot;system&quot; username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. The password is hosted in plaintext in the parameter repository of CloudOps Orchestration Service (OOS) to mitigate the risk of password leaks. Only the name of the password is passed in by using WindowsPasswordName.</p>
          * 
          * <strong>example:</strong>
          * <p>axtSecretPassword</p>

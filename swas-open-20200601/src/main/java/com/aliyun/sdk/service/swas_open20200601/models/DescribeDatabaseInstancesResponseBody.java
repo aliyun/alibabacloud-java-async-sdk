@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDatabaseInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatabaseInstances")
-    private java.util.List < DatabaseInstances> databaseInstances;
+    private java.util.List<DatabaseInstances> databaseInstances;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
     /**
      * @return databaseInstances
      */
-    public java.util.List < DatabaseInstances> getDatabaseInstances() {
+    public java.util.List<DatabaseInstances> getDatabaseInstances() {
         return this.databaseInstances;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DatabaseInstances> databaseInstances; 
+        private java.util.List<DatabaseInstances> databaseInstances; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         /**
          * <p>The information about the Simple Database Service instances.</p>
          */
-        public Builder databaseInstances(java.util.List < DatabaseInstances> databaseInstances) {
+        public Builder databaseInstances(java.util.List<DatabaseInstances> databaseInstances) {
             this.databaseInstances = databaseInstances;
             return this;
         }

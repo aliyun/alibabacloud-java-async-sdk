@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
-    private java.util.List < String > taskId;
+    private java.util.List<String> taskId;
 
     private DescribeFirewallTemplateApplyResultsRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
     /**
      * @return taskId
      */
-    public java.util.List < String > getTaskId() {
+    public java.util.List<String> getTaskId() {
         return this.taskId;
     }
 
@@ -108,7 +113,7 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < String > taskId; 
+        private java.util.List<String> taskId; 
 
         private Builder() {
             super();
@@ -188,7 +193,7 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
         /**
          * <p>The ID of the execution to apply the template.</p>
          */
-        public Builder taskId(java.util.List < String > taskId) {
+        public Builder taskId(java.util.List<String> taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
             return this;

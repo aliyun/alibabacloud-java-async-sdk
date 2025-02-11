@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DeleteFirewallRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
-    private java.util.List < String > ruleIds;
+    private java.util.List<String> ruleIds;
 
     private DeleteFirewallRulesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class DeleteFirewallRulesRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < String > getRuleIds() {
+    public java.util.List<String> getRuleIds() {
         return this.ruleIds;
     }
 
@@ -83,7 +88,7 @@ public class DeleteFirewallRulesRequest extends Request {
         private String clientToken; 
         private String instanceId; 
         private String regionId; 
-        private java.util.List < String > ruleIds; 
+        private java.util.List<String> ruleIds; 
 
         private Builder() {
             super();
@@ -138,7 +143,7 @@ public class DeleteFirewallRulesRequest extends Request {
         /**
          * <p>The IDs of the firewall rules that you want to delete.</p>
          */
-        public Builder ruleIds(java.util.List < String > ruleIds) {
+        public Builder ruleIds(java.util.List<String> ruleIds) {
             String ruleIdsShrink = shrink(ruleIds, "RuleIds", "simple");
             this.putQueryParameter("RuleIds", ruleIdsShrink);
             this.ruleIds = ruleIds;

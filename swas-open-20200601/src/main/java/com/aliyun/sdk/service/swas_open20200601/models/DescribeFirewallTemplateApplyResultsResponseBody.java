@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     private DescribeFirewallTemplateApplyResultsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -83,7 +88,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
 
         /**
          * <p>The page number.</p>
@@ -132,7 +137,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         /**
          * <p>The returned results.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -239,7 +244,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         private String firewallTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceApplyResults")
-        private java.util.List < InstanceApplyResults> instanceApplyResults;
+        private java.util.List<InstanceApplyResults> instanceApplyResults;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -292,7 +297,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         /**
          * @return instanceApplyResults
          */
-        public java.util.List < InstanceApplyResults> getInstanceApplyResults() {
+        public java.util.List<InstanceApplyResults> getInstanceApplyResults() {
             return this.instanceApplyResults;
         }
 
@@ -321,7 +326,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             private String createTime; 
             private String failedCount; 
             private String firewallTemplateId; 
-            private java.util.List < InstanceApplyResults> instanceApplyResults; 
+            private java.util.List<InstanceApplyResults> instanceApplyResults; 
             private String status; 
             private String taskId; 
             private String totalCount; 
@@ -362,7 +367,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             /**
              * <p>The result of applying the firewall template to the simple application servers.</p>
              */
-            public Builder instanceApplyResults(java.util.List < InstanceApplyResults> instanceApplyResults) {
+            public Builder instanceApplyResults(java.util.List<InstanceApplyResults> instanceApplyResults) {
                 this.instanceApplyResults = instanceApplyResults;
                 return this;
             }

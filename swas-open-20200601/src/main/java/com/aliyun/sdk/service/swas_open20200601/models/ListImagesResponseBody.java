@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -46,17 +51,13 @@ public class ListImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private String requestId; 
 
         /**
-         * <p>The OS type of the image. Valid values:</p>
-         * <ul>
-         * <li>Linux</li>
-         * <li>Windows</li>
-         * </ul>
+         * <p>The information of the image.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
@@ -160,6 +161,10 @@ public class ListImagesResponseBody extends TeaModel {
 
             /**
              * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apps ImageOS ImageCustom Images
+             * WordPress is a popular and powerful platform that allows you to build blogs and content management websites and implement custom features by using third-party templates and plug-ins. This WordPress image is built based on CentOS 7.9, PHP 7.4, MySQL 5.7, and Apache 2.4.</p>
              */
             public Builder description(String description) {
                 this.description = description;
