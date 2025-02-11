@@ -143,6 +143,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request);
 
     /**
+     * @param request the request parameters of DescribeAclResourceName  DescribeAclResourceNameRequest
+     * @return DescribeAclResourceNameResponse
+     */
+    CompletableFuture<DescribeAclResourceNameResponse> describeAclResourceName(DescribeAclResourceNameRequest request);
+
+    /**
      * @param request the request parameters of DescribeAcls  DescribeAclsRequest
      * @return DescribeAclsResponse
      */
