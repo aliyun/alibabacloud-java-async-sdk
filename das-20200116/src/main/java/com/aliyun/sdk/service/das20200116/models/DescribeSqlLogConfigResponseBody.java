@@ -572,7 +572,10 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SqlLogSource.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder sqlLogSource(String sqlLogSource) {
                 this.sqlLogSource = sqlLogSource;
@@ -607,7 +610,10 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SupportMigration.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder supportMigration(Boolean supportMigration) {
                 this.supportMigration = supportMigration;

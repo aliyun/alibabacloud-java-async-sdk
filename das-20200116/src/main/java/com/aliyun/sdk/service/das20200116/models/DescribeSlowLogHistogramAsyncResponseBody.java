@@ -323,6 +323,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgDocExamined")
         private java.util.List<Double> avgDocExamined;
 
+        @com.aliyun.core.annotation.NameInMap("AvgFrows")
+        private java.util.List<Double> avgFrows;
+
         @com.aliyun.core.annotation.NameInMap("AvgIOWrites")
         private java.util.List<Double> avgIOWrites;
 
@@ -344,6 +347,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgReturnNum")
         private java.util.List<Double> avgReturnNum;
 
+        @com.aliyun.core.annotation.NameInMap("AvgRows")
+        private java.util.List<Double> avgRows;
+
         @com.aliyun.core.annotation.NameInMap("AvgRowsCountAffected")
         private java.util.List<Double> avgRowsCountAffected;
 
@@ -356,6 +362,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgRt")
         private java.util.List<Double> avgRt;
 
+        @com.aliyun.core.annotation.NameInMap("AvgScnt")
+        private java.util.List<Double> avgScnt;
+
         @com.aliyun.core.annotation.NameInMap("CPUTime")
         private java.util.List<Double> CPUTime;
 
@@ -364,6 +373,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocExamined")
         private java.util.List<Long> docExamined;
+
+        @com.aliyun.core.annotation.NameInMap("Frows")
+        private java.util.List<Long> frows;
 
         @com.aliyun.core.annotation.NameInMap("IOWrites")
         private java.util.List<Long> IOWrites;
@@ -389,6 +401,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxDocExamined")
         private java.util.List<Long> maxDocExamined;
 
+        @com.aliyun.core.annotation.NameInMap("MaxFrows")
+        private java.util.List<Long> maxFrows;
+
         @com.aliyun.core.annotation.NameInMap("MaxIOWrites")
         private java.util.List<Long> maxIOWrites;
 
@@ -410,6 +425,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxReturnNum")
         private java.util.List<Long> maxReturnNum;
 
+        @com.aliyun.core.annotation.NameInMap("MaxRows")
+        private java.util.List<Long> maxRows;
+
         @com.aliyun.core.annotation.NameInMap("MaxRowsCountAffected")
         private java.util.List<Long> maxRowsCountAffected;
 
@@ -422,11 +440,17 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxRt")
         private java.util.List<Double> maxRt;
 
+        @com.aliyun.core.annotation.NameInMap("MaxScnt")
+        private java.util.List<Long> maxScnt;
+
         @com.aliyun.core.annotation.NameInMap("PhysicalIOReads")
         private java.util.List<Long> physicalIOReads;
 
         @com.aliyun.core.annotation.NameInMap("ReturnNum")
         private java.util.List<Long> returnNum;
+
+        @com.aliyun.core.annotation.NameInMap("Rows")
+        private java.util.List<Long> rows;
 
         @com.aliyun.core.annotation.NameInMap("RowsCountAffected")
         private java.util.List<Long> rowsCountAffected;
@@ -440,6 +464,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rt")
         private java.util.List<Double> rt;
 
+        @com.aliyun.core.annotation.NameInMap("Scnt")
+        private java.util.List<Long> scnt;
+
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
@@ -452,6 +479,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         private DataData(Builder builder) {
             this.avgCPUTime = builder.avgCPUTime;
             this.avgDocExamined = builder.avgDocExamined;
+            this.avgFrows = builder.avgFrows;
             this.avgIOWrites = builder.avgIOWrites;
             this.avgKeysExamined = builder.avgKeysExamined;
             this.avgLastRowsCountAffected = builder.avgLastRowsCountAffected;
@@ -459,13 +487,16 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             this.avgLogicalIOReads = builder.avgLogicalIOReads;
             this.avgPhysicalIOReads = builder.avgPhysicalIOReads;
             this.avgReturnNum = builder.avgReturnNum;
+            this.avgRows = builder.avgRows;
             this.avgRowsCountAffected = builder.avgRowsCountAffected;
             this.avgRowsExamined = builder.avgRowsExamined;
             this.avgRowsSent = builder.avgRowsSent;
             this.avgRt = builder.avgRt;
+            this.avgScnt = builder.avgScnt;
             this.CPUTime = builder.CPUTime;
             this.count = builder.count;
             this.docExamined = builder.docExamined;
+            this.frows = builder.frows;
             this.IOWrites = builder.IOWrites;
             this.item = builder.item;
             this.keysExamined = builder.keysExamined;
@@ -474,6 +505,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             this.logicalIOReads = builder.logicalIOReads;
             this.maxCPUTime = builder.maxCPUTime;
             this.maxDocExamined = builder.maxDocExamined;
+            this.maxFrows = builder.maxFrows;
             this.maxIOWrites = builder.maxIOWrites;
             this.maxKeysExamined = builder.maxKeysExamined;
             this.maxLastRowsCountAffected = builder.maxLastRowsCountAffected;
@@ -481,16 +513,20 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             this.maxLogicalIOReads = builder.maxLogicalIOReads;
             this.maxPhysicalIOReads = builder.maxPhysicalIOReads;
             this.maxReturnNum = builder.maxReturnNum;
+            this.maxRows = builder.maxRows;
             this.maxRowsCountAffected = builder.maxRowsCountAffected;
             this.maxRowsExamined = builder.maxRowsExamined;
             this.maxRowsSent = builder.maxRowsSent;
             this.maxRt = builder.maxRt;
+            this.maxScnt = builder.maxScnt;
             this.physicalIOReads = builder.physicalIOReads;
             this.returnNum = builder.returnNum;
+            this.rows = builder.rows;
             this.rowsCountAffected = builder.rowsCountAffected;
             this.rowsExamined = builder.rowsExamined;
             this.rowsSent = builder.rowsSent;
             this.rt = builder.rt;
+            this.scnt = builder.scnt;
             this.total = builder.total;
             this.ts = builder.ts;
             this.tsEnd = builder.tsEnd;
@@ -516,6 +552,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
          */
         public java.util.List<Double> getAvgDocExamined() {
             return this.avgDocExamined;
+        }
+
+        /**
+         * @return avgFrows
+         */
+        public java.util.List<Double> getAvgFrows() {
+            return this.avgFrows;
         }
 
         /**
@@ -568,6 +611,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgRows
+         */
+        public java.util.List<Double> getAvgRows() {
+            return this.avgRows;
+        }
+
+        /**
          * @return avgRowsCountAffected
          */
         public java.util.List<Double> getAvgRowsCountAffected() {
@@ -596,6 +646,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgScnt
+         */
+        public java.util.List<Double> getAvgScnt() {
+            return this.avgScnt;
+        }
+
+        /**
          * @return CPUTime
          */
         public java.util.List<Double> getCPUTime() {
@@ -614,6 +671,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
          */
         public java.util.List<Long> getDocExamined() {
             return this.docExamined;
+        }
+
+        /**
+         * @return frows
+         */
+        public java.util.List<Long> getFrows() {
+            return this.frows;
         }
 
         /**
@@ -673,6 +737,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxFrows
+         */
+        public java.util.List<Long> getMaxFrows() {
+            return this.maxFrows;
+        }
+
+        /**
          * @return maxIOWrites
          */
         public java.util.List<Long> getMaxIOWrites() {
@@ -722,6 +793,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxRows
+         */
+        public java.util.List<Long> getMaxRows() {
+            return this.maxRows;
+        }
+
+        /**
          * @return maxRowsCountAffected
          */
         public java.util.List<Long> getMaxRowsCountAffected() {
@@ -750,6 +828,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxScnt
+         */
+        public java.util.List<Long> getMaxScnt() {
+            return this.maxScnt;
+        }
+
+        /**
          * @return physicalIOReads
          */
         public java.util.List<Long> getPhysicalIOReads() {
@@ -761,6 +846,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
          */
         public java.util.List<Long> getReturnNum() {
             return this.returnNum;
+        }
+
+        /**
+         * @return rows
+         */
+        public java.util.List<Long> getRows() {
+            return this.rows;
         }
 
         /**
@@ -792,6 +884,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return scnt
+         */
+        public java.util.List<Long> getScnt() {
+            return this.scnt;
+        }
+
+        /**
          * @return total
          */
         public Long getTotal() {
@@ -815,6 +914,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Double> avgCPUTime; 
             private java.util.List<Double> avgDocExamined; 
+            private java.util.List<Double> avgFrows; 
             private java.util.List<Double> avgIOWrites; 
             private java.util.List<Double> avgKeysExamined; 
             private java.util.List<Double> avgLastRowsCountAffected; 
@@ -822,13 +922,16 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private java.util.List<Double> avgLogicalIOReads; 
             private java.util.List<Double> avgPhysicalIOReads; 
             private java.util.List<Double> avgReturnNum; 
+            private java.util.List<Double> avgRows; 
             private java.util.List<Double> avgRowsCountAffected; 
             private java.util.List<Double> avgRowsExamined; 
             private java.util.List<Double> avgRowsSent; 
             private java.util.List<Double> avgRt; 
+            private java.util.List<Double> avgScnt; 
             private java.util.List<Double> CPUTime; 
             private java.util.List<Long> count; 
             private java.util.List<Long> docExamined; 
+            private java.util.List<Long> frows; 
             private java.util.List<Long> IOWrites; 
             private java.util.List<Item> item; 
             private java.util.List<Long> keysExamined; 
@@ -837,6 +940,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private java.util.List<Long> logicalIOReads; 
             private java.util.List<Double> maxCPUTime; 
             private java.util.List<Long> maxDocExamined; 
+            private java.util.List<Long> maxFrows; 
             private java.util.List<Long> maxIOWrites; 
             private java.util.List<Long> maxKeysExamined; 
             private java.util.List<Long> maxLastRowsCountAffected; 
@@ -844,16 +948,20 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             private java.util.List<Long> maxLogicalIOReads; 
             private java.util.List<Long> maxPhysicalIOReads; 
             private java.util.List<Long> maxReturnNum; 
+            private java.util.List<Long> maxRows; 
             private java.util.List<Long> maxRowsCountAffected; 
             private java.util.List<Long> maxRowsExamined; 
             private java.util.List<Long> maxRowsSent; 
             private java.util.List<Double> maxRt; 
+            private java.util.List<Long> maxScnt; 
             private java.util.List<Long> physicalIOReads; 
             private java.util.List<Long> returnNum; 
+            private java.util.List<Long> rows; 
             private java.util.List<Long> rowsCountAffected; 
             private java.util.List<Long> rowsExamined; 
             private java.util.List<Long> rowsSent; 
             private java.util.List<Double> rt; 
+            private java.util.List<Long> scnt; 
             private Long total; 
             private java.util.List<Long> ts; 
             private java.util.List<Long> tsEnd; 
@@ -871,6 +979,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
              */
             public Builder avgDocExamined(java.util.List<Double> avgDocExamined) {
                 this.avgDocExamined = avgDocExamined;
+                return this;
+            }
+
+            /**
+             * AvgFrows.
+             */
+            public Builder avgFrows(java.util.List<Double> avgFrows) {
+                this.avgFrows = avgFrows;
                 return this;
             }
 
@@ -931,6 +1047,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
+             * AvgRows.
+             */
+            public Builder avgRows(java.util.List<Double> avgRows) {
+                this.avgRows = avgRows;
+                return this;
+            }
+
+            /**
              * AvgRowsCountAffected.
              */
             public Builder avgRowsCountAffected(java.util.List<Double> avgRowsCountAffected) {
@@ -963,6 +1087,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
+             * AvgScnt.
+             */
+            public Builder avgScnt(java.util.List<Double> avgScnt) {
+                this.avgScnt = avgScnt;
+                return this;
+            }
+
+            /**
              * CPUTime.
              */
             public Builder CPUTime(java.util.List<Double> CPUTime) {
@@ -983,6 +1115,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
              */
             public Builder docExamined(java.util.List<Long> docExamined) {
                 this.docExamined = docExamined;
+                return this;
+            }
+
+            /**
+             * Frows.
+             */
+            public Builder frows(java.util.List<Long> frows) {
+                this.frows = frows;
                 return this;
             }
 
@@ -1051,6 +1191,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
+             * MaxFrows.
+             */
+            public Builder maxFrows(java.util.List<Long> maxFrows) {
+                this.maxFrows = maxFrows;
+                return this;
+            }
+
+            /**
              * MaxIOWrites.
              */
             public Builder maxIOWrites(java.util.List<Long> maxIOWrites) {
@@ -1107,6 +1255,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
+             * MaxRows.
+             */
+            public Builder maxRows(java.util.List<Long> maxRows) {
+                this.maxRows = maxRows;
+                return this;
+            }
+
+            /**
              * MaxRowsCountAffected.
              */
             public Builder maxRowsCountAffected(java.util.List<Long> maxRowsCountAffected) {
@@ -1139,6 +1295,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
             }
 
             /**
+             * MaxScnt.
+             */
+            public Builder maxScnt(java.util.List<Long> maxScnt) {
+                this.maxScnt = maxScnt;
+                return this;
+            }
+
+            /**
              * PhysicalIOReads.
              */
             public Builder physicalIOReads(java.util.List<Long> physicalIOReads) {
@@ -1151,6 +1315,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
              */
             public Builder returnNum(java.util.List<Long> returnNum) {
                 this.returnNum = returnNum;
+                return this;
+            }
+
+            /**
+             * Rows.
+             */
+            public Builder rows(java.util.List<Long> rows) {
+                this.rows = rows;
                 return this;
             }
 
@@ -1183,6 +1355,14 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
              */
             public Builder rt(java.util.List<Double> rt) {
                 this.rt = rt;
+                return this;
+            }
+
+            /**
+             * Scnt.
+             */
+            public Builder scnt(java.util.List<Long> scnt) {
+                this.scnt = scnt;
                 return this;
             }
 

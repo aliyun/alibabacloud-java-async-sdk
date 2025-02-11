@@ -740,8 +740,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgCPUTime")
         private Double avgCPUTime;
 
+        @com.aliyun.core.annotation.NameInMap("AvgCPUTimeSeconds")
+        private Double avgCPUTimeSeconds;
+
         @com.aliyun.core.annotation.NameInMap("AvgDocExamined")
         private Double avgDocExamined;
+
+        @com.aliyun.core.annotation.NameInMap("AvgFrows")
+        private Double avgFrows;
 
         @com.aliyun.core.annotation.NameInMap("AvgIOWrites")
         private Double avgIOWrites;
@@ -773,6 +779,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgReturnNum")
         private Double avgReturnNum;
 
+        @com.aliyun.core.annotation.NameInMap("AvgRows")
+        private Double avgRows;
+
         @com.aliyun.core.annotation.NameInMap("AvgRowsCountAffected")
         private Double avgRowsCountAffected;
 
@@ -782,8 +791,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgRowsSent")
         private Double avgRowsSent;
 
+        @com.aliyun.core.annotation.NameInMap("AvgScnt")
+        private Double avgScnt;
+
         @com.aliyun.core.annotation.NameInMap("CPUTime")
         private Double CPUTime;
+
+        @com.aliyun.core.annotation.NameInMap("CPUTimeSeconds")
+        private Double CPUTimeSeconds;
 
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -808,6 +823,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocsExamined")
         private Long docsExamined;
+
+        @com.aliyun.core.annotation.NameInMap("Frows")
+        private Long frows;
 
         @com.aliyun.core.annotation.NameInMap("Histogram")
         private Histogram histogram;
@@ -845,8 +863,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCPUTime")
         private Double maxCPUTime;
 
+        @com.aliyun.core.annotation.NameInMap("MaxCPUTimeSeconds")
+        private Double maxCPUTimeSeconds;
+
         @com.aliyun.core.annotation.NameInMap("MaxDocExamined")
         private Long maxDocExamined;
+
+        @com.aliyun.core.annotation.NameInMap("MaxFrows")
+        private Long maxFrows;
 
         @com.aliyun.core.annotation.NameInMap("MaxIOWrites")
         private Long maxIOWrites;
@@ -878,6 +902,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxReturnNum")
         private Long maxReturnNum;
 
+        @com.aliyun.core.annotation.NameInMap("MaxRows")
+        private Long maxRows;
+
         @com.aliyun.core.annotation.NameInMap("MaxRowsCountAffected")
         private Long maxRowsCountAffected;
 
@@ -886,6 +913,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MaxRowsSent")
         private Long maxRowsSent;
+
+        @com.aliyun.core.annotation.NameInMap("MaxScnt")
+        private Long maxScnt;
 
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
@@ -926,6 +956,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReturnNum")
         private Long returnNum;
 
+        @com.aliyun.core.annotation.NameInMap("Rows")
+        private Long rows;
+
         @com.aliyun.core.annotation.NameInMap("RowsCountAffected")
         private Long rowsCountAffected;
 
@@ -940,6 +973,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
+
+        @com.aliyun.core.annotation.NameInMap("Scnt")
+        private Long scnt;
 
         @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
@@ -971,7 +1007,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         private Logs(Builder builder) {
             this.accountName = builder.accountName;
             this.avgCPUTime = builder.avgCPUTime;
+            this.avgCPUTimeSeconds = builder.avgCPUTimeSeconds;
             this.avgDocExamined = builder.avgDocExamined;
+            this.avgFrows = builder.avgFrows;
             this.avgIOWrites = builder.avgIOWrites;
             this.avgKeysExamined = builder.avgKeysExamined;
             this.avgLastRowsCountAffected = builder.avgLastRowsCountAffected;
@@ -982,10 +1020,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.avgQueryTime = builder.avgQueryTime;
             this.avgQueryTimeSeconds = builder.avgQueryTimeSeconds;
             this.avgReturnNum = builder.avgReturnNum;
+            this.avgRows = builder.avgRows;
             this.avgRowsCountAffected = builder.avgRowsCountAffected;
             this.avgRowsExamined = builder.avgRowsExamined;
             this.avgRowsSent = builder.avgRowsSent;
+            this.avgScnt = builder.avgScnt;
             this.CPUTime = builder.CPUTime;
+            this.CPUTimeSeconds = builder.CPUTimeSeconds;
             this.command = builder.command;
             this.count = builder.count;
             this.countRate = builder.countRate;
@@ -994,6 +1035,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.dbInstanceName = builder.dbInstanceName;
             this.docExamined = builder.docExamined;
             this.docsExamined = builder.docsExamined;
+            this.frows = builder.frows;
             this.histogram = builder.histogram;
             this.hostAddress = builder.hostAddress;
             this.hostInsId = builder.hostInsId;
@@ -1006,7 +1048,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.lockTimeSeconds = builder.lockTimeSeconds;
             this.logicalIOReads = builder.logicalIOReads;
             this.maxCPUTime = builder.maxCPUTime;
+            this.maxCPUTimeSeconds = builder.maxCPUTimeSeconds;
             this.maxDocExamined = builder.maxDocExamined;
+            this.maxFrows = builder.maxFrows;
             this.maxIOWrites = builder.maxIOWrites;
             this.maxKeysExamined = builder.maxKeysExamined;
             this.maxLastRowsCountAffected = builder.maxLastRowsCountAffected;
@@ -1017,9 +1061,11 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.maxQueryTime = builder.maxQueryTime;
             this.maxQueryTimeSeconds = builder.maxQueryTimeSeconds;
             this.maxReturnNum = builder.maxReturnNum;
+            this.maxRows = builder.maxRows;
             this.maxRowsCountAffected = builder.maxRowsCountAffected;
             this.maxRowsExamined = builder.maxRowsExamined;
             this.maxRowsSent = builder.maxRowsSent;
+            this.maxScnt = builder.maxScnt;
             this.namespace = builder.namespace;
             this.nodeType = builder.nodeType;
             this.opType = builder.opType;
@@ -1033,11 +1079,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             this.queryTimeSeconds = builder.queryTimeSeconds;
             this.returnItemNumbers = builder.returnItemNumbers;
             this.returnNum = builder.returnNum;
+            this.rows = builder.rows;
             this.rowsCountAffected = builder.rowsCountAffected;
             this.rowsExamined = builder.rowsExamined;
             this.rowsSent = builder.rowsSent;
             this.SQLText = builder.SQLText;
             this.scheme = builder.scheme;
+            this.scnt = builder.scnt;
             this.sqlId = builder.sqlId;
             this.sqlTag = builder.sqlTag;
             this.sqlType = builder.sqlType;
@@ -1072,10 +1120,24 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgCPUTimeSeconds
+         */
+        public Double getAvgCPUTimeSeconds() {
+            return this.avgCPUTimeSeconds;
+        }
+
+        /**
          * @return avgDocExamined
          */
         public Double getAvgDocExamined() {
             return this.avgDocExamined;
+        }
+
+        /**
+         * @return avgFrows
+         */
+        public Double getAvgFrows() {
+            return this.avgFrows;
         }
 
         /**
@@ -1149,6 +1211,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgRows
+         */
+        public Double getAvgRows() {
+            return this.avgRows;
+        }
+
+        /**
          * @return avgRowsCountAffected
          */
         public Double getAvgRowsCountAffected() {
@@ -1170,10 +1239,24 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return avgScnt
+         */
+        public Double getAvgScnt() {
+            return this.avgScnt;
+        }
+
+        /**
          * @return CPUTime
          */
         public Double getCPUTime() {
             return this.CPUTime;
+        }
+
+        /**
+         * @return CPUTimeSeconds
+         */
+        public Double getCPUTimeSeconds() {
+            return this.CPUTimeSeconds;
         }
 
         /**
@@ -1230,6 +1313,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         public Long getDocsExamined() {
             return this.docsExamined;
+        }
+
+        /**
+         * @return frows
+         */
+        public Long getFrows() {
+            return this.frows;
         }
 
         /**
@@ -1317,10 +1407,24 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxCPUTimeSeconds
+         */
+        public Double getMaxCPUTimeSeconds() {
+            return this.maxCPUTimeSeconds;
+        }
+
+        /**
          * @return maxDocExamined
          */
         public Long getMaxDocExamined() {
             return this.maxDocExamined;
+        }
+
+        /**
+         * @return maxFrows
+         */
+        public Long getMaxFrows() {
+            return this.maxFrows;
         }
 
         /**
@@ -1394,6 +1498,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxRows
+         */
+        public Long getMaxRows() {
+            return this.maxRows;
+        }
+
+        /**
          * @return maxRowsCountAffected
          */
         public Long getMaxRowsCountAffected() {
@@ -1412,6 +1523,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         public Long getMaxRowsSent() {
             return this.maxRowsSent;
+        }
+
+        /**
+         * @return maxScnt
+         */
+        public Long getMaxScnt() {
+            return this.maxScnt;
         }
 
         /**
@@ -1506,6 +1624,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
+         * @return rows
+         */
+        public Long getRows() {
+            return this.rows;
+        }
+
+        /**
          * @return rowsCountAffected
          */
         public Long getRowsCountAffected() {
@@ -1538,6 +1663,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
          */
         public String getScheme() {
             return this.scheme;
+        }
+
+        /**
+         * @return scnt
+         */
+        public Long getScnt() {
+            return this.scnt;
         }
 
         /**
@@ -1606,7 +1738,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         public static final class Builder {
             private String accountName; 
             private Double avgCPUTime; 
+            private Double avgCPUTimeSeconds; 
             private Double avgDocExamined; 
+            private Double avgFrows; 
             private Double avgIOWrites; 
             private Double avgKeysExamined; 
             private Double avgLastRowsCountAffected; 
@@ -1617,10 +1751,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Double avgQueryTime; 
             private Double avgQueryTimeSeconds; 
             private Double avgReturnNum; 
+            private Double avgRows; 
             private Double avgRowsCountAffected; 
             private Double avgRowsExamined; 
             private Double avgRowsSent; 
+            private Double avgScnt; 
             private Double CPUTime; 
+            private Double CPUTimeSeconds; 
             private String command; 
             private Long count; 
             private Double countRate; 
@@ -1629,6 +1766,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private String dbInstanceName; 
             private Long docExamined; 
             private Long docsExamined; 
+            private Long frows; 
             private Histogram histogram; 
             private String hostAddress; 
             private String hostInsId; 
@@ -1641,7 +1779,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Double lockTimeSeconds; 
             private Long logicalIOReads; 
             private Double maxCPUTime; 
+            private Double maxCPUTimeSeconds; 
             private Long maxDocExamined; 
+            private Long maxFrows; 
             private Long maxIOWrites; 
             private Long maxKeysExamined; 
             private Long maxLastRowsCountAffected; 
@@ -1652,9 +1792,11 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Double maxQueryTime; 
             private Double maxQueryTimeSeconds; 
             private Long maxReturnNum; 
+            private Long maxRows; 
             private Long maxRowsCountAffected; 
             private Long maxRowsExamined; 
             private Long maxRowsSent; 
+            private Long maxScnt; 
             private String namespace; 
             private String nodeType; 
             private String opType; 
@@ -1668,11 +1810,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             private Double queryTimeSeconds; 
             private String returnItemNumbers; 
             private Long returnNum; 
+            private Long rows; 
             private Long rowsCountAffected; 
             private Long rowsExamined; 
             private Long rowsSent; 
             private String SQLText; 
             private String scheme; 
+            private Long scnt; 
             private String sqlId; 
             private SqlTag sqlTag; 
             private String sqlType; 
@@ -1700,10 +1844,26 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * AvgCPUTimeSeconds.
+             */
+            public Builder avgCPUTimeSeconds(Double avgCPUTimeSeconds) {
+                this.avgCPUTimeSeconds = avgCPUTimeSeconds;
+                return this;
+            }
+
+            /**
              * AvgDocExamined.
              */
             public Builder avgDocExamined(Double avgDocExamined) {
                 this.avgDocExamined = avgDocExamined;
+                return this;
+            }
+
+            /**
+             * AvgFrows.
+             */
+            public Builder avgFrows(Double avgFrows) {
+                this.avgFrows = avgFrows;
                 return this;
             }
 
@@ -1788,6 +1948,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * AvgRows.
+             */
+            public Builder avgRows(Double avgRows) {
+                this.avgRows = avgRows;
+                return this;
+            }
+
+            /**
              * AvgRowsCountAffected.
              */
             public Builder avgRowsCountAffected(Double avgRowsCountAffected) {
@@ -1812,10 +1980,26 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * AvgScnt.
+             */
+            public Builder avgScnt(Double avgScnt) {
+                this.avgScnt = avgScnt;
+                return this;
+            }
+
+            /**
              * CPUTime.
              */
             public Builder CPUTime(Double CPUTime) {
                 this.CPUTime = CPUTime;
+                return this;
+            }
+
+            /**
+             * CPUTimeSeconds.
+             */
+            public Builder CPUTimeSeconds(Double CPUTimeSeconds) {
+                this.CPUTimeSeconds = CPUTimeSeconds;
                 return this;
             }
 
@@ -1880,6 +2064,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder docsExamined(Long docsExamined) {
                 this.docsExamined = docsExamined;
+                return this;
+            }
+
+            /**
+             * Frows.
+             */
+            public Builder frows(Long frows) {
+                this.frows = frows;
                 return this;
             }
 
@@ -1980,10 +2172,26 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * MaxCPUTimeSeconds.
+             */
+            public Builder maxCPUTimeSeconds(Double maxCPUTimeSeconds) {
+                this.maxCPUTimeSeconds = maxCPUTimeSeconds;
+                return this;
+            }
+
+            /**
              * MaxDocExamined.
              */
             public Builder maxDocExamined(Long maxDocExamined) {
                 this.maxDocExamined = maxDocExamined;
+                return this;
+            }
+
+            /**
+             * MaxFrows.
+             */
+            public Builder maxFrows(Long maxFrows) {
+                this.maxFrows = maxFrows;
                 return this;
             }
 
@@ -2068,6 +2276,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * MaxRows.
+             */
+            public Builder maxRows(Long maxRows) {
+                this.maxRows = maxRows;
+                return this;
+            }
+
+            /**
              * MaxRowsCountAffected.
              */
             public Builder maxRowsCountAffected(Long maxRowsCountAffected) {
@@ -2088,6 +2304,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder maxRowsSent(Long maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
+                return this;
+            }
+
+            /**
+             * MaxScnt.
+             */
+            public Builder maxScnt(Long maxScnt) {
+                this.maxScnt = maxScnt;
                 return this;
             }
 
@@ -2196,6 +2420,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
+             * Rows.
+             */
+            public Builder rows(Long rows) {
+                this.rows = rows;
+                return this;
+            }
+
+            /**
              * RowsCountAffected.
              */
             public Builder rowsCountAffected(Long rowsCountAffected) {
@@ -2232,6 +2464,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
+                return this;
+            }
+
+            /**
+             * Scnt.
+             */
+            public Builder scnt(Long scnt) {
+                this.scnt = scnt;
                 return this;
             }
 
