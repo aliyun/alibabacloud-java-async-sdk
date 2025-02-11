@@ -314,6 +314,9 @@ public class CreateDataImportOrderRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<DbItemList> dbItemList;
 
+        @com.aliyun.core.annotation.NameInMap("ExecMode")
+        private String execMode;
+
         @com.aliyun.core.annotation.NameInMap("FileEncoding")
         private String fileEncoding;
 
@@ -347,6 +350,7 @@ public class CreateDataImportOrderRequest extends Request {
             this.classify = builder.classify;
             this.csvFirstRowIsColumnDef = builder.csvFirstRowIsColumnDef;
             this.dbItemList = builder.dbItemList;
+            this.execMode = builder.execMode;
             this.fileEncoding = builder.fileEncoding;
             this.fileType = builder.fileType;
             this.ignoreError = builder.ignoreError;
@@ -392,6 +396,13 @@ public class CreateDataImportOrderRequest extends Request {
          */
         public java.util.List<DbItemList> getDbItemList() {
             return this.dbItemList;
+        }
+
+        /**
+         * @return execMode
+         */
+        public String getExecMode() {
+            return this.execMode;
         }
 
         /**
@@ -462,6 +473,7 @@ public class CreateDataImportOrderRequest extends Request {
             private String classify; 
             private Boolean csvFirstRowIsColumnDef; 
             private java.util.List<DbItemList> dbItemList; 
+            private String execMode; 
             private String fileEncoding; 
             private String fileType; 
             private Boolean ignoreError; 
@@ -519,6 +531,14 @@ public class CreateDataImportOrderRequest extends Request {
              */
             public Builder dbItemList(java.util.List<DbItemList> dbItemList) {
                 this.dbItemList = dbItemList;
+                return this;
+            }
+
+            /**
+             * ExecMode.
+             */
+            public Builder execMode(String execMode) {
+                this.execMode = execMode;
                 return this;
             }
 
