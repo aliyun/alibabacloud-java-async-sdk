@@ -572,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HangupCallResponse> hangupCall(HangupCallRequest request);
 
     /**
+     * @param request the request parameters of HangupOperate  HangupOperateRequest
+     * @return HangupOperateResponse
+     */
+    CompletableFuture<HangupOperateResponse> hangupOperate(HangupOperateRequest request);
+
+    /**
      * @param request the request parameters of HangupThirdCall  HangupThirdCallRequest
      * @return HangupThirdCallResponse
      */
