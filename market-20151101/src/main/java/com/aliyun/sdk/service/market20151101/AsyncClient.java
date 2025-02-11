@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDistributionProductsLinkResponse> describeDistributionProductsLink(DescribeDistributionProductsLinkRequest request);
 
     /**
+     * @param request the request parameters of DescribeImageInstanceForIsv  DescribeImageInstanceForIsvRequest
+     * @return DescribeImageInstanceForIsvResponse
+     */
+    CompletableFuture<DescribeImageInstanceForIsvResponse> describeImageInstanceForIsv(DescribeImageInstanceForIsvRequest request);
+
+    /**
      * @param request the request parameters of DescribeInstance  DescribeInstanceRequest
      * @return DescribeInstanceResponse
      */
