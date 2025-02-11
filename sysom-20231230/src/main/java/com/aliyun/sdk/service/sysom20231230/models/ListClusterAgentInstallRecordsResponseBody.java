@@ -149,6 +149,9 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created_at")
         private String createdAt;
 
+        @com.aliyun.core.annotation.NameInMap("grayscale_config")
+        private String grayscaleConfig;
+
         @com.aliyun.core.annotation.NameInMap("plugin_id")
         private String pluginId;
 
@@ -161,6 +164,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.clusterId = builder.clusterId;
             this.createdAt = builder.createdAt;
+            this.grayscaleConfig = builder.grayscaleConfig;
             this.pluginId = builder.pluginId;
             this.pluginVersion = builder.pluginVersion;
             this.updatedAt = builder.updatedAt;
@@ -189,6 +193,13 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return grayscaleConfig
+         */
+        public String getGrayscaleConfig() {
+            return this.grayscaleConfig;
+        }
+
+        /**
          * @return pluginId
          */
         public String getPluginId() {
@@ -212,6 +223,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String clusterId; 
             private String createdAt; 
+            private String grayscaleConfig; 
             private String pluginId; 
             private String pluginVersion; 
             private String updatedAt; 
@@ -229,6 +241,14 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * grayscale_config.
+             */
+            public Builder grayscaleConfig(String grayscaleConfig) {
+                this.grayscaleConfig = grayscaleConfig;
                 return this;
             }
 

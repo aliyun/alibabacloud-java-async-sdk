@@ -154,6 +154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourcesResponse> getResources(GetResourcesRequest request);
 
     /**
+     * @param request the request parameters of GetServiceFuncStatus  GetServiceFuncStatusRequest
+     * @return GetServiceFuncStatusResponse
+     */
+    CompletableFuture<GetServiceFuncStatusResponse> getServiceFuncStatus(GetServiceFuncStatusRequest request);
+
+    /**
      * @param request the request parameters of InitialSysom  InitialSysomRequest
      * @return InitialSysomResponse
      */
@@ -272,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEventsAttentionResponse
      */
     CompletableFuture<UpdateEventsAttentionResponse> updateEventsAttention(UpdateEventsAttentionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFuncSwitchRecord  UpdateFuncSwitchRecordRequest
+     * @return UpdateFuncSwitchRecordResponse
+     */
+    CompletableFuture<UpdateFuncSwitchRecordResponse> updateFuncSwitchRecord(UpdateFuncSwitchRecordRequest request);
 
     /**
      * @param request the request parameters of UpgradeAgent  UpgradeAgentRequest
