@@ -39,6 +39,10 @@ public class CreateServerGroupRequest extends Request {
     private HealthCheckConfig healthCheckConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
+    private Boolean ipv6Enabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
@@ -94,6 +98,7 @@ public class CreateServerGroupRequest extends Request {
         this.crossZoneEnabled = builder.crossZoneEnabled;
         this.dryRun = builder.dryRun;
         this.healthCheckConfig = builder.healthCheckConfig;
+        this.ipv6Enabled = builder.ipv6Enabled;
         this.protocol = builder.protocol;
         this.resourceGroupId = builder.resourceGroupId;
         this.scheduler = builder.scheduler;
@@ -154,6 +159,13 @@ public class CreateServerGroupRequest extends Request {
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.healthCheckConfig;
+    }
+
+    /**
+     * @return ipv6Enabled
+     */
+    public Boolean getIpv6Enabled() {
+        return this.ipv6Enabled;
     }
 
     /**
@@ -246,6 +258,7 @@ public class CreateServerGroupRequest extends Request {
         private Boolean crossZoneEnabled; 
         private Boolean dryRun; 
         private HealthCheckConfig healthCheckConfig; 
+        private Boolean ipv6Enabled; 
         private String protocol; 
         private String resourceGroupId; 
         private String scheduler; 
@@ -270,6 +283,7 @@ public class CreateServerGroupRequest extends Request {
             this.crossZoneEnabled = request.crossZoneEnabled;
             this.dryRun = request.dryRun;
             this.healthCheckConfig = request.healthCheckConfig;
+            this.ipv6Enabled = request.ipv6Enabled;
             this.protocol = request.protocol;
             this.resourceGroupId = request.resourceGroupId;
             this.scheduler = request.scheduler;
@@ -365,6 +379,15 @@ public class CreateServerGroupRequest extends Request {
         public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
             this.putQueryParameter("HealthCheckConfig", healthCheckConfig);
             this.healthCheckConfig = healthCheckConfig;
+            return this;
+        }
+
+        /**
+         * Ipv6Enabled.
+         */
+        public Builder ipv6Enabled(Boolean ipv6Enabled) {
+            this.putQueryParameter("Ipv6Enabled", ipv6Enabled);
+            this.ipv6Enabled = ipv6Enabled;
             return this;
         }
 
