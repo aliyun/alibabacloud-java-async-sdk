@@ -21,10 +21,10 @@ public class ListExecutorsResponseBody extends TeaModel {
     private java.util.List<Executors> executors;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -58,14 +58,14 @@ public class ListExecutorsResponseBody extends TeaModel {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -85,8 +85,8 @@ public class ListExecutorsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Executors> executors; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
         private String totalCount; 
 
@@ -101,7 +101,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
@@ -109,7 +109,7 @@ public class ListExecutorsResponseBody extends TeaModel {
         /**
          * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
@@ -364,6 +364,9 @@ public class ListExecutorsResponseBody extends TeaModel {
      * <p>ListExecutorsResponseBody</p>
      */
     public static class Executors extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppName")
+        private String appName;
+
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
 
@@ -375,6 +378,9 @@ public class ListExecutorsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExecutorId")
         private String executorId;
+
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
+        private String expirationTime;
 
         @com.aliyun.core.annotation.NameInMap("ExternalIpAddress")
         private java.util.List<String> externalIpAddress;
@@ -422,10 +428,12 @@ public class ListExecutorsResponseBody extends TeaModel {
         private String vswitchId;
 
         private Executors(Builder builder) {
+            this.appName = builder.appName;
             this.arrayIndex = builder.arrayIndex;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.executorId = builder.executorId;
+            this.expirationTime = builder.expirationTime;
             this.externalIpAddress = builder.externalIpAddress;
             this.hostName = builder.hostName;
             this.image = builder.image;
@@ -449,6 +457,13 @@ public class ListExecutorsResponseBody extends TeaModel {
 
         public static Executors create() {
             return builder().build();
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
         }
 
         /**
@@ -477,6 +492,13 @@ public class ListExecutorsResponseBody extends TeaModel {
          */
         public String getExecutorId() {
             return this.executorId;
+        }
+
+        /**
+         * @return expirationTime
+         */
+        public String getExpirationTime() {
+            return this.expirationTime;
         }
 
         /**
@@ -585,10 +607,12 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appName; 
             private Integer arrayIndex; 
             private String createTime; 
             private String endTime; 
             private String executorId; 
+            private String expirationTime; 
             private java.util.List<String> externalIpAddress; 
             private java.util.List<String> hostName; 
             private String image; 
@@ -604,6 +628,14 @@ public class ListExecutorsResponseBody extends TeaModel {
             private String taskName; 
             private Boolean taskSustainable; 
             private String vswitchId; 
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
 
             /**
              * ArrayIndex.
@@ -634,6 +666,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder executorId(String executorId) {
                 this.executorId = executorId;
+                return this;
+            }
+
+            /**
+             * ExpirationTime.
+             */
+            public Builder expirationTime(String expirationTime) {
+                this.expirationTime = expirationTime;
                 return this;
             }
 

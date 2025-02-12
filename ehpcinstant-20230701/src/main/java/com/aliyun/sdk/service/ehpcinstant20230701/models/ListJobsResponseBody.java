@@ -210,6 +210,9 @@ public class ListJobsResponseBody extends TeaModel {
      * <p>ListJobsResponseBody</p>
      */
     public static class JobList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppName")
+        private String appName;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -247,6 +250,7 @@ public class ListJobsResponseBody extends TeaModel {
         private Boolean taskSustainable;
 
         private JobList(Builder builder) {
+            this.appName = builder.appName;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.executorCount = builder.executorCount;
@@ -267,6 +271,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         public static JobList create() {
             return builder().build();
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
         }
 
         /**
@@ -354,6 +365,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appName; 
             private String createTime; 
             private String endTime; 
             private Integer executorCount; 
@@ -366,6 +378,14 @@ public class ListJobsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Integer taskCount; 
             private Boolean taskSustainable; 
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
 
             /**
              * CreateTime.

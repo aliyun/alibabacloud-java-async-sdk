@@ -27,10 +27,10 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -84,14 +84,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -120,8 +120,8 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         private ExecutorStatus executorStatus; 
         private java.util.List<Executors> executors; 
         private String jobId; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
         private String taskName; 
         private String totalCount; 
@@ -153,7 +153,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
@@ -161,7 +161,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         /**
          * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
@@ -449,6 +449,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExecutorId")
         private String executorId;
 
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
+        private String expirationTime;
+
         @com.aliyun.core.annotation.NameInMap("ExternalIpAddress")
         private java.util.List<String> externalIpAddress;
 
@@ -475,6 +478,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
             this.executorId = builder.executorId;
+            this.expirationTime = builder.expirationTime;
             this.externalIpAddress = builder.externalIpAddress;
             this.hostName = builder.hostName;
             this.ipAddress = builder.ipAddress;
@@ -518,6 +522,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
          */
         public String getExecutorId() {
             return this.executorId;
+        }
+
+        /**
+         * @return expirationTime
+         */
+        public String getExpirationTime() {
+            return this.expirationTime;
         }
 
         /**
@@ -574,6 +585,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             private String createTime; 
             private String endTime; 
             private String executorId; 
+            private String expirationTime; 
             private java.util.List<String> externalIpAddress; 
             private java.util.List<String> hostName; 
             private java.util.List<String> ipAddress; 
@@ -611,6 +623,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder executorId(String executorId) {
                 this.executorId = executorId;
+                return this;
+            }
+
+            /**
+             * ExpirationTime.
+             */
+            public Builder expirationTime(String expirationTime) {
+                this.expirationTime = expirationTime;
                 return this;
             }
 

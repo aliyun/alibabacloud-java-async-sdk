@@ -35,6 +35,10 @@ public class CreateJobRequest extends Request {
     private String jobScheduler;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicy")
+    private SecurityPolicy securityPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tasks")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Tasks> tasks;
@@ -45,6 +49,7 @@ public class CreateJobRequest extends Request {
         this.jobDescription = builder.jobDescription;
         this.jobName = builder.jobName;
         this.jobScheduler = builder.jobScheduler;
+        this.securityPolicy = builder.securityPolicy;
         this.tasks = builder.tasks;
     }
 
@@ -90,6 +95,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return securityPolicy
+     */
+    public SecurityPolicy getSecurityPolicy() {
+        return this.securityPolicy;
+    }
+
+    /**
      * @return tasks
      */
     public java.util.List<Tasks> getTasks() {
@@ -101,6 +113,7 @@ public class CreateJobRequest extends Request {
         private String jobDescription; 
         private String jobName; 
         private String jobScheduler; 
+        private SecurityPolicy securityPolicy; 
         private java.util.List<Tasks> tasks; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class CreateJobRequest extends Request {
             this.jobDescription = request.jobDescription;
             this.jobName = request.jobName;
             this.jobScheduler = request.jobScheduler;
+            this.securityPolicy = request.securityPolicy;
             this.tasks = request.tasks;
         } 
 
@@ -153,6 +167,16 @@ public class CreateJobRequest extends Request {
         public Builder jobScheduler(String jobScheduler) {
             this.putQueryParameter("JobScheduler", jobScheduler);
             this.jobScheduler = jobScheduler;
+            return this;
+        }
+
+        /**
+         * SecurityPolicy.
+         */
+        public Builder securityPolicy(SecurityPolicy securityPolicy) {
+            String securityPolicyShrink = shrink(securityPolicy, "SecurityPolicy", "json");
+            this.putQueryParameter("SecurityPolicy", securityPolicyShrink);
+            this.securityPolicy = securityPolicy;
             return this;
         }
 
@@ -390,6 +414,100 @@ public class CreateJobRequest extends Request {
 
             public DeploymentPolicy build() {
                 return new DeploymentPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
+    public static class SecurityGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
+
+        private SecurityGroup(Builder builder) {
+            this.securityGroupIds = builder.securityGroupIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupIds
+         */
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> securityGroupIds; 
+
+            /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            public SecurityGroup build() {
+                return new SecurityGroup(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
+    public static class SecurityPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
+        private SecurityGroup securityGroup;
+
+        private SecurityPolicy(Builder builder) {
+            this.securityGroup = builder.securityGroup;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroup
+         */
+        public SecurityGroup getSecurityGroup() {
+            return this.securityGroup;
+        }
+
+        public static final class Builder {
+            private SecurityGroup securityGroup; 
+
+            /**
+             * SecurityGroup.
+             */
+            public Builder securityGroup(SecurityGroup securityGroup) {
+                this.securityGroup = securityGroup;
+                return this;
+            }
+
+            public SecurityPolicy build() {
+                return new SecurityPolicy(this);
             } 
 
         } 

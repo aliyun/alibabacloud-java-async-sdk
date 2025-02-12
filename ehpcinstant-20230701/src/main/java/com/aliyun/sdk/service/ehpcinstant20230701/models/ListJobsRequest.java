@@ -23,11 +23,11 @@ public class ListJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
@@ -64,14 +64,14 @@ public class ListJobsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -84,8 +84,8 @@ public class ListJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListJobsRequest, Builder> {
         private Filter filter; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private SortBy sortBy; 
 
         private Builder() {
@@ -113,7 +113,7 @@ public class ListJobsRequest extends Request {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -122,7 +122,7 @@ public class ListJobsRequest extends Request {
         /**
          * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;

@@ -23,11 +23,11 @@ public class ListExecutorsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     private ListExecutorsRequest(Builder builder) {
         super(builder);
@@ -59,21 +59,21 @@ public class ListExecutorsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
     public static final class Builder extends Request.Builder<ListExecutorsRequest, Builder> {
         private Filter filter; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -99,7 +99,7 @@ public class ListExecutorsRequest extends Request {
         /**
          * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -108,7 +108,7 @@ public class ListExecutorsRequest extends Request {
         /**
          * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
