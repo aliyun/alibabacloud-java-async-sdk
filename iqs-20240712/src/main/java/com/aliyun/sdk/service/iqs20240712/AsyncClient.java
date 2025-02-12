@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CommonQueryBySceneResponse> commonQueryByScene(CommonQueryBySceneRequest request);
 
     /**
+     * @param request the request parameters of DrivingDirection  DrivingDirectionRequest
+     * @return DrivingDirectionResponse
+     */
+    CompletableFuture<DrivingDirectionResponse> drivingDirection(DrivingDirectionRequest request);
+
+    /**
      * @param request the request parameters of DrivingDirectionNova  DrivingDirectionNovaRequest
      * @return DrivingDirectionNovaResponse
      */
