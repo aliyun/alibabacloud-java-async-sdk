@@ -67,6 +67,10 @@ public class ModifyApiGroupRequest extends Request {
     private String rpcPattern;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RpsLimitForServerless")
+    private String rpsLimitForServerless;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -96,6 +100,7 @@ public class ModifyApiGroupRequest extends Request {
         this.groupName = builder.groupName;
         this.passthroughHeaders = builder.passthroughHeaders;
         this.rpcPattern = builder.rpcPattern;
+        this.rpsLimitForServerless = builder.rpsLimitForServerless;
         this.securityToken = builder.securityToken;
         this.supportSSE = builder.supportSSE;
         this.tag = builder.tag;
@@ -200,6 +205,13 @@ public class ModifyApiGroupRequest extends Request {
     }
 
     /**
+     * @return rpsLimitForServerless
+     */
+    public String getRpsLimitForServerless() {
+        return this.rpsLimitForServerless;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -240,6 +252,7 @@ public class ModifyApiGroupRequest extends Request {
         private String groupName; 
         private String passthroughHeaders; 
         private String rpcPattern; 
+        private String rpsLimitForServerless; 
         private String securityToken; 
         private String supportSSE; 
         private java.util.List<Tag> tag; 
@@ -263,6 +276,7 @@ public class ModifyApiGroupRequest extends Request {
             this.groupName = request.groupName;
             this.passthroughHeaders = request.passthroughHeaders;
             this.rpcPattern = request.rpcPattern;
+            this.rpsLimitForServerless = request.rpsLimitForServerless;
             this.securityToken = request.securityToken;
             this.supportSSE = request.supportSSE;
             this.tag = request.tag;
@@ -411,6 +425,15 @@ public class ModifyApiGroupRequest extends Request {
         public Builder rpcPattern(String rpcPattern) {
             this.putQueryParameter("RpcPattern", rpcPattern);
             this.rpcPattern = rpcPattern;
+            return this;
+        }
+
+        /**
+         * RpsLimitForServerless.
+         */
+        public Builder rpsLimitForServerless(String rpsLimitForServerless) {
+            this.putQueryParameter("RpsLimitForServerless", rpsLimitForServerless);
+            this.rpsLimitForServerless = rpsLimitForServerless;
             return this;
         }
 
