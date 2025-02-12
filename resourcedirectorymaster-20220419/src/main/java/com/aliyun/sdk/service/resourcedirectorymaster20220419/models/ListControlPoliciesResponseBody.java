@@ -154,6 +154,120 @@ public class ListControlPoliciesResponseBody extends TeaModel {
      *
      * <p>ListControlPoliciesResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPoliciesResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListControlPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListControlPoliciesResponseBody</p>
+     */
     public static class ControlPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachmentCount")
         private String attachmentCount;
@@ -176,6 +290,9 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
@@ -187,6 +304,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             this.policyId = builder.policyId;
             this.policyName = builder.policyName;
             this.policyType = builder.policyType;
+            this.tags = builder.tags;
             this.updateDate = builder.updateDate;
         }
 
@@ -248,6 +366,13 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -262,6 +387,7 @@ public class ListControlPoliciesResponseBody extends TeaModel {
             private String policyId; 
             private String policyName; 
             private String policyType; 
+            private Tags tags; 
             private String updateDate; 
 
             /**
@@ -346,6 +472,14 @@ public class ListControlPoliciesResponseBody extends TeaModel {
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 

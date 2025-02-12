@@ -98,6 +98,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
+        @com.aliyun.core.annotation.NameInMap("MemberAccountDisplayNameSyncStatus")
+        private String memberAccountDisplayNameSyncStatus;
+
         @com.aliyun.core.annotation.NameInMap("MemberDeletionStatus")
         private String memberDeletionStatus;
 
@@ -113,6 +116,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             this.identityInformation = builder.identityInformation;
             this.masterAccountId = builder.masterAccountId;
             this.masterAccountName = builder.masterAccountName;
+            this.memberAccountDisplayNameSyncStatus = builder.memberAccountDisplayNameSyncStatus;
             this.memberDeletionStatus = builder.memberDeletionStatus;
             this.resourceDirectoryId = builder.resourceDirectoryId;
             this.rootFolderId = builder.rootFolderId;
@@ -162,6 +166,13 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return memberAccountDisplayNameSyncStatus
+         */
+        public String getMemberAccountDisplayNameSyncStatus() {
+            return this.memberAccountDisplayNameSyncStatus;
+        }
+
+        /**
          * @return memberDeletionStatus
          */
         public String getMemberDeletionStatus() {
@@ -188,6 +199,7 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             private String identityInformation; 
             private String masterAccountId; 
             private String masterAccountName; 
+            private String memberAccountDisplayNameSyncStatus; 
             private String memberDeletionStatus; 
             private String resourceDirectoryId; 
             private String rootFolderId; 
@@ -229,6 +241,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
+                return this;
+            }
+
+            /**
+             * MemberAccountDisplayNameSyncStatus.
+             */
+            public Builder memberAccountDisplayNameSyncStatus(String memberAccountDisplayNameSyncStatus) {
+                this.memberAccountDisplayNameSyncStatus = memberAccountDisplayNameSyncStatus;
                 return this;
             }
 
