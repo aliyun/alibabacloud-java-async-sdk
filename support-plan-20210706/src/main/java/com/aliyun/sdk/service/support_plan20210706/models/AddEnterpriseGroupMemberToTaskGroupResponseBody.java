@@ -1,18 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody} extends {@link TeaModel}
+ * 
+ * {@link AddEnterpriseGroupMemberToTaskGroupResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody</p>
+ * <p>AddEnterpriseGroupMemberToTaskGroupResponseBody</p>
  */
-public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends TeaModel {
+public class AddEnterpriseGroupMemberToTaskGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private String data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -23,8 +32,9 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody(Builder builder) {
+    private AddEnterpriseGroupMemberToTaskGroupResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -34,7 +44,7 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
         return new Builder();
     }
 
-    public static DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody create() {
+    public static AddEnterpriseGroupMemberToTaskGroupResponseBody create() {
         return builder().build();
     }
 
@@ -43,6 +53,13 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
     }
 
     /**
@@ -68,6 +85,7 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
 
     public static final class Builder {
         private String code; 
+        private String data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -77,6 +95,14 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(String data) {
+            this.data = data;
             return this;
         }
 
@@ -104,8 +130,8 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody extends Tea
             return this;
         }
 
-        public DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody build() {
-            return new DeleteEnterpriseDingtalkGroupCustomerMemberResponseBody(this);
+        public AddEnterpriseGroupMemberToTaskGroupResponseBody build() {
+            return new AddEnterpriseGroupMemberToTaskGroupResponseBody(this);
         } 
 
     } 

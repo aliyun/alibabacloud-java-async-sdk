@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateTaskOrderRequest</p>
@@ -127,7 +133,10 @@ public class CreateTaskOrderRequest extends Request {
         } 
 
         /**
-         * CreateUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder createUserId(String createUserId) {
             this.putQueryParameter("CreateUserId", createUserId);
@@ -145,7 +154,10 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * OpenGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cid+lUpHxTIXt7DYqJDcpVxlA==</p>
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -154,7 +166,10 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * Overview.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务单标题：必填</p>
          */
         public Builder overview(String overview) {
             this.putQueryParameter("Overview", overview);
@@ -163,7 +178,10 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

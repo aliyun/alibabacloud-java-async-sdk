@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RestOpenTaskOrderResponse} extends {@link TeaModel}
+ * 
+ * {@link AddEnterpriseGroupMemberToTaskGroupResponse} extends {@link TeaModel}
  *
- * <p>RestOpenTaskOrderResponse</p>
+ * <p>AddEnterpriseGroupMemberToTaskGroupResponse</p>
  */
-public class RestOpenTaskOrderResponse extends Response {
+public class AddEnterpriseGroupMemberToTaskGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RestOpenTaskOrderResponseBody body;
+    private AddEnterpriseGroupMemberToTaskGroupResponseBody body;
 
-    private RestOpenTaskOrderResponse(BuilderImpl builder) {
+    private AddEnterpriseGroupMemberToTaskGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RestOpenTaskOrderResponse create() {
+    public static AddEnterpriseGroupMemberToTaskGroupResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class RestOpenTaskOrderResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class RestOpenTaskOrderResponse extends Response {
     /**
      * @return body
      */
-    public RestOpenTaskOrderResponseBody getBody() {
+    public AddEnterpriseGroupMemberToTaskGroupResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RestOpenTaskOrderResponse, Builder> {
+    public interface Builder extends Response.Builder<AddEnterpriseGroupMemberToTaskGroupResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RestOpenTaskOrderResponseBody body);
+        Builder body(AddEnterpriseGroupMemberToTaskGroupResponseBody body);
 
         @Override
-        RestOpenTaskOrderResponse build();
+        AddEnterpriseGroupMemberToTaskGroupResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RestOpenTaskOrderResponse, Builder>
+            extends Response.BuilderImpl<AddEnterpriseGroupMemberToTaskGroupResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private RestOpenTaskOrderResponseBody body; 
+        private AddEnterpriseGroupMemberToTaskGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RestOpenTaskOrderResponse response) {
+        private BuilderImpl(AddEnterpriseGroupMemberToTaskGroupResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class RestOpenTaskOrderResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class RestOpenTaskOrderResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RestOpenTaskOrderResponseBody body) {
+        public Builder body(AddEnterpriseGroupMemberToTaskGroupResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RestOpenTaskOrderResponse build() {
-            return new RestOpenTaskOrderResponse(this);
+        public AddEnterpriseGroupMemberToTaskGroupResponse build() {
+            return new AddEnterpriseGroupMemberToTaskGroupResponse(this);
         } 
 
     } 

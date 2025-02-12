@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDdTaskOrderRequest} extends {@link RequestModel}
  *
  * <p>ListDdTaskOrderRequest</p>
@@ -152,7 +158,10 @@ public class ListDdTaskOrderRequest extends Request {
         } 
 
         /**
-         * createRealName
+         * <p>createRealName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
         public Builder createRealName(String createRealName) {
             this.putQueryParameter("CreateRealName", createRealName);
@@ -161,7 +170,10 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * endTime
+         * <p>endTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-20 14:09:16</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +191,11 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * openGroupId
+         * <p>openGroupId</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAWNN14N</p>
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -188,7 +204,10 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * pageNo
+         * <p>pageNo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -197,7 +216,10 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +228,10 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * startTime
+         * <p>startTime</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-01 14:09:11</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -215,7 +240,10 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * taskStatus
+         * <p>taskStatus</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dealingNode</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
