@@ -1997,6 +1997,53 @@ public class StartStreamingOutRequest extends Request {
      *
      * <p>StartStreamingOutRequest</p>
      */
+    public static class Whiteboard extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("WhiteboardId")
+        private String whiteboardId;
+
+        private Whiteboard(Builder builder) {
+            this.whiteboardId = builder.whiteboardId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Whiteboard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return whiteboardId
+         */
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+        public static final class Builder {
+            private String whiteboardId; 
+
+            /**
+             * WhiteboardId.
+             */
+            public Builder whiteboardId(String whiteboardId) {
+                this.whiteboardId = whiteboardId;
+                return this;
+            }
+
+            public Whiteboard build() {
+                return new Whiteboard(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartStreamingOutRequest} extends {@link TeaModel}
+     *
+     * <p>StartStreamingOutRequest</p>
+     */
     public static class Panes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List<PanesImages> images;
@@ -2017,6 +2064,9 @@ public class StartStreamingOutRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Texts")
         private java.util.List<PanesTexts> texts;
 
+        @com.aliyun.core.annotation.NameInMap("Whiteboard")
+        private Whiteboard whiteboard;
+
         private Panes(Builder builder) {
             this.images = builder.images;
             this.paneCropMode = builder.paneCropMode;
@@ -2024,6 +2074,7 @@ public class StartStreamingOutRequest extends Request {
             this.source = builder.source;
             this.sourceType = builder.sourceType;
             this.texts = builder.texts;
+            this.whiteboard = builder.whiteboard;
         }
 
         public static Builder builder() {
@@ -2076,6 +2127,13 @@ public class StartStreamingOutRequest extends Request {
             return this.texts;
         }
 
+        /**
+         * @return whiteboard
+         */
+        public Whiteboard getWhiteboard() {
+            return this.whiteboard;
+        }
+
         public static final class Builder {
             private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
@@ -2083,6 +2141,7 @@ public class StartStreamingOutRequest extends Request {
             private String source; 
             private String sourceType; 
             private java.util.List<PanesTexts> texts; 
+            private Whiteboard whiteboard; 
 
             /**
              * Images.
@@ -2132,6 +2191,14 @@ public class StartStreamingOutRequest extends Request {
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
+                return this;
+            }
+
+            /**
+             * Whiteboard.
+             */
+            public Builder whiteboard(Whiteboard whiteboard) {
+                this.whiteboard = whiteboard;
                 return this;
             }
 
