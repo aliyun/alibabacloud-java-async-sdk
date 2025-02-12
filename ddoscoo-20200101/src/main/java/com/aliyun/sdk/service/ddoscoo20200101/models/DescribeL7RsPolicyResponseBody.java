@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeL7RsPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Attributes")
-    private java.util.List < Attributes> attributes;
+    private java.util.List<Attributes> attributes;
 
     @com.aliyun.core.annotation.NameInMap("ProxyMode")
     private String proxyMode;
@@ -46,7 +51,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     /**
      * @return attributes
      */
-    public java.util.List < Attributes> getAttributes() {
+    public java.util.List<Attributes> getAttributes() {
         return this.attributes;
     }
 
@@ -79,16 +84,16 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Attributes> attributes; 
+        private java.util.List<Attributes> attributes; 
         private String proxyMode; 
         private String requestId; 
         private Long rsAttrRwTimeoutMax; 
         private Integer upstreamRetry; 
 
         /**
-         * <p>The details about the parameters for back-to-origin processing.</p>
+         * <p>The details about the parameters for back-to-origin settings.</p>
          */
-        public Builder attributes(java.util.List < Attributes> attributes) {
+        public Builder attributes(java.util.List<Attributes> attributes) {
             this.attributes = attributes;
             return this;
         }
@@ -121,7 +126,10 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RsAttrRwTimeoutMax.
+         * <p>The timeout period for a read or write connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder rsAttrRwTimeoutMax(Long rsAttrRwTimeoutMax) {
             this.rsAttrRwTimeoutMax = rsAttrRwTimeoutMax;
@@ -324,7 +332,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the origin server. This parameter takes effect only when <strong>ProxyMode</strong> is set to <strong>rr</strong>.</p>
+             * <p>The weight of the origin server. This parameter takes effect only if the value of <strong>ProxyMode</strong> is <strong>rr</strong> or <strong>ip_hash</strong>.****</p>
              * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>. A server with a higher weight receives more requests.</p>
              * 
              * <strong>example:</strong>
@@ -399,7 +407,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer rsType; 
 
             /**
-             * <p>The parameter for back-to-origin processing.</p>
+             * <p>The parameters for back-to-origin settings.</p>
              */
             public Builder attribute(Attribute attribute) {
                 this.attribute = attribute;

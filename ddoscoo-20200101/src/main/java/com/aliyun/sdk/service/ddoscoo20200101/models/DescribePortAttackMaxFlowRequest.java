@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DescribePortAttackMaxFlowRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -74,7 +79,7 @@ public class DescribePortAttackMaxFlowRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -95,7 +100,7 @@ public class DescribePortAttackMaxFlowRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePortAttackMaxFlowRequest, Builder> {
         private String regionId; 
         private Long endTime; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -144,7 +149,7 @@ public class DescribePortAttackMaxFlowRequest extends Request {
          * <strong>example:</strong>
          * <p>ddoscoo-cn-mp91j1ao****</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

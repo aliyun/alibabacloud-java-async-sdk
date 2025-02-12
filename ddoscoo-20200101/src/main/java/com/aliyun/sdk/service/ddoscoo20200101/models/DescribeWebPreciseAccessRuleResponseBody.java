@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PreciseAccessConfigList")
-    private java.util.List < PreciseAccessConfigList> preciseAccessConfigList;
+    private java.util.List<PreciseAccessConfigList> preciseAccessConfigList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     /**
      * @return preciseAccessConfigList
      */
-    public java.util.List < PreciseAccessConfigList> getPreciseAccessConfigList() {
+    public java.util.List<PreciseAccessConfigList> getPreciseAccessConfigList() {
         return this.preciseAccessConfigList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PreciseAccessConfigList> preciseAccessConfigList; 
+        private java.util.List<PreciseAccessConfigList> preciseAccessConfigList; 
         private String requestId; 
 
         /**
          * <p>The configuration of the accurate access control rule that is created for the website.</p>
          */
-        public Builder preciseAccessConfigList(java.util.List < PreciseAccessConfigList> preciseAccessConfigList) {
+        public Builder preciseAccessConfigList(java.util.List<PreciseAccessConfigList> preciseAccessConfigList) {
             this.preciseAccessConfigList = preciseAccessConfigList;
             return this;
         }
@@ -85,7 +90,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("ContentList")
-        private java.util.List < String > contentList;
+        private java.util.List<String> contentList;
 
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
@@ -122,7 +127,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         /**
          * @return contentList
          */
-        public java.util.List < String > getContentList() {
+        public java.util.List<String> getContentList() {
             return this.contentList;
         }
 
@@ -149,7 +154,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
-            private java.util.List < String > contentList; 
+            private java.util.List<String> contentList; 
             private String field; 
             private String headerName; 
             private String matchMethod; 
@@ -168,7 +173,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             /**
              * ContentList.
              */
-            public Builder contentList(java.util.List < String > contentList) {
+            public Builder contentList(java.util.List<String> contentList) {
                 this.contentList = contentList;
                 return this;
             }
@@ -227,7 +232,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         private String action;
 
         @com.aliyun.core.annotation.NameInMap("ConditionList")
-        private java.util.List < ConditionList> conditionList;
+        private java.util.List<ConditionList> conditionList;
 
         @com.aliyun.core.annotation.NameInMap("Expires")
         private Long expires;
@@ -264,7 +269,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         /**
          * @return conditionList
          */
-        public java.util.List < ConditionList> getConditionList() {
+        public java.util.List<ConditionList> getConditionList() {
             return this.conditionList;
         }
 
@@ -291,7 +296,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String action; 
-            private java.util.List < ConditionList> conditionList; 
+            private java.util.List<ConditionList> conditionList; 
             private Long expires; 
             private String name; 
             private String owner; 
@@ -315,7 +320,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             /**
              * <p>The match conditions.</p>
              */
-            public Builder conditionList(java.util.List < ConditionList> conditionList) {
+            public Builder conditionList(java.util.List<ConditionList> conditionList) {
                 this.conditionList = conditionList;
                 return this;
             }
@@ -375,7 +380,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         private PreciseAccessConfigList(Builder builder) {
             this.domain = builder.domain;
@@ -400,13 +405,13 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
 
             /**
              * <p>The domain name of the website.</p>
@@ -422,7 +427,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             /**
              * <p>The scheduling rules.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHealthCheckListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HealthCheckList")
-    private java.util.List < HealthCheckList> healthCheckList;
+    private java.util.List<HealthCheckList> healthCheckList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     /**
      * @return healthCheckList
      */
-    public java.util.List < HealthCheckList> getHealthCheckList() {
+    public java.util.List<HealthCheckList> getHealthCheckList() {
         return this.healthCheckList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HealthCheckList> healthCheckList; 
+        private java.util.List<HealthCheckList> healthCheckList; 
         private String requestId; 
 
         /**
          * <p>An array that consists of information about the health check configuration.</p>
          */
-        public Builder healthCheckList(java.util.List < HealthCheckList> healthCheckList) {
+        public Builder healthCheckList(java.util.List<HealthCheckList> healthCheckList) {
             this.healthCheckList = healthCheckList;
             return this;
         }

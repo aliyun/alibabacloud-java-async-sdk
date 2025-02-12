@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SourceCountrys")
-    private java.util.List < SourceCountrys> sourceCountrys;
+    private java.util.List<SourceCountrys> sourceCountrys;
 
     private DescribePortViewSourceCountriesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
     /**
      * @return sourceCountrys
      */
-    public java.util.List < SourceCountrys> getSourceCountrys() {
+    public java.util.List<SourceCountrys> getSourceCountrys() {
         return this.sourceCountrys;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SourceCountrys> sourceCountrys; 
+        private java.util.List<SourceCountrys> sourceCountrys; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribePortViewSourceCountriesResponseBody extends TeaModel {
         /**
          * <p>An array consisting of countries or areas from which the requests are sent.</p>
          */
-        public Builder sourceCountrys(java.util.List < SourceCountrys> sourceCountrys) {
+        public Builder sourceCountrys(java.util.List<SourceCountrys> sourceCountrys) {
             this.sourceCountrys = sourceCountrys;
             return this;
         }

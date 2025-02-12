@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SourceProvinces")
-    private java.util.List < SourceProvinces> sourceProvinces;
+    private java.util.List<SourceProvinces> sourceProvinces;
 
     private DescribePortViewSourceProvincesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
     /**
      * @return sourceProvinces
      */
-    public java.util.List < SourceProvinces> getSourceProvinces() {
+    public java.util.List<SourceProvinces> getSourceProvinces() {
         return this.sourceProvinces;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SourceProvinces> sourceProvinces; 
+        private java.util.List<SourceProvinces> sourceProvinces; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
         /**
          * <p>Details about the administrative region in China from which the requests are sent.</p>
          */
-        public Builder sourceProvinces(java.util.List < SourceProvinces> sourceProvinces) {
+        public Builder sourceProvinces(java.util.List<SourceProvinces> sourceProvinces) {
             this.sourceProvinces = sourceProvinces;
             return this;
         }

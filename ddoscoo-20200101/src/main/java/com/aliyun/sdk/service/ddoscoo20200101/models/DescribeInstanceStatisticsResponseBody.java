@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceStatistics")
-    private java.util.List < InstanceStatistics> instanceStatistics;
+    private java.util.List<InstanceStatistics> instanceStatistics;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     /**
      * @return instanceStatistics
      */
-    public java.util.List < InstanceStatistics> getInstanceStatistics() {
+    public java.util.List<InstanceStatistics> getInstanceStatistics() {
         return this.instanceStatistics;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceStatistics> instanceStatistics; 
+        private java.util.List<InstanceStatistics> instanceStatistics; 
         private String requestId; 
 
         /**
          * <p>The statistics on the instance.</p>
          */
-        public Builder instanceStatistics(java.util.List < InstanceStatistics> instanceStatistics) {
+        public Builder instanceStatistics(java.util.List<InstanceStatistics> instanceStatistics) {
             this.instanceStatistics = instanceStatistics;
             return this;
         }

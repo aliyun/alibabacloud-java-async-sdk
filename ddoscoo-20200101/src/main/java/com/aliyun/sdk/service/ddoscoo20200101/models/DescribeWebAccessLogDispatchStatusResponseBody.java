@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SlsConfigStatus")
-    private java.util.List < SlsConfigStatus> slsConfigStatus;
+    private java.util.List<SlsConfigStatus> slsConfigStatus;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
     /**
      * @return slsConfigStatus
      */
-    public java.util.List < SlsConfigStatus> getSlsConfigStatus() {
+    public java.util.List<SlsConfigStatus> getSlsConfigStatus() {
         return this.slsConfigStatus;
     }
 
@@ -58,7 +63,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SlsConfigStatus> slsConfigStatus; 
+        private java.util.List<SlsConfigStatus> slsConfigStatus; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the log analysis feature is enabled for domain names.</p>
          */
-        public Builder slsConfigStatus(java.util.List < SlsConfigStatus> slsConfigStatus) {
+        public Builder slsConfigStatus(java.util.List<SlsConfigStatus> slsConfigStatus) {
             this.slsConfigStatus = slsConfigStatus;
             return this;
         }

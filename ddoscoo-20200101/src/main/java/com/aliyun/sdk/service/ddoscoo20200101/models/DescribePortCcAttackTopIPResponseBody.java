@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TopIp")
-    private java.util.List < TopIp> topIp;
+    private java.util.List<TopIp> topIp;
 
     private DescribePortCcAttackTopIPResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     /**
      * @return topIp
      */
-    public java.util.List < TopIp> getTopIp() {
+    public java.util.List<TopIp> getTopIp() {
         return this.topIp;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TopIp> topIp; 
+        private java.util.List<TopIp> topIp; 
 
         /**
          * <p>The request ID, which is used to locate and troubleshoot issues.</p>
@@ -63,7 +68,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         /**
          * <p>The top IP addresses from which most attacks are initiated.</p>
          */
-        public Builder topIp(java.util.List < TopIp> topIp) {
+        public Builder topIp(java.util.List<TopIp> topIp) {
             this.topIp = topIp;
             return this;
         }

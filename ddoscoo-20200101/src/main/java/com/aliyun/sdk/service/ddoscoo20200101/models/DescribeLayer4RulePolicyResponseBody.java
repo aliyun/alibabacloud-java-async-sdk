@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,13 +36,13 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     private String instanceId;
 
     @com.aliyun.core.annotation.NameInMap("PriRealServers")
-    private java.util.List < PriRealServers> priRealServers;
+    private java.util.List<PriRealServers> priRealServers;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecRealServers")
-    private java.util.List < SecRealServers> secRealServers;
+    private java.util.List<SecRealServers> secRealServers;
 
     private DescribeLayer4RulePolicyResponseBody(Builder builder) {
         this.backendPort = builder.backendPort;
@@ -104,7 +109,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     /**
      * @return priRealServers
      */
-    public java.util.List < PriRealServers> getPriRealServers() {
+    public java.util.List<PriRealServers> getPriRealServers() {
         return this.priRealServers;
     }
 
@@ -118,7 +123,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     /**
      * @return secRealServers
      */
-    public java.util.List < SecRealServers> getSecRealServers() {
+    public java.util.List<SecRealServers> getSecRealServers() {
         return this.secRealServers;
     }
 
@@ -129,9 +134,9 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         private String forwardProtocol; 
         private Integer frontendPort; 
         private String instanceId; 
-        private java.util.List < PriRealServers> priRealServers; 
+        private java.util.List<PriRealServers> priRealServers; 
         private String requestId; 
-        private java.util.List < SecRealServers> secRealServers; 
+        private java.util.List<SecRealServers> secRealServers; 
 
         /**
          * <p>The port of the origin server.</p>
@@ -210,7 +215,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the primary origin server, including the IP addresses, forwarding protocol, and forwarding port.</p>
          */
-        public Builder priRealServers(java.util.List < PriRealServers> priRealServers) {
+        public Builder priRealServers(java.util.List<PriRealServers> priRealServers) {
             this.priRealServers = priRealServers;
             return this;
         }
@@ -229,7 +234,7 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the information about the secondary origin server, including the IP addresses, forwarding protocol, and forwarding port.</p>
          */
-        public Builder secRealServers(java.util.List < SecRealServers> secRealServers) {
+        public Builder secRealServers(java.util.List<SecRealServers> secRealServers) {
             this.secRealServers = secRealServers;
             return this;
         }

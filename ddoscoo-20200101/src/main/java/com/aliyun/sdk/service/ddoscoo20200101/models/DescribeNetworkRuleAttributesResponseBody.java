@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkRuleAttributes")
-    private java.util.List < NetworkRuleAttributes> networkRuleAttributes;
+    private java.util.List<NetworkRuleAttributes> networkRuleAttributes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     /**
      * @return networkRuleAttributes
      */
-    public java.util.List < NetworkRuleAttributes> getNetworkRuleAttributes() {
+    public java.util.List<NetworkRuleAttributes> getNetworkRuleAttributes() {
         return this.networkRuleAttributes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkRuleAttributes> networkRuleAttributes; 
+        private java.util.List<NetworkRuleAttributes> networkRuleAttributes; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the mitigation settings of the port forwarding rule for a non-website service. The mitigation settings include session persistence and DDoS mitigation policies.</p>
          */
-        public Builder networkRuleAttributes(java.util.List < NetworkRuleAttributes> networkRuleAttributes) {
+        public Builder networkRuleAttributes(java.util.List<NetworkRuleAttributes> networkRuleAttributes) {
             this.networkRuleAttributes = networkRuleAttributes;
             return this;
         }
@@ -207,7 +212,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
      */
     public static class Cc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sblack")
-        private java.util.List < Sblack> sblack;
+        private java.util.List<Sblack> sblack;
 
         private Cc(Builder builder) {
             this.sblack = builder.sblack;
@@ -224,17 +229,17 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
         /**
          * @return sblack
          */
-        public java.util.List < Sblack> getSblack() {
+        public java.util.List<Sblack> getSblack() {
             return this.sblack;
         }
 
         public static final class Builder {
-            private java.util.List < Sblack> sblack; 
+            private java.util.List<Sblack> sblack; 
 
             /**
              * <p>The protection policy that a source IP address is added to the blacklist when the number of connections initiated from the IP address frequently exceeds the limit.</p>
              */
-            public Builder sblack(java.util.List < Sblack> sblack) {
+            public Builder sblack(java.util.List<Sblack> sblack) {
                 this.sblack = sblack;
                 return this;
             }

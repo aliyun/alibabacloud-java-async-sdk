@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticQpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElasticQps")
-    private java.util.List < ElasticQps> elasticQps;
+    private java.util.List<ElasticQps> elasticQps;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     /**
      * @return elasticQps
      */
-    public java.util.List < ElasticQps> getElasticQps() {
+    public java.util.List<ElasticQps> getElasticQps() {
         return this.elasticQps;
     }
 
@@ -46,13 +51,13 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElasticQps> elasticQps; 
+        private java.util.List<ElasticQps> elasticQps; 
         private String requestId; 
 
         /**
          * <p>The information about the burstable QPS.</p>
          */
-        public Builder elasticQps(java.util.List < ElasticQps> elasticQps) {
+        public Builder elasticQps(java.util.List<ElasticQps> elasticQps) {
             this.elasticQps = elasticQps;
             return this;
         }

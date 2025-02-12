@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Ips")
-    private java.util.List < Ips> ips;
+    private java.util.List<Ips> ips;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     /**
      * @return ips
      */
-    public java.util.List < Ips> getIps() {
+    public java.util.List<Ips> getIps() {
         return this.ips;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Ips> ips; 
+        private java.util.List<Ips> ips; 
         private String requestId; 
 
         /**
          * <p>An array that consists of information about the source IP address of the volumetric attack.</p>
          */
-        public Builder ips(java.util.List < Ips> ips) {
+        public Builder ips(java.util.List<Ips> ips) {
             this.ips = ips;
             return this;
         }

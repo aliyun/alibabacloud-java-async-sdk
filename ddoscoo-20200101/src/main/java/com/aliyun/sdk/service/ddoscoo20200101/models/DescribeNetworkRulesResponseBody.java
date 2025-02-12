@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNetworkRulesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkRules")
-    private java.util.List < NetworkRules> networkRules;
+    private java.util.List<NetworkRules> networkRules;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
     /**
      * @return networkRules
      */
-    public java.util.List < NetworkRules> getNetworkRules() {
+    public java.util.List<NetworkRules> getNetworkRules() {
         return this.networkRules;
     }
 
@@ -57,14 +62,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkRules> networkRules; 
+        private java.util.List<NetworkRules> networkRules; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The details of the port forwarding rule.</p>
          */
-        public Builder networkRules(java.util.List < NetworkRules> networkRules) {
+        public Builder networkRules(java.util.List<NetworkRules> networkRules) {
             this.networkRules = networkRules;
             return this;
         }
@@ -129,7 +134,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         private String proxyStatus;
 
         @com.aliyun.core.annotation.NameInMap("RealServers")
-        private java.util.List < String > realServers;
+        private java.util.List<String> realServers;
 
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
@@ -214,7 +219,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         /**
          * @return realServers
          */
-        public java.util.List < String > getRealServers() {
+        public java.util.List<String> getRealServers() {
             return this.realServers;
         }
 
@@ -234,7 +239,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             private String protocol; 
             private Long proxyEnable; 
             private String proxyStatus; 
-            private java.util.List < String > realServers; 
+            private java.util.List<String> realServers; 
             private String remark; 
 
             /**
@@ -327,7 +332,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             /**
              * <p>The IP addresses of origin servers.</p>
              */
-            public Builder realServers(java.util.List < String > realServers) {
+            public Builder realServers(java.util.List<String> realServers) {
                 this.realServers = realServers;
                 return this;
             }

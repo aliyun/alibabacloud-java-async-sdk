@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Isps")
-    private java.util.List < Isps> isps;
+    private java.util.List<Isps> isps;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     /**
      * @return isps
      */
-    public java.util.List < Isps> getIsps() {
+    public java.util.List<Isps> getIsps() {
         return this.isps;
     }
 
@@ -46,13 +51,13 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Isps> isps; 
+        private java.util.List<Isps> isps; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the details of the ISP.</p>
          */
-        public Builder isps(java.util.List < Isps> isps) {
+        public Builder isps(java.util.List<Isps> isps) {
             this.isps = isps;
             return this;
         }

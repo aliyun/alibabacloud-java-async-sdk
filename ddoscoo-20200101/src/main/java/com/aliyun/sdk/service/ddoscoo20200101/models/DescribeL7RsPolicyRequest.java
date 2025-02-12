@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DescribeL7RsPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RealServers")
-    private java.util.List < String > realServers;
+    private java.util.List<String> realServers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -67,7 +72,7 @@ public class DescribeL7RsPolicyRequest extends Request {
     /**
      * @return realServers
      */
-    public java.util.List < String > getRealServers() {
+    public java.util.List<String> getRealServers() {
         return this.realServers;
     }
 
@@ -81,7 +86,7 @@ public class DescribeL7RsPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeL7RsPolicyRequest, Builder> {
         private String regionId; 
         private String domain; 
-        private java.util.List < String > realServers; 
+        private java.util.List<String> realServers; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -127,7 +132,7 @@ public class DescribeL7RsPolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>1.<em><strong>.</strong></em>.1</p>
          */
-        public Builder realServers(java.util.List < String > realServers) {
+        public Builder realServers(java.util.List<String> realServers) {
             this.putQueryParameter("RealServers", realServers);
             this.realServers = realServers;
             return this;

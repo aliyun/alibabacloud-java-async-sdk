@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePortMaxConnsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PortMaxConns")
-    private java.util.List < PortMaxConns> portMaxConns;
+    private java.util.List<PortMaxConns> portMaxConns;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
     /**
      * @return portMaxConns
      */
-    public java.util.List < PortMaxConns> getPortMaxConns() {
+    public java.util.List<PortMaxConns> getPortMaxConns() {
         return this.portMaxConns;
     }
 
@@ -46,13 +51,13 @@ public class DescribePortMaxConnsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PortMaxConns> portMaxConns; 
+        private java.util.List<PortMaxConns> portMaxConns; 
         private String requestId; 
 
         /**
          * <p>An array consisting of the details of the maximum number of connections that are established over a port of the instance.</p>
          */
-        public Builder portMaxConns(java.util.List < PortMaxConns> portMaxConns) {
+        public Builder portMaxConns(java.util.List<PortMaxConns> portMaxConns) {
             this.portMaxConns = portMaxConns;
             return this;
         }

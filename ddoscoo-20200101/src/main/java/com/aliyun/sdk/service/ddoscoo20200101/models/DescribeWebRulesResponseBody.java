@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("WebRules")
-    private java.util.List < WebRules> webRules;
+    private java.util.List<WebRules> webRules;
 
     private DescribeWebRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     /**
      * @return webRules
      */
-    public java.util.List < WebRules> getWebRules() {
+    public java.util.List<WebRules> getWebRules() {
         return this.webRules;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < WebRules> webRules; 
+        private java.util.List<WebRules> webRules; 
 
         /**
          * <p>The ID of the request.</p>
@@ -86,7 +91,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * <p>The configurations of the forwarding rule.</p>
          */
-        public Builder webRules(java.util.List < WebRules> webRules) {
+        public Builder webRules(java.util.List<WebRules> webRules) {
             this.webRules = webRules;
             return this;
         }
@@ -209,7 +214,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
      */
     public static class ProxyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPorts")
-        private java.util.List < String > proxyPorts;
+        private java.util.List<String> proxyPorts;
 
         @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
@@ -230,7 +235,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * @return proxyPorts
          */
-        public java.util.List < String > getProxyPorts() {
+        public java.util.List<String> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -242,13 +247,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > proxyPorts; 
+            private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
             /**
              * <p>The ports.</p>
              */
-            public Builder proxyPorts(java.util.List < String > proxyPorts) {
+            public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }
@@ -362,7 +367,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
      */
     public static class WebRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackList")
-        private java.util.List < String > blackList;
+        private java.util.List<String> blackList;
 
         @com.aliyun.core.annotation.NameInMap("CcEnabled")
         private Boolean ccEnabled;
@@ -383,7 +388,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         private String cname;
 
         @com.aliyun.core.annotation.NameInMap("CustomCiphers")
-        private java.util.List < String > customCiphers;
+        private java.util.List<String> customCiphers;
 
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -410,7 +415,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         private Boolean proxyEnabled;
 
         @com.aliyun.core.annotation.NameInMap("ProxyTypes")
-        private java.util.List < ProxyTypes> proxyTypes;
+        private java.util.List<ProxyTypes> proxyTypes;
 
         @com.aliyun.core.annotation.NameInMap("PunishReason")
         private Integer punishReason;
@@ -419,7 +424,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         private Boolean punishStatus;
 
         @com.aliyun.core.annotation.NameInMap("RealServers")
-        private java.util.List < RealServers> realServers;
+        private java.util.List<RealServers> realServers;
 
         @com.aliyun.core.annotation.NameInMap("Ssl13Enabled")
         private Boolean ssl13Enabled;
@@ -434,7 +439,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         private String userCertName;
 
         @com.aliyun.core.annotation.NameInMap("WhiteList")
-        private java.util.List < String > whiteList;
+        private java.util.List<String> whiteList;
 
         private WebRules(Builder builder) {
             this.blackList = builder.blackList;
@@ -475,7 +480,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * @return blackList
          */
-        public java.util.List < String > getBlackList() {
+        public java.util.List<String> getBlackList() {
             return this.blackList;
         }
 
@@ -524,7 +529,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * @return customCiphers
          */
-        public java.util.List < String > getCustomCiphers() {
+        public java.util.List<String> getCustomCiphers() {
             return this.customCiphers;
         }
 
@@ -587,7 +592,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * @return proxyTypes
          */
-        public java.util.List < ProxyTypes> getProxyTypes() {
+        public java.util.List<ProxyTypes> getProxyTypes() {
             return this.proxyTypes;
         }
 
@@ -608,7 +613,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * @return realServers
          */
-        public java.util.List < RealServers> getRealServers() {
+        public java.util.List<RealServers> getRealServers() {
             return this.realServers;
         }
 
@@ -643,19 +648,19 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         /**
          * @return whiteList
          */
-        public java.util.List < String > getWhiteList() {
+        public java.util.List<String> getWhiteList() {
             return this.whiteList;
         }
 
         public static final class Builder {
-            private java.util.List < String > blackList; 
+            private java.util.List<String> blackList; 
             private Boolean ccEnabled; 
             private Boolean ccRuleEnabled; 
             private String ccTemplate; 
             private String certName; 
             private String certRegion; 
             private String cname; 
-            private java.util.List < String > customCiphers; 
+            private java.util.List<String> customCiphers; 
             private String domain; 
             private GmCert gmCert; 
             private Boolean http2Enable; 
@@ -664,20 +669,20 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private Boolean ocspEnabled; 
             private String policyMode; 
             private Boolean proxyEnabled; 
-            private java.util.List < ProxyTypes> proxyTypes; 
+            private java.util.List<ProxyTypes> proxyTypes; 
             private Integer punishReason; 
             private Boolean punishStatus; 
-            private java.util.List < RealServers> realServers; 
+            private java.util.List<RealServers> realServers; 
             private Boolean ssl13Enabled; 
             private String sslCiphers; 
             private String sslProtocols; 
             private String userCertName; 
-            private java.util.List < String > whiteList; 
+            private java.util.List<String> whiteList; 
 
             /**
              * <p>The IP addresses in the blacklist for the domain name.</p>
              */
-            public Builder blackList(java.util.List < String > blackList) {
+            public Builder blackList(java.util.List<String> blackList) {
                 this.blackList = blackList;
                 return this;
             }
@@ -769,7 +774,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             /**
              * <p>The custom cipher suites.</p>
              */
-            public Builder customCiphers(java.util.List < String > customCiphers) {
+            public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
                 return this;
             }
@@ -887,7 +892,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             /**
              * <p>The details of the protocol type and port number.</p>
              */
-            public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
+            public Builder proxyTypes(java.util.List<ProxyTypes> proxyTypes) {
                 this.proxyTypes = proxyTypes;
                 return this;
             }
@@ -926,7 +931,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             /**
              * <p>The details of the origin server address.</p>
              */
-            public Builder realServers(java.util.List < RealServers> realServers) {
+            public Builder realServers(java.util.List<RealServers> realServers) {
                 this.realServers = realServers;
                 return this;
             }
@@ -992,7 +997,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             /**
              * <p>The IP addresses in the whitelist for the domain name.</p>
              */
-            public Builder whiteList(java.util.List < String > whiteList) {
+            public Builder whiteList(java.util.List<String> whiteList) {
                 this.whiteList = whiteList;
                 return this;
             }

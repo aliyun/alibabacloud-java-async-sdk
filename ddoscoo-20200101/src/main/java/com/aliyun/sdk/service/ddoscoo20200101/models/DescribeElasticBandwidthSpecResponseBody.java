@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElasticBandwidthSpec")
-    private java.util.List < String > elasticBandwidthSpec;
+    private java.util.List<String> elasticBandwidthSpec;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     /**
      * @return elasticBandwidthSpec
      */
-    public java.util.List < String > getElasticBandwidthSpec() {
+    public java.util.List<String> getElasticBandwidthSpec() {
         return this.elasticBandwidthSpec;
     }
 
@@ -46,13 +51,13 @@ public class DescribeElasticBandwidthSpecResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > elasticBandwidthSpec; 
+        private java.util.List<String> elasticBandwidthSpec; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the available burstable protection bandwidths. Unit: Gbit/s.</p>
          */
-        public Builder elasticBandwidthSpec(java.util.List < String > elasticBandwidthSpec) {
+        public Builder elasticBandwidthSpec(java.util.List<String> elasticBandwidthSpec) {
             this.elasticBandwidthSpec = elasticBandwidthSpec;
             return this;
         }

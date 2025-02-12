@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainCacheConfigs")
-    private java.util.List < DomainCacheConfigs> domainCacheConfigs;
+    private java.util.List<DomainCacheConfigs> domainCacheConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     /**
      * @return domainCacheConfigs
      */
-    public java.util.List < DomainCacheConfigs> getDomainCacheConfigs() {
+    public java.util.List<DomainCacheConfigs> getDomainCacheConfigs() {
         return this.domainCacheConfigs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainCacheConfigs> domainCacheConfigs; 
+        private java.util.List<DomainCacheConfigs> domainCacheConfigs; 
         private String requestId; 
 
         /**
          * <p>An array that consists of Static Page Caching configurations.</p>
          */
-        public Builder domainCacheConfigs(java.util.List < DomainCacheConfigs> domainCacheConfigs) {
+        public Builder domainCacheConfigs(java.util.List<DomainCacheConfigs> domainCacheConfigs) {
             this.domainCacheConfigs = domainCacheConfigs;
             return this;
         }
@@ -206,7 +211,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
      */
     public static class DomainCacheConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomRules")
-        private java.util.List < CustomRules> customRules;
+        private java.util.List<CustomRules> customRules;
 
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -235,7 +240,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         /**
          * @return customRules
          */
-        public java.util.List < CustomRules> getCustomRules() {
+        public java.util.List<CustomRules> getCustomRules() {
             return this.customRules;
         }
 
@@ -261,7 +266,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomRules> customRules; 
+            private java.util.List<CustomRules> customRules; 
             private String domain; 
             private Integer enable; 
             private String mode; 
@@ -269,7 +274,7 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
             /**
              * <p>An array that consists of custom caching rules.</p>
              */
-            public Builder customRules(java.util.List < CustomRules> customRules) {
+            public Builder customRules(java.util.List<CustomRules> customRules) {
                 this.customRules = customRules;
                 return this;
             }

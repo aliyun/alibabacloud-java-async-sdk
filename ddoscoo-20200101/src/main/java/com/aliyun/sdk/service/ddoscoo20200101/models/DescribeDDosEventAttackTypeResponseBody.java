@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AttackTypes")
-    private java.util.List < AttackTypes> attackTypes;
+    private java.util.List<AttackTypes> attackTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
     /**
      * @return attackTypes
      */
-    public java.util.List < AttackTypes> getAttackTypes() {
+    public java.util.List<AttackTypes> getAttackTypes() {
         return this.attackTypes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDDosEventAttackTypeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttackTypes> attackTypes; 
+        private java.util.List<AttackTypes> attackTypes; 
         private String requestId; 
 
         /**
          * <p>The information about the attack types.</p>
          */
-        public Builder attackTypes(java.util.List < AttackTypes> attackTypes) {
+        public Builder attackTypes(java.util.List<AttackTypes> attackTypes) {
             this.attackTypes = attackTypes;
             return this;
         }

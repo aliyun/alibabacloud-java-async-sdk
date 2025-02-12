@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,11 +31,16 @@ public class DeleteAutoCcBlacklistRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    private String queryType;
+
     private DeleteAutoCcBlacklistRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.blacklist = builder.blacklist;
         this.instanceId = builder.instanceId;
+        this.queryType = builder.queryType;
     }
 
     public static Builder builder() {
@@ -67,10 +77,18 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return queryType
+     */
+    public String getQueryType() {
+        return this.queryType;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAutoCcBlacklistRequest, Builder> {
         private String regionId; 
         private String blacklist; 
         private String instanceId; 
+        private String queryType; 
 
         private Builder() {
             super();
@@ -81,6 +99,7 @@ public class DeleteAutoCcBlacklistRequest extends Request {
             this.regionId = request.regionId;
             this.blacklist = request.blacklist;
             this.instanceId = request.instanceId;
+            this.queryType = request.queryType;
         } 
 
         /**
@@ -121,6 +140,15 @@ public class DeleteAutoCcBlacklistRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * QueryType.
+         */
+        public Builder queryType(String queryType) {
+            this.putQueryParameter("QueryType", queryType);
+            this.queryType = queryType;
             return this;
         }
 

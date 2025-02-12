@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ModifyWebRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyTypes")
@@ -37,7 +42,7 @@ public class ModifyWebRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RealServers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > realServers;
+    private java.util.List<String> realServers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -97,7 +102,7 @@ public class ModifyWebRuleRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -111,7 +116,7 @@ public class ModifyWebRuleRequest extends Request {
     /**
      * @return realServers
      */
-    public java.util.List < String > getRealServers() {
+    public java.util.List<String> getRealServers() {
         return this.realServers;
     }
 
@@ -133,9 +138,9 @@ public class ModifyWebRuleRequest extends Request {
         private String regionId; 
         private String domain; 
         private String httpsExt; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String proxyTypes; 
-        private java.util.List < String > realServers; 
+        private java.util.List<String> realServers; 
         private String resourceGroupId; 
         private Integer rsType; 
 
@@ -188,7 +193,7 @@ public class ModifyWebRuleRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -212,7 +217,7 @@ public class ModifyWebRuleRequest extends Request {
          * <strong>example:</strong>
          * <p>1.xxx.xxx.1</p>
          */
-        public Builder realServers(java.util.List < String > realServers) {
+        public Builder realServers(java.util.List<String> realServers) {
             this.putQueryParameter("RealServers", realServers);
             this.realServers = realServers;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     private String totalCount;
 
     @com.aliyun.core.annotation.NameInMap("WebCCRules")
-    private java.util.List < WebCCRules> webCCRules;
+    private java.util.List<WebCCRules> webCCRules;
 
     private DescribeWebCCRulesV2ResponseBody(Builder builder) {
         this.domain = builder.domain;
@@ -63,7 +68,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
     /**
      * @return webCCRules
      */
-    public java.util.List < WebCCRules> getWebCCRules() {
+    public java.util.List<WebCCRules> getWebCCRules() {
         return this.webCCRules;
     }
 
@@ -71,7 +76,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         private String domain; 
         private String requestId; 
         private String totalCount; 
-        private java.util.List < WebCCRules> webCCRules; 
+        private java.util.List<WebCCRules> webCCRules; 
 
         /**
          * <p>The domain name of the website.</p>
@@ -109,7 +114,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         /**
          * <p>The custom frequency control rules.</p>
          */
-        public Builder webCCRules(java.util.List < WebCCRules> webCCRules) {
+        public Builder webCCRules(java.util.List<WebCCRules> webCCRules) {
             this.webCCRules = webCCRules;
             return this;
         }
@@ -681,7 +686,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         private String action;
 
         @com.aliyun.core.annotation.NameInMap("Condition")
-        private java.util.List < Condition> condition;
+        private java.util.List<Condition> condition;
 
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -742,7 +747,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         /**
          * @return condition
          */
-        public java.util.List < Condition> getCondition() {
+        public java.util.List<Condition> getCondition() {
             return this.condition;
         }
 
@@ -811,7 +816,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String action; 
-            private java.util.List < Condition> condition; 
+            private java.util.List<Condition> condition; 
             private Integer count; 
             private Integer interval; 
             private String mode; 
@@ -842,7 +847,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             /**
              * <p>The match conditions.</p>
              */
-            public Builder condition(java.util.List < Condition> condition) {
+            public Builder condition(java.util.List<Condition> condition) {
                 this.condition = condition;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AreaBlockConfigs")
-    private java.util.List < AreaBlockConfigs> areaBlockConfigs;
+    private java.util.List<AreaBlockConfigs> areaBlockConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     /**
      * @return areaBlockConfigs
      */
-    public java.util.List < AreaBlockConfigs> getAreaBlockConfigs() {
+    public java.util.List<AreaBlockConfigs> getAreaBlockConfigs() {
         return this.areaBlockConfigs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AreaBlockConfigs> areaBlockConfigs; 
+        private java.util.List<AreaBlockConfigs> areaBlockConfigs; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the configurations of the Location Blacklist (Domain Names) policy.</p>
          */
-        public Builder areaBlockConfigs(java.util.List < AreaBlockConfigs> areaBlockConfigs) {
+        public Builder areaBlockConfigs(java.util.List<AreaBlockConfigs> areaBlockConfigs) {
             this.areaBlockConfigs = areaBlockConfigs;
             return this;
         }
@@ -162,7 +167,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("RegionList")
-        private java.util.List < RegionList> regionList;
+        private java.util.List<RegionList> regionList;
 
         private AreaBlockConfigs(Builder builder) {
             this.domain = builder.domain;
@@ -187,13 +192,13 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
         /**
          * @return regionList
          */
-        public java.util.List < RegionList> getRegionList() {
+        public java.util.List<RegionList> getRegionList() {
             return this.regionList;
         }
 
         public static final class Builder {
             private String domain; 
-            private java.util.List < RegionList> regionList; 
+            private java.util.List<RegionList> regionList; 
 
             /**
              * <p>The domain name of the website.</p>
@@ -209,7 +214,7 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
             /**
              * <p>The configuration of the blocked locations.</p>
              */
-            public Builder regionList(java.util.List < RegionList> regionList) {
+            public Builder regionList(java.util.List<RegionList> regionList) {
                 this.regionList = regionList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SchedulerRules")
-    private java.util.List < SchedulerRules> schedulerRules;
+    private java.util.List<SchedulerRules> schedulerRules;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -45,7 +50,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
     /**
      * @return schedulerRules
      */
-    public java.util.List < SchedulerRules> getSchedulerRules() {
+    public java.util.List<SchedulerRules> getSchedulerRules() {
         return this.schedulerRules;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SchedulerRules> schedulerRules; 
+        private java.util.List<SchedulerRules> schedulerRules; 
         private String totalCount; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         /**
          * SchedulerRules.
          */
-        public Builder schedulerRules(java.util.List < SchedulerRules> schedulerRules) {
+        public Builder schedulerRules(java.util.List<SchedulerRules> schedulerRules) {
             this.schedulerRules = schedulerRules;
             return this;
         }
@@ -412,7 +417,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         private String ruleType;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private SchedulerRules(Builder builder) {
             this.cname = builder.cname;
@@ -461,7 +466,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -470,7 +475,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             private Param param; 
             private String ruleName; 
             private String ruleType; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Cname.
@@ -507,7 +512,7 @@ public class DescribeSchedulerRulesResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

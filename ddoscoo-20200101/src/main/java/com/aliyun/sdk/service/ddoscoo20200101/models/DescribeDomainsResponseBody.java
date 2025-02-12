@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < String > domains;
+    private java.util.List<String> domains;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < String > getDomains() {
+    public java.util.List<String> getDomains() {
         return this.domains;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > domains; 
+        private java.util.List<String> domains; 
         private String requestId; 
 
         /**
          * <p>An array consisting of details of the domain name for which the forwarding rules are configured.</p>
          */
-        public Builder domains(java.util.List < String > domains) {
+        public Builder domains(java.util.List<String> domains) {
             this.domains = domains;
             return this;
         }

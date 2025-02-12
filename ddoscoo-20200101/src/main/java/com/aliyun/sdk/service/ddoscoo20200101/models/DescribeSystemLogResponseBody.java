@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SystemLog")
-    private java.util.List < SystemLog> systemLog;
+    private java.util.List<SystemLog> systemLog;
 
     @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
@@ -45,7 +50,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
     /**
      * @return systemLog
      */
-    public java.util.List < SystemLog> getSystemLog() {
+    public java.util.List<SystemLog> getSystemLog() {
         return this.systemLog;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SystemLog> systemLog; 
+        private java.util.List<SystemLog> systemLog; 
         private Long total; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeSystemLogResponseBody extends TeaModel {
         /**
          * <p>An array that consists of details of the billing logs for the burstable clean bandwidth.</p>
          */
-        public Builder systemLog(java.util.List < SystemLog> systemLog) {
+        public Builder systemLog(java.util.List<SystemLog> systemLog) {
             this.systemLog = systemLog;
             return this;
         }

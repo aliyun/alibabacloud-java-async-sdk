@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class DeletePortRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RealServers")
-    private java.util.List < String > realServers;
+    private java.util.List<String> realServers;
 
     private DeletePortRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class DeletePortRequest extends Request {
     /**
      * @return realServers
      */
-    public java.util.List < String > getRealServers() {
+    public java.util.List<String> getRealServers() {
         return this.realServers;
     }
 
@@ -110,7 +115,7 @@ public class DeletePortRequest extends Request {
         private String frontendPort; 
         private String frontendProtocol; 
         private String instanceId; 
-        private java.util.List < String > realServers; 
+        private java.util.List<String> realServers; 
 
         private Builder() {
             super();
@@ -196,7 +201,7 @@ public class DeletePortRequest extends Request {
         /**
          * <p>An array that consists of the IP addresses of origin servers.</p>
          */
-        public Builder realServers(java.util.List < String > realServers) {
+        public Builder realServers(java.util.List<String> realServers) {
             this.putQueryParameter("RealServers", realServers);
             this.realServers = realServers;
             return this;

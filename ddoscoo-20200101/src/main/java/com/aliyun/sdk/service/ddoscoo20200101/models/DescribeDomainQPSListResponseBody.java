@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainQPSListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainQPSList")
-    private java.util.List < DomainQPSList> domainQPSList;
+    private java.util.List<DomainQPSList> domainQPSList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
     /**
      * @return domainQPSList
      */
-    public java.util.List < DomainQPSList> getDomainQPSList() {
+    public java.util.List<DomainQPSList> getDomainQPSList() {
         return this.domainQPSList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainQPSList> domainQPSList; 
+        private java.util.List<DomainQPSList> domainQPSList; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the statistics on the QPS of the website.</p>
          */
-        public Builder domainQPSList(java.util.List < DomainQPSList> domainQPSList) {
+        public Builder domainQPSList(java.util.List<DomainQPSList> domainQPSList) {
             this.domainQPSList = domainQPSList;
             return this;
         }

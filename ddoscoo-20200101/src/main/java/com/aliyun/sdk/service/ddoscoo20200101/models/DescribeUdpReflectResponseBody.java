@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UdpSports")
-    private java.util.List < String > udpSports;
+    private java.util.List<String> udpSports;
 
     private DescribeUdpReflectResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
     /**
      * @return udpSports
      */
-    public java.util.List < String > getUdpSports() {
+    public java.util.List<String> getUdpSports() {
         return this.udpSports;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > udpSports; 
+        private java.util.List<String> udpSports; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeUdpReflectResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the source ports of the UDP traffic that are filtered out by the filtering policies for UDP reflection attacks.</p>
          */
-        public Builder udpSports(java.util.List < String > udpSports) {
+        public Builder udpSports(java.util.List<String> udpSports) {
             this.udpSports = udpSports;
             return this;
         }

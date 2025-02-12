@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceDetailsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceDetails")
-    private java.util.List < InstanceDetails> instanceDetails;
+    private java.util.List<InstanceDetails> instanceDetails;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     /**
      * @return instanceDetails
      */
-    public java.util.List < InstanceDetails> getInstanceDetails() {
+    public java.util.List<InstanceDetails> getInstanceDetails() {
         return this.instanceDetails;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceDetails> instanceDetails; 
+        private java.util.List<InstanceDetails> instanceDetails; 
         private String requestId; 
 
         /**
          * <p>The IP address and ISP line information about the Anti-DDoS Proxy instance.</p>
          */
-        public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
+        public Builder instanceDetails(java.util.List<InstanceDetails> instanceDetails) {
             this.instanceDetails = instanceDetails;
             return this;
         }
@@ -308,7 +313,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
      */
     public static class InstanceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipInfos")
-        private java.util.List < EipInfos> eipInfos;
+        private java.util.List<EipInfos> eipInfos;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -333,7 +338,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         /**
          * @return eipInfos
          */
-        public java.util.List < EipInfos> getEipInfos() {
+        public java.util.List<EipInfos> getEipInfos() {
             return this.eipInfos;
         }
 
@@ -352,14 +357,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EipInfos> eipInfos; 
+            private java.util.List<EipInfos> eipInfos; 
             private String instanceId; 
             private String line; 
 
             /**
              * <p>The IP address information about the Anti-DDoS Proxy instance.</p>
              */
-            public Builder eipInfos(java.util.List < EipInfos> eipInfos) {
+            public Builder eipInfos(java.util.List<EipInfos> eipInfos) {
                 this.eipInfos = eipInfos;
                 return this;
             }

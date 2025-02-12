@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeWebAccessModeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domains")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > domains;
+    private java.util.List<String> domains;
 
     private DescribeWebAccessModeRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class DescribeWebAccessModeRequest extends Request {
     /**
      * @return domains
      */
-    public java.util.List < String > getDomains() {
+    public java.util.List<String> getDomains() {
         return this.domains;
     }
 
     public static final class Builder extends Request.Builder<DescribeWebAccessModeRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > domains; 
+        private java.util.List<String> domains; 
 
         private Builder() {
             super();
@@ -87,7 +92,7 @@ public class DescribeWebAccessModeRequest extends Request {
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
          */
-        public Builder domains(java.util.List < String > domains) {
+        public Builder domains(java.util.List<String> domains) {
             this.putQueryParameter("Domains", domains);
             this.domains = domains;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateTagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -33,7 +38,7 @@ public class CreateTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private CreateTagResourcesRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateTagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -88,16 +93,16 @@ public class CreateTagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateTagResourcesRequest, Builder> {
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -113,7 +118,7 @@ public class CreateTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
+         * <p>The region ID of the Anti-DDoS Proxy instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,13 +144,13 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.</p>
+         * <p>The IDs of the Anti-DDoS Proxy instances to which you want to add tags.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-mp91j1ao****</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
@@ -167,7 +172,7 @@ public class CreateTagResourcesRequest extends Request {
         /**
          * <p>An array that consists of the tags to add.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

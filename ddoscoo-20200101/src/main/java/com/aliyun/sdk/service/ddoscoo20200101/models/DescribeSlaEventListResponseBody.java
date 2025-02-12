@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SlaEvent")
-    private java.util.List < SlaEvent> slaEvent;
+    private java.util.List<SlaEvent> slaEvent;
 
     @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
@@ -45,7 +50,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
     /**
      * @return slaEvent
      */
-    public java.util.List < SlaEvent> getSlaEvent() {
+    public java.util.List<SlaEvent> getSlaEvent() {
         return this.slaEvent;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SlaEvent> slaEvent; 
+        private java.util.List<SlaEvent> slaEvent; 
         private Long total; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeSlaEventListResponseBody extends TeaModel {
         /**
          * <p>The destination rate limit events.</p>
          */
-        public Builder slaEvent(java.util.List < SlaEvent> slaEvent) {
+        public Builder slaEvent(java.util.List<SlaEvent> slaEvent) {
             this.slaEvent = slaEvent;
             return this;
         }

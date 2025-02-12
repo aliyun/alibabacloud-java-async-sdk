@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("WebCustomPorts")
-    private java.util.List < WebCustomPorts> webCustomPorts;
+    private java.util.List<WebCustomPorts> webCustomPorts;
 
     private DescribeWebCustomPortsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
     /**
      * @return webCustomPorts
      */
-    public java.util.List < WebCustomPorts> getWebCustomPorts() {
+    public java.util.List<WebCustomPorts> getWebCustomPorts() {
         return this.webCustomPorts;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WebCustomPorts> webCustomPorts; 
+        private java.util.List<WebCustomPorts> webCustomPorts; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         /**
          * <p>An array consisting of information about supported custom ports that are used by a website.</p>
          */
-        public Builder webCustomPorts(java.util.List < WebCustomPorts> webCustomPorts) {
+        public Builder webCustomPorts(java.util.List<WebCustomPorts> webCustomPorts) {
             this.webCustomPorts = webCustomPorts;
             return this;
         }
@@ -82,7 +87,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
      */
     public static class WebCustomPorts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPorts")
-        private java.util.List < String > proxyPorts;
+        private java.util.List<String> proxyPorts;
 
         @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
@@ -103,7 +108,7 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         /**
          * @return proxyPorts
          */
-        public java.util.List < String > getProxyPorts() {
+        public java.util.List<String> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -115,13 +120,13 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > proxyPorts; 
+            private java.util.List<String> proxyPorts; 
             private String proxyType; 
 
             /**
              * <p>An array that consists of supported custom ports.</p>
              */
-            public Builder proxyPorts(java.util.List < String > proxyPorts) {
+            public Builder proxyPorts(java.util.List<String> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }

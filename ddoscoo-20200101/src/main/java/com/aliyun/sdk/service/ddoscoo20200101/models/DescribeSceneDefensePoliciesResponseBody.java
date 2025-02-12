@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -57,14 +62,14 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
         private Boolean success; 
 
         /**
          * <p>An array that consists of the configurations of the scenario-specific custom policy.</p>
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
@@ -260,7 +265,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         private String policyId;
 
         @com.aliyun.core.annotation.NameInMap("RuntimePolicies")
-        private java.util.List < RuntimePolicies> runtimePolicies;
+        private java.util.List<RuntimePolicies> runtimePolicies;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -329,7 +334,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
         /**
          * @return runtimePolicies
          */
-        public java.util.List < RuntimePolicies> getRuntimePolicies() {
+        public java.util.List<RuntimePolicies> getRuntimePolicies() {
             return this.runtimePolicies;
         }
 
@@ -360,7 +365,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             private String name; 
             private Integer objectCount; 
             private String policyId; 
-            private java.util.List < RuntimePolicies> runtimePolicies; 
+            private java.util.List<RuntimePolicies> runtimePolicies; 
             private Long startTime; 
             private Integer status; 
             private String template; 
@@ -428,7 +433,7 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
             /**
              * <p>The running rules of the policy.</p>
              */
-            public Builder runtimePolicies(java.util.List < RuntimePolicies> runtimePolicies) {
+            public Builder runtimePolicies(java.util.List<RuntimePolicies> runtimePolicies) {
                 this.runtimePolicies = runtimePolicies;
                 return this;
             }

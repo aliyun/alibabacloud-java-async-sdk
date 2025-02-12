@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebAccessModeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainModes")
-    private java.util.List < DomainModes> domainModes;
+    private java.util.List<DomainModes> domainModes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     /**
      * @return domainModes
      */
-    public java.util.List < DomainModes> getDomainModes() {
+    public java.util.List<DomainModes> getDomainModes() {
         return this.domainModes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainModes> domainModes; 
+        private java.util.List<DomainModes> domainModes; 
         private String requestId; 
 
         /**
          * <p>An array consisting of the modes in which the website service is added.</p>
          */
-        public Builder domainModes(java.util.List < DomainModes> domainModes) {
+        public Builder domainModes(java.util.List<DomainModes> domainModes) {
             this.domainModes = domainModes;
             return this;
         }

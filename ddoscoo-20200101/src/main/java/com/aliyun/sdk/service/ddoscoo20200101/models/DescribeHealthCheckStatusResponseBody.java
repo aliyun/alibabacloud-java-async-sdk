@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HealthCheckStatus")
-    private java.util.List < HealthCheckStatus> healthCheckStatus;
+    private java.util.List<HealthCheckStatus> healthCheckStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     /**
      * @return healthCheckStatus
      */
-    public java.util.List < HealthCheckStatus> getHealthCheckStatus() {
+    public java.util.List<HealthCheckStatus> getHealthCheckStatus() {
         return this.healthCheckStatus;
     }
 
@@ -46,13 +51,13 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HealthCheckStatus> healthCheckStatus; 
+        private java.util.List<HealthCheckStatus> healthCheckStatus; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the details of the health status of the origin server.</p>
          */
-        public Builder healthCheckStatus(java.util.List < HealthCheckStatus> healthCheckStatus) {
+        public Builder healthCheckStatus(java.util.List<HealthCheckStatus> healthCheckStatus) {
             this.healthCheckStatus = healthCheckStatus;
             return this;
         }
@@ -168,7 +173,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("RealServerStatusList")
-        private java.util.List < RealServerStatusList> realServerStatusList;
+        private java.util.List<RealServerStatusList> realServerStatusList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -213,7 +218,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
         /**
          * @return realServerStatusList
          */
-        public java.util.List < RealServerStatusList> getRealServerStatusList() {
+        public java.util.List<RealServerStatusList> getRealServerStatusList() {
             return this.realServerStatusList;
         }
 
@@ -228,7 +233,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String instanceId; 
             private String protocol; 
-            private java.util.List < RealServerStatusList> realServerStatusList; 
+            private java.util.List<RealServerStatusList> realServerStatusList; 
             private String status; 
 
             /**
@@ -271,7 +276,7 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
             /**
              * <p>An array that consists of the health states of the IP addresses of the origin server.</p>
              */
-            public Builder realServerStatusList(java.util.List < RealServerStatusList> realServerStatusList) {
+            public Builder realServerStatusList(java.util.List<RealServerStatusList> realServerStatusList) {
                 this.realServerStatusList = realServerStatusList;
                 return this;
             }

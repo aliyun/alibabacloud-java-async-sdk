@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePortConnsListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConnsList")
-    private java.util.List < ConnsList> connsList;
+    private java.util.List<ConnsList> connsList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
     /**
      * @return connsList
      */
-    public java.util.List < ConnsList> getConnsList() {
+    public java.util.List<ConnsList> getConnsList() {
         return this.connsList;
     }
 
@@ -46,13 +51,13 @@ public class DescribePortConnsListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConnsList> connsList; 
+        private java.util.List<ConnsList> connsList; 
         private String requestId; 
 
         /**
          * <p>Details about the connections established over the port.</p>
          */
-        public Builder connsList(java.util.List < ConnsList> connsList) {
+        public Builder connsList(java.util.List<ConnsList> connsList) {
             this.connsList = connsList;
             return this;
         }

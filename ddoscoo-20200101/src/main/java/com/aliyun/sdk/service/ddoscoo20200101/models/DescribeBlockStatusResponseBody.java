@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < StatusList> statusList;
+    private java.util.List<StatusList> statusList;
 
     private DescribeBlockStatusResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     /**
      * @return statusList
      */
-    public java.util.List < StatusList> getStatusList() {
+    public java.util.List<StatusList> getStatusList() {
         return this.statusList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StatusList> statusList; 
+        private java.util.List<StatusList> statusList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         /**
          * <p>An array that consists of details of the Diversion from Origin Server configurations of the instance.</p>
          */
-        public Builder statusList(java.util.List < StatusList> statusList) {
+        public Builder statusList(java.util.List<StatusList> statusList) {
             this.statusList = statusList;
             return this;
         }
@@ -209,7 +214,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
      */
     public static class StatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockStatusList")
-        private java.util.List < BlockStatusList> blockStatusList;
+        private java.util.List<BlockStatusList> blockStatusList;
 
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -230,7 +235,7 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         /**
          * @return blockStatusList
          */
-        public java.util.List < BlockStatusList> getBlockStatusList() {
+        public java.util.List<BlockStatusList> getBlockStatusList() {
             return this.blockStatusList;
         }
 
@@ -242,13 +247,13 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BlockStatusList> blockStatusList; 
+            private java.util.List<BlockStatusList> blockStatusList; 
             private String ip; 
 
             /**
              * <p>An array that consists of details of the Diversion from Origin Server configuration.</p>
              */
-            public Builder blockStatusList(java.util.List < BlockStatusList> blockStatusList) {
+            public Builder blockStatusList(java.util.List<BlockStatusList> blockStatusList) {
                 this.blockStatusList = blockStatusList;
                 return this;
             }

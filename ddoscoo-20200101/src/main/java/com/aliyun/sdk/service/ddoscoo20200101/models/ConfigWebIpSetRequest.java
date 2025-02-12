@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ConfigWebIpSetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BlackList")
-    private java.util.List < String > blackList;
+    private java.util.List<String> blackList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
@@ -31,7 +36,7 @@ public class ConfigWebIpSetRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WhiteList")
-    private java.util.List < String > whiteList;
+    private java.util.List<String> whiteList;
 
     private ConfigWebIpSetRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class ConfigWebIpSetRequest extends Request {
     /**
      * @return blackList
      */
-    public java.util.List < String > getBlackList() {
+    public java.util.List<String> getBlackList() {
         return this.blackList;
     }
 
@@ -86,16 +91,16 @@ public class ConfigWebIpSetRequest extends Request {
     /**
      * @return whiteList
      */
-    public java.util.List < String > getWhiteList() {
+    public java.util.List<String> getWhiteList() {
         return this.whiteList;
     }
 
     public static final class Builder extends Request.Builder<ConfigWebIpSetRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > blackList; 
+        private java.util.List<String> blackList; 
         private String domain; 
         private String resourceGroupId; 
-        private java.util.List < String > whiteList; 
+        private java.util.List<String> whiteList; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class ConfigWebIpSetRequest extends Request {
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
-        public Builder blackList(java.util.List < String > blackList) {
+        public Builder blackList(java.util.List<String> blackList) {
             this.putQueryParameter("BlackList", blackList);
             this.blackList = blackList;
             return this;
@@ -165,7 +170,7 @@ public class ConfigWebIpSetRequest extends Request {
          * <strong>example:</strong>
          * <p>2.2.2.2/24</p>
          */
-        public Builder whiteList(java.util.List < String > whiteList) {
+        public Builder whiteList(java.util.List<String> whiteList) {
             this.putQueryParameter("WhiteList", whiteList);
             this.whiteList = whiteList;
             return this;

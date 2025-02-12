@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeAutoCcBlacklistRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    private String queryType;
+
     private DescribeAutoCcBlacklistRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -42,6 +51,7 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         this.keyWord = builder.keyWord;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.queryType = builder.queryType;
     }
 
     public static Builder builder() {
@@ -92,12 +102,20 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return queryType
+     */
+    public String getQueryType() {
+        return this.queryType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAutoCcBlacklistRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String keyWord; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String queryType; 
 
         private Builder() {
             super();
@@ -110,6 +128,7 @@ public class DescribeAutoCcBlacklistRequest extends Request {
             this.keyWord = request.keyWord;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.queryType = request.queryType;
         } 
 
         /**
@@ -175,6 +194,15 @@ public class DescribeAutoCcBlacklistRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * QueryType.
+         */
+        public Builder queryType(String queryType) {
+            this.putQueryParameter("QueryType", queryType);
+            this.queryType = queryType;
             return this;
         }
 

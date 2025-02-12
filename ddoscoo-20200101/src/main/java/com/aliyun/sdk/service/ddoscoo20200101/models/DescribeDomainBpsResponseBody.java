@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainBpsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainBps")
-    private java.util.List < DomainBps> domainBps;
+    private java.util.List<DomainBps> domainBps;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
     /**
      * @return domainBps
      */
-    public java.util.List < DomainBps> getDomainBps() {
+    public java.util.List<DomainBps> getDomainBps() {
         return this.domainBps;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainBps> domainBps; 
+        private java.util.List<DomainBps> domainBps; 
         private String requestId; 
 
         /**
-         * DomainBps.
+         * <p>The bandwidths.</p>
          */
-        public Builder domainBps(java.util.List < DomainBps> domainBps) {
+        public Builder domainBps(java.util.List<DomainBps> domainBps) {
             this.domainBps = domainBps;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
             private Long outBps; 
 
             /**
-             * InBps.
+             * <p>The inbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inBps(Long inBps) {
                 this.inBps = inBps;
@@ -136,7 +147,10 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index number of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -144,7 +158,10 @@ public class DescribeDomainBpsResponseBody extends TeaModel {
             }
 
             /**
-             * OutBps.
+             * <p>The outbound bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;

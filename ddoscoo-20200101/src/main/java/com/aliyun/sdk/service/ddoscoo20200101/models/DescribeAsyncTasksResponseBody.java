@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAsyncTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AsyncTasks")
-    private java.util.List < AsyncTasks> asyncTasks;
+    private java.util.List<AsyncTasks> asyncTasks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
     /**
      * @return asyncTasks
      */
-    public java.util.List < AsyncTasks> getAsyncTasks() {
+    public java.util.List<AsyncTasks> getAsyncTasks() {
         return this.asyncTasks;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AsyncTasks> asyncTasks; 
+        private java.util.List<AsyncTasks> asyncTasks; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>An array that consists of the details of the asynchronous export tasks.</p>
          */
-        public Builder asyncTasks(java.util.List < AsyncTasks> asyncTasks) {
+        public Builder asyncTasks(java.util.List<AsyncTasks> asyncTasks) {
             this.asyncTasks = asyncTasks;
             return this;
         }

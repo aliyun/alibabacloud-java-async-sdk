@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,17 +33,17 @@ public class ModifyDomainResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyTypes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ProxyTypes> proxyTypes;
+    private java.util.List<ProxyTypes> proxyTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RealServers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > realServers;
+    private java.util.List<String> realServers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RsType")
@@ -93,21 +98,21 @@ public class ModifyDomainResourceRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return proxyTypes
      */
-    public java.util.List < ProxyTypes> getProxyTypes() {
+    public java.util.List<ProxyTypes> getProxyTypes() {
         return this.proxyTypes;
     }
 
     /**
      * @return realServers
      */
-    public java.util.List < String > getRealServers() {
+    public java.util.List<String> getRealServers() {
         return this.realServers;
     }
 
@@ -122,9 +127,9 @@ public class ModifyDomainResourceRequest extends Request {
         private String regionId; 
         private String domain; 
         private String httpsExt; 
-        private java.util.List < String > instanceIds; 
-        private java.util.List < ProxyTypes> proxyTypes; 
-        private java.util.List < String > realServers; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<ProxyTypes> proxyTypes; 
+        private java.util.List<String> realServers; 
         private Integer rsType; 
 
         private Builder() {
@@ -191,7 +196,7 @@ public class ModifyDomainResourceRequest extends Request {
          * <p>An array consisting of the IDs of instances that you want to associate.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;
@@ -201,7 +206,7 @@ public class ModifyDomainResourceRequest extends Request {
          * <p>The details about the protocol type and port number.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
+        public Builder proxyTypes(java.util.List<ProxyTypes> proxyTypes) {
             this.putQueryParameter("ProxyTypes", proxyTypes);
             this.proxyTypes = proxyTypes;
             return this;
@@ -211,7 +216,7 @@ public class ModifyDomainResourceRequest extends Request {
          * <p>An array that consists of the addresses of origin servers.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder realServers(java.util.List < String > realServers) {
+        public Builder realServers(java.util.List<String> realServers) {
             this.putQueryParameter("RealServers", realServers);
             this.realServers = realServers;
             return this;
@@ -253,7 +258,7 @@ public class ModifyDomainResourceRequest extends Request {
     public static class ProxyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProxyPorts")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Integer > proxyPorts;
+        private java.util.List<Integer> proxyPorts;
 
         @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
@@ -274,7 +279,7 @@ public class ModifyDomainResourceRequest extends Request {
         /**
          * @return proxyPorts
          */
-        public java.util.List < Integer > getProxyPorts() {
+        public java.util.List<Integer> getProxyPorts() {
             return this.proxyPorts;
         }
 
@@ -286,14 +291,14 @@ public class ModifyDomainResourceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Integer > proxyPorts; 
+            private java.util.List<Integer> proxyPorts; 
             private String proxyType; 
 
             /**
              * <p>The port numbers.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder proxyPorts(java.util.List < Integer > proxyPorts) {
+            public Builder proxyPorts(java.util.List<Integer> proxyPorts) {
                 this.proxyPorts = proxyPorts;
                 return this;
             }

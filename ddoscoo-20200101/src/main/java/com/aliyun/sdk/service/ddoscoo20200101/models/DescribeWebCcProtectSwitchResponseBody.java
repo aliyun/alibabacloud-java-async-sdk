@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProtectSwitchList")
-    private java.util.List < ProtectSwitchList> protectSwitchList;
+    private java.util.List<ProtectSwitchList> protectSwitchList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     /**
      * @return protectSwitchList
      */
-    public java.util.List < ProtectSwitchList> getProtectSwitchList() {
+    public java.util.List<ProtectSwitchList> getProtectSwitchList() {
         return this.protectSwitchList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProtectSwitchList> protectSwitchList; 
+        private java.util.List<ProtectSwitchList> protectSwitchList; 
         private String requestId; 
 
         /**
          * <p>The status of each mitigation policy for the website.</p>
          */
-        public Builder protectSwitchList(java.util.List < ProtectSwitchList> protectSwitchList) {
+        public Builder protectSwitchList(java.util.List<ProtectSwitchList> protectSwitchList) {
             this.protectSwitchList = protectSwitchList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DescribeDDoSEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -85,7 +90,7 @@ public class DescribeDDoSEventsRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -120,7 +125,7 @@ public class DescribeDDoSEventsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDDoSEventsRequest, Builder> {
         private String regionId; 
         private Long endTime; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
@@ -175,7 +180,7 @@ public class DescribeDDoSEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>ddoscoo-cn-mp91j1ao****</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

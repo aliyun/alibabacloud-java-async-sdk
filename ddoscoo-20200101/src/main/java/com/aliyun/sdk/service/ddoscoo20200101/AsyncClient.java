@@ -176,12 +176,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Proxy (Chinese Mainland) instances at a time.</p>
-     * <blockquote>
-     * <p> Anti-DDoS Proxy (Outside Chinese Mainland) does not support the tag feature.</p>
-     * </blockquote>
-     * <h3><a href="#qps-"></a>QPS limits</h3>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call the CreateTagResources operation to add tags to multiple Anti-DDoS Proxy instances at a time.</p>
+     * <h3><a href="#qps-"></a>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of CreateTagResources  CreateTagResourcesRequest
      * @return CreateTagResourcesResponse
@@ -737,8 +734,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is suitable only for Anti-DDoS Pro.
-     * You can query operations performed on Anti-DDoS Pro, such as configuring burstable protection bandwidth, deactivating blackhole filtering, configuring the Diversion from Origin Server policy, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.</p>
+     * <p> This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
+     * You can query operations performed on Anti-DDoS Proxy (Chinese Mainland), such as configuring the burstable protection bandwidth, deactivating blackhole filtering, configuring the near-origin traffic diversion feature, using Anti-DDoS plans, changing the IP addresses of Elastic Compute Service (ECS) instances, and clearing all logs.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeOpEntities  DescribeOpEntitiesRequest
@@ -1234,6 +1231,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyHttp2EnableResponse
      */
     CompletableFuture<ModifyHttp2EnableResponse> modifyHttp2Enable(ModifyHttp2EnableRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstance  ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     */
+    CompletableFuture<ModifyInstanceResponse> modifyInstance(ModifyInstanceRequest request);
 
     /**
      * @param request the request parameters of ModifyInstanceRemark  ModifyInstanceRemarkRequest

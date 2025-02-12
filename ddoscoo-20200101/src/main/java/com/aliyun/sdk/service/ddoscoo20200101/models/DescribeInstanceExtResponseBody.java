@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceExtResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceExtSpecs")
-    private java.util.List < InstanceExtSpecs> instanceExtSpecs;
+    private java.util.List<InstanceExtSpecs> instanceExtSpecs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
     /**
      * @return instanceExtSpecs
      */
-    public java.util.List < InstanceExtSpecs> getInstanceExtSpecs() {
+    public java.util.List<InstanceExtSpecs> getInstanceExtSpecs() {
         return this.instanceExtSpecs;
     }
 
@@ -57,14 +62,14 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceExtSpecs> instanceExtSpecs; 
+        private java.util.List<InstanceExtSpecs> instanceExtSpecs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>The extended information about the Anti-DDoS Proxy instance.</p>
          */
-        public Builder instanceExtSpecs(java.util.List < InstanceExtSpecs> instanceExtSpecs) {
+        public Builder instanceExtSpecs(java.util.List<InstanceExtSpecs> instanceExtSpecs) {
             this.instanceExtSpecs = instanceExtSpecs;
             return this;
         }

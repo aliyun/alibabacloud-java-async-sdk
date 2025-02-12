@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePortFlowListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PortFlowList")
-    private java.util.List < PortFlowList> portFlowList;
+    private java.util.List<PortFlowList> portFlowList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     /**
      * @return portFlowList
      */
-    public java.util.List < PortFlowList> getPortFlowList() {
+    public java.util.List<PortFlowList> getPortFlowList() {
         return this.portFlowList;
     }
 
@@ -46,13 +51,13 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PortFlowList> portFlowList; 
+        private java.util.List<PortFlowList> portFlowList; 
         private String requestId; 
 
         /**
          * <p>The returned traffic data.</p>
          */
-        public Builder portFlowList(java.util.List < PortFlowList> portFlowList) {
+        public Builder portFlowList(java.util.List<PortFlowList> portFlowList) {
             this.portFlowList = portFlowList;
             return this;
         }

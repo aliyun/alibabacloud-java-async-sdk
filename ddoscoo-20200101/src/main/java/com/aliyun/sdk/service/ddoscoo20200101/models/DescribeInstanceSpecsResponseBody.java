@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
-    private java.util.List < InstanceSpecs> instanceSpecs;
+    private java.util.List<InstanceSpecs> instanceSpecs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
      * @return instanceSpecs
      */
-    public java.util.List < InstanceSpecs> getInstanceSpecs() {
+    public java.util.List<InstanceSpecs> getInstanceSpecs() {
         return this.instanceSpecs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceSpecs> instanceSpecs; 
+        private java.util.List<InstanceSpecs> instanceSpecs; 
         private String requestId; 
 
         /**
          * <p>The details of the specifications of the instance.</p>
          */
-        public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
+        public Builder instanceSpecs(java.util.List<InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
             return this;
         }

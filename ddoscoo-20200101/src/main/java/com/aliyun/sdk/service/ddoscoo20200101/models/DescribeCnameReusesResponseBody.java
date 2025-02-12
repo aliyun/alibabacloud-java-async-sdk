@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCnameReusesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CnameReuses")
-    private java.util.List < CnameReuses> cnameReuses;
+    private java.util.List<CnameReuses> cnameReuses;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     /**
      * @return cnameReuses
      */
-    public java.util.List < CnameReuses> getCnameReuses() {
+    public java.util.List<CnameReuses> getCnameReuses() {
         return this.cnameReuses;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CnameReuses> cnameReuses; 
+        private java.util.List<CnameReuses> cnameReuses; 
         private String requestId; 
 
         /**
          * CnameReuses.
          */
-        public Builder cnameReuses(java.util.List < CnameReuses> cnameReuses) {
+        public Builder cnameReuses(java.util.List<CnameReuses> cnameReuses) {
             this.cnameReuses = cnameReuses;
             return this;
         }

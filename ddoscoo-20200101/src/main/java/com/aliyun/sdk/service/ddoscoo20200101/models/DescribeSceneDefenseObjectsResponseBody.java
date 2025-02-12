@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Objects")
-    private java.util.List < Objects> objects;
+    private java.util.List<Objects> objects;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
     /**
      * @return objects
      */
-    public java.util.List < Objects> getObjects() {
+    public java.util.List<Objects> getObjects() {
         return this.objects;
     }
 
@@ -57,14 +62,14 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Objects> objects; 
+        private java.util.List<Objects> objects; 
         private String requestId; 
         private Boolean success; 
 
         /**
          * <p>The information about the protected assets.</p>
          */
-        public Builder objects(java.util.List < Objects> objects) {
+        public Builder objects(java.util.List<Objects> objects) {
             this.objects = objects;
             return this;
         }

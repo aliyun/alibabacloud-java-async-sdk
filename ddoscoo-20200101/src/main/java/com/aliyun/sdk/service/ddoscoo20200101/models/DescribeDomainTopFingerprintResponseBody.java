@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainTopFp")
-    private java.util.List < DomainTopFp> domainTopFp;
+    private java.util.List<DomainTopFp> domainTopFp;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
     /**
      * @return domainTopFp
      */
-    public java.util.List < DomainTopFp> getDomainTopFp() {
+    public java.util.List<DomainTopFp> getDomainTopFp() {
         return this.domainTopFp;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainTopFp> domainTopFp; 
+        private java.util.List<DomainTopFp> domainTopFp; 
         private String requestId; 
 
         /**
-         * DomainTopFp.
+         * <p>The information about the fingerprints of the clients.</p>
          */
-        public Builder domainTopFp(java.util.List < DomainTopFp> domainTopFp) {
+        public Builder domainTopFp(java.util.List<DomainTopFp> domainTopFp) {
             this.domainTopFp = domainTopFp;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C33EB3D5-AF96-43CA-9C7E-37A81BC06A1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
             private Long pv; 
 
             /**
-             * Domain.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -136,7 +147,10 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprinting.
+             * <p>The fingerprint of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8a374c9724582b14a4cfa58c8c9fb2bc</p>
              */
             public Builder fingerprinting(String fingerprinting) {
                 this.fingerprinting = fingerprinting;
@@ -144,7 +158,10 @@ public class DescribeDomainTopFingerprintResponseBody extends TeaModel {
             }
 
             /**
-             * Pv.
+             * <p>The page views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22121</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainTopRefererResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainTopReferer")
-    private java.util.List < DomainTopReferer> domainTopReferer;
+    private java.util.List<DomainTopReferer> domainTopReferer;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
     /**
      * @return domainTopReferer
      */
-    public java.util.List < DomainTopReferer> getDomainTopReferer() {
+    public java.util.List<DomainTopReferer> getDomainTopReferer() {
         return this.domainTopReferer;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainTopReferer> domainTopReferer; 
+        private java.util.List<DomainTopReferer> domainTopReferer; 
         private String requestId; 
 
         /**
-         * DomainTopReferer.
+         * <p>The information about top referers.</p>
          */
-        public Builder domainTopReferer(java.util.List < DomainTopReferer> domainTopReferer) {
+        public Builder domainTopReferer(java.util.List<DomainTopReferer> domainTopReferer) {
             this.domainTopReferer = domainTopReferer;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             private String referer; 
 
             /**
-             * Domain.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -136,7 +147,10 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             }
 
             /**
-             * Pv.
+             * <p>The page views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>257031</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;
@@ -144,7 +158,10 @@ public class DescribeDomainTopRefererResponseBody extends TeaModel {
             }
 
             /**
-             * Referer.
+             * <p>The Base64-encoded referer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aHR0cHM6Ly9zZXJ2aWNld2VjaGF0LmNvbS93eGY3ZDc5YWY0YzU4ZDH3NTEvNC9wYWdlLWZyYW1lLmh0bWw=</p>
              */
             public Builder referer(String referer) {
                 this.referer = referer;

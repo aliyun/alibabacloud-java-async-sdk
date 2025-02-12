@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -104,7 +109,7 @@ public class ModifyFullLogTtlRequest extends Request {
         }
 
         /**
-         * <p>The log storage duration of a website. Valid values: <strong>30</strong> to <strong>180</strong>. Unit: days.</p>
+         * <p>The log storage duration of a website. Valid values: <strong>7</strong> to <strong>180</strong>. Unit: days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

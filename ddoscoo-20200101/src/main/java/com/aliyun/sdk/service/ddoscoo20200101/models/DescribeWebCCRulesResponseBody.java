@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("WebCCRules")
-    private java.util.List < WebCCRules> webCCRules;
+    private java.util.List<WebCCRules> webCCRules;
 
     private DescribeWebCCRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     /**
      * @return webCCRules
      */
-    public java.util.List < WebCCRules> getWebCCRules() {
+    public java.util.List<WebCCRules> getWebCCRules() {
         return this.webCCRules;
     }
 
     public static final class Builder {
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < WebCCRules> webCCRules; 
+        private java.util.List<WebCCRules> webCCRules; 
 
         /**
          * <p>The request ID.</p>
@@ -86,7 +91,7 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
         /**
          * <p>The custom frequency control rule.</p>
          */
-        public Builder webCCRules(java.util.List < WebCCRules> webCCRules) {
+        public Builder webCCRules(java.util.List<WebCCRules> webCCRules) {
             this.webCCRules = webCCRules;
             return this;
         }

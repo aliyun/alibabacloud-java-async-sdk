@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,10 +87,10 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
      */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Countries")
-        private java.util.List < Long > countries;
+        private java.util.List<Long> countries;
 
         @com.aliyun.core.annotation.NameInMap("Provinces")
-        private java.util.List < Long > provinces;
+        private java.util.List<Long> provinces;
 
         @com.aliyun.core.annotation.NameInMap("RegionBlockSwitch")
         private String regionBlockSwitch;
@@ -107,14 +112,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         /**
          * @return countries
          */
-        public java.util.List < Long > getCountries() {
+        public java.util.List<Long> getCountries() {
             return this.countries;
         }
 
         /**
          * @return provinces
          */
-        public java.util.List < Long > getProvinces() {
+        public java.util.List<Long> getProvinces() {
             return this.provinces;
         }
 
@@ -126,14 +131,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > countries; 
-            private java.util.List < Long > provinces; 
+            private java.util.List<Long> countries; 
+            private java.util.List<Long> provinces; 
             private String regionBlockSwitch; 
 
             /**
              * <p>The codes of the countries or areas from which the requests are blocked.</p>
              */
-            public Builder countries(java.util.List < Long > countries) {
+            public Builder countries(java.util.List<Long> countries) {
                 this.countries = countries;
                 return this;
             }
@@ -141,7 +146,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             /**
              * <p>The codes of the administrative regions in China from which the requests are blocked.</p>
              */
-            public Builder provinces(java.util.List < Long > provinces) {
+            public Builder provinces(java.util.List<Long> provinces) {
                 this.provinces = provinces;
                 return this;
             }

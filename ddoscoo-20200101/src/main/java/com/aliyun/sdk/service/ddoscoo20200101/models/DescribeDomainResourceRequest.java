@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDomainResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -76,7 +81,7 @@ public class DescribeDomainResourceRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -104,7 +109,7 @@ public class DescribeDomainResourceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainResourceRequest, Builder> {
         private String regionId; 
         private String domain; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryDomainPattern; 
@@ -147,7 +152,7 @@ public class DescribeDomainResourceRequest extends Request {
         /**
          * <p>An array that consists of the IDs of instances to query.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

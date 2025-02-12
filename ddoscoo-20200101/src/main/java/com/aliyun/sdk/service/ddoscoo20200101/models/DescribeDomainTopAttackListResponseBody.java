@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AttackList")
-    private java.util.List < AttackList> attackList;
+    private java.util.List<AttackList> attackList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     /**
      * @return attackList
      */
-    public java.util.List < AttackList> getAttackList() {
+    public java.util.List<AttackList> getAttackList() {
         return this.attackList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AttackList> attackList; 
+        private java.util.List<AttackList> attackList; 
         private String requestId; 
 
         /**
          * <p>The peak QPS of the website.</p>
          */
-        public Builder attackList(java.util.List < AttackList> attackList) {
+        public Builder attackList(java.util.List<AttackList> attackList) {
             this.attackList = attackList;
             return this;
         }

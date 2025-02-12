@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainTopMethod")
-    private java.util.List < DomainTopMethod> domainTopMethod;
+    private java.util.List<DomainTopMethod> domainTopMethod;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
     /**
      * @return domainTopMethod
      */
-    public java.util.List < DomainTopMethod> getDomainTopMethod() {
+    public java.util.List<DomainTopMethod> getDomainTopMethod() {
         return this.domainTopMethod;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainTopMethod> domainTopMethod; 
+        private java.util.List<DomainTopMethod> domainTopMethod; 
         private String requestId; 
 
         /**
-         * DomainTopMethod.
+         * <p>The information about top HTTP methods.</p>
          */
-        public Builder domainTopMethod(java.util.List < DomainTopMethod> domainTopMethod) {
+        public Builder domainTopMethod(java.util.List<DomainTopMethod> domainTopMethod) {
             this.domainTopMethod = domainTopMethod;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
             private Long pv; 
 
             /**
-             * Domain.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -136,7 +147,10 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
             }
 
             /**
-             * HttpMethod.
+             * <p>The HTTP method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
@@ -144,7 +158,10 @@ public class DescribeDomainTopHttpMethodResponseBody extends TeaModel {
             }
 
             /**
-             * Pv.
+             * <p>The page views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22121</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;

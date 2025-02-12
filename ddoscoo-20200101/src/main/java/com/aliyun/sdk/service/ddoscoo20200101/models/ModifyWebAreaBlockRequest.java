@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ModifyWebAreaBlockRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < String > regions;
+    private java.util.List<String> regions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -67,7 +72,7 @@ public class ModifyWebAreaBlockRequest extends Request {
     /**
      * @return regions
      */
-    public java.util.List < String > getRegions() {
+    public java.util.List<String> getRegions() {
         return this.regions;
     }
 
@@ -81,7 +86,7 @@ public class ModifyWebAreaBlockRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyWebAreaBlockRequest, Builder> {
         private String regionId; 
         private String domain; 
-        private java.util.List < String > regions; 
+        private java.util.List<String> regions; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -130,7 +135,7 @@ public class ModifyWebAreaBlockRequest extends Request {
          * <strong>example:</strong>
          * <p>CN-SHANGHAI</p>
          */
-        public Builder regions(java.util.List < String > regions) {
+        public Builder regions(java.util.List<String> regions) {
             this.putQueryParameter("Regions", regions);
             this.regions = regions;
             return this;

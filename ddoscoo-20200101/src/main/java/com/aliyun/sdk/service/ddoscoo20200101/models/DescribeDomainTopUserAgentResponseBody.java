@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainTopUa")
-    private java.util.List < DomainTopUa> domainTopUa;
+    private java.util.List<DomainTopUa> domainTopUa;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
     /**
      * @return domainTopUa
      */
-    public java.util.List < DomainTopUa> getDomainTopUa() {
+    public java.util.List<DomainTopUa> getDomainTopUa() {
         return this.domainTopUa;
     }
 
@@ -46,19 +51,22 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainTopUa> domainTopUa; 
+        private java.util.List<DomainTopUa> domainTopUa; 
         private String requestId; 
 
         /**
-         * DomainTopUa.
+         * <p>The information about the user agents.</p>
          */
-        public Builder domainTopUa(java.util.List < DomainTopUa> domainTopUa) {
+        public Builder domainTopUa(java.util.List<DomainTopUa> domainTopUa) {
             this.domainTopUa = domainTopUa;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +136,10 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             private String userAgent; 
 
             /**
-             * Domain.
+             * <p>The domain name of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -136,7 +147,10 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Pv.
+             * <p>The page views.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22121</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;
@@ -144,7 +158,10 @@ public class DescribeDomainTopUserAgentResponseBody extends TeaModel {
             }
 
             /**
-             * UserAgent.
+             * <p>The Base64-encoded user agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvOTYuMC40NjY0LjExMCACYWZhcmkvNTM3LjM2</p>
              */
             public Builder userAgent(String userAgent) {
                 this.userAgent = userAgent;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBlackholeStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BlackholeStatus")
-    private java.util.List < BlackholeStatus> blackholeStatus;
+    private java.util.List<BlackholeStatus> blackholeStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
     /**
      * @return blackholeStatus
      */
-    public java.util.List < BlackholeStatus> getBlackholeStatus() {
+    public java.util.List<BlackholeStatus> getBlackholeStatus() {
         return this.blackholeStatus;
     }
 
@@ -46,13 +51,13 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BlackholeStatus> blackholeStatus; 
+        private java.util.List<BlackholeStatus> blackholeStatus; 
         private String requestId; 
 
         /**
          * <p>An array that consists of the blackhole filtering status of the instance.</p>
          */
-        public Builder blackholeStatus(java.util.List < BlackholeStatus> blackholeStatus) {
+        public Builder blackholeStatus(java.util.List<BlackholeStatus> blackholeStatus) {
             this.blackholeStatus = blackholeStatus;
             return this;
         }

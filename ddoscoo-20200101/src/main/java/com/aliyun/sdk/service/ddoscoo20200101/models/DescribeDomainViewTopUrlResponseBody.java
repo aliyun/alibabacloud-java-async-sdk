@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UrlList")
-    private java.util.List < UrlList> urlList;
+    private java.util.List<UrlList> urlList;
 
     private DescribeDomainViewTopUrlResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
     /**
      * @return urlList
      */
-    public java.util.List < UrlList> getUrlList() {
+    public java.util.List<UrlList> getUrlList() {
         return this.urlList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UrlList> urlList; 
+        private java.util.List<UrlList> urlList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
         /**
          * <p>An array consisting of the URLs that receive the most requests.</p>
          */
-        public Builder urlList(java.util.List < UrlList> urlList) {
+        public Builder urlList(java.util.List<UrlList> urlList) {
             this.urlList = urlList;
             return this;
         }

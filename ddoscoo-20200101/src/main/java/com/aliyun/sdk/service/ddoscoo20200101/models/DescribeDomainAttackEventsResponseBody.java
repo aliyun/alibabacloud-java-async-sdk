@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDomainAttackEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainAttackEvents")
-    private java.util.List < DomainAttackEvents> domainAttackEvents;
+    private java.util.List<DomainAttackEvents> domainAttackEvents;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
     /**
      * @return domainAttackEvents
      */
-    public java.util.List < DomainAttackEvents> getDomainAttackEvents() {
+    public java.util.List<DomainAttackEvents> getDomainAttackEvents() {
         return this.domainAttackEvents;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DomainAttackEvents> domainAttackEvents; 
+        private java.util.List<DomainAttackEvents> domainAttackEvents; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * <p>An array that consists of the details of the DDoS attack event.</p>
          */
-        public Builder domainAttackEvents(java.util.List < DomainAttackEvents> domainAttackEvents) {
+        public Builder domainAttackEvents(java.util.List<DomainAttackEvents> domainAttackEvents) {
             this.domainAttackEvents = domainAttackEvents;
             return this;
         }

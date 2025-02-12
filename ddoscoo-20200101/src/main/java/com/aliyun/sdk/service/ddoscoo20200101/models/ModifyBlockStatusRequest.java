@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ModifyBlockStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lines")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > lines;
+    private java.util.List<String> lines;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -81,7 +86,7 @@ public class ModifyBlockStatusRequest extends Request {
     /**
      * @return lines
      */
-    public java.util.List < String > getLines() {
+    public java.util.List<String> getLines() {
         return this.lines;
     }
 
@@ -96,7 +101,7 @@ public class ModifyBlockStatusRequest extends Request {
         private String regionId; 
         private Integer duration; 
         private String instanceId; 
-        private java.util.List < String > lines; 
+        private java.util.List<String> lines; 
         private String status; 
 
         private Builder() {
@@ -159,7 +164,7 @@ public class ModifyBlockStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>ct</p>
          */
-        public Builder lines(java.util.List < String > lines) {
+        public Builder lines(java.util.List<String> lines) {
             this.putQueryParameter("Lines", lines);
             this.lines = lines;
             return this;

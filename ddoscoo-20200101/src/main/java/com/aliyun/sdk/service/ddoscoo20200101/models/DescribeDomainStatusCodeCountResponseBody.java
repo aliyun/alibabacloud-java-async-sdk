@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,6 +38,12 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status405")
     private Long status405;
 
+    @com.aliyun.core.annotation.NameInMap("Status410")
+    private Long status410;
+
+    @com.aliyun.core.annotation.NameInMap("Status499")
+    private Long status499;
+
     @com.aliyun.core.annotation.NameInMap("Status4XX")
     private Long status4XX;
 
@@ -59,6 +70,8 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         this.status403 = builder.status403;
         this.status404 = builder.status404;
         this.status405 = builder.status405;
+        this.status410 = builder.status410;
+        this.status499 = builder.status499;
         this.status4XX = builder.status4XX;
         this.status501 = builder.status501;
         this.status502 = builder.status502;
@@ -125,6 +138,20 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
     }
 
     /**
+     * @return status410
+     */
+    public Long getStatus410() {
+        return this.status410;
+    }
+
+    /**
+     * @return status499
+     */
+    public Long getStatus499() {
+        return this.status499;
+    }
+
+    /**
      * @return status4XX
      */
     public Long getStatus4XX() {
@@ -174,6 +201,8 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
         private Long status403; 
         private Long status404; 
         private Long status405; 
+        private Long status410; 
+        private Long status499; 
         private Long status4XX; 
         private Long status501; 
         private Long status502; 
@@ -255,6 +284,22 @@ public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
          */
         public Builder status405(Long status405) {
             this.status405 = status405;
+            return this;
+        }
+
+        /**
+         * Status410.
+         */
+        public Builder status410(Long status410) {
+            this.status410 = status410;
+            return this;
+        }
+
+        /**
+         * Status499.
+         */
+        public Builder status499(Long status499) {
+            this.status499 = status499;
             return this;
         }
 
