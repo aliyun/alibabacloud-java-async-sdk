@@ -20,8 +20,12 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("WaitingRoomRuleId")
+    private Long waitingRoomRuleId;
+
     private CreateWaitingRoomRuleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.waitingRoomRuleId = builder.waitingRoomRuleId;
     }
 
     public static Builder builder() {
@@ -39,8 +43,16 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return waitingRoomRuleId
+     */
+    public Long getWaitingRoomRuleId() {
+        return this.waitingRoomRuleId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Long waitingRoomRuleId; 
 
         /**
          * <p>The request ID.</p>
@@ -50,6 +62,14 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * WaitingRoomRuleId.
+         */
+        public Builder waitingRoomRuleId(Long waitingRoomRuleId) {
+            this.waitingRoomRuleId = waitingRoomRuleId;
             return this;
         }
 

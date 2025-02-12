@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateWaitingRoomResponseBody} extends {@link TeaModel}
+ * {@link CreateSlrRoleForRealtimeLogResponseBody} extends {@link TeaModel}
  *
- * <p>CreateWaitingRoomResponseBody</p>
+ * <p>CreateSlrRoleForRealtimeLogResponseBody</p>
  */
-public class CreateWaitingRoomResponseBody extends TeaModel {
+public class CreateSlrRoleForRealtimeLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("WaitingRoomId")
-    private String waitingRoomId;
-
-    private CreateWaitingRoomResponseBody(Builder builder) {
+    private CreateSlrRoleForRealtimeLogResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.waitingRoomId = builder.waitingRoomId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateWaitingRoomResponseBody create() {
+    public static CreateSlrRoleForRealtimeLogResponseBody create() {
         return builder().build();
     }
 
@@ -43,38 +39,22 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return waitingRoomId
-     */
-    public String getWaitingRoomId() {
-        return this.waitingRoomId;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private String waitingRoomId; 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>85H66C7B-671A-4297-9187-2C4477247A74</p>
+         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * WaitingRoomId.
-         */
-        public Builder waitingRoomId(String waitingRoomId) {
-            this.waitingRoomId = waitingRoomId;
-            return this;
-        }
-
-        public CreateWaitingRoomResponseBody build() {
-            return new CreateWaitingRoomResponseBody(this);
+        public CreateSlrRoleForRealtimeLogResponseBody build() {
+            return new CreateSlrRoleForRealtimeLogResponseBody(this);
         } 
 
     } 

@@ -46,6 +46,10 @@ public class CreateCompressionRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SiteVersion")
     private Integer siteVersion;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zstd")
+    private String zstd;
+
     private CreateCompressionRuleRequest(Builder builder) {
         super(builder);
         this.brotli = builder.brotli;
@@ -55,6 +59,7 @@ public class CreateCompressionRuleRequest extends Request {
         this.ruleName = builder.ruleName;
         this.siteId = builder.siteId;
         this.siteVersion = builder.siteVersion;
+        this.zstd = builder.zstd;
     }
 
     public static Builder builder() {
@@ -119,6 +124,13 @@ public class CreateCompressionRuleRequest extends Request {
         return this.siteVersion;
     }
 
+    /**
+     * @return zstd
+     */
+    public String getZstd() {
+        return this.zstd;
+    }
+
     public static final class Builder extends Request.Builder<CreateCompressionRuleRequest, Builder> {
         private String brotli; 
         private String gzip; 
@@ -127,6 +139,7 @@ public class CreateCompressionRuleRequest extends Request {
         private String ruleName; 
         private Long siteId; 
         private Integer siteVersion; 
+        private String zstd; 
 
         private Builder() {
             super();
@@ -141,6 +154,7 @@ public class CreateCompressionRuleRequest extends Request {
             this.ruleName = request.ruleName;
             this.siteId = request.siteId;
             this.siteVersion = request.siteVersion;
+            this.zstd = request.zstd;
         } 
 
         /**
@@ -206,6 +220,15 @@ public class CreateCompressionRuleRequest extends Request {
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
             this.siteVersion = siteVersion;
+            return this;
+        }
+
+        /**
+         * Zstd.
+         */
+        public Builder zstd(String zstd) {
+            this.putQueryParameter("Zstd", zstd);
+            this.zstd = zstd;
             return this;
         }
 

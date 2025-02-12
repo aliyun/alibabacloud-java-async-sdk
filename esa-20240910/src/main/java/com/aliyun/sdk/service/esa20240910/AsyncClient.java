@@ -72,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BlockObjectResponse> blockObject(BlockObjectRequest request);
 
     /**
+     * @param request the request parameters of CheckAssumeSlrRole  CheckAssumeSlrRoleRequest
+     * @return CheckAssumeSlrRoleResponse
+     */
+    CompletableFuture<CheckAssumeSlrRoleResponse> checkAssumeSlrRole(CheckAssumeSlrRoleRequest request);
+
+    /**
      * @param request the request parameters of CheckSiteName  CheckSiteNameRequest
      * @return CheckSiteNameResponse
      */
@@ -293,6 +299,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSiteDeliveryTaskResponse
      */
     CompletableFuture<CreateSiteDeliveryTaskResponse> createSiteDeliveryTask(CreateSiteDeliveryTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateSlrRoleForRealtimeLog  CreateSlrRoleForRealtimeLogRequest
+     * @return CreateSlrRoleForRealtimeLogResponse
+     */
+    CompletableFuture<CreateSlrRoleForRealtimeLogResponse> createSlrRoleForRealtimeLog(CreateSlrRoleForRealtimeLogRequest request);
 
     /**
      * <b>description</b> :

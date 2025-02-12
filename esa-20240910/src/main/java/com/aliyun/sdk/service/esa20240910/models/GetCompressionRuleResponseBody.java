@@ -47,6 +47,9 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SiteVersion")
     private Integer siteVersion;
 
+    @com.aliyun.core.annotation.NameInMap("Zstd")
+    private String zstd;
+
     private GetCompressionRuleResponseBody(Builder builder) {
         this.brotli = builder.brotli;
         this.configId = builder.configId;
@@ -58,6 +61,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         this.ruleName = builder.ruleName;
         this.sequence = builder.sequence;
         this.siteVersion = builder.siteVersion;
+        this.zstd = builder.zstd;
     }
 
     public static Builder builder() {
@@ -138,6 +142,13 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         return this.siteVersion;
     }
 
+    /**
+     * @return zstd
+     */
+    public String getZstd() {
+        return this.zstd;
+    }
+
     public static final class Builder {
         private String brotli; 
         private Long configId; 
@@ -149,6 +160,7 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         private String ruleName; 
         private Integer sequence; 
         private Integer siteVersion; 
+        private String zstd; 
 
         /**
          * Brotli.
@@ -227,6 +239,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;
+            return this;
+        }
+
+        /**
+         * Zstd.
+         */
+        public Builder zstd(String zstd) {
+            this.zstd = zstd;
             return this;
         }
 

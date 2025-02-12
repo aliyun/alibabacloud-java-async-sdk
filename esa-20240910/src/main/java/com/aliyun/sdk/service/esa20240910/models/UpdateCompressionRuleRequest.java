@@ -47,6 +47,10 @@ public class UpdateCompressionRuleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zstd")
+    private String zstd;
+
     private UpdateCompressionRuleRequest(Builder builder) {
         super(builder);
         this.brotli = builder.brotli;
@@ -56,6 +60,7 @@ public class UpdateCompressionRuleRequest extends Request {
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
         this.siteId = builder.siteId;
+        this.zstd = builder.zstd;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class UpdateCompressionRuleRequest extends Request {
         return this.siteId;
     }
 
+    /**
+     * @return zstd
+     */
+    public String getZstd() {
+        return this.zstd;
+    }
+
     public static final class Builder extends Request.Builder<UpdateCompressionRuleRequest, Builder> {
         private String brotli; 
         private Long configId; 
@@ -128,6 +140,7 @@ public class UpdateCompressionRuleRequest extends Request {
         private String ruleEnable; 
         private String ruleName; 
         private Long siteId; 
+        private String zstd; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class UpdateCompressionRuleRequest extends Request {
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
             this.siteId = request.siteId;
+            this.zstd = request.zstd;
         } 
 
         /**
@@ -210,6 +224,15 @@ public class UpdateCompressionRuleRequest extends Request {
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
             this.siteId = siteId;
+            return this;
+        }
+
+        /**
+         * Zstd.
+         */
+        public Builder zstd(String zstd) {
+            this.putQueryParameter("Zstd", zstd);
+            this.zstd = zstd;
             return this;
         }
 

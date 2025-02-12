@@ -352,6 +352,9 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SubscribeType")
+        private String subscribeType;
+
         private InstanceInfo(Builder builder) {
             this.billingMode = builder.billingMode;
             this.botInstanceLevel = builder.botInstanceLevel;
@@ -377,6 +380,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             this.smartRoutingRequest = builder.smartRoutingRequest;
             this.staticRequest = builder.staticRequest;
             this.status = builder.status;
+            this.subscribeType = builder.subscribeType;
         }
 
         public static Builder builder() {
@@ -555,6 +559,13 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return subscribeType
+         */
+        public String getSubscribeType() {
+            return this.subscribeType;
+        }
+
         public static final class Builder {
             private String billingMode; 
             private String botInstanceLevel; 
@@ -580,6 +591,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             private String smartRoutingRequest; 
             private String staticRequest; 
             private String status; 
+            private String subscribeType; 
 
             /**
              * <p>The billing method. Valid values:</p>
@@ -818,6 +830,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SubscribeType.
+             */
+            public Builder subscribeType(String subscribeType) {
+                this.subscribeType = subscribeType;
                 return this;
             }
 

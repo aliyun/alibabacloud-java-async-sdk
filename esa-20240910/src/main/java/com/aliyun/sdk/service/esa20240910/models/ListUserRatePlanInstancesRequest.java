@@ -49,6 +49,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeType")
+    private String subscribeType;
+
     private ListUserRatePlanInstancesRequest(Builder builder) {
         super(builder);
         this.checkRemainingSiteQuota = builder.checkRemainingSiteQuota;
@@ -59,6 +63,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
         this.status = builder.status;
+        this.subscribeType = builder.subscribeType;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return subscribeType
+     */
+    public String getSubscribeType() {
+        return this.subscribeType;
+    }
+
     public static final class Builder extends Request.Builder<ListUserRatePlanInstancesRequest, Builder> {
         private String checkRemainingSiteQuota; 
         private String instanceId; 
@@ -139,6 +151,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         private String sortBy; 
         private String sortOrder; 
         private String status; 
+        private String subscribeType; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
             this.status = request.status;
+            this.subscribeType = request.subscribeType;
         } 
 
         /**
@@ -264,6 +278,15 @@ public class ListUserRatePlanInstancesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SubscribeType.
+         */
+        public Builder subscribeType(String subscribeType) {
+            this.putQueryParameter("SubscribeType", subscribeType);
+            this.subscribeType = subscribeType;
             return this;
         }
 
