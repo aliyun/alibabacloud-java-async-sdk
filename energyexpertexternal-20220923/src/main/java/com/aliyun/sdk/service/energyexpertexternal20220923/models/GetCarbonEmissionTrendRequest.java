@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("yearList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Integer > yearList;
+    private java.util.List<Integer> yearList;
 
     private GetCarbonEmissionTrendRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
     /**
      * @return yearList
      */
-    public java.util.List < Integer > getYearList() {
+    public java.util.List<Integer> getYearList() {
         return this.yearList;
     }
 
@@ -97,7 +102,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
         private String moduleCode; 
         private Integer moduleType; 
         private Integer trendType; 
-        private java.util.List < Integer > yearList; 
+        private java.util.List<Integer> yearList; 
 
         private Builder() {
             super();
@@ -166,7 +171,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
          * <p>The list of inventory year.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder yearList(java.util.List < Integer > yearList) {
+        public Builder yearList(java.util.List<Integer> yearList) {
             this.putBodyParameter("yearList", yearList);
             this.yearList = yearList;
             return this;

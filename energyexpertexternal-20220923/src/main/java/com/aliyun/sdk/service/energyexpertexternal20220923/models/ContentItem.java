@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ContentItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("extInfo")
-    private java.util.List < ExtInfo> extInfo;
+    private java.util.List<ExtInfo> extInfo;
 
     @com.aliyun.core.annotation.NameInMap("score")
     private Double score;
@@ -42,7 +47,7 @@ public class ContentItem extends TeaModel {
     /**
      * @return extInfo
      */
-    public java.util.List < ExtInfo> getExtInfo() {
+    public java.util.List<ExtInfo> getExtInfo() {
         return this.extInfo;
     }
 
@@ -68,7 +73,7 @@ public class ContentItem extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExtInfo> extInfo; 
+        private java.util.List<ExtInfo> extInfo; 
         private Double score; 
         private String text; 
         private String type; 
@@ -76,7 +81,7 @@ public class ContentItem extends TeaModel {
         /**
          * extInfo.
          */
-        public Builder extInfo(java.util.List < ExtInfo> extInfo) {
+        public Builder extInfo(java.util.List<ExtInfo> extInfo) {
             this.extInfo = extInfo;
             return this;
         }
@@ -195,10 +200,10 @@ public class ContentItem extends TeaModel {
         private Long level;
 
         @com.aliyun.core.annotation.NameInMap("pageNum")
-        private java.util.List < Long > pageNum;
+        private java.util.List<Long> pageNum;
 
         @com.aliyun.core.annotation.NameInMap("pos")
-        private java.util.List < Pos> pos;
+        private java.util.List<Pos> pos;
 
         @com.aliyun.core.annotation.NameInMap("subType")
         private String subType;
@@ -256,14 +261,14 @@ public class ContentItem extends TeaModel {
         /**
          * @return pageNum
          */
-        public java.util.List < Long > getPageNum() {
+        public java.util.List<Long> getPageNum() {
             return this.pageNum;
         }
 
         /**
          * @return pos
          */
-        public java.util.List < Pos> getPos() {
+        public java.util.List<Pos> getPos() {
             return this.pos;
         }
 
@@ -299,8 +304,8 @@ public class ContentItem extends TeaModel {
             private String alignment; 
             private Long index; 
             private Long level; 
-            private java.util.List < Long > pageNum; 
-            private java.util.List < Pos> pos; 
+            private java.util.List<Long> pageNum; 
+            private java.util.List<Pos> pos; 
             private String subType; 
             private String text; 
             private String type; 
@@ -333,7 +338,7 @@ public class ContentItem extends TeaModel {
             /**
              * pageNum.
              */
-            public Builder pageNum(java.util.List < Long > pageNum) {
+            public Builder pageNum(java.util.List<Long> pageNum) {
                 this.pageNum = pageNum;
                 return this;
             }
@@ -341,7 +346,7 @@ public class ContentItem extends TeaModel {
             /**
              * pos.
              */
-            public Builder pos(java.util.List < Pos> pos) {
+            public Builder pos(java.util.List<Pos> pos) {
                 this.pos = pos;
                 return this;
             }

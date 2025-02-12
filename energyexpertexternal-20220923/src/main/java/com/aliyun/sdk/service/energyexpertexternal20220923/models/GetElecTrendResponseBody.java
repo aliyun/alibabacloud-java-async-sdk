@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1582,25 +1587,25 @@ public class GetElecTrendResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("light")
-        private java.util.List < Light> light;
+        private java.util.List<Light> light;
 
         @com.aliyun.core.annotation.NameInMap("nuclear")
-        private java.util.List < Nuclear> nuclear;
+        private java.util.List<Nuclear> nuclear;
 
         @com.aliyun.core.annotation.NameInMap("renewing")
-        private java.util.List < Renewing> renewing;
+        private java.util.List<Renewing> renewing;
 
         @com.aliyun.core.annotation.NameInMap("urban")
-        private java.util.List < Urban> urban;
+        private java.util.List<Urban> urban;
 
         @com.aliyun.core.annotation.NameInMap("water")
-        private java.util.List < Water> water;
+        private java.util.List<Water> water;
 
         @com.aliyun.core.annotation.NameInMap("wind")
-        private java.util.List < Wind> wind;
+        private java.util.List<Wind> wind;
 
         @com.aliyun.core.annotation.NameInMap("zero")
-        private java.util.List < Zero> zero;
+        private java.util.List<Zero> zero;
 
         private Data(Builder builder) {
             this.light = builder.light;
@@ -1623,65 +1628,65 @@ public class GetElecTrendResponseBody extends TeaModel {
         /**
          * @return light
          */
-        public java.util.List < Light> getLight() {
+        public java.util.List<Light> getLight() {
             return this.light;
         }
 
         /**
          * @return nuclear
          */
-        public java.util.List < Nuclear> getNuclear() {
+        public java.util.List<Nuclear> getNuclear() {
             return this.nuclear;
         }
 
         /**
          * @return renewing
          */
-        public java.util.List < Renewing> getRenewing() {
+        public java.util.List<Renewing> getRenewing() {
             return this.renewing;
         }
 
         /**
          * @return urban
          */
-        public java.util.List < Urban> getUrban() {
+        public java.util.List<Urban> getUrban() {
             return this.urban;
         }
 
         /**
          * @return water
          */
-        public java.util.List < Water> getWater() {
+        public java.util.List<Water> getWater() {
             return this.water;
         }
 
         /**
          * @return wind
          */
-        public java.util.List < Wind> getWind() {
+        public java.util.List<Wind> getWind() {
             return this.wind;
         }
 
         /**
          * @return zero
          */
-        public java.util.List < Zero> getZero() {
+        public java.util.List<Zero> getZero() {
             return this.zero;
         }
 
         public static final class Builder {
-            private java.util.List < Light> light; 
-            private java.util.List < Nuclear> nuclear; 
-            private java.util.List < Renewing> renewing; 
-            private java.util.List < Urban> urban; 
-            private java.util.List < Water> water; 
-            private java.util.List < Wind> wind; 
-            private java.util.List < Zero> zero; 
+            private java.util.List<Light> light; 
+            private java.util.List<Nuclear> nuclear; 
+            private java.util.List<Renewing> renewing; 
+            private java.util.List<Urban> urban; 
+            private java.util.List<Water> water; 
+            private java.util.List<Wind> wind; 
+            private java.util.List<Zero> zero; 
 
             /**
              * <p>Photoelectricity monthly electricity consumption and carbon emissions and other data.</p>
              */
-            public Builder light(java.util.List < Light> light) {
+            public Builder light(java.util.List<Light> light) {
                 this.light = light;
                 return this;
             }
@@ -1689,7 +1694,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             /**
              * <p>Monthly electricity consumption and carbon emissions data for nuclear power</p>
              */
-            public Builder nuclear(java.util.List < Nuclear> nuclear) {
+            public Builder nuclear(java.util.List<Nuclear> nuclear) {
                 this.nuclear = nuclear;
                 return this;
             }
@@ -1697,7 +1702,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             /**
              * <p>Monthly data on renewable electricity consumption and carbon emissions</p>
              */
-            public Builder renewing(java.util.List < Renewing> renewing) {
+            public Builder renewing(java.util.List<Renewing> renewing) {
                 this.renewing = renewing;
                 return this;
             }
@@ -1705,7 +1710,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             /**
              * <p>Data such as monthly electricity consumption and carbon emissions from the mains.</p>
              */
-            public Builder urban(java.util.List < Urban> urban) {
+            public Builder urban(java.util.List<Urban> urban) {
                 this.urban = urban;
                 return this;
             }
@@ -1713,7 +1718,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             /**
              * <p>Monthly data on electricity consumption and carbon emissions for hydropower.</p>
              */
-            public Builder water(java.util.List < Water> water) {
+            public Builder water(java.util.List<Water> water) {
                 this.water = water;
                 return this;
             }
@@ -1721,7 +1726,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             /**
              * <p>Monthly wind power consumption and carbon emission data</p>
              */
-            public Builder wind(java.util.List < Wind> wind) {
+            public Builder wind(java.util.List<Wind> wind) {
                 this.wind = wind;
                 return this;
             }
@@ -1729,7 +1734,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             /**
              * <p>Zero electricity monthly electricity consumption and carbon emissions and other data.</p>
              */
-            public Builder zero(java.util.List < Zero> zero) {
+            public Builder zero(java.util.List<Zero> zero) {
                 this.zero = zero;
                 return this;
             }

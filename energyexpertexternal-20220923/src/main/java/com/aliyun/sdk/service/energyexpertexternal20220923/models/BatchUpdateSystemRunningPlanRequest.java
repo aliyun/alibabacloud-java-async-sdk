@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,10 +31,12 @@ public class BatchUpdateSystemRunningPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("factoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String factoryId;
 
     @com.aliyun.core.annotation.Body
@@ -54,10 +61,12 @@ public class BatchUpdateSystemRunningPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("systemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String systemId;
 
     @com.aliyun.core.annotation.Body
@@ -263,7 +272,10 @@ public class BatchUpdateSystemRunningPlanRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-30</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -272,7 +284,10 @@ public class BatchUpdateSystemRunningPlanRequest extends Request {
         }
 
         /**
-         * factoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder factoryId(String factoryId) {
             this.putBodyParameter("factoryId", factoryId);
@@ -326,7 +341,10 @@ public class BatchUpdateSystemRunningPlanRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-21</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -335,7 +353,10 @@ public class BatchUpdateSystemRunningPlanRequest extends Request {
         }
 
         /**
-         * systemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system1</p>
          */
         public Builder systemId(String systemId) {
             this.putBodyParameter("systemId", systemId);

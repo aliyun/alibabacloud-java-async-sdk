@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
@@ -53,7 +58,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         /**
          * <p>data</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -227,7 +232,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         private String aliyunPk;
 
         @com.aliyun.core.annotation.NameInMap("factoryList")
-        private java.util.List < FactoryList> factoryList;
+        private java.util.List<FactoryList> factoryList;
 
         @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
@@ -260,7 +265,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         /**
          * @return factoryList
          */
-        public java.util.List < FactoryList> getFactoryList() {
+        public java.util.List<FactoryList> getFactoryList() {
             return this.factoryList;
         }
 
@@ -280,7 +285,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliyunPk; 
-            private java.util.List < FactoryList> factoryList; 
+            private java.util.List<FactoryList> factoryList; 
             private String organizationId; 
             private String organizationName; 
 
@@ -298,7 +303,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             /**
              * <p>The sites.</p>
              */
-            public Builder factoryList(java.util.List < FactoryList> factoryList) {
+            public Builder factoryList(java.util.List<FactoryList> factoryList) {
                 this.factoryList = factoryList;
                 return this;
             }

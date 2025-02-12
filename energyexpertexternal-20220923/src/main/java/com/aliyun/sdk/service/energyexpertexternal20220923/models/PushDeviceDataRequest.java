@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class PushDeviceDataRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("devices")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Devices> devices;
+    private java.util.List<Devices> devices;
 
     private PushDeviceDataRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class PushDeviceDataRequest extends Request {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
     public static final class Builder extends Request.Builder<PushDeviceDataRequest, Builder> {
         private String deviceType; 
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class PushDeviceDataRequest extends Request {
          * <p>List of devices to which data is pushed.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.putBodyParameter("devices", devices);
             this.devices = devices;
             return this;
@@ -108,7 +113,7 @@ public class PushDeviceDataRequest extends Request {
     public static class Devices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.Map < String, ? > data;
+        private java.util.Map<String, ?> data;
 
         @com.aliyun.core.annotation.NameInMap("deviceId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -135,7 +140,7 @@ public class PushDeviceDataRequest extends Request {
         /**
          * @return data
          */
-        public java.util.Map < String, ? > getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -154,7 +159,7 @@ public class PushDeviceDataRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > data; 
+            private java.util.Map<String, ?> data; 
             private String deviceId; 
             private String recordTime; 
 
@@ -188,7 +193,7 @@ public class PushDeviceDataRequest extends Request {
              *             &quot;VdisPer&quot;: &quot;120.0&quot;
              *         }</p>
              */
-            public Builder data(java.util.Map < String, ? > data) {
+            public Builder data(java.util.Map<String, ?> data) {
                 this.data = data;
                 return this;
             }

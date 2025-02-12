@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -149,10 +154,10 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         private Confidence confidence;
 
         @com.aliyun.core.annotation.NameInMap("key")
-        private java.util.List < ContentItem > key;
+        private java.util.List<ContentItem> key;
 
         @com.aliyun.core.annotation.NameInMap("value")
-        private java.util.List < ContentItem > value;
+        private java.util.List<ContentItem> value;
 
         private Context(Builder builder) {
             this.confidence = builder.confidence;
@@ -178,21 +183,21 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         /**
          * @return key
          */
-        public java.util.List < ContentItem > getKey() {
+        public java.util.List<ContentItem> getKey() {
             return this.key;
         }
 
         /**
          * @return value
          */
-        public java.util.List < ContentItem > getValue() {
+        public java.util.List<ContentItem> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private Confidence confidence; 
-            private java.util.List < ContentItem > key; 
-            private java.util.List < ContentItem > value; 
+            private java.util.List<ContentItem> key; 
+            private java.util.List<ContentItem> value; 
 
             /**
              * confidence.
@@ -205,7 +210,7 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             /**
              * key.
              */
-            public Builder key(java.util.List < ContentItem > key) {
+            public Builder key(java.util.List<ContentItem> key) {
                 this.key = key;
                 return this;
             }
@@ -213,7 +218,7 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
             /**
              * value.
              */
-            public Builder value(java.util.List < ContentItem > value) {
+            public Builder value(java.util.List<ContentItem> value) {
                 this.value = value;
                 return this;
             }
@@ -320,7 +325,7 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kvListInfo")
-        private java.util.List < KvListInfo> kvListInfo;
+        private java.util.List<KvListInfo> kvListInfo;
 
         private Data(Builder builder) {
             this.kvListInfo = builder.kvListInfo;
@@ -337,17 +342,17 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         /**
          * @return kvListInfo
          */
-        public java.util.List < KvListInfo> getKvListInfo() {
+        public java.util.List<KvListInfo> getKvListInfo() {
             return this.kvListInfo;
         }
 
         public static final class Builder {
-            private java.util.List < KvListInfo> kvListInfo; 
+            private java.util.List<KvListInfo> kvListInfo; 
 
             /**
              * kvListInfo.
              */
-            public Builder kvListInfo(java.util.List < KvListInfo> kvListInfo) {
+            public Builder kvListInfo(java.util.List<KvListInfo> kvListInfo) {
                 this.kvListInfo = kvListInfo;
                 return this;
             }

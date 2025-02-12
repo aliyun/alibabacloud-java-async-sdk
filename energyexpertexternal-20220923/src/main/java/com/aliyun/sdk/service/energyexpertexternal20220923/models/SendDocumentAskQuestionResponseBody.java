@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
         private String answer;
 
         @com.aliyun.core.annotation.NameInMap("document")
-        private java.util.List < String > document;
+        private java.util.List<String> document;
 
         private Data(Builder builder) {
             this.answer = builder.answer;
@@ -107,13 +112,13 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
         /**
          * @return document
          */
-        public java.util.List < String > getDocument() {
+        public java.util.List<String> getDocument() {
             return this.document;
         }
 
         public static final class Builder {
             private String answer; 
-            private java.util.List < String > document; 
+            private java.util.List<String> document; 
 
             /**
              * answer.
@@ -126,7 +131,7 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
             /**
              * document.
              */
-            public Builder document(java.util.List < String > document) {
+            public Builder document(java.util.List<String> document) {
                 this.document = document;
                 return this;
             }

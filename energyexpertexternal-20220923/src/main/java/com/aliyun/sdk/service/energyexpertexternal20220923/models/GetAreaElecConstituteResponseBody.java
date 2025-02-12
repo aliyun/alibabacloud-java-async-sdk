@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -105,25 +110,25 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("light")
-        private java.util.List < CarbonEmissionElecSummaryItem > light;
+        private java.util.List<CarbonEmissionElecSummaryItem> light;
 
         @com.aliyun.core.annotation.NameInMap("nuclear")
-        private java.util.List < CarbonEmissionElecSummaryItem > nuclear;
+        private java.util.List<CarbonEmissionElecSummaryItem> nuclear;
 
         @com.aliyun.core.annotation.NameInMap("renewing")
-        private java.util.List < CarbonEmissionElecSummaryItem > renewing;
+        private java.util.List<CarbonEmissionElecSummaryItem> renewing;
 
         @com.aliyun.core.annotation.NameInMap("urban")
-        private java.util.List < CarbonEmissionElecSummaryItem > urban;
+        private java.util.List<CarbonEmissionElecSummaryItem> urban;
 
         @com.aliyun.core.annotation.NameInMap("water")
-        private java.util.List < CarbonEmissionElecSummaryItem > water;
+        private java.util.List<CarbonEmissionElecSummaryItem> water;
 
         @com.aliyun.core.annotation.NameInMap("wind")
-        private java.util.List < CarbonEmissionElecSummaryItem > wind;
+        private java.util.List<CarbonEmissionElecSummaryItem> wind;
 
         @com.aliyun.core.annotation.NameInMap("zero")
-        private java.util.List < CarbonEmissionElecSummaryItem > zero;
+        private java.util.List<CarbonEmissionElecSummaryItem> zero;
 
         private Data(Builder builder) {
             this.light = builder.light;
@@ -146,65 +151,65 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
         /**
          * @return light
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getLight() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getLight() {
             return this.light;
         }
 
         /**
          * @return nuclear
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getNuclear() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getNuclear() {
             return this.nuclear;
         }
 
         /**
          * @return renewing
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getRenewing() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getRenewing() {
             return this.renewing;
         }
 
         /**
          * @return urban
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getUrban() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getUrban() {
             return this.urban;
         }
 
         /**
          * @return water
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getWater() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getWater() {
             return this.water;
         }
 
         /**
          * @return wind
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getWind() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getWind() {
             return this.wind;
         }
 
         /**
          * @return zero
          */
-        public java.util.List < CarbonEmissionElecSummaryItem > getZero() {
+        public java.util.List<CarbonEmissionElecSummaryItem> getZero() {
             return this.zero;
         }
 
         public static final class Builder {
-            private java.util.List < CarbonEmissionElecSummaryItem > light; 
-            private java.util.List < CarbonEmissionElecSummaryItem > nuclear; 
-            private java.util.List < CarbonEmissionElecSummaryItem > renewing; 
-            private java.util.List < CarbonEmissionElecSummaryItem > urban; 
-            private java.util.List < CarbonEmissionElecSummaryItem > water; 
-            private java.util.List < CarbonEmissionElecSummaryItem > wind; 
-            private java.util.List < CarbonEmissionElecSummaryItem > zero; 
+            private java.util.List<CarbonEmissionElecSummaryItem> light; 
+            private java.util.List<CarbonEmissionElecSummaryItem> nuclear; 
+            private java.util.List<CarbonEmissionElecSummaryItem> renewing; 
+            private java.util.List<CarbonEmissionElecSummaryItem> urban; 
+            private java.util.List<CarbonEmissionElecSummaryItem> water; 
+            private java.util.List<CarbonEmissionElecSummaryItem> wind; 
+            private java.util.List<CarbonEmissionElecSummaryItem> zero; 
 
             /**
              * <p>Photoelectric power consumption and carbon emission data of each enterprise.</p>
              */
-            public Builder light(java.util.List < CarbonEmissionElecSummaryItem > light) {
+            public Builder light(java.util.List<CarbonEmissionElecSummaryItem> light) {
                 this.light = light;
                 return this;
             }
@@ -212,7 +217,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             /**
              * <p>Data on nuclear power consumption and carbon emissions at each enterprise.</p>
              */
-            public Builder nuclear(java.util.List < CarbonEmissionElecSummaryItem > nuclear) {
+            public Builder nuclear(java.util.List<CarbonEmissionElecSummaryItem> nuclear) {
                 this.nuclear = nuclear;
                 return this;
             }
@@ -220,7 +225,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             /**
              * <p>Data on renewable electricity consumption and carbon emissions at each enterprise.</p>
              */
-            public Builder renewing(java.util.List < CarbonEmissionElecSummaryItem > renewing) {
+            public Builder renewing(java.util.List<CarbonEmissionElecSummaryItem> renewing) {
                 this.renewing = renewing;
                 return this;
             }
@@ -228,7 +233,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             /**
              * <p>Data on mains electricity consumption and carbon emission of each enterprise.</p>
              */
-            public Builder urban(java.util.List < CarbonEmissionElecSummaryItem > urban) {
+            public Builder urban(java.util.List<CarbonEmissionElecSummaryItem> urban) {
                 this.urban = urban;
                 return this;
             }
@@ -236,7 +241,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             /**
              * <p>Hydropower consumption and carbon emission data of each enterprise.</p>
              */
-            public Builder water(java.util.List < CarbonEmissionElecSummaryItem > water) {
+            public Builder water(java.util.List<CarbonEmissionElecSummaryItem> water) {
                 this.water = water;
                 return this;
             }
@@ -244,7 +249,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             /**
              * <p>Wind power consumption and carbon emission data of each enterprise.</p>
              */
-            public Builder wind(java.util.List < CarbonEmissionElecSummaryItem > wind) {
+            public Builder wind(java.util.List<CarbonEmissionElecSummaryItem> wind) {
                 this.wind = wind;
                 return this;
             }
@@ -252,7 +257,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             /**
              * <p>Data of zero electricity consumption and carbon emission of each enterprise.</p>
              */
-            public Builder zero(java.util.List < CarbonEmissionElecSummaryItem > zero) {
+            public Builder zero(java.util.List<CarbonEmissionElecSummaryItem> zero) {
                 this.zero = zero;
                 return this;
             }

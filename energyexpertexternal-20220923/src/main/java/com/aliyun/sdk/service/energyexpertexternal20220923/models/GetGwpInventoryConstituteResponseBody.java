@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,13 +87,13 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("byResourceType")
-        private java.util.List < GwpInventoryConstitute > byResourceType;
+        private java.util.List<GwpInventoryConstitute> byResourceType;
 
         @com.aliyun.core.annotation.NameInMap("carbonEmission")
         private Double carbonEmission;
 
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < GwpInventoryConstitute > items;
+        private java.util.List<GwpInventoryConstitute> items;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -115,7 +120,7 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
         /**
          * @return byResourceType
          */
-        public java.util.List < GwpInventoryConstitute > getByResourceType() {
+        public java.util.List<GwpInventoryConstitute> getByResourceType() {
             return this.byResourceType;
         }
 
@@ -129,7 +134,7 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < GwpInventoryConstitute > getItems() {
+        public java.util.List<GwpInventoryConstitute> getItems() {
             return this.items;
         }
 
@@ -148,16 +153,16 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < GwpInventoryConstitute > byResourceType; 
+            private java.util.List<GwpInventoryConstitute> byResourceType; 
             private Double carbonEmission; 
-            private java.util.List < GwpInventoryConstitute > items; 
+            private java.util.List<GwpInventoryConstitute> items; 
             private String name; 
             private String unit; 
 
             /**
              * <p>Aggregated by resource type of an inventory.</p>
              */
-            public Builder byResourceType(java.util.List < GwpInventoryConstitute > byResourceType) {
+            public Builder byResourceType(java.util.List<GwpInventoryConstitute> byResourceType) {
                 this.byResourceType = byResourceType;
                 return this;
             }
@@ -176,7 +181,7 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             /**
              * <p>Organized by hierarchy from high to low, according to the flow-&gt; process-&gt; inventory hierarchy.</p>
              */
-            public Builder items(java.util.List < GwpInventoryConstitute > items) {
+            public Builder items(java.util.List<GwpInventoryConstitute> items) {
                 this.items = items;
                 return this;
             }

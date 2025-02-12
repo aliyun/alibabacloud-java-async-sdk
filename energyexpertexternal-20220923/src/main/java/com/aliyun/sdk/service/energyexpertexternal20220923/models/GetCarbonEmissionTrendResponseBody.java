@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
      */
     public static class ActualEmissionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("year")
         private String year;
@@ -199,7 +204,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -211,13 +216,13 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private String year; 
 
             /**
              * <p>Data item list.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -344,7 +349,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
      */
     public static class TargetEmissionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < TargetEmissionListItems> items;
+        private java.util.List<TargetEmissionListItems> items;
 
         @com.aliyun.core.annotation.NameInMap("year")
         private String year;
@@ -365,7 +370,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < TargetEmissionListItems> getItems() {
+        public java.util.List<TargetEmissionListItems> getItems() {
             return this.items;
         }
 
@@ -377,13 +382,13 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TargetEmissionListItems> items; 
+            private java.util.List<TargetEmissionListItems> items; 
             private String year; 
 
             /**
              * <p>Data item list.</p>
              */
-            public Builder items(java.util.List < TargetEmissionListItems> items) {
+            public Builder items(java.util.List<TargetEmissionListItems> items) {
                 this.items = items;
                 return this;
             }
@@ -414,10 +419,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actualEmissionList")
-        private java.util.List < ActualEmissionList> actualEmissionList;
+        private java.util.List<ActualEmissionList> actualEmissionList;
 
         @com.aliyun.core.annotation.NameInMap("targetEmissionList")
-        private java.util.List < TargetEmissionList> targetEmissionList;
+        private java.util.List<TargetEmissionList> targetEmissionList;
 
         private Data(Builder builder) {
             this.actualEmissionList = builder.actualEmissionList;
@@ -435,25 +440,25 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         /**
          * @return actualEmissionList
          */
-        public java.util.List < ActualEmissionList> getActualEmissionList() {
+        public java.util.List<ActualEmissionList> getActualEmissionList() {
             return this.actualEmissionList;
         }
 
         /**
          * @return targetEmissionList
          */
-        public java.util.List < TargetEmissionList> getTargetEmissionList() {
+        public java.util.List<TargetEmissionList> getTargetEmissionList() {
             return this.targetEmissionList;
         }
 
         public static final class Builder {
-            private java.util.List < ActualEmissionList> actualEmissionList; 
-            private java.util.List < TargetEmissionList> targetEmissionList; 
+            private java.util.List<ActualEmissionList> actualEmissionList; 
+            private java.util.List<TargetEmissionList> targetEmissionList; 
 
             /**
              * <p>Actual emission list.</p>
              */
-            public Builder actualEmissionList(java.util.List < ActualEmissionList> actualEmissionList) {
+            public Builder actualEmissionList(java.util.List<ActualEmissionList> actualEmissionList) {
                 this.actualEmissionList = actualEmissionList;
                 return this;
             }
@@ -461,7 +466,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             /**
              * <p>Target Emission List.</p>
              */
-            public Builder targetEmissionList(java.util.List < TargetEmissionList> targetEmissionList) {
+            public Builder targetEmissionList(java.util.List<TargetEmissionList> targetEmissionList) {
                 this.targetEmissionList = targetEmissionList;
                 return this;
             }

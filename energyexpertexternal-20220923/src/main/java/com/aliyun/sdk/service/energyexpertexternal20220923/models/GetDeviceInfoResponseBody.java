@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -325,7 +330,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         private String firstTypeName;
 
         @com.aliyun.core.annotation.NameInMap("recordList")
-        private java.util.List < RecordList> recordList;
+        private java.util.List<RecordList> recordList;
 
         @com.aliyun.core.annotation.NameInMap("secondTypeName")
         private String secondTypeName;
@@ -370,7 +375,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         /**
          * @return recordList
          */
-        public java.util.List < RecordList> getRecordList() {
+        public java.util.List<RecordList> getRecordList() {
             return this.recordList;
         }
 
@@ -385,7 +390,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             private String deviceId; 
             private String deviceName; 
             private String firstTypeName; 
-            private java.util.List < RecordList> recordList; 
+            private java.util.List<RecordList> recordList; 
             private String secondTypeName; 
 
             /**
@@ -424,7 +429,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             /**
              * <p>The device parameters.</p>
              */
-            public Builder recordList(java.util.List < RecordList> recordList) {
+            public Builder recordList(java.util.List<RecordList> recordList) {
                 this.recordList = recordList;
                 return this;
             }

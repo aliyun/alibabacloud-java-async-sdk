@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ConstituteItem extends TeaModel {
     private String enterpriseName;
 
     @com.aliyun.core.annotation.NameInMap("envGasEmissions")
-    private java.util.List < EnvGasEmissions> envGasEmissions;
+    private java.util.List<EnvGasEmissions> envGasEmissions;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -43,7 +48,7 @@ public class ConstituteItem extends TeaModel {
     private Double rawData;
 
     @com.aliyun.core.annotation.NameInMap("subConstituteItems")
-    private java.util.List < ConstituteItem > subConstituteItems;
+    private java.util.List<ConstituteItem> subConstituteItems;
 
     private ConstituteItem(Builder builder) {
         this.carbonEmissionData = builder.carbonEmissionData;
@@ -105,7 +110,7 @@ public class ConstituteItem extends TeaModel {
     /**
      * @return envGasEmissions
      */
-    public java.util.List < EnvGasEmissions> getEnvGasEmissions() {
+    public java.util.List<EnvGasEmissions> getEnvGasEmissions() {
         return this.envGasEmissions;
     }
 
@@ -140,7 +145,7 @@ public class ConstituteItem extends TeaModel {
     /**
      * @return subConstituteItems
      */
-    public java.util.List < ConstituteItem > getSubConstituteItems() {
+    public java.util.List<ConstituteItem> getSubConstituteItems() {
         return this.subConstituteItems;
     }
 
@@ -150,12 +155,12 @@ public class ConstituteItem extends TeaModel {
         private String emissionSource; 
         private String emissionSourceKey; 
         private String enterpriseName; 
-        private java.util.List < EnvGasEmissions> envGasEmissions; 
+        private java.util.List<EnvGasEmissions> envGasEmissions; 
         private String name; 
         private String nameKey; 
         private Double ratio; 
         private Double rawData; 
-        private java.util.List < ConstituteItem > subConstituteItems; 
+        private java.util.List<ConstituteItem> subConstituteItems; 
 
         /**
          * carbonEmissionData.
@@ -200,7 +205,7 @@ public class ConstituteItem extends TeaModel {
         /**
          * envGasEmissions.
          */
-        public Builder envGasEmissions(java.util.List < EnvGasEmissions> envGasEmissions) {
+        public Builder envGasEmissions(java.util.List<EnvGasEmissions> envGasEmissions) {
             this.envGasEmissions = envGasEmissions;
             return this;
         }
@@ -240,7 +245,7 @@ public class ConstituteItem extends TeaModel {
         /**
          * subConstituteItems.
          */
-        public Builder subConstituteItems(java.util.List < ConstituteItem > subConstituteItems) {
+        public Builder subConstituteItems(java.util.List<ConstituteItem> subConstituteItems) {
             this.subConstituteItems = subConstituteItems;
             return this;
         }

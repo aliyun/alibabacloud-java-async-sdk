@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -459,7 +464,7 @@ public class GetDeviceListResponseBody extends TeaModel {
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("deviceList")
-        private java.util.List < DeviceList> deviceList;
+        private java.util.List<DeviceList> deviceList;
 
         @com.aliyun.core.annotation.NameInMap("factoryId")
         private String factoryId;
@@ -496,7 +501,7 @@ public class GetDeviceListResponseBody extends TeaModel {
         /**
          * @return deviceList
          */
-        public java.util.List < DeviceList> getDeviceList() {
+        public java.util.List<DeviceList> getDeviceList() {
             return this.deviceList;
         }
 
@@ -523,7 +528,7 @@ public class GetDeviceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.List < DeviceList> deviceList; 
+            private java.util.List<DeviceList> deviceList; 
             private String factoryId; 
             private Integer httpCode; 
             private Boolean success; 
@@ -542,7 +547,7 @@ public class GetDeviceListResponseBody extends TeaModel {
             /**
              * <p>The devices.</p>
              */
-            public Builder deviceList(java.util.List < DeviceList> deviceList) {
+            public Builder deviceList(java.util.List<DeviceList> deviceList) {
                 this.deviceList = deviceList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,6 +35,7 @@ public class SetRunningPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("factoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String factoryId;
 
     @com.aliyun.core.annotation.Body
@@ -66,6 +72,7 @@ public class SetRunningPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("systemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String systemId;
 
     @com.aliyun.core.annotation.Body
@@ -300,7 +307,10 @@ public class SetRunningPlanRequest extends Request {
         }
 
         /**
-         * factoryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder factoryId(String factoryId) {
             this.putBodyParameter("factoryId", factoryId);
@@ -381,7 +391,10 @@ public class SetRunningPlanRequest extends Request {
         }
 
         /**
-         * systemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system1</p>
          */
         public Builder systemId(String systemId) {
             this.putBodyParameter("systemId", systemId);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class EpdInventoryConstituteItem extends TeaModel {
     private String inventoryValuePerProductUnit;
 
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List < EpdInventoryConstituteItem > items;
+    private java.util.List<EpdInventoryConstituteItem> items;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -179,7 +184,7 @@ public class EpdInventoryConstituteItem extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < EpdInventoryConstituteItem > getItems() {
+    public java.util.List<EpdInventoryConstituteItem> getItems() {
         return this.items;
     }
 
@@ -244,7 +249,7 @@ public class EpdInventoryConstituteItem extends TeaModel {
         private Double inventoryValue; 
         private Double inventoryValuePerProduct; 
         private String inventoryValuePerProductUnit; 
-        private java.util.List < EpdInventoryConstituteItem > items; 
+        private java.util.List<EpdInventoryConstituteItem> items; 
         private String name; 
         private Long num; 
         private Double percent; 
@@ -344,7 +349,7 @@ public class EpdInventoryConstituteItem extends TeaModel {
         /**
          * items.
          */
-        public Builder items(java.util.List < EpdInventoryConstituteItem > items) {
+        public Builder items(java.util.List<EpdInventoryConstituteItem> items) {
             this.items = items;
             return this;
         }

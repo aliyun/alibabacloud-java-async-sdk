@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -414,7 +419,7 @@ public class GetFootprintListResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("total")
         private Long total;
@@ -455,7 +460,7 @@ public class GetFootprintListResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -476,7 +481,7 @@ public class GetFootprintListResponseBody extends TeaModel {
         public static final class Builder {
             private Long currentPage; 
             private Long pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Long total; 
             private Long totalPage; 
 
@@ -505,7 +510,7 @@ public class GetFootprintListResponseBody extends TeaModel {
             /**
              * <p>Product Detail List.</p>
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }

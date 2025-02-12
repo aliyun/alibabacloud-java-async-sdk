@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class OrgEmission extends TeaModel {
     private Double carbonEmissionData;
 
     @com.aliyun.core.annotation.NameInMap("moduleEmissionList")
-    private java.util.List < ModuleEmissionList> moduleEmissionList;
+    private java.util.List<ModuleEmissionList> moduleEmissionList;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -28,7 +33,7 @@ public class OrgEmission extends TeaModel {
     private Double ratio;
 
     @com.aliyun.core.annotation.NameInMap("subEmissionItems")
-    private java.util.List < OrgEmission > subEmissionItems;
+    private java.util.List<OrgEmission> subEmissionItems;
 
     @com.aliyun.core.annotation.NameInMap("weightingCarbonEmissionData")
     private Double weightingCarbonEmissionData;
@@ -69,7 +74,7 @@ public class OrgEmission extends TeaModel {
     /**
      * @return moduleEmissionList
      */
-    public java.util.List < ModuleEmissionList> getModuleEmissionList() {
+    public java.util.List<ModuleEmissionList> getModuleEmissionList() {
         return this.moduleEmissionList;
     }
 
@@ -97,7 +102,7 @@ public class OrgEmission extends TeaModel {
     /**
      * @return subEmissionItems
      */
-    public java.util.List < OrgEmission > getSubEmissionItems() {
+    public java.util.List<OrgEmission> getSubEmissionItems() {
         return this.subEmissionItems;
     }
 
@@ -124,11 +129,11 @@ public class OrgEmission extends TeaModel {
 
     public static final class Builder {
         private Double carbonEmissionData; 
-        private java.util.List < ModuleEmissionList> moduleEmissionList; 
+        private java.util.List<ModuleEmissionList> moduleEmissionList; 
         private String name; 
         private String nameKey; 
         private Double ratio; 
-        private java.util.List < OrgEmission > subEmissionItems; 
+        private java.util.List<OrgEmission> subEmissionItems; 
         private Double weightingCarbonEmissionData; 
         private Double weightingProportion; 
         private Double weightingRatio; 
@@ -144,7 +149,7 @@ public class OrgEmission extends TeaModel {
         /**
          * moduleEmissionList.
          */
-        public Builder moduleEmissionList(java.util.List < ModuleEmissionList> moduleEmissionList) {
+        public Builder moduleEmissionList(java.util.List<ModuleEmissionList> moduleEmissionList) {
             this.moduleEmissionList = moduleEmissionList;
             return this;
         }
@@ -176,7 +181,7 @@ public class OrgEmission extends TeaModel {
         /**
          * subEmissionItems.
          */
-        public Builder subEmissionItems(java.util.List < OrgEmission > subEmissionItems) {
+        public Builder subEmissionItems(java.util.List<OrgEmission> subEmissionItems) {
             this.subEmissionItems = subEmissionItems;
             return this;
         }

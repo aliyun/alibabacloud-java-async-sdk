@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -419,7 +424,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         private String inventory;
 
         @com.aliyun.core.annotation.NameInMap("reductionList")
-        private java.util.List < String > reductionList;
+        private java.util.List<String> reductionList;
 
         @com.aliyun.core.annotation.NameInMap("sensitivity")
         private Double sensitivity;
@@ -456,7 +461,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         /**
          * @return reductionList
          */
-        public java.util.List < String > getReductionList() {
+        public java.util.List<String> getReductionList() {
             return this.reductionList;
         }
 
@@ -470,7 +475,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String inventory; 
-            private java.util.List < String > reductionList; 
+            private java.util.List<String> reductionList; 
             private Double sensitivity; 
 
             /**
@@ -498,7 +503,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             /**
              * <p>List of emission reduction measures.</p>
              */
-            public Builder reductionList(java.util.List < String > reductionList) {
+            public Builder reductionList(java.util.List<String> reductionList) {
                 this.reductionList = reductionList;
                 return this;
             }
@@ -602,19 +607,19 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataQuality")
-        private java.util.List < DataQuality> dataQuality;
+        private java.util.List<DataQuality> dataQuality;
 
         @com.aliyun.core.annotation.NameInMap("dataQualityResult")
         private DataQualityResult dataQualityResult;
 
         @com.aliyun.core.annotation.NameInMap("sensitivityList")
-        private java.util.List < SensitivityList> sensitivityList;
+        private java.util.List<SensitivityList> sensitivityList;
 
         @com.aliyun.core.annotation.NameInMap("uncertainty")
         private String uncertainty;
 
         @com.aliyun.core.annotation.NameInMap("uncertaintyValues")
-        private java.util.List < UncertaintyValues> uncertaintyValues;
+        private java.util.List<UncertaintyValues> uncertaintyValues;
 
         private Data(Builder builder) {
             this.dataQuality = builder.dataQuality;
@@ -635,7 +640,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         /**
          * @return dataQuality
          */
-        public java.util.List < DataQuality> getDataQuality() {
+        public java.util.List<DataQuality> getDataQuality() {
             return this.dataQuality;
         }
 
@@ -649,7 +654,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         /**
          * @return sensitivityList
          */
-        public java.util.List < SensitivityList> getSensitivityList() {
+        public java.util.List<SensitivityList> getSensitivityList() {
             return this.sensitivityList;
         }
 
@@ -663,21 +668,21 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         /**
          * @return uncertaintyValues
          */
-        public java.util.List < UncertaintyValues> getUncertaintyValues() {
+        public java.util.List<UncertaintyValues> getUncertaintyValues() {
             return this.uncertaintyValues;
         }
 
         public static final class Builder {
-            private java.util.List < DataQuality> dataQuality; 
+            private java.util.List<DataQuality> dataQuality; 
             private DataQualityResult dataQualityResult; 
-            private java.util.List < SensitivityList> sensitivityList; 
+            private java.util.List<SensitivityList> sensitivityList; 
             private String uncertainty; 
-            private java.util.List < UncertaintyValues> uncertaintyValues; 
+            private java.util.List<UncertaintyValues> uncertaintyValues; 
 
             /**
              * <p>Score of each inventory.</p>
              */
-            public Builder dataQuality(java.util.List < DataQuality> dataQuality) {
+            public Builder dataQuality(java.util.List<DataQuality> dataQuality) {
                 this.dataQuality = dataQuality;
                 return this;
             }
@@ -693,7 +698,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             /**
              * <p>Sensitivity analysis list</p>
              */
-            public Builder sensitivityList(java.util.List < SensitivityList> sensitivityList) {
+            public Builder sensitivityList(java.util.List<SensitivityList> sensitivityList) {
                 this.sensitivityList = sensitivityList;
                 return this;
             }
@@ -712,7 +717,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             /**
              * <p>Uncertainty list</p>
              */
-            public Builder uncertaintyValues(java.util.List < UncertaintyValues> uncertaintyValues) {
+            public Builder uncertaintyValues(java.util.List<UncertaintyValues> uncertaintyValues) {
                 this.uncertaintyValues = uncertaintyValues;
                 return this;
             }
