@@ -152,6 +152,9 @@ public class UpdateQueueRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RamRole")
         private String ramRole;
 
+        @com.aliyun.core.annotation.NameInMap("ReservedNodePoolId")
+        private String reservedNodePoolId;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List<String> vSwitchIds;
 
@@ -170,6 +173,7 @@ public class UpdateQueueRequest extends Request {
             this.minCount = builder.minCount;
             this.queueName = builder.queueName;
             this.ramRole = builder.ramRole;
+            this.reservedNodePoolId = builder.reservedNodePoolId;
             this.vSwitchIds = builder.vSwitchIds;
         }
 
@@ -280,6 +284,13 @@ public class UpdateQueueRequest extends Request {
         }
 
         /**
+         * @return reservedNodePoolId
+         */
+        public String getReservedNodePoolId() {
+            return this.reservedNodePoolId;
+        }
+
+        /**
          * @return vSwitchIds
          */
         public java.util.List<String> getVSwitchIds() {
@@ -301,6 +312,7 @@ public class UpdateQueueRequest extends Request {
             private Integer minCount; 
             private String queueName; 
             private String ramRole; 
+            private String reservedNodePoolId; 
             private java.util.List<String> vSwitchIds; 
 
             /**
@@ -460,6 +472,14 @@ public class UpdateQueueRequest extends Request {
              */
             public Builder ramRole(String ramRole) {
                 this.ramRole = ramRole;
+                return this;
+            }
+
+            /**
+             * ReservedNodePoolId.
+             */
+            public Builder reservedNodePoolId(String reservedNodePoolId) {
+                this.reservedNodePoolId = reservedNodePoolId;
                 return this;
             }
 

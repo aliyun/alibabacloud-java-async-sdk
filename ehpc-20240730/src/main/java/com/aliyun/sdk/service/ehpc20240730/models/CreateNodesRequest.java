@@ -58,6 +58,10 @@ public class CreateNodesRequest extends Request {
     private String ramRole;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedNodePoolId")
+    private String reservedNodePoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -73,6 +77,7 @@ public class CreateNodesRequest extends Request {
         this.keepAlive = builder.keepAlive;
         this.queueName = builder.queueName;
         this.ramRole = builder.ramRole;
+        this.reservedNodePoolId = builder.reservedNodePoolId;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -160,6 +165,13 @@ public class CreateNodesRequest extends Request {
     }
 
     /**
+     * @return reservedNodePoolId
+     */
+    public String getReservedNodePoolId() {
+        return this.reservedNodePoolId;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -177,6 +189,7 @@ public class CreateNodesRequest extends Request {
         private String keepAlive; 
         private String queueName; 
         private String ramRole; 
+        private String reservedNodePoolId; 
         private String vSwitchId; 
 
         private Builder() {
@@ -195,6 +208,7 @@ public class CreateNodesRequest extends Request {
             this.keepAlive = request.keepAlive;
             this.queueName = request.queueName;
             this.ramRole = request.ramRole;
+            this.reservedNodePoolId = request.reservedNodePoolId;
             this.vSwitchId = request.vSwitchId;
         } 
 
@@ -320,6 +334,15 @@ public class CreateNodesRequest extends Request {
         public Builder ramRole(String ramRole) {
             this.putQueryParameter("RamRole", ramRole);
             this.ramRole = ramRole;
+            return this;
+        }
+
+        /**
+         * ReservedNodePoolId.
+         */
+        public Builder reservedNodePoolId(String reservedNodePoolId) {
+            this.putQueryParameter("ReservedNodePoolId", reservedNodePoolId);
+            this.reservedNodePoolId = reservedNodePoolId;
             return this;
         }
 

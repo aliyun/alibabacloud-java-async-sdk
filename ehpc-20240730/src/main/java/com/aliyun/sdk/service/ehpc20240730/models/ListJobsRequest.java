@@ -532,7 +532,7 @@ public class ListJobsRequest extends Request {
             }
 
             /**
-             * <p>The job state. Valid values:</p>
+             * <p>The job status. Valid values:</p>
              * <ul>
              * <li>all: returns all jobs.</li>
              * <li>finished: returns completed jobs.</li>

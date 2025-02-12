@@ -504,7 +504,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSetId.
+             * <p>The deployment set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-8vbe4av4gededlqg****</p>
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
