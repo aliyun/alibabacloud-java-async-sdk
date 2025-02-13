@@ -149,6 +149,9 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
+        private String breakCode;
+
         @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
@@ -191,6 +194,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         private List(Builder builder) {
             this.agentId = builder.agentId;
             this.agentName = builder.agentName;
+            this.breakCode = builder.breakCode;
             this.callType = builder.callType;
             this.counterParty = builder.counterParty;
             this.duration = builder.duration;
@@ -226,6 +230,13 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
          */
         public String getAgentName() {
             return this.agentName;
+        }
+
+        /**
+         * @return breakCode
+         */
+        public String getBreakCode() {
+            return this.breakCode;
         }
 
         /**
@@ -322,6 +333,7 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String agentName; 
+            private String breakCode; 
             private String callType; 
             private String counterParty; 
             private Long duration; 
@@ -349,6 +361,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * BreakCode.
+             */
+            public Builder breakCode(String breakCode) {
+                this.breakCode = breakCode;
                 return this;
             }
 
