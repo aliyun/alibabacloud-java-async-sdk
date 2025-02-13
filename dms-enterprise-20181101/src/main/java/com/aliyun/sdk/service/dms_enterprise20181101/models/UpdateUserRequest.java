@@ -47,6 +47,10 @@ public class UpdateUserRequest extends Request {
     private Long uid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UidString")
+    private String uidString;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserNick")
     private String userNick;
 
@@ -59,6 +63,7 @@ public class UpdateUserRequest extends Request {
         this.roleNames = builder.roleNames;
         this.tid = builder.tid;
         this.uid = builder.uid;
+        this.uidString = builder.uidString;
         this.userNick = builder.userNick;
     }
 
@@ -125,6 +130,13 @@ public class UpdateUserRequest extends Request {
     }
 
     /**
+     * @return uidString
+     */
+    public String getUidString() {
+        return this.uidString;
+    }
+
+    /**
      * @return userNick
      */
     public String getUserNick() {
@@ -139,6 +151,7 @@ public class UpdateUserRequest extends Request {
         private String roleNames; 
         private Long tid; 
         private Long uid; 
+        private String uidString; 
         private String userNick; 
 
         private Builder() {
@@ -154,6 +167,7 @@ public class UpdateUserRequest extends Request {
             this.roleNames = request.roleNames;
             this.tid = request.tid;
             this.uid = request.uid;
+            this.uidString = request.uidString;
             this.userNick = request.userNick;
         } 
 
@@ -239,6 +253,15 @@ public class UpdateUserRequest extends Request {
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
             this.uid = uid;
+            return this;
+        }
+
+        /**
+         * UidString.
+         */
+        public Builder uidString(String uidString) {
+            this.putQueryParameter("UidString", uidString);
+            this.uidString = uidString;
             return this;
         }
 

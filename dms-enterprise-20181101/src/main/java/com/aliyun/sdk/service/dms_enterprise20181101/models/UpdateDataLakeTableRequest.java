@@ -42,6 +42,10 @@ public class UpdateDataLakeTableRequest extends Request {
     private OpenStructDLTableInput tableInput;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    private String tableName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
@@ -52,6 +56,7 @@ public class UpdateDataLakeTableRequest extends Request {
         this.dataRegion = builder.dataRegion;
         this.dbName = builder.dbName;
         this.tableInput = builder.tableInput;
+        this.tableName = builder.tableName;
         this.tid = builder.tid;
     }
 
@@ -104,6 +109,13 @@ public class UpdateDataLakeTableRequest extends Request {
     }
 
     /**
+     * @return tableName
+     */
+    public String getTableName() {
+        return this.tableName;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -116,6 +128,7 @@ public class UpdateDataLakeTableRequest extends Request {
         private String dataRegion; 
         private String dbName; 
         private OpenStructDLTableInput tableInput; 
+        private String tableName; 
         private Long tid; 
 
         private Builder() {
@@ -129,6 +142,7 @@ public class UpdateDataLakeTableRequest extends Request {
             this.dataRegion = request.dataRegion;
             this.dbName = request.dbName;
             this.tableInput = request.tableInput;
+            this.tableName = request.tableName;
             this.tid = request.tid;
         } 
 
@@ -184,6 +198,15 @@ public class UpdateDataLakeTableRequest extends Request {
             String tableInputShrink = shrink(tableInput, "TableInput", "json");
             this.putBodyParameter("TableInput", tableInputShrink);
             this.tableInput = tableInput;
+            return this;
+        }
+
+        /**
+         * TableName.
+         */
+        public Builder tableName(String tableName) {
+            this.putQueryParameter("TableName", tableName);
+            this.tableName = tableName;
             return this;
         }
 
