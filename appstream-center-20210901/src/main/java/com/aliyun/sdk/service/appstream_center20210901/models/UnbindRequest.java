@@ -118,6 +118,7 @@ public class UnbindRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/zh/wuying-appstreaming/developer-reference/api-appstream-center-2021-09-01-getconnectionticket">GetConnectionTicket</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The session ID. You can call the <a href="https://help.aliyun.com/zh/wuying-appstreaming/developer-reference/api-appstream-center-2021-09-01-getconnectionticket">GetConnectionTicket</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-d297eyf83g5ni****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putBodyParameter("AppInstanceId", appInstanceId);
@@ -139,7 +143,10 @@ public class UnbindRequest extends Request {
         }
 
         /**
-         * AppInstancePersistentId.
+         * <p>The ID of the persistent session. You can call the <a href="https://help.aliyun.com/zh/wuying-appstreaming/developer-reference/api-appstream-center-2021-09-01-getconnectionticket">GetConnectionTicket</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0bxls9m3cl7s****</p>
          */
         public Builder appInstancePersistentId(String appInstancePersistentId) {
             this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
@@ -148,6 +155,7 @@ public class UnbindRequest extends Request {
         }
 
         /**
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +168,11 @@ public class UnbindRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

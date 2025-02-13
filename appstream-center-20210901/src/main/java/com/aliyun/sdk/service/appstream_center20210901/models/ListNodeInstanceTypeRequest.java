@@ -244,7 +244,12 @@ public class ListNodeInstanceTypeRequest extends Request {
         } 
 
         /**
-         * <p>资源所属的地域ID。关于支持的地域详情，请参见<a href="https://help.aliyun.com/document_detail/426036.html">使用限制</a>。</p>
+         * <p>The ID of the region where the resource resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -283,7 +288,12 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>语言类型。</p>
+         * <p>The language that you want to use.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en-US: English (US)</li>
+         * <li>zh-CN: Simplified Chinese</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -304,7 +314,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * NodeInstanceType.
+         * <p>The resource type that you want to query. If you do not configure this parameter, all resource types are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu.4c8g.2g</p>
          */
         public Builder nodeInstanceType(String nodeInstanceType) {
             this.putQueryParameter("NodeInstanceType", nodeInstanceType);
@@ -331,7 +344,11 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>支持的操作系统类型。</p>
+         * <p>The operating system that is supported.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Windows: the Windows operating system</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -343,6 +360,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
+         * <p>The number of the page to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -355,6 +373,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -367,6 +386,11 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

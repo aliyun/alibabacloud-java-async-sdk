@@ -91,7 +91,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ProductType</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -99,7 +102,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter ProductType is invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -107,7 +113,8 @@ public class GetResourcePriceResponseBody extends TeaModel {
         }
 
         /**
-         * PriceList.
+         * <p>The price objects.</p>
+         * <p>This parameter is returned only if a value is specified for AppInstanceType.</p>
          */
         public Builder priceList(java.util.List<PriceList> priceList) {
             this.priceList = priceList;
@@ -115,7 +122,8 @@ public class GetResourcePriceResponseBody extends TeaModel {
         }
 
         /**
-         * PriceModel.
+         * <p>The price object.</p>
+         * <p>This parameter is returned only if a value is specified for NodeInstanceType.</p>
          */
         public Builder priceModel(PriceModel priceModel) {
             this.priceModel = priceModel;
@@ -123,7 +131,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +228,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * OptionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coupon****</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -225,7 +239,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -233,7 +247,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1847709****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -241,7 +258,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -249,7 +266,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the coupon was used.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -344,7 +369,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String tradePrice; 
 
             /**
-             * Currency.
+             * <p>The currency type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -352,7 +380,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>999.0</p>
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
@@ -360,7 +391,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6700</p>
              */
             public Builder originalPrice(String originalPrice) {
                 this.originalPrice = originalPrice;
@@ -368,7 +402,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The coupon metadata.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -376,7 +410,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5278.0</p>
              */
             public Builder tradePrice(String tradePrice) {
                 this.tradePrice = tradePrice;
@@ -435,7 +472,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * <p>The description of the price calculation rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -443,7 +480,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the price calculation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>260904273633****</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -514,7 +554,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private java.util.List<Rules> rules; 
 
             /**
-             * Price.
+             * <p>The price details.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -522,7 +562,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PriceType.
+             * <p>The price type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Connected: in use</li>
+             * <li>Standby: pending for use.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standby</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -530,7 +578,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The price calculation rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -625,7 +673,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private Boolean selected; 
 
             /**
-             * OptionCode.
+             * <p>The coupon code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coupon****</p>
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
@@ -633,7 +684,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -641,7 +692,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17440009****</p>
              */
             public Builder promotionId(String promotionId) {
                 this.promotionId = promotionId;
@@ -649,7 +703,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -657,7 +711,15 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the coupon was used.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -752,7 +814,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private String tradePrice; 
 
             /**
-             * Currency.
+             * <p>The currency type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -760,7 +825,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.00</p>
              */
             public Builder discountPrice(String discountPrice) {
                 this.discountPrice = discountPrice;
@@ -768,7 +836,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.00</p>
              */
             public Builder originalPrice(String originalPrice) {
                 this.originalPrice = originalPrice;
@@ -776,7 +847,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * <p>The coupon metadata.</p>
              */
             public Builder promotions(java.util.List<PricePromotions> promotions) {
                 this.promotions = promotions;
@@ -784,7 +855,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.00</p>
              */
             public Builder tradePrice(String tradePrice) {
                 this.tradePrice = tradePrice;
@@ -843,7 +917,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * <p>The description of the price calculation rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -851,7 +925,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the price calculation rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102002100393****</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -910,7 +987,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             private java.util.List<PriceModelRules> rules; 
 
             /**
-             * Price.
+             * <p>The price details.</p>
              */
             public Builder price(PriceModelPrice price) {
                 this.price = price;
@@ -918,7 +995,7 @@ public class GetResourcePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The price calculation rules.</p>
              */
             public Builder rules(java.util.List<PriceModelRules> rules) {
                 this.rules = rules;

@@ -91,7 +91,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NodeInstanceTypeModels.
+         * <p>The resource types.</p>
          */
         public Builder nodeInstanceTypeModels(java.util.List<NodeInstanceTypeModels> nodeInstanceTypeModels) {
             this.nodeInstanceTypeModels = nodeInstanceTypeModels;
@@ -99,7 +99,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,7 +110,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +121,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +265,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             private String nodeTypeName; 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -261,7 +276,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Gpu.
+             * <p>The number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder gpu(String gpu) {
                 this.gpu = gpu;
@@ -269,7 +287,7 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>显卡内存大小，单位为MB。</p>
+             * <p>The GPU size. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>8192</p>
@@ -280,13 +298,13 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最大并发会话数，即单个资源可同时连接的会话数。如果同时连接的会话数过多，可能导致应用的使用体验下降。取值范围因资源规格不同而不同。各资源规格对应的取值范围分别是：</p>
+             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
              * <ul>
-             * <li>appstreaming.general.4c8g：1~2；</li>
-             * <li>appstreaming.general.8c16g：1~4；</li>
-             * <li>appstreaming.vgpu.8c16g.4g：1~4；</li>
-             * <li>appstreaming.vgpu.8c31g.16g：1~4；</li>
-             * <li>appstreaming.vgpu.14c93g.12g：1~6；</li>
+             * <li>appstreaming.general.4c8g: 1 to 2</li>
+             * <li>appstreaming.general.8c16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
+             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
+             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -298,7 +316,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -306,7 +327,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceType.
+             * <p>The ID of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appstreaming.vgpu.4c8g.2g</p>
              */
             public Builder nodeInstanceType(String nodeInstanceType) {
                 this.nodeInstanceType = nodeInstanceType;
@@ -314,7 +338,15 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceTypeFamily.
+             * <p>The resource type family.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>appstreaming.general: WUYING - General</li>
+             * <li>appstreaming.vgpu: WUYING - Graphics</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>appstreaming.vgpu</p>
              */
             public Builder nodeInstanceTypeFamily(String nodeInstanceTypeFamily) {
                 this.nodeInstanceTypeFamily = nodeInstanceTypeFamily;
@@ -322,10 +354,10 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源规格名称。</p>
+             * <p>The name of the resource type.</p>
              * 
              * <strong>example:</strong>
-             * <p>无影-通用型_4核8G</p>
+             * <p>WUYING - General - 4 vCPUs 8 GB Memory</p>
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;

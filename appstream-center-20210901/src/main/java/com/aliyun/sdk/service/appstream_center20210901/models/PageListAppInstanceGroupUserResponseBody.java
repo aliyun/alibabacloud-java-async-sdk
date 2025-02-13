@@ -55,7 +55,10 @@ public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
         private java.util.List<String> users; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The users.</p>
          */
         public Builder users(java.util.List<String> users) {
             this.users = users;

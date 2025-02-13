@@ -59,7 +59,15 @@ public class ModifyTenantConfigRequest extends Request {
         } 
 
         /**
-         * AppInstanceGroupExpireRemind.
+         * <p>Specifies whether to enable the resource expiration reminder feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder appInstanceGroupExpireRemind(Boolean appInstanceGroupExpireRemind) {
             this.putBodyParameter("AppInstanceGroupExpireRemind", appInstanceGroupExpireRemind);

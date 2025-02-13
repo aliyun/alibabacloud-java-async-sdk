@@ -115,7 +115,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         private String userId; 
 
         /**
-         * AppId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>__DEBUG_APP</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -123,7 +126,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceGroupId.
+         * <p>The ID of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
          */
         public Builder appInstanceGroupId(String appInstanceGroupId) {
             this.appInstanceGroupId = appInstanceGroupId;
@@ -131,7 +137,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-7ybdeiyoeh5e****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.appInstanceId = appInstanceId;
@@ -139,7 +148,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AppVersion.
+         * <p>The ID of the application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         public Builder appVersion(String appVersion) {
             this.appVersion = appVersion;
@@ -147,7 +159,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AuthCode.
+         * <p>The authorization code. This authorization code is valid for 3 minutes and can be used only once, regardless of whether the authentication succeeds. If multiple authentication codes are generated for a user, only the latest authentication code takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e4e169bea1cc48e8afac53**********</p>
          */
         public Builder authCode(String authCode) {
             this.authCode = authCode;
@@ -155,7 +170,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +181,10 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>debug</strong></p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

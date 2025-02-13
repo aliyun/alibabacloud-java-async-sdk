@@ -91,7 +91,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AppInstanceModels.
+         * <p>The IDs of the application instances.</p>
          */
         public Builder appInstanceModels(java.util.List<AppInstanceModels> appInstanceModels) {
             this.appInstanceModels = appInstanceModels;
@@ -99,7 +99,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. We recommend that you configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -107,7 +110,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned on each page. The value cannot be greater than <code>100</code>. We recommend that you configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -115,7 +121,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -181,7 +193,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private Long usageDuration; 
 
             /**
-             * EndUserId.
+             * <p>The ID of the end user that is bound to the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app.test</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -189,7 +204,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsageDuration.
+             * <p>The use duration of the application instance. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder usageDuration(Long usageDuration) {
                 this.usageDuration = usageDuration;
@@ -320,7 +338,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AppInstanceGroupId.
+             * <p>The ID of the delivery group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-dk8p95irqfst9****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -328,7 +349,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceId.
+             * <p>The ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-8dl7dzchklmka****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -336,7 +360,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindInfo.
+             * <p>The information about the binding between the application instance and end users.</p>
              */
             public Builder bindInfo(BindInfo bindInfo) {
                 this.bindInfo = bindInfo;
@@ -344,7 +368,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the application instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-07T20:29:19.000+08:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -352,7 +379,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the application instance was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-07T20:29:19.000+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -360,7 +390,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MainEthPublicIp.
+             * <p>The public IP address associated with the primary NIC. This value is returned only if <code>StrategyType</code> is set to <code>Mixed</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.13.13.211</p>
              */
             public Builder mainEthPublicIp(String mainEthPublicIp) {
                 this.mainEthPublicIp = mainEthPublicIp;
@@ -368,7 +401,15 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>The session status. This parameter is returned only if the application instance is in the <code>RUNNING</code> state.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>disconnect: disconnected</li>
+             * <li>connect: connected</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>connect</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -376,7 +417,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BOUND</p>
              */
             public Builder status(String status) {
                 this.status = status;

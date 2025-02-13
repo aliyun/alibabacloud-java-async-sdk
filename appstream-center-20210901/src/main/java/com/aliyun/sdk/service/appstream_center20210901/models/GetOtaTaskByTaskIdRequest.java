@@ -60,6 +60,7 @@ public class GetOtaTaskByTaskIdRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the OTA update task. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,10 @@ public class LogOffAllSessionsInAppInstanceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ProductType</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -75,7 +78,10 @@ public class LogOffAllSessionsInAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter ProductType is invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -83,7 +89,10 @@ public class LogOffAllSessionsInAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

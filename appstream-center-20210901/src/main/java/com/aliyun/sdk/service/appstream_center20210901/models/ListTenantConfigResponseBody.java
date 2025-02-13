@@ -55,7 +55,10 @@ public class ListTenantConfigResponseBody extends TeaModel {
         private TenantConfigModel tenantConfigModel; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TenantConfigModel.
+         * <p>The user configurations.</p>
          */
         public Builder tenantConfigModel(TenantConfigModel tenantConfigModel) {
             this.tenantConfigModel = tenantConfigModel;
@@ -109,7 +112,15 @@ public class ListTenantConfigResponseBody extends TeaModel {
             private Boolean appInstanceGroupExpireRemind; 
 
             /**
-             * AppInstanceGroupExpireRemind.
+             * <p>Indicates whether the resource expiration reminder feature is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder appInstanceGroupExpireRemind(Boolean appInstanceGroupExpireRemind) {
                 this.appInstanceGroupExpireRemind = appInstanceGroupExpireRemind;

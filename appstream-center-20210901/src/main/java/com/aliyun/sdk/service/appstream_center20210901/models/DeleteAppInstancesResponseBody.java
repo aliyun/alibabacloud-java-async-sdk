@@ -55,7 +55,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeleteAppInstanceModels.
+         * <p>The data returned.</p>
          */
         public Builder deleteAppInstanceModels(java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels) {
             this.deleteAppInstanceModels = deleteAppInstanceModels;
@@ -63,7 +63,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +148,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * AppInstanceId.
+             * <p>The ID of the application instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-gbuea*****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -153,7 +159,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.ProductType</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -161,7 +170,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The parameter ProductType is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -169,7 +181,15 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Specifies whether the application instance is deleted.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

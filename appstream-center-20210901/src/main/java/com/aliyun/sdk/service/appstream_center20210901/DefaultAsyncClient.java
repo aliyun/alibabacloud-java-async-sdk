@@ -202,6 +202,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot call this operation to delete a subscription delivery group.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteAppInstanceGroup  DeleteAppInstanceGroupRequest
      * @return DeleteAppInstanceGroupResponse
      */
@@ -220,6 +225,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only application instances that are in the Initializing or Idle state can be deleted. The operation can be called only by specific customers.</p>
+     * 
      * @param request the request parameters of DeleteAppInstances  DeleteAppInstancesRequest
      * @return DeleteAppInstancesResponse
      */
@@ -274,6 +282,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must call this operation at least twice to obtain a connection credential.
+     * The first time you call this operation, the system assigns an application instance to the specified convenience account and then starts the application. In this case, the ID of the started task, which is indicated by <code>TaskID</code>, is returned.
+     * In subsequent calls, you must configure <code>TaskID</code> to query whether the task is completed. If the value of <code>TaskStatus</code> in the response is <code>Finished</code>, the connection credential, which is indicated by <code>Ticket</code>, is returned.</p>
+     * 
      * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
      */
@@ -526,6 +539,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation can be called only if you use a pay-as-you-go delivery group for which a scheduled scaling policy is used and if you call the operation at a time other than the scheduled time.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of LogOffAllSessionsInAppInstanceGroup  LogOffAllSessionsInAppInstanceGroupRequest
      * @return LogOffAllSessionsInAppInstanceGroupResponse
      */
@@ -634,6 +652,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</p>
+     * 
      * @param request the request parameters of RenewAppInstanceGroup  RenewAppInstanceGroupRequest
      * @return RenewAppInstanceGroupResponse
      */
@@ -670,6 +691,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning</strong> After the image is updated, the end user session accessing the cloud application will be disconnected. Exercise caution to avoid end user data loss.<blockquote>
+     * <p> After the image of the delivery group is updated, the change takes effect on the terminal in approximately 2 minutes.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateAppInstanceGroupImage  UpdateAppInstanceGroupImageRequest
      * @return UpdateAppInstanceGroupImageResponse
      */

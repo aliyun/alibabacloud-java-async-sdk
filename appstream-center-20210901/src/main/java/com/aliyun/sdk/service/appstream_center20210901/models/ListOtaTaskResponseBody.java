@@ -91,7 +91,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -99,7 +102,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +113,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +124,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * <p>The OTA update tasks.</p>
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
@@ -123,7 +132,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of OTA update tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -205,7 +217,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
             private String taskStartTime; 
 
             /**
-             * OtaVersion.
+             * <p>The OTA version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1-R-20220708.110604</p>
              */
             public Builder otaVersion(String otaVersion) {
                 this.otaVersion = otaVersion;
@@ -213,7 +228,19 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDisplayStatus.
+             * <p>The task status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>FAILED</li>
+             * <li>RUNNING</li>
+             * <li>TERMINATED</li>
+             * <li>PART_FINISHED</li>
+             * <li>STANDBY</li>
+             * <li>FINISHED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder taskDisplayStatus(String taskDisplayStatus) {
                 this.taskDisplayStatus = taskDisplayStatus;
@@ -221,7 +248,10 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ota-be7jzm29wrrz5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -229,6 +259,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The start time of the OTA update task. The time follows the ISO 8601 standard.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>

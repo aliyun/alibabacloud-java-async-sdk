@@ -145,6 +145,7 @@ public class ListAppInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the delivery group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * AppInstanceId.
+         * <p>The ID of the application instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai-azn3kmwruh1vl****</p>
          */
         public Builder appInstanceId(String appInstanceId) {
             this.putQueryParameter("AppInstanceId", appInstanceId);
@@ -166,7 +170,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * AppInstanceIdList.
+         * <p>The IDs of the application instances. Up to 100 IDs can be specified.</p>
          */
         public Builder appInstanceIdList(java.util.List<String> appInstanceIdList) {
             this.putBodyParameter("AppInstanceIdList", appInstanceIdList);
@@ -175,7 +179,15 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * IncludeDeleted.
+         * <p>Specifies whether to query the information about deleted application instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeDeleted(Boolean includeDeleted) {
             this.putQueryParameter("IncludeDeleted", includeDeleted);
@@ -184,7 +196,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Default value: <code>1</code>. We recommend that you configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +208,10 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +220,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the application instances.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
