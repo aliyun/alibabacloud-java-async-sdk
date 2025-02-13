@@ -257,6 +257,9 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ShareType")
+        private String shareType;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -273,6 +276,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             this.ownerId = builder.ownerId;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.shareType = builder.shareType;
             this.tags = builder.tags;
             this.type = builder.type;
         }
@@ -349,6 +353,13 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return shareType
+         */
+        public String getShareType() {
+            return this.shareType;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -372,6 +383,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             private Long ownerId; 
             private String regionId; 
             private String resourceGroupId; 
+            private String shareType; 
             private java.util.List<Tags> tags; 
             private String type; 
 
@@ -444,6 +456,14 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ShareType.
+             */
+            public Builder shareType(String shareType) {
+                this.shareType = shareType;
                 return this;
             }
 

@@ -111,7 +111,7 @@ public class ListIpamsResponseBody extends TeaModel {
         }
 
         /**
-         * Ipams.
+         * <p>The IPAMs.</p>
          */
         public Builder ipams(java.util.List<Ipams> ipams) {
             this.ipams = ipams;
@@ -119,7 +119,10 @@ public class ListIpamsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +130,14 @@ public class ListIpamsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +145,10 @@ public class ListIpamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23CA0A0B-B0F5-5495-B355-7D9A9203A46B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +156,10 @@ public class ListIpamsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +217,10 @@ public class ListIpamsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +228,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -436,7 +458,10 @@ public class ListIpamsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
 
             /**
-             * CreateTime.
+             * <p>The time when the IPAM was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-01T02:05:23Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -460,7 +485,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamDescription.
+             * <p>The description of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder ipamDescription(String ipamDescription) {
                 this.ipamDescription = ipamDescription;
@@ -468,7 +496,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamId.
+             * <p>The ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-ccxbnsbhew0d6t****</p>
              */
             public Builder ipamId(String ipamId) {
                 this.ipamId = ipamId;
@@ -476,7 +507,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamName.
+             * <p>The name of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipamName(String ipamName) {
                 this.ipamName = ipamName;
@@ -484,7 +518,16 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamStatus.
+             * <p>The status of the IPAM. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder ipamStatus(String ipamStatus) {
                 this.ipamStatus = ipamStatus;
@@ -492,7 +535,7 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingRegionList.
+             * <p>The effective regions of the IPAM.</p>
              */
             public Builder operatingRegionList(java.util.List<String> operatingRegionList) {
                 this.operatingRegionList = operatingRegionList;
@@ -500,7 +543,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The Alibaba Cloud account that owns the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456******</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -508,7 +554,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDefaultScopeId.
+             * <p>The default private scope created by the system after the IPAM is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-scope-okoerbco6unqfr****</p>
              */
             public Builder privateDefaultScopeId(String privateDefaultScopeId) {
                 this.privateDefaultScopeId = privateDefaultScopeId;
@@ -516,7 +565,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicDefaultScopeId.
+             * <p>The default public scope created by the system after the IPAM is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-scope-ovb76p1g1m19dr****</p>
              */
             public Builder publicDefaultScopeId(String publicDefaultScopeId) {
                 this.publicDefaultScopeId = publicDefaultScopeId;
@@ -524,7 +576,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -540,7 +595,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2dbprgpt****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -548,7 +606,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeCount.
+             * <p>The number of IPAM scopes. Value: <strong>2 to 5</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scopeCount(Integer scopeCount) {
                 this.scopeCount = scopeCount;
@@ -556,7 +617,7 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

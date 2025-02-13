@@ -162,6 +162,93 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
      *
      * <p>ListIpamResourceCidrsResponseBody</p>
      */
+    public static class OverlapDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OverlapResourceCidr")
+        private String overlapResourceCidr;
+
+        @com.aliyun.core.annotation.NameInMap("OverlapResourceId")
+        private String overlapResourceId;
+
+        @com.aliyun.core.annotation.NameInMap("OverlapResourceRegion")
+        private String overlapResourceRegion;
+
+        private OverlapDetail(Builder builder) {
+            this.overlapResourceCidr = builder.overlapResourceCidr;
+            this.overlapResourceId = builder.overlapResourceId;
+            this.overlapResourceRegion = builder.overlapResourceRegion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OverlapDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return overlapResourceCidr
+         */
+        public String getOverlapResourceCidr() {
+            return this.overlapResourceCidr;
+        }
+
+        /**
+         * @return overlapResourceId
+         */
+        public String getOverlapResourceId() {
+            return this.overlapResourceId;
+        }
+
+        /**
+         * @return overlapResourceRegion
+         */
+        public String getOverlapResourceRegion() {
+            return this.overlapResourceRegion;
+        }
+
+        public static final class Builder {
+            private String overlapResourceCidr; 
+            private String overlapResourceId; 
+            private String overlapResourceRegion; 
+
+            /**
+             * OverlapResourceCidr.
+             */
+            public Builder overlapResourceCidr(String overlapResourceCidr) {
+                this.overlapResourceCidr = overlapResourceCidr;
+                return this;
+            }
+
+            /**
+             * OverlapResourceId.
+             */
+            public Builder overlapResourceId(String overlapResourceId) {
+                this.overlapResourceId = overlapResourceId;
+                return this;
+            }
+
+            /**
+             * OverlapResourceRegion.
+             */
+            public Builder overlapResourceRegion(String overlapResourceRegion) {
+                this.overlapResourceRegion = overlapResourceRegion;
+                return this;
+            }
+
+            public OverlapDetail build() {
+                return new OverlapDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListIpamResourceCidrsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamResourceCidrsResponseBody</p>
+     */
     public static class IpamResourceCidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -189,6 +276,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ManagementStatus")
         private String managementStatus;
+
+        @com.aliyun.core.annotation.NameInMap("OverlapDetail")
+        private java.util.List<OverlapDetail> overlapDetail;
 
         @com.aliyun.core.annotation.NameInMap("OverlapStatus")
         private String overlapStatus;
@@ -224,6 +314,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             this.ipamPoolId = builder.ipamPoolId;
             this.ipamScopeId = builder.ipamScopeId;
             this.managementStatus = builder.managementStatus;
+            this.overlapDetail = builder.overlapDetail;
             this.overlapStatus = builder.overlapStatus;
             this.resourceId = builder.resourceId;
             this.resourceOwnerId = builder.resourceOwnerId;
@@ -306,6 +397,13 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
+         * @return overlapDetail
+         */
+        public java.util.List<OverlapDetail> getOverlapDetail() {
+            return this.overlapDetail;
+        }
+
+        /**
          * @return overlapStatus
          */
         public String getOverlapStatus() {
@@ -371,6 +469,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             private String ipamPoolId; 
             private String ipamScopeId; 
             private String managementStatus; 
+            private java.util.List<OverlapDetail> overlapDetail; 
             private String overlapStatus; 
             private String resourceId; 
             private Long resourceOwnerId; 
@@ -449,6 +548,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
              */
             public Builder managementStatus(String managementStatus) {
                 this.managementStatus = managementStatus;
+                return this;
+            }
+
+            /**
+             * OverlapDetail.
+             */
+            public Builder overlapDetail(java.util.List<OverlapDetail> overlapDetail) {
+                this.overlapDetail = overlapDetail;
                 return this;
             }
 

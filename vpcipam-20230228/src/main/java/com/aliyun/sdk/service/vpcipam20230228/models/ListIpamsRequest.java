@@ -201,7 +201,7 @@ public class ListIpamsRequest extends Request {
         } 
 
         /**
-         * IpamIds.
+         * <p>The IDs of IPAMs. Valid values of N: 1 to 100. A maximum of 100 IPAMs can be queried at a time.</p>
          */
         public Builder ipamIds(java.util.List<String> ipamIds) {
             this.putQueryParameter("IpamIds", ipamIds);
@@ -210,7 +210,11 @@ public class ListIpamsRequest extends Request {
         }
 
         /**
-         * IpamName.
+         * <p>The name of the IPAM.</p>
+         * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ipamName(String ipamName) {
             this.putQueryParameter("IpamName", ipamName);
@@ -219,7 +223,10 @@ public class ListIpamsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -228,7 +235,14 @@ public class ListIpamsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -255,6 +269,7 @@ public class ListIpamsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the IPAM pool is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +282,10 @@ public class ListIpamsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID of the IPAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2sermdd6****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -294,7 +312,7 @@ public class ListIpamsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag information.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -354,7 +372,11 @@ public class ListIpamsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +384,11 @@ public class ListIpamsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

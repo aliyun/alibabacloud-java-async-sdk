@@ -26,6 +26,10 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
     private String ipamResourceDiscoveryName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsShared")
+    private Boolean isShared;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
@@ -71,6 +75,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         super(builder);
         this.ipamResourceDiscoveryIds = builder.ipamResourceDiscoveryIds;
         this.ipamResourceDiscoveryName = builder.ipamResourceDiscoveryName;
+        this.isShared = builder.isShared;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -108,6 +113,13 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
      */
     public String getIpamResourceDiscoveryName() {
         return this.ipamResourceDiscoveryName;
+    }
+
+    /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
     }
 
     /**
@@ -183,6 +195,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
     public static final class Builder extends Request.Builder<ListIpamResourceDiscoveriesRequest, Builder> {
         private java.util.List<String> ipamResourceDiscoveryIds; 
         private String ipamResourceDiscoveryName; 
+        private Boolean isShared; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -202,6 +215,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
             super(request);
             this.ipamResourceDiscoveryIds = request.ipamResourceDiscoveryIds;
             this.ipamResourceDiscoveryName = request.ipamResourceDiscoveryName;
+            this.isShared = request.isShared;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -229,6 +243,15 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         public Builder ipamResourceDiscoveryName(String ipamResourceDiscoveryName) {
             this.putQueryParameter("IpamResourceDiscoveryName", ipamResourceDiscoveryName);
             this.ipamResourceDiscoveryName = ipamResourceDiscoveryName;
+            return this;
+        }
+
+        /**
+         * IsShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.putQueryParameter("IsShared", isShared);
+            this.isShared = isShared;
             return this;
         }
 
