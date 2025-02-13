@@ -305,6 +305,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("MasterAISpec")
+        private String masterAISpec;
+
         @com.aliyun.core.annotation.NameInMap("MasterCU")
         private Integer masterCU;
 
@@ -355,6 +358,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SegNodeNum")
         private Integer segNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("SegmentAISpec")
+        private String segmentAISpec;
 
         @com.aliyun.core.annotation.NameInMap("SegmentCounts")
         private Integer segmentCounts;
@@ -435,6 +441,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.lockReason = builder.lockReason;
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
+            this.masterAISpec = builder.masterAISpec;
             this.masterCU = builder.masterCU;
             this.masterNodeNum = builder.masterNodeNum;
             this.maxConnections = builder.maxConnections;
@@ -452,6 +459,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.securityIPList = builder.securityIPList;
             this.segDiskPerformanceLevel = builder.segDiskPerformanceLevel;
             this.segNodeNum = builder.segNodeNum;
+            this.segmentAISpec = builder.segmentAISpec;
             this.segmentCounts = builder.segmentCounts;
             this.serverlessMode = builder.serverlessMode;
             this.serverlessResource = builder.serverlessResource;
@@ -709,6 +717,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return masterAISpec
+         */
+        public String getMasterAISpec() {
+            return this.masterAISpec;
+        }
+
+        /**
          * @return masterCU
          */
         public Integer getMasterCU() {
@@ -825,6 +840,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getSegNodeNum() {
             return this.segNodeNum;
+        }
+
+        /**
+         * @return segmentAISpec
+         */
+        public String getSegmentAISpec() {
+            return this.segmentAISpec;
         }
 
         /**
@@ -966,6 +988,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String lockReason; 
             private String maintainEndTime; 
             private String maintainStartTime; 
+            private String masterAISpec; 
             private Integer masterCU; 
             private Integer masterNodeNum; 
             private Integer maxConnections; 
@@ -983,6 +1006,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String securityIPList; 
             private String segDiskPerformanceLevel; 
             private Integer segNodeNum; 
+            private String segmentAISpec; 
             private Integer segmentCounts; 
             private String serverlessMode; 
             private Integer serverlessResource; 
@@ -1434,6 +1458,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * MasterAISpec.
+             */
+            public Builder masterAISpec(String masterAISpec) {
+                this.masterAISpec = masterAISpec;
+                return this;
+            }
+
+            /**
              * <p>Master resources.</p>
              * 
              * <strong>example:</strong>
@@ -1636,6 +1668,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder segNodeNum(Integer segNodeNum) {
                 this.segNodeNum = segNodeNum;
+                return this;
+            }
+
+            /**
+             * SegmentAISpec.
+             */
+            public Builder segmentAISpec(String segmentAISpec) {
+                this.segmentAISpec = segmentAISpec;
                 return this;
             }
 

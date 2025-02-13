@@ -27,8 +27,11 @@ public class ModifyMasterSpecRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterAISpec")
+    private String masterAISpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MasterCU")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer masterCU;
 
     @com.aliyun.core.annotation.Query
@@ -39,6 +42,7 @@ public class ModifyMasterSpecRequest extends Request {
         super(builder);
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.DBInstanceId = builder.DBInstanceId;
+        this.masterAISpec = builder.masterAISpec;
         this.masterCU = builder.masterCU;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -71,6 +75,13 @@ public class ModifyMasterSpecRequest extends Request {
     }
 
     /**
+     * @return masterAISpec
+     */
+    public String getMasterAISpec() {
+        return this.masterAISpec;
+    }
+
+    /**
      * @return masterCU
      */
     public Integer getMasterCU() {
@@ -87,6 +98,7 @@ public class ModifyMasterSpecRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyMasterSpecRequest, Builder> {
         private String DBInstanceDescription; 
         private String DBInstanceId; 
+        private String masterAISpec; 
         private Integer masterCU; 
         private String resourceGroupId; 
 
@@ -98,6 +110,7 @@ public class ModifyMasterSpecRequest extends Request {
             super(request);
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.DBInstanceId = request.DBInstanceId;
+            this.masterAISpec = request.masterAISpec;
             this.masterCU = request.masterCU;
             this.resourceGroupId = request.resourceGroupId;
         } 
@@ -131,6 +144,15 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
+         * MasterAISpec.
+         */
+        public Builder masterAISpec(String masterAISpec) {
+            this.putQueryParameter("MasterAISpec", masterAISpec);
+            this.masterAISpec = masterAISpec;
+            return this;
+        }
+
+        /**
          * <p>The specifications of coordinator node resources. Valid values:</p>
          * <ul>
          * <li>2 CU</li>
@@ -142,7 +164,6 @@ public class ModifyMasterSpecRequest extends Request {
          * <blockquote>
          * <p> You are charged for coordinator node resources of more than 8 compute units (CUs).</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>8 CU</p>

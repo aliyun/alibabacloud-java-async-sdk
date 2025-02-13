@@ -37,6 +37,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindDBResourceGroupWithRoleResponse> bindDBResourceGroupWithRole(BindDBResourceGroupWithRoleRequest request);
 
     /**
+     * @param request the request parameters of CancelCreateIndexJob  CancelCreateIndexJobRequest
+     * @return CancelCreateIndexJobResponse
+     */
+    CompletableFuture<CancelCreateIndexJobResponse> cancelCreateIndexJob(CancelCreateIndexJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is related to the UploadDocumentAsync operation. You can call this operation to cancel a document upload job.</p>
      * <blockquote>
@@ -83,6 +89,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckServiceLinkedRoleResponse
      */
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
+
+    /**
+     * @param request the request parameters of CloneDBInstance  CloneDBInstanceRequest
+     * @return CloneDBInstanceResponse
+     */
+    CompletableFuture<CloneDBInstanceResponse> cloneDBInstance(CloneDBInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -161,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateHadoopDataSourceResponse
      */
     CompletableFuture<CreateHadoopDataSourceResponse> createHadoopDataSource(CreateHadoopDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of CreateIndex  CreateIndexRequest
+     * @return CreateIndexResponse
+     */
+    CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
     /**
      * @param request the request parameters of CreateJDBCDataSource  CreateJDBCDataSourceRequest
@@ -314,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHadoopDataSourceResponse> deleteHadoopDataSource(DeleteHadoopDataSourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteIndex  DeleteIndexRequest
+     * @return DeleteIndexResponse
+     */
+    CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
+
+    /**
      * @param request the request parameters of DeleteJDBCDataSource  DeleteJDBCDataSourceRequest
      * @return DeleteJDBCDataSourceResponse
      */
@@ -409,6 +433,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCollectionResponse
      */
     CompletableFuture<DescribeCollectionResponse> describeCollection(DescribeCollectionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCreateIndexJob  DescribeCreateIndexJobRequest
+     * @return DescribeCreateIndexJobResponse
+     */
+    CompletableFuture<DescribeCreateIndexJobResponse> describeCreateIndexJob(DescribeCreateIndexJobRequest request);
 
     /**
      * <b>description</b> :
@@ -712,6 +742,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeIMVInfosResponse
      */
     CompletableFuture<DescribeIMVInfosResponse> describeIMVInfos(DescribeIMVInfosRequest request);
+
+    /**
+     * @param request the request parameters of DescribeIndex  DescribeIndexRequest
+     * @return DescribeIndexResponse
+     */
+    CompletableFuture<DescribeIndexResponse> describeIndex(DescribeIndexRequest request);
 
     /**
      * @param request the request parameters of DescribeJDBCDataSource  DescribeJDBCDataSourceRequest
@@ -1041,6 +1077,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExternalDataSourcesResponse> listExternalDataSources(ListExternalDataSourcesRequest request);
 
     /**
+     * @param request the request parameters of ListIndices  ListIndicesRequest
+     * @return ListIndicesResponse
+     */
+    CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceExtensions  ListInstanceExtensionsRequest
      * @return ListInstanceExtensionsResponse
      */
@@ -1123,6 +1165,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBInstanceConnectionStringResponse
      */
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBInstanceDeploymentMode  ModifyDBInstanceDeploymentModeRequest
+     * @return ModifyDBInstanceDeploymentModeResponse
+     */
+    CompletableFuture<ModifyDBInstanceDeploymentModeResponse> modifyDBInstanceDeploymentMode(ModifyDBInstanceDeploymentModeRequest request);
 
     /**
      * <b>description</b> :

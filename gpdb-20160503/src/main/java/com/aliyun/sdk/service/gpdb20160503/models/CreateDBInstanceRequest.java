@@ -89,6 +89,10 @@ public class CreateDBInstanceRequest extends Request {
     private String instanceSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterAISpec")
+    private String masterAISpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MasterCU")
     private Integer masterCU;
 
@@ -213,6 +217,7 @@ public class CreateDBInstanceRequest extends Request {
         this.idleTime = builder.idleTime;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.instanceSpec = builder.instanceSpec;
+        this.masterAISpec = builder.masterAISpec;
         this.masterCU = builder.masterCU;
         this.masterNodeNum = builder.masterNodeNum;
         this.ownerId = builder.ownerId;
@@ -371,6 +376,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getInstanceSpec() {
         return this.instanceSpec;
+    }
+
+    /**
+     * @return masterAISpec
+     */
+    public String getMasterAISpec() {
+        return this.masterAISpec;
     }
 
     /**
@@ -573,6 +585,7 @@ public class CreateDBInstanceRequest extends Request {
         private Integer idleTime; 
         private String instanceNetworkType; 
         private String instanceSpec; 
+        private String masterAISpec; 
         private Integer masterCU; 
         private String masterNodeNum; 
         private Long ownerId; 
@@ -623,6 +636,7 @@ public class CreateDBInstanceRequest extends Request {
             this.idleTime = request.idleTime;
             this.instanceNetworkType = request.instanceNetworkType;
             this.instanceSpec = request.instanceSpec;
+            this.masterAISpec = request.masterAISpec;
             this.masterCU = request.masterCU;
             this.masterNodeNum = request.masterNodeNum;
             this.ownerId = request.ownerId;
@@ -944,6 +958,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
             this.instanceSpec = instanceSpec;
+            return this;
+        }
+
+        /**
+         * MasterAISpec.
+         */
+        public Builder masterAISpec(String masterAISpec) {
+            this.putQueryParameter("MasterAISpec", masterAISpec);
+            this.masterAISpec = masterAISpec;
             return this;
         }
 

@@ -39,6 +39,10 @@ public class CreateCollectionRequest extends Request {
     private String fullTextRetrievalFields;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
+    private String hnswEfConstruction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HnswM")
     @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer hnswM;
@@ -98,6 +102,7 @@ public class CreateCollectionRequest extends Request {
         this.dimension = builder.dimension;
         this.externalStorage = builder.externalStorage;
         this.fullTextRetrievalFields = builder.fullTextRetrievalFields;
+        this.hnswEfConstruction = builder.hnswEfConstruction;
         this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
@@ -158,6 +163,13 @@ public class CreateCollectionRequest extends Request {
      */
     public String getFullTextRetrievalFields() {
         return this.fullTextRetrievalFields;
+    }
+
+    /**
+     * @return hnswEfConstruction
+     */
+    public String getHnswEfConstruction() {
+        return this.hnswEfConstruction;
     }
 
     /**
@@ -250,6 +262,7 @@ public class CreateCollectionRequest extends Request {
         private Long dimension; 
         private Integer externalStorage; 
         private String fullTextRetrievalFields; 
+        private String hnswEfConstruction; 
         private Integer hnswM; 
         private String managerAccount; 
         private String managerAccountPassword; 
@@ -274,6 +287,7 @@ public class CreateCollectionRequest extends Request {
             this.dimension = request.dimension;
             this.externalStorage = request.externalStorage;
             this.fullTextRetrievalFields = request.fullTextRetrievalFields;
+            this.hnswEfConstruction = request.hnswEfConstruction;
             this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
@@ -363,6 +377,15 @@ public class CreateCollectionRequest extends Request {
         public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
             this.putQueryParameter("FullTextRetrievalFields", fullTextRetrievalFields);
             this.fullTextRetrievalFields = fullTextRetrievalFields;
+            return this;
+        }
+
+        /**
+         * HnswEfConstruction.
+         */
+        public Builder hnswEfConstruction(String hnswEfConstruction) {
+            this.putQueryParameter("HnswEfConstruction", hnswEfConstruction);
+            this.hnswEfConstruction = hnswEfConstruction;
             return this;
         }
 

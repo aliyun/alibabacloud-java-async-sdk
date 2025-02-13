@@ -37,6 +37,10 @@ public class CreateVectorIndexRequest extends Request {
     private Integer externalStorage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HnswEfConstruction")
+    private Integer hnswEfConstruction;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HnswM")
     @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer hnswM;
@@ -78,6 +82,7 @@ public class CreateVectorIndexRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
         this.externalStorage = builder.externalStorage;
+        this.hnswEfConstruction = builder.hnswEfConstruction;
         this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
@@ -127,6 +132,13 @@ public class CreateVectorIndexRequest extends Request {
      */
     public Integer getExternalStorage() {
         return this.externalStorage;
+    }
+
+    /**
+     * @return hnswEfConstruction
+     */
+    public Integer getHnswEfConstruction() {
+        return this.hnswEfConstruction;
     }
 
     /**
@@ -190,6 +202,7 @@ public class CreateVectorIndexRequest extends Request {
         private String DBInstanceId; 
         private Integer dimension; 
         private Integer externalStorage; 
+        private Integer hnswEfConstruction; 
         private Integer hnswM; 
         private String managerAccount; 
         private String managerAccountPassword; 
@@ -209,6 +222,7 @@ public class CreateVectorIndexRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
             this.externalStorage = request.externalStorage;
+            this.hnswEfConstruction = request.hnswEfConstruction;
             this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
@@ -282,6 +296,15 @@ public class CreateVectorIndexRequest extends Request {
         public Builder externalStorage(Integer externalStorage) {
             this.putQueryParameter("ExternalStorage", externalStorage);
             this.externalStorage = externalStorage;
+            return this;
+        }
+
+        /**
+         * HnswEfConstruction.
+         */
+        public Builder hnswEfConstruction(Integer hnswEfConstruction) {
+            this.putQueryParameter("HnswEfConstruction", hnswEfConstruction);
+            this.hnswEfConstruction = hnswEfConstruction;
             return this;
         }
 
