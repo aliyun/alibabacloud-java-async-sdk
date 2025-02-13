@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,7 @@ public class QueryModifyInstancePriceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
-    private java.util.List < String > haVSwitchIds;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("HaZoneId")
-    private String haZoneId;
+    private java.util.List<String> haVSwitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -56,7 +57,6 @@ public class QueryModifyInstancePriceRequest extends Request {
         this.ha = builder.ha;
         this.haResourceSpec = builder.haResourceSpec;
         this.haVSwitchIds = builder.haVSwitchIds;
-        this.haZoneId = builder.haZoneId;
         this.instanceId = builder.instanceId;
         this.promotionCode = builder.promotionCode;
         this.region = builder.region;
@@ -94,15 +94,8 @@ public class QueryModifyInstancePriceRequest extends Request {
     /**
      * @return haVSwitchIds
      */
-    public java.util.List < String > getHaVSwitchIds() {
+    public java.util.List<String> getHaVSwitchIds() {
         return this.haVSwitchIds;
-    }
-
-    /**
-     * @return haZoneId
-     */
-    public String getHaZoneId() {
-        return this.haZoneId;
     }
 
     /**
@@ -143,8 +136,7 @@ public class QueryModifyInstancePriceRequest extends Request {
     public static final class Builder extends Request.Builder<QueryModifyInstancePriceRequest, Builder> {
         private Boolean ha; 
         private HaResourceSpec haResourceSpec; 
-        private java.util.List < String > haVSwitchIds; 
-        private String haZoneId; 
+        private java.util.List<String> haVSwitchIds; 
         private String instanceId; 
         private String promotionCode; 
         private String region; 
@@ -160,7 +152,6 @@ public class QueryModifyInstancePriceRequest extends Request {
             this.ha = request.ha;
             this.haResourceSpec = request.haResourceSpec;
             this.haVSwitchIds = request.haVSwitchIds;
-            this.haZoneId = request.haZoneId;
             this.instanceId = request.instanceId;
             this.promotionCode = request.promotionCode;
             this.region = request.region;
@@ -190,19 +181,10 @@ public class QueryModifyInstancePriceRequest extends Request {
         /**
          * HaVSwitchIds.
          */
-        public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+        public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
             this.putBodyParameter("HaVSwitchIds", haVSwitchIdsShrink);
             this.haVSwitchIds = haVSwitchIds;
-            return this;
-        }
-
-        /**
-         * HaZoneId.
-         */
-        public Builder haZoneId(String haZoneId) {
-            this.putBodyParameter("HaZoneId", haZoneId);
-            this.haZoneId = haZoneId;
             return this;
         }
 

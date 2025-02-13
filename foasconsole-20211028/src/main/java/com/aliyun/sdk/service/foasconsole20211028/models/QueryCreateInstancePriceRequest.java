@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -72,15 +77,11 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ZoneId")
-    private String zoneId;
 
     private QueryCreateInstancePriceRequest(Builder builder) {
         super(builder);
@@ -100,7 +101,6 @@ public class QueryCreateInstancePriceRequest extends Request {
         this.usePromotionCode = builder.usePromotionCode;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
-        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -217,7 +217,7 @@ public class QueryCreateInstancePriceRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -226,13 +226,6 @@ public class QueryCreateInstancePriceRequest extends Request {
      */
     public String getVpcId() {
         return this.vpcId;
-    }
-
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
     }
 
     public static final class Builder extends Request.Builder<QueryCreateInstancePriceRequest, Builder> {
@@ -250,9 +243,8 @@ public class QueryCreateInstancePriceRequest extends Request {
         private ResourceSpec resourceSpec; 
         private Storage storage; 
         private Boolean usePromotionCode; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
-        private String zoneId; 
 
         private Builder() {
             super();
@@ -276,7 +268,6 @@ public class QueryCreateInstancePriceRequest extends Request {
             this.usePromotionCode = request.usePromotionCode;
             this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
-            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -417,7 +408,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         /**
          * VSwitchIds.
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             String vSwitchIdsShrink = shrink(vSwitchIds, "VSwitchIds", "json");
             this.putBodyParameter("VSwitchIds", vSwitchIdsShrink);
             this.vSwitchIds = vSwitchIds;
@@ -430,15 +421,6 @@ public class QueryCreateInstancePriceRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
             this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * ZoneId.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putBodyParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
             return this;
         }
 

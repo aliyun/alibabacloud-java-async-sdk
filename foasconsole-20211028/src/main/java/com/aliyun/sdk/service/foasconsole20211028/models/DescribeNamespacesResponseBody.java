@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNamespacesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Namespaces")
-    private java.util.List < Namespaces> namespaces;
+    private java.util.List<Namespaces> namespaces;
 
     @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
@@ -54,7 +59,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     /**
      * @return namespaces
      */
-    public java.util.List < Namespaces> getNamespaces() {
+    public java.util.List<Namespaces> getNamespaces() {
         return this.namespaces;
     }
 
@@ -101,7 +106,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Namespaces> namespaces; 
+        private java.util.List<Namespaces> namespaces; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String requestId; 
@@ -112,7 +117,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         /**
          * Namespaces.
          */
-        public Builder namespaces(java.util.List < Namespaces> namespaces) {
+        public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
@@ -171,6 +176,140 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
+    public static class ElasticResourceSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private ElasticResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public ElasticResourceSpec build() {
+                return new ElasticResourceSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespacesResponseBody</p>
+     */
+    public static class GuaranteedResourceSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private GuaranteedResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GuaranteedResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public GuaranteedResourceSpec build() {
+                return new GuaranteedResourceSpec(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeNamespacesResponseBody} extends {@link TeaModel}
@@ -399,11 +538,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
      * <p>DescribeNamespacesResponseBody</p>
      */
     public static class Namespaces extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ElasticResourceSpec")
+        private ElasticResourceSpec elasticResourceSpec;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("GuaranteedResourceSpec")
+        private GuaranteedResourceSpec guaranteedResourceSpec;
 
         @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
@@ -421,11 +566,13 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Namespaces(Builder builder) {
+            this.elasticResourceSpec = builder.elasticResourceSpec;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.guaranteedResourceSpec = builder.guaranteedResourceSpec;
             this.ha = builder.ha;
             this.namespace = builder.namespace;
             this.resourceSpec = builder.resourceSpec;
@@ -443,6 +590,13 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return elasticResourceSpec
+         */
+        public ElasticResourceSpec getElasticResourceSpec() {
+            return this.elasticResourceSpec;
+        }
+
+        /**
          * @return gmtCreate
          */
         public Long getGmtCreate() {
@@ -454,6 +608,13 @@ public class DescribeNamespacesResponseBody extends TeaModel {
          */
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return guaranteedResourceSpec
+         */
+        public GuaranteedResourceSpec getGuaranteedResourceSpec() {
+            return this.guaranteedResourceSpec;
         }
 
         /**
@@ -494,19 +655,29 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
+            private ElasticResourceSpec elasticResourceSpec; 
             private Long gmtCreate; 
             private Long gmtModified; 
+            private GuaranteedResourceSpec guaranteedResourceSpec; 
             private Boolean ha; 
             private String namespace; 
             private ResourceSpec resourceSpec; 
             private ResourceUsed resourceUsed; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            /**
+             * ElasticResourceSpec.
+             */
+            public Builder elasticResourceSpec(ElasticResourceSpec elasticResourceSpec) {
+                this.elasticResourceSpec = elasticResourceSpec;
+                return this;
+            }
 
             /**
              * GmtCreate.
@@ -521,6 +692,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * GuaranteedResourceSpec.
+             */
+            public Builder guaranteedResourceSpec(GuaranteedResourceSpec guaranteedResourceSpec) {
+                this.guaranteedResourceSpec = guaranteedResourceSpec;
                 return this;
             }
 
@@ -567,7 +746,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,11 +48,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
-    private java.util.List < String > haVSwitchIds;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("HaZoneId")
-    private String haZoneId;
+    private java.util.List<String> haVSwitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceName")
@@ -86,7 +87,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
@@ -95,17 +96,12 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ZoneId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String zoneId;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
@@ -117,7 +113,6 @@ public class CreateInstanceRequest extends Request {
         this.ha = builder.ha;
         this.haResourceSpec = builder.haResourceSpec;
         this.haVSwitchIds = builder.haVSwitchIds;
-        this.haZoneId = builder.haZoneId;
         this.instanceName = builder.instanceName;
         this.monitorType = builder.monitorType;
         this.pricingCycle = builder.pricingCycle;
@@ -130,7 +125,6 @@ public class CreateInstanceRequest extends Request {
         this.usePromotionCode = builder.usePromotionCode;
         this.vSwitchIds = builder.vSwitchIds;
         this.vpcId = builder.vpcId;
-        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -198,15 +192,8 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return haVSwitchIds
      */
-    public java.util.List < String > getHaVSwitchIds() {
+    public java.util.List<String> getHaVSwitchIds() {
         return this.haVSwitchIds;
-    }
-
-    /**
-     * @return haZoneId
-     */
-    public String getHaZoneId() {
-        return this.haZoneId;
     }
 
     /**
@@ -268,7 +255,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -282,7 +269,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -293,13 +280,6 @@ public class CreateInstanceRequest extends Request {
         return this.vpcId;
     }
 
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String architectureType; 
         private Boolean autoRenew; 
@@ -308,8 +288,7 @@ public class CreateInstanceRequest extends Request {
         private String extra; 
         private Boolean ha; 
         private HaResourceSpec haResourceSpec; 
-        private java.util.List < String > haVSwitchIds; 
-        private String haZoneId; 
+        private java.util.List<String> haVSwitchIds; 
         private String instanceName; 
         private String monitorType; 
         private String pricingCycle; 
@@ -318,11 +297,10 @@ public class CreateInstanceRequest extends Request {
         private String resourceGroupId; 
         private ResourceSpec resourceSpec; 
         private Storage storage; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Boolean usePromotionCode; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
-        private String zoneId; 
 
         private Builder() {
             super();
@@ -338,7 +316,6 @@ public class CreateInstanceRequest extends Request {
             this.ha = request.ha;
             this.haResourceSpec = request.haResourceSpec;
             this.haVSwitchIds = request.haVSwitchIds;
-            this.haZoneId = request.haZoneId;
             this.instanceName = request.instanceName;
             this.monitorType = request.monitorType;
             this.pricingCycle = request.pricingCycle;
@@ -351,7 +328,6 @@ public class CreateInstanceRequest extends Request {
             this.usePromotionCode = request.usePromotionCode;
             this.vSwitchIds = request.vSwitchIds;
             this.vpcId = request.vpcId;
-            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -424,19 +400,10 @@ public class CreateInstanceRequest extends Request {
         /**
          * HaVSwitchIds.
          */
-        public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+        public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
             this.putBodyParameter("HaVSwitchIds", haVSwitchIdsShrink);
             this.haVSwitchIds = haVSwitchIds;
-            return this;
-        }
-
-        /**
-         * HaZoneId.
-         */
-        public Builder haZoneId(String haZoneId) {
-            this.putBodyParameter("HaZoneId", haZoneId);
-            this.haZoneId = haZoneId;
             return this;
         }
 
@@ -523,7 +490,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putBodyParameter("Tag", tagShrink);
             this.tag = tag;
@@ -542,7 +509,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             String vSwitchIdsShrink = shrink(vSwitchIds, "VSwitchIds", "json");
             this.putBodyParameter("VSwitchIds", vSwitchIdsShrink);
             this.vSwitchIds = vSwitchIds;
@@ -558,18 +525,6 @@ public class CreateInstanceRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
             this.vpcId = vpcId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing-g</p>
-         */
-        public Builder zoneId(String zoneId) {
-            this.putBodyParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
             return this;
         }
 

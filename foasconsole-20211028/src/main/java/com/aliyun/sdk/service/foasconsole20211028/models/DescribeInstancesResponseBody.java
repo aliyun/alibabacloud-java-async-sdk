@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
@@ -54,7 +59,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -101,7 +106,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private Integer pageIndex; 
         private Integer pageSize; 
         private String requestId; 
@@ -112,7 +117,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * Instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -278,7 +283,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TotalStageWithWeight")
-        private java.util.List < TotalStageWithWeight> totalStageWithWeight;
+        private java.util.List<TotalStageWithWeight> totalStageWithWeight;
 
         private ClusterStage(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -327,7 +332,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return totalStageWithWeight
          */
-        public java.util.List < TotalStageWithWeight> getTotalStageWithWeight() {
+        public java.util.List<TotalStageWithWeight> getTotalStageWithWeight() {
             return this.totalStageWithWeight;
         }
 
@@ -336,7 +341,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer currentStage; 
             private String message; 
             private String status; 
-            private java.util.List < TotalStageWithWeight> totalStageWithWeight; 
+            private java.util.List<TotalStageWithWeight> totalStageWithWeight; 
 
             /**
              * ClusterId.
@@ -373,7 +378,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * TotalStageWithWeight.
              */
-            public Builder totalStageWithWeight(java.util.List < TotalStageWithWeight> totalStageWithWeight) {
+            public Builder totalStageWithWeight(java.util.List<TotalStageWithWeight> totalStageWithWeight) {
                 this.totalStageWithWeight = totalStageWithWeight;
                 return this;
             }
@@ -472,7 +477,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String slbStatus;
 
         @com.aliyun.core.annotation.NameInMap("UserSlbListeners")
-        private java.util.List < UserSlbListeners> userSlbListeners;
+        private java.util.List<UserSlbListeners> userSlbListeners;
 
         private UserSlbDto(Builder builder) {
             this.existSlb = builder.existSlb;
@@ -521,7 +526,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return userSlbListeners
          */
-        public java.util.List < UserSlbListeners> getUserSlbListeners() {
+        public java.util.List<UserSlbListeners> getUserSlbListeners() {
             return this.userSlbListeners;
         }
 
@@ -530,7 +535,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String slbId; 
             private String slbIp; 
             private String slbStatus; 
-            private java.util.List < UserSlbListeners> userSlbListeners; 
+            private java.util.List<UserSlbListeners> userSlbListeners; 
 
             /**
              * ExistSlb.
@@ -567,7 +572,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * UserSlbListeners.
              */
-            public Builder userSlbListeners(java.util.List < UserSlbListeners> userSlbListeners) {
+            public Builder userSlbListeners(java.util.List<UserSlbListeners> userSlbListeners) {
                 this.userSlbListeners = userSlbListeners;
                 return this;
             }
@@ -776,6 +781,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
+        @com.aliyun.core.annotation.NameInMap("ElasticUsedCpu")
+        private Float elasticUsedCpu;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticUsedMemory")
+        private Float elasticUsedMemory;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticUsedResource")
+        private Float elasticUsedResource;
+
+        @com.aliyun.core.annotation.NameInMap("GuaranteedUsedCpu")
+        private Float guaranteedUsedCpu;
+
+        @com.aliyun.core.annotation.NameInMap("GuaranteedUsedMemory")
+        private Float guaranteedUsedMemory;
+
+        @com.aliyun.core.annotation.NameInMap("GuaranteedUsedResource")
+        private Float guaranteedUsedResource;
+
         @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
@@ -799,6 +822,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         private ClusterUsedResources(Builder builder) {
             this.clusterId = builder.clusterId;
+            this.elasticUsedCpu = builder.elasticUsedCpu;
+            this.elasticUsedMemory = builder.elasticUsedMemory;
+            this.elasticUsedResource = builder.elasticUsedResource;
+            this.guaranteedUsedCpu = builder.guaranteedUsedCpu;
+            this.guaranteedUsedMemory = builder.guaranteedUsedMemory;
+            this.guaranteedUsedResource = builder.guaranteedUsedResource;
             this.ha = builder.ha;
             this.haUsedCpu = builder.haUsedCpu;
             this.haUsedMemory = builder.haUsedMemory;
@@ -821,6 +850,48 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        /**
+         * @return elasticUsedCpu
+         */
+        public Float getElasticUsedCpu() {
+            return this.elasticUsedCpu;
+        }
+
+        /**
+         * @return elasticUsedMemory
+         */
+        public Float getElasticUsedMemory() {
+            return this.elasticUsedMemory;
+        }
+
+        /**
+         * @return elasticUsedResource
+         */
+        public Float getElasticUsedResource() {
+            return this.elasticUsedResource;
+        }
+
+        /**
+         * @return guaranteedUsedCpu
+         */
+        public Float getGuaranteedUsedCpu() {
+            return this.guaranteedUsedCpu;
+        }
+
+        /**
+         * @return guaranteedUsedMemory
+         */
+        public Float getGuaranteedUsedMemory() {
+            return this.guaranteedUsedMemory;
+        }
+
+        /**
+         * @return guaranteedUsedResource
+         */
+        public Float getGuaranteedUsedResource() {
+            return this.guaranteedUsedResource;
         }
 
         /**
@@ -874,6 +945,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String clusterId; 
+            private Float elasticUsedCpu; 
+            private Float elasticUsedMemory; 
+            private Float elasticUsedResource; 
+            private Float guaranteedUsedCpu; 
+            private Float guaranteedUsedMemory; 
+            private Float guaranteedUsedResource; 
             private Boolean ha; 
             private Float haUsedCpu; 
             private Float haUsedMemory; 
@@ -887,6 +964,54 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * ElasticUsedCpu.
+             */
+            public Builder elasticUsedCpu(Float elasticUsedCpu) {
+                this.elasticUsedCpu = elasticUsedCpu;
+                return this;
+            }
+
+            /**
+             * ElasticUsedMemory.
+             */
+            public Builder elasticUsedMemory(Float elasticUsedMemory) {
+                this.elasticUsedMemory = elasticUsedMemory;
+                return this;
+            }
+
+            /**
+             * ElasticUsedResource.
+             */
+            public Builder elasticUsedResource(Float elasticUsedResource) {
+                this.elasticUsedResource = elasticUsedResource;
+                return this;
+            }
+
+            /**
+             * GuaranteedUsedCpu.
+             */
+            public Builder guaranteedUsedCpu(Float guaranteedUsedCpu) {
+                this.guaranteedUsedCpu = guaranteedUsedCpu;
+                return this;
+            }
+
+            /**
+             * GuaranteedUsedMemory.
+             */
+            public Builder guaranteedUsedMemory(Float guaranteedUsedMemory) {
+                this.guaranteedUsedMemory = guaranteedUsedMemory;
+                return this;
+            }
+
+            /**
+             * GuaranteedUsedResource.
+             */
+            public Builder guaranteedUsedResource(Float guaranteedUsedResource) {
+                this.guaranteedUsedResource = guaranteedUsedResource;
                 return this;
             }
 
@@ -1015,6 +1140,73 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             public ClusterUsedStorage build() {
                 return new ClusterUsedStorage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class ElasticResourceSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private ElasticResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElasticResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * MemoryGB.
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public ElasticResourceSpec build() {
+                return new ElasticResourceSpec(this);
             } 
 
         } 
@@ -1283,7 +1475,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public static class HostAliases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostNames")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > hostNames;
+        private java.util.List<String> hostNames;
 
         @com.aliyun.core.annotation.NameInMap("Ip")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1305,7 +1497,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return hostNames
          */
-        public java.util.List < String > getHostNames() {
+        public java.util.List<String> getHostNames() {
             return this.hostNames;
         }
 
@@ -1317,13 +1509,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostNames; 
+            private java.util.List<String> hostNames; 
             private String ip; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder hostNames(java.util.List < String > hostNames) {
+            public Builder hostNames(java.util.List<String> hostNames) {
                 this.hostNames = hostNames;
                 return this;
             }
@@ -2079,6 +2271,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
      * <p>DescribeInstancesResponseBody</p>
      */
     public static class Instances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ansm")
+        private Boolean ansm;
+
         @com.aliyun.core.annotation.NameInMap("ArchitectureType")
         private String architectureType;
 
@@ -2095,10 +2290,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String clusterStatus;
 
         @com.aliyun.core.annotation.NameInMap("ClusterUsedResources")
-        private java.util.List < ClusterUsedResources> clusterUsedResources;
+        private ClusterUsedResources clusterUsedResources;
 
         @com.aliyun.core.annotation.NameInMap("ClusterUsedStorage")
         private ClusterUsedStorage clusterUsedStorage;
+
+        @com.aliyun.core.annotation.NameInMap("Elastic")
+        private Boolean elastic;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticOrderState")
+        private String elasticOrderState;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticResourceSpec")
+        private ElasticResourceSpec elasticResourceSpec;
 
         @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
@@ -2107,17 +2311,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private HaResourceSpec haResourceSpec;
 
         @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
-        private java.util.List < String > haVSwitchIds;
+        private java.util.List<String> haVSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("HaVSwitchInfo")
-        private java.util.List < HaVSwitchInfo> haVSwitchInfo;
+        private java.util.List<HaVSwitchInfo> haVSwitchInfo;
 
         @com.aliyun.core.annotation.NameInMap("HaZoneId")
         private String haZoneId;
 
         @com.aliyun.core.annotation.NameInMap("HostAliases")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < HostAliases> hostAliases;
+        private java.util.List<HostAliases> hostAliases;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -2156,16 +2360,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Storage storage;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchInfo")
-        private java.util.List < VSwitchInfo> vSwitchInfo;
+        private java.util.List<VSwitchInfo> vSwitchInfo;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -2177,6 +2381,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private Instances(Builder builder) {
+            this.ansm = builder.ansm;
             this.architectureType = builder.architectureType;
             this.askClusterId = builder.askClusterId;
             this.chargeType = builder.chargeType;
@@ -2184,6 +2389,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.clusterStatus = builder.clusterStatus;
             this.clusterUsedResources = builder.clusterUsedResources;
             this.clusterUsedStorage = builder.clusterUsedStorage;
+            this.elastic = builder.elastic;
+            this.elasticOrderState = builder.elasticOrderState;
+            this.elasticResourceSpec = builder.elasticResourceSpec;
             this.ha = builder.ha;
             this.haResourceSpec = builder.haResourceSpec;
             this.haVSwitchIds = builder.haVSwitchIds;
@@ -2217,6 +2425,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Instances create() {
             return builder().build();
+        }
+
+        /**
+         * @return ansm
+         */
+        public Boolean getAnsm() {
+            return this.ansm;
         }
 
         /**
@@ -2257,7 +2472,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return clusterUsedResources
          */
-        public java.util.List < ClusterUsedResources> getClusterUsedResources() {
+        public ClusterUsedResources getClusterUsedResources() {
             return this.clusterUsedResources;
         }
 
@@ -2266,6 +2481,27 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public ClusterUsedStorage getClusterUsedStorage() {
             return this.clusterUsedStorage;
+        }
+
+        /**
+         * @return elastic
+         */
+        public Boolean getElastic() {
+            return this.elastic;
+        }
+
+        /**
+         * @return elasticOrderState
+         */
+        public String getElasticOrderState() {
+            return this.elasticOrderState;
+        }
+
+        /**
+         * @return elasticResourceSpec
+         */
+        public ElasticResourceSpec getElasticResourceSpec() {
+            return this.elasticResourceSpec;
         }
 
         /**
@@ -2285,14 +2521,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return haVSwitchIds
          */
-        public java.util.List < String > getHaVSwitchIds() {
+        public java.util.List<String> getHaVSwitchIds() {
             return this.haVSwitchIds;
         }
 
         /**
          * @return haVSwitchInfo
          */
-        public java.util.List < HaVSwitchInfo> getHaVSwitchInfo() {
+        public java.util.List<HaVSwitchInfo> getHaVSwitchInfo() {
             return this.haVSwitchInfo;
         }
 
@@ -2306,7 +2542,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return hostAliases
          */
-        public java.util.List < HostAliases> getHostAliases() {
+        public java.util.List<HostAliases> getHostAliases() {
             return this.hostAliases;
         }
 
@@ -2397,7 +2633,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -2411,14 +2647,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
         /**
          * @return vSwitchInfo
          */
-        public java.util.List < VSwitchInfo> getVSwitchInfo() {
+        public java.util.List<VSwitchInfo> getVSwitchInfo() {
             return this.vSwitchInfo;
         }
 
@@ -2444,19 +2680,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean ansm; 
             private String architectureType; 
             private String askClusterId; 
             private String chargeType; 
             private ClusterState clusterState; 
             private String clusterStatus; 
-            private java.util.List < ClusterUsedResources> clusterUsedResources; 
+            private ClusterUsedResources clusterUsedResources; 
             private ClusterUsedStorage clusterUsedStorage; 
+            private Boolean elastic; 
+            private String elasticOrderState; 
+            private ElasticResourceSpec elasticResourceSpec; 
             private Boolean ha; 
             private HaResourceSpec haResourceSpec; 
-            private java.util.List < String > haVSwitchIds; 
-            private java.util.List < HaVSwitchInfo> haVSwitchInfo; 
+            private java.util.List<String> haVSwitchIds; 
+            private java.util.List<HaVSwitchInfo> haVSwitchInfo; 
             private String haZoneId; 
-            private java.util.List < HostAliases> hostAliases; 
+            private java.util.List<HostAliases> hostAliases; 
             private String instanceId; 
             private String instanceName; 
             private String monitorType; 
@@ -2469,13 +2709,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String resourceId; 
             private ResourceSpec resourceSpec; 
             private Storage storage; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String uid; 
-            private java.util.List < String > vSwitchIds; 
-            private java.util.List < VSwitchInfo> vSwitchInfo; 
+            private java.util.List<String> vSwitchIds; 
+            private java.util.List<VSwitchInfo> vSwitchInfo; 
             private String vpcId; 
             private VpcInfo vpcInfo; 
             private String zoneId; 
+
+            /**
+             * Ansm.
+             */
+            public Builder ansm(Boolean ansm) {
+                this.ansm = ansm;
+                return this;
+            }
 
             /**
              * ArchitectureType.
@@ -2520,7 +2768,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * ClusterUsedResources.
              */
-            public Builder clusterUsedResources(java.util.List < ClusterUsedResources> clusterUsedResources) {
+            public Builder clusterUsedResources(ClusterUsedResources clusterUsedResources) {
                 this.clusterUsedResources = clusterUsedResources;
                 return this;
             }
@@ -2530,6 +2778,30 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder clusterUsedStorage(ClusterUsedStorage clusterUsedStorage) {
                 this.clusterUsedStorage = clusterUsedStorage;
+                return this;
+            }
+
+            /**
+             * Elastic.
+             */
+            public Builder elastic(Boolean elastic) {
+                this.elastic = elastic;
+                return this;
+            }
+
+            /**
+             * ElasticOrderState.
+             */
+            public Builder elasticOrderState(String elasticOrderState) {
+                this.elasticOrderState = elasticOrderState;
+                return this;
+            }
+
+            /**
+             * ElasticResourceSpec.
+             */
+            public Builder elasticResourceSpec(ElasticResourceSpec elasticResourceSpec) {
+                this.elasticResourceSpec = elasticResourceSpec;
                 return this;
             }
 
@@ -2552,7 +2824,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * HaVSwitchIds.
              */
-            public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+            public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
                 this.haVSwitchIds = haVSwitchIds;
                 return this;
             }
@@ -2560,7 +2832,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * HaVSwitchInfo.
              */
-            public Builder haVSwitchInfo(java.util.List < HaVSwitchInfo> haVSwitchInfo) {
+            public Builder haVSwitchInfo(java.util.List<HaVSwitchInfo> haVSwitchInfo) {
                 this.haVSwitchInfo = haVSwitchInfo;
                 return this;
             }
@@ -2576,7 +2848,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+            public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
                 return this;
             }
@@ -2680,7 +2952,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -2696,7 +2968,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * VSwitchIds.
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -2704,7 +2976,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * VSwitchInfo.
              */
-            public Builder vSwitchInfo(java.util.List < VSwitchInfo> vSwitchInfo) {
+            public Builder vSwitchInfo(java.util.List<VSwitchInfo> vSwitchInfo) {
                 this.vSwitchInfo = vSwitchInfo;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     private Integer totalPage;
 
     @com.aliyun.core.annotation.NameInMap("ZoneIds")
-    private java.util.List < String > zoneIds;
+    private java.util.List<String> zoneIds;
 
     private DescribeSupportedZonesResponseBody(Builder builder) {
         this.pageIndex = builder.pageIndex;
@@ -96,7 +101,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
     /**
      * @return zoneIds
      */
-    public java.util.List < String > getZoneIds() {
+    public java.util.List<String> getZoneIds() {
         return this.zoneIds;
     }
 
@@ -107,7 +112,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         private Boolean success; 
         private Long totalCount; 
         private Integer totalPage; 
-        private java.util.List < String > zoneIds; 
+        private java.util.List<String> zoneIds; 
 
         /**
          * PageIndex.
@@ -160,7 +165,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         /**
          * ZoneIds.
          */
-        public Builder zoneIds(java.util.List < String > zoneIds) {
+        public Builder zoneIds(java.util.List<String> zoneIds) {
             this.zoneIds = zoneIds;
             return this;
         }

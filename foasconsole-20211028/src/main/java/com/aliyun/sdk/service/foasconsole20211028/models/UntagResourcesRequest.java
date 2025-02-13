@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -33,7 +38,7 @@ public class UntagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagKey")
-    private java.util.List < String > tagKey;
+    private java.util.List<String> tagKey;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -88,16 +93,16 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKey
      */
-    public java.util.List < String > getTagKey() {
+    public java.util.List<String> getTagKey() {
         return this.tagKey;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < String > tagKey; 
+        private java.util.List<String> tagKey; 
 
         private Builder() {
             super();
@@ -136,7 +141,7 @@ public class UntagResourcesRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -157,7 +162,7 @@ public class UntagResourcesRequest extends Request {
         /**
          * TagKey.
          */
-        public Builder tagKey(java.util.List < String > tagKey) {
+        public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);
             this.tagKey = tagKey;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class QueryConvertInstancePriceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NamespaceResourceSpecs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs;
+    private java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PricingCycle")
@@ -89,7 +94,7 @@ public class QueryConvertInstancePriceRequest extends Request {
     /**
      * @return namespaceResourceSpecs
      */
-    public java.util.List < NamespaceResourceSpecs> getNamespaceResourceSpecs() {
+    public java.util.List<NamespaceResourceSpecs> getNamespaceResourceSpecs() {
         return this.namespaceResourceSpecs;
     }
 
@@ -111,7 +116,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         private Integer duration; 
         private String instanceId; 
         private Boolean isAutoRenew; 
-        private java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs; 
+        private java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs; 
         private String pricingCycle; 
         private String region; 
 
@@ -168,7 +173,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder namespaceResourceSpecs(java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs) {
+        public Builder namespaceResourceSpecs(java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs) {
             String namespaceResourceSpecsShrink = shrink(namespaceResourceSpecs, "NamespaceResourceSpecs", "json");
             this.putBodyParameter("NamespaceResourceSpecs", namespaceResourceSpecsShrink);
             this.namespaceResourceSpecs = namespaceResourceSpecs;

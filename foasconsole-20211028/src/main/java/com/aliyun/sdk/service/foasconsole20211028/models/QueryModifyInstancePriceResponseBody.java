@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -438,13 +443,13 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         private String message;
 
         @com.aliyun.core.annotation.NameInMap("OptionalPromotions")
-        private java.util.List < OptionalPromotions> optionalPromotions;
+        private java.util.List<OptionalPromotions> optionalPromotions;
 
         @com.aliyun.core.annotation.NameInMap("OriginalAmount")
         private Float originalAmount;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("StandDiscountPrice")
         private String standDiscountPrice;
@@ -523,7 +528,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         /**
          * @return optionalPromotions
          */
-        public java.util.List < OptionalPromotions> getOptionalPromotions() {
+        public java.util.List<OptionalPromotions> getOptionalPromotions() {
             return this.optionalPromotions;
         }
 
@@ -537,7 +542,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -569,9 +574,9 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             private Float discountAmount; 
             private Boolean isContractActivity; 
             private String message; 
-            private java.util.List < OptionalPromotions> optionalPromotions; 
+            private java.util.List<OptionalPromotions> optionalPromotions; 
             private Float originalAmount; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private String standDiscountPrice; 
             private String standPrice; 
             private Float tradeAmount; 
@@ -627,7 +632,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             /**
              * OptionalPromotions.
              */
-            public Builder optionalPromotions(java.util.List < OptionalPromotions> optionalPromotions) {
+            public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
                 return this;
             }
@@ -643,7 +648,7 @@ public class QueryModifyInstancePriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

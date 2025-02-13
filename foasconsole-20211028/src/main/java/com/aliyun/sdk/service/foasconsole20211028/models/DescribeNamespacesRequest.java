@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class DescribeNamespacesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private DescribeNamespacesRequest(Builder builder) {
         super(builder);
@@ -111,7 +116,7 @@ public class DescribeNamespacesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -122,7 +127,7 @@ public class DescribeNamespacesRequest extends Request {
         private Integer pageIndex; 
         private Integer pageSize; 
         private String region; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -202,7 +207,7 @@ public class DescribeNamespacesRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

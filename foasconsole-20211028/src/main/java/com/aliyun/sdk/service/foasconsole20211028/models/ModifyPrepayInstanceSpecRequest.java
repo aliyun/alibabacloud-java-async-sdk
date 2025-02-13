@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
-    private java.util.List < String > haVSwitchIds;
+    private java.util.List<String> haVSwitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HaZoneId")
@@ -84,7 +89,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     /**
      * @return haVSwitchIds
      */
-    public java.util.List < String > getHaVSwitchIds() {
+    public java.util.List<String> getHaVSwitchIds() {
         return this.haVSwitchIds;
     }
 
@@ -119,7 +124,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyPrepayInstanceSpecRequest, Builder> {
         private Boolean ha; 
         private HaResourceSpec haResourceSpec; 
-        private java.util.List < String > haVSwitchIds; 
+        private java.util.List<String> haVSwitchIds; 
         private String haZoneId; 
         private String instanceId; 
         private String region; 
@@ -162,7 +167,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         /**
          * HaVSwitchIds.
          */
-        public Builder haVSwitchIds(java.util.List < String > haVSwitchIds) {
+        public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
             this.putBodyParameter("HaVSwitchIds", haVSwitchIdsShrink);
             this.haVSwitchIds = haVSwitchIds;

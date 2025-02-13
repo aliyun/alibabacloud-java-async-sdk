@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -68,7 +73,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -103,7 +108,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageIndex; 
         private Integer pageSize; 
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -128,7 +133,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         /**
          * Regions.
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
