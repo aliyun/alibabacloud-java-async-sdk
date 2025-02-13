@@ -30,6 +30,10 @@ public class GetRumAppsRequest extends Request {
     private String appName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    private String appType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -42,14 +46,20 @@ public class GetRumAppsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    private String workspace;
+
     private GetRumAppsRequest(Builder builder) {
         super(builder);
         this.appGroup = builder.appGroup;
         this.appId = builder.appId;
         this.appName = builder.appName;
+        this.appType = builder.appType;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -87,6 +97,13 @@ public class GetRumAppsRequest extends Request {
     }
 
     /**
+     * @return appType
+     */
+    public String getAppType() {
+        return this.appType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -107,13 +124,22 @@ public class GetRumAppsRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<GetRumAppsRequest, Builder> {
         private String appGroup; 
         private String appId; 
         private String appName; 
+        private String appType; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -124,9 +150,11 @@ public class GetRumAppsRequest extends Request {
             this.appGroup = request.appGroup;
             this.appId = request.appId;
             this.appName = request.appName;
+            this.appType = request.appType;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -166,6 +194,15 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
+         * AppType.
+         */
+        public Builder appType(String appType) {
+            this.putQueryParameter("AppType", appType);
+            this.appType = appType;
+            return this;
+        }
+
+        /**
          * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -197,6 +234,15 @@ public class GetRumAppsRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * Workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("Workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

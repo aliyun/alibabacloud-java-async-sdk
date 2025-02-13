@@ -58,9 +58,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPrometheusInstanceResponse> addPrometheusInstance(AddPrometheusInstanceRequest request);
 
     /**
-     * @param request the request parameters of AddPrometheusIntegration  AddPrometheusIntegrationRequest
+     * @deprecated OpenAPI AddPrometheusIntegration is deprecated  * @param request  the request parameters of AddPrometheusIntegration  AddPrometheusIntegrationRequest
      * @return AddPrometheusIntegrationResponse
      */
+    @Deprecated
     CompletableFuture<AddPrometheusIntegrationResponse> addPrometheusIntegration(AddPrometheusIntegrationRequest request);
 
     /**
@@ -487,9 +488,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrometheusGlobalViewResponse> deletePrometheusGlobalView(DeletePrometheusGlobalViewRequest request);
 
     /**
-     * @param request the request parameters of DeletePrometheusIntegration  DeletePrometheusIntegrationRequest
+     * @deprecated OpenAPI DeletePrometheusIntegration is deprecated  * @param request  the request parameters of DeletePrometheusIntegration  DeletePrometheusIntegrationRequest
      * @return DeletePrometheusIntegrationResponse
      */
+    @Deprecated
     CompletableFuture<DeletePrometheusIntegrationResponse> deletePrometheusIntegration(DeletePrometheusIntegrationRequest request);
 
     /**
@@ -776,9 +778,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPrometheusInstanceResponse> getPrometheusInstance(GetPrometheusInstanceRequest request);
 
     /**
-     * @param request the request parameters of GetPrometheusIntegration  GetPrometheusIntegrationRequest
+     * @deprecated OpenAPI GetPrometheusIntegration is deprecated  * @param request  the request parameters of GetPrometheusIntegration  GetPrometheusIntegrationRequest
      * @return GetPrometheusIntegrationResponse
      */
+    @Deprecated
     CompletableFuture<GetPrometheusIntegrationResponse> getPrometheusIntegration(GetPrometheusIntegrationRequest request);
 
     /**
@@ -1018,7 +1021,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterFromGrafanaResponse> listClusterFromGrafana(ListClusterFromGrafanaRequest request);
 
     /**
-     * @deprecated OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.  * @param request  the request parameters of ListCmsInstances  ListCmsInstancesRequest
+     * @deprecated OpenAPI ListCmsInstances is deprecated  * @param request  the request parameters of ListCmsInstances  ListCmsInstancesRequest
      * @return ListCmsInstancesResponse
      */
     @Deprecated
@@ -1186,9 +1189,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPrometheusInstancesResponse> listPrometheusInstances(ListPrometheusInstancesRequest request);
 
     /**
-     * @param request the request parameters of ListPrometheusIntegration  ListPrometheusIntegrationRequest
+     * @deprecated OpenAPI ListPrometheusIntegration is deprecated  * @param request  the request parameters of ListPrometheusIntegration  ListPrometheusIntegrationRequest
      * @return ListPrometheusIntegrationResponse
      */
+    @Deprecated
     CompletableFuture<ListPrometheusIntegrationResponse> listPrometheusIntegration(ListPrometheusIntegrationRequest request);
 
     /**
@@ -1596,9 +1600,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePrometheusInstanceResponse> updatePrometheusInstance(UpdatePrometheusInstanceRequest request);
 
     /**
-     * @param request the request parameters of UpdatePrometheusIntegration  UpdatePrometheusIntegrationRequest
+     * @deprecated OpenAPI UpdatePrometheusIntegration is deprecated  * @param request  the request parameters of UpdatePrometheusIntegration  UpdatePrometheusIntegrationRequest
      * @return UpdatePrometheusIntegrationResponse
      */
+    @Deprecated
     CompletableFuture<UpdatePrometheusIntegrationResponse> updatePrometheusIntegration(UpdatePrometheusIntegrationRequest request);
 
     /**

@@ -64,6 +64,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     private String autoAddTargetConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckCycle")
+    private Long checkCycle;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
@@ -149,6 +153,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.annotations = builder.annotations;
         this.autoAddNewApplication = builder.autoAddNewApplication;
         this.autoAddTargetConfig = builder.autoAddTargetConfig;
+        this.checkCycle = builder.checkCycle;
         this.clusterId = builder.clusterId;
         this.dataConfig = builder.dataConfig;
         this.duration = builder.duration;
@@ -257,6 +262,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
      */
     public String getAutoAddTargetConfig() {
         return this.autoAddTargetConfig;
+    }
+
+    /**
+     * @return checkCycle
+     */
+    public Long getCheckCycle() {
+        return this.checkCycle;
     }
 
     /**
@@ -397,6 +409,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String annotations; 
         private Boolean autoAddNewApplication; 
         private String autoAddTargetConfig; 
+        private Long checkCycle; 
         private String clusterId; 
         private String dataConfig; 
         private Long duration; 
@@ -433,6 +446,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.annotations = request.annotations;
             this.autoAddNewApplication = request.autoAddNewApplication;
             this.autoAddTargetConfig = request.autoAddTargetConfig;
+            this.checkCycle = request.checkCycle;
             this.clusterId = request.clusterId;
             this.dataConfig = request.dataConfig;
             this.duration = request.duration;
@@ -638,6 +652,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public Builder autoAddTargetConfig(String autoAddTargetConfig) {
             this.putBodyParameter("AutoAddTargetConfig", autoAddTargetConfig);
             this.autoAddTargetConfig = autoAddTargetConfig;
+            return this;
+        }
+
+        /**
+         * CheckCycle.
+         */
+        public Builder checkCycle(Long checkCycle) {
+            this.putBodyParameter("CheckCycle", checkCycle);
+            this.checkCycle = checkCycle;
             return this;
         }
 

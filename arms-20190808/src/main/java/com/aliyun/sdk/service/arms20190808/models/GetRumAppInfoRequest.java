@@ -31,11 +31,16 @@ public class GetRumAppInfoRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    private String workspace;
+
     private GetRumAppInfoRequest(Builder builder) {
         super(builder);
         this.appGroup = builder.appGroup;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class GetRumAppInfoRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<GetRumAppInfoRequest, Builder> {
         private String appGroup; 
         private String pid; 
         private String regionId; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class GetRumAppInfoRequest extends Request {
             this.appGroup = request.appGroup;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -123,6 +137,15 @@ public class GetRumAppInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("Workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

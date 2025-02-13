@@ -184,9 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddPrometheusIntegration  AddPrometheusIntegrationRequest
+     * @deprecated OpenAPI AddPrometheusIntegration is deprecated  * @param request  the request parameters of AddPrometheusIntegration  AddPrometheusIntegrationRequest
      * @return AddPrometheusIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddPrometheusIntegrationResponse> addPrometheusIntegration(AddPrometheusIntegrationRequest request) {
         try {
@@ -1393,9 +1394,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeletePrometheusIntegration  DeletePrometheusIntegrationRequest
+     * @deprecated OpenAPI DeletePrometheusIntegration is deprecated  * @param request  the request parameters of DeletePrometheusIntegration  DeletePrometheusIntegrationRequest
      * @return DeletePrometheusIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeletePrometheusIntegrationResponse> deletePrometheusIntegration(DeletePrometheusIntegrationRequest request) {
         try {
@@ -2234,9 +2236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetPrometheusIntegration  GetPrometheusIntegrationRequest
+     * @deprecated OpenAPI GetPrometheusIntegration is deprecated  * @param request  the request parameters of GetPrometheusIntegration  GetPrometheusIntegrationRequest
      * @return GetPrometheusIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetPrometheusIntegrationResponse> getPrometheusIntegration(GetPrometheusIntegrationRequest request) {
         try {
@@ -2896,7 +2899,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ListCmsInstances is deprecated, please use ARMS::2019-08-08::ListEnvironmentAddons instead.  * @param request  the request parameters of ListCmsInstances  ListCmsInstancesRequest
+     * @deprecated OpenAPI ListCmsInstances is deprecated  * @param request  the request parameters of ListCmsInstances  ListCmsInstancesRequest
      * @return ListCmsInstancesResponse
      */
     @Deprecated
@@ -3376,9 +3379,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListPrometheusIntegration  ListPrometheusIntegrationRequest
+     * @deprecated OpenAPI ListPrometheusIntegration is deprecated  * @param request  the request parameters of ListPrometheusIntegration  ListPrometheusIntegrationRequest
      * @return ListPrometheusIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListPrometheusIntegrationResponse> listPrometheusIntegration(ListPrometheusIntegrationRequest request) {
         try {
@@ -4518,9 +4522,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdatePrometheusIntegration  UpdatePrometheusIntegrationRequest
+     * @deprecated OpenAPI UpdatePrometheusIntegration is deprecated  * @param request  the request parameters of UpdatePrometheusIntegration  UpdatePrometheusIntegrationRequest
      * @return UpdatePrometheusIntegrationResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdatePrometheusIntegrationResponse> updatePrometheusIntegration(UpdatePrometheusIntegrationRequest request) {
         try {

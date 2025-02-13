@@ -64,6 +64,10 @@ public class CreateRumAppRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    private String workspace;
+
     private CreateRumAppRequest(Builder builder) {
         super(builder);
         this.appGroup = builder.appGroup;
@@ -77,6 +81,7 @@ public class CreateRumAppRequest extends Request {
         this.siteType = builder.siteType;
         this.source = builder.source;
         this.tag = builder.tag;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -169,6 +174,13 @@ public class CreateRumAppRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder extends Request.Builder<CreateRumAppRequest, Builder> {
         private String appGroup; 
         private String appName; 
@@ -181,6 +193,7 @@ public class CreateRumAppRequest extends Request {
         private String siteType; 
         private String source; 
         private java.util.List<Tag> tag; 
+        private String workspace; 
 
         private Builder() {
             super();
@@ -199,6 +212,7 @@ public class CreateRumAppRequest extends Request {
             this.siteType = request.siteType;
             this.source = request.source;
             this.tag = request.tag;
+            this.workspace = request.workspace;
         } 
 
         /**
@@ -328,6 +342,15 @@ public class CreateRumAppRequest extends Request {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putQueryParameter("Tag", tagShrink);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.putQueryParameter("Workspace", workspace);
+            this.workspace = workspace;
             return this;
         }
 

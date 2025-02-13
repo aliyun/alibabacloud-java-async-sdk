@@ -329,6 +329,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List<Conditions> conditions;
 
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -352,6 +355,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Managed")
         private Boolean managed;
+
+        @com.aliyun.core.annotation.NameInMap("NextVersion")
+        private String nextVersion;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -381,6 +387,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             this.addonName = builder.addonName;
             this.alertRuleCount = builder.alertRuleCount;
             this.conditions = builder.conditions;
+            this.config = builder.config;
             this.createTime = builder.createTime;
             this.dashboardCount = builder.dashboardCount;
             this.environmentId = builder.environmentId;
@@ -389,6 +396,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             this.installUserId = builder.installUserId;
             this.language = builder.language;
             this.managed = builder.managed;
+            this.nextVersion = builder.nextVersion;
             this.regionId = builder.regionId;
             this.releaseId = builder.releaseId;
             this.releaseName = builder.releaseName;
@@ -426,6 +434,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
          */
         public java.util.List<Conditions> getConditions() {
             return this.conditions;
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -482,6 +497,13 @@ public class ListAddonReleasesResponseBody extends TeaModel {
          */
         public Boolean getManaged() {
             return this.managed;
+        }
+
+        /**
+         * @return nextVersion
+         */
+        public String getNextVersion() {
+            return this.nextVersion;
         }
 
         /**
@@ -544,6 +566,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private String addonName; 
             private Long alertRuleCount; 
             private java.util.List<Conditions> conditions; 
+            private String config; 
             private String createTime; 
             private Long dashboardCount; 
             private String environmentId; 
@@ -552,6 +575,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private String installUserId; 
             private String language; 
             private Boolean managed; 
+            private String nextVersion; 
             private String regionId; 
             private String releaseId; 
             private String releaseName; 
@@ -588,6 +612,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * Config.
+             */
+            public Builder config(String config) {
+                this.config = config;
                 return this;
             }
 
@@ -673,6 +705,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
+                return this;
+            }
+
+            /**
+             * NextVersion.
+             */
+            public Builder nextVersion(String nextVersion) {
+                this.nextVersion = nextVersion;
                 return this;
             }
 
