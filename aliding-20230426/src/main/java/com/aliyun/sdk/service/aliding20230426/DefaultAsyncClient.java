@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.aliding20230426;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.aliding20230426.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -2374,6 +2375,52 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<InviteUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InvokeAssistant  InvokeAssistantRequest
+     * @return InvokeAssistantResponse
+     */
+    @Override
+    public CompletableFuture<InvokeAssistantResponse> invokeAssistant(InvokeAssistantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokeAssistant").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/assistant/invokeAssistant").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvokeAssistantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InvokeAssistantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<InvokeAssistantResponseBody> invokeAssistantWithResponseIterable(InvokeAssistantRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("InvokeAssistant").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/assistant/invokeAssistant").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        InvokeAssistantResponseBodyIterator iterator = InvokeAssistantResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of InvokeSkill  InvokeSkillRequest
+     * @return InvokeSkillResponse
+     */
+    @Override
+    public CompletableFuture<InvokeSkillResponse> invokeSkill(InvokeSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokeSkill").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/skill/invoke").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvokeSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InvokeSkillResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

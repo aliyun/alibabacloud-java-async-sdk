@@ -800,6 +800,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InviteUsersResponse> inviteUsers(InviteUsersRequest request);
 
     /**
+     * @param request the request parameters of InvokeAssistant  InvokeAssistantRequest
+     * @return InvokeAssistantResponse
+     */
+    CompletableFuture<InvokeAssistantResponse> invokeAssistant(InvokeAssistantRequest request);
+
+    ResponseIterable<InvokeAssistantResponseBody> invokeAssistantWithResponseIterable(InvokeAssistantRequest request);
+
+    /**
+     * @param request the request parameters of InvokeSkill  InvokeSkillRequest
+     * @return InvokeSkillResponse
+     */
+    CompletableFuture<InvokeSkillResponse> invokeSkill(InvokeSkillRequest request);
+
+    /**
      * @param request the request parameters of ListApplication  ListApplicationRequest
      * @return ListApplicationResponse
      */
