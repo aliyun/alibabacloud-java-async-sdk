@@ -1422,6 +1422,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAppServices  ListAppServicesRequest
+     * @return ListAppServicesResponse
+     */
+    @Override
+    public CompletableFuture<ListAppServicesResponse> listAppServices(ListAppServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAppServices").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/sam/service/listAppServices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAppServicesPage  ListAppServicesPageRequest
      * @return ListAppServicesPageResponse
      */

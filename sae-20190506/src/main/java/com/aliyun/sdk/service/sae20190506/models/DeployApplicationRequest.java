@@ -262,6 +262,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SwimlanePvtzDiscoverySvc")
+    private String swimlanePvtzDiscoverySvc;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
     @com.aliyun.core.annotation.Validation(maximum = 6000)
@@ -354,6 +358,7 @@ public class DeployApplicationRequest extends Request {
         this.serviceTags = builder.serviceTags;
         this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
+        this.swimlanePvtzDiscoverySvc = builder.swimlanePvtzDiscoverySvc;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
         this.tomcatConfig = builder.tomcatConfig;
@@ -804,6 +809,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return swimlanePvtzDiscoverySvc
+     */
+    public String getSwimlanePvtzDiscoverySvc() {
+        return this.swimlanePvtzDiscoverySvc;
+    }
+
+    /**
      * @return terminationGracePeriodSeconds
      */
     public Integer getTerminationGracePeriodSeconds() {
@@ -914,6 +926,7 @@ public class DeployApplicationRequest extends Request {
         private String serviceTags; 
         private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
+        private String swimlanePvtzDiscoverySvc; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
         private String tomcatConfig; 
@@ -989,6 +1002,7 @@ public class DeployApplicationRequest extends Request {
             this.serviceTags = request.serviceTags;
             this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
+            this.swimlanePvtzDiscoverySvc = request.swimlanePvtzDiscoverySvc;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
             this.tomcatConfig = request.tomcatConfig;
@@ -1839,6 +1853,15 @@ public class DeployApplicationRequest extends Request {
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
             this.slsConfigs = slsConfigs;
+            return this;
+        }
+
+        /**
+         * SwimlanePvtzDiscoverySvc.
+         */
+        public Builder swimlanePvtzDiscoverySvc(String swimlanePvtzDiscoverySvc) {
+            this.putBodyParameter("SwimlanePvtzDiscoverySvc", swimlanePvtzDiscoverySvc);
+            this.swimlanePvtzDiscoverySvc = swimlanePvtzDiscoverySvc;
             return this;
         }
 

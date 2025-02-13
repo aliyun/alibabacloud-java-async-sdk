@@ -490,6 +490,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppEventsResponse> listAppEvents(ListAppEventsRequest request);
 
     /**
+     * @param request the request parameters of ListAppServices  ListAppServicesRequest
+     * @return ListAppServicesResponse
+     */
+    CompletableFuture<ListAppServicesResponse> listAppServices(ListAppServicesRequest request);
+
+    /**
      * @param request the request parameters of ListAppServicesPage  ListAppServicesPageRequest
      * @return ListAppServicesPageResponse
      */

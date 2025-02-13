@@ -1150,6 +1150,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociateEip")
         private Boolean associateEip;
 
+        @com.aliyun.core.annotation.NameInMap("BaseAppId")
+        private String baseAppId;
+
         @com.aliyun.core.annotation.NameInMap("BatchWaitTime")
         private Integer batchWaitTime;
 
@@ -1192,9 +1195,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableNewArms")
         private Boolean enableNewArms;
 
-        @com.aliyun.core.annotation.NameInMap("Enabledle")
-        private Boolean enabledle;
-
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
@@ -1228,6 +1228,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MicroRegistrationConfig")
         private String microRegistrationConfig;
 
+        @com.aliyun.core.annotation.NameInMap("MicroserviceEngineConfig")
+        private String microserviceEngineConfig;
+
         @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
         private Integer minReadyInstanceRatio;
 
@@ -1254,6 +1257,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NasId")
         private String nasId;
+
+        @com.aliyun.core.annotation.NameInMap("NewSaeVersion")
+        private String newSaeVersion;
 
         @com.aliyun.core.annotation.NameInMap("OidcRoleName")
         private String oidcRoleName;
@@ -1333,6 +1339,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
+        @com.aliyun.core.annotation.NameInMap("SwimlanePvtzDiscovery")
+        private String swimlanePvtzDiscovery;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -1368,6 +1377,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.appSource = builder.appSource;
             this.associateEip = builder.associateEip;
+            this.baseAppId = builder.baseAppId;
             this.batchWaitTime = builder.batchWaitTime;
             this.command = builder.command;
             this.commandArgs = builder.commandArgs;
@@ -1382,7 +1392,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
             this.enableIdle = builder.enableIdle;
             this.enableNewArms = builder.enableNewArms;
-            this.enabledle = builder.enabledle;
             this.envs = builder.envs;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
@@ -1394,6 +1403,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.microRegistration = builder.microRegistration;
             this.microRegistrationConfig = builder.microRegistrationConfig;
+            this.microserviceEngineConfig = builder.microserviceEngineConfig;
             this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
             this.minReadyInstances = builder.minReadyInstances;
             this.mountDesc = builder.mountDesc;
@@ -1403,6 +1413,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.namespaceId = builder.namespaceId;
             this.nasConfigs = builder.nasConfigs;
             this.nasId = builder.nasId;
+            this.newSaeVersion = builder.newSaeVersion;
             this.oidcRoleName = builder.oidcRoleName;
             this.ossAkId = builder.ossAkId;
             this.ossAkSecret = builder.ossAkSecret;
@@ -1429,6 +1440,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.serviceTags = builder.serviceTags;
             this.sidecarContainersConfig = builder.sidecarContainersConfig;
             this.slsConfigs = builder.slsConfigs;
+            this.swimlanePvtzDiscovery = builder.swimlanePvtzDiscovery;
             this.tags = builder.tags;
             this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
             this.timezone = builder.timezone;
@@ -1495,6 +1507,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public Boolean getAssociateEip() {
             return this.associateEip;
+        }
+
+        /**
+         * @return baseAppId
+         */
+        public String getBaseAppId() {
+            return this.baseAppId;
         }
 
         /**
@@ -1596,13 +1615,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * @return enabledle
-         */
-        public Boolean getEnabledle() {
-            return this.enabledle;
-        }
-
-        /**
          * @return envs
          */
         public String getEnvs() {
@@ -1680,6 +1692,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return microserviceEngineConfig
+         */
+        public String getMicroserviceEngineConfig() {
+            return this.microserviceEngineConfig;
+        }
+
+        /**
          * @return minReadyInstanceRatio
          */
         public Integer getMinReadyInstanceRatio() {
@@ -1740,6 +1759,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getNasId() {
             return this.nasId;
+        }
+
+        /**
+         * @return newSaeVersion
+         */
+        public String getNewSaeVersion() {
+            return this.newSaeVersion;
         }
 
         /**
@@ -1925,6 +1951,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return swimlanePvtzDiscovery
+         */
+        public String getSwimlanePvtzDiscovery() {
+            return this.swimlanePvtzDiscovery;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -1995,6 +2028,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String appName; 
             private String appSource; 
             private Boolean associateEip; 
+            private String baseAppId; 
             private Integer batchWaitTime; 
             private String command; 
             private String commandArgs; 
@@ -2009,7 +2043,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Boolean enableGreyTagRoute; 
             private Boolean enableIdle; 
             private Boolean enableNewArms; 
-            private Boolean enabledle; 
             private String envs; 
             private String imagePullSecrets; 
             private String imageUrl; 
@@ -2021,6 +2054,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Integer memory; 
             private String microRegistration; 
             private String microRegistrationConfig; 
+            private String microserviceEngineConfig; 
             private Integer minReadyInstanceRatio; 
             private Integer minReadyInstances; 
             private java.util.List<MountDesc> mountDesc; 
@@ -2030,6 +2064,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String namespaceId; 
             private String nasConfigs; 
             private String nasId; 
+            private String newSaeVersion; 
             private String oidcRoleName; 
             private String ossAkId; 
             private String ossAkSecret; 
@@ -2056,6 +2091,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.Map<String, String> serviceTags; 
             private java.util.List<SidecarContainersConfig> sidecarContainersConfig; 
             private String slsConfigs; 
+            private String swimlanePvtzDiscovery; 
             private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
             private String timezone; 
@@ -2141,6 +2177,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder associateEip(Boolean associateEip) {
                 this.associateEip = associateEip;
+                return this;
+            }
+
+            /**
+             * BaseAppId.
+             */
+            public Builder baseAppId(String baseAppId) {
+                this.baseAppId = baseAppId;
                 return this;
             }
 
@@ -2308,14 +2352,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder enableNewArms(Boolean enableNewArms) {
                 this.enableNewArms = enableNewArms;
-                return this;
-            }
-
-            /**
-             * Enabledle.
-             */
-            public Builder enabledle(Boolean enabledle) {
-                this.enabledle = enabledle;
                 return this;
             }
 
@@ -2496,6 +2532,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
+             * MicroserviceEngineConfig.
+             */
+            public Builder microserviceEngineConfig(String microserviceEngineConfig) {
+                this.microserviceEngineConfig = microserviceEngineConfig;
+                return this;
+            }
+
+            /**
              * <p>The percentage of the minimum number of available instances. Valid values:</p>
              * <ul>
              * <li><strong>-1</strong>: the default value. This value indicates that the minimum number of available instances is not measured by percentage. If you do not configure this parameter, the default value <strong>-1</strong> is used.</li>
@@ -2596,6 +2640,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder nasId(String nasId) {
                 this.nasId = nasId;
+                return this;
+            }
+
+            /**
+             * NewSaeVersion.
+             */
+            public Builder newSaeVersion(String newSaeVersion) {
+                this.newSaeVersion = newSaeVersion;
                 return this;
             }
 
@@ -2894,6 +2946,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder slsConfigs(String slsConfigs) {
                 this.slsConfigs = slsConfigs;
+                return this;
+            }
+
+            /**
+             * SwimlanePvtzDiscovery.
+             */
+            public Builder swimlanePvtzDiscovery(String swimlanePvtzDiscovery) {
+                this.swimlanePvtzDiscovery = swimlanePvtzDiscovery;
                 return this;
             }
 
