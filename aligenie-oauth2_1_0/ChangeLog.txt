@@ -1,0 +1,3 @@
+2025-02-13 Version: 1.0.0
+- Generated java-async oauth2_1.0 for AliGenie.
+
