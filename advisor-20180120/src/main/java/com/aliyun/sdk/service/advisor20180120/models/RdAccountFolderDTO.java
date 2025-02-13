@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RdAccountFolderDTO} extends {@link TeaModel}
  *
  * <p>RdAccountFolderDTO</p>
@@ -15,13 +21,13 @@ public class RdAccountFolderDTO extends TeaModel {
     private Integer accountCount;
 
     @com.aliyun.core.annotation.NameInMap("AccountList")
-    private java.util.List < RdAccountDTO > accountList;
+    private java.util.List<RdAccountDTO> accountList;
 
     @com.aliyun.core.annotation.NameInMap("FolderId")
     private String folderId;
 
     @com.aliyun.core.annotation.NameInMap("FolderList")
-    private java.util.List < RdAccountFolderDTO > folderList;
+    private java.util.List<RdAccountFolderDTO> folderList;
 
     @com.aliyun.core.annotation.NameInMap("FolderName")
     private String folderName;
@@ -68,7 +74,7 @@ public class RdAccountFolderDTO extends TeaModel {
     /**
      * @return accountList
      */
-    public java.util.List < RdAccountDTO > getAccountList() {
+    public java.util.List<RdAccountDTO> getAccountList() {
         return this.accountList;
     }
 
@@ -82,7 +88,7 @@ public class RdAccountFolderDTO extends TeaModel {
     /**
      * @return folderList
      */
-    public java.util.List < RdAccountFolderDTO > getFolderList() {
+    public java.util.List<RdAccountFolderDTO> getFolderList() {
         return this.folderList;
     }
 
@@ -123,9 +129,9 @@ public class RdAccountFolderDTO extends TeaModel {
 
     public static final class Builder {
         private Integer accountCount; 
-        private java.util.List < RdAccountDTO > accountList; 
+        private java.util.List<RdAccountDTO> accountList; 
         private String folderId; 
-        private java.util.List < RdAccountFolderDTO > folderList; 
+        private java.util.List<RdAccountFolderDTO> folderList; 
         private String folderName; 
         private String resourceDirectoryId; 
         private String resourceDirectoryPath; 
@@ -143,7 +149,7 @@ public class RdAccountFolderDTO extends TeaModel {
         /**
          * AccountList.
          */
-        public Builder accountList(java.util.List < RdAccountDTO > accountList) {
+        public Builder accountList(java.util.List<RdAccountDTO> accountList) {
             this.accountList = accountList;
             return this;
         }
@@ -159,7 +165,7 @@ public class RdAccountFolderDTO extends TeaModel {
         /**
          * FolderList.
          */
-        public Builder folderList(java.util.List < RdAccountFolderDTO > folderList) {
+        public Builder folderList(java.util.List<RdAccountFolderDTO> folderList) {
             this.folderList = folderList;
             return this;
         }

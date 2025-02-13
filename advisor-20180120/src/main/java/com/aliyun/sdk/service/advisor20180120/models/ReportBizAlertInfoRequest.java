@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReportBizAlertInfoRequest} extends {@link RequestModel}
  *
  * <p>ReportBizAlertInfoRequest</p>
@@ -40,7 +46,7 @@ public class ReportBizAlertInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AlertUid")
-    private java.util.List < Long > alertUid;
+    private java.util.List<Long> alertUid;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
@@ -116,7 +122,7 @@ public class ReportBizAlertInfoRequest extends Request {
     /**
      * @return alertUid
      */
-    public java.util.List < Long > getAlertUid() {
+    public java.util.List<Long> getAlertUid() {
         return this.alertUid;
     }
 
@@ -134,7 +140,7 @@ public class ReportBizAlertInfoRequest extends Request {
         private String alertLabels; 
         private String alertScene; 
         private String alertToken; 
-        private java.util.List < Long > alertUid; 
+        private java.util.List<Long> alertUid; 
         private String language; 
 
         private Builder() {
@@ -163,7 +169,7 @@ public class ReportBizAlertInfoRequest extends Request {
         }
 
         /**
-         * AlertDetail.
+         * <p>This parameter is required.</p>
          */
         public Builder alertDetail(String alertDetail) {
             this.putQueryParameter("AlertDetail", alertDetail);
@@ -190,7 +196,7 @@ public class ReportBizAlertInfoRequest extends Request {
         }
 
         /**
-         * AlertScene.
+         * <p>This parameter is required.</p>
          */
         public Builder alertScene(String alertScene) {
             this.putQueryParameter("AlertScene", alertScene);
@@ -199,7 +205,7 @@ public class ReportBizAlertInfoRequest extends Request {
         }
 
         /**
-         * AlertToken.
+         * <p>This parameter is required.</p>
          */
         public Builder alertToken(String alertToken) {
             this.putQueryParameter("AlertToken", alertToken);
@@ -210,7 +216,7 @@ public class ReportBizAlertInfoRequest extends Request {
         /**
          * AlertUid.
          */
-        public Builder alertUid(java.util.List < Long > alertUid) {
+        public Builder alertUid(java.util.List<Long> alertUid) {
             String alertUidShrink = shrink(alertUid, "AlertUid", "json");
             this.putQueryParameter("AlertUid", alertUidShrink);
             this.alertUid = alertUid;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvicesPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdvicesPageResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdvicesPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvicesPageResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunId")
         private Long aliyunId;
@@ -297,7 +309,10 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
             }
 
             /**
-             * ID
+             * <p>ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -351,6 +366,12 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAdvicesPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvicesPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -359,7 +380,7 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -396,7 +417,7 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -410,7 +431,7 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
         public static final class Builder {
             private Long pageNo; 
             private Long pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Long total; 
 
             /**
@@ -432,7 +453,7 @@ public class DescribeAdvicesPageResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

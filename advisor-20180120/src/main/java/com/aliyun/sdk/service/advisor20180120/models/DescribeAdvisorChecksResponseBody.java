@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdvisorChecksResponseBody</p>
@@ -90,6 +96,12 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorChecksResponseBody</p>
+     */
     public static class AdvisorCheck extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -331,9 +343,15 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAdvisorChecksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorChecksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdvisorCheck")
-        private java.util.List < AdvisorCheck> advisorCheck;
+        private java.util.List<AdvisorCheck> advisorCheck;
 
         private Data(Builder builder) {
             this.advisorCheck = builder.advisorCheck;
@@ -350,17 +368,17 @@ public class DescribeAdvisorChecksResponseBody extends TeaModel {
         /**
          * @return advisorCheck
          */
-        public java.util.List < AdvisorCheck> getAdvisorCheck() {
+        public java.util.List<AdvisorCheck> getAdvisorCheck() {
             return this.advisorCheck;
         }
 
         public static final class Builder {
-            private java.util.List < AdvisorCheck> advisorCheck; 
+            private java.util.List<AdvisorCheck> advisorCheck; 
 
             /**
              * AdvisorCheck.
              */
-            public Builder advisorCheck(java.util.List < AdvisorCheck> advisorCheck) {
+            public Builder advisorCheck(java.util.List<AdvisorCheck> advisorCheck) {
                 this.advisorCheck = advisorCheck;
                 return this;
             }

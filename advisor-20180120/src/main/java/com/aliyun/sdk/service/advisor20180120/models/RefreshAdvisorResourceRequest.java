@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshAdvisorResourceRequest} extends {@link RequestModel}
  *
  * <p>RefreshAdvisorResourceRequest</p>
@@ -68,7 +74,10 @@ public class RefreshAdvisorResourceRequest extends Request {
         } 
 
         /**
-         * Product.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

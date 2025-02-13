@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvicesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAdvicesRequest</p>
@@ -18,6 +24,10 @@ public class DescribeAdvicesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckId")
     private String checkId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+    private Long checkPlanId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeAdviceId")
@@ -39,6 +49,7 @@ public class DescribeAdvicesRequest extends Request {
         super(builder);
         this.adviceId = builder.adviceId;
         this.checkId = builder.checkId;
+        this.checkPlanId = builder.checkPlanId;
         this.excludeAdviceId = builder.excludeAdviceId;
         this.language = builder.language;
         this.product = builder.product;
@@ -73,6 +84,13 @@ public class DescribeAdvicesRequest extends Request {
     }
 
     /**
+     * @return checkPlanId
+     */
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
+    /**
      * @return excludeAdviceId
      */
     public Long getExcludeAdviceId() {
@@ -103,6 +121,7 @@ public class DescribeAdvicesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAdvicesRequest, Builder> {
         private Long adviceId; 
         private String checkId; 
+        private Long checkPlanId; 
         private Long excludeAdviceId; 
         private String language; 
         private String product; 
@@ -116,6 +135,7 @@ public class DescribeAdvicesRequest extends Request {
             super(request);
             this.adviceId = request.adviceId;
             this.checkId = request.checkId;
+            this.checkPlanId = request.checkPlanId;
             this.excludeAdviceId = request.excludeAdviceId;
             this.language = request.language;
             this.product = request.product;
@@ -137,6 +157,15 @@ public class DescribeAdvicesRequest extends Request {
         public Builder checkId(String checkId) {
             this.putQueryParameter("CheckId", checkId);
             this.checkId = checkId;
+            return this;
+        }
+
+        /**
+         * CheckPlanId.
+         */
+        public Builder checkPlanId(Long checkPlanId) {
+            this.putQueryParameter("CheckPlanId", checkPlanId);
+            this.checkPlanId = checkPlanId;
             return this;
         }
 

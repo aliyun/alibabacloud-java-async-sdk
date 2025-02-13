@@ -1,3 +1,6 @@
+2025-02-13 Version: 1.0.6
+- Generated java-async 2018-01-20 for Advisor.
+
 2024-06-13 Version: 1.0.5
 - Generated java-async 2018-01-20 for Advisor.
 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvisorResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAdvisorResourcesResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAdvisorResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorResourcesResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
@@ -191,9 +203,15 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAdvisorResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorResourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Result(Builder builder) {
             this.resource = builder.resource;
@@ -210,17 +228,17 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }
@@ -232,6 +250,12 @@ public class DescribeAdvisorResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAdvisorResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAdvisorResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;

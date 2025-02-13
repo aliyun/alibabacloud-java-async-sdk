@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAdvicesPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeAdvicesPageRequest</p>
@@ -18,6 +24,10 @@ public class DescribeAdvicesPageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckId")
     private String checkId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPlanId")
+    private Long checkPlanId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
@@ -43,6 +53,7 @@ public class DescribeAdvicesPageRequest extends Request {
         super(builder);
         this.adviceId = builder.adviceId;
         this.checkId = builder.checkId;
+        this.checkPlanId = builder.checkPlanId;
         this.language = builder.language;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -75,6 +86,13 @@ public class DescribeAdvicesPageRequest extends Request {
      */
     public String getCheckId() {
         return this.checkId;
+    }
+
+    /**
+     * @return checkPlanId
+     */
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
     }
 
     /**
@@ -115,6 +133,7 @@ public class DescribeAdvicesPageRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAdvicesPageRequest, Builder> {
         private Long adviceId; 
         private String checkId; 
+        private Long checkPlanId; 
         private String language; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -129,6 +148,7 @@ public class DescribeAdvicesPageRequest extends Request {
             super(request);
             this.adviceId = request.adviceId;
             this.checkId = request.checkId;
+            this.checkPlanId = request.checkPlanId;
             this.language = request.language;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -151,6 +171,15 @@ public class DescribeAdvicesPageRequest extends Request {
         public Builder checkId(String checkId) {
             this.putQueryParameter("CheckId", checkId);
             this.checkId = checkId;
+            return this;
+        }
+
+        /**
+         * CheckPlanId.
+         */
+        public Builder checkPlanId(Long checkPlanId) {
+            this.putQueryParameter("CheckPlanId", checkPlanId);
+            this.checkPlanId = checkPlanId;
             return this;
         }
 

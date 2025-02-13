@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCostCheckResultsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCostCheckResultsResponseBody</p>
@@ -130,6 +136,12 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCostCheckResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCostCheckResultsResponseBody</p>
+     */
     public static class CheckItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdviceCount")
         private Integer adviceCount;
@@ -411,9 +423,15 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCostCheckResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCostCheckResultsResponseBody</p>
+     */
     public static class ViewGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckItems")
-        private java.util.List < CheckItems> checkItems;
+        private java.util.List<CheckItems> checkItems;
 
         @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
@@ -446,7 +464,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         /**
          * @return checkItems
          */
-        public java.util.List < CheckItems> getCheckItems() {
+        public java.util.List<CheckItems> getCheckItems() {
             return this.checkItems;
         }
 
@@ -479,7 +497,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CheckItems> checkItems; 
+            private java.util.List<CheckItems> checkItems; 
             private String groupCode; 
             private Integer groupCount; 
             private Float groupExpectedSavingCost; 
@@ -488,7 +506,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
             /**
              * CheckItems.
              */
-            public Builder checkItems(java.util.List < CheckItems> checkItems) {
+            public Builder checkItems(java.util.List<CheckItems> checkItems) {
                 this.checkItems = checkItems;
                 return this;
             }
@@ -532,6 +550,12 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCostCheckResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCostCheckResultsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdviceResourceCount")
         private Integer adviceResourceCount;
@@ -549,7 +573,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         private Integer totalCount;
 
         @com.aliyun.core.annotation.NameInMap("ViewGroup")
-        private java.util.List < ViewGroup> viewGroup;
+        private java.util.List<ViewGroup> viewGroup;
 
         @com.aliyun.core.annotation.NameInMap("WarningCount")
         private Integer warningCount;
@@ -610,7 +634,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         /**
          * @return viewGroup
          */
-        public java.util.List < ViewGroup> getViewGroup() {
+        public java.util.List<ViewGroup> getViewGroup() {
             return this.viewGroup;
         }
 
@@ -627,7 +651,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
             private Integer normalCount; 
             private Integer resourceCount; 
             private Integer totalCount; 
-            private java.util.List < ViewGroup> viewGroup; 
+            private java.util.List<ViewGroup> viewGroup; 
             private Integer warningCount; 
 
             /**
@@ -673,7 +697,7 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
             /**
              * ViewGroup.
              */
-            public Builder viewGroup(java.util.List < ViewGroup> viewGroup) {
+            public Builder viewGroup(java.util.List<ViewGroup> viewGroup) {
                 this.viewGroup = viewGroup;
                 return this;
             }

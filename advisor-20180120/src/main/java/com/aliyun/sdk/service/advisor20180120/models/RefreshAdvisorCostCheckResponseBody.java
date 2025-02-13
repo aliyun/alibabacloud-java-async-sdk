@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshAdvisorCostCheckResponseBody} extends {@link TeaModel}
  *
  * <p>RefreshAdvisorCostCheckResponseBody</p>
@@ -130,6 +136,12 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RefreshAdvisorCostCheckResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefreshAdvisorCostCheckResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandId")
         private String commandId;

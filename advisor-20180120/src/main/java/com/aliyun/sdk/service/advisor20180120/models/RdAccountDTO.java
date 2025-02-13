@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RdAccountDTO} extends {@link TeaModel}
  *
  * <p>RdAccountDTO</p>
@@ -27,7 +33,7 @@ public class RdAccountDTO extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private RdAccountDTO(Builder builder) {
         this.accountType = builder.accountType;
@@ -84,7 +90,7 @@ public class RdAccountDTO extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -94,7 +100,7 @@ public class RdAccountDTO extends TeaModel {
         private String displayName; 
         private Long id; 
         private String name; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
          * AccountType.
@@ -139,7 +145,7 @@ public class RdAccountDTO extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -150,6 +156,12 @@ public class RdAccountDTO extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RdAccountDTO} extends {@link TeaModel}
+     *
+     * <p>RdAccountDTO</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;

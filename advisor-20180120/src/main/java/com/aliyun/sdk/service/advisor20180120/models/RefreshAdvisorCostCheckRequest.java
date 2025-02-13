@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshAdvisorCostCheckRequest} extends {@link RequestModel}
  *
  * <p>RefreshAdvisorCostCheckRequest</p>
@@ -13,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RefreshAdvisorCostCheckRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssumeAliyunIdList")
-    private java.util.List < Long > assumeAliyunIdList;
+    private java.util.List<Long> assumeAliyunIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckIds")
-    private java.util.List < String > checkIds;
+    private java.util.List<String> checkIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Product")
@@ -29,7 +35,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     private RefreshAdvisorCostCheckRequest(Builder builder) {
         super(builder);
@@ -56,14 +62,14 @@ public class RefreshAdvisorCostCheckRequest extends Request {
     /**
      * @return assumeAliyunIdList
      */
-    public java.util.List < Long > getAssumeAliyunIdList() {
+    public java.util.List<Long> getAssumeAliyunIdList() {
         return this.assumeAliyunIdList;
     }
 
     /**
      * @return checkIds
      */
-    public java.util.List < String > getCheckIds() {
+    public java.util.List<String> getCheckIds() {
         return this.checkIds;
     }
 
@@ -84,16 +90,16 @@ public class RefreshAdvisorCostCheckRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
     public static final class Builder extends Request.Builder<RefreshAdvisorCostCheckRequest, Builder> {
-        private java.util.List < Long > assumeAliyunIdList; 
-        private java.util.List < String > checkIds; 
+        private java.util.List<Long> assumeAliyunIdList; 
+        private java.util.List<String> checkIds; 
         private String product; 
         private Boolean refreshResource; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
 
         private Builder() {
             super();
@@ -111,7 +117,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
         /**
          * AssumeAliyunIdList.
          */
-        public Builder assumeAliyunIdList(java.util.List < Long > assumeAliyunIdList) {
+        public Builder assumeAliyunIdList(java.util.List<Long> assumeAliyunIdList) {
             String assumeAliyunIdListShrink = shrink(assumeAliyunIdList, "AssumeAliyunIdList", "json");
             this.putQueryParameter("AssumeAliyunIdList", assumeAliyunIdListShrink);
             this.assumeAliyunIdList = assumeAliyunIdList;
@@ -121,7 +127,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
         /**
          * CheckIds.
          */
-        public Builder checkIds(java.util.List < String > checkIds) {
+        public Builder checkIds(java.util.List<String> checkIds) {
             String checkIdsShrink = shrink(checkIds, "CheckIds", "json");
             this.putQueryParameter("CheckIds", checkIdsShrink);
             this.checkIds = checkIds;
@@ -149,7 +155,7 @@ public class RefreshAdvisorCostCheckRequest extends Request {
         /**
          * ResourceIds.
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
             this.putQueryParameter("ResourceIds", resourceIdsShrink);
             this.resourceIds = resourceIds;
