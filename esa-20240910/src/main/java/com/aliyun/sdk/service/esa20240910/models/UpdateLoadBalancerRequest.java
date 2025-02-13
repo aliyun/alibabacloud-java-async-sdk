@@ -30,6 +30,10 @@ public class UpdateLoadBalancerRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
+    private Boolean enabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallbackPool")
     private Long fallbackPool;
 
@@ -59,10 +63,6 @@ public class UpdateLoadBalancerRequest extends Request {
     private String sessionAffinity;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SessionAffinityAttributes")
-    private SessionAffinityAttributes sessionAffinityAttributes;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
@@ -84,6 +84,7 @@ public class UpdateLoadBalancerRequest extends Request {
         this.adaptiveRouting = builder.adaptiveRouting;
         this.defaultPools = builder.defaultPools;
         this.description = builder.description;
+        this.enabled = builder.enabled;
         this.fallbackPool = builder.fallbackPool;
         this.id = builder.id;
         this.monitor = builder.monitor;
@@ -91,7 +92,6 @@ public class UpdateLoadBalancerRequest extends Request {
         this.regionPools = builder.regionPools;
         this.rules = builder.rules;
         this.sessionAffinity = builder.sessionAffinity;
-        this.sessionAffinityAttributes = builder.sessionAffinityAttributes;
         this.siteId = builder.siteId;
         this.steeringPolicy = builder.steeringPolicy;
         this.subRegionPools = builder.subRegionPools;
@@ -130,6 +130,13 @@ public class UpdateLoadBalancerRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enabled
+     */
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     /**
@@ -182,13 +189,6 @@ public class UpdateLoadBalancerRequest extends Request {
     }
 
     /**
-     * @return sessionAffinityAttributes
-     */
-    public SessionAffinityAttributes getSessionAffinityAttributes() {
-        return this.sessionAffinityAttributes;
-    }
-
-    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -220,6 +220,7 @@ public class UpdateLoadBalancerRequest extends Request {
         private AdaptiveRouting adaptiveRouting; 
         private java.util.List<Long> defaultPools; 
         private String description; 
+        private Boolean enabled; 
         private Long fallbackPool; 
         private Long id; 
         private Monitor monitor; 
@@ -227,7 +228,6 @@ public class UpdateLoadBalancerRequest extends Request {
         private Object regionPools; 
         private java.util.List<Rules> rules; 
         private String sessionAffinity; 
-        private SessionAffinityAttributes sessionAffinityAttributes; 
         private Long siteId; 
         private String steeringPolicy; 
         private Object subRegionPools; 
@@ -242,6 +242,7 @@ public class UpdateLoadBalancerRequest extends Request {
             this.adaptiveRouting = request.adaptiveRouting;
             this.defaultPools = request.defaultPools;
             this.description = request.description;
+            this.enabled = request.enabled;
             this.fallbackPool = request.fallbackPool;
             this.id = request.id;
             this.monitor = request.monitor;
@@ -249,7 +250,6 @@ public class UpdateLoadBalancerRequest extends Request {
             this.regionPools = request.regionPools;
             this.rules = request.rules;
             this.sessionAffinity = request.sessionAffinity;
-            this.sessionAffinityAttributes = request.sessionAffinityAttributes;
             this.siteId = request.siteId;
             this.steeringPolicy = request.steeringPolicy;
             this.subRegionPools = request.subRegionPools;
@@ -282,6 +282,15 @@ public class UpdateLoadBalancerRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Enabled.
+         */
+        public Builder enabled(Boolean enabled) {
+            this.putQueryParameter("Enabled", enabled);
+            this.enabled = enabled;
             return this;
         }
 
@@ -359,16 +368,6 @@ public class UpdateLoadBalancerRequest extends Request {
         public Builder sessionAffinity(String sessionAffinity) {
             this.putQueryParameter("SessionAffinity", sessionAffinity);
             this.sessionAffinity = sessionAffinity;
-            return this;
-        }
-
-        /**
-         * SessionAffinityAttributes.
-         */
-        public Builder sessionAffinityAttributes(SessionAffinityAttributes sessionAffinityAttributes) {
-            String sessionAffinityAttributesShrink = shrink(sessionAffinityAttributes, "SessionAffinityAttributes", "json");
-            this.putQueryParameter("SessionAffinityAttributes", sessionAffinityAttributesShrink);
-            this.sessionAffinityAttributes = sessionAffinityAttributes;
             return this;
         }
 
@@ -1048,93 +1047,6 @@ public class UpdateLoadBalancerRequest extends Request {
 
             public Rules build() {
                 return new Rules(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link UpdateLoadBalancerRequest} extends {@link TeaModel}
-     *
-     * <p>UpdateLoadBalancerRequest</p>
-     */
-    public static class SessionAffinityAttributes extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("SameSite")
-        private String sameSite;
-
-        @com.aliyun.core.annotation.NameInMap("Secure")
-        private String secure;
-
-        @com.aliyun.core.annotation.NameInMap("ZeroDowntimeFailover")
-        private String zeroDowntimeFailover;
-
-        private SessionAffinityAttributes(Builder builder) {
-            this.sameSite = builder.sameSite;
-            this.secure = builder.secure;
-            this.zeroDowntimeFailover = builder.zeroDowntimeFailover;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SessionAffinityAttributes create() {
-            return builder().build();
-        }
-
-        /**
-         * @return sameSite
-         */
-        public String getSameSite() {
-            return this.sameSite;
-        }
-
-        /**
-         * @return secure
-         */
-        public String getSecure() {
-            return this.secure;
-        }
-
-        /**
-         * @return zeroDowntimeFailover
-         */
-        public String getZeroDowntimeFailover() {
-            return this.zeroDowntimeFailover;
-        }
-
-        public static final class Builder {
-            private String sameSite; 
-            private String secure; 
-            private String zeroDowntimeFailover; 
-
-            /**
-             * SameSite.
-             */
-            public Builder sameSite(String sameSite) {
-                this.sameSite = sameSite;
-                return this;
-            }
-
-            /**
-             * Secure.
-             */
-            public Builder secure(String secure) {
-                this.secure = secure;
-                return this;
-            }
-
-            /**
-             * ZeroDowntimeFailover.
-             */
-            public Builder zeroDowntimeFailover(String zeroDowntimeFailover) {
-                this.zeroDowntimeFailover = zeroDowntimeFailover;
-                return this;
-            }
-
-            public SessionAffinityAttributes build() {
-                return new SessionAffinityAttributes(this);
             } 
 
         } 

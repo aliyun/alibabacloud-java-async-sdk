@@ -797,93 +797,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
      *
      * <p>ListLoadBalancersResponseBody</p>
      */
-    public static class SessionAffinityAttributes extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("SameSite")
-        private String sameSite;
-
-        @com.aliyun.core.annotation.NameInMap("Secure")
-        private String secure;
-
-        @com.aliyun.core.annotation.NameInMap("ZeroDowntimeFailover")
-        private String zeroDowntimeFailover;
-
-        private SessionAffinityAttributes(Builder builder) {
-            this.sameSite = builder.sameSite;
-            this.secure = builder.secure;
-            this.zeroDowntimeFailover = builder.zeroDowntimeFailover;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SessionAffinityAttributes create() {
-            return builder().build();
-        }
-
-        /**
-         * @return sameSite
-         */
-        public String getSameSite() {
-            return this.sameSite;
-        }
-
-        /**
-         * @return secure
-         */
-        public String getSecure() {
-            return this.secure;
-        }
-
-        /**
-         * @return zeroDowntimeFailover
-         */
-        public String getZeroDowntimeFailover() {
-            return this.zeroDowntimeFailover;
-        }
-
-        public static final class Builder {
-            private String sameSite; 
-            private String secure; 
-            private String zeroDowntimeFailover; 
-
-            /**
-             * SameSite.
-             */
-            public Builder sameSite(String sameSite) {
-                this.sameSite = sameSite;
-                return this;
-            }
-
-            /**
-             * Secure.
-             */
-            public Builder secure(String secure) {
-                this.secure = secure;
-                return this;
-            }
-
-            /**
-             * ZeroDowntimeFailover.
-             */
-            public Builder zeroDowntimeFailover(String zeroDowntimeFailover) {
-                this.zeroDowntimeFailover = zeroDowntimeFailover;
-                return this;
-            }
-
-            public SessionAffinityAttributes build() {
-                return new SessionAffinityAttributes(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link ListLoadBalancersResponseBody} extends {@link TeaModel}
-     *
-     * <p>ListLoadBalancersResponseBody</p>
-     */
     public static class LoadBalancers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdaptiveRouting")
         private AdaptiveRouting adaptiveRouting;
@@ -921,9 +834,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionAffinity")
         private String sessionAffinity;
 
-        @com.aliyun.core.annotation.NameInMap("SessionAffinityAttributes")
-        private SessionAffinityAttributes sessionAffinityAttributes;
-
         @com.aliyun.core.annotation.NameInMap("SiteId")
         private Long siteId;
 
@@ -952,7 +862,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             this.regionPools = builder.regionPools;
             this.rules = builder.rules;
             this.sessionAffinity = builder.sessionAffinity;
-            this.sessionAffinityAttributes = builder.sessionAffinityAttributes;
             this.siteId = builder.siteId;
             this.status = builder.status;
             this.steeringPolicy = builder.steeringPolicy;
@@ -1053,13 +962,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * @return sessionAffinityAttributes
-         */
-        public SessionAffinityAttributes getSessionAffinityAttributes() {
-            return this.sessionAffinityAttributes;
-        }
-
-        /**
          * @return siteId
          */
         public Long getSiteId() {
@@ -1107,7 +1009,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private Object regionPools; 
             private java.util.List<Rules> rules; 
             private String sessionAffinity; 
-            private SessionAffinityAttributes sessionAffinityAttributes; 
             private Long siteId; 
             private String status; 
             private String steeringPolicy; 
@@ -1215,14 +1116,6 @@ public class ListLoadBalancersResponseBody extends TeaModel {
              */
             public Builder sessionAffinity(String sessionAffinity) {
                 this.sessionAffinity = sessionAffinity;
-                return this;
-            }
-
-            /**
-             * SessionAffinityAttributes.
-             */
-            public Builder sessionAffinityAttributes(SessionAffinityAttributes sessionAffinityAttributes) {
-                this.sessionAffinityAttributes = sessionAffinityAttributes;
                 return this;
             }
 

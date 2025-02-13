@@ -60,10 +60,6 @@ public class SetCertificateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Update")
-    private Boolean update;
-
     private SetCertificateRequest(Builder builder) {
         super(builder);
         this.casId = builder.casId;
@@ -76,7 +72,6 @@ public class SetCertificateRequest extends Request {
         this.securityToken = builder.securityToken;
         this.siteId = builder.siteId;
         this.type = builder.type;
-        this.update = builder.update;
     }
 
     public static Builder builder() {
@@ -162,13 +157,6 @@ public class SetCertificateRequest extends Request {
         return this.type;
     }
 
-    /**
-     * @return update
-     */
-    public Boolean getUpdate() {
-        return this.update;
-    }
-
     public static final class Builder extends Request.Builder<SetCertificateRequest, Builder> {
         private Long casId; 
         private String certificate; 
@@ -180,7 +168,6 @@ public class SetCertificateRequest extends Request {
         private String securityToken; 
         private Long siteId; 
         private String type; 
-        private Boolean update; 
 
         private Builder() {
             super();
@@ -198,7 +185,6 @@ public class SetCertificateRequest extends Request {
             this.securityToken = request.securityToken;
             this.siteId = request.siteId;
             this.type = request.type;
-            this.update = request.update;
         } 
 
         /**
@@ -318,18 +304,6 @@ public class SetCertificateRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
             this.type = type;
-            return this;
-        }
-
-        /**
-         * <p>Specifies whether to update the certificate.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        public Builder update(Boolean update) {
-            this.putBodyParameter("Update", update);
-            this.update = update;
             return this;
         }
 
