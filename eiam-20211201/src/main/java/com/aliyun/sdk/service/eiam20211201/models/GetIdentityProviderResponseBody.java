@@ -467,13 +467,21 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppSecret")
         private String appSecret;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptKey")
+        private String encryptKey;
+
         @com.aliyun.core.annotation.NameInMap("EnterpriseNumber")
         private String enterpriseNumber;
+
+        @com.aliyun.core.annotation.NameInMap("VerificationToken")
+        private String verificationToken;
 
         private LarkConfig(Builder builder) {
             this.appId = builder.appId;
             this.appSecret = builder.appSecret;
+            this.encryptKey = builder.encryptKey;
             this.enterpriseNumber = builder.enterpriseNumber;
+            this.verificationToken = builder.verificationToken;
         }
 
         public static Builder builder() {
@@ -499,16 +507,32 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return encryptKey
+         */
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        /**
          * @return enterpriseNumber
          */
         public String getEnterpriseNumber() {
             return this.enterpriseNumber;
         }
 
+        /**
+         * @return verificationToken
+         */
+        public String getVerificationToken() {
+            return this.verificationToken;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appSecret; 
+            private String encryptKey; 
             private String enterpriseNumber; 
+            private String verificationToken; 
 
             /**
              * <p>IDaaS EIAM 飞书自建应用的corpId</p>
@@ -533,6 +557,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
+             * EncryptKey.
+             */
+            public Builder encryptKey(String encryptKey) {
+                this.encryptKey = encryptKey;
+                return this;
+            }
+
+            /**
              * <p>IDaaS EIAM 飞书企业编码</p>
              * 
              * <strong>example:</strong>
@@ -540,6 +572,14 @@ public class GetIdentityProviderResponseBody extends TeaModel {
              */
             public Builder enterpriseNumber(String enterpriseNumber) {
                 this.enterpriseNumber = enterpriseNumber;
+                return this;
+            }
+
+            /**
+             * VerificationToken.
+             */
+            public Builder verificationToken(String verificationToken) {
+                this.verificationToken = verificationToken;
                 return this;
             }
 

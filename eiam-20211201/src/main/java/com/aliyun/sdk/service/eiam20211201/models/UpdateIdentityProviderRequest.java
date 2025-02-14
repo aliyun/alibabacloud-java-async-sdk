@@ -410,9 +410,17 @@ public class UpdateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AppSecret")
         private String appSecret;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptKey")
+        private String encryptKey;
+
+        @com.aliyun.core.annotation.NameInMap("VerificationToken")
+        private String verificationToken;
+
         private LarkConfig(Builder builder) {
             this.appId = builder.appId;
             this.appSecret = builder.appSecret;
+            this.encryptKey = builder.encryptKey;
+            this.verificationToken = builder.verificationToken;
         }
 
         public static Builder builder() {
@@ -437,9 +445,25 @@ public class UpdateIdentityProviderRequest extends Request {
             return this.appSecret;
         }
 
+        /**
+         * @return encryptKey
+         */
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        /**
+         * @return verificationToken
+         */
+        public String getVerificationToken() {
+            return this.verificationToken;
+        }
+
         public static final class Builder {
             private String appId; 
             private String appSecret; 
+            private String encryptKey; 
+            private String verificationToken; 
 
             /**
              * AppId.
@@ -458,6 +482,22 @@ public class UpdateIdentityProviderRequest extends Request {
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
+                return this;
+            }
+
+            /**
+             * EncryptKey.
+             */
+            public Builder encryptKey(String encryptKey) {
+                this.encryptKey = encryptKey;
+                return this;
+            }
+
+            /**
+             * VerificationToken.
+             */
+            public Builder verificationToken(String verificationToken) {
+                this.verificationToken = verificationToken;
                 return this;
             }
 

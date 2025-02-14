@@ -41,12 +41,24 @@ public class ListApplicationsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("M2MClientStatus")
+    private String m2MClientStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
+    private String resourceServerStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SsoType")
+    private String ssoType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -60,8 +72,11 @@ public class ListApplicationsRequest extends Request {
         this.applicationName = builder.applicationName;
         this.authorizationType = builder.authorizationType;
         this.instanceId = builder.instanceId;
+        this.m2MClientStatus = builder.m2MClientStatus;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceServerStatus = builder.resourceServerStatus;
+        this.ssoType = builder.ssoType;
         this.status = builder.status;
     }
 
@@ -114,6 +129,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return m2MClientStatus
+     */
+    public String getM2MClientStatus() {
+        return this.m2MClientStatus;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -125,6 +147,20 @@ public class ListApplicationsRequest extends Request {
      */
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return resourceServerStatus
+     */
+    public String getResourceServerStatus() {
+        return this.resourceServerStatus;
+    }
+
+    /**
+     * @return ssoType
+     */
+    public String getSsoType() {
+        return this.ssoType;
     }
 
     /**
@@ -140,8 +176,11 @@ public class ListApplicationsRequest extends Request {
         private String applicationName; 
         private String authorizationType; 
         private String instanceId; 
+        private String m2MClientStatus; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String resourceServerStatus; 
+        private String ssoType; 
         private String status; 
 
         private Builder() {
@@ -155,8 +194,11 @@ public class ListApplicationsRequest extends Request {
             this.applicationName = request.applicationName;
             this.authorizationType = request.authorizationType;
             this.instanceId = request.instanceId;
+            this.m2MClientStatus = request.m2MClientStatus;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceServerStatus = request.resourceServerStatus;
+            this.ssoType = request.ssoType;
             this.status = request.status;
         } 
 
@@ -223,6 +265,15 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
+         * M2MClientStatus.
+         */
+        public Builder m2MClientStatus(String m2MClientStatus) {
+            this.putQueryParameter("M2MClientStatus", m2MClientStatus);
+            this.m2MClientStatus = m2MClientStatus;
+            return this;
+        }
+
+        /**
          * <p>The number of the page to return.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +294,24 @@ public class ListApplicationsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceServerStatus.
+         */
+        public Builder resourceServerStatus(String resourceServerStatus) {
+            this.putQueryParameter("ResourceServerStatus", resourceServerStatus);
+            this.resourceServerStatus = resourceServerStatus;
+            return this;
+        }
+
+        /**
+         * SsoType.
+         */
+        public Builder ssoType(String ssoType) {
+            this.putQueryParameter("SsoType", ssoType);
+            this.ssoType = ssoType;
             return this;
         }
 

@@ -148,6 +148,9 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogoUrl")
         private String logoUrl;
 
+        @com.aliyun.core.annotation.NameInMap("PeriodicSyncStatus")
+        private String periodicSyncStatus;
+
         @com.aliyun.core.annotation.NameInMap("UdPullStatus")
         private String udPullStatus;
 
@@ -176,6 +179,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             this.lastStatusCheckJobResult = builder.lastStatusCheckJobResult;
             this.lockReason = builder.lockReason;
             this.logoUrl = builder.logoUrl;
+            this.periodicSyncStatus = builder.periodicSyncStatus;
             this.udPullStatus = builder.udPullStatus;
             this.udPullTargetScope = builder.udPullTargetScope;
             this.udPushStatus = builder.udPushStatus;
@@ -296,6 +300,13 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
+         * @return periodicSyncStatus
+         */
+        public String getPeriodicSyncStatus() {
+            return this.periodicSyncStatus;
+        }
+
+        /**
          * @return udPullStatus
          */
         public String getUdPullStatus() {
@@ -339,6 +350,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             private String lastStatusCheckJobResult; 
             private String lockReason; 
             private String logoUrl; 
+            private String periodicSyncStatus; 
             private String udPullStatus; 
             private String udPullTargetScope; 
             private String udPushStatus; 
@@ -491,6 +503,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
              */
             public Builder logoUrl(String logoUrl) {
                 this.logoUrl = logoUrl;
+                return this;
+            }
+
+            /**
+             * PeriodicSyncStatus.
+             */
+            public Builder periodicSyncStatus(String periodicSyncStatus) {
+                this.periodicSyncStatus = periodicSyncStatus;
                 return this;
             }
 

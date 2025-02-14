@@ -125,8 +125,17 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogoUrl")
         private String logoUrl;
 
+        @com.aliyun.core.annotation.NameInMap("M2MClientStatus")
+        private String m2MClientStatus;
+
         @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
         private String managedServiceCode;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceServerIdentifier")
+        private String resourceServerIdentifier;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
+        private String resourceServerStatus;
 
         @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
@@ -154,7 +163,10 @@ public class GetApplicationResponseBody extends TeaModel {
             this.features = builder.features;
             this.instanceId = builder.instanceId;
             this.logoUrl = builder.logoUrl;
+            this.m2MClientStatus = builder.m2MClientStatus;
             this.managedServiceCode = builder.managedServiceCode;
+            this.resourceServerIdentifier = builder.resourceServerIdentifier;
+            this.resourceServerStatus = builder.resourceServerStatus;
             this.serviceManaged = builder.serviceManaged;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
@@ -261,10 +273,31 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return m2MClientStatus
+         */
+        public String getM2MClientStatus() {
+            return this.m2MClientStatus;
+        }
+
+        /**
          * @return managedServiceCode
          */
         public String getManagedServiceCode() {
             return this.managedServiceCode;
+        }
+
+        /**
+         * @return resourceServerIdentifier
+         */
+        public String getResourceServerIdentifier() {
+            return this.resourceServerIdentifier;
+        }
+
+        /**
+         * @return resourceServerStatus
+         */
+        public String getResourceServerStatus() {
+            return this.resourceServerStatus;
         }
 
         /**
@@ -309,7 +342,10 @@ public class GetApplicationResponseBody extends TeaModel {
             private String features; 
             private String instanceId; 
             private String logoUrl; 
+            private String m2MClientStatus; 
             private String managedServiceCode; 
+            private String resourceServerIdentifier; 
+            private String resourceServerStatus; 
             private Boolean serviceManaged; 
             private String ssoType; 
             private String status; 
@@ -473,6 +509,14 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
+             * M2MClientStatus.
+             */
+            public Builder m2MClientStatus(String m2MClientStatus) {
+                this.m2MClientStatus = m2MClientStatus;
+                return this;
+            }
+
+            /**
              * <p>The service code of the cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
@@ -480,6 +524,22 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
+                return this;
+            }
+
+            /**
+             * ResourceServerIdentifier.
+             */
+            public Builder resourceServerIdentifier(String resourceServerIdentifier) {
+                this.resourceServerIdentifier = resourceServerIdentifier;
+                return this;
+            }
+
+            /**
+             * ResourceServerStatus.
+             */
+            public Builder resourceServerStatus(String resourceServerStatus) {
+                this.resourceServerStatus = resourceServerStatus;
                 return this;
             }
 

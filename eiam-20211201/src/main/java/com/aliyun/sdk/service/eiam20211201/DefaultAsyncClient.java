@@ -1060,6 +1060,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</p>
+     * 
      * @param request the request parameters of GetInstanceLicense  GetInstanceLicenseRequest
      * @return GetInstanceLicenseResponse
      */
