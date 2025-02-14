@@ -225,6 +225,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataLakeDatabaseResponse> createDataLakeDatabase(CreateDataLakeDatabaseRequest request);
 
     /**
+     * @param request the request parameters of CreateDataLakeFunction  CreateDataLakeFunctionRequest
+     * @return CreateDataLakeFunctionResponse
+     */
+    CompletableFuture<CreateDataLakeFunctionResponse> createDataLakeFunction(CreateDataLakeFunctionRequest request);
+
+    /**
      * @param request the request parameters of CreateDataLakePartition  CreateDataLakePartitionRequest
      * @return CreateDataLakePartitionResponse
      */
@@ -424,6 +430,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataLakeDatabaseResponse
      */
     CompletableFuture<DeleteDataLakeDatabaseResponse> deleteDataLakeDatabase(DeleteDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataLakeFunction  DeleteDataLakeFunctionRequest
+     * @return DeleteDataLakeFunctionResponse
+     */
+    CompletableFuture<DeleteDataLakeFunctionResponse> deleteDataLakeFunction(DeleteDataLakeFunctionRequest request);
 
     /**
      * @param request the request parameters of DeleteDataLakePartition  DeleteDataLakePartitionRequest
@@ -767,6 +779,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDataLakeDatabaseResponse
      */
     CompletableFuture<GetDataLakeDatabaseResponse> getDataLakeDatabase(GetDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of GetDataLakeFunction  GetDataLakeFunctionRequest
+     * @return GetDataLakeFunctionResponse
+     */
+    CompletableFuture<GetDataLakeFunctionResponse> getDataLakeFunction(GetDataLakeFunctionRequest request);
 
     /**
      * @param request the request parameters of GetDataLakePartition  GetDataLakePartitionRequest
@@ -1199,6 +1217,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataLakeDatabaseResponse
      */
     CompletableFuture<ListDataLakeDatabaseResponse> listDataLakeDatabase(ListDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeFunction  ListDataLakeFunctionRequest
+     * @return ListDataLakeFunctionResponse
+     */
+    CompletableFuture<ListDataLakeFunctionResponse> listDataLakeFunction(ListDataLakeFunctionRequest request);
+
+    /**
+     * @param request the request parameters of ListDataLakeFunctionName  ListDataLakeFunctionNameRequest
+     * @return ListDataLakeFunctionNameResponse
+     */
+    CompletableFuture<ListDataLakeFunctionNameResponse> listDataLakeFunctionName(ListDataLakeFunctionNameRequest request);
 
     /**
      * @param request the request parameters of ListDataLakePartition  ListDataLakePartitionRequest
@@ -1754,6 +1784,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataLakeDatabaseResponse
      */
     CompletableFuture<UpdateDataLakeDatabaseResponse> updateDataLakeDatabase(UpdateDataLakeDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataLakeFunction  UpdateDataLakeFunctionRequest
+     * @return UpdateDataLakeFunctionResponse
+     */
+    CompletableFuture<UpdateDataLakeFunctionResponse> updateDataLakeFunction(UpdateDataLakeFunctionRequest request);
 
     /**
      * @param request the request parameters of UpdateDataLakePartition  UpdateDataLakePartitionRequest
