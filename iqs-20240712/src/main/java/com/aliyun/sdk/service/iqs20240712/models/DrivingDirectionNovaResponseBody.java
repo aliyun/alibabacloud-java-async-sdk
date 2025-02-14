@@ -17,20 +17,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DrivingDirectionNovaResponseBody</p>
  */
 public class DrivingDirectionNovaResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("code")
-    private String code;
-
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
-
-    @com.aliyun.core.annotation.NameInMap("errorCode")
-    private Integer errorCode;
-
-    @com.aliyun.core.annotation.NameInMap("errorMessage")
-    private String errorMessage;
-
-    @com.aliyun.core.annotation.NameInMap("message")
-    private String message;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -39,11 +27,7 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
     private Boolean success;
 
     private DrivingDirectionNovaResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.errorCode = builder.errorCode;
-        this.errorMessage = builder.errorMessage;
-        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -57,38 +41,10 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return errorCode
-     */
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
-     * @return errorMessage
-     */
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
     }
 
     /**
@@ -106,51 +62,15 @@ public class DrivingDirectionNovaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
         private Data data; 
-        private Integer errorCode; 
-        private String errorMessage; 
-        private String message; 
         private String requestId; 
         private Boolean success; 
-
-        /**
-         * code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * data.
          */
         public Builder data(Data data) {
             this.data = data;
-            return this;
-        }
-
-        /**
-         * errorCode.
-         */
-        public Builder errorCode(Integer errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * errorMessage.
-         */
-        public Builder errorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-
-        /**
-         * message.
-         */
-        public Builder message(String message) {
-            this.message = message;
             return this;
         }
 
