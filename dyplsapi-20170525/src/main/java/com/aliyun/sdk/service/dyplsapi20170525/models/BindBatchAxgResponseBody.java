@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -286,7 +291,7 @@ public class BindBatchAxgResponseBody extends TeaModel {
      */
     public static class SecretBindList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretBind")
-        private java.util.List < SecretBind> secretBind;
+        private java.util.List<SecretBind> secretBind;
 
         private SecretBindList(Builder builder) {
             this.secretBind = builder.secretBind;
@@ -303,17 +308,17 @@ public class BindBatchAxgResponseBody extends TeaModel {
         /**
          * @return secretBind
          */
-        public java.util.List < SecretBind> getSecretBind() {
+        public java.util.List<SecretBind> getSecretBind() {
             return this.secretBind;
         }
 
         public static final class Builder {
-            private java.util.List < SecretBind> secretBind; 
+            private java.util.List<SecretBind> secretBind; 
 
             /**
              * SecretBind.
              */
-            public Builder secretBind(java.util.List < SecretBind> secretBind) {
+            public Builder secretBind(java.util.List<SecretBind> secretBind) {
                 this.secretBind = secretBind;
                 return this;
             }

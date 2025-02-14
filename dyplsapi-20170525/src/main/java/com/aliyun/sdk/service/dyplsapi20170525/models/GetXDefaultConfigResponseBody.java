@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -438,10 +443,10 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         private String GNFlag;
 
         @com.aliyun.core.annotation.NameInMap("ReachJson")
-        private java.util.List < ReachJson> reachJson;
+        private java.util.List<ReachJson> reachJson;
 
         @com.aliyun.core.annotation.NameInMap("SequenceCall")
-        private java.util.List < SequenceCall> sequenceCall;
+        private java.util.List<SequenceCall> sequenceCall;
 
         @com.aliyun.core.annotation.NameInMap("SequenceEndTime")
         private String sequenceEndTime;
@@ -491,14 +496,14 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         /**
          * @return reachJson
          */
-        public java.util.List < ReachJson> getReachJson() {
+        public java.util.List<ReachJson> getReachJson() {
             return this.reachJson;
         }
 
         /**
          * @return sequenceCall
          */
-        public java.util.List < SequenceCall> getSequenceCall() {
+        public java.util.List<SequenceCall> getSequenceCall() {
             return this.sequenceCall;
         }
 
@@ -533,8 +538,8 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String callAbility; 
             private String GNFlag; 
-            private java.util.List < ReachJson> reachJson; 
-            private java.util.List < SequenceCall> sequenceCall; 
+            private java.util.List<ReachJson> reachJson; 
+            private java.util.List<SequenceCall> sequenceCall; 
             private String sequenceEndTime; 
             private String sequenceStartTime; 
             private String smsAbility; 
@@ -565,7 +570,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             /**
              * <p>企业名片规则控制参数</p>
              */
-            public Builder reachJson(java.util.List < ReachJson> reachJson) {
+            public Builder reachJson(java.util.List<ReachJson> reachJson) {
                 this.reachJson = reachJson;
                 return this;
             }
@@ -573,7 +578,7 @@ public class GetXDefaultConfigResponseBody extends TeaModel {
             /**
              * <p>顺振控制参数</p>
              */
-            public Builder sequenceCall(java.util.List < SequenceCall> sequenceCall) {
+            public Builder sequenceCall(java.util.List<SequenceCall> sequenceCall) {
                 this.sequenceCall = sequenceCall;
                 return this;
             }

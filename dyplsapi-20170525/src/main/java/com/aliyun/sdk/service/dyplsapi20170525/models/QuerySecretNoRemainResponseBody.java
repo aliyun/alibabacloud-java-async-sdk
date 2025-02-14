@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
      */
     public static class RemainDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("remainDTO")
-        private java.util.List < RemainDTO> remainDTO;
+        private java.util.List<RemainDTO> remainDTO;
 
         private RemainDTOList(Builder builder) {
             this.remainDTO = builder.remainDTO;
@@ -222,17 +227,17 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
         /**
          * @return remainDTO
          */
-        public java.util.List < RemainDTO> getRemainDTO() {
+        public java.util.List<RemainDTO> getRemainDTO() {
             return this.remainDTO;
         }
 
         public static final class Builder {
-            private java.util.List < RemainDTO> remainDTO; 
+            private java.util.List<RemainDTO> remainDTO; 
 
             /**
              * remainDTO.
              */
-            public Builder remainDTO(java.util.List < RemainDTO> remainDTO) {
+            public Builder remainDTO(java.util.List<RemainDTO> remainDTO) {
                 this.remainDTO = remainDTO;
                 return this;
             }

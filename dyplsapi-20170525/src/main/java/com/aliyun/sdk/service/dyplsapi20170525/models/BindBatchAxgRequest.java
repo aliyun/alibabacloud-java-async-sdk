@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BindBatchAxgRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AxgBindList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AxgBindList> axgBindList;
+    private java.util.List<AxgBindList> axgBindList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -58,7 +63,7 @@ public class BindBatchAxgRequest extends Request {
     /**
      * @return axgBindList
      */
-    public java.util.List < AxgBindList> getAxgBindList() {
+    public java.util.List<AxgBindList> getAxgBindList() {
         return this.axgBindList;
     }
 
@@ -91,7 +96,7 @@ public class BindBatchAxgRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BindBatchAxgRequest, Builder> {
-        private java.util.List < AxgBindList> axgBindList; 
+        private java.util.List<AxgBindList> axgBindList; 
         private Long ownerId; 
         private String poolKey; 
         private String resourceOwnerAccount; 
@@ -113,7 +118,7 @@ public class BindBatchAxgRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder axgBindList(java.util.List < AxgBindList> axgBindList) {
+        public Builder axgBindList(java.util.List<AxgBindList> axgBindList) {
             String axgBindListShrink = shrink(axgBindList, "AxgBindList", "json");
             this.putQueryParameter("AxgBindList", axgBindListShrink);
             this.axgBindList = axgBindList;

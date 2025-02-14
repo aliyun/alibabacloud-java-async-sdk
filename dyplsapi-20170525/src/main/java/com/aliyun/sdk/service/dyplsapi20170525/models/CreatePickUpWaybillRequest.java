@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,7 +57,7 @@ public class CreatePickUpWaybillRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GoodsInfos")
-    private java.util.List < GoodsInfos> goodsInfos;
+    private java.util.List<GoodsInfos> goodsInfos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderChannels")
@@ -186,7 +191,7 @@ public class CreatePickUpWaybillRequest extends Request {
     /**
      * @return goodsInfos
      */
-    public java.util.List < GoodsInfos> getGoodsInfos() {
+    public java.util.List<GoodsInfos> getGoodsInfos() {
         return this.goodsInfos;
     }
 
@@ -249,7 +254,7 @@ public class CreatePickUpWaybillRequest extends Request {
         private String consigneePhone; 
         private String contentType; 
         private String cpCode; 
-        private java.util.List < GoodsInfos> goodsInfos; 
+        private java.util.List<GoodsInfos> goodsInfos; 
         private String orderChannels; 
         private String outerOrderCode; 
         private String remark; 
@@ -410,7 +415,7 @@ public class CreatePickUpWaybillRequest extends Request {
         /**
          * <p>The items.</p>
          */
-        public Builder goodsInfos(java.util.List < GoodsInfos> goodsInfos) {
+        public Builder goodsInfos(java.util.List<GoodsInfos> goodsInfos) {
             String goodsInfosShrink = shrink(goodsInfos, "GoodsInfos", "json");
             this.putQueryParameter("GoodsInfos", goodsInfosShrink);
             this.goodsInfos = goodsInfos;

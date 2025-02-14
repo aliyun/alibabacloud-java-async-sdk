@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -405,7 +410,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -434,7 +439,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -460,7 +465,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
@@ -468,7 +473,7 @@ public class ListXTelephonesResponseBody extends TeaModel {
             /**
              * <p>数据集合</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

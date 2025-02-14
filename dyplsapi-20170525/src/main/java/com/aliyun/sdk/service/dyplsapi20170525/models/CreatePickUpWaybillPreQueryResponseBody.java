@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         private Boolean dateSelectable;
 
         @com.aliyun.core.annotation.NameInMap("TimeList")
-        private java.util.List < TimeList> timeList;
+        private java.util.List<TimeList> timeList;
 
         private AppointTimes(Builder builder) {
             this.date = builder.date;
@@ -286,14 +291,14 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         /**
          * @return timeList
          */
-        public java.util.List < TimeList> getTimeList() {
+        public java.util.List<TimeList> getTimeList() {
             return this.timeList;
         }
 
         public static final class Builder {
             private String date; 
             private Boolean dateSelectable; 
-            private java.util.List < TimeList> timeList; 
+            private java.util.List<TimeList> timeList; 
 
             /**
              * <p>The date in the YYYY-MM-DD format.</p>
@@ -320,7 +325,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             /**
              * <p>The time range for the scheduled pickup for this date.</p>
              */
-            public Builder timeList(java.util.List < TimeList> timeList) {
+            public Builder timeList(java.util.List<TimeList> timeList) {
                 this.timeList = timeList;
                 return this;
             }
@@ -436,7 +441,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
      */
     public static class CpTimeSelectList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppointTimes")
-        private java.util.List < AppointTimes> appointTimes;
+        private java.util.List<AppointTimes> appointTimes;
 
         @com.aliyun.core.annotation.NameInMap("PrePrice")
         private String prePrice;
@@ -461,7 +466,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         /**
          * @return appointTimes
          */
-        public java.util.List < AppointTimes> getAppointTimes() {
+        public java.util.List<AppointTimes> getAppointTimes() {
             return this.appointTimes;
         }
 
@@ -480,14 +485,14 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AppointTimes> appointTimes; 
+            private java.util.List<AppointTimes> appointTimes; 
             private String prePrice; 
             private RealTime realTime; 
 
             /**
              * <p>The available time for the scheduled pickup. If the current courier company cannot accept the scheduled pickup, this field is left empty.</p>
              */
-            public Builder appointTimes(java.util.List < AppointTimes> appointTimes) {
+            public Builder appointTimes(java.util.List<AppointTimes> appointTimes) {
                 this.appointTimes = appointTimes;
                 return this;
             }
@@ -529,7 +534,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         private String code;
 
         @com.aliyun.core.annotation.NameInMap("CpTimeSelectList")
-        private java.util.List < CpTimeSelectList> cpTimeSelectList;
+        private java.util.List<CpTimeSelectList> cpTimeSelectList;
 
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -570,7 +575,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
         /**
          * @return cpTimeSelectList
          */
-        public java.util.List < CpTimeSelectList> getCpTimeSelectList() {
+        public java.util.List<CpTimeSelectList> getCpTimeSelectList() {
             return this.cpTimeSelectList;
         }
 
@@ -604,7 +609,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String code; 
-            private java.util.List < CpTimeSelectList> cpTimeSelectList; 
+            private java.util.List<CpTimeSelectList> cpTimeSelectList; 
             private String errorCode; 
             private String errorMsg; 
             private String message; 
@@ -624,7 +629,7 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
             /**
              * <p>The information about whether the courier company can accept the order.</p>
              */
-            public Builder cpTimeSelectList(java.util.List < CpTimeSelectList> cpTimeSelectList) {
+            public Builder cpTimeSelectList(java.util.List<CpTimeSelectList> cpTimeSelectList) {
                 this.cpTimeSelectList = cpTimeSelectList;
                 return this;
             }

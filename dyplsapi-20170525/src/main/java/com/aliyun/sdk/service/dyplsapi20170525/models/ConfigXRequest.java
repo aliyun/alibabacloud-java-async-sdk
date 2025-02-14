@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -48,7 +53,7 @@ public class ConfigXRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SequenceCalls")
-    private java.util.List < SequenceCalls> sequenceCalls;
+    private java.util.List<SequenceCalls> sequenceCalls;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SequenceMode")
@@ -156,7 +161,7 @@ public class ConfigXRequest extends Request {
     /**
      * @return sequenceCalls
      */
-    public java.util.List < SequenceCalls> getSequenceCalls() {
+    public java.util.List<SequenceCalls> getSequenceCalls() {
         return this.sequenceCalls;
     }
 
@@ -197,7 +202,7 @@ public class ConfigXRequest extends Request {
         private String reqId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < SequenceCalls> sequenceCalls; 
+        private java.util.List<SequenceCalls> sequenceCalls; 
         private String sequenceMode; 
         private String smsAbility; 
         private String smsSignMode; 
@@ -316,7 +321,7 @@ public class ConfigXRequest extends Request {
         /**
          * <p>顺振控制参数</p>
          */
-        public Builder sequenceCalls(java.util.List < SequenceCalls> sequenceCalls) {
+        public Builder sequenceCalls(java.util.List<SequenceCalls> sequenceCalls) {
             String sequenceCallsShrink = shrink(sequenceCalls, "SequenceCalls", "json");
             this.putQueryParameter("SequenceCalls", sequenceCallsShrink);
             this.sequenceCalls = sequenceCalls;

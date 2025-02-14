@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -334,7 +339,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         private String requestId;
 
         @com.aliyun.core.annotation.NameInMap("Sentences")
-        private java.util.List < Sentences> sentences;
+        private java.util.List<Sentences> sentences;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -403,7 +408,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
         /**
          * @return sentences
          */
-        public java.util.List < Sentences> getSentences() {
+        public java.util.List<Sentences> getSentences() {
             return this.sentences;
         }
 
@@ -421,7 +426,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             private String code; 
             private String msg; 
             private String requestId; 
-            private java.util.List < Sentences> sentences; 
+            private java.util.List<Sentences> sentences; 
             private String type; 
 
             /**
@@ -493,7 +498,7 @@ public class GetSecretAsrDetailResponseBody extends TeaModel {
             /**
              * <p>The ASR result.</p>
              */
-            public Builder sentences(java.util.List < Sentences> sentences) {
+            public Builder sentences(java.util.List<Sentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
