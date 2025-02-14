@@ -27,7 +27,7 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RetCode")
-    private String retCode;
+    private Integer retCode;
 
     private UpdateMediaConnectFlowStatusResponseBody(Builder builder) {
         this.content = builder.content;
@@ -68,7 +68,7 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
     /**
      * @return retCode
      */
-    public String getRetCode() {
+    public Integer getRetCode() {
         return this.retCode;
     }
 
@@ -76,10 +76,13 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
         private String content; 
         private String description; 
         private String requestId; 
-        private String retCode; 
+        private Integer retCode; 
 
         /**
-         * Content.
+         * <p>Response body</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -87,7 +90,10 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description of the API call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -95,7 +101,10 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20B3A1B6-4BD2-5DE6-BCBC-098C9B4F4E91</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,9 +112,12 @@ public class UpdateMediaConnectFlowStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>返回的错误码，0表示成功</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
-        public Builder retCode(String retCode) {
+        public Builder retCode(Integer retCode) {
             this.retCode = retCode;
             return this;
         }

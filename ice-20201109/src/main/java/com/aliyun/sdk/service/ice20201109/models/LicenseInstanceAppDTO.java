@@ -269,6 +269,9 @@ public class LicenseInstanceAppDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureIds")
         private String featureIds;
 
+        @com.aliyun.core.annotation.NameInMap("IsTrial")
+        private Boolean isTrial;
+
         @com.aliyun.core.annotation.NameInMap("SdkId")
         private Integer sdkId;
 
@@ -287,6 +290,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         private LicenseConfigs(Builder builder) {
             this.businessType = builder.businessType;
             this.featureIds = builder.featureIds;
+            this.isTrial = builder.isTrial;
             this.sdkId = builder.sdkId;
             this.sdkName = builder.sdkName;
             this.subscription = builder.subscription;
@@ -314,6 +318,13 @@ public class LicenseInstanceAppDTO extends TeaModel {
          */
         public String getFeatureIds() {
             return this.featureIds;
+        }
+
+        /**
+         * @return isTrial
+         */
+        public Boolean getIsTrial() {
+            return this.isTrial;
         }
 
         /**
@@ -354,6 +365,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         public static final class Builder {
             private String businessType; 
             private String featureIds; 
+            private Boolean isTrial; 
             private Integer sdkId; 
             private String sdkName; 
             private String subscription; 
@@ -373,6 +385,14 @@ public class LicenseInstanceAppDTO extends TeaModel {
              */
             public Builder featureIds(String featureIds) {
                 this.featureIds = featureIds;
+                return this;
+            }
+
+            /**
+             * IsTrial.
+             */
+            public Builder isTrial(Boolean isTrial) {
+                this.isTrial = isTrial;
                 return this;
             }
 

@@ -79,7 +79,10 @@ public class DeleteMediaConnectFlowResponseBody extends TeaModel {
         private Integer retCode; 
 
         /**
-         * Content.
+         * <p>Response body</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -87,7 +90,10 @@ public class DeleteMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description of the API call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -95,7 +101,10 @@ public class DeleteMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5AEC17BD-D80B-5F78-BE1B-F07DFA0C8622</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +112,10 @@ public class DeleteMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>Returned error code, where <code>0</code> indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(Integer retCode) {
             this.retCode = retCode;

@@ -79,7 +79,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         private Integer retCode; 
 
         /**
-         * Content.
+         * <p>Response body</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,10 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description of the API call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -95,7 +98,10 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11357BE8-4C54-58EA-890A-5AB646EDE4B2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>Returned error code, 0 indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(Integer retCode) {
             this.retCode = retCode;
@@ -149,7 +158,10 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
             private String inputUrl; 
 
             /**
-             * InputUrl.
+             * <p>Input URL</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</p>
              */
             public Builder inputUrl(String inputUrl) {
                 this.inputUrl = inputUrl;

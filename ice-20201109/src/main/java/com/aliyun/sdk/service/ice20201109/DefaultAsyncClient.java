@@ -97,6 +97,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddAdInsertion  AddAdInsertionRequest
+     * @return AddAdInsertionResponse
+     */
+    @Override
+    public CompletableFuture<AddAdInsertionResponse> addAdInsertion(AddAdInsertionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddAdInsertion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddAdInsertionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddAdInsertionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
      * 
@@ -154,6 +172,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>A Flow instance can only have one Input.</li>
+     * </ul>
+     * <h3>Description of Input Types</h3>
+     * <ul>
+     * <li>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</li>
+     * <li>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</li>
+     * <li>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</li>
+     * <li>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</li>
+     * <li>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddMediaConnectFlowInput  AddMediaConnectFlowInputRequest
      * @return AddMediaConnectFlowInputResponse
      */
@@ -172,6 +204,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>A Flow instance can have up to 4 outputs.</li>
+     * <li>The output names under the same Flow instance cannot be duplicated.</li>
+     * <li>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</li>
+     * </ul>
+     * <h3>Description of Output Types</h3>
+     * <ul>
+     * <li>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</li>
+     * <li>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</li>
+     * <li>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</li>
+     * <li>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</li>
+     * <li>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddMediaConnectFlowOutput  AddMediaConnectFlowOutputRequest
      * @return AddMediaConnectFlowOutputResponse
      */
@@ -245,6 +293,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AlterSearchIndexResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchCreateVodPackagingAsset  BatchCreateVodPackagingAssetRequest
+     * @return BatchCreateVodPackagingAssetResponse
+     */
+    @Override
+    public CompletableFuture<BatchCreateVodPackagingAssetResponse> batchCreateVodPackagingAsset(BatchCreateVodPackagingAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchCreateVodPackagingAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchCreateVodPackagingAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchCreateVodPackagingAssetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -551,6 +617,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The name of the Flow cannot be duplicated within the same region.</li>
+     * <li>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateMediaConnectFlow  CreateMediaConnectFlowRequest
      * @return CreateMediaConnectFlowResponse
      */
@@ -734,6 +806,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateVodPackagingAsset  CreateVodPackagingAssetRequest
+     * @return CreateVodPackagingAssetResponse
+     */
+    @Override
+    public CompletableFuture<CreateVodPackagingAssetResponse> createVodPackagingAsset(CreateVodPackagingAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateVodPackagingAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVodPackagingAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVodPackagingAssetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateVodPackagingConfiguration  CreateVodPackagingConfigurationRequest
+     * @return CreateVodPackagingConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<CreateVodPackagingConfigurationResponse> createVodPackagingConfiguration(CreateVodPackagingConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateVodPackagingConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVodPackagingConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVodPackagingConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateVodPackagingGroup  CreateVodPackagingGroupRequest
+     * @return CreateVodPackagingGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateVodPackagingGroupResponse> createVodPackagingGroup(CreateVodPackagingGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateVodPackagingGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVodPackagingGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVodPackagingGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
      */
@@ -746,6 +872,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DecryptKMSDataKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAIAgentDialogue  DeleteAIAgentDialogueRequest
+     * @return DeleteAIAgentDialogueResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAIAgentDialogueResponse> deleteAIAgentDialogue(DeleteAIAgentDialogueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAIAgentDialogue").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAIAgentDialogueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAIAgentDialogueResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAdInsertion  DeleteAdInsertionRequest
+     * @return DeleteAdInsertionResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAdInsertionResponse> deleteAdInsertion(DeleteAdInsertionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAdInsertion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAdInsertionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAdInsertionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1079,6 +1241,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</li>
+     * <li>You cannot delete a Flow instance that is in the online state.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteMediaConnectFlow  DeleteMediaConnectFlowRequest
      * @return DeleteMediaConnectFlowResponse
      */
@@ -1091,6 +1260,55 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteMediaConnectFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When the Flow instance status is online, the input cannot be deleted.</li>
+     * <li>Only after all outputs under the Flow instance have been deleted can the input be deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMediaConnectFlowInput  DeleteMediaConnectFlowInputRequest
+     * @return DeleteMediaConnectFlowInputResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMediaConnectFlowInputResponse> deleteMediaConnectFlowInput(DeleteMediaConnectFlowInputRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMediaConnectFlowInput").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMediaConnectFlowInputResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMediaConnectFlowInputResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When the Flow instance status is online, the output cannot be deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMediaConnectFlowOutput  DeleteMediaConnectFlowOutputRequest
+     * @return DeleteMediaConnectFlowOutputResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMediaConnectFlowOutputResponse> deleteMediaConnectFlowOutput(DeleteMediaConnectFlowOutputRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMediaConnectFlowOutput").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMediaConnectFlowOutputResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMediaConnectFlowOutputResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1281,6 +1499,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteVodPackagingAsset  DeleteVodPackagingAssetRequest
+     * @return DeleteVodPackagingAssetResponse
+     */
+    @Override
+    public CompletableFuture<DeleteVodPackagingAssetResponse> deleteVodPackagingAsset(DeleteVodPackagingAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteVodPackagingAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVodPackagingAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteVodPackagingAssetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteVodPackagingConfiguration  DeleteVodPackagingConfigurationRequest
+     * @return DeleteVodPackagingConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<DeleteVodPackagingConfigurationResponse> deleteVodPackagingConfiguration(DeleteVodPackagingConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteVodPackagingConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVodPackagingConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteVodPackagingConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteVodPackagingGroup  DeleteVodPackagingGroupRequest
+     * @return DeleteVodPackagingGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteVodPackagingGroupResponse> deleteVodPackagingGroup(DeleteVodPackagingGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteVodPackagingGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVodPackagingGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteVodPackagingGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1533,6 +1805,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateKMSDataKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GenerateMessageChatToken  GenerateMessageChatTokenRequest
+     * @return GenerateMessageChatTokenResponse
+     */
+    @Override
+    public CompletableFuture<GenerateMessageChatTokenResponse> generateMessageChatToken(GenerateMessageChatTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateMessageChatToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateMessageChatTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateMessageChatTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAdInsertion  GetAdInsertionRequest
+     * @return GetAdInsertionResponse
+     */
+    @Override
+    public CompletableFuture<GetAdInsertionResponse> getAdInsertion(GetAdInsertionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAdInsertion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAdInsertionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAdInsertionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2042,6 +2350,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>The StartTime returned by the interface is only valid when the Flow status is online.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetMediaConnectFlow  GetMediaConnectFlowRequest
      * @return GetMediaConnectFlowResponse
      */
@@ -2054,6 +2368,52 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMediaConnectFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMediaConnectFlowInput  GetMediaConnectFlowInputRequest
+     * @return GetMediaConnectFlowInputResponse
+     */
+    @Override
+    public CompletableFuture<GetMediaConnectFlowInputResponse> getMediaConnectFlowInput(GetMediaConnectFlowInputRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMediaConnectFlowInput").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMediaConnectFlowInputResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMediaConnectFlowInputResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMediaConnectFlowOutput  GetMediaConnectFlowOutputRequest
+     * @return GetMediaConnectFlowOutputResponse
+     */
+    @Override
+    public CompletableFuture<GetMediaConnectFlowOutputResponse> getMediaConnectFlowOutput(GetMediaConnectFlowOutputRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMediaConnectFlowOutput").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMediaConnectFlowOutputResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMediaConnectFlowOutputResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2512,6 +2872,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetVodPackagingAsset  GetVodPackagingAssetRequest
+     * @return GetVodPackagingAssetResponse
+     */
+    @Override
+    public CompletableFuture<GetVodPackagingAssetResponse> getVodPackagingAsset(GetVodPackagingAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetVodPackagingAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVodPackagingAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVodPackagingAssetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetVodPackagingConfiguration  GetVodPackagingConfigurationRequest
+     * @return GetVodPackagingConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetVodPackagingConfigurationResponse> getVodPackagingConfiguration(GetVodPackagingConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetVodPackagingConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVodPackagingConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVodPackagingConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetVodPackagingGroup  GetVodPackagingGroupRequest
+     * @return GetVodPackagingGroupResponse
+     */
+    @Override
+    public CompletableFuture<GetVodPackagingGroupResponse> getVodPackagingGroup(GetVodPackagingGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetVodPackagingGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVodPackagingGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVodPackagingGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetWorkflowTask  GetWorkflowTaskRequest
      * @return GetWorkflowTaskResponse
      */
@@ -2548,6 +2962,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAIAgentDialogues  ListAIAgentDialoguesRequest
+     * @return ListAIAgentDialoguesResponse
+     */
+    @Override
+    public CompletableFuture<ListAIAgentDialoguesResponse> listAIAgentDialogues(ListAIAgentDialoguesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAIAgentDialogues").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAIAgentDialoguesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAIAgentDialoguesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAIAgentInstance  ListAIAgentInstanceRequest
      * @return ListAIAgentInstanceResponse
      */
@@ -2560,6 +2992,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAIAgentInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAdInsertions  ListAdInsertionsRequest
+     * @return ListAdInsertionsResponse
+     */
+    @Override
+    public CompletableFuture<ListAdInsertionsResponse> listAdInsertions(ListAdInsertionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAdInsertions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAdInsertionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAdInsertionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3402,6 +3852,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListVodPackagingAssets  ListVodPackagingAssetsRequest
+     * @return ListVodPackagingAssetsResponse
+     */
+    @Override
+    public CompletableFuture<ListVodPackagingAssetsResponse> listVodPackagingAssets(ListVodPackagingAssetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListVodPackagingAssets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVodPackagingAssetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVodPackagingAssetsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListVodPackagingConfigurations  ListVodPackagingConfigurationsRequest
+     * @return ListVodPackagingConfigurationsResponse
+     */
+    @Override
+    public CompletableFuture<ListVodPackagingConfigurationsResponse> listVodPackagingConfigurations(ListVodPackagingConfigurationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListVodPackagingConfigurations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVodPackagingConfigurationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVodPackagingConfigurationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListVodPackagingGroups  ListVodPackagingGroupsRequest
+     * @return ListVodPackagingGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListVodPackagingGroupsResponse> listVodPackagingGroups(ListVodPackagingGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListVodPackagingGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVodPackagingGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVodPackagingGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryCopyrightExtractJob  QueryCopyrightExtractJobRequest
      * @return QueryCopyrightExtractJobResponse
      */
@@ -3918,6 +4422,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SendAIAgentText  SendAIAgentTextRequest
+     * @return SendAIAgentTextResponse
+     */
+    @Override
+    public CompletableFuture<SendAIAgentTextResponse> sendAIAgentText(SendAIAgentTextRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendAIAgentText").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendAIAgentTextResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendAIAgentTextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SendLiveSnapshotJobCommand  SendLiveSnapshotJobCommandRequest
      * @return SendLiveSnapshotJobCommandResponse
      */
@@ -4393,6 +4915,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitDynamicImageJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitHighlightExtractionJob  SubmitHighlightExtractionJobRequest
+     * @return SubmitHighlightExtractionJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitHighlightExtractionJobResponse> submitHighlightExtractionJob(SubmitHighlightExtractionJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitHighlightExtractionJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitHighlightExtractionJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitHighlightExtractionJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4918,6 +5458,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateAdInsertion  UpdateAdInsertionRequest
+     * @return UpdateAdInsertionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAdInsertionResponse> updateAdInsertion(UpdateAdInsertionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAdInsertion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAdInsertionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAdInsertionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAvatarTrainingJob  UpdateAvatarTrainingJobRequest
      * @return UpdateAvatarTrainingJobResponse
      */
@@ -5176,6 +5734,54 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateLiveTranscodeTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The input can only be modified when the Flow instance status is offline.</li>
+     * <li>The input type cannot be modified.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateMediaConnectFlowInput  UpdateMediaConnectFlowInputRequest
+     * @return UpdateMediaConnectFlowInputResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMediaConnectFlowInputResponse> updateMediaConnectFlowInput(UpdateMediaConnectFlowInputRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMediaConnectFlowInput").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMediaConnectFlowInputResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMediaConnectFlowInputResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The output can only be modified when the Flow instance status is offline.</li>
+     * <li>The output type cannot be modified.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateMediaConnectFlowOutput  UpdateMediaConnectFlowOutputRequest
+     * @return UpdateMediaConnectFlowOutputResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMediaConnectFlowOutputResponse> updateMediaConnectFlowOutput(UpdateMediaConnectFlowOutputRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateMediaConnectFlowOutput").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMediaConnectFlowOutputResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMediaConnectFlowOutputResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

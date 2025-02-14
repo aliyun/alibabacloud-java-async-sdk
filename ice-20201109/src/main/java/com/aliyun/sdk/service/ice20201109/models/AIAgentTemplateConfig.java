@@ -170,6 +170,9 @@ public class AIAgentTemplateConfig extends TeaModel {
      * <p>AIAgentTemplateConfig</p>
      */
     public static class AvatarChat3D extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrLanguageId")
+        private String asrLanguageId;
+
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
 
@@ -231,6 +234,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String workflowOverrideParams;
 
         private AvatarChat3D(Builder builder) {
+            this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
             this.avatarId = builder.avatarId;
             this.bailianAppParams = builder.bailianAppParams;
@@ -259,6 +263,13 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         public static AvatarChat3D create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrLanguageId
+         */
+        public String getAsrLanguageId() {
+            return this.asrLanguageId;
         }
 
         /**
@@ -402,6 +413,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String asrLanguageId; 
             private Integer asrMaxSilence; 
             private String avatarId; 
             private String bailianAppParams; 
@@ -422,6 +434,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Long volume; 
             private String wakeUpQuery; 
             private String workflowOverrideParams; 
+
+            /**
+             * AsrLanguageId.
+             */
+            public Builder asrLanguageId(String asrLanguageId) {
+                this.asrLanguageId = asrLanguageId;
+                return this;
+            }
 
             /**
              * AsrMaxSilence.
@@ -664,6 +684,9 @@ public class AIAgentTemplateConfig extends TeaModel {
      * <p>AIAgentTemplateConfig</p>
      */
     public static class VisionChat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrLanguageId")
+        private String asrLanguageId;
+
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
 
@@ -722,6 +745,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String workflowOverrideParams;
 
         private VisionChat(Builder builder) {
+            this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
             this.bailianAppParams = builder.bailianAppParams;
             this.enableIntelligentSegment = builder.enableIntelligentSegment;
@@ -749,6 +773,13 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         public static VisionChat create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrLanguageId
+         */
+        public String getAsrLanguageId() {
+            return this.asrLanguageId;
         }
 
         /**
@@ -885,6 +916,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String asrLanguageId; 
             private Integer asrMaxSilence; 
             private String bailianAppParams; 
             private Boolean enableIntelligentSegment; 
@@ -904,6 +936,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Long volume; 
             private String wakeUpQuery; 
             private String workflowOverrideParams; 
+
+            /**
+             * AsrLanguageId.
+             */
+            public Builder asrLanguageId(String asrLanguageId) {
+                this.asrLanguageId = asrLanguageId;
+                return this;
+            }
 
             /**
              * AsrMaxSilence.
@@ -1138,6 +1178,9 @@ public class AIAgentTemplateConfig extends TeaModel {
      * <p>AIAgentTemplateConfig</p>
      */
     public static class VoiceChat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrLanguageId")
+        private String asrLanguageId;
+
         @com.aliyun.core.annotation.NameInMap("AsrMaxSilence")
         private Integer asrMaxSilence;
 
@@ -1202,6 +1245,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String workflowOverrideParams;
 
         private VoiceChat(Builder builder) {
+            this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
             this.avatarUrl = builder.avatarUrl;
             this.avatarUrlType = builder.avatarUrlType;
@@ -1231,6 +1275,13 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         public static VoiceChat create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrLanguageId
+         */
+        public String getAsrLanguageId() {
+            return this.asrLanguageId;
         }
 
         /**
@@ -1381,6 +1432,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private String asrLanguageId; 
             private Integer asrMaxSilence; 
             private String avatarUrl; 
             private String avatarUrlType; 
@@ -1402,6 +1454,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Long volume; 
             private String wakeUpQuery; 
             private String workflowOverrideParams; 
+
+            /**
+             * AsrLanguageId.
+             */
+            public Builder asrLanguageId(String asrLanguageId) {
+                this.asrLanguageId = asrLanguageId;
+                return this;
+            }
 
             /**
              * AsrMaxSilence.

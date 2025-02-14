@@ -89,6 +89,9 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuntimeConfig")
         private AIAgentRuntimeConfig runtimeConfig;
 
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -101,6 +104,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         private Instance(Builder builder) {
             this.callLogUrl = builder.callLogUrl;
             this.runtimeConfig = builder.runtimeConfig;
+            this.sessionId = builder.sessionId;
             this.status = builder.status;
             this.templateConfig = builder.templateConfig;
             this.userData = builder.userData;
@@ -129,6 +133,13 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -152,6 +163,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String callLogUrl; 
             private AIAgentRuntimeConfig runtimeConfig; 
+            private String sessionId; 
             private String status; 
             private AIAgentTemplateConfig templateConfig; 
             private String userData; 
@@ -169,6 +181,14 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
              */
             public Builder runtimeConfig(AIAgentRuntimeConfig runtimeConfig) {
                 this.runtimeConfig = runtimeConfig;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
                 return this;
             }
 

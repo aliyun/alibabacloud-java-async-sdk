@@ -27,6 +27,10 @@ public class GenerateAIAgentCallRequest extends Request {
     private Long expire;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    private String sessionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateConfig")
     private AIAgentTemplateConfig templateConfig;
 
@@ -42,6 +46,7 @@ public class GenerateAIAgentCallRequest extends Request {
         super(builder);
         this.AIAgentId = builder.AIAgentId;
         this.expire = builder.expire;
+        this.sessionId = builder.sessionId;
         this.templateConfig = builder.templateConfig;
         this.userData = builder.userData;
         this.userId = builder.userId;
@@ -75,6 +80,13 @@ public class GenerateAIAgentCallRequest extends Request {
     }
 
     /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
      * @return templateConfig
      */
     public AIAgentTemplateConfig getTemplateConfig() {
@@ -98,6 +110,7 @@ public class GenerateAIAgentCallRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateAIAgentCallRequest, Builder> {
         private String AIAgentId; 
         private Long expire; 
+        private String sessionId; 
         private AIAgentTemplateConfig templateConfig; 
         private String userData; 
         private String userId; 
@@ -110,6 +123,7 @@ public class GenerateAIAgentCallRequest extends Request {
             super(request);
             this.AIAgentId = request.AIAgentId;
             this.expire = request.expire;
+            this.sessionId = request.sessionId;
             this.templateConfig = request.templateConfig;
             this.userData = request.userData;
             this.userId = request.userId;
@@ -133,6 +147,15 @@ public class GenerateAIAgentCallRequest extends Request {
         public Builder expire(Long expire) {
             this.putQueryParameter("Expire", expire);
             this.expire = expire;
+            return this;
+        }
+
+        /**
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.putQueryParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
             return this;
         }
 

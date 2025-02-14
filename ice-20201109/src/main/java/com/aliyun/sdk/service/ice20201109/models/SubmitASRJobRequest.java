@@ -26,6 +26,10 @@ public class SubmitASRJobRequest extends Request {
     private String duration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EditingConfig")
+    private String editingConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputFile")
     private String inputFile;
 
@@ -45,6 +49,7 @@ public class SubmitASRJobRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.duration = builder.duration;
+        this.editingConfig = builder.editingConfig;
         this.inputFile = builder.inputFile;
         this.startTime = builder.startTime;
         this.title = builder.title;
@@ -79,6 +84,13 @@ public class SubmitASRJobRequest extends Request {
     }
 
     /**
+     * @return editingConfig
+     */
+    public String getEditingConfig() {
+        return this.editingConfig;
+    }
+
+    /**
      * @return inputFile
      */
     public String getInputFile() {
@@ -109,6 +121,7 @@ public class SubmitASRJobRequest extends Request {
     public static final class Builder extends Request.Builder<SubmitASRJobRequest, Builder> {
         private String description; 
         private String duration; 
+        private String editingConfig; 
         private String inputFile; 
         private String startTime; 
         private String title; 
@@ -122,6 +135,7 @@ public class SubmitASRJobRequest extends Request {
             super(request);
             this.description = request.description;
             this.duration = request.duration;
+            this.editingConfig = request.editingConfig;
             this.inputFile = request.inputFile;
             this.startTime = request.startTime;
             this.title = request.title;
@@ -149,6 +163,15 @@ public class SubmitASRJobRequest extends Request {
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * EditingConfig.
+         */
+        public Builder editingConfig(String editingConfig) {
+            this.putQueryParameter("EditingConfig", editingConfig);
+            this.editingConfig = editingConfig;
             return this;
         }
 

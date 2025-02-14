@@ -23,6 +23,7 @@ public class AddMediaConnectFlowInputRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
     @com.aliyun.core.annotation.Query
@@ -31,10 +32,12 @@ public class AddMediaConnectFlowInputRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputProtocol;
 
     @com.aliyun.core.annotation.Query
@@ -61,14 +64,6 @@ public class AddMediaConnectFlowInputRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SrtPbkeyLen")
     private String srtPbkeyLen;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SrtPbkeylen")
-    private String srtPbkeylen;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SrtPbkeyssen")
-    private String srtPbkeyssen;
-
     private AddMediaConnectFlowInputRequest(Builder builder) {
         super(builder);
         this.cidrs = builder.cidrs;
@@ -82,8 +77,6 @@ public class AddMediaConnectFlowInputRequest extends Request {
         this.srtLatency = builder.srtLatency;
         this.srtPassphrase = builder.srtPassphrase;
         this.srtPbkeyLen = builder.srtPbkeyLen;
-        this.srtPbkeylen = builder.srtPbkeylen;
-        this.srtPbkeyssen = builder.srtPbkeyssen;
     }
 
     public static Builder builder() {
@@ -176,20 +169,6 @@ public class AddMediaConnectFlowInputRequest extends Request {
         return this.srtPbkeyLen;
     }
 
-    /**
-     * @return srtPbkeylen
-     */
-    public String getSrtPbkeylen() {
-        return this.srtPbkeylen;
-    }
-
-    /**
-     * @return srtPbkeyssen
-     */
-    public String getSrtPbkeyssen() {
-        return this.srtPbkeyssen;
-    }
-
     public static final class Builder extends Request.Builder<AddMediaConnectFlowInputRequest, Builder> {
         private String cidrs; 
         private String flowId; 
@@ -202,8 +181,6 @@ public class AddMediaConnectFlowInputRequest extends Request {
         private Integer srtLatency; 
         private String srtPassphrase; 
         private String srtPbkeyLen; 
-        private String srtPbkeylen; 
-        private String srtPbkeyssen; 
 
         private Builder() {
             super();
@@ -222,12 +199,13 @@ public class AddMediaConnectFlowInputRequest extends Request {
             this.srtLatency = request.srtLatency;
             this.srtPassphrase = request.srtPassphrase;
             this.srtPbkeyLen = request.srtPbkeyLen;
-            this.srtPbkeylen = request.srtPbkeylen;
-            this.srtPbkeyssen = request.srtPbkeyssen;
         } 
 
         /**
-         * Cidrs.
+         * <p>IP whitelist, in CIDR format, separated by commas if multiple IP ranges are specified</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.168.1.1/32,18.168.1.1/16</p>
          */
         public Builder cidrs(String cidrs) {
             this.putQueryParameter("Cidrs", cidrs);
@@ -236,7 +214,11 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * FlowId.
+         * <p>Flow instance ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
@@ -245,7 +227,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * InputFromUrl.
+         * <p>Input URL, required when the input type is RTMP-PULL/SRT-Listener</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://pull.test.alivecdn.com/live/alitest</p>
          */
         public Builder inputFromUrl(String inputFromUrl) {
             this.putQueryParameter("InputFromUrl", inputFromUrl);
@@ -254,7 +239,11 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * InputName.
+         * <p>Input name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliTestInput</p>
          */
         public Builder inputName(String inputName) {
             this.putQueryParameter("InputName", inputName);
@@ -263,7 +252,11 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * InputProtocol.
+         * <p>Input type</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RTMP-PUSH</p>
          */
         public Builder inputProtocol(String inputProtocol) {
             this.putQueryParameter("InputProtocol", inputProtocol);
@@ -272,7 +265,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * MaxBitrate.
+         * <p>Input bitrate, in bps</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000000</p>
          */
         public Builder maxBitrate(Integer maxBitrate) {
             this.putQueryParameter("MaxBitrate", maxBitrate);
@@ -281,7 +277,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * PairFlowId.
+         * <p>Paired Flow ID, required when the input type is Flow</p>
+         * 
+         * <strong>example:</strong>
+         * <p>805fbdd0-575e-4146-b35d-ec7f63937b20</p>
          */
         public Builder pairFlowId(String pairFlowId) {
             this.putQueryParameter("PairFlowId", pairFlowId);
@@ -290,7 +289,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * PairOutputName.
+         * <p>Output name of the paired Flow, required when the input type is Flow</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliTestOutput</p>
          */
         public Builder pairOutputName(String pairOutputName) {
             this.putQueryParameter("PairOutputName", pairOutputName);
@@ -299,7 +301,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * SrtLatency.
+         * <p>SRT latency, required when the input type is SRT-Listener/SRT-Caller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder srtLatency(Integer srtLatency) {
             this.putQueryParameter("SrtLatency", srtLatency);
@@ -308,7 +313,10 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * SrtPassphrase.
+         * <p>SRT encryption key, required when the input type is SRT-Listener/SRT-Caller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BETTERG08S01</p>
          */
         public Builder srtPassphrase(String srtPassphrase) {
             this.putQueryParameter("SrtPassphrase", srtPassphrase);
@@ -317,29 +325,14 @@ public class AddMediaConnectFlowInputRequest extends Request {
         }
 
         /**
-         * SrtPbkeyLen.
+         * <p>SRT encryption length, required when the input type is SRT-Listener/SRT-Caller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder srtPbkeyLen(String srtPbkeyLen) {
             this.putQueryParameter("SrtPbkeyLen", srtPbkeyLen);
             this.srtPbkeyLen = srtPbkeyLen;
-            return this;
-        }
-
-        /**
-         * SrtPbkeylen.
-         */
-        public Builder srtPbkeylen(String srtPbkeylen) {
-            this.putQueryParameter("SrtPbkeylen", srtPbkeylen);
-            this.srtPbkeylen = srtPbkeylen;
-            return this;
-        }
-
-        /**
-         * SrtPbkeyssen.
-         */
-        public Builder srtPbkeyssen(String srtPbkeyssen) {
-            this.putQueryParameter("SrtPbkeyssen", srtPbkeyssen);
-            this.srtPbkeyssen = srtPbkeyssen;
             return this;
         }
 

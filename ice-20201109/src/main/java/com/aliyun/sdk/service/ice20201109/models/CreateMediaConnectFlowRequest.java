@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateMediaConnectFlowRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowRegion;
 
     private CreateMediaConnectFlowRequest(Builder builder) {
@@ -73,7 +75,11 @@ public class CreateMediaConnectFlowRequest extends Request {
         } 
 
         /**
-         * FlowName.
+         * <p>Flow instance name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliTestFlow</p>
          */
         public Builder flowName(String flowName) {
             this.putQueryParameter("FlowName", flowName);
@@ -82,7 +88,11 @@ public class CreateMediaConnectFlowRequest extends Request {
         }
 
         /**
-         * FlowRegion.
+         * <p>Region to which the Flow instance belongs</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder flowRegion(String flowRegion) {
             this.putQueryParameter("FlowRegion", flowRegion);

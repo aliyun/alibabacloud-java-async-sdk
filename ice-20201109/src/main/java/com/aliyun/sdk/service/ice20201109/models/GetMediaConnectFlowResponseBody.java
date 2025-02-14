@@ -79,7 +79,7 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         private Integer retcode; 
 
         /**
-         * Content.
+         * <p>Response body</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Interface call description information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -95,7 +98,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB503AEF-118E-1516-89E2-7B227EA1AC20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Retcode.
+         * <p>Return status code, 0 indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retcode(Integer retcode) {
             this.retcode = retcode;
@@ -197,7 +206,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * CreateTime.
+             * <p>Flow creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-18T01:29:24Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -205,7 +217,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>Flow instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -213,7 +228,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>Flow instance name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliTestFlow</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -221,7 +239,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowStatus.
+             * <p>Flow status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder flowStatus(String flowStatus) {
                 this.flowStatus = flowStatus;
@@ -229,7 +250,10 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Flow start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-18T01:39:24Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateMediaConnectFlowStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private UpdateMediaConnectFlowStatusRequest(Builder builder) {
@@ -73,7 +75,11 @@ public class UpdateMediaConnectFlowStatusRequest extends Request {
         } 
 
         /**
-         * FlowId.
+         * <p>Flow instance ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
@@ -82,7 +88,15 @@ public class UpdateMediaConnectFlowStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Flow status:</p>
+         * <ul>
+         * <li>online: Start Flow</li>
+         * <li>offline: Stop Flow</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

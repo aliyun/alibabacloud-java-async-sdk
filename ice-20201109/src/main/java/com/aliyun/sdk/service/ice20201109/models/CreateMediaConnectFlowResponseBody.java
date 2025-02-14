@@ -79,7 +79,7 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         private Integer retCode; 
 
         /**
-         * Content.
+         * <p>Response body</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,10 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description information returned by the interface</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -95,7 +98,10 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86D92F9D-65E8-58A2-85D1-9DEEECC172E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>Returned error code, 0 indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder retCode(Integer retCode) {
             this.retCode = retCode;
@@ -149,7 +158,10 @@ public class CreateMediaConnectFlowResponseBody extends TeaModel {
             private String flowId; 
 
             /**
-             * FlowId.
+             * <p>Flow instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

@@ -38,6 +38,26 @@ public class SubmitVideoTranslationJobRequest extends Request {
     private String outputConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Signature")
+    private String signature;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureMehtod")
+    private String signatureMehtod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureNonce")
+    private String signatureNonce;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureType")
+    private String signatureType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureVersion")
+    private String signatureVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
@@ -52,6 +72,11 @@ public class SubmitVideoTranslationJobRequest extends Request {
         this.editingConfig = builder.editingConfig;
         this.inputConfig = builder.inputConfig;
         this.outputConfig = builder.outputConfig;
+        this.signature = builder.signature;
+        this.signatureMehtod = builder.signatureMehtod;
+        this.signatureNonce = builder.signatureNonce;
+        this.signatureType = builder.signatureType;
+        this.signatureVersion = builder.signatureVersion;
         this.title = builder.title;
         this.userData = builder.userData;
     }
@@ -105,6 +130,41 @@ public class SubmitVideoTranslationJobRequest extends Request {
     }
 
     /**
+     * @return signature
+     */
+    public String getSignature() {
+        return this.signature;
+    }
+
+    /**
+     * @return signatureMehtod
+     */
+    public String getSignatureMehtod() {
+        return this.signatureMehtod;
+    }
+
+    /**
+     * @return signatureNonce
+     */
+    public String getSignatureNonce() {
+        return this.signatureNonce;
+    }
+
+    /**
+     * @return signatureType
+     */
+    public String getSignatureType() {
+        return this.signatureType;
+    }
+
+    /**
+     * @return signatureVersion
+     */
+    public String getSignatureVersion() {
+        return this.signatureVersion;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -124,6 +184,11 @@ public class SubmitVideoTranslationJobRequest extends Request {
         private String editingConfig; 
         private String inputConfig; 
         private String outputConfig; 
+        private String signature; 
+        private String signatureMehtod; 
+        private String signatureNonce; 
+        private String signatureType; 
+        private String signatureVersion; 
         private String title; 
         private String userData; 
 
@@ -138,6 +203,11 @@ public class SubmitVideoTranslationJobRequest extends Request {
             this.editingConfig = request.editingConfig;
             this.inputConfig = request.inputConfig;
             this.outputConfig = request.outputConfig;
+            this.signature = request.signature;
+            this.signatureMehtod = request.signatureMehtod;
+            this.signatureNonce = request.signatureNonce;
+            this.signatureType = request.signatureType;
+            this.signatureVersion = request.signatureVersion;
             this.title = request.title;
             this.userData = request.userData;
         } 
@@ -207,6 +277,51 @@ public class SubmitVideoTranslationJobRequest extends Request {
         public Builder outputConfig(String outputConfig) {
             this.putQueryParameter("OutputConfig", outputConfig);
             this.outputConfig = outputConfig;
+            return this;
+        }
+
+        /**
+         * Signature.
+         */
+        public Builder signature(String signature) {
+            this.putQueryParameter("Signature", signature);
+            this.signature = signature;
+            return this;
+        }
+
+        /**
+         * SignatureMehtod.
+         */
+        public Builder signatureMehtod(String signatureMehtod) {
+            this.putQueryParameter("SignatureMehtod", signatureMehtod);
+            this.signatureMehtod = signatureMehtod;
+            return this;
+        }
+
+        /**
+         * SignatureNonce.
+         */
+        public Builder signatureNonce(String signatureNonce) {
+            this.putQueryParameter("SignatureNonce", signatureNonce);
+            this.signatureNonce = signatureNonce;
+            return this;
+        }
+
+        /**
+         * SignatureType.
+         */
+        public Builder signatureType(String signatureType) {
+            this.putQueryParameter("SignatureType", signatureType);
+            this.signatureType = signatureType;
+            return this;
+        }
+
+        /**
+         * SignatureVersion.
+         */
+        public Builder signatureVersion(String signatureVersion) {
+            this.putQueryParameter("SignatureVersion", signatureVersion);
+            this.signatureVersion = signatureVersion;
             return this;
         }
 

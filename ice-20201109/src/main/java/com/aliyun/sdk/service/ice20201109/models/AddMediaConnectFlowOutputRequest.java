@@ -23,23 +23,22 @@ public class AddMediaConnectFlowOutputRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutputName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutputProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputProtocol;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutputToUrl")
     private String outputToUrl;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PairChannelId")
-    private String pairChannelId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PairFlowId")
@@ -72,7 +71,6 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         this.outputName = builder.outputName;
         this.outputProtocol = builder.outputProtocol;
         this.outputToUrl = builder.outputToUrl;
-        this.pairChannelId = builder.pairChannelId;
         this.pairFlowId = builder.pairFlowId;
         this.pairInputName = builder.pairInputName;
         this.playerLimit = builder.playerLimit;
@@ -130,13 +128,6 @@ public class AddMediaConnectFlowOutputRequest extends Request {
     }
 
     /**
-     * @return pairChannelId
-     */
-    public String getPairChannelId() {
-        return this.pairChannelId;
-    }
-
-    /**
      * @return pairFlowId
      */
     public String getPairFlowId() {
@@ -184,7 +175,6 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         private String outputName; 
         private String outputProtocol; 
         private String outputToUrl; 
-        private String pairChannelId; 
         private String pairFlowId; 
         private String pairInputName; 
         private Integer playerLimit; 
@@ -203,7 +193,6 @@ public class AddMediaConnectFlowOutputRequest extends Request {
             this.outputName = request.outputName;
             this.outputProtocol = request.outputProtocol;
             this.outputToUrl = request.outputToUrl;
-            this.pairChannelId = request.pairChannelId;
             this.pairFlowId = request.pairFlowId;
             this.pairInputName = request.pairInputName;
             this.playerLimit = request.playerLimit;
@@ -213,7 +202,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         } 
 
         /**
-         * Cidrs.
+         * <p>IP whitelist, in CIDR format, separated by commas if multiple IP segments are provided</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83.17.231.31/32</p>
          */
         public Builder cidrs(String cidrs) {
             this.putQueryParameter("Cidrs", cidrs);
@@ -222,7 +214,11 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * FlowId.
+         * <p>Flow instance ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);
@@ -231,7 +227,11 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * OutputName.
+         * <p>Output name</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliTestOutput</p>
          */
         public Builder outputName(String outputName) {
             this.putQueryParameter("OutputName", outputName);
@@ -240,7 +240,11 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * OutputProtocol.
+         * <p>Output protocol</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RTMP-PULL</p>
          */
         public Builder outputProtocol(String outputProtocol) {
             this.putQueryParameter("OutputProtocol", outputProtocol);
@@ -249,7 +253,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * OutputToUrl.
+         * <p>Output address, required when the output type is RTMP-PUSH/SRT-Caller mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://push.test.alivecdn.com/live/alitest</p>
          */
         public Builder outputToUrl(String outputToUrl) {
             this.putQueryParameter("OutputToUrl", outputToUrl);
@@ -258,16 +265,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * PairChannelId.
-         */
-        public Builder pairChannelId(String pairChannelId) {
-            this.putQueryParameter("PairChannelId", pairChannelId);
-            this.pairChannelId = pairChannelId;
-            return this;
-        }
-
-        /**
-         * PairFlowId.
+         * <p>Paired Flow instance ID, required when the output type is Flow</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8666ec062190f00e263012666319a5be</p>
          */
         public Builder pairFlowId(String pairFlowId) {
             this.putQueryParameter("PairFlowId", pairFlowId);
@@ -276,7 +277,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * PairInputName.
+         * <p>Input name of the paired Flow, required when the output type is Flow</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliTestInput</p>
          */
         public Builder pairInputName(String pairInputName) {
             this.putQueryParameter("PairInputName", pairInputName);
@@ -285,7 +289,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * PlayerLimit.
+         * <p>Maximum number of players</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder playerLimit(Integer playerLimit) {
             this.putQueryParameter("PlayerLimit", playerLimit);
@@ -294,7 +301,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * SrtLatency.
+         * <p>SRT latency, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder srtLatency(Integer srtLatency) {
             this.putQueryParameter("SrtLatency", srtLatency);
@@ -303,7 +313,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * SrtPassphrase.
+         * <p>SRT passphrase, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BETTERG08S01</p>
          */
         public Builder srtPassphrase(String srtPassphrase) {
             this.putQueryParameter("SrtPassphrase", srtPassphrase);
@@ -312,7 +325,10 @@ public class AddMediaConnectFlowOutputRequest extends Request {
         }
 
         /**
-         * SrtPbkeyLen.
+         * <p>SRT encryption length, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder srtPbkeyLen(String srtPbkeyLen) {
             this.putQueryParameter("SrtPbkeyLen", srtPbkeyLen);

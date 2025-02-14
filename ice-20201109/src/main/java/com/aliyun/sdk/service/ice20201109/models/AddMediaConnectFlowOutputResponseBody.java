@@ -27,7 +27,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RetCode")
-    private String retCode;
+    private Integer retCode;
 
     private AddMediaConnectFlowOutputResponseBody(Builder builder) {
         this.content = builder.content;
@@ -68,7 +68,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
     /**
      * @return retCode
      */
-    public String getRetCode() {
+    public Integer getRetCode() {
         return this.retCode;
     }
 
@@ -76,10 +76,10 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         private Content content; 
         private String description; 
         private String requestId; 
-        private String retCode; 
+        private Integer retCode; 
 
         /**
-         * Content.
+         * <p>Response body</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -87,7 +87,10 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>Description of the API call</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -95,7 +98,10 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>请求ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11AA9E73-FBA0-58DC-97BA-D606D847BCB6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,9 +109,12 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * <p>Returned error code, 0 indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
-        public Builder retCode(String retCode) {
+        public Builder retCode(Integer retCode) {
             this.retCode = retCode;
             return this;
         }
@@ -149,7 +158,10 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
             private String outputUrl; 
 
             /**
-             * OutputUrl.
+             * <p>Output address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srt://1.2.3.4:1025</p>
              */
             public Builder outputUrl(String outputUrl) {
                 this.outputUrl = outputUrl;

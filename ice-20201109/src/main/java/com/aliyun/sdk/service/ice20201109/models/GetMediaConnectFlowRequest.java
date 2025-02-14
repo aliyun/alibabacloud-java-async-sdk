@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetMediaConnectFlowRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
     private GetMediaConnectFlowRequest(Builder builder) {
@@ -59,7 +60,11 @@ public class GetMediaConnectFlowRequest extends Request {
         } 
 
         /**
-         * FlowId.
+         * <p>Flow instance ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34900dc6-90ec-4968-af3c-fcd87f231a5f</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

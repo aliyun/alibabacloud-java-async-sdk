@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAdInsertion  AddAdInsertionRequest
+     * @return AddAdInsertionResponse
+     */
+    CompletableFuture<AddAdInsertionResponse> addAdInsertion(AddAdInsertionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can create at most three levels of categories. Each category level can contain a maximum of 100 subcategories.</p>
      * 
@@ -41,12 +47,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFavoritePublicMediaResponse> addFavoritePublicMedia(AddFavoritePublicMediaRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>A Flow instance can only have one Input.</li>
+     * </ul>
+     * <h3>Description of Input Types</h3>
+     * <ul>
+     * <li>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</li>
+     * <li>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</li>
+     * <li>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</li>
+     * <li>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</li>
+     * <li>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddMediaConnectFlowInput  AddMediaConnectFlowInputRequest
      * @return AddMediaConnectFlowInputResponse
      */
     CompletableFuture<AddMediaConnectFlowInputResponse> addMediaConnectFlowInput(AddMediaConnectFlowInputRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>A Flow instance can have up to 4 outputs.</li>
+     * <li>The output names under the same Flow instance cannot be duplicated.</li>
+     * <li>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</li>
+     * </ul>
+     * <h3>Description of Output Types</h3>
+     * <ul>
+     * <li>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</li>
+     * <li>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</li>
+     * <li>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</li>
+     * <li>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</li>
+     * <li>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddMediaConnectFlowOutput  AddMediaConnectFlowOutputRequest
      * @return AddMediaConnectFlowOutputResponse
      */
@@ -76,6 +112,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AlterSearchIndexResponse
      */
     CompletableFuture<AlterSearchIndexResponse> alterSearchIndex(AlterSearchIndexRequest request);
+
+    /**
+     * @param request the request parameters of BatchCreateVodPackagingAsset  BatchCreateVodPackagingAssetRequest
+     * @return BatchCreateVodPackagingAssetResponse
+     */
+    CompletableFuture<BatchCreateVodPackagingAssetResponse> batchCreateVodPackagingAsset(BatchCreateVodPackagingAssetRequest request);
 
     /**
      * @param request the request parameters of BatchGetMediaInfos  BatchGetMediaInfosRequest
@@ -186,6 +228,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLiveTranscodeTemplateResponse> createLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The name of the Flow cannot be duplicated within the same region.</li>
+     * <li>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateMediaConnectFlow  CreateMediaConnectFlowRequest
      * @return CreateMediaConnectFlowResponse
      */
@@ -261,10 +309,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUploadStreamResponse> createUploadStream(CreateUploadStreamRequest request);
 
     /**
+     * @param request the request parameters of CreateVodPackagingAsset  CreateVodPackagingAssetRequest
+     * @return CreateVodPackagingAssetResponse
+     */
+    CompletableFuture<CreateVodPackagingAssetResponse> createVodPackagingAsset(CreateVodPackagingAssetRequest request);
+
+    /**
+     * @param request the request parameters of CreateVodPackagingConfiguration  CreateVodPackagingConfigurationRequest
+     * @return CreateVodPackagingConfigurationResponse
+     */
+    CompletableFuture<CreateVodPackagingConfigurationResponse> createVodPackagingConfiguration(CreateVodPackagingConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of CreateVodPackagingGroup  CreateVodPackagingGroupRequest
+     * @return CreateVodPackagingGroupResponse
+     */
+    CompletableFuture<CreateVodPackagingGroupResponse> createVodPackagingGroup(CreateVodPackagingGroupRequest request);
+
+    /**
      * @param request the request parameters of DecryptKMSDataKey  DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
      */
     CompletableFuture<DecryptKMSDataKeyResponse> decryptKMSDataKey(DecryptKMSDataKeyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAIAgentDialogue  DeleteAIAgentDialogueRequest
+     * @return DeleteAIAgentDialogueResponse
+     */
+    CompletableFuture<DeleteAIAgentDialogueResponse> deleteAIAgentDialogue(DeleteAIAgentDialogueRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAdInsertion  DeleteAdInsertionRequest
+     * @return DeleteAdInsertionResponse
+     */
+    CompletableFuture<DeleteAdInsertionResponse> deleteAdInsertion(DeleteAdInsertionRequest request);
 
     /**
      * @param request the request parameters of DeleteAvatarTrainingJob  DeleteAvatarTrainingJobRequest
@@ -378,10 +456,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLiveTranscodeTemplateResponse> deleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</li>
+     * <li>You cannot delete a Flow instance that is in the online state.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteMediaConnectFlow  DeleteMediaConnectFlowRequest
      * @return DeleteMediaConnectFlowResponse
      */
     CompletableFuture<DeleteMediaConnectFlowResponse> deleteMediaConnectFlow(DeleteMediaConnectFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When the Flow instance status is online, the input cannot be deleted.</li>
+     * <li>Only after all outputs under the Flow instance have been deleted can the input be deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMediaConnectFlowInput  DeleteMediaConnectFlowInputRequest
+     * @return DeleteMediaConnectFlowInputResponse
+     */
+    CompletableFuture<DeleteMediaConnectFlowInputResponse> deleteMediaConnectFlowInput(DeleteMediaConnectFlowInputRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>When the Flow instance status is online, the output cannot be deleted.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMediaConnectFlowOutput  DeleteMediaConnectFlowOutputRequest
+     * @return DeleteMediaConnectFlowOutputResponse
+     */
+    CompletableFuture<DeleteMediaConnectFlowOutputResponse> deleteMediaConnectFlowOutput(DeleteMediaConnectFlowOutputRequest request);
 
     /**
      * @param request the request parameters of DeleteMediaFromSearchLib  DeleteMediaFromSearchLibRequest
@@ -452,6 +562,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTemplateResponse
      */
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVodPackagingAsset  DeleteVodPackagingAssetRequest
+     * @return DeleteVodPackagingAssetResponse
+     */
+    CompletableFuture<DeleteVodPackagingAssetResponse> deleteVodPackagingAsset(DeleteVodPackagingAssetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVodPackagingConfiguration  DeleteVodPackagingConfigurationRequest
+     * @return DeleteVodPackagingConfigurationResponse
+     */
+    CompletableFuture<DeleteVodPackagingConfigurationResponse> deleteVodPackagingConfiguration(DeleteVodPackagingConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVodPackagingGroup  DeleteVodPackagingGroupRequest
+     * @return DeleteVodPackagingGroupResponse
+     */
+    CompletableFuture<DeleteVodPackagingGroupResponse> deleteVodPackagingGroup(DeleteVodPackagingGroupRequest request);
 
     /**
      * @param request the request parameters of DescribeAIAgentInstance  DescribeAIAgentInstanceRequest
@@ -536,6 +664,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateKMSDataKeyResponse
      */
     CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request);
+
+    /**
+     * @param request the request parameters of GenerateMessageChatToken  GenerateMessageChatTokenRequest
+     * @return GenerateMessageChatTokenResponse
+     */
+    CompletableFuture<GenerateMessageChatTokenResponse> generateMessageChatToken(GenerateMessageChatTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetAdInsertion  GetAdInsertionRequest
+     * @return GetAdInsertionResponse
+     */
+    CompletableFuture<GetAdInsertionResponse> getAdInsertion(GetAdInsertionRequest request);
 
     /**
      * @param request the request parameters of GetAvatar  GetAvatarRequest
@@ -729,10 +869,38 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLiveTranscodeTemplateResponse> getLiveTranscodeTemplate(GetLiveTranscodeTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
+     * <li>The StartTime returned by the interface is only valid when the Flow status is online.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetMediaConnectFlow  GetMediaConnectFlowRequest
      * @return GetMediaConnectFlowResponse
      */
     CompletableFuture<GetMediaConnectFlowResponse> getMediaConnectFlow(GetMediaConnectFlowRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMediaConnectFlowInput  GetMediaConnectFlowInputRequest
+     * @return GetMediaConnectFlowInputResponse
+     */
+    CompletableFuture<GetMediaConnectFlowInputResponse> getMediaConnectFlowInput(GetMediaConnectFlowInputRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMediaConnectFlowOutput  GetMediaConnectFlowOutputRequest
+     * @return GetMediaConnectFlowOutputResponse
+     */
+    CompletableFuture<GetMediaConnectFlowOutputResponse> getMediaConnectFlowOutput(GetMediaConnectFlowOutputRequest request);
 
     /**
      * @param request the request parameters of GetMediaConvertJob  GetMediaConvertJobRequest
@@ -899,6 +1067,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoListResponse> getVideoList(GetVideoListRequest request);
 
     /**
+     * @param request the request parameters of GetVodPackagingAsset  GetVodPackagingAssetRequest
+     * @return GetVodPackagingAssetResponse
+     */
+    CompletableFuture<GetVodPackagingAssetResponse> getVodPackagingAsset(GetVodPackagingAssetRequest request);
+
+    /**
+     * @param request the request parameters of GetVodPackagingConfiguration  GetVodPackagingConfigurationRequest
+     * @return GetVodPackagingConfigurationResponse
+     */
+    CompletableFuture<GetVodPackagingConfigurationResponse> getVodPackagingConfiguration(GetVodPackagingConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of GetVodPackagingGroup  GetVodPackagingGroupRequest
+     * @return GetVodPackagingGroupResponse
+     */
+    CompletableFuture<GetVodPackagingGroupResponse> getVodPackagingGroup(GetVodPackagingGroupRequest request);
+
+    /**
      * @param request the request parameters of GetWorkflowTask  GetWorkflowTaskRequest
      * @return GetWorkflowTaskResponse
      */
@@ -911,10 +1097,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InsertMediaToSearchLibResponse> insertMediaToSearchLib(InsertMediaToSearchLibRequest request);
 
     /**
+     * @param request the request parameters of ListAIAgentDialogues  ListAIAgentDialoguesRequest
+     * @return ListAIAgentDialoguesResponse
+     */
+    CompletableFuture<ListAIAgentDialoguesResponse> listAIAgentDialogues(ListAIAgentDialoguesRequest request);
+
+    /**
      * @param request the request parameters of ListAIAgentInstance  ListAIAgentInstanceRequest
      * @return ListAIAgentInstanceResponse
      */
     CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListAdInsertions  ListAdInsertionsRequest
+     * @return ListAdInsertionsResponse
+     */
+    CompletableFuture<ListAdInsertionsResponse> listAdInsertions(ListAdInsertionsRequest request);
 
     /**
      * @param request the request parameters of ListAlerts  ListAlertsRequest
@@ -1225,6 +1423,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTranscodeJobsResponse> listTranscodeJobs(ListTranscodeJobsRequest request);
 
     /**
+     * @param request the request parameters of ListVodPackagingAssets  ListVodPackagingAssetsRequest
+     * @return ListVodPackagingAssetsResponse
+     */
+    CompletableFuture<ListVodPackagingAssetsResponse> listVodPackagingAssets(ListVodPackagingAssetsRequest request);
+
+    /**
+     * @param request the request parameters of ListVodPackagingConfigurations  ListVodPackagingConfigurationsRequest
+     * @return ListVodPackagingConfigurationsResponse
+     */
+    CompletableFuture<ListVodPackagingConfigurationsResponse> listVodPackagingConfigurations(ListVodPackagingConfigurationsRequest request);
+
+    /**
+     * @param request the request parameters of ListVodPackagingGroups  ListVodPackagingGroupsRequest
+     * @return ListVodPackagingGroupsResponse
+     */
+    CompletableFuture<ListVodPackagingGroupsResponse> listVodPackagingGroups(ListVodPackagingGroupsRequest request);
+
+    /**
      * @param request the request parameters of QueryCopyrightExtractJob  QueryCopyrightExtractJobRequest
      * @return QueryCopyrightExtractJobResponse
      */
@@ -1417,6 +1633,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendAIAgentSpeechResponse> sendAIAgentSpeech(SendAIAgentSpeechRequest request);
 
     /**
+     * @param request the request parameters of SendAIAgentText  SendAIAgentTextRequest
+     * @return SendAIAgentTextResponse
+     */
+    CompletableFuture<SendAIAgentTextResponse> sendAIAgentText(SendAIAgentTextRequest request);
+
+    /**
      * @param request the request parameters of SendLiveSnapshotJobCommand  SendLiveSnapshotJobCommandRequest
      * @return SendLiveSnapshotJobCommandResponse
      */
@@ -1596,6 +1818,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitDynamicImageJobResponse
      */
     CompletableFuture<SubmitDynamicImageJobResponse> submitDynamicImageJob(SubmitDynamicImageJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitHighlightExtractionJob  SubmitHighlightExtractionJobRequest
+     * @return SubmitHighlightExtractionJobResponse
+     */
+    CompletableFuture<SubmitHighlightExtractionJobResponse> submitHighlightExtractionJob(SubmitHighlightExtractionJobRequest request);
 
     /**
      * @param request the request parameters of SubmitIProductionJob  SubmitIProductionJobRequest
@@ -1805,6 +2033,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAIAgentInstanceResponse> updateAIAgentInstance(UpdateAIAgentInstanceRequest request);
 
     /**
+     * @param request the request parameters of UpdateAdInsertion  UpdateAdInsertionRequest
+     * @return UpdateAdInsertionResponse
+     */
+    CompletableFuture<UpdateAdInsertionResponse> updateAdInsertion(UpdateAdInsertionRequest request);
+
+    /**
      * @param request the request parameters of UpdateAvatarTrainingJob  UpdateAvatarTrainingJobRequest
      * @return UpdateAvatarTrainingJobResponse
      */
@@ -1899,6 +2133,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateLiveTranscodeTemplateResponse
      */
     CompletableFuture<UpdateLiveTranscodeTemplateResponse> updateLiveTranscodeTemplate(UpdateLiveTranscodeTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The input can only be modified when the Flow instance status is offline.</li>
+     * <li>The input type cannot be modified.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateMediaConnectFlowInput  UpdateMediaConnectFlowInputRequest
+     * @return UpdateMediaConnectFlowInputResponse
+     */
+    CompletableFuture<UpdateMediaConnectFlowInputResponse> updateMediaConnectFlowInput(UpdateMediaConnectFlowInputRequest request);
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The output can only be modified when the Flow instance status is offline.</li>
+     * <li>The output type cannot be modified.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateMediaConnectFlowOutput  UpdateMediaConnectFlowOutputRequest
+     * @return UpdateMediaConnectFlowOutputResponse
+     */
+    CompletableFuture<UpdateMediaConnectFlowOutputResponse> updateMediaConnectFlowOutput(UpdateMediaConnectFlowOutputRequest request);
 
     /**
      * @param request the request parameters of UpdateMediaConnectFlowStatus  UpdateMediaConnectFlowStatusRequest

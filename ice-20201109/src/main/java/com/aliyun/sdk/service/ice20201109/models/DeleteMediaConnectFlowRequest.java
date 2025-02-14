@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteMediaConnectFlowRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowId;
 
     private DeleteMediaConnectFlowRequest(Builder builder) {
@@ -59,7 +60,11 @@ public class DeleteMediaConnectFlowRequest extends Request {
         } 
 
         /**
-         * FlowId.
+         * <p>Flow instance ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0381f478-7d53-4076-9d5f-27680a6f73e7</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

@@ -28,6 +28,10 @@ public class StartAIAgentInstanceRequest extends Request {
     private AIAgentRuntimeConfig runtimeConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    private String sessionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateConfig")
     private AIAgentTemplateConfig templateConfig;
 
@@ -39,6 +43,7 @@ public class StartAIAgentInstanceRequest extends Request {
         super(builder);
         this.AIAgentId = builder.AIAgentId;
         this.runtimeConfig = builder.runtimeConfig;
+        this.sessionId = builder.sessionId;
         this.templateConfig = builder.templateConfig;
         this.userData = builder.userData;
     }
@@ -71,6 +76,13 @@ public class StartAIAgentInstanceRequest extends Request {
     }
 
     /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
      * @return templateConfig
      */
     public AIAgentTemplateConfig getTemplateConfig() {
@@ -87,6 +99,7 @@ public class StartAIAgentInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<StartAIAgentInstanceRequest, Builder> {
         private String AIAgentId; 
         private AIAgentRuntimeConfig runtimeConfig; 
+        private String sessionId; 
         private AIAgentTemplateConfig templateConfig; 
         private String userData; 
 
@@ -98,6 +111,7 @@ public class StartAIAgentInstanceRequest extends Request {
             super(request);
             this.AIAgentId = request.AIAgentId;
             this.runtimeConfig = request.runtimeConfig;
+            this.sessionId = request.sessionId;
             this.templateConfig = request.templateConfig;
             this.userData = request.userData;
         } 
@@ -121,6 +135,15 @@ public class StartAIAgentInstanceRequest extends Request {
             String runtimeConfigShrink = shrink(runtimeConfig, "RuntimeConfig", "json");
             this.putQueryParameter("RuntimeConfig", runtimeConfigShrink);
             this.runtimeConfig = runtimeConfig;
+            return this;
+        }
+
+        /**
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.putQueryParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
             return this;
         }
 
