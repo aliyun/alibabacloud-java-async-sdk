@@ -33,12 +33,17 @@ public class ElectrobikeDirectionNovaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("originLongitude")
     private String originLongitude;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("showPolyline")
+    private Boolean showPolyline;
+
     private ElectrobikeDirectionNovaRequest(Builder builder) {
         super(builder);
         this.destinationLatitude = builder.destinationLatitude;
         this.destinationLongitude = builder.destinationLongitude;
         this.originLatitude = builder.originLatitude;
         this.originLongitude = builder.originLongitude;
+        this.showPolyline = builder.showPolyline;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ElectrobikeDirectionNovaRequest extends Request {
         return this.originLongitude;
     }
 
+    /**
+     * @return showPolyline
+     */
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
+    }
+
     public static final class Builder extends Request.Builder<ElectrobikeDirectionNovaRequest, Builder> {
         private String destinationLatitude; 
         private String destinationLongitude; 
         private String originLatitude; 
         private String originLongitude; 
+        private Boolean showPolyline; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ElectrobikeDirectionNovaRequest extends Request {
             this.destinationLongitude = request.destinationLongitude;
             this.originLatitude = request.originLatitude;
             this.originLongitude = request.originLongitude;
+            this.showPolyline = request.showPolyline;
         } 
 
         /**
@@ -133,6 +147,15 @@ public class ElectrobikeDirectionNovaRequest extends Request {
         public Builder originLongitude(String originLongitude) {
             this.putQueryParameter("originLongitude", originLongitude);
             this.originLongitude = originLongitude;
+            return this;
+        }
+
+        /**
+         * showPolyline.
+         */
+        public Builder showPolyline(Boolean showPolyline) {
+            this.putQueryParameter("showPolyline", showPolyline);
+            this.showPolyline = showPolyline;
             return this;
         }
 

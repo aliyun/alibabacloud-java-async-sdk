@@ -41,6 +41,10 @@ public class DrivingDirectionNovaRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("plate")
     private String plate;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("showPolyline")
+    private Boolean showPolyline;
+
     private DrivingDirectionNovaRequest(Builder builder) {
         super(builder);
         this.carType = builder.carType;
@@ -49,6 +53,7 @@ public class DrivingDirectionNovaRequest extends Request {
         this.originLatitude = builder.originLatitude;
         this.originLongitude = builder.originLongitude;
         this.plate = builder.plate;
+        this.showPolyline = builder.showPolyline;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class DrivingDirectionNovaRequest extends Request {
         return this.plate;
     }
 
+    /**
+     * @return showPolyline
+     */
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
+    }
+
     public static final class Builder extends Request.Builder<DrivingDirectionNovaRequest, Builder> {
         private String carType; 
         private String destinationLatitude; 
@@ -113,6 +125,7 @@ public class DrivingDirectionNovaRequest extends Request {
         private String originLatitude; 
         private String originLongitude; 
         private String plate; 
+        private Boolean showPolyline; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class DrivingDirectionNovaRequest extends Request {
             this.originLatitude = request.originLatitude;
             this.originLongitude = request.originLongitude;
             this.plate = request.plate;
+            this.showPolyline = request.showPolyline;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class DrivingDirectionNovaRequest extends Request {
         public Builder plate(String plate) {
             this.putQueryParameter("plate", plate);
             this.plate = plate;
+            return this;
+        }
+
+        /**
+         * showPolyline.
+         */
+        public Builder showPolyline(Boolean showPolyline) {
+            this.putQueryParameter("showPolyline", showPolyline);
+            this.showPolyline = showPolyline;
             return this;
         }
 

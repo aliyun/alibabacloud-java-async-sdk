@@ -41,6 +41,10 @@ public class TransitIntegratedDirectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("originLongitude")
     private String originLongitude;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("showPolyline")
+    private Boolean showPolyline;
+
     private TransitIntegratedDirectionRequest(Builder builder) {
         super(builder);
         this.destinationCity = builder.destinationCity;
@@ -49,6 +53,7 @@ public class TransitIntegratedDirectionRequest extends Request {
         this.originCity = builder.originCity;
         this.originLatitude = builder.originLatitude;
         this.originLongitude = builder.originLongitude;
+        this.showPolyline = builder.showPolyline;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class TransitIntegratedDirectionRequest extends Request {
         return this.originLongitude;
     }
 
+    /**
+     * @return showPolyline
+     */
+    public Boolean getShowPolyline() {
+        return this.showPolyline;
+    }
+
     public static final class Builder extends Request.Builder<TransitIntegratedDirectionRequest, Builder> {
         private String destinationCity; 
         private String destinationLatitude; 
@@ -113,6 +125,7 @@ public class TransitIntegratedDirectionRequest extends Request {
         private String originCity; 
         private String originLatitude; 
         private String originLongitude; 
+        private Boolean showPolyline; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class TransitIntegratedDirectionRequest extends Request {
             this.originCity = request.originCity;
             this.originLatitude = request.originLatitude;
             this.originLongitude = request.originLongitude;
+            this.showPolyline = request.showPolyline;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class TransitIntegratedDirectionRequest extends Request {
         public Builder originLongitude(String originLongitude) {
             this.putQueryParameter("originLongitude", originLongitude);
             this.originLongitude = originLongitude;
+            return this;
+        }
+
+        /**
+         * showPolyline.
+         */
+        public Builder showPolyline(Boolean showPolyline) {
+            this.putQueryParameter("showPolyline", showPolyline);
+            this.showPolyline = showPolyline;
             return this;
         }
 
