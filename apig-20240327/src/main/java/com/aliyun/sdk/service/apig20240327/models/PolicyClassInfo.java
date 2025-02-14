@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class PolicyClassInfo extends TeaModel {
     private String alias;
 
     @com.aliyun.core.annotation.NameInMap("attachableResourceTypes")
-    private java.util.List < String > attachableResourceTypes;
+    private java.util.List<String> attachableResourceTypes;
 
     @com.aliyun.core.annotation.NameInMap("classId")
     private String classId;
@@ -85,7 +90,7 @@ public class PolicyClassInfo extends TeaModel {
     /**
      * @return attachableResourceTypes
      */
-    public java.util.List < String > getAttachableResourceTypes() {
+    public java.util.List<String> getAttachableResourceTypes() {
         return this.attachableResourceTypes;
     }
 
@@ -168,7 +173,7 @@ public class PolicyClassInfo extends TeaModel {
 
     public static final class Builder {
         private String alias; 
-        private java.util.List < String > attachableResourceTypes; 
+        private java.util.List<String> attachableResourceTypes; 
         private String classId; 
         private String configExample; 
         private Boolean deprecated; 
@@ -192,7 +197,7 @@ public class PolicyClassInfo extends TeaModel {
         /**
          * attachableResourceTypes.
          */
-        public Builder attachableResourceTypes(java.util.List < String > attachableResourceTypes) {
+        public Builder attachableResourceTypes(java.util.List<String> attachableResourceTypes) {
             this.attachableResourceTypes = attachableResourceTypes;
             return this;
         }

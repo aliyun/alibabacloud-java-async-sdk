@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -319,7 +324,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private String mode;
 
         @com.aliyun.core.annotation.NameInMap("ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -392,7 +397,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -417,7 +422,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private Boolean gatewayDefault; 
             private String loadBalancerId; 
             private String mode; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private String status; 
             private String type; 
 
@@ -501,7 +506,7 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>List of listening ports.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -661,7 +666,10 @@ public class GetGatewayResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * key.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -669,7 +677,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1012,7 +1023,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private Long createTimestamp;
 
         @com.aliyun.core.annotation.NameInMap("environments")
-        private java.util.List < Environments> environments;
+        private java.util.List<Environments> environments;
 
         @com.aliyun.core.annotation.NameInMap("expireTimestamp")
         private Long expireTimestamp;
@@ -1021,7 +1032,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private String gatewayId;
 
         @com.aliyun.core.annotation.NameInMap("loadBalancers")
-        private java.util.List < LoadBalancers> loadBalancers;
+        private java.util.List<LoadBalancers> loadBalancers;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1042,7 +1053,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("targetVersion")
         private String targetVersion;
@@ -1060,7 +1071,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private Vpc vpc;
 
         @com.aliyun.core.annotation.NameInMap("zones")
-        private java.util.List < Zones> zones;
+        private java.util.List<Zones> zones;
 
         private Data(Builder builder) {
             this.chargeType = builder.chargeType;
@@ -1117,7 +1128,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return environments
          */
-        public java.util.List < Environments> getEnvironments() {
+        public java.util.List<Environments> getEnvironments() {
             return this.environments;
         }
 
@@ -1138,7 +1149,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return loadBalancers
          */
-        public java.util.List < LoadBalancers> getLoadBalancers() {
+        public java.util.List<LoadBalancers> getLoadBalancers() {
             return this.loadBalancers;
         }
 
@@ -1187,7 +1198,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1229,7 +1240,7 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < Zones> getZones() {
+        public java.util.List<Zones> getZones() {
             return this.zones;
         }
 
@@ -1237,23 +1248,23 @@ public class GetGatewayResponseBody extends TeaModel {
             private String chargeType; 
             private String createFrom; 
             private Long createTimestamp; 
-            private java.util.List < Environments> environments; 
+            private java.util.List<Environments> environments; 
             private Long expireTimestamp; 
             private String gatewayId; 
-            private java.util.List < LoadBalancers> loadBalancers; 
+            private java.util.List<LoadBalancers> loadBalancers; 
             private String name; 
             private String replicas; 
             private String resourceGroupId; 
             private SecurityGroup securityGroup; 
             private String spec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String targetVersion; 
             private Long updateTimestamp; 
             private VSwitch vSwitch; 
             private String version; 
             private Vpc vpc; 
-            private java.util.List < Zones> zones; 
+            private java.util.List<Zones> zones; 
 
             /**
              * <p>Charge type</p>
@@ -1298,7 +1309,7 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>List of environments associated with the gateway.</p>
              */
-            public Builder environments(java.util.List < Environments> environments) {
+            public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
                 return this;
             }
@@ -1328,7 +1339,7 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>List of entry addresses for the gateway.</p>
              */
-            public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
+            public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
                 return this;
             }
@@ -1356,7 +1367,10 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2s3cvc4jzfxi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1408,9 +1422,9 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The resource tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1467,7 +1481,7 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>List of availability zones associated with the gateway.</p>
              */
-            public Builder zones(java.util.List < Zones> zones) {
+            public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;
                 return this;
             }

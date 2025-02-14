@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class GetDomainResponseBody extends TeaModel {
      */
     public static class StatisticsInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceStatistics")
-        private java.util.List < ResourceStatistic > resourceStatistics;
+        private java.util.List<ResourceStatistic> resourceStatistics;
 
         @com.aliyun.core.annotation.NameInMap("totalCount")
         private String totalCount;
@@ -149,7 +154,7 @@ public class GetDomainResponseBody extends TeaModel {
         /**
          * @return resourceStatistics
          */
-        public java.util.List < ResourceStatistic > getResourceStatistics() {
+        public java.util.List<ResourceStatistic> getResourceStatistics() {
             return this.resourceStatistics;
         }
 
@@ -161,13 +166,13 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ResourceStatistic > resourceStatistics; 
+            private java.util.List<ResourceStatistic> resourceStatistics; 
             private String totalCount; 
 
             /**
              * resourceStatistics.
              */
-            public Builder resourceStatistics(java.util.List < ResourceStatistic > resourceStatistics) {
+            public Builder resourceStatistics(java.util.List<ResourceStatistic> resourceStatistics) {
                 this.resourceStatistics = resourceStatistics;
                 return this;
             }
@@ -197,11 +202,11 @@ public class GetDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("algorithm")
         private String algorithm;
 
-        @com.aliyun.core.annotation.NameInMap("caCertIndentifier")
-        private String caCertIndentifier;
+        @com.aliyun.core.annotation.NameInMap("caCertIdentifier")
+        private String caCertIdentifier;
 
-        @com.aliyun.core.annotation.NameInMap("certIndentifier")
-        private String certIndentifier;
+        @com.aliyun.core.annotation.NameInMap("certIdentifier")
+        private String certIdentifier;
 
         @com.aliyun.core.annotation.NameInMap("certName")
         private String certName;
@@ -262,8 +267,8 @@ public class GetDomainResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.algorithm = builder.algorithm;
-            this.caCertIndentifier = builder.caCertIndentifier;
-            this.certIndentifier = builder.certIndentifier;
+            this.caCertIdentifier = builder.caCertIdentifier;
+            this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
             this.createFrom = builder.createFrom;
             this.createTimestamp = builder.createTimestamp;
@@ -301,17 +306,17 @@ public class GetDomainResponseBody extends TeaModel {
         }
 
         /**
-         * @return caCertIndentifier
+         * @return caCertIdentifier
          */
-        public String getCaCertIndentifier() {
-            return this.caCertIndentifier;
+        public String getCaCertIdentifier() {
+            return this.caCertIdentifier;
         }
 
         /**
-         * @return certIndentifier
+         * @return certIdentifier
          */
-        public String getCertIndentifier() {
-            return this.certIndentifier;
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         /**
@@ -449,8 +454,8 @@ public class GetDomainResponseBody extends TeaModel {
 
         public static final class Builder {
             private String algorithm; 
-            private String caCertIndentifier; 
-            private String certIndentifier; 
+            private String caCertIdentifier; 
+            private String certIdentifier; 
             private String certName; 
             private String createFrom; 
             private Long createTimestamp; 
@@ -483,24 +488,18 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cloud Shield CA certificate identity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>223576-cn-hangzhou</p>
+             * caCertIdentifier.
              */
-            public Builder caCertIndentifier(String caCertIndentifier) {
-                this.caCertIndentifier = caCertIndentifier;
+            public Builder caCertIdentifier(String caCertIdentifier) {
+                this.caCertIdentifier = caCertIdentifier;
                 return this;
             }
 
             /**
-             * <p>Cloud Shield certificate identity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123576-cn-hangzhou</p>
+             * certIdentifier.
              */
-            public Builder certIndentifier(String certIndentifier) {
-                this.certIndentifier = certIndentifier;
+            public Builder certIdentifier(String certIdentifier) {
+                this.certIdentifier = certIdentifier;
                 return this;
             }
 

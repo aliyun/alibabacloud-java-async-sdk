@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApiKeyIdentityConfig</p>
  */
 public class ApiKeyIdentityConfig extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("apikey")
-    private String apikey;
-
     @com.aliyun.core.annotation.NameInMap("apikeySource")
     private ApikeySource apikeySource;
 
-    @com.aliyun.core.annotation.NameInMap("generateMode")
-    private String generateMode;
+    @com.aliyun.core.annotation.NameInMap("credentials")
+    private java.util.List<Credentials> credentials;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ApiKeyIdentityConfig(Builder builder) {
-        this.apikey = builder.apikey;
         this.apikeySource = builder.apikeySource;
-        this.generateMode = builder.generateMode;
+        this.credentials = builder.credentials;
         this.type = builder.type;
     }
 
@@ -40,13 +41,6 @@ public class ApiKeyIdentityConfig extends TeaModel {
     }
 
     /**
-     * @return apikey
-     */
-    public String getApikey() {
-        return this.apikey;
-    }
-
-    /**
      * @return apikeySource
      */
     public ApikeySource getApikeySource() {
@@ -54,10 +48,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
     }
 
     /**
-     * @return generateMode
+     * @return credentials
      */
-    public String getGenerateMode() {
-        return this.generateMode;
+    public java.util.List<Credentials> getCredentials() {
+        return this.credentials;
     }
 
     /**
@@ -68,18 +62,9 @@ public class ApiKeyIdentityConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private String apikey; 
         private ApikeySource apikeySource; 
-        private String generateMode; 
+        private java.util.List<Credentials> credentials; 
         private String type; 
-
-        /**
-         * apikey.
-         */
-        public Builder apikey(String apikey) {
-            this.apikey = apikey;
-            return this;
-        }
 
         /**
          * apikeySource.
@@ -90,10 +75,10 @@ public class ApiKeyIdentityConfig extends TeaModel {
         }
 
         /**
-         * generateMode.
+         * credentials.
          */
-        public Builder generateMode(String generateMode) {
-            this.generateMode = generateMode;
+        public Builder credentials(java.util.List<Credentials> credentials) {
+            this.credentials = credentials;
             return this;
         }
 
@@ -173,6 +158,73 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
             public ApikeySource build() {
                 return new ApikeySource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApiKeyIdentityConfig} extends {@link TeaModel}
+     *
+     * <p>ApiKeyIdentityConfig</p>
+     */
+    public static class Credentials extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apikey")
+        private String apikey;
+
+        @com.aliyun.core.annotation.NameInMap("generateMode")
+        private String generateMode;
+
+        private Credentials(Builder builder) {
+            this.apikey = builder.apikey;
+            this.generateMode = builder.generateMode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Credentials create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apikey
+         */
+        public String getApikey() {
+            return this.apikey;
+        }
+
+        /**
+         * @return generateMode
+         */
+        public String getGenerateMode() {
+            return this.generateMode;
+        }
+
+        public static final class Builder {
+            private String apikey; 
+            private String generateMode; 
+
+            /**
+             * apikey.
+             */
+            public Builder apikey(String apikey) {
+                this.apikey = apikey;
+                return this;
+            }
+
+            /**
+             * generateMode.
+             */
+            public Builder generateMode(String generateMode) {
+                this.generateMode = generateMode;
+                return this;
+            }
+
+            public Credentials build() {
+                return new Credentials(this);
             } 
 
         } 

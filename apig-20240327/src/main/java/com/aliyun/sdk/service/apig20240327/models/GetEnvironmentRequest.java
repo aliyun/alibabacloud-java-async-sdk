@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -96,7 +101,10 @@ public class GetEnvironmentRequest extends Request {
         }
 
         /**
-         * withStatistics.
+         * <p>Indicates whether to return online resource info.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withStatistics(Boolean withStatistics) {
             this.putQueryParameter("withStatistics", withStatistics);
@@ -106,6 +114,9 @@ public class GetEnvironmentRequest extends Request {
 
         /**
          * <p>Option for vpc info.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withVpcInfo(Boolean withVpcInfo) {
             this.putQueryParameter("withVpcInfo", withVpcInfo);

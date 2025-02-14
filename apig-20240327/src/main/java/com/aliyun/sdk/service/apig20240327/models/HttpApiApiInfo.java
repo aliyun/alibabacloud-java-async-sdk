@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,19 +18,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HttpApiApiInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("aiProtocols")
-    private java.util.List < String > aiProtocols;
+    private java.util.List<String> aiProtocols;
+
+    @com.aliyun.core.annotation.NameInMap("authConfig")
+    private AuthConfig authConfig;
 
     @com.aliyun.core.annotation.NameInMap("basePath")
     private String basePath;
 
     @com.aliyun.core.annotation.NameInMap("deployConfigs")
-    private java.util.List < HttpApiDeployConfig > deployConfigs;
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("enabelAuth")
+    private Boolean enabelAuth;
+
     @com.aliyun.core.annotation.NameInMap("environments")
-    private java.util.List < Environments> environments;
+    private java.util.List<Environments> environments;
 
     @com.aliyun.core.annotation.NameInMap("httpApiId")
     private String httpApiId;
@@ -37,7 +48,7 @@ public class HttpApiApiInfo extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("protocols")
-    private java.util.List < String > protocols;
+    private java.util.List<String> protocols;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
@@ -50,9 +61,11 @@ public class HttpApiApiInfo extends TeaModel {
 
     private HttpApiApiInfo(Builder builder) {
         this.aiProtocols = builder.aiProtocols;
+        this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
+        this.enabelAuth = builder.enabelAuth;
         this.environments = builder.environments;
         this.httpApiId = builder.httpApiId;
         this.ingressInfo = builder.ingressInfo;
@@ -74,8 +87,15 @@ public class HttpApiApiInfo extends TeaModel {
     /**
      * @return aiProtocols
      */
-    public java.util.List < String > getAiProtocols() {
+    public java.util.List<String> getAiProtocols() {
         return this.aiProtocols;
+    }
+
+    /**
+     * @return authConfig
+     */
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     /**
@@ -88,7 +108,7 @@ public class HttpApiApiInfo extends TeaModel {
     /**
      * @return deployConfigs
      */
-    public java.util.List < HttpApiDeployConfig > getDeployConfigs() {
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
         return this.deployConfigs;
     }
 
@@ -100,9 +120,16 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
+     * @return enabelAuth
+     */
+    public Boolean getEnabelAuth() {
+        return this.enabelAuth;
+    }
+
+    /**
      * @return environments
      */
-    public java.util.List < Environments> getEnvironments() {
+    public java.util.List<Environments> getEnvironments() {
         return this.environments;
     }
 
@@ -130,7 +157,7 @@ public class HttpApiApiInfo extends TeaModel {
     /**
      * @return protocols
      */
-    public java.util.List < String > getProtocols() {
+    public java.util.List<String> getProtocols() {
         return this.protocols;
     }
 
@@ -156,15 +183,17 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > aiProtocols; 
+        private java.util.List<String> aiProtocols; 
+        private AuthConfig authConfig; 
         private String basePath; 
-        private java.util.List < HttpApiDeployConfig > deployConfigs; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
-        private java.util.List < Environments> environments; 
+        private Boolean enabelAuth; 
+        private java.util.List<Environments> environments; 
         private String httpApiId; 
         private IngressInfo ingressInfo; 
         private String name; 
-        private java.util.List < String > protocols; 
+        private java.util.List<String> protocols; 
         private String resourceGroupId; 
         private String type; 
         private HttpApiVersionInfo versionInfo; 
@@ -172,8 +201,16 @@ public class HttpApiApiInfo extends TeaModel {
         /**
          * aiProtocols.
          */
-        public Builder aiProtocols(java.util.List < String > aiProtocols) {
+        public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.aiProtocols = aiProtocols;
+            return this;
+        }
+
+        /**
+         * authConfig.
+         */
+        public Builder authConfig(AuthConfig authConfig) {
+            this.authConfig = authConfig;
             return this;
         }
 
@@ -188,7 +225,7 @@ public class HttpApiApiInfo extends TeaModel {
         /**
          * deployConfigs.
          */
-        public Builder deployConfigs(java.util.List < HttpApiDeployConfig > deployConfigs) {
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.deployConfigs = deployConfigs;
             return this;
         }
@@ -202,9 +239,17 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
+         * enabelAuth.
+         */
+        public Builder enabelAuth(Boolean enabelAuth) {
+            this.enabelAuth = enabelAuth;
+            return this;
+        }
+
+        /**
          * environments.
          */
-        public Builder environments(java.util.List < Environments> environments) {
+        public Builder environments(java.util.List<Environments> environments) {
             this.environments = environments;
             return this;
         }
@@ -236,7 +281,7 @@ public class HttpApiApiInfo extends TeaModel {
         /**
          * protocols.
          */
-        public Builder protocols(java.util.List < String > protocols) {
+        public Builder protocols(java.util.List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
@@ -649,7 +694,7 @@ public class HttpApiApiInfo extends TeaModel {
         private String backendType;
 
         @com.aliyun.core.annotation.NameInMap("customDomains")
-        private java.util.List < HttpApiDomainInfo > customDomains;
+        private java.util.List<HttpApiDomainInfo> customDomains;
 
         @com.aliyun.core.annotation.NameInMap("deployStatus")
         private String deployStatus;
@@ -664,10 +709,10 @@ public class HttpApiApiInfo extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("serviceConfigs")
-        private java.util.List < ServiceConfigs> serviceConfigs;
+        private java.util.List<ServiceConfigs> serviceConfigs;
 
         @com.aliyun.core.annotation.NameInMap("subDomains")
-        private java.util.List < SubDomains> subDomains;
+        private java.util.List<SubDomains> subDomains;
 
         private Environments(Builder builder) {
             this.alias = builder.alias;
@@ -714,7 +759,7 @@ public class HttpApiApiInfo extends TeaModel {
         /**
          * @return customDomains
          */
-        public java.util.List < HttpApiDomainInfo > getCustomDomains() {
+        public java.util.List<HttpApiDomainInfo> getCustomDomains() {
             return this.customDomains;
         }
 
@@ -749,14 +794,14 @@ public class HttpApiApiInfo extends TeaModel {
         /**
          * @return serviceConfigs
          */
-        public java.util.List < ServiceConfigs> getServiceConfigs() {
+        public java.util.List<ServiceConfigs> getServiceConfigs() {
             return this.serviceConfigs;
         }
 
         /**
          * @return subDomains
          */
-        public java.util.List < SubDomains> getSubDomains() {
+        public java.util.List<SubDomains> getSubDomains() {
             return this.subDomains;
         }
 
@@ -764,13 +809,13 @@ public class HttpApiApiInfo extends TeaModel {
             private String alias; 
             private String backendScene; 
             private String backendType; 
-            private java.util.List < HttpApiDomainInfo > customDomains; 
+            private java.util.List<HttpApiDomainInfo> customDomains; 
             private String deployStatus; 
             private String environmentId; 
             private GatewayInfo gatewayInfo; 
             private String name; 
-            private java.util.List < ServiceConfigs> serviceConfigs; 
-            private java.util.List < SubDomains> subDomains; 
+            private java.util.List<ServiceConfigs> serviceConfigs; 
+            private java.util.List<SubDomains> subDomains; 
 
             /**
              * alias.
@@ -799,7 +844,7 @@ public class HttpApiApiInfo extends TeaModel {
             /**
              * customDomains.
              */
-            public Builder customDomains(java.util.List < HttpApiDomainInfo > customDomains) {
+            public Builder customDomains(java.util.List<HttpApiDomainInfo> customDomains) {
                 this.customDomains = customDomains;
                 return this;
             }
@@ -839,7 +884,7 @@ public class HttpApiApiInfo extends TeaModel {
             /**
              * serviceConfigs.
              */
-            public Builder serviceConfigs(java.util.List < ServiceConfigs> serviceConfigs) {
+            public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
                 this.serviceConfigs = serviceConfigs;
                 return this;
             }
@@ -847,7 +892,7 @@ public class HttpApiApiInfo extends TeaModel {
             /**
              * subDomains.
              */
-            public Builder subDomains(java.util.List < SubDomains> subDomains) {
+            public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;
                 return this;
             }

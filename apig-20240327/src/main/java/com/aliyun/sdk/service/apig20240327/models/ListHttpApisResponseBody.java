@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class ListHttpApisResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < HttpApiInfoByName > items;
+        private java.util.List<HttpApiInfoByName> items;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Integer pageNumber;
@@ -157,7 +162,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < HttpApiInfoByName > getItems() {
+        public java.util.List<HttpApiInfoByName> getItems() {
             return this.items;
         }
 
@@ -183,7 +188,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HttpApiInfoByName > items; 
+            private java.util.List<HttpApiInfoByName> items; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalSize; 
@@ -191,7 +196,7 @@ public class ListHttpApisResponseBody extends TeaModel {
             /**
              * <p>API information.</p>
              */
-            public Builder items(java.util.List < HttpApiInfoByName > items) {
+            public Builder items(java.util.List<HttpApiInfoByName> items) {
                 this.items = items;
                 return this;
             }

@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddGatewaySecurityGroupRuleResponse> addGatewaySecurityGroupRule(AddGatewaySecurityGroupRuleRequest request);
 
     /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Create Domain.</p>
      * 
@@ -35,12 +41,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Create environment.</p>
+     * @deprecated OpenAPI CreateEnvironment is deprecated  * @description Create environment.
      * 
      * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
      * @return CreateEnvironmentResponse
      */
+    @Deprecated
     CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
 
     /**
@@ -56,15 +62,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHttpApiOperationResponse> createHttpApiOperation(CreateHttpApiOperationRequest request);
 
     /**
+     * @param request the request parameters of CreateHttpApiRoute  CreateHttpApiRouteRequest
+     * @return CreateHttpApiRouteResponse
+     */
+    CompletableFuture<CreateHttpApiRouteResponse> createHttpApiRoute(CreateHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolicy  CreatePolicyRequest
+     * @return CreatePolicyResponse
+     */
+    CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolicyAttachment  CreatePolicyAttachmentRequest
+     * @return CreatePolicyAttachmentResponse
+     */
+    CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
+
+    /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
      * @return DeleteDomainResponse
      */
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
     /**
-     * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
+     * @deprecated OpenAPI DeleteEnvironment is deprecated  * @param request  the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
      * @return DeleteEnvironmentResponse
      */
+    @Deprecated
     CompletableFuture<DeleteEnvironmentResponse> deleteEnvironment(DeleteEnvironmentRequest request);
 
     /**
@@ -72,6 +97,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGatewayResponse
      */
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGatewaySecurityGroupRule  DeleteGatewaySecurityGroupRuleRequest
+     * @return DeleteGatewaySecurityGroupRuleResponse
+     */
+    CompletableFuture<DeleteGatewaySecurityGroupRuleResponse> deleteGatewaySecurityGroupRule(DeleteGatewaySecurityGroupRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteHttpApi  DeleteHttpApiRequest
@@ -86,15 +117,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHttpApiOperationResponse> deleteHttpApiOperation(DeleteHttpApiOperationRequest request);
 
     /**
+     * @param request the request parameters of DeleteHttpApiRoute  DeleteHttpApiRouteRequest
+     * @return DeleteHttpApiRouteResponse
+     */
+    CompletableFuture<DeleteHttpApiRouteResponse> deleteHttpApiRoute(DeleteHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolicy  DeletePolicyRequest
+     * @return DeletePolicyResponse
+     */
+    CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolicyAttachment  DeletePolicyAttachmentRequest
+     * @return DeletePolicyAttachmentResponse
+     */
+    CompletableFuture<DeletePolicyAttachmentResponse> deletePolicyAttachment(DeletePolicyAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of DeployHttpApi  DeployHttpApiRequest
+     * @return DeployHttpApiResponse
+     */
+    CompletableFuture<DeployHttpApiResponse> deployHttpApi(DeployHttpApiRequest request);
+
+    /**
+     * @param request the request parameters of ExportHttpApi  ExportHttpApiRequest
+     * @return ExportHttpApiResponse
+     */
+    CompletableFuture<ExportHttpApiResponse> exportHttpApi(ExportHttpApiRequest request);
+
+    /**
+     * @param request the request parameters of GetDashboard  GetDashboardRequest
+     * @return GetDashboardResponse
+     */
+    CompletableFuture<GetDashboardResponse> getDashboard(GetDashboardRequest request);
+
+    /**
      * @param request the request parameters of GetDomain  GetDomainRequest
      * @return GetDomainResponse
      */
     CompletableFuture<GetDomainResponse> getDomain(GetDomainRequest request);
 
     /**
-     * @param request the request parameters of GetEnvironment  GetEnvironmentRequest
+     * @deprecated OpenAPI GetEnvironment is deprecated  * @param request  the request parameters of GetEnvironment  GetEnvironmentRequest
      * @return GetEnvironmentResponse
      */
+    @Deprecated
     CompletableFuture<GetEnvironmentResponse> getEnvironment(GetEnvironmentRequest request);
 
     /**
@@ -122,15 +190,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHttpApiRouteResponse> getHttpApiRoute(GetHttpApiRouteRequest request);
 
     /**
+     * @param request the request parameters of GetPolicy  GetPolicyRequest
+     * @return GetPolicyResponse
+     */
+    CompletableFuture<GetPolicyResponse> getPolicy(GetPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetPolicyAttachment  GetPolicyAttachmentRequest
+     * @return GetPolicyAttachmentResponse
+     */
+    CompletableFuture<GetPolicyAttachmentResponse> getPolicyAttachment(GetPolicyAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceOverview  GetResourceOverviewRequest
+     * @return GetResourceOverviewResponse
+     */
+    CompletableFuture<GetResourceOverviewResponse> getResourceOverview(GetResourceOverviewRequest request);
+
+    /**
+     * @param request the request parameters of GetTraceConfig  GetTraceConfigRequest
+     * @return GetTraceConfigResponse
+     */
+    CompletableFuture<GetTraceConfigResponse> getTraceConfig(GetTraceConfigRequest request);
+
+    /**
+     * @param request the request parameters of ImportHttpApi  ImportHttpApiRequest
+     * @return ImportHttpApiResponse
+     */
+    CompletableFuture<ImportHttpApiResponse> importHttpApi(ImportHttpApiRequest request);
+
+    /**
      * @param request the request parameters of ListDomains  ListDomainsRequest
      * @return ListDomainsResponse
      */
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
 
     /**
-     * @param request the request parameters of ListEnvironments  ListEnvironmentsRequest
+     * @deprecated OpenAPI ListEnvironments is deprecated  * @param request  the request parameters of ListEnvironments  ListEnvironmentsRequest
      * @return ListEnvironmentsResponse
      */
+    @Deprecated
     CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);
 
     /**
@@ -152,16 +251,53 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpApisResponse> listHttpApis(ListHttpApisRequest request);
 
     /**
+     * @param request the request parameters of ListPolicyClasses  ListPolicyClassesRequest
+     * @return ListPolicyClassesResponse
+     */
+    CompletableFuture<ListPolicyClassesResponse> listPolicyClasses(ListPolicyClassesRequest request);
+
+    /**
+     * @param request the request parameters of ListSslCerts  ListSslCertsRequest
+     * @return ListSslCertsResponse
+     */
+    CompletableFuture<ListSslCertsResponse> listSslCerts(ListSslCertsRequest request);
+
+    /**
+     * @param request the request parameters of ListZones  ListZonesRequest
+     * @return ListZonesResponse
+     */
+    CompletableFuture<ListZonesResponse> listZones(ListZonesRequest request);
+
+    /**
+     * @param request the request parameters of RestartGateway  RestartGatewayRequest
+     * @return RestartGatewayResponse
+     */
+    CompletableFuture<RestartGatewayResponse> restartGateway(RestartGatewayRequest request);
+
+    /**
      * @param request the request parameters of UpdateDomain  UpdateDomainRequest
      * @return UpdateDomainResponse
      */
     CompletableFuture<UpdateDomainResponse> updateDomain(UpdateDomainRequest request);
 
     /**
-     * @param request the request parameters of UpdateEnvironment  UpdateEnvironmentRequest
+     * @deprecated OpenAPI UpdateEnvironment is deprecated  * @param request  the request parameters of UpdateEnvironment  UpdateEnvironmentRequest
      * @return UpdateEnvironmentResponse
      */
+    @Deprecated
     CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayFeature  UpdateGatewayFeatureRequest
+     * @return UpdateGatewayFeatureResponse
+     */
+    CompletableFuture<UpdateGatewayFeatureResponse> updateGatewayFeature(UpdateGatewayFeatureRequest request);
+
+    /**
+     * @param request the request parameters of UpdateGatewayName  UpdateGatewayNameRequest
+     * @return UpdateGatewayNameResponse
+     */
+    CompletableFuture<UpdateGatewayNameResponse> updateGatewayName(UpdateGatewayNameRequest request);
 
     /**
      * @param request the request parameters of UpdateHttpApi  UpdateHttpApiRequest
@@ -174,5 +310,23 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateHttpApiOperationResponse
      */
     CompletableFuture<UpdateHttpApiOperationResponse> updateHttpApiOperation(UpdateHttpApiOperationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateHttpApiRoute  UpdateHttpApiRouteRequest
+     * @return UpdateHttpApiRouteResponse
+     */
+    CompletableFuture<UpdateHttpApiRouteResponse> updateHttpApiRoute(UpdateHttpApiRouteRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePolicy  UpdatePolicyRequest
+     * @return UpdatePolicyResponse
+     */
+    CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeGateway  UpgradeGatewayRequest
+     * @return UpgradeGatewayResponse
+     */
+    CompletableFuture<UpgradeGatewayResponse> upgradeGateway(UpgradeGatewayRequest request);
 
 }

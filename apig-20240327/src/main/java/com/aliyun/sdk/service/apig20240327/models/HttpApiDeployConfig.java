@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,16 +24,16 @@ public class HttpApiDeployConfig extends TeaModel {
     private String backendScene;
 
     @com.aliyun.core.annotation.NameInMap("customDomainIds")
-    private java.util.List < String > customDomainIds;
+    private java.util.List<String> customDomainIds;
 
     @com.aliyun.core.annotation.NameInMap("environmentId")
     private String environmentId;
 
     @com.aliyun.core.annotation.NameInMap("policyConfigs")
-    private java.util.List < PolicyConfigs> policyConfigs;
+    private java.util.List<PolicyConfigs> policyConfigs;
 
     @com.aliyun.core.annotation.NameInMap("serviceConfigs")
-    private java.util.List < ServiceConfigs> serviceConfigs;
+    private java.util.List<ServiceConfigs> serviceConfigs;
 
     private HttpApiDeployConfig(Builder builder) {
         this.autoDeploy = builder.autoDeploy;
@@ -64,7 +69,7 @@ public class HttpApiDeployConfig extends TeaModel {
     /**
      * @return customDomainIds
      */
-    public java.util.List < String > getCustomDomainIds() {
+    public java.util.List<String> getCustomDomainIds() {
         return this.customDomainIds;
     }
 
@@ -78,24 +83,24 @@ public class HttpApiDeployConfig extends TeaModel {
     /**
      * @return policyConfigs
      */
-    public java.util.List < PolicyConfigs> getPolicyConfigs() {
+    public java.util.List<PolicyConfigs> getPolicyConfigs() {
         return this.policyConfigs;
     }
 
     /**
      * @return serviceConfigs
      */
-    public java.util.List < ServiceConfigs> getServiceConfigs() {
+    public java.util.List<ServiceConfigs> getServiceConfigs() {
         return this.serviceConfigs;
     }
 
     public static final class Builder {
         private Boolean autoDeploy; 
         private String backendScene; 
-        private java.util.List < String > customDomainIds; 
+        private java.util.List<String> customDomainIds; 
         private String environmentId; 
-        private java.util.List < PolicyConfigs> policyConfigs; 
-        private java.util.List < ServiceConfigs> serviceConfigs; 
+        private java.util.List<PolicyConfigs> policyConfigs; 
+        private java.util.List<ServiceConfigs> serviceConfigs; 
 
         /**
          * autoDeploy.
@@ -116,7 +121,7 @@ public class HttpApiDeployConfig extends TeaModel {
         /**
          * customDomainIds.
          */
-        public Builder customDomainIds(java.util.List < String > customDomainIds) {
+        public Builder customDomainIds(java.util.List<String> customDomainIds) {
             this.customDomainIds = customDomainIds;
             return this;
         }
@@ -132,7 +137,7 @@ public class HttpApiDeployConfig extends TeaModel {
         /**
          * policyConfigs.
          */
-        public Builder policyConfigs(java.util.List < PolicyConfigs> policyConfigs) {
+        public Builder policyConfigs(java.util.List<PolicyConfigs> policyConfigs) {
             this.policyConfigs = policyConfigs;
             return this;
         }
@@ -140,7 +145,7 @@ public class HttpApiDeployConfig extends TeaModel {
         /**
          * serviceConfigs.
          */
-        public Builder serviceConfigs(java.util.List < ServiceConfigs> serviceConfigs) {
+        public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
             return this;
         }
@@ -159,7 +164,7 @@ public class HttpApiDeployConfig extends TeaModel {
      */
     public static class AiFallbackConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceIds")
-        private java.util.List < String > serviceIds;
+        private java.util.List<String> serviceIds;
 
         private AiFallbackConfig(Builder builder) {
             this.serviceIds = builder.serviceIds;
@@ -176,17 +181,17 @@ public class HttpApiDeployConfig extends TeaModel {
         /**
          * @return serviceIds
          */
-        public java.util.List < String > getServiceIds() {
+        public java.util.List<String> getServiceIds() {
             return this.serviceIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > serviceIds; 
+            private java.util.List<String> serviceIds; 
 
             /**
              * serviceIds.
              */
-            public Builder serviceIds(java.util.List < String > serviceIds) {
+            public Builder serviceIds(java.util.List<String> serviceIds) {
                 this.serviceIds = serviceIds;
                 return this;
             }

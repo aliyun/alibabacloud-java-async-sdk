@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class Backend extends TeaModel {
     private String scene;
 
     @com.aliyun.core.annotation.NameInMap("services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     private Backend(Builder builder) {
         this.scene = builder.scene;
@@ -41,13 +46,13 @@ public class Backend extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
     public static final class Builder {
         private String scene; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
 
         /**
          * scene.
@@ -60,7 +65,7 @@ public class Backend extends TeaModel {
         /**
          * services.
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.services = services;
             return this;
         }

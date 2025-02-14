@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result of the gateway list query.</p>
+         * <p>Result of gateway list query.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -223,7 +228,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         private String mode;
 
         @com.aliyun.core.annotation.NameInMap("ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -296,7 +301,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -321,7 +326,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Boolean gatewayDefault; 
             private String loadBalancerId; 
             private String mode; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private String status; 
             private String type; 
 
@@ -389,7 +394,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Mode of load balancer provision for the gateway:</p>
+             * <p>Load balancer provision mode for the gateway:</p>
              * <ul>
              * <li>Managed: Managed by the Cloud Native API Gateway.</li>
              * </ul>
@@ -405,7 +410,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>List of listening ports.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -481,6 +486,9 @@ public class ListGatewaysResponseBody extends TeaModel {
 
             /**
              * <p>The Security Group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -501,15 +509,15 @@ public class ListGatewaysResponseBody extends TeaModel {
      * <p>ListGatewaysResponseBody</p>
      */
     public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("tagKey")
-        private String tagKey;
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
 
-        @com.aliyun.core.annotation.NameInMap("tagValue")
-        private String tagValue;
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
 
         private Tags(Builder builder) {
-            this.tagKey = builder.tagKey;
-            this.tagValue = builder.tagValue;
+            this.key = builder.key;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -521,36 +529,42 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * @return tagKey
+         * @return key
          */
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
         /**
-         * @return tagValue
+         * @return value
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String tagKey; 
-            private String tagValue; 
+            private String key; 
+            private String value; 
 
             /**
-             * tagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder key(String key) {
+                this.key = key;
                 return this;
             }
 
             /**
-             * tagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
@@ -767,7 +781,7 @@ public class ListGatewaysResponseBody extends TeaModel {
              * <p>The ID of the current zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * <p>cn-hangzhou-f</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -804,7 +818,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         private String gatewayId;
 
         @com.aliyun.core.annotation.NameInMap("loadBalancers")
-        private java.util.List < LoadBalancers> loadBalancers;
+        private java.util.List<LoadBalancers> loadBalancers;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -824,8 +838,11 @@ public class ListGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("subDomainInfos")
+        private java.util.List<SubDomainInfo> subDomainInfos;
+
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("targetVersion")
         private String targetVersion;
@@ -843,7 +860,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         private Vpc vpc;
 
         @com.aliyun.core.annotation.NameInMap("zones")
-        private java.util.List < Zones> zones;
+        private java.util.List<Zones> zones;
 
         private Items(Builder builder) {
             this.chargeType = builder.chargeType;
@@ -858,6 +875,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             this.securityGroup = builder.securityGroup;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.subDomainInfos = builder.subDomainInfos;
             this.tags = builder.tags;
             this.targetVersion = builder.targetVersion;
             this.updateTimestamp = builder.updateTimestamp;
@@ -913,7 +931,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * @return loadBalancers
          */
-        public java.util.List < LoadBalancers> getLoadBalancers() {
+        public java.util.List<LoadBalancers> getLoadBalancers() {
             return this.loadBalancers;
         }
 
@@ -960,9 +978,16 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         /**
+         * @return subDomainInfos
+         */
+        public java.util.List<SubDomainInfo> getSubDomainInfos() {
+            return this.subDomainInfos;
+        }
+
+        /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1004,7 +1029,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < Zones> getZones() {
+        public java.util.List<Zones> getZones() {
             return this.zones;
         }
 
@@ -1014,20 +1039,21 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Long createTimestamp; 
             private Long expireTimestamp; 
             private String gatewayId; 
-            private java.util.List < LoadBalancers> loadBalancers; 
+            private java.util.List<LoadBalancers> loadBalancers; 
             private String name; 
             private String replicas; 
             private String resourceGroupId; 
             private SecurityGroup securityGroup; 
             private String spec; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<SubDomainInfo> subDomainInfos; 
+            private java.util.List<Tags> tags; 
             private String targetVersion; 
             private Long updateTimestamp; 
             private VSwitch vSwitch; 
             private String version; 
             private Vpc vpc; 
-            private java.util.List < Zones> zones; 
+            private java.util.List<Zones> zones; 
 
             /**
              * <p>Charge type</p>
@@ -1070,7 +1096,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expiration timestamp for the prepaid (annual or monthly) plan. Unit: milliseconds.</p>
+             * <p>Expiration timestamp for prepaid (annual or monthly) subscriptions. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>172086834548</p>
@@ -1094,7 +1120,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>List of gateway entry addresses.</p>
              */
-            public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
+            public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;
                 return this;
             }
@@ -1122,7 +1148,10 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1174,15 +1203,23 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * subDomainInfos.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
+                this.subDomainInfos = subDomainInfos;
+                return this;
+            }
+
+            /**
+             * <p>Array of tags.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * <p>Target version of the gateway. When it is inconsistent with <code>version</code>, a version upgrade can be performed.</p>
+             * <p>Target version of the gateway. When it is inconsistent with the current <code>version</code>, an upgrade can be performed.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0.2</p>
@@ -1204,7 +1241,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch.</p>
+             * <p>The vSwtich.</p>
              */
             public Builder vSwitch(VSwitch vSwitch) {
                 this.vSwitch = vSwitch;
@@ -1223,7 +1260,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * vpc.
+             * <p>The VPC.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -1231,9 +1268,9 @@ public class ListGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * zones.
+             * <p>The Zones.</p>
              */
-            public Builder zones(java.util.List < Zones> zones) {
+            public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;
                 return this;
             }
@@ -1253,7 +1290,7 @@ public class ListGatewaysResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Integer pageNumber;
@@ -1282,7 +1319,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1308,7 +1345,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalSize; 
@@ -1316,7 +1353,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             /**
              * <p>Gateway list</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class HttpApiRequestContract extends TeaModel {
     private HttpApiRequestContractBody body;
 
     @com.aliyun.core.annotation.NameInMap("headerParameters")
-    private java.util.List < HttpApiParameter > headerParameters;
+    private java.util.List<HttpApiParameter> headerParameters;
 
     @com.aliyun.core.annotation.NameInMap("pathParameters")
-    private java.util.List < HttpApiParameter > pathParameters;
+    private java.util.List<HttpApiParameter> pathParameters;
 
     @com.aliyun.core.annotation.NameInMap("queryParameters")
-    private java.util.List < HttpApiParameter > queryParameters;
+    private java.util.List<HttpApiParameter> queryParameters;
 
     private HttpApiRequestContract(Builder builder) {
         this.body = builder.body;
@@ -49,29 +54,29 @@ public class HttpApiRequestContract extends TeaModel {
     /**
      * @return headerParameters
      */
-    public java.util.List < HttpApiParameter > getHeaderParameters() {
+    public java.util.List<HttpApiParameter> getHeaderParameters() {
         return this.headerParameters;
     }
 
     /**
      * @return pathParameters
      */
-    public java.util.List < HttpApiParameter > getPathParameters() {
+    public java.util.List<HttpApiParameter> getPathParameters() {
         return this.pathParameters;
     }
 
     /**
      * @return queryParameters
      */
-    public java.util.List < HttpApiParameter > getQueryParameters() {
+    public java.util.List<HttpApiParameter> getQueryParameters() {
         return this.queryParameters;
     }
 
     public static final class Builder {
         private HttpApiRequestContractBody body; 
-        private java.util.List < HttpApiParameter > headerParameters; 
-        private java.util.List < HttpApiParameter > pathParameters; 
-        private java.util.List < HttpApiParameter > queryParameters; 
+        private java.util.List<HttpApiParameter> headerParameters; 
+        private java.util.List<HttpApiParameter> pathParameters; 
+        private java.util.List<HttpApiParameter> queryParameters; 
 
         /**
          * body.
@@ -84,7 +89,7 @@ public class HttpApiRequestContract extends TeaModel {
         /**
          * headerParameters.
          */
-        public Builder headerParameters(java.util.List < HttpApiParameter > headerParameters) {
+        public Builder headerParameters(java.util.List<HttpApiParameter> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
@@ -92,7 +97,7 @@ public class HttpApiRequestContract extends TeaModel {
         /**
          * pathParameters.
          */
-        public Builder pathParameters(java.util.List < HttpApiParameter > pathParameters) {
+        public Builder pathParameters(java.util.List<HttpApiParameter> pathParameters) {
             this.pathParameters = pathParameters;
             return this;
         }
@@ -100,7 +105,7 @@ public class HttpApiRequestContract extends TeaModel {
         /**
          * queryParameters.
          */
-        public Builder queryParameters(java.util.List < HttpApiParameter > queryParameters) {
+        public Builder queryParameters(java.util.List<HttpApiParameter> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }

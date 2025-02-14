@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class AiServiceConfig extends TeaModel {
     private String address;
 
     @com.aliyun.core.annotation.NameInMap("apiKeys")
-    private java.util.List < String > apiKeys;
+    private java.util.List<String> apiKeys;
 
     @com.aliyun.core.annotation.NameInMap("enableHealthCheck")
     private Boolean enableHealthCheck;
 
     @com.aliyun.core.annotation.NameInMap("protocols")
-    private java.util.List < String > protocols;
+    private java.util.List<String> protocols;
 
     @com.aliyun.core.annotation.NameInMap("provider")
     private String provider;
@@ -53,7 +58,7 @@ public class AiServiceConfig extends TeaModel {
     /**
      * @return apiKeys
      */
-    public java.util.List < String > getApiKeys() {
+    public java.util.List<String> getApiKeys() {
         return this.apiKeys;
     }
 
@@ -67,7 +72,7 @@ public class AiServiceConfig extends TeaModel {
     /**
      * @return protocols
      */
-    public java.util.List < String > getProtocols() {
+    public java.util.List<String> getProtocols() {
         return this.protocols;
     }
 
@@ -80,9 +85,9 @@ public class AiServiceConfig extends TeaModel {
 
     public static final class Builder {
         private String address; 
-        private java.util.List < String > apiKeys; 
+        private java.util.List<String> apiKeys; 
         private Boolean enableHealthCheck; 
-        private java.util.List < String > protocols; 
+        private java.util.List<String> protocols; 
         private String provider; 
 
         /**
@@ -96,7 +101,7 @@ public class AiServiceConfig extends TeaModel {
         /**
          * apiKeys.
          */
-        public Builder apiKeys(java.util.List < String > apiKeys) {
+        public Builder apiKeys(java.util.List<String> apiKeys) {
             this.apiKeys = apiKeys;
             return this;
         }
@@ -112,7 +117,7 @@ public class AiServiceConfig extends TeaModel {
         /**
          * protocols.
          */
-        public Builder protocols(java.util.List < String > protocols) {
+        public Builder protocols(java.util.List<String> protocols) {
             this.protocols = protocols;
             return this;
         }

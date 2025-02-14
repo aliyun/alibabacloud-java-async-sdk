@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Attachment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("attachResourceIds")
-    private java.util.List < String > attachResourceIds;
+    private java.util.List<String> attachResourceIds;
 
     @com.aliyun.core.annotation.NameInMap("attachResourceType")
     private String attachResourceType;
@@ -46,7 +51,7 @@ public class Attachment extends TeaModel {
     /**
      * @return attachResourceIds
      */
-    public java.util.List < String > getAttachResourceIds() {
+    public java.util.List<String> getAttachResourceIds() {
         return this.attachResourceIds;
     }
 
@@ -79,7 +84,7 @@ public class Attachment extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > attachResourceIds; 
+        private java.util.List<String> attachResourceIds; 
         private String attachResourceType; 
         private String environmentId; 
         private String gatewayId; 
@@ -88,7 +93,7 @@ public class Attachment extends TeaModel {
         /**
          * attachResourceIds.
          */
-        public Builder attachResourceIds(java.util.List < String > attachResourceIds) {
+        public Builder attachResourceIds(java.util.List<String> attachResourceIds) {
             this.attachResourceIds = attachResourceIds;
             return this;
         }

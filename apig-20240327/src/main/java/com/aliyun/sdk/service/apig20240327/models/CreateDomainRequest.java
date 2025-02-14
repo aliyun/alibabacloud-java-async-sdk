@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -260,7 +265,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzoiafjtr7zyq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -269,7 +277,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * tlsCipherSuitesConfig.
+         * <p>The TLS cipher suites config.</p>
          */
         public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
             this.putBodyParameter("tlsCipherSuitesConfig", tlsCipherSuitesConfig);

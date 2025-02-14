@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,19 +18,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HttpRouteMatch extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.List < Headers> headers;
+    private java.util.List<Headers> headers;
 
     @com.aliyun.core.annotation.NameInMap("ignoreUriCase")
     private Boolean ignoreUriCase;
 
     @com.aliyun.core.annotation.NameInMap("methods")
-    private java.util.List < String > methods;
+    private java.util.List<String> methods;
 
     @com.aliyun.core.annotation.NameInMap("path")
     private HttpRouteMatchPath path;
 
     @com.aliyun.core.annotation.NameInMap("queryParams")
-    private java.util.List < QueryParams> queryParams;
+    private java.util.List<QueryParams> queryParams;
 
     private HttpRouteMatch(Builder builder) {
         this.headers = builder.headers;
@@ -46,7 +51,7 @@ public class HttpRouteMatch extends TeaModel {
     /**
      * @return headers
      */
-    public java.util.List < Headers> getHeaders() {
+    public java.util.List<Headers> getHeaders() {
         return this.headers;
     }
 
@@ -60,7 +65,7 @@ public class HttpRouteMatch extends TeaModel {
     /**
      * @return methods
      */
-    public java.util.List < String > getMethods() {
+    public java.util.List<String> getMethods() {
         return this.methods;
     }
 
@@ -74,21 +79,21 @@ public class HttpRouteMatch extends TeaModel {
     /**
      * @return queryParams
      */
-    public java.util.List < QueryParams> getQueryParams() {
+    public java.util.List<QueryParams> getQueryParams() {
         return this.queryParams;
     }
 
     public static final class Builder {
-        private java.util.List < Headers> headers; 
+        private java.util.List<Headers> headers; 
         private Boolean ignoreUriCase; 
-        private java.util.List < String > methods; 
+        private java.util.List<String> methods; 
         private HttpRouteMatchPath path; 
-        private java.util.List < QueryParams> queryParams; 
+        private java.util.List<QueryParams> queryParams; 
 
         /**
          * headers.
          */
-        public Builder headers(java.util.List < Headers> headers) {
+        public Builder headers(java.util.List<Headers> headers) {
             this.headers = headers;
             return this;
         }
@@ -104,7 +109,7 @@ public class HttpRouteMatch extends TeaModel {
         /**
          * methods.
          */
-        public Builder methods(java.util.List < String > methods) {
+        public Builder methods(java.util.List<String> methods) {
             this.methods = methods;
             return this;
         }
@@ -120,7 +125,7 @@ public class HttpRouteMatch extends TeaModel {
         /**
          * queryParams.
          */
-        public Builder queryParams(java.util.List < QueryParams> queryParams) {
+        public Builder queryParams(java.util.List<QueryParams> queryParams) {
             this.queryParams = queryParams;
             return this;
         }

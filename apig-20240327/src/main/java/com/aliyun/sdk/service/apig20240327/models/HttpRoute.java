@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class HttpRoute extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("domainInfos")
-    private java.util.List < DomainInfos> domainInfos;
+    private java.util.List<DomainInfos> domainInfos;
 
     @com.aliyun.core.annotation.NameInMap("environmentInfo")
     private EnvironmentInfo environmentInfo;
@@ -94,7 +99,7 @@ public class HttpRoute extends TeaModel {
     /**
      * @return domainInfos
      */
-    public java.util.List < DomainInfos> getDomainInfos() {
+    public java.util.List<DomainInfos> getDomainInfos() {
         return this.domainInfos;
     }
 
@@ -138,7 +143,7 @@ public class HttpRoute extends TeaModel {
         private Long createTimestamp; 
         private String deployStatus; 
         private String description; 
-        private java.util.List < DomainInfos> domainInfos; 
+        private java.util.List<DomainInfos> domainInfos; 
         private EnvironmentInfo environmentInfo; 
         private HttpRouteMatch match; 
         private String name; 
@@ -180,7 +185,7 @@ public class HttpRoute extends TeaModel {
         /**
          * domainInfos.
          */
-        public Builder domainInfos(java.util.List < DomainInfos> domainInfos) {
+        public Builder domainInfos(java.util.List<DomainInfos> domainInfos) {
             this.domainInfos = domainInfos;
             return this;
         }
@@ -512,7 +517,7 @@ public class HttpRoute extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("subDomains")
-        private java.util.List < SubDomains> subDomains;
+        private java.util.List<SubDomains> subDomains;
 
         private EnvironmentInfo(Builder builder) {
             this.alias = builder.alias;
@@ -561,7 +566,7 @@ public class HttpRoute extends TeaModel {
         /**
          * @return subDomains
          */
-        public java.util.List < SubDomains> getSubDomains() {
+        public java.util.List<SubDomains> getSubDomains() {
             return this.subDomains;
         }
 
@@ -570,7 +575,7 @@ public class HttpRoute extends TeaModel {
             private String environmentId; 
             private GatewayInfo gatewayInfo; 
             private String name; 
-            private java.util.List < SubDomains> subDomains; 
+            private java.util.List<SubDomains> subDomains; 
 
             /**
              * alias.
@@ -607,7 +612,7 @@ public class HttpRoute extends TeaModel {
             /**
              * subDomains.
              */
-            public Builder subDomains(java.util.List < SubDomains> subDomains) {
+            public Builder subDomains(java.util.List<SubDomains> subDomains) {
                 this.subDomains = subDomains;
                 return this;
             }

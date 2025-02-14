@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,11 @@ public class UpdateHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("aiProtocols")
-    private java.util.List < String > aiProtocols;
+    private java.util.List<String> aiProtocols;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("authConfig")
+    private AuthConfig authConfig;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("basePath")
@@ -28,11 +37,15 @@ public class UpdateHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deployConfigs")
-    private java.util.List < HttpApiDeployConfig > deployConfigs;
+    private java.util.List<HttpApiDeployConfig> deployConfigs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableAuth")
+    private Boolean enableAuth;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ingressConfig")
@@ -40,7 +53,7 @@ public class UpdateHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protocols")
-    private java.util.List < String > protocols;
+    private java.util.List<String> protocols;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("versionConfig")
@@ -50,9 +63,11 @@ public class UpdateHttpApiRequest extends Request {
         super(builder);
         this.httpApiId = builder.httpApiId;
         this.aiProtocols = builder.aiProtocols;
+        this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
+        this.enableAuth = builder.enableAuth;
         this.ingressConfig = builder.ingressConfig;
         this.protocols = builder.protocols;
         this.versionConfig = builder.versionConfig;
@@ -81,8 +96,15 @@ public class UpdateHttpApiRequest extends Request {
     /**
      * @return aiProtocols
      */
-    public java.util.List < String > getAiProtocols() {
+    public java.util.List<String> getAiProtocols() {
         return this.aiProtocols;
+    }
+
+    /**
+     * @return authConfig
+     */
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     /**
@@ -95,7 +117,7 @@ public class UpdateHttpApiRequest extends Request {
     /**
      * @return deployConfigs
      */
-    public java.util.List < HttpApiDeployConfig > getDeployConfigs() {
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
         return this.deployConfigs;
     }
 
@@ -104,6 +126,13 @@ public class UpdateHttpApiRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableAuth
+     */
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     /**
@@ -116,7 +145,7 @@ public class UpdateHttpApiRequest extends Request {
     /**
      * @return protocols
      */
-    public java.util.List < String > getProtocols() {
+    public java.util.List<String> getProtocols() {
         return this.protocols;
     }
 
@@ -129,12 +158,14 @@ public class UpdateHttpApiRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateHttpApiRequest, Builder> {
         private String httpApiId; 
-        private java.util.List < String > aiProtocols; 
+        private java.util.List<String> aiProtocols; 
+        private AuthConfig authConfig; 
         private String basePath; 
-        private java.util.List < HttpApiDeployConfig > deployConfigs; 
+        private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
+        private Boolean enableAuth; 
         private IngressConfig ingressConfig; 
-        private java.util.List < String > protocols; 
+        private java.util.List<String> protocols; 
         private HttpApiVersionConfig versionConfig; 
 
         private Builder() {
@@ -145,9 +176,11 @@ public class UpdateHttpApiRequest extends Request {
             super(request);
             this.httpApiId = request.httpApiId;
             this.aiProtocols = request.aiProtocols;
+            this.authConfig = request.authConfig;
             this.basePath = request.basePath;
             this.deployConfigs = request.deployConfigs;
             this.description = request.description;
+            this.enableAuth = request.enableAuth;
             this.ingressConfig = request.ingressConfig;
             this.protocols = request.protocols;
             this.versionConfig = request.versionConfig;
@@ -167,11 +200,20 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * aiProtocols.
+         * <p>List of AI protocols.</p>
          */
-        public Builder aiProtocols(java.util.List < String > aiProtocols) {
+        public Builder aiProtocols(java.util.List<String> aiProtocols) {
             this.putBodyParameter("aiProtocols", aiProtocols);
             this.aiProtocols = aiProtocols;
+            return this;
+        }
+
+        /**
+         * authConfig.
+         */
+        public Builder authConfig(AuthConfig authConfig) {
+            this.putBodyParameter("authConfig", authConfig);
+            this.authConfig = authConfig;
             return this;
         }
 
@@ -189,9 +231,9 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
-         * deployConfigs.
+         * <p>List of API deployment configurations.</p>
          */
-        public Builder deployConfigs(java.util.List < HttpApiDeployConfig > deployConfigs) {
+        public Builder deployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
             this.putBodyParameter("deployConfigs", deployConfigs);
             this.deployConfigs = deployConfigs;
             return this;
@@ -210,6 +252,15 @@ public class UpdateHttpApiRequest extends Request {
         }
 
         /**
+         * enableAuth.
+         */
+        public Builder enableAuth(Boolean enableAuth) {
+            this.putBodyParameter("enableAuth", enableAuth);
+            this.enableAuth = enableAuth;
+            return this;
+        }
+
+        /**
          * <p>Configuration information for the HTTP Ingress API.</p>
          */
         public Builder ingressConfig(IngressConfig ingressConfig) {
@@ -221,7 +272,7 @@ public class UpdateHttpApiRequest extends Request {
         /**
          * <p>List of API access protocols.</p>
          */
-        public Builder protocols(java.util.List < String > protocols) {
+        public Builder protocols(java.util.List<String> protocols) {
             this.putBodyParameter("protocols", protocols);
             this.protocols = protocols;
             return this;

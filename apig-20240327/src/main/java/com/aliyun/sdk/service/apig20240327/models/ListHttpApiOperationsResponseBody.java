@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < HttpApiOperationInfo > items;
+        private java.util.List<HttpApiOperationInfo> items;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Integer pageNumber;
@@ -157,7 +162,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < HttpApiOperationInfo > getItems() {
+        public java.util.List<HttpApiOperationInfo> getItems() {
             return this.items;
         }
 
@@ -183,7 +188,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HttpApiOperationInfo > items; 
+            private java.util.List<HttpApiOperationInfo> items; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalSize; 
@@ -191,7 +196,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
             /**
              * <p>List of operations.</p>
              */
-            public Builder items(java.util.List < HttpApiOperationInfo > items) {
+            public Builder items(java.util.List<HttpApiOperationInfo> items) {
                 this.items = items;
                 return this;
             }

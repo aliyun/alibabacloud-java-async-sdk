@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,10 +30,10 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     private Long createTimestamp;
 
     @com.aliyun.core.annotation.NameInMap("customDomains")
-    private java.util.List < HttpApiDomainInfo > customDomains;
+    private java.util.List<HttpApiDomainInfo> customDomains;
 
     @com.aliyun.core.annotation.NameInMap("dnsConfigs")
-    private java.util.List < DnsConfigs> dnsConfigs;
+    private java.util.List<DnsConfigs> dnsConfigs;
 
     @com.aliyun.core.annotation.NameInMap("environmentInfo")
     private EnvironmentInfo environmentInfo;
@@ -37,19 +42,19 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     private Boolean isCurrentVersion;
 
     @com.aliyun.core.annotation.NameInMap("operations")
-    private java.util.List < HttpApiOperationInfo > operations;
+    private java.util.List<HttpApiOperationInfo> operations;
 
     @com.aliyun.core.annotation.NameInMap("revisionId")
     private String revisionId;
 
     @com.aliyun.core.annotation.NameInMap("serviceConfigs")
-    private java.util.List < ServiceConfigs> serviceConfigs;
+    private java.util.List<ServiceConfigs> serviceConfigs;
 
     @com.aliyun.core.annotation.NameInMap("subDomains")
-    private java.util.List < HttpApiDomainInfo > subDomains;
+    private java.util.List<HttpApiDomainInfo> subDomains;
 
     @com.aliyun.core.annotation.NameInMap("vipConfigs")
-    private java.util.List < VipConfigs> vipConfigs;
+    private java.util.List<VipConfigs> vipConfigs;
 
     private HttpApiPublishRevisionInfo(Builder builder) {
         this.backendScene = builder.backendScene;
@@ -106,14 +111,14 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     /**
      * @return customDomains
      */
-    public java.util.List < HttpApiDomainInfo > getCustomDomains() {
+    public java.util.List<HttpApiDomainInfo> getCustomDomains() {
         return this.customDomains;
     }
 
     /**
      * @return dnsConfigs
      */
-    public java.util.List < DnsConfigs> getDnsConfigs() {
+    public java.util.List<DnsConfigs> getDnsConfigs() {
         return this.dnsConfigs;
     }
 
@@ -134,7 +139,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     /**
      * @return operations
      */
-    public java.util.List < HttpApiOperationInfo > getOperations() {
+    public java.util.List<HttpApiOperationInfo> getOperations() {
         return this.operations;
     }
 
@@ -148,21 +153,21 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
     /**
      * @return serviceConfigs
      */
-    public java.util.List < ServiceConfigs> getServiceConfigs() {
+    public java.util.List<ServiceConfigs> getServiceConfigs() {
         return this.serviceConfigs;
     }
 
     /**
      * @return subDomains
      */
-    public java.util.List < HttpApiDomainInfo > getSubDomains() {
+    public java.util.List<HttpApiDomainInfo> getSubDomains() {
         return this.subDomains;
     }
 
     /**
      * @return vipConfigs
      */
-    public java.util.List < VipConfigs> getVipConfigs() {
+    public java.util.List<VipConfigs> getVipConfigs() {
         return this.vipConfigs;
     }
 
@@ -171,15 +176,15 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         private String backendType; 
         private CloudProductConfig cloudProductConfig; 
         private Long createTimestamp; 
-        private java.util.List < HttpApiDomainInfo > customDomains; 
-        private java.util.List < DnsConfigs> dnsConfigs; 
+        private java.util.List<HttpApiDomainInfo> customDomains; 
+        private java.util.List<DnsConfigs> dnsConfigs; 
         private EnvironmentInfo environmentInfo; 
         private Boolean isCurrentVersion; 
-        private java.util.List < HttpApiOperationInfo > operations; 
+        private java.util.List<HttpApiOperationInfo> operations; 
         private String revisionId; 
-        private java.util.List < ServiceConfigs> serviceConfigs; 
-        private java.util.List < HttpApiDomainInfo > subDomains; 
-        private java.util.List < VipConfigs> vipConfigs; 
+        private java.util.List<ServiceConfigs> serviceConfigs; 
+        private java.util.List<HttpApiDomainInfo> subDomains; 
+        private java.util.List<VipConfigs> vipConfigs; 
 
         /**
          * backendScene.
@@ -216,7 +221,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * customDomains.
          */
-        public Builder customDomains(java.util.List < HttpApiDomainInfo > customDomains) {
+        public Builder customDomains(java.util.List<HttpApiDomainInfo> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
@@ -224,7 +229,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * dnsConfigs.
          */
-        public Builder dnsConfigs(java.util.List < DnsConfigs> dnsConfigs) {
+        public Builder dnsConfigs(java.util.List<DnsConfigs> dnsConfigs) {
             this.dnsConfigs = dnsConfigs;
             return this;
         }
@@ -248,7 +253,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * operations.
          */
-        public Builder operations(java.util.List < HttpApiOperationInfo > operations) {
+        public Builder operations(java.util.List<HttpApiOperationInfo> operations) {
             this.operations = operations;
             return this;
         }
@@ -264,7 +269,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * serviceConfigs.
          */
-        public Builder serviceConfigs(java.util.List < ServiceConfigs> serviceConfigs) {
+        public Builder serviceConfigs(java.util.List<ServiceConfigs> serviceConfigs) {
             this.serviceConfigs = serviceConfigs;
             return this;
         }
@@ -272,7 +277,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * subDomains.
          */
-        public Builder subDomains(java.util.List < HttpApiDomainInfo > subDomains) {
+        public Builder subDomains(java.util.List<HttpApiDomainInfo> subDomains) {
             this.subDomains = subDomains;
             return this;
         }
@@ -280,7 +285,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * vipConfigs.
          */
-        public Builder vipConfigs(java.util.List < VipConfigs> vipConfigs) {
+        public Builder vipConfigs(java.util.List<VipConfigs> vipConfigs) {
             this.vipConfigs = vipConfigs;
             return this;
         }
@@ -743,13 +748,13 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         private String cloudProductType;
 
         @com.aliyun.core.annotation.NameInMap("containerServiceConfigs")
-        private java.util.List < ContainerServiceConfigs> containerServiceConfigs;
+        private java.util.List<ContainerServiceConfigs> containerServiceConfigs;
 
         @com.aliyun.core.annotation.NameInMap("functionConfigs")
-        private java.util.List < FunctionConfigs> functionConfigs;
+        private java.util.List<FunctionConfigs> functionConfigs;
 
         @com.aliyun.core.annotation.NameInMap("mseNacosConfigs")
-        private java.util.List < MseNacosConfigs> mseNacosConfigs;
+        private java.util.List<MseNacosConfigs> mseNacosConfigs;
 
         private CloudProductConfig(Builder builder) {
             this.cloudProductType = builder.cloudProductType;
@@ -776,29 +781,29 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * @return containerServiceConfigs
          */
-        public java.util.List < ContainerServiceConfigs> getContainerServiceConfigs() {
+        public java.util.List<ContainerServiceConfigs> getContainerServiceConfigs() {
             return this.containerServiceConfigs;
         }
 
         /**
          * @return functionConfigs
          */
-        public java.util.List < FunctionConfigs> getFunctionConfigs() {
+        public java.util.List<FunctionConfigs> getFunctionConfigs() {
             return this.functionConfigs;
         }
 
         /**
          * @return mseNacosConfigs
          */
-        public java.util.List < MseNacosConfigs> getMseNacosConfigs() {
+        public java.util.List<MseNacosConfigs> getMseNacosConfigs() {
             return this.mseNacosConfigs;
         }
 
         public static final class Builder {
             private String cloudProductType; 
-            private java.util.List < ContainerServiceConfigs> containerServiceConfigs; 
-            private java.util.List < FunctionConfigs> functionConfigs; 
-            private java.util.List < MseNacosConfigs> mseNacosConfigs; 
+            private java.util.List<ContainerServiceConfigs> containerServiceConfigs; 
+            private java.util.List<FunctionConfigs> functionConfigs; 
+            private java.util.List<MseNacosConfigs> mseNacosConfigs; 
 
             /**
              * cloudProductType.
@@ -811,7 +816,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             /**
              * containerServiceConfigs.
              */
-            public Builder containerServiceConfigs(java.util.List < ContainerServiceConfigs> containerServiceConfigs) {
+            public Builder containerServiceConfigs(java.util.List<ContainerServiceConfigs> containerServiceConfigs) {
                 this.containerServiceConfigs = containerServiceConfigs;
                 return this;
             }
@@ -819,7 +824,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             /**
              * functionConfigs.
              */
-            public Builder functionConfigs(java.util.List < FunctionConfigs> functionConfigs) {
+            public Builder functionConfigs(java.util.List<FunctionConfigs> functionConfigs) {
                 this.functionConfigs = functionConfigs;
                 return this;
             }
@@ -827,7 +832,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
             /**
              * mseNacosConfigs.
              */
-            public Builder mseNacosConfigs(java.util.List < MseNacosConfigs> mseNacosConfigs) {
+            public Builder mseNacosConfigs(java.util.List<MseNacosConfigs> mseNacosConfigs) {
                 this.mseNacosConfigs = mseNacosConfigs;
                 return this;
             }
@@ -847,7 +852,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
      */
     public static class DnsConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dnsList")
-        private java.util.List < String > dnsList;
+        private java.util.List<String> dnsList;
 
         @com.aliyun.core.annotation.NameInMap("match")
         private HttpApiBackendMatchConditions match;
@@ -872,7 +877,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * @return dnsList
          */
-        public java.util.List < String > getDnsList() {
+        public java.util.List<String> getDnsList() {
             return this.dnsList;
         }
 
@@ -891,14 +896,14 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > dnsList; 
+            private java.util.List<String> dnsList; 
             private HttpApiBackendMatchConditions match; 
             private Integer weight; 
 
             /**
              * dnsList.
              */
-            public Builder dnsList(java.util.List < String > dnsList) {
+            public Builder dnsList(java.util.List<String> dnsList) {
                 this.dnsList = dnsList;
                 return this;
             }
@@ -1255,7 +1260,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
      */
     public static class VipConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpoints")
-        private java.util.List < String > endpoints;
+        private java.util.List<String> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("match")
         private HttpApiBackendMatchConditions match;
@@ -1280,7 +1285,7 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < String > getEndpoints() {
+        public java.util.List<String> getEndpoints() {
             return this.endpoints;
         }
 
@@ -1299,14 +1304,14 @@ public class HttpApiPublishRevisionInfo extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > endpoints; 
+            private java.util.List<String> endpoints; 
             private HttpApiBackendMatchConditions match; 
             private Integer weight; 
 
             /**
              * endpoints.
              */
-            public Builder endpoints(java.util.List < String > endpoints) {
+            public Builder endpoints(java.util.List<String> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }

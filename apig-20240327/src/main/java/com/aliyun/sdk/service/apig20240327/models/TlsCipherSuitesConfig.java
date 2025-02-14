@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TlsCipherSuitesConfig</p>
  */
 public class TlsCipherSuitesConfig extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("cipherSuites")
-    private java.util.List < CipherSuites> cipherSuites;
-
     @com.aliyun.core.annotation.NameInMap("configType")
     private String configType;
 
+    @com.aliyun.core.annotation.NameInMap("tlsCipherSuite")
+    private java.util.List<TlsCipherSuite> tlsCipherSuite;
+
     private TlsCipherSuitesConfig(Builder builder) {
-        this.cipherSuites = builder.cipherSuites;
         this.configType = builder.configType;
+        this.tlsCipherSuite = builder.tlsCipherSuite;
     }
 
     public static Builder builder() {
@@ -32,36 +37,36 @@ public class TlsCipherSuitesConfig extends TeaModel {
     }
 
     /**
-     * @return cipherSuites
-     */
-    public java.util.List < CipherSuites> getCipherSuites() {
-        return this.cipherSuites;
-    }
-
-    /**
      * @return configType
      */
     public String getConfigType() {
         return this.configType;
     }
 
-    public static final class Builder {
-        private java.util.List < CipherSuites> cipherSuites; 
-        private String configType; 
+    /**
+     * @return tlsCipherSuite
+     */
+    public java.util.List<TlsCipherSuite> getTlsCipherSuite() {
+        return this.tlsCipherSuite;
+    }
 
-        /**
-         * cipherSuites.
-         */
-        public Builder cipherSuites(java.util.List < CipherSuites> cipherSuites) {
-            this.cipherSuites = cipherSuites;
-            return this;
-        }
+    public static final class Builder {
+        private String configType; 
+        private java.util.List<TlsCipherSuite> tlsCipherSuite; 
 
         /**
          * configType.
          */
         public Builder configType(String configType) {
             this.configType = configType;
+            return this;
+        }
+
+        /**
+         * tlsCipherSuite.
+         */
+        public Builder tlsCipherSuite(java.util.List<TlsCipherSuite> tlsCipherSuite) {
+            this.tlsCipherSuite = tlsCipherSuite;
             return this;
         }
 
@@ -77,14 +82,14 @@ public class TlsCipherSuitesConfig extends TeaModel {
      *
      * <p>TlsCipherSuitesConfig</p>
      */
-    public static class CipherSuites extends TeaModel {
+    public static class TlsCipherSuite extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("supportVersions")
-        private java.util.List < String > supportVersions;
+        private java.util.List<String> supportVersions;
 
-        private CipherSuites(Builder builder) {
+        private TlsCipherSuite(Builder builder) {
             this.name = builder.name;
             this.supportVersions = builder.supportVersions;
         }
@@ -93,7 +98,7 @@ public class TlsCipherSuitesConfig extends TeaModel {
             return new Builder();
         }
 
-        public static CipherSuites create() {
+        public static TlsCipherSuite create() {
             return builder().build();
         }
 
@@ -107,13 +112,13 @@ public class TlsCipherSuitesConfig extends TeaModel {
         /**
          * @return supportVersions
          */
-        public java.util.List < String > getSupportVersions() {
+        public java.util.List<String> getSupportVersions() {
             return this.supportVersions;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > supportVersions; 
+            private java.util.List<String> supportVersions; 
 
             /**
              * name.
@@ -126,13 +131,13 @@ public class TlsCipherSuitesConfig extends TeaModel {
             /**
              * supportVersions.
              */
-            public Builder supportVersions(java.util.List < String > supportVersions) {
+            public Builder supportVersions(java.util.List<String> supportVersions) {
                 this.supportVersions = supportVersions;
                 return this;
             }
 
-            public CipherSuites build() {
-                return new CipherSuites(this);
+            public TlsCipherSuite build() {
+                return new TlsCipherSuite(this);
             } 
 
         } 

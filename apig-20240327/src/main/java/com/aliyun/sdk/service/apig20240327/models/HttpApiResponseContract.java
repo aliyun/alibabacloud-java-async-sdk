@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,7 +22,7 @@ public class HttpApiResponseContract extends TeaModel {
     private String contentType;
 
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     private HttpApiResponseContract(Builder builder) {
         this.contentType = builder.contentType;
@@ -42,13 +47,13 @@ public class HttpApiResponseContract extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
     public static final class Builder {
         private String contentType; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
 
         /**
          * <p>This parameter is required.</p>
@@ -64,7 +69,7 @@ public class HttpApiResponseContract extends TeaModel {
         /**
          * items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }

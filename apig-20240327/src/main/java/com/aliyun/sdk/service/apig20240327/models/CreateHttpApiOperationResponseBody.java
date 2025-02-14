@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operations")
-        private java.util.List < Operations> operations;
+        private java.util.List<Operations> operations;
 
         private Data(Builder builder) {
             this.operations = builder.operations;
@@ -195,17 +200,17 @@ public class CreateHttpApiOperationResponseBody extends TeaModel {
         /**
          * @return operations
          */
-        public java.util.List < Operations> getOperations() {
+        public java.util.List<Operations> getOperations() {
             return this.operations;
         }
 
         public static final class Builder {
-            private java.util.List < Operations> operations; 
+            private java.util.List<Operations> operations; 
 
             /**
              * <p>Operation information.</p>
              */
-            public Builder operations(java.util.List < Operations> operations) {
+            public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("addresses")
-    private java.util.List < String > addresses;
+    private java.util.List<String> addresses;
 
     @com.aliyun.core.annotation.NameInMap("aiServiceConfig")
     private AiServiceConfig aiServiceConfig;
@@ -40,7 +45,7 @@ public class Service extends TeaModel {
     private String namespace;
 
     @com.aliyun.core.annotation.NameInMap("ports")
-    private java.util.List < Ports> ports;
+    private java.util.List<Ports> ports;
 
     @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
@@ -58,7 +63,7 @@ public class Service extends TeaModel {
     private String sourceType;
 
     @com.aliyun.core.annotation.NameInMap("unhealthyEndpoints")
-    private java.util.List < String > unhealthyEndpoints;
+    private java.util.List<String> unhealthyEndpoints;
 
     @com.aliyun.core.annotation.NameInMap("updateTimestamp")
     private Long updateTimestamp;
@@ -94,7 +99,7 @@ public class Service extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < String > getAddresses() {
+    public java.util.List<String> getAddresses() {
         return this.addresses;
     }
 
@@ -157,7 +162,7 @@ public class Service extends TeaModel {
     /**
      * @return ports
      */
-    public java.util.List < Ports> getPorts() {
+    public java.util.List<Ports> getPorts() {
         return this.ports;
     }
 
@@ -199,7 +204,7 @@ public class Service extends TeaModel {
     /**
      * @return unhealthyEndpoints
      */
-    public java.util.List < String > getUnhealthyEndpoints() {
+    public java.util.List<String> getUnhealthyEndpoints() {
         return this.unhealthyEndpoints;
     }
 
@@ -211,7 +216,7 @@ public class Service extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > addresses; 
+        private java.util.List<String> addresses; 
         private AiServiceConfig aiServiceConfig; 
         private Long createTimestamp; 
         private String gatewayId; 
@@ -220,19 +225,19 @@ public class Service extends TeaModel {
         private String healthStatus; 
         private String name; 
         private String namespace; 
-        private java.util.List < Ports> ports; 
+        private java.util.List<Ports> ports; 
         private String protocol; 
         private String qualifier; 
         private String resourceGroupId; 
         private String serviceId; 
         private String sourceType; 
-        private java.util.List < String > unhealthyEndpoints; 
+        private java.util.List<String> unhealthyEndpoints; 
         private Long updateTimestamp; 
 
         /**
          * addresses.
          */
-        public Builder addresses(java.util.List < String > addresses) {
+        public Builder addresses(java.util.List<String> addresses) {
             this.addresses = addresses;
             return this;
         }
@@ -304,7 +309,7 @@ public class Service extends TeaModel {
         /**
          * ports.
          */
-        public Builder ports(java.util.List < Ports> ports) {
+        public Builder ports(java.util.List<Ports> ports) {
             this.ports = ports;
             return this;
         }
@@ -352,7 +357,7 @@ public class Service extends TeaModel {
         /**
          * unhealthyEndpoints.
          */
-        public Builder unhealthyEndpoints(java.util.List < String > unhealthyEndpoints) {
+        public Builder unhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
             this.unhealthyEndpoints = unhealthyEndpoints;
             return this;
         }

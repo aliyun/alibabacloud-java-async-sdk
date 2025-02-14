@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -74,7 +79,10 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ok</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +90,7 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Route detail data.</p>
          */
         public Builder data(HttpRoute data) {
             this.data = data;
@@ -90,7 +98,10 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +109,10 @@ public class GetHttpApiRouteResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

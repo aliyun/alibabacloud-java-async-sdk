@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,12 +23,12 @@ public class UpdateDomainRequest extends Request {
     private String domainId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("caCertIndentifier")
-    private String caCertIndentifier;
+    @com.aliyun.core.annotation.NameInMap("caCertIdentifier")
+    private String caCertIdentifier;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("certIndentifier")
-    private String certIndentifier;
+    @com.aliyun.core.annotation.NameInMap("certIdentifier")
+    private String certIdentifier;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("forceHttps")
@@ -53,8 +58,8 @@ public class UpdateDomainRequest extends Request {
     private UpdateDomainRequest(Builder builder) {
         super(builder);
         this.domainId = builder.domainId;
-        this.caCertIndentifier = builder.caCertIndentifier;
-        this.certIndentifier = builder.certIndentifier;
+        this.caCertIdentifier = builder.caCertIdentifier;
+        this.certIdentifier = builder.certIdentifier;
         this.forceHttps = builder.forceHttps;
         this.http2Option = builder.http2Option;
         this.protocol = builder.protocol;
@@ -84,17 +89,17 @@ public class UpdateDomainRequest extends Request {
     }
 
     /**
-     * @return caCertIndentifier
+     * @return caCertIdentifier
      */
-    public String getCaCertIndentifier() {
-        return this.caCertIndentifier;
+    public String getCaCertIdentifier() {
+        return this.caCertIdentifier;
     }
 
     /**
-     * @return certIndentifier
+     * @return certIdentifier
      */
-    public String getCertIndentifier() {
-        return this.certIndentifier;
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     /**
@@ -141,8 +146,8 @@ public class UpdateDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateDomainRequest, Builder> {
         private String domainId; 
-        private String caCertIndentifier; 
-        private String certIndentifier; 
+        private String caCertIdentifier; 
+        private String certIdentifier; 
         private Boolean forceHttps; 
         private String http2Option; 
         private String protocol; 
@@ -157,8 +162,8 @@ public class UpdateDomainRequest extends Request {
         private Builder(UpdateDomainRequest request) {
             super(request);
             this.domainId = request.domainId;
-            this.caCertIndentifier = request.caCertIndentifier;
-            this.certIndentifier = request.certIndentifier;
+            this.caCertIdentifier = request.caCertIdentifier;
+            this.certIdentifier = request.certIdentifier;
             this.forceHttps = request.forceHttps;
             this.http2Option = request.http2Option;
             this.protocol = request.protocol;
@@ -181,26 +186,20 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * <p>Cloud Shield CA certificate identifier.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123455-cn-hangzhou</p>
+         * caCertIdentifier.
          */
-        public Builder caCertIndentifier(String caCertIndentifier) {
-            this.putBodyParameter("caCertIndentifier", caCertIndentifier);
-            this.caCertIndentifier = caCertIndentifier;
+        public Builder caCertIdentifier(String caCertIdentifier) {
+            this.putBodyParameter("caCertIdentifier", caCertIdentifier);
+            this.caCertIdentifier = caCertIdentifier;
             return this;
         }
 
         /**
-         * <p>Cloud Shield certificate identifier.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123458-cn-hangzhou</p>
+         * certIdentifier.
          */
-        public Builder certIndentifier(String certIndentifier) {
-            this.putBodyParameter("certIndentifier", certIndentifier);
-            this.certIndentifier = certIndentifier;
+        public Builder certIdentifier(String certIdentifier) {
+            this.putBodyParameter("certIdentifier", certIdentifier);
+            this.certIdentifier = certIdentifier;
             return this;
         }
 
@@ -246,7 +245,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * tlsCipherSuitesConfig.
+         * <p>TLS Cipher Suite Configuration.</p>
          */
         public Builder tlsCipherSuitesConfig(TlsCipherSuitesConfig tlsCipherSuitesConfig) {
             this.putBodyParameter("tlsCipherSuitesConfig", tlsCipherSuitesConfig);

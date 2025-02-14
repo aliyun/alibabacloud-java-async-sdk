@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HttpApiBackendMatchConditions extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("conditions")
-    private java.util.List < HttpApiBackendMatchCondition > conditions;
+    private java.util.List<HttpApiBackendMatchCondition> conditions;
 
     @com.aliyun.core.annotation.NameInMap("default")
     private Boolean _default;
@@ -34,7 +39,7 @@ public class HttpApiBackendMatchConditions extends TeaModel {
     /**
      * @return conditions
      */
-    public java.util.List < HttpApiBackendMatchCondition > getConditions() {
+    public java.util.List<HttpApiBackendMatchCondition> getConditions() {
         return this.conditions;
     }
 
@@ -46,13 +51,13 @@ public class HttpApiBackendMatchConditions extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HttpApiBackendMatchCondition > conditions; 
+        private java.util.List<HttpApiBackendMatchCondition> conditions; 
         private Boolean _default; 
 
         /**
          * conditions.
          */
-        public Builder conditions(java.util.List < HttpApiBackendMatchCondition > conditions) {
+        public Builder conditions(java.util.List<HttpApiBackendMatchCondition> conditions) {
             this.conditions = conditions;
             return this;
         }

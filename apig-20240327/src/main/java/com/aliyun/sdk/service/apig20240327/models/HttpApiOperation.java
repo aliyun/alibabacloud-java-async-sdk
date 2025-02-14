@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HttpApiOperation</p>
  */
 public class HttpApiOperation extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("authConfig")
+    private AuthConfig authConfig;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
+
+    @com.aliyun.core.annotation.NameInMap("enableAuth")
+    private Boolean enableAuth;
 
     @com.aliyun.core.annotation.NameInMap("method")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -37,7 +48,9 @@ public class HttpApiOperation extends TeaModel {
     private HttpApiResponseContract response;
 
     private HttpApiOperation(Builder builder) {
+        this.authConfig = builder.authConfig;
         this.description = builder.description;
+        this.enableAuth = builder.enableAuth;
         this.method = builder.method;
         this.mock = builder.mock;
         this.name = builder.name;
@@ -55,10 +68,24 @@ public class HttpApiOperation extends TeaModel {
     }
 
     /**
+     * @return authConfig
+     */
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableAuth
+     */
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     /**
@@ -104,7 +131,9 @@ public class HttpApiOperation extends TeaModel {
     }
 
     public static final class Builder {
+        private AuthConfig authConfig; 
         private String description; 
+        private Boolean enableAuth; 
         private String method; 
         private HttpApiMockContract mock; 
         private String name; 
@@ -113,10 +142,26 @@ public class HttpApiOperation extends TeaModel {
         private HttpApiResponseContract response; 
 
         /**
+         * authConfig.
+         */
+        public Builder authConfig(AuthConfig authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+
+        /**
          * description.
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * enableAuth.
+         */
+        public Builder enableAuth(Boolean enableAuth) {
+            this.enableAuth = enableAuth;
             return this;
         }
 

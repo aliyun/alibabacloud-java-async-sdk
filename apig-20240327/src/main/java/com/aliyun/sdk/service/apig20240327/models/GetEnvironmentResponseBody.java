@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
      */
     public static class StatisticsInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceStatistics")
-        private java.util.List < ResourceStatistic > resourceStatistics;
+        private java.util.List<ResourceStatistic> resourceStatistics;
 
         @com.aliyun.core.annotation.NameInMap("totalCount")
         private Integer totalCount;
@@ -149,7 +154,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         /**
          * @return resourceStatistics
          */
-        public java.util.List < ResourceStatistic > getResourceStatistics() {
+        public java.util.List<ResourceStatistic> getResourceStatistics() {
             return this.resourceStatistics;
         }
 
@@ -161,19 +166,22 @@ public class GetEnvironmentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ResourceStatistic > resourceStatistics; 
+            private java.util.List<ResourceStatistic> resourceStatistics; 
             private Integer totalCount; 
 
             /**
-             * resourceStatistics.
+             * <p>The array of related resource information.</p>
              */
-            public Builder resourceStatistics(java.util.List < ResourceStatistic > resourceStatistics) {
+            public Builder resourceStatistics(java.util.List<ResourceStatistic> resourceStatistics) {
                 this.resourceStatistics = resourceStatistics;
                 return this;
             }
 
             /**
-             * totalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -222,7 +230,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         private StatisticsInfo statisticsInfo;
 
         @com.aliyun.core.annotation.NameInMap("subDomainInfos")
-        private java.util.List < SubDomainInfo > subDomainInfos;
+        private java.util.List<SubDomainInfo> subDomainInfos;
 
         @com.aliyun.core.annotation.NameInMap("updateTimestamp")
         private Long updateTimestamp;
@@ -315,7 +323,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         /**
          * @return subDomainInfos
          */
-        public java.util.List < SubDomainInfo > getSubDomainInfos() {
+        public java.util.List<SubDomainInfo> getSubDomainInfos() {
             return this.subDomainInfos;
         }
 
@@ -336,7 +344,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private StatisticsInfo statisticsInfo; 
-            private java.util.List < SubDomainInfo > subDomainInfos; 
+            private java.util.List<SubDomainInfo> subDomainInfos; 
             private Long updateTimestamp; 
 
             /**
@@ -414,7 +422,10 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzzzntl5njbpi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -422,7 +433,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * statisticsInfo.
+             * <p>Related resource information.</p>
              */
             public Builder statisticsInfo(StatisticsInfo statisticsInfo) {
                 this.statisticsInfo = statisticsInfo;
@@ -432,7 +443,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
             /**
              * <p>List of subdomains.</p>
              */
-            public Builder subDomainInfos(java.util.List < SubDomainInfo > subDomainInfos) {
+            public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
                 this.subDomainInfos = subDomainInfos;
                 return this;
             }

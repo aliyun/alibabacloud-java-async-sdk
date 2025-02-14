@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PolicyInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("attachments")
-    private java.util.List < Attachment > attachments;
+    private java.util.List<Attachment> attachments;
 
     @com.aliyun.core.annotation.NameInMap("classAlias")
     private String classAlias;
@@ -66,7 +71,7 @@ public class PolicyInfo extends TeaModel {
     /**
      * @return attachments
      */
-    public java.util.List < Attachment > getAttachments() {
+    public java.util.List<Attachment> getAttachments() {
         return this.attachments;
     }
 
@@ -134,7 +139,7 @@ public class PolicyInfo extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Attachment > attachments; 
+        private java.util.List<Attachment> attachments; 
         private String classAlias; 
         private String className; 
         private String config; 
@@ -148,7 +153,7 @@ public class PolicyInfo extends TeaModel {
         /**
          * attachments.
          */
-        public Builder attachments(java.util.List < Attachment > attachments) {
+        public Builder attachments(java.util.List<Attachment> attachments) {
             this.attachments = attachments;
             return this;
         }

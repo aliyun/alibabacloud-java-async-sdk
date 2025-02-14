@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateHttpApiOperationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operations")
-    private java.util.List < HttpApiOperation > operations;
+    private java.util.List<HttpApiOperation> operations;
 
     private CreateHttpApiOperationRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class CreateHttpApiOperationRequest extends Request {
     /**
      * @return operations
      */
-    public java.util.List < HttpApiOperation > getOperations() {
+    public java.util.List<HttpApiOperation> getOperations() {
         return this.operations;
     }
 
     public static final class Builder extends Request.Builder<CreateHttpApiOperationRequest, Builder> {
         private String httpApiId; 
-        private java.util.List < HttpApiOperation > operations; 
+        private java.util.List<HttpApiOperation> operations; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class CreateHttpApiOperationRequest extends Request {
         /**
          * <p>List of operation definitions.</p>
          */
-        public Builder operations(java.util.List < HttpApiOperation > operations) {
+        public Builder operations(java.util.List<HttpApiOperation> operations) {
             this.putBodyParameter("operations", operations);
             this.operations = operations;
             return this;

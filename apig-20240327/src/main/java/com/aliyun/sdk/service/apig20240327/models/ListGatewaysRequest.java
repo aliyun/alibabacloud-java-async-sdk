@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,8 +42,8 @@ public class ListGatewaysRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("tag")
+    private java.util.List<Tag> tag;
 
     private ListGatewaysRequest(Builder builder) {
         super(builder);
@@ -48,7 +53,7 @@ public class ListGatewaysRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
-        this.tags = builder.tags;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -107,10 +112,10 @@ public class ListGatewaysRequest extends Request {
     }
 
     /**
-     * @return tags
+     * @return tag
      */
-    public java.util.List < Tags> getTags() {
-        return this.tags;
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListGatewaysRequest, Builder> {
@@ -120,7 +125,7 @@ public class ListGatewaysRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -134,11 +139,11 @@ public class ListGatewaysRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
-            this.tags = request.tags;
+            this.tag = request.tag;
         } 
 
         /**
-         * <p>Query exactly by gateway ID.</p>
+         * <p>Query exactly by Gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl****</p>
@@ -162,7 +167,7 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * <p>Query exactly by gateway name.</p>
+         * <p>Query exactly by Gateway name.</p>
          * 
          * <strong>example:</strong>
          * <p>itemcenter-gateway</p>
@@ -198,7 +203,10 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz3wes3hnre5a</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -207,12 +215,12 @@ public class ListGatewaysRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>Filter list by tags</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
-            String tagsShrink = shrink(tags, "tags", "json");
-            this.putQueryParameter("tags", tagsShrink);
-            this.tags = tags;
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "tag", "json");
+            this.putQueryParameter("tag", tagShrink);
+            this.tag = tag;
             return this;
         }
 
@@ -229,14 +237,14 @@ public class ListGatewaysRequest extends Request {
      *
      * <p>ListGatewaysRequest</p>
      */
-    public static class Tags extends TeaModel {
+    public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        private Tags(Builder builder) {
+        private Tag(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -245,7 +253,7 @@ public class ListGatewaysRequest extends Request {
             return new Builder();
         }
 
-        public static Tags create() {
+        public static Tag create() {
             return builder().build();
         }
 
@@ -268,7 +276,10 @@ public class ListGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -276,15 +287,18 @@ public class ListGatewaysRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public Tags build() {
-                return new Tags(this);
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

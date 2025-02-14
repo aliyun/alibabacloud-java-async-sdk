@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class EnvironmentInfo extends TeaModel {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("subDomainInfos")
-    private java.util.List < SubDomainInfo > subDomainInfos;
+    private java.util.List<SubDomainInfo> subDomainInfos;
 
     @com.aliyun.core.annotation.NameInMap("updateTimestamp")
     private Long updateTimestamp;
@@ -122,7 +127,7 @@ public class EnvironmentInfo extends TeaModel {
     /**
      * @return subDomainInfos
      */
-    public java.util.List < SubDomainInfo > getSubDomainInfos() {
+    public java.util.List<SubDomainInfo> getSubDomainInfos() {
         return this.subDomainInfos;
     }
 
@@ -142,7 +147,7 @@ public class EnvironmentInfo extends TeaModel {
         private GatewayInfo gatewayInfo; 
         private String name; 
         private String resourceGroupId; 
-        private java.util.List < SubDomainInfo > subDomainInfos; 
+        private java.util.List<SubDomainInfo> subDomainInfos; 
         private Long updateTimestamp; 
 
         /**
@@ -212,7 +217,7 @@ public class EnvironmentInfo extends TeaModel {
         /**
          * subDomainInfos.
          */
-        public Builder subDomainInfos(java.util.List < SubDomainInfo > subDomainInfos) {
+        public Builder subDomainInfos(java.util.List<SubDomainInfo> subDomainInfos) {
             this.subDomainInfos = subDomainInfos;
             return this;
         }

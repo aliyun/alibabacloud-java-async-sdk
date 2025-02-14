@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class HttpDubboTranscoder extends TeaModel {
     private String dubboServiceVersion;
 
     @com.aliyun.core.annotation.NameInMap("mothedMapList")
-    private java.util.List < MothedMapList> mothedMapList;
+    private java.util.List<MothedMapList> mothedMapList;
 
     private HttpDubboTranscoder(Builder builder) {
         this.dubboServiceGroup = builder.dubboServiceGroup;
@@ -63,7 +68,7 @@ public class HttpDubboTranscoder extends TeaModel {
     /**
      * @return mothedMapList
      */
-    public java.util.List < MothedMapList> getMothedMapList() {
+    public java.util.List<MothedMapList> getMothedMapList() {
         return this.mothedMapList;
     }
 
@@ -71,7 +76,7 @@ public class HttpDubboTranscoder extends TeaModel {
         private String dubboServiceGroup; 
         private String dubboServiceName; 
         private String dubboServiceVersion; 
-        private java.util.List < MothedMapList> mothedMapList; 
+        private java.util.List<MothedMapList> mothedMapList; 
 
         /**
          * dubboServiceGroup.
@@ -100,7 +105,7 @@ public class HttpDubboTranscoder extends TeaModel {
         /**
          * mothedMapList.
          */
-        public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
+        public Builder mothedMapList(java.util.List<MothedMapList> mothedMapList) {
             this.mothedMapList = mothedMapList;
             return this;
         }
@@ -215,13 +220,13 @@ public class HttpDubboTranscoder extends TeaModel {
         private String mothedpath;
 
         @com.aliyun.core.annotation.NameInMap("paramMapsList")
-        private java.util.List < ParamMapsList> paramMapsList;
+        private java.util.List<ParamMapsList> paramMapsList;
 
         @com.aliyun.core.annotation.NameInMap("passThroughAllHeaders")
         private String passThroughAllHeaders;
 
         @com.aliyun.core.annotation.NameInMap("passThroughList")
-        private java.util.List < String > passThroughList;
+        private java.util.List<String> passThroughList;
 
         private MothedMapList(Builder builder) {
             this.dubboMothedName = builder.dubboMothedName;
@@ -264,7 +269,7 @@ public class HttpDubboTranscoder extends TeaModel {
         /**
          * @return paramMapsList
          */
-        public java.util.List < ParamMapsList> getParamMapsList() {
+        public java.util.List<ParamMapsList> getParamMapsList() {
             return this.paramMapsList;
         }
 
@@ -278,7 +283,7 @@ public class HttpDubboTranscoder extends TeaModel {
         /**
          * @return passThroughList
          */
-        public java.util.List < String > getPassThroughList() {
+        public java.util.List<String> getPassThroughList() {
             return this.passThroughList;
         }
 
@@ -286,9 +291,9 @@ public class HttpDubboTranscoder extends TeaModel {
             private String dubboMothedName; 
             private String httpMothed; 
             private String mothedpath; 
-            private java.util.List < ParamMapsList> paramMapsList; 
+            private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
-            private java.util.List < String > passThroughList; 
+            private java.util.List<String> passThroughList; 
 
             /**
              * dubboMothedName.
@@ -317,7 +322,7 @@ public class HttpDubboTranscoder extends TeaModel {
             /**
              * paramMapsList.
              */
-            public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
+            public Builder paramMapsList(java.util.List<ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
                 return this;
             }
@@ -333,7 +338,7 @@ public class HttpDubboTranscoder extends TeaModel {
             /**
              * passThroughList.
              */
-            public Builder passThroughList(java.util.List < String > passThroughList) {
+            public Builder passThroughList(java.util.List<String> passThroughList) {
                 this.passThroughList = passThroughList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class HttpApiInfoByName extends TeaModel {
     private Boolean versionEnabled;
 
     @com.aliyun.core.annotation.NameInMap("versionedHttpApis")
-    private java.util.List < HttpApiApiInfo > versionedHttpApis;
+    private java.util.List<HttpApiApiInfo> versionedHttpApis;
 
     private HttpApiInfoByName(Builder builder) {
         this.name = builder.name;
@@ -63,7 +68,7 @@ public class HttpApiInfoByName extends TeaModel {
     /**
      * @return versionedHttpApis
      */
-    public java.util.List < HttpApiApiInfo > getVersionedHttpApis() {
+    public java.util.List<HttpApiApiInfo> getVersionedHttpApis() {
         return this.versionedHttpApis;
     }
 
@@ -71,7 +76,7 @@ public class HttpApiInfoByName extends TeaModel {
         private String name; 
         private String type; 
         private Boolean versionEnabled; 
-        private java.util.List < HttpApiApiInfo > versionedHttpApis; 
+        private java.util.List<HttpApiApiInfo> versionedHttpApis; 
 
         /**
          * name.
@@ -100,7 +105,7 @@ public class HttpApiInfoByName extends TeaModel {
         /**
          * versionedHttpApis.
          */
-        public Builder versionedHttpApis(java.util.List < HttpApiApiInfo > versionedHttpApis) {
+        public Builder versionedHttpApis(java.util.List<HttpApiApiInfo> versionedHttpApis) {
             this.versionedHttpApis = versionedHttpApis;
             return this;
         }

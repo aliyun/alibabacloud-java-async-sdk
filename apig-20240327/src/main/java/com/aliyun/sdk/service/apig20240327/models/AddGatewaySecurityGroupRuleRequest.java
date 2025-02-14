@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("portRanges")
-    private java.util.List < String > portRanges;
+    private java.util.List<String> portRanges;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("securityGroupId")
@@ -66,7 +71,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
     /**
      * @return portRanges
      */
-    public java.util.List < String > getPortRanges() {
+    public java.util.List<String> getPortRanges() {
         return this.portRanges;
     }
 
@@ -80,7 +85,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
     public static final class Builder extends Request.Builder<AddGatewaySecurityGroupRuleRequest, Builder> {
         private String gatewayId; 
         private String description; 
-        private java.util.List < String > portRanges; 
+        private java.util.List<String> portRanges; 
         private String securityGroupId; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class AddGatewaySecurityGroupRuleRequest extends Request {
         /**
          * <p>Port ranges.</p>
          */
-        public Builder portRanges(java.util.List < String > portRanges) {
+        public Builder portRanges(java.util.List<String> portRanges) {
             this.putBodyParameter("portRanges", portRanges);
             this.portRanges = portRanges;
             return this;

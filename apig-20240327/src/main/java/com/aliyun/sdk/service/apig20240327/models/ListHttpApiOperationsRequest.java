@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,10 @@ public class ListHttpApiOperationsRequest extends Request {
         }
 
         /**
-         * withPluginAttachmentByPluginId.
+         * <p>Plugin ID, use this plugin ID to retrieve the plugin release information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-xxx</p>
          */
         public Builder withPluginAttachmentByPluginId(String withPluginAttachmentByPluginId) {
             this.putQueryParameter("withPluginAttachmentByPluginId", withPluginAttachmentByPluginId);

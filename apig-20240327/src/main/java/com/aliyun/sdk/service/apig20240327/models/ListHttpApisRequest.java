@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.apig20240327.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -61,6 +66,10 @@ public class ListHttpApisRequest extends Request {
     private String withEnvironmentInfoById;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withIngressInfo")
+    private Boolean withIngressInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("withPluginAttachmentByPluginId")
     private String withPluginAttachmentByPluginId;
 
@@ -78,6 +87,7 @@ public class ListHttpApisRequest extends Request {
         this.withConsumerInfoById = builder.withConsumerInfoById;
         this.withEnvironmentInfo = builder.withEnvironmentInfo;
         this.withEnvironmentInfoById = builder.withEnvironmentInfoById;
+        this.withIngressInfo = builder.withIngressInfo;
         this.withPluginAttachmentByPluginId = builder.withPluginAttachmentByPluginId;
     }
 
@@ -179,6 +189,13 @@ public class ListHttpApisRequest extends Request {
     }
 
     /**
+     * @return withIngressInfo
+     */
+    public Boolean getWithIngressInfo() {
+        return this.withIngressInfo;
+    }
+
+    /**
      * @return withPluginAttachmentByPluginId
      */
     public String getWithPluginAttachmentByPluginId() {
@@ -198,6 +215,7 @@ public class ListHttpApisRequest extends Request {
         private String withConsumerInfoById; 
         private Boolean withEnvironmentInfo; 
         private String withEnvironmentInfoById; 
+        private Boolean withIngressInfo; 
         private String withPluginAttachmentByPluginId; 
 
         private Builder() {
@@ -218,6 +236,7 @@ public class ListHttpApisRequest extends Request {
             this.withConsumerInfoById = request.withConsumerInfoById;
             this.withEnvironmentInfo = request.withEnvironmentInfo;
             this.withEnvironmentInfoById = request.withEnvironmentInfoById;
+            this.withIngressInfo = request.withIngressInfo;
             this.withPluginAttachmentByPluginId = request.withPluginAttachmentByPluginId;
         } 
 
@@ -356,6 +375,15 @@ public class ListHttpApisRequest extends Request {
         public Builder withEnvironmentInfoById(String withEnvironmentInfoById) {
             this.putQueryParameter("withEnvironmentInfoById", withEnvironmentInfoById);
             this.withEnvironmentInfoById = withEnvironmentInfoById;
+            return this;
+        }
+
+        /**
+         * withIngressInfo.
+         */
+        public Builder withIngressInfo(Boolean withIngressInfo) {
+            this.putQueryParameter("withIngressInfo", withIngressInfo);
+            this.withIngressInfo = withIngressInfo;
             return this;
         }
 
