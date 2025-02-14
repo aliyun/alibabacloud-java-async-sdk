@@ -306,7 +306,10 @@ public class DescribeOssObjectsRequest extends Request {
         }
 
         /**
-         * Marker.
+         * <p>When you query data by page, use the <code>Marker</code> parameter to query the data that follows the <code>Marker</code> value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754786235714378752</p>
          */
         public Builder marker(Long marker) {
             this.putQueryParameter("Marker", marker);

@@ -222,14 +222,29 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
+        @com.aliyun.core.annotation.NameInMap("EngineType")
+        private String engineType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
+        @com.aliyun.core.annotation.NameInMap("MaskingStatus")
+        private Integer maskingStatus;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List<ModelTags> modelTags;
 
         @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private Boolean primaryKey;
+
+        @com.aliyun.core.annotation.NameInMap("ProductId")
+        private Long productId;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
@@ -243,18 +258,27 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
         private Items(Builder builder) {
             this.categories = builder.categories;
             this.columnComment = builder.columnComment;
             this.columnName = builder.columnName;
             this.dataType = builder.dataType;
+            this.engineType = builder.engineType;
             this.id = builder.id;
+            this.instanceName = builder.instanceName;
+            this.maskingStatus = builder.maskingStatus;
             this.modelTags = builder.modelTags;
             this.primaryKey = builder.primaryKey;
+            this.productId = builder.productId;
+            this.regionId = builder.regionId;
             this.riskLevelId = builder.riskLevelId;
             this.riskLevelName = builder.riskLevelName;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
+            this.tableName = builder.tableName;
         }
 
         public static Builder builder() {
@@ -294,10 +318,31 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return engineType
+         */
+        public String getEngineType() {
+            return this.engineType;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
             return this.id;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return maskingStatus
+         */
+        public Integer getMaskingStatus() {
+            return this.maskingStatus;
         }
 
         /**
@@ -312,6 +357,20 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
          */
         public Boolean getPrimaryKey() {
             return this.primaryKey;
+        }
+
+        /**
+         * @return productId
+         */
+        public Long getProductId() {
+            return this.productId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
         }
 
         /**
@@ -342,18 +401,31 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
             return this.ruleName;
         }
 
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
         public static final class Builder {
             private java.util.List<String> categories; 
             private String columnComment; 
             private String columnName; 
             private String dataType; 
+            private String engineType; 
             private String id; 
+            private String instanceName; 
+            private Integer maskingStatus; 
             private java.util.List<ModelTags> modelTags; 
             private Boolean primaryKey; 
+            private Long productId; 
+            private String regionId; 
             private Long riskLevelId; 
             private String riskLevelName; 
             private Long ruleId; 
             private String ruleName; 
+            private String tableName; 
 
             /**
              * Categories.
@@ -388,10 +460,34 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
             }
 
             /**
+             * EngineType.
+             */
+            public Builder engineType(String engineType) {
+                this.engineType = engineType;
+                return this;
+            }
+
+            /**
              * Id.
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * MaskingStatus.
+             */
+            public Builder maskingStatus(Integer maskingStatus) {
+                this.maskingStatus = maskingStatus;
                 return this;
             }
 
@@ -408,6 +504,22 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
+                return this;
+            }
+
+            /**
+             * ProductId.
+             */
+            public Builder productId(Long productId) {
+                this.productId = productId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
@@ -440,6 +552,14 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
                 return this;
             }
 

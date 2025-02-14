@@ -309,7 +309,17 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -361,7 +371,14 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * ModelTagId.
+         * <p>The data tag.</p>
+         * <ul>
+         * <li>101: personal sensitive information</li>
+         * <li>102: personal information</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder modelTagId(String modelTagId) {
             this.putQueryParameter("ModelTagId", modelTagId);
@@ -407,7 +424,24 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The ID of the service to which the data object belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore (OTS)</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><strong>6</strong>: self-managed database</li>
+         * <li><strong>7</strong>: PolarDB for Xscale (PolarDB-X)</li>
+         * <li><strong>8</strong>: PolarDB</li>
+         * <li><strong>9</strong>: AnalyticDB for PostgreSQL</li>
+         * <li><strong>10</strong>: ApsaraDB for OceanBase</li>
+         * <li><strong>11</strong>: ApsaraDB for MongoDB</li>
+         * <li><strong>25</strong>: ApsaraDB for Redis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(String productId) {
             this.putQueryParameter("ProductId", productId);
@@ -508,7 +542,13 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the industry-specific classification template.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the IDs of industry-specific classification templates.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -517,7 +557,13 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
-         * TemplateRuleId.
+         * <p>The ID of the template rule that is hit.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a> operation to obtain the IDs of hit template rules.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1542</p>
          */
         public Builder templateRuleId(String templateRuleId) {
             this.putQueryParameter("TemplateRuleId", templateRuleId);

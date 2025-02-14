@@ -426,7 +426,14 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * InstantlyScan.
+         * <p>Specifies whether to immediately scan the authorized asset. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder instantlyScan(Boolean instantlyScan) {
             this.putQueryParameter("InstantlyScan", instantlyScan);
@@ -485,7 +492,7 @@ public class CreateDataLimitRequest extends Request {
         }
 
         /**
-         * <p>The name of the data asset.</p>
+         * <p>The name of the asset. The value is a connection string. It consists of an instance ID and a database name, which are separated by a comma (,). This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-11**</p>

@@ -102,7 +102,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of data assets.</p>
+         * <p>The data assets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -868,7 +868,10 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * LastStartTime.
+             * <p>The last scan start time of data assets, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>145600000</p>
              */
             public Builder lastStartTime(Long lastStartTime) {
                 this.lastStartTime = lastStartTime;

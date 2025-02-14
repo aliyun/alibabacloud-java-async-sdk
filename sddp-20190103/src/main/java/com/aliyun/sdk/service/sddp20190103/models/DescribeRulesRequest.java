@@ -353,7 +353,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * CooperationChannel.
+         * <p>The external cooperation channel. Valid values:</p>
+         * <ul>
+         * <li>DAS</li>
+         * <li>YAOCHI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DAS</p>
          */
         public Builder cooperationChannel(String cooperationChannel) {
             this.putQueryParameter("CooperationChannel", cooperationChannel);
@@ -550,7 +557,14 @@ public class DescribeRulesRequest extends Request {
         }
 
         /**
-         * Simplify.
+         * <p>Specifies whether to query a simplified rule. The simplified rule contains only the rule name. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder simplify(Boolean simplify) {
             this.putQueryParameter("Simplify", simplify);

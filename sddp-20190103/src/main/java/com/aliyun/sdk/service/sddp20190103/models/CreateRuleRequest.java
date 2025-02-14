@@ -398,7 +398,10 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * ModelRuleIds.
+         * <p>The IDs of the models for sensitive data audit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1452</p>
          */
         public Builder modelRuleIds(String modelRuleIds) {
             this.putQueryParameter("ModelRuleIds", modelRuleIds);
@@ -553,7 +556,10 @@ public class CreateRuleRequest extends Request {
         }
 
         /**
-         * TemplateRuleIds.
+         * <p>The IDs of the templates that are used to audit sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder templateRuleIds(String templateRuleIds) {
             this.putQueryParameter("TemplateRuleIds", templateRuleIds);

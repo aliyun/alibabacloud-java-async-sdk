@@ -22,6 +22,10 @@ public class DescribeColumnsV2Request extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    private String engineType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
@@ -72,6 +76,7 @@ public class DescribeColumnsV2Request extends Request {
     private DescribeColumnsV2Request(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.engineType = builder.engineType;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.lang = builder.lang;
@@ -104,6 +109,13 @@ public class DescribeColumnsV2Request extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
     }
 
     /**
@@ -192,6 +204,7 @@ public class DescribeColumnsV2Request extends Request {
 
     public static final class Builder extends Request.Builder<DescribeColumnsV2Request, Builder> {
         private Integer currentPage; 
+        private String engineType; 
         private Long instanceId; 
         private String instanceName; 
         private String lang; 
@@ -212,6 +225,7 @@ public class DescribeColumnsV2Request extends Request {
         private Builder(DescribeColumnsV2Request request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.engineType = request.engineType;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.lang = request.lang;
@@ -235,6 +249,15 @@ public class DescribeColumnsV2Request extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * EngineType.
+         */
+        public Builder engineType(String engineType) {
+            this.putQueryParameter("EngineType", engineType);
+            this.engineType = engineType;
             return this;
         }
 

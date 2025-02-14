@@ -102,7 +102,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of columns.</p>
+         * <p>The columns.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -244,6 +244,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
+        @com.aliyun.core.annotation.NameInMap("EngineType")
+        private String engineType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -252,6 +255,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
+
+        @com.aliyun.core.annotation.NameInMap("MaskingStatus")
+        private Integer maskingStatus;
 
         @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List<ModelTags> modelTags;
@@ -267,6 +273,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
+
+        @com.aliyun.core.annotation.NameInMap("ProductId")
+        private Long productId;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -304,14 +313,17 @@ public class DescribeColumnsResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.creationTime = builder.creationTime;
             this.dataType = builder.dataType;
+            this.engineType = builder.engineType;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
+            this.maskingStatus = builder.maskingStatus;
             this.modelTags = builder.modelTags;
             this.name = builder.name;
             this.odpsRiskLevelName = builder.odpsRiskLevelName;
             this.odpsRiskLevelValue = builder.odpsRiskLevelValue;
             this.productCode = builder.productCode;
+            this.productId = builder.productId;
             this.regionId = builder.regionId;
             this.revisionId = builder.revisionId;
             this.revisionStatus = builder.revisionStatus;
@@ -348,6 +360,13 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
+         * @return engineType
+         */
+        public String getEngineType() {
+            return this.engineType;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
@@ -366,6 +385,13 @@ public class DescribeColumnsResponseBody extends TeaModel {
          */
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        /**
+         * @return maskingStatus
+         */
+        public Integer getMaskingStatus() {
+            return this.maskingStatus;
         }
 
         /**
@@ -401,6 +427,13 @@ public class DescribeColumnsResponseBody extends TeaModel {
          */
         public String getProductCode() {
             return this.productCode;
+        }
+
+        /**
+         * @return productId
+         */
+        public Long getProductId() {
+            return this.productId;
         }
 
         /**
@@ -483,14 +516,17 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public static final class Builder {
             private Long creationTime; 
             private String dataType; 
+            private String engineType; 
             private String id; 
             private Long instanceId; 
             private String instanceName; 
+            private Integer maskingStatus; 
             private java.util.List<ModelTags> modelTags; 
             private String name; 
             private String odpsRiskLevelName; 
             private Integer odpsRiskLevelValue; 
             private String productCode; 
+            private Long productId; 
             private String regionId; 
             private Long revisionId; 
             private Long revisionStatus; 
@@ -526,6 +562,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
+             * EngineType.
+             */
+            public Builder engineType(String engineType) {
+                this.engineType = engineType;
+                return this;
+            }
+
+            /**
              * <p>The ID of the column of the table.</p>
              * 
              * <strong>example:</strong>
@@ -555,6 +599,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * MaskingStatus.
+             */
+            public Builder maskingStatus(Integer maskingStatus) {
+                this.maskingStatus = maskingStatus;
                 return this;
             }
 
@@ -625,7 +677,18 @@ public class DescribeColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * ProductId.
+             */
+            public Builder productId(Long productId) {
+                this.productId = productId;
+                return this;
+            }
+
+            /**
+             * <p>The region in which the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-***</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

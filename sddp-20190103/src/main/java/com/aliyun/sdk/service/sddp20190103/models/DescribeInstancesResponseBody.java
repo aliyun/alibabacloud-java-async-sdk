@@ -102,7 +102,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the data assets.</p>
+         * <p>The data assets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -574,7 +574,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemberAliUid.
+             * <p>If the management account has opened multiple accounts and the asset belongs to other member accounts, this field displays the UID of the member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12567890126</p>
              */
             public Builder memberAliUid(String memberAliUid) {
                 this.memberAliUid = memberAliUid;

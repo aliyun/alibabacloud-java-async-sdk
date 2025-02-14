@@ -138,7 +138,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of OSS objects.</p>
+         * <p>The OSS objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -146,7 +146,10 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -154,7 +157,13 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * NextMarker.
+         * <p>The ID value from which the next page of results starts.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the <code>Truncated</code> parameter is set to <code>true</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1754786235714378752</p>
          */
         public Builder nextMarker(String nextMarker) {
             this.nextMarker = nextMarker;
@@ -195,7 +204,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Truncated.
+         * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder truncated(Boolean truncated) {
             this.truncated = truncated;
@@ -697,7 +713,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of rules.</p>
+             * <p>The rules.</p>
              */
             public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
