@@ -22,6 +22,14 @@ public class ListPrivateDNSRequest extends Request {
     private String intranetDomain;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -32,6 +40,8 @@ public class ListPrivateDNSRequest extends Request {
     private ListPrivateDNSRequest(Builder builder) {
         super(builder);
         this.intranetDomain = builder.intranetDomain;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
         this.type = builder.type;
     }
@@ -57,6 +67,20 @@ public class ListPrivateDNSRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -72,6 +96,8 @@ public class ListPrivateDNSRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPrivateDNSRequest, Builder> {
         private String intranetDomain; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String securityToken; 
         private String type; 
 
@@ -82,6 +108,8 @@ public class ListPrivateDNSRequest extends Request {
         private Builder(ListPrivateDNSRequest request) {
             super(request);
             this.intranetDomain = request.intranetDomain;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
             this.type = request.type;
         } 
@@ -95,6 +123,24 @@ public class ListPrivateDNSRequest extends Request {
         public Builder intranetDomain(String intranetDomain) {
             this.putQueryParameter("IntranetDomain", intranetDomain);
             this.intranetDomain = intranetDomain;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

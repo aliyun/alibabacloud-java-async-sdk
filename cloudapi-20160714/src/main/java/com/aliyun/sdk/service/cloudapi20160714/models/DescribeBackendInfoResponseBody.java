@@ -1046,7 +1046,11 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerName.
+             * <p>The name of the trigger.</p>
+             * <p>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder triggerName(String triggerName) {
                 this.triggerName = triggerName;

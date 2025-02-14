@@ -1,3 +1,6 @@
+2025-02-14 Version: 3.0.29
+- Generated java-async 2016-07-14 for CloudAPI.
+
 2025-02-12 Version: 3.0.28
 - Generated java-async 2016-07-14 for CloudAPI.
 
