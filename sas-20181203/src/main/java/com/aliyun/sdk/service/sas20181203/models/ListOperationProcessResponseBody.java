@@ -67,7 +67,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -75,7 +75,7 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Processes.
+         * <p>The information about the operation tasks.</p>
          */
         public Builder processes(java.util.List<Processes> processes) {
             this.processes = processes;
@@ -83,7 +83,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +168,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -173,7 +179,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -181,7 +190,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -189,7 +201,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>263</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -320,7 +335,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1674388824000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -328,7 +346,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the task. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1705467559000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -336,7 +357,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * <p>The number of tasks that are complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>197</p>
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -344,7 +368,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the task. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1705457102000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -352,7 +379,16 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The task status code. Valid values:</p>
+             * <ul>
+             * <li>0: not started.</li>
+             * <li>1: running.</li>
+             * <li>2: complete.</li>
+             * <li>3: times out.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder statusCode(Integer statusCode) {
                 this.statusCode = statusCode;
@@ -360,7 +396,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the operation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3d7a1b68-599f-4e16-9b45-e920a183b***</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -368,7 +407,17 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li>CHECK_ALL: full check.</li>
+             * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+             * <li>CHECK_SCHEDULE: scheduled check.</li>
+             * <li>CHECK_ITEM: specific check item-based check.</li>
+             * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_POLICY</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -376,7 +425,10 @@ public class ListOperationProcessResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>337</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

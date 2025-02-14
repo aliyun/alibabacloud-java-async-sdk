@@ -67,7 +67,7 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -75,7 +75,7 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ProcessDetails.
+         * <p>The information about the operation subtasks.</p>
          */
         public Builder processDetails(java.util.List<ProcessDetails> processDetails) {
             this.processDetails = processDetails;
@@ -83,7 +83,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +168,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -173,7 +179,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -181,7 +190,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -189,7 +201,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -248,7 +263,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             private String checkShowName; 
 
             /**
-             * CheckId.
+             * <p>The ID of the check item associated with the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>133</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -256,7 +274,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CheckShowName.
+             * <p>The name of the check item associated with the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check for Security Center Agent Status</p>
              */
             public Builder checkShowName(String checkShowName) {
                 this.checkShowName = checkShowName;
@@ -411,7 +432,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * AssetSubType.
+             * <p>The subtype of the asset associated with the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder assetSubType(Integer assetSubType) {
                 this.assetSubType = assetSubType;
@@ -419,7 +443,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The type of the asset associated with the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder assetType(Integer assetType) {
                 this.assetType = assetType;
@@ -427,7 +454,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AssetVendor.
+             * <p>The vendor of the asset associated with the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetVendor(Integer assetVendor) {
                 this.assetVendor = assetVendor;
@@ -435,7 +465,7 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Checks.
+             * <p>The check items associated with the operation subtask.</p>
              */
             public Builder checks(java.util.List<Checks> checks) {
                 this.checks = checks;
@@ -443,7 +473,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the task was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706544199000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -451,7 +484,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DetailTaskId.
+             * <p>The ID of the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fb4bcd41-a916-46bc-ab1a-65fd383be***</p>
              */
             public Builder detailTaskId(String detailTaskId) {
                 this.detailTaskId = detailTaskId;
@@ -459,7 +495,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end timestamp of the operation subtask. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1706544199000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -467,7 +506,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start timestamp of the operation subtask. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730335622000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -475,7 +517,17 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The subtask status code. Enumerated values:</p>
+             * <ul>
+             * <li>0: not started.</li>
+             * <li>1: running.</li>
+             * <li>2: successful.</li>
+             * <li>3: times out.</li>
+             * <li>4: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder statusCode(Integer statusCode) {
                 this.statusCode = statusCode;
@@ -483,7 +535,10 @@ public class ListOperationProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the operation subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v34578b8-e567-47ec-2345-3e5b077ca***</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

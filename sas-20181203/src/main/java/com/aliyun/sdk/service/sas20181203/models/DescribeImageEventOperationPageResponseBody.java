@@ -102,7 +102,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -183,6 +183,9 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Scenarios")
         private String scenarios;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         private List(Builder builder) {
             this.conditions = builder.conditions;
             this.eventKey = builder.eventKey;
@@ -192,6 +195,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             this.note = builder.note;
             this.operationCode = builder.operationCode;
             this.scenarios = builder.scenarios;
+            this.source = builder.source;
         }
 
         public static Builder builder() {
@@ -258,6 +262,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             return this.scenarios;
         }
 
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
         public static final class Builder {
             private String conditions; 
             private String eventKey; 
@@ -267,6 +278,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private String note; 
             private String operationCode; 
             private String scenarios; 
+            private String source; 
 
             /**
              * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
@@ -332,7 +344,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * Note.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -365,6 +380,21 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
+                return this;
+            }
+
+            /**
+             * <p>The source of the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>image</strong>: image.</li>
+             * <li><strong>agentless</strong>: agentless detection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>agentless</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

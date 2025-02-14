@@ -174,11 +174,17 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("Note")
+        private String note;
+
         @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
         @com.aliyun.core.annotation.NameInMap("Scenarios")
         private String scenarios;
+
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
 
         private Data(Builder builder) {
             this.conditions = builder.conditions;
@@ -186,8 +192,10 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             this.eventName = builder.eventName;
             this.eventType = builder.eventType;
             this.id = builder.id;
+            this.note = builder.note;
             this.operationCode = builder.operationCode;
             this.scenarios = builder.scenarios;
+            this.source = builder.source;
         }
 
         public static Builder builder() {
@@ -234,6 +242,13 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
+         * @return note
+         */
+        public String getNote() {
+            return this.note;
+        }
+
+        /**
          * @return operationCode
          */
         public String getOperationCode() {
@@ -247,14 +262,23 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             return this.scenarios;
         }
 
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
         public static final class Builder {
             private String conditions; 
             private String eventKey; 
             private String eventName; 
             private String eventType; 
             private Long id; 
+            private String note; 
             private String operationCode; 
             private String scenarios; 
+            private String source; 
 
             /**
              * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
@@ -320,6 +344,17 @@ public class GetImageEventOperationResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No warning.</p>
+             */
+            public Builder note(String note) {
+                this.note = note;
+                return this;
+            }
+
+            /**
              * <p>The operation code. Valid values:</p>
              * <ul>
              * <li><strong>whitelist</strong>: added to the whitelist.</li>
@@ -345,6 +380,21 @@ public class GetImageEventOperationResponseBody extends TeaModel {
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
+                return this;
+            }
+
+            /**
+             * <p>The source of the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>image</strong>: image</li>
+             * <li><strong>agentless</strong>: agentless detection</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>agentless</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

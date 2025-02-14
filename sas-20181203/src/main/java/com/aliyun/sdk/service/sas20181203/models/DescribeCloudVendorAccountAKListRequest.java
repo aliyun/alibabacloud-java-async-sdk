@@ -223,7 +223,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * VendorAuthAlias.
+         * <p>The name of the AccessKey pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder vendorAuthAlias(String vendorAuthAlias) {
             this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);

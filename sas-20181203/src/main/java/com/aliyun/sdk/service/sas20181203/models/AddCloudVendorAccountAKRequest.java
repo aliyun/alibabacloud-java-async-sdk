@@ -245,7 +245,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the content in the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -262,6 +262,9 @@ public class AddCloudVendorAccountAKRequest extends Request {
 
         /**
          * <p>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</p>
+         * </blockquote>
          */
         public Builder regions(java.util.List<String> regions) {
             this.putQueryParameter("Regions", regions);
@@ -364,7 +367,13 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * VendorAuthAlias.
+         * <p>The name of the AccessKey pair.</p>
+         * <blockquote>
+         * <p> The account information of the third-party cloud servers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder vendorAuthAlias(String vendorAuthAlias) {
             this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);

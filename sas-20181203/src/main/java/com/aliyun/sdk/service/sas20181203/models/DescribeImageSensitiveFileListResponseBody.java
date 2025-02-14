@@ -731,7 +731,14 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the sensitive file. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled.</li>
+             * <li><strong>1</strong>: handled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

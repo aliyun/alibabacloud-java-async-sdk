@@ -434,7 +434,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * FilePath.
+             * <p>The path to the sensitive file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/lib/abc.txt</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -453,7 +456,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the alert for the sensitive file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423505573</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -505,7 +511,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 hash value of the sensitive file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b484b0dff093f358897486b58266****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -513,7 +522,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Prompt.
+             * <p>The content of the sensitive file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql -u -p****</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;

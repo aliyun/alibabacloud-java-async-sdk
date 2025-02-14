@@ -89,7 +89,14 @@ public class GetSensitiveDefineRuleConfigRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the check rules. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: image.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

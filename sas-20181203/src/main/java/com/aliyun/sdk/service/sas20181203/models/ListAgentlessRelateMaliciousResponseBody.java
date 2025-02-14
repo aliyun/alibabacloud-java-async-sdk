@@ -168,7 +168,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MD5</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -176,7 +179,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * NameKey.
+             * <p>The name key of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${suspicious.mp.db.maliciousfilemd5}</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -184,7 +190,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -192,7 +201,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the detailed item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1f2e13a7c51ee89316ae50066515****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -479,7 +491,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Details.
+             * <p>The details of the alert events.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -487,7 +499,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The URL to download the malicious image sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/</a>***</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -517,7 +532,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * HighLight.
+             * <p>The highlighted JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;highlight&quot;:{&quot;ruleVersion&quot;:&quot;20230223&quot;,&quot;ruleId&quot;:600139,&quot;events&quot;:[[207,284]]}}</p>
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;
@@ -525,7 +543,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8012</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -577,7 +598,15 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The severity of the malicious file. Valid values:</p>
+             * <ul>
+             * <li>serious</li>
+             * <li>suspicious</li>
+             * <li>remind</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -585,7 +614,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousMd5.
+             * <p>The MD5 hash value of the malicious file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1f2e13a7c51ee89316ae50066515****</p>
              */
             public Builder maliciousMd5(String maliciousMd5) {
                 this.maliciousMd5 = maliciousMd5;
@@ -593,7 +625,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousName.
+             * <p>The name of the malicious file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
              */
             public Builder maliciousName(String maliciousName) {
                 this.maliciousName = maliciousName;
@@ -601,7 +636,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousType.
+             * <p>The type of the virus.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WebShell</p>
              */
             public Builder maliciousType(String maliciousType) {
                 this.maliciousType = maliciousType;
@@ -609,7 +647,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * OperateResult.
+             * <p>The handling result of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addWhitelist.USER.Success</p>
              */
             public Builder operateResult(String operateResult) {
                 this.operateResult = operateResult;
@@ -617,7 +658,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTimestamp.
+             * <p>The timestamp when the alert is handled. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
              */
             public Builder operateTimestamp(String operateTimestamp) {
                 this.operateTimestamp = operateTimestamp;
@@ -625,7 +669,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * Partition.
+             * <p>The partition of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvda1</p>
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -633,7 +680,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * <p>The ID of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -641,7 +691,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * <p>The name of the task object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image_***</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -649,7 +702,14 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the task object. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: snapshot.</li>
+             * <li><strong>2</strong>: image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

@@ -159,7 +159,10 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a410bb3-e68c217a-3368bc0-238c668***</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

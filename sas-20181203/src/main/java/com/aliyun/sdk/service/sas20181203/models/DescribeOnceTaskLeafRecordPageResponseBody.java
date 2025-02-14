@@ -67,7 +67,7 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The details of the sub-task.</p>
+         * <p>The details of tasks.</p>
          */
         public Builder onceTasks(java.util.List<OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -457,7 +457,16 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
             }
 
             /**
-             * RegistryType.
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>acr</strong></li>
+             * <li><strong>harbor</strong></li>
+             * <li><strong>quay</strong></li>
+             * <li><strong>CI/CD</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acr</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;

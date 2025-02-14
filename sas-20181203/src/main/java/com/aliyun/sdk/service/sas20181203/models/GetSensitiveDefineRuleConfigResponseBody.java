@@ -102,7 +102,7 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -426,7 +426,14 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
             private Integer selectedCount; 
 
             /**
-             * EnableNewRule.
+             * <p>Indicates whether the new rule is enabled for automatic check only on agentless detection. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableNewRule(Integer enableNewRule) {
                 this.enableNewRule = enableNewRule;

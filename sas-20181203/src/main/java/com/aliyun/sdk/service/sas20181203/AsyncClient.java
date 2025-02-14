@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCloudVendorAccountAKResponse> addCloudVendorAccountAK(AddCloudVendorAccountAKRequest request);
 
     /**
+     * @param request the request parameters of AddCloudVendorTrialConfig  AddCloudVendorTrialConfigRequest
+     * @return AddCloudVendorTrialConfigResponse
+     */
+    CompletableFuture<AddCloudVendorTrialConfigResponse> addCloudVendorTrialConfig(AddCloudVendorTrialConfigRequest request);
+
+    /**
      * @param request the request parameters of AddContainerDefenseRule  AddContainerDefenseRuleRequest
      * @return AddContainerDefenseRuleResponse
      */
@@ -99,6 +105,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AddPrivateRegistryResponse
      */
     CompletableFuture<AddPrivateRegistryResponse> addPrivateRegistry(AddPrivateRegistryRequest request);
+
+    /**
+     * @param request the request parameters of AddProtectVpcList  AddProtectVpcListRequest
+     * @return AddProtectVpcListResponse
+     */
+    CompletableFuture<AddProtectVpcListResponse> addProtectVpcList(AddProtectVpcListRequest request);
 
     /**
      * @param request the request parameters of AddPublishBatch  AddPublishBatchRequest
@@ -292,6 +304,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateBackupPolicyResponse
      */
     CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateBatchUploadUrl  CreateBatchUploadUrlRequest
+     * @return CreateBatchUploadUrlResponse
+     */
+    CompletableFuture<CreateBatchUploadUrlResponse> createBatchUploadUrl(CreateBatchUploadUrlRequest request);
 
     /**
      * @param request the request parameters of CreateBinarySecurityPolicy  CreateBinarySecurityPolicyRequest
@@ -1111,6 +1129,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeBruteForceSummaryResponse> describeBruteForceSummary(DescribeBruteForceSummaryRequest request);
 
     /**
+     * @param request the request parameters of DescribeCanAccessVpcSale  DescribeCanAccessVpcSaleRequest
+     * @return DescribeCanAccessVpcSaleResponse
+     */
+    CompletableFuture<DescribeCanAccessVpcSaleResponse> describeCanAccessVpcSale(DescribeCanAccessVpcSaleRequest request);
+
+    /**
      * @param request the request parameters of DescribeCanFixVulList  DescribeCanFixVulListRequest
      * @return DescribeCanFixVulListResponse
      */
@@ -1221,6 +1245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCloudVendorAccountAKListResponse
      */
     CompletableFuture<DescribeCloudVendorAccountAKListResponse> describeCloudVendorAccountAKList(DescribeCloudVendorAccountAKListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCloudVendorTrialConfig  DescribeCloudVendorTrialConfigRequest
+     * @return DescribeCloudVendorTrialConfigResponse
+     */
+    CompletableFuture<DescribeCloudVendorTrialConfigResponse> describeCloudVendorTrialConfig(DescribeCloudVendorTrialConfigRequest request);
 
     /**
      * @param request the request parameters of DescribeClusterBasicInfo  DescribeClusterBasicInfoRequest
@@ -1484,6 +1514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDomainSecureStatisticsResponse> describeDomainSecureStatistics(DescribeDomainSecureStatisticsRequest request);
 
     /**
+     * @param request the request parameters of DescribeDomainSecureSuggests  DescribeDomainSecureSuggestsRequest
+     * @return DescribeDomainSecureSuggestsResponse
+     */
+    CompletableFuture<DescribeDomainSecureSuggestsResponse> describeDomainSecureSuggests(DescribeDomainSecureSuggestsRequest request);
+
+    /**
      * @param request the request parameters of DescribeDomainSecureVulList  DescribeDomainSecureVulListRequest
      * @return DescribeDomainSecureVulListResponse
      */
@@ -1592,6 +1628,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFrontVulPatchListResponse> describeFrontVulPatchList(DescribeFrontVulPatchListRequest request);
 
     /**
+     * @param request the request parameters of DescribeGraph4InvestigationOnline  DescribeGraph4InvestigationOnlineRequest
+     * @return DescribeGraph4InvestigationOnlineResponse
+     */
+    CompletableFuture<DescribeGraph4InvestigationOnlineResponse> describeGraph4InvestigationOnline(DescribeGraph4InvestigationOnlineRequest request);
+
+    /**
      * @param request the request parameters of DescribeGroupStruct  DescribeGroupStructRequest
      * @return DescribeGroupStructResponse
      */
@@ -1674,6 +1716,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeIdcAssetCriteriaResponse
      */
     CompletableFuture<DescribeIdcAssetCriteriaResponse> describeIdcAssetCriteria(DescribeIdcAssetCriteriaRequest request);
+
+    /**
+     * @param request the request parameters of DescribeIdcProbeList  DescribeIdcProbeListRequest
+     * @return DescribeIdcProbeListResponse
+     */
+    CompletableFuture<DescribeIdcProbeListResponse> describeIdcProbeList(DescribeIdcProbeListRequest request);
 
     /**
      * @param request the request parameters of DescribeIdcProbeScanResultList  DescribeIdcProbeScanResultListRequest
@@ -1820,10 +1868,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeImageRepoListResponse> describeImageRepoList(DescribeImageRepoListRequest request);
 
     /**
+     * @param request the request parameters of DescribeImageRiskLevelStatistic  DescribeImageRiskLevelStatisticRequest
+     * @return DescribeImageRiskLevelStatisticResponse
+     */
+    CompletableFuture<DescribeImageRiskLevelStatisticResponse> describeImageRiskLevelStatistic(DescribeImageRiskLevelStatisticRequest request);
+
+    /**
      * @param request the request parameters of DescribeImageScanAuthCount  DescribeImageScanAuthCountRequest
      * @return DescribeImageScanAuthCountResponse
      */
     CompletableFuture<DescribeImageScanAuthCountResponse> describeImageScanAuthCount(DescribeImageScanAuthCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeImageSecurityScanCount  DescribeImageSecurityScanCountRequest
+     * @return DescribeImageSecurityScanCountResponse
+     */
+    CompletableFuture<DescribeImageSecurityScanCountResponse> describeImageSecurityScanCount(DescribeImageSecurityScanCountRequest request);
 
     /**
      * @param request the request parameters of DescribeImageSensitiveFileByKey  DescribeImageSensitiveFileByKeyRequest
@@ -2307,6 +2367,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>This API is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * 
+     * @param request the request parameters of DescribeSoarPlaybookTaskDetail  DescribeSoarPlaybookTaskDetailRequest
+     * @return DescribeSoarPlaybookTaskDetailResponse
+     */
+    CompletableFuture<DescribeSoarPlaybookTaskDetailResponse> describeSoarPlaybookTaskDetail(DescribeSoarPlaybookTaskDetailRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * @param request the request parameters of DescribeSoarStrategies  DescribeSoarStrategiesRequest
@@ -2331,6 +2400,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSoarStrategyTaskDetailResponse
      */
     CompletableFuture<DescribeSoarStrategyTaskDetailResponse> describeSoarStrategyTaskDetail(DescribeSoarStrategyTaskDetailRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Only the Enterprise and Flagship editions of Cloud Security Center support this API call, other versions do not support it.</p>
+     * 
+     * @param request the request parameters of DescribeSoarStrategyTaskParams  DescribeSoarStrategyTaskParamsRequest
+     * @return DescribeSoarStrategyTaskParamsResponse
+     */
+    CompletableFuture<DescribeSoarStrategyTaskParamsResponse> describeSoarStrategyTaskParams(DescribeSoarStrategyTaskParamsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * 
+     * @param request the request parameters of DescribeSoarStrategyTaskResult  DescribeSoarStrategyTaskResultRequest
+     * @return DescribeSoarStrategyTaskResultResponse
+     */
+    CompletableFuture<DescribeSoarStrategyTaskResultResponse> describeSoarStrategyTaskResult(DescribeSoarStrategyTaskResultRequest request);
 
     /**
      * <b>description</b> :
@@ -2373,6 +2460,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeStrategyTargetResponse
      */
     CompletableFuture<DescribeStrategyTargetResponse> describeStrategyTarget(DescribeStrategyTargetRequest request);
+
+    /**
+     * @param request the request parameters of DescribeStrictEventName  DescribeStrictEventNameRequest
+     * @return DescribeStrictEventNameResponse
+     */
+    CompletableFuture<DescribeStrictEventNameResponse> describeStrictEventName(DescribeStrictEventNameRequest request);
 
     /**
      * @param request the request parameters of DescribeSummaryInfo  DescribeSummaryInfoRequest
@@ -3047,6 +3140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCheckConfigResponse> getCheckConfig(GetCheckConfigRequest request);
 
     /**
+     * @param request the request parameters of GetCheckCountStatistic  GetCheckCountStatisticRequest
+     * @return GetCheckCountStatisticResponse
+     */
+    CompletableFuture<GetCheckCountStatisticResponse> getCheckCountStatistic(GetCheckCountStatisticRequest request);
+
+    /**
      * @param request the request parameters of GetCheckDetail  GetCheckDetailRequest
      * @return GetCheckDetailResponse
      */
@@ -3084,6 +3183,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCheckSummaryResponse
      */
     CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetCheckTimeDimensionStatistic  GetCheckTimeDimensionStatisticRequest
+     * @return GetCheckTimeDimensionStatisticResponse
+     */
+    CompletableFuture<GetCheckTimeDimensionStatisticResponse> getCheckTimeDimensionStatistic(GetCheckTimeDimensionStatisticRequest request);
 
     /**
      * @param request the request parameters of GetClientRatioStatistic  GetClientRatioStatisticRequest
@@ -3146,6 +3251,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCommonSwitchConfigResponse> getCommonSwitchConfig(GetCommonSwitchConfigRequest request);
 
     /**
+     * @param request the request parameters of GetConsoleFuncGrayStatus  GetConsoleFuncGrayStatusRequest
+     * @return GetConsoleFuncGrayStatusResponse
+     */
+    CompletableFuture<GetConsoleFuncGrayStatusResponse> getConsoleFuncGrayStatus(GetConsoleFuncGrayStatusRequest request);
+
+    /**
      * @param request the request parameters of GetContainerDefenseRuleDetail  GetContainerDefenseRuleDetailRequest
      * @return GetContainerDefenseRuleDetailResponse
      */
@@ -3168,6 +3279,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDefenceCountResponse
      */
     CompletableFuture<GetDefenceCountResponse> getDefenceCount(GetDefenceCountRequest request);
+
+    /**
+     * @param request the request parameters of GetDockerhubImageRiskRankInfo  GetDockerhubImageRiskRankInfoRequest
+     * @return GetDockerhubImageRiskRankInfoResponse
+     */
+    CompletableFuture<GetDockerhubImageRiskRankInfoResponse> getDockerhubImageRiskRankInfo(GetDockerhubImageRiskRankInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetDockerhubImageRiskStatistic  GetDockerhubImageRiskStatisticRequest
+     * @return GetDockerhubImageRiskStatisticResponse
+     */
+    CompletableFuture<GetDockerhubImageRiskStatisticResponse> getDockerhubImageRiskStatistic(GetDockerhubImageRiskStatisticRequest request);
 
     /**
      * @param request the request parameters of GetFileDetectApiInvokeInfo  GetFileDetectApiInvokeInfoRequest
@@ -3219,6 +3342,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetFileUploadLimitResponse
      */
     CompletableFuture<GetFileUploadLimitResponse> getFileUploadLimit(GetFileUploadLimitRequest request);
+
+    /**
+     * @param request the request parameters of GetFunctionTrialStatus  GetFunctionTrialStatusRequest
+     * @return GetFunctionTrialStatusResponse
+     */
+    CompletableFuture<GetFunctionTrialStatusResponse> getFunctionTrialStatus(GetFunctionTrialStatusRequest request);
 
     /**
      * @param request the request parameters of GetHoneyPotUploadPolicyInfo  GetHoneyPotUploadPolicyInfoRequest
@@ -3279,6 +3408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetImageScanNumInPeriodResponse
      */
     CompletableFuture<GetImageScanNumInPeriodResponse> getImageScanNumInPeriod(GetImageScanNumInPeriodRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceAlarmStatistics  GetInstanceAlarmStatisticsRequest
+     * @return GetInstanceAlarmStatisticsResponse
+     */
+    CompletableFuture<GetInstanceAlarmStatisticsResponse> getInstanceAlarmStatistics(GetInstanceAlarmStatisticsRequest request);
 
     /**
      * @param request the request parameters of GetInterceptionRuleDetail  GetInterceptionRuleDetailRequest
@@ -3413,6 +3548,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request);
 
     /**
+     * @param request the request parameters of GetPublishCron  GetPublishCronRequest
+     * @return GetPublishCronResponse
+     */
+    CompletableFuture<GetPublishCronResponse> getPublishCron(GetPublishCronRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation only by using the management account of a resource directory or a delegated administrator account of Security Center.</p>
      * 
@@ -3422,10 +3563,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRdTreeResponse> getRdTree(GetRdTreeRequest request);
 
     /**
+     * @param request the request parameters of GetRegistryScanDayNum  GetRegistryScanDayNumRequest
+     * @return GetRegistryScanDayNumResponse
+     */
+    CompletableFuture<GetRegistryScanDayNumResponse> getRegistryScanDayNum(GetRegistryScanDayNumRequest request);
+
+    /**
      * @param request the request parameters of GetRulesCount  GetRulesCountRequest
      * @return GetRulesCountResponse
      */
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
+
+    /**
+     * @param request the request parameters of GetSasContainerWebDefenseRule  GetSasContainerWebDefenseRuleRequest
+     * @return GetSasContainerWebDefenseRuleResponse
+     */
+    CompletableFuture<GetSasContainerWebDefenseRuleResponse> getSasContainerWebDefenseRule(GetSasContainerWebDefenseRuleRequest request);
 
     /**
      * @param request the request parameters of GetSasContainerWebDefenseRuleApplication  GetSasContainerWebDefenseRuleApplicationRequest
@@ -3450,6 +3603,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSensitiveDefineRuleConfigResponse
      */
     CompletableFuture<GetSensitiveDefineRuleConfigResponse> getSensitiveDefineRuleConfig(GetSensitiveDefineRuleConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetServerlessAppAuthDetail  GetServerlessAppAuthDetailRequest
+     * @return GetServerlessAppAuthDetailResponse
+     */
+    CompletableFuture<GetServerlessAppAuthDetailResponse> getServerlessAppAuthDetail(GetServerlessAppAuthDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetServerlessAuthSummary  GetServerlessAuthSummaryRequest
+     * @return GetServerlessAuthSummaryResponse
+     */
+    CompletableFuture<GetServerlessAuthSummaryResponse> getServerlessAuthSummary(GetServerlessAuthSummaryRequest request);
 
     /**
      * @param request the request parameters of GetServiceTrail  GetServiceTrailRequest
@@ -3516,6 +3681,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetVulWhitelistResponse
      */
     CompletableFuture<GetVulWhitelistResponse> getVulWhitelist(GetVulWhitelistRequest request);
+
+    /**
+     * @param request the request parameters of GrantSwitchAgreement  GrantSwitchAgreementRequest
+     * @return GrantSwitchAgreementResponse
+     */
+    CompletableFuture<GrantSwitchAgreementResponse> grantSwitchAgreement(GrantSwitchAgreementRequest request);
+
+    /**
+     * @param request the request parameters of HandleMaliciousFiles  HandleMaliciousFilesRequest
+     * @return HandleMaliciousFilesResponse
+     */
+    CompletableFuture<HandleMaliciousFilesResponse> handleMaliciousFiles(HandleMaliciousFilesRequest request);
 
     /**
      * @param request the request parameters of HandleSecurityEvents  HandleSecurityEventsRequest
@@ -3603,6 +3780,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAegisContainerPluginRuleResponse
      */
     CompletableFuture<ListAegisContainerPluginRuleResponse> listAegisContainerPluginRule(ListAegisContainerPluginRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListAgentlessAsset  ListAgentlessAssetRequest
+     * @return ListAgentlessAssetResponse
+     */
+    CompletableFuture<ListAgentlessAssetResponse> listAgentlessAsset(ListAgentlessAssetRequest request);
 
     /**
      * @param request the request parameters of ListAgentlessMaliciousFiles  ListAgentlessMaliciousFilesRequest
@@ -3719,6 +3902,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCheckResultResponse> listCheckResult(ListCheckResultRequest request);
 
     /**
+     * @param request the request parameters of ListCheckRule  ListCheckRuleRequest
+     * @return ListCheckRuleResponse
+     */
+    CompletableFuture<ListCheckRuleResponse> listCheckRule(ListCheckRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListCheckRuleInstance  ListCheckRuleInstanceRequest
+     * @return ListCheckRuleInstanceResponse
+     */
+    CompletableFuture<ListCheckRuleInstanceResponse> listCheckRuleInstance(ListCheckRuleInstanceRequest request);
+
+    /**
      * @param request the request parameters of ListCheckStandard  ListCheckStandardRequest
      * @return ListCheckStandardResponse
      */
@@ -3808,6 +4003,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCriteriaStrategyResponse
      */
     CompletableFuture<ListCriteriaStrategyResponse> listCriteriaStrategy(ListCriteriaStrategyRequest request);
+
+    /**
+     * @param request the request parameters of ListDockerhubImage  ListDockerhubImageRequest
+     * @return ListDockerhubImageResponse
+     */
+    CompletableFuture<ListDockerhubImageResponse> listDockerhubImage(ListDockerhubImageRequest request);
 
     /**
      * @param request the request parameters of ListFileProtectEvent  ListFileProtectEventRequest
@@ -3900,6 +4101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListImageBuildRiskItemResponse> listImageBuildRiskItem(ListImageBuildRiskItemRequest request);
 
     /**
+     * @param request the request parameters of ListImageRegistryExtra  ListImageRegistryExtraRequest
+     * @return ListImageRegistryExtraResponse
+     */
+    CompletableFuture<ListImageRegistryExtraResponse> listImageRegistryExtra(ListImageRegistryExtraRequest request);
+
+    /**
      * @param request the request parameters of ListImageRegistryRegion  ListImageRegistryRegionRequest
      * @return ListImageRegistryRegionResponse
      */
@@ -3963,6 +4170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLogShipperRegionsResponse> listLogShipperRegions(ListLogShipperRegionsRequest request);
 
     /**
+     * @param request the request parameters of ListMachineApps  ListMachineAppsRequest
+     * @return ListMachineAppsResponse
+     */
+    CompletableFuture<ListMachineAppsResponse> listMachineApps(ListMachineAppsRequest request);
+
+    /**
      * @param request the request parameters of ListMaliciousFileWhitelistConfigs  ListMaliciousFileWhitelistConfigsRequest
      * @return ListMaliciousFileWhitelistConfigsResponse
      */
@@ -3981,16 +4194,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOpaClusterStrategyNewResponse> listOpaClusterStrategyNew(ListOpaClusterStrategyNewRequest request);
 
     /**
+     * @param request the request parameters of ListOperationCheck  ListOperationCheckRequest
+     * @return ListOperationCheckResponse
+     */
+    CompletableFuture<ListOperationCheckResponse> listOperationCheck(ListOperationCheckRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can query only operation tasks.</p>
+     * 
      * @param request the request parameters of ListOperationProcess  ListOperationProcessRequest
      * @return ListOperationProcessResponse
      */
     CompletableFuture<ListOperationProcessResponse> listOperationProcess(ListOperationProcessRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can query only operation subtasks.</p>
+     * 
      * @param request the request parameters of ListOperationProcessDetail  ListOperationProcessDetailRequest
      * @return ListOperationProcessDetailResponse
      */
     CompletableFuture<ListOperationProcessDetailResponse> listOperationProcessDetail(ListOperationProcessDetailRequest request);
+
+    /**
+     * @param request the request parameters of ListOperationTask  ListOperationTaskRequest
+     * @return ListOperationTaskResponse
+     */
+    CompletableFuture<ListOperationTaskResponse> listOperationTask(ListOperationTaskRequest request);
 
     /**
      * @param request the request parameters of ListOssBucket  ListOssBucketRequest
@@ -4104,6 +4335,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSystemRuleAggregationTypesResponse> listSystemRuleAggregationTypes(ListSystemRuleAggregationTypesRequest request);
 
     /**
+     * @param request the request parameters of ListTargetByBatch  ListTargetByBatchRequest
+     * @return ListTargetByBatchResponse
+     */
+    CompletableFuture<ListTargetByBatchResponse> listTargetByBatch(ListTargetByBatchRequest request);
+
+    /**
      * @param request the request parameters of ListUnfinishedOnceTask  ListUnfinishedOnceTaskRequest
      * @return ListUnfinishedOnceTaskResponse
      */
@@ -4114,6 +4351,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUninstallAegisMachinesResponse
      */
     CompletableFuture<ListUninstallAegisMachinesResponse> listUninstallAegisMachines(ListUninstallAegisMachinesRequest request);
+
+    /**
+     * @param request the request parameters of ListUserVpc  ListUserVpcRequest
+     * @return ListUserVpcResponse
+     */
+    CompletableFuture<ListUserVpcResponse> listUserVpc(ListUserVpcRequest request);
+
+    /**
+     * @param request the request parameters of ListUuidsByAppId  ListUuidsByAppIdRequest
+     * @return ListUuidsByAppIdResponse
+     */
+    CompletableFuture<ListUuidsByAppIdResponse> listUuidsByAppId(ListUuidsByAppIdRequest request);
 
     /**
      * @param request the request parameters of ListUuidsByWebPath  ListUuidsByWebPathRequest
@@ -4223,6 +4472,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBackupPolicyStatusResponse> modifyBackupPolicyStatus(ModifyBackupPolicyStatusRequest request);
 
     /**
+     * @param request the request parameters of ModifyCheckRule  ModifyCheckRuleRequest
+     * @return ModifyCheckRuleResponse
+     */
+    CompletableFuture<ModifyCheckRuleResponse> modifyCheckRule(ModifyCheckRuleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Deleted logs cannot be restored. Before you call this operation to delete all logs and free up log storage, we recommend that you export and save your logs to your computer.</p>
      * 
@@ -4254,6 +4509,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCloudVendorAccountAKResponse
      */
     CompletableFuture<ModifyCloudVendorAccountAKResponse> modifyCloudVendorAccountAK(ModifyCloudVendorAccountAKRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCloudVendorTrialConfig  ModifyCloudVendorTrialConfigRequest
+     * @return ModifyCloudVendorTrialConfigResponse
+     */
+    CompletableFuture<ModifyCloudVendorTrialConfigResponse> modifyCloudVendorTrialConfig(ModifyCloudVendorTrialConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyClusterCnnfStatusUserConfirm  ModifyClusterCnnfStatusUserConfirmRequest
@@ -4329,6 +4590,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyGroupPropertyResponse
      */
     CompletableFuture<ModifyGroupPropertyResponse> modifyGroupProperty(ModifyGroupPropertyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyHybridProxyCluster  ModifyHybridProxyClusterRequest
+     * @return ModifyHybridProxyClusterResponse
+     */
+    CompletableFuture<ModifyHybridProxyClusterResponse> modifyHybridProxyCluster(ModifyHybridProxyClusterRequest request);
+
+    /**
+     * @param request the request parameters of ModifyHybridProxyPolicy  ModifyHybridProxyPolicyRequest
+     * @return ModifyHybridProxyPolicyResponse
+     */
+    CompletableFuture<ModifyHybridProxyPolicyResponse> modifyHybridProxyPolicy(ModifyHybridProxyPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyIdcProbe  ModifyIdcProbeRequest
@@ -4470,6 +4743,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySecurityEventMarkMissIndividuallyResponse
      */
     CompletableFuture<ModifySecurityEventMarkMissIndividuallyResponse> modifySecurityEventMarkMissIndividually(ModifySecurityEventMarkMissIndividuallyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyServerlessAuthToMachine  ModifyServerlessAuthToMachineRequest
+     * @return ModifyServerlessAuthToMachineResponse
+     */
+    CompletableFuture<ModifyServerlessAuthToMachineResponse> modifyServerlessAuthToMachine(ModifyServerlessAuthToMachineRequest request);
 
     /**
      * <b>description</b> :
@@ -4726,6 +5005,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PauseClientResponse
      */
     CompletableFuture<PauseClientResponse> pauseClient(PauseClientRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>This API call is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * 
+     * @param request the request parameters of ProcessSoarStrategyTask  ProcessSoarStrategyTaskRequest
+     * @return ProcessSoarStrategyTaskResponse
+     */
+    CompletableFuture<ProcessSoarStrategyTaskResponse> processSoarStrategyTask(ProcessSoarStrategyTaskRequest request);
 
     /**
      * <b>description</b> :
@@ -5205,6 +5493,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateHoneypotProbeBindResponse> updateHoneypotProbeBind(UpdateHoneypotProbeBindRequest request);
 
     /**
+     * @param request the request parameters of UpdateHybridProxy  UpdateHybridProxyRequest
+     * @return UpdateHybridProxyResponse
+     */
+    CompletableFuture<UpdateHybridProxyResponse> updateHybridProxy(UpdateHybridProxyRequest request);
+
+    /**
      * @param request the request parameters of UpdateImageEventOperation  UpdateImageEventOperationRequest
      * @return UpdateImageEventOperationResponse
      */
@@ -5277,10 +5571,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSelectionKeyByTypeResponse> updateSelectionKeyByType(UpdateSelectionKeyByTypeRequest request);
 
     /**
+     * @param request the request parameters of UpdateStrictEventName  UpdateStrictEventNameRequest
+     * @return UpdateStrictEventNameResponse
+     */
+    CompletableFuture<UpdateStrictEventNameResponse> updateStrictEventName(UpdateStrictEventNameRequest request);
+
+    /**
      * @param request the request parameters of UpdateTargetListByBatch  UpdateTargetListByBatchRequest
      * @return UpdateTargetListByBatchResponse
      */
     CompletableFuture<UpdateTargetListByBatchResponse> updateTargetListByBatch(UpdateTargetListByBatchRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWhiteList  UpdateWhiteListRequest
+     * @return UpdateWhiteListResponse
+     */
+    CompletableFuture<UpdateWhiteListResponse> updateWhiteList(UpdateWhiteListRequest request);
 
     /**
      * <b>description</b> :
@@ -5320,6 +5626,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ValidateHcWarningsResponse
      */
     CompletableFuture<ValidateHcWarningsResponse> validateHcWarnings(ValidateHcWarningsRequest request);
+
+    /**
+     * @param request the request parameters of VerifyCheckCustomConfig  VerifyCheckCustomConfigRequest
+     * @return VerifyCheckCustomConfigResponse
+     */
+    CompletableFuture<VerifyCheckCustomConfigResponse> verifyCheckCustomConfig(VerifyCheckCustomConfigRequest request);
 
     /**
      * @param request the request parameters of VerifyCheckInstanceResult  VerifyCheckInstanceResultRequest

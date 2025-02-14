@@ -143,7 +143,14 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>The type of the application process. Default value: <strong>java</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>java</strong>: Java process.</li>
+         * <li><strong>php</strong>: PHP process.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -152,7 +159,13 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         }
 
         /**
-         * Cmdline.
+         * <p>The startup parameter.</p>
+         * <blockquote>
+         * <p> This parameter supports only prefix queries. Fuzzy match is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>java -jar</p>
          */
         public Builder cmdline(String cmdline) {
             this.putQueryParameter("Cmdline", cmdline);
@@ -188,7 +201,10 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the process.</p>
+         * <p>The process ID.</p>
+         * <blockquote>
+         * <p> Only exact match is supported.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>756</p>
@@ -214,8 +230,13 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         /**
          * <p>The UUID of the server.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
          * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </li>
+         * <li><p>Only exact match is supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>

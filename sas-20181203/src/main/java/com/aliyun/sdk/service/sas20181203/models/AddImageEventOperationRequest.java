@@ -213,7 +213,10 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * Note.
+         * <p>The remarks that you want to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -253,7 +256,14 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: image.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

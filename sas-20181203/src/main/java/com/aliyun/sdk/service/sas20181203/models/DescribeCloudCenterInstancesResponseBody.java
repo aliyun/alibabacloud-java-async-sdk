@@ -79,7 +79,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>An array that consists of the details about the assets.</p>
+         * <p>The details about the assets.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -937,7 +937,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSubStatus.
+             * <p>The sub-status of the Security Center agent installed on the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: The Security Center agent is <strong>enabled</strong>.</li>
+             * <li><strong>offline</strong>: The Security Center agent is <strong>disabled</strong>.</li>
+             * <li><strong>pause</strong>: The Security Center agent is <strong>suspended</strong>.</li>
+             * <li><strong>uninstalled</strong>: The Security Center agent is <strong>uninstalled</strong>.</li>
+             * <li><strong>stopped</strong>: The Security Center agent is <strong>stopped</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder clientSubStatus(String clientSubStatus) {
                 this.clientSubStatus = clientSubStatus;
@@ -1412,7 +1422,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagResources.
+             * <p>The custom tag added to the Lingjun node. This parameter is returned only for LINGJUN GPU-accelerated instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app:test,type:lingjun</p>
              */
             public Builder tagResources(String tagResources) {
                 this.tagResources = tagResources;

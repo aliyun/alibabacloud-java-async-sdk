@@ -564,7 +564,10 @@ public class DescribeCloudVendorAccountAKListResponseBody extends TeaModel {
             }
 
             /**
-             * VendorAuthAlias.
+             * <p>The name of the AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder vendorAuthAlias(String vendorAuthAlias) {
                 this.vendorAuthAlias = vendorAuthAlias;

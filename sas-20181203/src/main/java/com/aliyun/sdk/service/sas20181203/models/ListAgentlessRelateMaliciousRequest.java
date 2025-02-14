@@ -142,7 +142,14 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -164,7 +171,14 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * Scenario.
+         * <p>The scenarios of batch handling. Valid values:</p>
+         * <ul>
+         * <li>same_file_md5: the same MD5 hash value.</li>
+         * <li>default: the same alert type. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder scenario(String scenario) {
             this.putQueryParameter("Scenario", scenario);

@@ -67,7 +67,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The risk statistics of check items.</p>
+         * <p>List of check item risk statistics.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -420,11 +420,11 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk status of the check item. Valid values:</p>
+             * <p>Risk status of check items. Valid values:</p>
              * <ul>
              * <li><strong>1</strong>: failed</li>
              * <li><strong>3</strong>: passed</li>
-             * <li><strong>6</strong>: Added to Whitelist</li>
+             * <li><strong>6</strong>: whitelisted</li>
              * </ul>
              * 
              * <strong>example:</strong>

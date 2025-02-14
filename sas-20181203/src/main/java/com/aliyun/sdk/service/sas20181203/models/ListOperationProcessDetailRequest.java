@@ -143,7 +143,10 @@ public class ListOperationProcessDetailRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +155,10 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731555850000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +167,14 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -170,7 +183,10 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +195,10 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1731469330000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -188,7 +207,7 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * StatusCodes.
+         * <p>The subtask status codes.</p>
          */
         public Builder statusCodes(java.util.List<Integer> statusCodes) {
             this.putQueryParameter("StatusCodes", statusCodes);
@@ -197,7 +216,7 @@ public class ListOperationProcessDetailRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>The IDs of operation tasks.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

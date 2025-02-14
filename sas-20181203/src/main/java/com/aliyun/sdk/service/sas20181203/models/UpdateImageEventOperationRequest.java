@@ -115,7 +115,15 @@ public class UpdateImageEventOperationRequest extends Request {
         } 
 
         /**
-         * Conditions.
+         * <p>The rule conditions. Specify a value in the JSON format. You can specify the following keys:</p>
+         * <ul>
+         * <li><strong>condition</strong>: the matching condition.</li>
+         * <li><strong>type</strong>: the matching type.</li>
+         * <li><strong>value</strong>: the matching value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e****&quot;}]</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -124,7 +132,10 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the alert handling rule.</p>
+         * <p>The ID of the alert handling rule. </p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> operation to query the ID.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>814163</p>
@@ -136,7 +147,10 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * Note.
+         * <p>The remarks that you want to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -161,7 +175,14 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: image.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

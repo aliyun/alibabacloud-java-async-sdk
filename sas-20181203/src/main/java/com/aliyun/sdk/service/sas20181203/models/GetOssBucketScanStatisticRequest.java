@@ -82,7 +82,14 @@ public class GetOssBucketScanStatisticRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The data source. Valid values:</p>
+         * <ul>
+         * <li><strong>API</strong>: API operations.</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) file check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>API</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

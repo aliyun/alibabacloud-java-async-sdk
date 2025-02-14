@@ -102,7 +102,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -185,7 +185,7 @@ public class UpdateImageEventOperationResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * <p>The ID of the alert handling rule.</p>
+             * <p>The ID of the alert handling rule, which is the same as the value of the Id request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>67429</p>

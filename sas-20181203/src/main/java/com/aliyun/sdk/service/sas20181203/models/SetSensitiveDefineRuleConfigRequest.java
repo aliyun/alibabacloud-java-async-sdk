@@ -103,7 +103,14 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         }
 
         /**
-         * EnableNewRule.
+         * <p>Specifies whether to enable the new ruled for automatic check only on agentless detection. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no.</li>
+         * <li><strong>1</strong>: yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder enableNewRule(Integer enableNewRule) {
             this.putQueryParameter("EnableNewRule", enableNewRule);
@@ -112,7 +119,14 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the check rules. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: image.</li>
+         * <li><strong>agentless</strong>: agentless detection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

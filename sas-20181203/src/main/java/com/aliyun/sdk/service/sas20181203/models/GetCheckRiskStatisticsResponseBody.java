@@ -109,7 +109,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>Historical check item statistics.</p>
          */
         public Builder summary(Summary summary) {
             this.summary = summary;
@@ -588,7 +588,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer riskWarningCnt; 
 
             /**
-             * HandledCheckToday.
+             * <p>Check items handled today.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder handledCheckToday(Integer handledCheckToday) {
                 this.handledCheckToday = handledCheckToday;
@@ -596,7 +599,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HandledCheckTotal.
+             * <p>A risk item exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder handledCheckTotal(Integer handledCheckTotal) {
                 this.handledCheckTotal = handledCheckTotal;
@@ -604,7 +610,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * HandledDays.
+             * <p>Total days since check items were handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365</p>
              */
             public Builder handledDays(Integer handledDays) {
                 this.handledDays = handledDays;
@@ -612,7 +621,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCheckCnt.
+             * <p>Check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskCheckCnt(Integer riskCheckCnt) {
                 this.riskCheckCnt = riskCheckCnt;
@@ -620,7 +632,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskDays.
+             * <p>Days since check items failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder riskDays(Integer riskDays) {
                 this.riskDays = riskDays;
@@ -628,7 +643,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWarningCnt.
+             * <p>Risks to be handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder riskWarningCnt(Integer riskWarningCnt) {
                 this.riskWarningCnt = riskWarningCnt;

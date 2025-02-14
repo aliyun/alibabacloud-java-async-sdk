@@ -143,7 +143,10 @@ public class ListOperationProcessRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -152,7 +155,10 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635575219000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -161,7 +167,10 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +179,10 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1680919232000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -179,7 +191,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * StatusCodes.
+         * <p>The task status codes.</p>
          */
         public Builder statusCodes(java.util.List<Integer> statusCodes) {
             this.putQueryParameter("StatusCodes", statusCodes);
@@ -188,7 +200,7 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>The task IDs.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -197,7 +209,14 @@ public class ListOperationProcessRequest extends Request {
         }
 
         /**
-         * TaskTypes.
+         * <p>The task types. Valid values:</p>
+         * <ul>
+         * <li>CHECK_ALL: full check.</li>
+         * <li>CHECK_POLICY: policy-based check for which check items are configured.</li>
+         * <li>CHECK_SCHEDULE: scheduled check.</li>
+         * <li>CHECK_ITEM: specific check item-based check.</li>
+         * <li>CHECK_INSTANCE: specific check item-based check on specific instances.</li>
+         * </ul>
          */
         public Builder taskTypes(java.util.List<String> taskTypes) {
             this.putQueryParameter("TaskTypes", taskTypes);

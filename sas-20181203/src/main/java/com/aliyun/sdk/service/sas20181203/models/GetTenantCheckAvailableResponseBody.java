@@ -55,7 +55,7 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BFFCDE-37D6-5A49-A8BC-BB03AC83****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +124,10 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * NextScanTime.
+             * <p>The timestamp when you can submit a quick scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725530005357</p>
              */
             public Builder nextScanTime(Long nextScanTime) {
                 this.nextScanTime = nextScanTime;
@@ -129,7 +135,15 @@ public class GetTenantCheckAvailableResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the quick scan task. Enumerated values:</p>
+             * <ul>
+             * <li>0: You can submit a quick scan task.</li>
+             * <li>1: The current task is not complete. You cannot submit a quick scan task.</li>
+             * <li>2: The free quota for this week is exhausted. You must wait for the next free scan period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

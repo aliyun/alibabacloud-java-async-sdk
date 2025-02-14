@@ -55,7 +55,7 @@ public class SubmitTenantCheckResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class SubmitTenantCheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1162D670-E633-5676-AE87-8359B066****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class SubmitTenantCheckResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * TaskId.
+             * <p>The ID of the scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

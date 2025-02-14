@@ -354,7 +354,13 @@ public class ModifyCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * VendorAuthAlias.
+         * <p>The name of the AccessKey pair.</p>
+         * <blockquote>
+         * <p> The account information of the third-party cloud servers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder vendorAuthAlias(String vendorAuthAlias) {
             this.putQueryParameter("VendorAuthAlias", vendorAuthAlias);
