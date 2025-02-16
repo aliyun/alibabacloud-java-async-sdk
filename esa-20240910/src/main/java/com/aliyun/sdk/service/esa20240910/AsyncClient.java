@@ -642,6 +642,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePurgeTasksResponse> describePurgeTasks(DescribePurgeTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeRatePlanInstanceStatus  DescribeRatePlanInstanceStatusRequest
+     * @return DescribeRatePlanInstanceStatusResponse
+     */
+    CompletableFuture<DescribeRatePlanInstanceStatusResponse> describeRatePlanInstanceStatus(DescribeRatePlanInstanceStatusRequest request);
+
+    /**
      * @param request the request parameters of DisableCustomScenePolicy  DisableCustomScenePolicyRequest
      * @return DisableCustomScenePolicyResponse
      */
@@ -1407,6 +1413,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishRoutineCodeVersionResponse> publishRoutineCodeVersion(PublishRoutineCodeVersionRequest request);
 
     /**
+     * @param request the request parameters of PurchaseRatePlan  PurchaseRatePlanRequest
+     * @return PurchaseRatePlanResponse
+     */
+    CompletableFuture<PurchaseRatePlanResponse> purchaseRatePlan(PurchaseRatePlanRequest request);
+
+    /**
      * @param request the request parameters of PurgeCaches  PurgeCachesRequest
      * @return PurgeCachesResponse
      */
@@ -1557,12 +1569,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateImageTransformResponse> updateImageTransform(UpdateImageTransformRequest request);
 
     /**
-     * @param request the request parameters of UpdateKvNamespace  UpdateKvNamespaceRequest
-     * @return UpdateKvNamespaceResponse
-     */
-    CompletableFuture<UpdateKvNamespaceResponse> updateKvNamespace(UpdateKvNamespaceRequest request);
-
-    /**
      * @param request the request parameters of UpdateList  UpdateListRequest
      * @return UpdateListResponse
      */
@@ -1615,6 +1621,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePageResponse
      */
     CompletableFuture<UpdatePageResponse> updatePage(UpdatePageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRatePlanSpec  UpdateRatePlanSpecRequest
+     * @return UpdateRatePlanSpecResponse
+     */
+    CompletableFuture<UpdateRatePlanSpecResponse> updateRatePlanSpec(UpdateRatePlanSpecRequest request);
 
     /**
      * <b>description</b> :

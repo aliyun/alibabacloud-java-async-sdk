@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateKvNamespaceResponse} extends {@link TeaModel}
+ * {@link DescribeRatePlanInstanceStatusResponse} extends {@link TeaModel}
  *
- * <p>UpdateKvNamespaceResponse</p>
+ * <p>DescribeRatePlanInstanceStatusResponse</p>
  */
-public class UpdateKvNamespaceResponse extends Response {
+public class DescribeRatePlanInstanceStatusResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateKvNamespaceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateKvNamespaceResponseBody body;
+    private DescribeRatePlanInstanceStatusResponseBody body;
 
-    private UpdateKvNamespaceResponse(BuilderImpl builder) {
+    private DescribeRatePlanInstanceStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateKvNamespaceResponse create() {
+    public static DescribeRatePlanInstanceStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateKvNamespaceResponse extends Response {
     /**
      * @return body
      */
-    public UpdateKvNamespaceResponseBody getBody() {
+    public DescribeRatePlanInstanceStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateKvNamespaceResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeRatePlanInstanceStatusResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateKvNamespaceResponseBody body);
+        Builder body(DescribeRatePlanInstanceStatusResponseBody body);
 
         @Override
-        UpdateKvNamespaceResponse build();
+        DescribeRatePlanInstanceStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateKvNamespaceResponse, Builder>
+            extends Response.BuilderImpl<DescribeRatePlanInstanceStatusResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateKvNamespaceResponseBody body; 
+        private DescribeRatePlanInstanceStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateKvNamespaceResponse response) {
+        private BuilderImpl(DescribeRatePlanInstanceStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateKvNamespaceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateKvNamespaceResponseBody body) {
+        public Builder body(DescribeRatePlanInstanceStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateKvNamespaceResponse build() {
-            return new UpdateKvNamespaceResponse(this);
+        public DescribeRatePlanInstanceStatusResponse build() {
+            return new DescribeRatePlanInstanceStatusResponse(this);
         } 
 
     } 
