@@ -49,7 +49,7 @@ public class RunDataAnalysisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userParams")
-    private java.util.Map<String, ?> userParams;
+    private Object userParams;
 
     private RunDataAnalysisRequest(Builder builder) {
         super(builder);
@@ -128,7 +128,7 @@ public class RunDataAnalysisRequest extends Request {
     /**
      * @return userParams
      */
-    public java.util.Map<String, ?> getUserParams() {
+    public Object getUserParams() {
         return this.userParams;
     }
 
@@ -140,7 +140,7 @@ public class RunDataAnalysisRequest extends Request {
         private String query; 
         private String sessionId; 
         private String specificationType; 
-        private java.util.Map<String, ?> userParams; 
+        private Object userParams; 
 
         private Builder() {
             super();
@@ -227,7 +227,7 @@ public class RunDataAnalysisRequest extends Request {
         /**
          * userParams.
          */
-        public Builder userParams(java.util.Map<String, ?> userParams) {
+        public Builder userParams(Object userParams) {
             this.putBodyParameter("userParams", userParams);
             this.userParams = userParams;
             return this;
