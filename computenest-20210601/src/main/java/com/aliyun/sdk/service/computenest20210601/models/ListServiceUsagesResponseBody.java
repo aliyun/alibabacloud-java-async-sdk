@@ -29,11 +29,15 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceUsages")
     private java.util.List<ServiceUsages> serviceUsages;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private ListServiceUsagesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.serviceUsages = builder.serviceUsages;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -72,11 +76,19 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         return this.serviceUsages;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List<ServiceUsages> serviceUsages; 
+        private Integer totalCount; 
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -116,6 +128,14 @@ public class ListServiceUsagesResponseBody extends TeaModel {
          */
         public Builder serviceUsages(java.util.List<ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

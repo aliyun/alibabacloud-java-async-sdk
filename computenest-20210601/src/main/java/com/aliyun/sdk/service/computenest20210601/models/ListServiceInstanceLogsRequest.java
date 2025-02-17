@@ -47,6 +47,10 @@ public class ListServiceInstanceLogsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
+    private String sortOrder;
+
     private ListServiceInstanceLogsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
@@ -56,6 +60,7 @@ public class ListServiceInstanceLogsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
+        this.sortOrder = builder.sortOrder;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class ListServiceInstanceLogsRequest extends Request {
         return this.serviceInstanceId;
     }
 
+    /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
     public static final class Builder extends Request.Builder<ListServiceInstanceLogsRequest, Builder> {
         private java.util.List<Filter> filter; 
         private String logSource; 
@@ -128,6 +140,7 @@ public class ListServiceInstanceLogsRequest extends Request {
         private String nextToken; 
         private String regionId; 
         private String serviceInstanceId; 
+        private String sortOrder; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class ListServiceInstanceLogsRequest extends Request {
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
             this.serviceInstanceId = request.serviceInstanceId;
+            this.sortOrder = request.sortOrder;
         } 
 
         /**
@@ -233,6 +247,25 @@ public class ListServiceInstanceLogsRequest extends Request {
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
             this.serviceInstanceId = serviceInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>Sort Order. Possible values:</p>
+         * <ul>
+         * <li><p>Ascending: Ascending order</p>
+         * </li>
+         * <li><p>Descending (default value): Descending order</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ascending: Ascending order</p>
+         * <p>Descending (default value): Descending order</p>
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("SortOrder", sortOrder);
+            this.sortOrder = sortOrder;
             return this;
         }
 

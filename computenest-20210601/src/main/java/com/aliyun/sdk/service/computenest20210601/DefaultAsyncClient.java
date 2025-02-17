@@ -169,6 +169,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeployServiceInstance  DeployServiceInstanceRequest
+     * @return DeployServiceInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DeployServiceInstanceResponse> deployServiceInstance(DeployServiceInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeployServiceInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeployServiceInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeployServiceInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -253,6 +271,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetServiceInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetServiceInstanceSubscriptionEstimateCost  GetServiceInstanceSubscriptionEstimateCostRequest
+     * @return GetServiceInstanceSubscriptionEstimateCostResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceInstanceSubscriptionEstimateCostResponse> getServiceInstanceSubscriptionEstimateCost(GetServiceInstanceSubscriptionEstimateCostRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetServiceInstanceSubscriptionEstimateCost").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceInstanceSubscriptionEstimateCostResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceInstanceSubscriptionEstimateCostResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -487,6 +523,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTagValuesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RenewServiceInstanceResources  RenewServiceInstanceResourcesRequest
+     * @return RenewServiceInstanceResourcesResponse
+     */
+    @Override
+    public CompletableFuture<RenewServiceInstanceResourcesResponse> renewServiceInstanceResources(RenewServiceInstanceResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenewServiceInstanceResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewServiceInstanceResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewServiceInstanceResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

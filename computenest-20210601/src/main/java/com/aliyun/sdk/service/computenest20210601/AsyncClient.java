@@ -65,6 +65,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
 
     /**
+     * @param request the request parameters of DeployServiceInstance  DeployServiceInstanceRequest
+     * @return DeployServiceInstanceResponse
+     */
+    CompletableFuture<DeployServiceInstanceResponse> deployServiceInstance(DeployServiceInstanceRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -93,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetServiceInstanceResponse
      */
     CompletableFuture<GetServiceInstanceResponse> getServiceInstance(GetServiceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceInstanceSubscriptionEstimateCost  GetServiceInstanceSubscriptionEstimateCostRequest
+     * @return GetServiceInstanceSubscriptionEstimateCostResponse
+     */
+    CompletableFuture<GetServiceInstanceSubscriptionEstimateCostResponse> getServiceInstanceSubscriptionEstimateCost(GetServiceInstanceSubscriptionEstimateCostRequest request);
 
     /**
      * @param request the request parameters of GetServiceProvisions  GetServiceProvisionsRequest
@@ -171,6 +183,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagValuesResponse
      */
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
+
+    /**
+     * @param request the request parameters of RenewServiceInstanceResources  RenewServiceInstanceResourcesRequest
+     * @return RenewServiceInstanceResourcesResponse
+     */
+    CompletableFuture<RenewServiceInstanceResourcesResponse> renewServiceInstanceResources(RenewServiceInstanceResourcesRequest request);
 
     /**
      * @param request the request parameters of RestartServiceInstance  RestartServiceInstanceRequest
