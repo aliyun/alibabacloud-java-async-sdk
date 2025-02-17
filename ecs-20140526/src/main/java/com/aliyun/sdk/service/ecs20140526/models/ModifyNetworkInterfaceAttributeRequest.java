@@ -308,9 +308,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
-         * </blockquote>
+         * <p>The connection tracking configuration of the ENI.</p>
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -412,9 +410,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         /**
          * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
          * <ul>
-         * <li>You can change only the number of queues supported by the secondary ENI.</li>
-         * <li>You can change the number of queues supported by the secondary ENI only when the ENI is in the <code>Available</code> state or the ENI is attached (<code>InUse</code>) to an instance that is in the <code>Stopped</code> state.</li>
-         * <li>The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the values of <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> in the response.</li>
+         * <li>You can change the number of queues supported by an ENI only when the ENI is in the <code>Available</code> state or the ENI is attached (<code>InUse</code>) to an instance that is in the <code>Stopped</code> state.</li>
+         * <li>The number of queues supported by the ENI cannot exceed the maximum number of queues that the instance type allows for each ENI. The total number of queues on all ENIs on an instance cannot exceed the queue quota that the instance type supports. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -582,8 +579,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer udpTimeout; 
 
             /**
+             * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+             * <p>Default value: 3.</p>
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p> If the associated ECS instance is used together with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -595,9 +594,8 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
-             * </blockquote>
+             * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
+             * <p>Default value: 910.</p>
              * 
              * <strong>example:</strong>
              * <p>910</p>
@@ -608,8 +606,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
+             * <p>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
+             * <p>Default value: 30.</p>
              * <blockquote>
-             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * <p> If the associated ECS instance is used together with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

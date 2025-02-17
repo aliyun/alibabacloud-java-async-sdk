@@ -156,7 +156,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The new description of the diagnostic metric set.</p>
+         * <p>The description of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
          * <p>connection diagnostics</p>
@@ -168,7 +168,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The ID of diagnostic metric N.</p>
+         * <p>The IDs of diagnostic metrics.</p>
          */
         public Builder metricIds(java.util.List<String> metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -177,7 +177,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the diagnostic metric set.</p>
+         * <p>The IDs of the diagnostic metric sets.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The new name of the diagnostic metric set.</p>
+         * <p>The name of the diagnostic metric set.</p>
          * 
          * <strong>example:</strong>
          * <p>remoteConnectError</p>
@@ -202,7 +202,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>

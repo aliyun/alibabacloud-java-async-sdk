@@ -438,7 +438,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * Features.
+         * <p>The attributes of the custom image.</p>
          */
         public Builder features(Features features) {
             this.putQueryParameter("Features", features);
@@ -800,7 +800,15 @@ public class CreateImageRequest extends Request {
             private String imdsSupport; 
 
             /**
-             * ImdsSupport.
+             * <p>The image metadata access mode. Valid values:</p>
+             * <ul>
+             * <li>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</li>
+             * <li>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</li>
+             * </ul>
+             * <p>When you use a snapshot to create instances, the default value is set to 1. If you use an instance to create an image, the value of the ImdsSupport parameter is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder imdsSupport(String imdsSupport) {
                 this.imdsSupport = imdsSupport;

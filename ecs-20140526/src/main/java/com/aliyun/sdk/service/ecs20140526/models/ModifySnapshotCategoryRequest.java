@@ -12,19 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteDedicatedHostClusterRequest} extends {@link RequestModel}
+ * {@link ModifySnapshotCategoryRequest} extends {@link RequestModel}
  *
- * <p>DeleteDedicatedHostClusterRequest</p>
+ * <p>ModifySnapshotCategoryRequest</p>
  */
-public class DeleteDedicatedHostClusterRequest extends Request {
+public class ModifySnapshotCategoryRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String dedicatedHostClusterId;
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -35,11 +34,6 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String regionId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -47,22 +41,33 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DeleteDedicatedHostClusterRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Validation(maximum = 65536, minimum = 61)
+    private Integer retentionDays;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String snapshotId;
+
+    private ModifySnapshotCategoryRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
-        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
+        this.category = builder.category;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.retentionDays = builder.retentionDays;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteDedicatedHostClusterRequest create() {
+    public static ModifySnapshotCategoryRequest create() {
         return builder().build();
     }
 
@@ -79,10 +84,10 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return dedicatedHostClusterId
+     * @return category
      */
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -100,13 +105,6 @@ public class DeleteDedicatedHostClusterRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -120,28 +118,44 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteDedicatedHostClusterRequest, Builder> {
+    /**
+     * @return retentionDays
+     */
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public static final class Builder extends Request.Builder<ModifySnapshotCategoryRequest, Builder> {
         private String sourceRegionId; 
-        private String dedicatedHostClusterId; 
+        private String category; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Integer retentionDays; 
+        private String snapshotId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteDedicatedHostClusterRequest request) {
+        private Builder(ModifySnapshotCategoryRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
-            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
+            this.category = request.category;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.retentionDays = request.retentionDays;
+            this.snapshotId = request.snapshotId;
         } 
 
         /**
@@ -154,15 +168,17 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host group.</p>
-         * <p>This parameter is required.</p>
+         * <p>The new type of the snapshot.</p>
+         * <ul>
+         * <li>Archive: archive snapshot</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>dc-bp12wlf6am0vz9v2****</p>
+         * <p>Archive</p>
          */
-        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
-            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
-            this.dedicatedHostClusterId = dedicatedHostClusterId;
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
             return this;
         }
 
@@ -185,19 +201,6 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -215,9 +218,38 @@ public class DeleteDedicatedHostClusterRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The retention period of the snapshot. Unit: days. The retention period started at the point in time when the snapshot was created. After the snapshot is archived, the minimum retention period (also called minimum archive period) is 60 days. If you delete the snapshot within 60 days after the snapshot is archived, you are charged archive tier storage fees for the snapshot for 60 days. For more information about the billing of snapshots, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshots</a>.</p>
+         * <p>Valid values: 60 to 65536.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the snapshot is permanently retained.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        public Builder retentionDays(Integer retentionDays) {
+            this.putQueryParameter("RetentionDays", retentionDays);
+            this.retentionDays = retentionDays;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-123**sd</p>
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.putQueryParameter("SnapshotId", snapshotId);
+            this.snapshotId = snapshotId;
+            return this;
+        }
+
         @Override
-        public DeleteDedicatedHostClusterRequest build() {
-            return new DeleteDedicatedHostClusterRequest(this);
+        public ModifySnapshotCategoryRequest build() {
+            return new ModifySnapshotCategoryRequest(this);
         } 
 
     } 

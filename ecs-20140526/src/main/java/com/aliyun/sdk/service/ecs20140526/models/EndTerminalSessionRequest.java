@@ -12,27 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyDedicatedHostClusterAttributeRequest} extends {@link RequestModel}
+ * {@link EndTerminalSessionRequest} extends {@link RequestModel}
  *
- * <p>ModifyDedicatedHostClusterAttributeRequest</p>
+ * <p>EndTerminalSessionRequest</p>
  */
-public class ModifyDedicatedHostClusterAttributeRequest extends Request {
+public class EndTerminalSessionRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String dedicatedHostClusterId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterName")
-    private String dedicatedHostClusterName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Description")
-    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -55,24 +42,27 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyDedicatedHostClusterAttributeRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sessionId;
+
+    private EndTerminalSessionRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
-        this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
-        this.dedicatedHostClusterName = builder.dedicatedHostClusterName;
-        this.description = builder.description;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sessionId = builder.sessionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyDedicatedHostClusterAttributeRequest create() {
+    public static EndTerminalSessionRequest create() {
         return builder().build();
     }
 
@@ -86,27 +76,6 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
-    }
-
-    /**
-     * @return dedicatedHostClusterId
-     */
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
-    }
-
-    /**
-     * @return dedicatedHostClusterName
-     */
-    public String getDedicatedHostClusterName() {
-        return this.dedicatedHostClusterName;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
     }
 
     /**
@@ -144,32 +113,35 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyDedicatedHostClusterAttributeRequest, Builder> {
+    /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    public static final class Builder extends Request.Builder<EndTerminalSessionRequest, Builder> {
         private String sourceRegionId; 
-        private String dedicatedHostClusterId; 
-        private String dedicatedHostClusterName; 
-        private String description; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String sessionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyDedicatedHostClusterAttributeRequest request) {
+        private Builder(EndTerminalSessionRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
-            this.dedicatedHostClusterId = request.dedicatedHostClusterId;
-            this.dedicatedHostClusterName = request.dedicatedHostClusterName;
-            this.description = request.description;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sessionId = request.sessionId;
         } 
 
         /**
@@ -178,43 +150,6 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the host group.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dc-bp12wlf6am0vz9v2****</p>
-         */
-        public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
-            this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
-            this.dedicatedHostClusterId = dedicatedHostClusterId;
-            return this;
-        }
-
-        /**
-         * <p>The name of the host group. It must be 2 to 128 characters in length and start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-), and cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>newClusterName</p>
-         */
-        public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
-            this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
-            this.dedicatedHostClusterName = dedicatedHostClusterName;
-            return this;
-        }
-
-        /**
-         * <p>The description of the host group. It must be 2 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>newClusterDescription</p>
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
             return this;
         }
 
@@ -237,7 +172,7 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the session.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,9 +202,22 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The session ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-hz023od0x9****</p>
+         */
+        public Builder sessionId(String sessionId) {
+            this.putQueryParameter("SessionId", sessionId);
+            this.sessionId = sessionId;
+            return this;
+        }
+
         @Override
-        public ModifyDedicatedHostClusterAttributeRequest build() {
-            return new ModifyDedicatedHostClusterAttributeRequest(this);
+        public EndTerminalSessionRequest build() {
+            return new EndTerminalSessionRequest(this);
         } 
 
     } 

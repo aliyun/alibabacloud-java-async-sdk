@@ -67,7 +67,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The query token returned in this call. If the return value is empty, no more data is returned.</p>
+         * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -86,7 +86,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>

@@ -186,7 +186,8 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the snapshot. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +199,8 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

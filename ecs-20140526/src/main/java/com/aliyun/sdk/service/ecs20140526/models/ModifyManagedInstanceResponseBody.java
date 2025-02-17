@@ -124,7 +124,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * InstanceId.
+             * <p>The managed instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mi-hz01nmcf****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

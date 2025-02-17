@@ -140,7 +140,12 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If this parameter is left empty, the default value is 10.</li>
+         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -152,7 +157,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * <p>The ID of diagnostic metric.</p>
+         * <p>The ID of diagnostic metrics.</p>
          */
         public Builder metricIds(java.util.List<String> metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -161,12 +166,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
-         * <p>Default value:</p>
-         * <ul>
-         * <li>If this parameter is left empty, the default value is 10.</li>
-         * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
-         * </ul>
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -178,7 +178,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of diagnostic metrics.</p>
+         * <p>The region ID pf the diagnostic metric. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.</p>
+         * <p>The resource type supported by the diagnostic metric.</p>
          * 
          * <strong>example:</strong>
          * <p>instance</p>

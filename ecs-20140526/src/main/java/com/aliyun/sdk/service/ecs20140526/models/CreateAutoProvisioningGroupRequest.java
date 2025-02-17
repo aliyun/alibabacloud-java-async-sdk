@@ -90,6 +90,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     private String payAsYouGoTargetCapacity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrePaidOptions")
+    private PrePaidOptions prePaidOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -175,6 +179,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         this.ownerId = builder.ownerId;
         this.payAsYouGoAllocationStrategy = builder.payAsYouGoAllocationStrategy;
         this.payAsYouGoTargetCapacity = builder.payAsYouGoTargetCapacity;
+        this.prePaidOptions = builder.prePaidOptions;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -333,6 +338,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     }
 
     /**
+     * @return prePaidOptions
+     */
+    public PrePaidOptions getPrePaidOptions() {
+        return this.prePaidOptions;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -463,6 +475,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Long ownerId; 
         private String payAsYouGoAllocationStrategy; 
         private String payAsYouGoTargetCapacity; 
+        private PrePaidOptions prePaidOptions; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -504,6 +517,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.ownerId = request.ownerId;
             this.payAsYouGoAllocationStrategy = request.payAsYouGoAllocationStrategy;
             this.payAsYouGoTargetCapacity = request.payAsYouGoTargetCapacity;
+            this.prePaidOptions = request.prePaidOptions;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -752,6 +766,15 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         public Builder payAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
             this.putQueryParameter("PayAsYouGoTargetCapacity", payAsYouGoTargetCapacity);
             this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
+            return this;
+        }
+
+        /**
+         * PrePaidOptions.
+         */
+        public Builder prePaidOptions(PrePaidOptions prePaidOptions) {
+            this.putQueryParameter("PrePaidOptions", prePaidOptions);
+            this.prePaidOptions = prePaidOptions;
             return this;
         }
 
@@ -1808,6 +1831,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+        private Integer autoRenewPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+        private String periodUnit;
+
         private LaunchConfiguration(Builder builder) {
             this.arn = builder.arn;
             this.autoReleaseTime = builder.autoReleaseTime;
@@ -1840,6 +1875,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.systemDiskSize = builder.systemDiskSize;
             this.tag = builder.tag;
             this.userData = builder.userData;
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
         }
 
         public static Builder builder() {
@@ -2067,6 +2106,34 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return this.userData;
         }
 
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
         public static final class Builder {
             private java.util.List<Arn> arn; 
             private String autoReleaseTime; 
@@ -2099,6 +2166,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private Integer systemDiskSize; 
             private java.util.List<LaunchConfigurationTag> tag; 
             private String userData; 
+            private Boolean autoRenew; 
+            private Integer autoRenewPeriod; 
+            private Integer period; 
+            private String periodUnit; 
 
             /**
              * <blockquote>
@@ -2516,6 +2587,38 @@ public class CreateAutoProvisioningGroupRequest extends Request {
                 return this;
             }
 
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * AutoRenewPeriod.
+             */
+            public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * PeriodUnit.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
             public LaunchConfiguration build() {
                 return new LaunchConfiguration(this);
             } 
@@ -2913,6 +3016,128 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
             public LaunchTemplateConfig build() {
                 return new LaunchTemplateConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class SpecifyCapacityDistribution extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+        private java.util.List<String> instanceTypes;
+
+        @com.aliyun.core.annotation.NameInMap("MinTargetCapacity")
+        private Integer minTargetCapacity;
+
+        private SpecifyCapacityDistribution(Builder builder) {
+            this.instanceTypes = builder.instanceTypes;
+            this.minTargetCapacity = builder.minTargetCapacity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpecifyCapacityDistribution create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceTypes
+         */
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
+         * @return minTargetCapacity
+         */
+        public Integer getMinTargetCapacity() {
+            return this.minTargetCapacity;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> instanceTypes; 
+            private Integer minTargetCapacity; 
+
+            /**
+             * InstanceTypes.
+             */
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
+                this.instanceTypes = instanceTypes;
+                return this;
+            }
+
+            /**
+             * <p>The minimum target capacity of the auto provisioning group. The value must be a positive integer. When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>This parameter takes effect only when <code>AutoProvisioningGroupType</code> is set to instant. </li>
+             * <li>If the number of instances that can be created in the current region is smaller than the value of this parameter, the operation cannot be called and no instances are created. </li>
+             * <li>If the number of instances that can be created in the current region is greater than the value of this parameter, instances can be created based on the specified parameters.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
+             */
+            public Builder minTargetCapacity(Integer minTargetCapacity) {
+                this.minTargetCapacity = minTargetCapacity;
+                return this;
+            }
+
+            public SpecifyCapacityDistribution build() {
+                return new SpecifyCapacityDistribution(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
+    public static class PrePaidOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SpecifyCapacityDistribution")
+        private java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution;
+
+        private PrePaidOptions(Builder builder) {
+            this.specifyCapacityDistribution = builder.specifyCapacityDistribution;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrePaidOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return specifyCapacityDistribution
+         */
+        public java.util.List<SpecifyCapacityDistribution> getSpecifyCapacityDistribution() {
+            return this.specifyCapacityDistribution;
+        }
+
+        public static final class Builder {
+            private java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution; 
+
+            /**
+             * SpecifyCapacityDistribution.
+             */
+            public Builder specifyCapacityDistribution(java.util.List<SpecifyCapacityDistribution> specifyCapacityDistribution) {
+                this.specifyCapacityDistribution = specifyCapacityDistribution;
+                return this;
+            }
+
+            public PrePaidOptions build() {
+                return new PrePaidOptions(this);
             } 
 
         } 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyAutoSnapshotPolicyResponse} extends {@link TeaModel}
+ * {@link ModifySnapshotCategoryResponse} extends {@link TeaModel}
  *
- * <p>ModifyAutoSnapshotPolicyResponse</p>
+ * <p>ModifySnapshotCategoryResponse</p>
  */
-public class ModifyAutoSnapshotPolicyResponse extends Response {
+public class ModifySnapshotCategoryResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ModifyAutoSnapshotPolicyResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ModifyAutoSnapshotPolicyResponseBody body;
+    private ModifySnapshotCategoryResponseBody body;
 
-    private ModifyAutoSnapshotPolicyResponse(BuilderImpl builder) {
+    private ModifySnapshotCategoryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ModifyAutoSnapshotPolicyResponse create() {
+    public static ModifySnapshotCategoryResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ModifyAutoSnapshotPolicyResponse extends Response {
     /**
      * @return body
      */
-    public ModifyAutoSnapshotPolicyResponseBody getBody() {
+    public ModifySnapshotCategoryResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyAutoSnapshotPolicyResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifySnapshotCategoryResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ModifyAutoSnapshotPolicyResponseBody body);
+        Builder body(ModifySnapshotCategoryResponseBody body);
 
         @Override
-        ModifyAutoSnapshotPolicyResponse build();
+        ModifySnapshotCategoryResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyAutoSnapshotPolicyResponse, Builder>
+            extends Response.BuilderImpl<ModifySnapshotCategoryResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ModifyAutoSnapshotPolicyResponseBody body; 
+        private ModifySnapshotCategoryResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyAutoSnapshotPolicyResponse response) {
+        private BuilderImpl(ModifySnapshotCategoryResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ModifyAutoSnapshotPolicyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyAutoSnapshotPolicyResponseBody body) {
+        public Builder body(ModifySnapshotCategoryResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyAutoSnapshotPolicyResponse build() {
-            return new ModifyAutoSnapshotPolicyResponse(this);
+        public ModifySnapshotCategoryResponse build() {
+            return new ModifySnapshotCategoryResponse(this);
         } 
 
     } 

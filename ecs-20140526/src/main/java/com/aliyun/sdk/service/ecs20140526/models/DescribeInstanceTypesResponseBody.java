@@ -230,7 +230,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer threadsPerCore; 
 
             /**
-             * Core.
+             * <p>CPU core.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -238,7 +241,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * CoreFactor.
+             * <p>CPU core factor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder coreFactor(Integer coreFactor) {
                 this.coreFactor = coreFactor;
@@ -246,7 +252,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * HyperThreadingAdjustable.
+             * <p>Indicates whether Hyper-Threading is adjustable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hyperThreadingAdjustable(Boolean hyperThreadingAdjustable) {
                 this.hyperThreadingAdjustable = hyperThreadingAdjustable;
@@ -262,7 +271,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadsPerCore.
+             * <p>CPU threads per core.</p>
+             * <blockquote>
+             * <p><code>CpuOptions.ThreadsPerCore=1</code> indicates the shutdown of CPU Hyper-Threading.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;
@@ -333,7 +348,12 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer vfQueueNumberPerEni; 
 
             /**
-             * RssSupport.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rssSupport(Boolean rssSupport) {
                 this.rssSupport = rssSupport;
@@ -1360,7 +1380,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * JumboFrameSupport.
+             * <p>Indicates whether jumbo frames are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder jumboFrameSupport(Boolean jumboFrameSupport) {
                 this.jumboFrameSupport = jumboFrameSupport;

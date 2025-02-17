@@ -26,6 +26,14 @@ public class CreateElasticityAssuranceRequest extends Request {
     private String assuranceTimes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+    private Integer autoRenewPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -96,6 +104,8 @@ public class CreateElasticityAssuranceRequest extends Request {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
         this.assuranceTimes = builder.assuranceTimes;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.instanceAmount = builder.instanceAmount;
@@ -139,6 +149,20 @@ public class CreateElasticityAssuranceRequest extends Request {
      */
     public String getAssuranceTimes() {
         return this.assuranceTimes;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -256,6 +280,8 @@ public class CreateElasticityAssuranceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateElasticityAssuranceRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
         private String assuranceTimes; 
+        private Boolean autoRenew; 
+        private Integer autoRenewPeriod; 
         private String clientToken; 
         private String description; 
         private Integer instanceAmount; 
@@ -281,6 +307,8 @@ public class CreateElasticityAssuranceRequest extends Request {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
             this.assuranceTimes = request.assuranceTimes;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.instanceAmount = request.instanceAmount;
@@ -318,6 +346,24 @@ public class CreateElasticityAssuranceRequest extends Request {
         public Builder assuranceTimes(String assuranceTimes) {
             this.putQueryParameter("AssuranceTimes", assuranceTimes);
             this.assuranceTimes = assuranceTimes;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
             return this;
         }
 

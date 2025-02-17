@@ -98,7 +98,7 @@ public class DeleteDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the diagnostic report. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of diagnostic reports. You can specify up to 100 report IDs.</p>
+         * <p>The IDs of the diagnostic reports. You can specify up to 100 resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder reportIds(java.util.List<String> reportIds) {

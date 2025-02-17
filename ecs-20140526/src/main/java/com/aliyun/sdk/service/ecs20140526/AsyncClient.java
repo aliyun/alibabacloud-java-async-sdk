@@ -78,10 +78,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>The instance to which you want to assign a static public IP address must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
-     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be assigned a static public IP address.</li>
+     * <li>The ECS instance to which you want to assign a static public IP address must be in the <strong>Running</strong> (<code>Running</code>) or <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an ECS instance, the instance is <a href="https://help.aliyun.com/document_detail/25695.html">locked for security reasons</a> and cannot be assigned a static public IP address.</li>
+     * <li>When you call the AllocatePublicIpAddress operation for an ECS instance, make sure that the public bandwidth of the instance is greater than 0 Mbit/s. You can call the <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> operation to change the public bandwidth.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
+     * <li>Only users in the whitelist can specify <code>IpAddress</code> in the AllocatePublicIpAddress operation. If the public bandwidth of your ECS instance is greater than 0 Mbit/s, you can specify the ID of the instance (<code>InstanceId</code>) to randomly assign a static public IP address to the instance. If the public bandwidth of your ECS instance is 0 Mbit/s, you must call the <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> operation to increase the public bandwidth of the instance before you call the AllocatePublicIpAddress operation.</li>
      * <li>You can assign only one static public IP address to an ECS instance. If the instance already has a static public IP address, the static public IP address is returned for the <code>IpAddress</code> response parameter.</li>
      * <li>After you assign a static public IP address to an ECS instance, you must restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) or start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the public IP address to take effect.
      * If an ECS instance resides in a virtual private cloud (VPC), you can assign a static public IP address to the instance or associate an elastic IP address (EIP) with the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2518064.html">AssociateEipAddress</a>.</li>
@@ -476,20 +481,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
-     * <p>After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use a variety of online services provided by Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops on the managed instance.
+     * <p>After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use various online services of Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops, on the managed instance.
      * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs one of the following operating systems:</p>
      * <ul>
-     * <li>Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 and later</li>
-     * <li>CentOS 6, CentOS 7, and CentOS 8 and later</li>
-     * <li>Debian 8, Debian 9, and Debian 10 and later</li>
-     * <li>Ubuntu 12, Ubuntu 14, Ubuntu 16, and Ubuntu 18 and later</li>
+     * <li>Alibaba Cloud Linux 2, Alibaba Cloud Linux 3, or later</li>
+     * <li>CentOS 6, CentOS 7, CentOS 8, or later</li>
+     * <li>Debian 8, Debian 9, Debian 10, or later</li>
+     * <li>Ubuntu 12, Ubuntu 14, Ubuntu 16, Ubuntu 18, or later</li>
      * <li>CoreOS</li>
      * <li>OpenSUSE</li>
-     * <li>Red Hat 5, Red Hat 6, and Red Hat 7 and later</li>
-     * <li>SUSE Linux Enterprise Server 11, SUSE Linux Enterprise Server 12, and SUSE Linux Enterprise Server 15 and later</li>
-     * <li>Windows Server 2012, Windows Server 2016, and Windows Server 2019 and later
+     * <li>Red Hat 5, Red Hat 6, Red Hat 7, or later</li>
+     * <li>SUSE Linux Enterprise Server 11, SUSE Linux Enterprise Server 12, SUSE Linux Enterprise Server 15, or later</li>
+     * <li>Windows Server 2012, Windows Server 2016, Windows Server 2019, or later
      * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can create additional activation codes.<blockquote>
-     * <p> To obtain the usage of activation codes, go to the <strong>ECS Cloud Assistant</strong> page, click the <strong>Manage Instances</strong> tab, and then click <strong>Register Instance</strong>.</p>
+     * <p> To obtain the usage of activation codes, go to the <strong>ECS Cloud Assistant</strong> page in the Elastic Compute Service (ECS) console, click the <strong>Manage Instances</strong> tab, and then click <strong>Register Instance</strong>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -730,33 +735,31 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
      * <p> This operation is no longer iterated or updated. We recommend that you call the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.
-     * <strong>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</strong>
+     * <strong>Before you call this operation, familiarize yourself with the billing rules and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</strong>
      * This operation is an asynchronous operation. After a request to create an ECS instance is sent, an ECS instance ID is immediately returned but the instance may be still being created. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instance. If the status of the instance is <code>Stopped</code> in the DescribeInstanceStatus response, the instance is created. In this case, you can call the <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> operation to start the instance.</p>
      * </blockquote>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
-     * <li><strong>Prerequisites</strong><ul>
      * <li>Make sure that you are familiar with the ECS billing methods because you may be charged for the resources that are used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</li>
      * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
      * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
      * </ul>
-     * </li>
-     * <li><strong>Considerations</strong>:<ul>
-     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <ul>
+     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are automatically used.</li>
      * <li>If you want to create instances with 512 MiB of memory, you cannot use Windows Server images except for Windows Server Semi-Annual Channel images. If you want to create instances with 4 GiB or more of memory, you cannot use 32-bit OS image.</li>
-     * <li>If you call the CreateInstance operation to create an instance, no public IP address is automatically assigned to the instance. You can call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.
-     * **
-     * <strong>Note</strong> Starting November 27, 2020, when you create ECS instances or change ECS instance configurations, the maximum bandwidth value that you can specify is subject to the throttling policy of your account. To increase the maximum bandwidth value, submit a ticket. The throttling policy imposes the following constraints: In a single region, the total maximum bandwidth value of all instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s and the total bandwidth value of all instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.</li>
-     * </ul>
+     * <li>If you call the CreateInstance operation to create an instance, no public IP address is automatically assigned to the instance. If the InternetMaxBandwidthOut value of the instance is greater than 0 Mbit/s, call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance. If the InternetMaxBandwidthOut value of the instance is 0 Mbit/s, call the <a href="https://help.aliyun.com/document_detail/2679879.html">ModifyInstanceNetworkSpec</a> operation to set InternetMaxBandwidthOut to a value greater than 0 Mbit/s and then call the <a href="https://help.aliyun.com/document_detail/25544.html">AllocatePublicIpAddress</a> operation to assign a public IP address to the instance.<blockquote>
+     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
+     * </blockquote>
      * </li>
-     * <li><strong>Suggestions</strong>:<ul>
-     * <li>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of instance types, or see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn about how to select instance types.</li>
-     * <li>Query of available resources: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.</li>
-     * <li><a href="https://help.aliyun.com/document_detail/49121.html">User data</a>: If the instance type supports user data, you can use the UserData parameter to pass in user data. User data is encoded in Base64. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then decode and decrypt the information in the same way within the instance.</li>
      * </ul>
-     * </li>
+     * <h3><a href="#"></a>Suggestions</h3>
+     * <ul>
+     * <li><strong>Instance type selection</strong>: See <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the performance data of instance types, or see <a href="https://help.aliyun.com/document_detail/58291.html">Instance type selection</a> to learn about how to select instance types.</li>
+     * <li><strong>Query of available resources</strong>: Call the <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> operation to query resources available in a specific region or zone.</li>
+     * <li><strong>User data</strong>: If the instance type supports <a href="https://help.aliyun.com/document_detail/49121.html">user data</a>, you can use UserData to pass in user data. We recommend that you do not pass in confidential information, such as passwords or private keys, in plaintext as user data. This is because the system does not encrypt <code>UserData</code> values when API requests are sent. If you must pass in confidential information as user data, we recommend that you encrypt and encode the information in Base64 before you pass in the information. Then, decode and decrypt the information within the instance for subsequent use.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateInstance  CreateInstanceRequest
@@ -1156,13 +1159,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Warning</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
-     * After you release an instance, the manual snapshots of the cloud disks attached to the instance are retained. Whether the cloud disks and the automatic snapshots of the disks are released is determined by the options that you configured when you created the instance and disks. Before you release the instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameter settings for the cloud disks attached to the instance and the automatic snapshots.</li>
-     * <li>The cloud disks for which <code>DeleteWithInstance</code> is set to false are retained as pay-as-you-go disks after the instance is released. The cloud disks for which DeleteWithInstance is set to true are released along with the instance.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the cloud disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released along with the instance.<blockquote>
-     * <p> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released even if DeleteWithInstance is set to false.</p>
-     * </blockquote>
+     * <li><strong>Warning</strong> After you release an instance, the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
+     * <li>After you release an instance, manual snapshots of the cloud disks attached to the instance are retained and continue to be billed. You can call the <a href="https://help.aliyun.com/document_detail/2679824.html">DeleteSnapshot</a> operation to delete the snapshots.</li>
+     * <li>After you release an instance, whether the cloud disks attached to the instance and the automatic snapshots of the disks are released is determined by the disk attributes. Before you release an instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> and <a href="https://help.aliyun.com/document_detail/2679770.html">ModifyDiskAttribute</a> operations to query and modify disk attributes.<ul>
+     * <li>If <code>DeleteWithInstance</code> is set to false for a cloud disk attached to the instance, the cloud disk is changed to a pay-as-you-go disk and retained after the instance is released. If DeleteWithInstance is set to true for the cloud disk, the disk is released together with the instance.</li>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released together with the instance.</li>
+     * </ul>
      * </li>
+     * <li>Elastic IP addresses (EIPs) are not released together with instances. You can call the <a href="https://help.aliyun.com/document_detail/448702.html">ReleaseEipAddress</a> operation to release EIPs.
+     * **
+     * <strong>Note</strong> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released together with the instance even if DeleteWithInstance is set to false for the disks.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
@@ -1173,13 +1179,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><strong>Warning</strong> After an ECS instance is released, all physical resources used by the instance are reclaimed. Relevant data is erased and cannot be restored.
-     * After an ECS instance is released, the manual snapshots of the disks attached to the instance are retained. Whether the disks and the automatic snapshots of the disks are released is determined by the options that you configured when you created the instance and disks. Before you release an ECS instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> operation to query the parameters of the disks attached to the instance and the automatic snapshots.</li>
-     * <li>If <code>DeleteWithInstance</code> is set to false, the disks are changed to pay-as-you-go disks and retained. If DeleteWithInstance is set to true, the disks are released along with the instance.</li>
-     * <li>If <code>DeleteAutoSnapshot</code> is set to false, the automatic snapshots are retained. If DeleteAutoSnapshot is set to true, the automatic snapshots are released along with the instance.<blockquote>
-     * <p> If an ECS instance is locked for security reasons, the disks attached to the instance are released along with the instance even if DeleteWithInstance is set to false for the disks.</p>
-     * </blockquote>
+     * <li><strong>Warning</strong> After you release an instance, the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
+     * <li>After you release an instance, manual snapshots of the cloud disks attached to the instance are retained and continue to be billed. You can call the <a href="https://help.aliyun.com/document_detail/2679824.html">DeleteSnapshot</a> operation to delete the snapshots.</li>
+     * <li>After you release an instance, whether the cloud disks attached to the instance and the automatic snapshots of the disks are released is determined by the disk attributes. Before you release an instance, you can call the <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> and <a href="https://help.aliyun.com/document_detail/2679770.html">ModifyDiskAttribute</a> operations to query and modify disk attributes.<ul>
+     * <li>If <code>DeleteWithInstance</code> is set to false for a cloud disk attached to the instance, the cloud disk is changed to a pay-as-you-go disk and retained after the instance is released. If DeleteWithInstance is set to true for the cloud disk, the disk is released together with the instance.</li>
+     * <li>If <code>DeleteAutoSnapshot</code> is set to false for a cloud disk attached to the instance, the automatic snapshots of the disk are retained when the instance is released. If DeleteAutoSnapshot is set to true for the cloud disk, the automatic snapshots of the disk are released together with the instance.</li>
+     * </ul>
      * </li>
+     * <li>Elastic IP addresses (EIPs) are not released together with instances. You can call the <a href="https://help.aliyun.com/document_detail/448702.html">ReleaseEipAddress</a> operation to release EIPs.
+     * **
+     * <strong>Note</strong> When you release an instance that is locked for security reasons, the cloud disks attached to the instance are released together with the instance even if DeleteWithInstance is set to false for the disks.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteInstances  DeleteInstancesRequest
@@ -1909,11 +1918,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>Query the ECS instances and the status of the instances in a <strong>specific region</strong>. Sample request:<!---->
      * &quot;RegionID&quot;: &quot;cn-hangzhou&quot;</li>
      * <li>Query the ECS instances and the status of the instances in a <strong>zone</strong> of a <strong>specific region</strong>. Sample request:<!---->
-     * <pre><code>  &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
-     *   &quot;ZoneID&quot;: &quot;cn-hangzhou-a&quot;
-     * </code></pre>
-     * </li>
-     * <li>Query the status of an ECS instance based on the <strong>instance ID</strong> in a <strong>specific region</strong>. Sample request:<!---->
+     * &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
+     * &quot;ZoneID&quot;: &quot;cn-hangzhou-a&quot;</li>
+     * <li>Query the status of an ECS instance in a <strong>specific region</strong> based on the <strong>instance ID</strong>. Sample request:<!---->
      * &quot;RegionID&quot;: &quot;cn-hangzhou&quot;,
      * &quot;InstancesID&quot;: [&quot;i-bp1f7c1zqp999zvp****&quot;, &quot;i-bp1dqjv36biueg61****&quot;]</li>
      * </ul>
@@ -2162,8 +2169,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>You can specify the <code>AddressFamily</code>, <code>PrefixListId.N</code>, and <code>PrefixListName</code> request parameters to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
+     * <p>You can specify the <code>AddressFamily</code>, <code>PrefixListId.N</code>, and <code>PrefixListName</code> request parameters in the request. Specified parameters have logical AND relations. Only the parameters that you set are included in the filter conditions.</p>
      * 
      * @param request the request parameters of DescribePrefixLists  DescribePrefixListsRequest
      * @return DescribePrefixListsResponse
@@ -2199,9 +2205,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRecommendInstanceTypeResponse> describeRecommendInstanceType(DescribeRecommendInstanceTypeRequest request);
 
     /**
-     * <b>description</b> :
-     * <hr>
-     * 
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -2230,6 +2233,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeReservedInstanceAutoRenewAttributeResponse> describeReservedInstanceAutoRenewAttribute(DescribeReservedInstanceAutoRenewAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Scenarios</h3>
+     * <ul>
+     * <li>Query all reserved instances in a specific region.</li>
+     * <li>Query the details of a reserved instance based on the ID or name.</li>
+     * <li>Query your purchased reserved instances based on the instance type or instance family.</li>
+     * <li>Query your purchased reserved instances based on the scope or status of reserved instances.</li>
+     * </ul>
+     * <h3><a href="#"></a>Sample requests</h3>
+     * <p><strong>Example: Query all purchased reserved instances in the China (Hangzhou) region</strong>
+     *     &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.
+     * <strong>Example: Query the details of the reserved instance whose ID is ecsri-bp129enntoynwwj5\<em>\</em>\<em>\</em> in the China (Hangzhou) region</strong>
+     *     &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.&quot;ReservedInstanceId&quot;:&quot;ecsri-bp129enntoynwwj5****&quot; //The ID of the reserved instance.
+     * <strong>Example: Query the reserved instances that can be used to offset the bills of ecs.c5.2xlarge instances in the China (Hangzhou) region</strong>
+     *     &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.&quot;InstanceType&quot;:&quot;ecs.c5.2xlarge&quot;, //The instance type.
+     * <strong>Example: Query the regional reserved instances that are within the validity period in the China (Hangzhou) region</strong>
+     *     &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, //The ID of the region.&quot;Scope&quot;:&quot;Region&quot;, //Set the scope of the reserved instance to regional.&quot;Status&quot;:[&quot;Active&quot;] //Set the status to Active, which indicates that the reserved instance is within the validity period.</p>
+     * 
      * @param request the request parameters of DescribeReservedInstances  DescribeReservedInstancesRequest
      * @return DescribeReservedInstancesResponse
      */
@@ -2684,6 +2705,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  After you closes a session, the session is no longer available.</p>
+     * <ul>
+     * <li>The WebSocket URL that is associated with a closed session is invalid and no longer available.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of EndTerminalSession  EndTerminalSessionRequest
+     * @return EndTerminalSessionResponse
+     */
+    CompletableFuture<EndTerminalSessionResponse> endTerminalSession(EndTerminalSessionRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
      * <li>Make sure that you are familiar with the prerequisites and considerations. For more information, see <a href="https://help.aliyun.com/document_detail/58181.html">Export a custom image</a>.</li>
@@ -3038,13 +3071,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAutoProvisioningGroupResponse> modifyAutoProvisioningGroup(ModifyAutoProvisioningGroupRequest request);
 
     /**
-     * @deprecated OpenAPI ModifyAutoSnapshotPolicy is deprecated, please use Ecs::2014-05-26::ModifyAutoSnapshotPolicyEx instead.  * @param request  the request parameters of ModifyAutoSnapshotPolicy  ModifyAutoSnapshotPolicyRequest
-     * @return ModifyAutoSnapshotPolicyResponse
-     */
-    @Deprecated
-    CompletableFuture<ModifyAutoSnapshotPolicyResponse> modifyAutoSnapshotPolicy(ModifyAutoSnapshotPolicyRequest request);
-
-    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You cannot modify system policies.</li>
+     * <li>After an automatic snapshot policy is modified, the modifications immediately take effect on the disks that are associated with the policy.</li>
+     * <li>If cross-region replication for snapshots is enabled and no encryption parameters are configured, the generated encrypted snapshot copies are encrypted by using the Key Management Service (KMS) encryption keys in the region to which the snapshots are copied.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyAutoSnapshotPolicyEx  ModifyAutoSnapshotPolicyExRequest
      * @return ModifyAutoSnapshotPolicyExResponse
      */
@@ -3768,6 +3802,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySnapshotAttributeResponse> modifySnapshotAttribute(ModifySnapshotAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Archive snapshots cannot be restored to standard snapshots.</p>
+     * <ul>
+     * <li>You can archive only standard snapshots that have been retained for at least 14 days.</li>
+     * <li>You cannot archive encrypted snapshots.</li>
+     * <li>You cannot archive snapshots that are shared to you, snapshots managed by Cloud Backup, or snapshots in cloud boxes.</li>
+     * <li>The Archive Snapshot feature is available only in the China (Hohhot) and Malaysia (Kuala Lumpur) regions. The availability of the feature in other regions is subject to notice.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ModifySnapshotCategory  ModifySnapshotCategoryRequest
+     * @return ModifySnapshotCategoryResponse
+     */
+    CompletableFuture<ModifySnapshotCategoryResponse> modifySnapshotCategory(ModifySnapshotCategoryRequest request);
+
+    /**
      * @param request the request parameters of ModifySnapshotGroup  ModifySnapshotGroupRequest
      * @return ModifySnapshotGroupResponse
      */
@@ -4097,7 +4146,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25436.html">Replace the operating system (system disk) of an instance</a>.
+     * <p>Before you call this operation, refer to <a href="https://help.aliyun.com/document_detail/50134.html">Replace the operating system (system disk) of an instance</a>.
      * When you call this operation for an ECS instance, take note of the following items:</p>
      * <ul>
      * <li>The billing method of the system disk cannot be changed.</li>
@@ -4126,7 +4175,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Take note of the following items:</p>
+     * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25450.html">Roll back a disk by using a snapshot</a>.
+     * Take note of the following items:</p>
      * <ul>
      * <li>The cloud disk that you want to roll back must be in the In Use (<code>In_use</code>) or Unattached (<code>Available</code>) state.</li>
      * <li>The instance to which the cloud disk is attached must be in the <code>Stopped</code> state. You can call the <a href="https://help.aliyun.com/document_detail/155372.html">StopInstances</a> operation to stop the instance.</li>
@@ -4143,7 +4193,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>  Only Alibaba Cloud accounts can call this operation.</p>
      * <ul>
-     * <li>Before you can call this operation in a region, you must enable account-level default encryption of Elastic Block Storage (EBS) resources in the region.</li>
+     * <li>Before you can call this operation in a region, make sure that the Account-level Elastic Block Storage (EBS) Default Encryption feature is enabled in the region.</li>
      * </ul>
      * 
      * @param request the request parameters of ResetDiskDefaultKMSKeyId  ResetDiskDefaultKMSKeyIdRequest
@@ -4350,15 +4400,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, familiarize yourself with the billing rules and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
+     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Make sure that the number of ECS instances you created or the number of vCPUs on ECS instances of all instance types you created does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
      * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
+     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
      * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
      * <li>If you set <code>InternetMaxBandwidthOut</code> to a value greater than 0, public IP addresses are automatically assigned to the ECS instances to be created.<blockquote>
      * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
@@ -4376,39 +4427,46 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * <h2><a href="#"></a>Sample requests</h2>
      * <p>Use a specific image to create ECS instances of a specific instance type in the China (Hangzhou) region. The instances use disks with a specific capacity as the system disk and data disks and are automatically assigned public IP addresses. The instances have user-defined names and logon passwords. The instances are assigned to a specific security group and connected to a specific vSwitch. Request parameters:
-     *     RegionId: Set the region ID to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     ImageId: Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
-     *     InstanceType: Set the instance type to ecs.g7.large.SecurityGroupId: Set the security group ID to sg-bp150uqocpf9jj70****.
-     *     VSwitchId: Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
-     *     SystemDisk.Category: Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
-     *     SystemDisk.Size: Set the system disk size to 40. Unit: GiB.
-     *     DataDisk.Category: Set the data disk category to cloud_essd, which specifies the ESSD category.
-     *     DataDisk.Size: Set the data disk size to 100. Unit: GiB.
-     *     HostName: Set the instance hostname to ECS-test.
-     *     Password: Set the logon password to ECS@test1234.
-     *     InternetMaxBandwidthOut: Set the outbound public bandwidth to 10. Unit: Mbit/s.
+     *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, //Set the image ID to aliyun_3_x64_20G_alibase_20221102.vhd.
+     *     InstanceType:&quot;ecs.g7.large&quot;, //Set the instance type to ecs.g7.large.
+     *     SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, //Set the security group ID to sg-bp150uqocpf9jj70****.
+     *     VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, //Set the vSwitch ID to vsw-bp1qo7s91cbch5i4l****.
+     *     SystemDisk:{
+     *       Category:&quot;cloud_essd&quot;, //Set the system disk category to cloud_essd, which specifies the Enterprise SSD (ESSD) category.
+     *       Size:40, //Set the system disk size to 40. Unit: GiB.
+     *     },
+     *     DataDisk:[
+     *       {
+     *         Category:&quot;cloud_essd&quot;, //Set the data disk category to cloud_essd, which specifies the ESSD category.
+     *         Size:100, //Set the data disk size to 100. Unit: GiB.
+     *       }
+     *     ],
+     *     HostName:&quot;ECS-test&quot;, //Set the instance hostname to ECS-test.
+     *     Password:&quot;ECS@test1234&quot;, //Set the logon password to ECS@test1234.
+     *     InternetMaxBandwidthOut:10 //Set the outbound public bandwidth to 10. Unit: Mbit/s.
      * Examples on how to create instances of different types based on the preceding parameters:
      * <strong>Example: Create five subscription ECS instances for which auto-renewal is enabled</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 5.
-     *     InstanceChargeType: Set the billing method to PrePaid, which specifies the subscription billing method.
-     *     PeriodUnit: Set the period unit to Month.
-     *     Period: Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
-     *     AutoRenew: Set this parameter to true to enable auto-renewal.
-     *     AutoRenewPeriod: Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     Amount:5, //Set the number of ECS instances that you want to create to 5.
+     *     InstanceChargeType:&quot;PrePaid&quot;, //Set the billing method to PrePaid, which specifies the subscription billing method.
+     *     PeriodUnit:&quot;Month&quot;, //Set the subscription period unit to Month.
+     *     Period:1, //Set the subscription period to 1. The unit is specified by PeriodUnit, which is Month in this example.
+     *     AutoRenew:true, //Set this parameter to true to enable auto-renewal.
+     *     AutoRenewPeriod:1 //Set the renewal period to 1. The unit is specified by PeriodUnit, which is Month in this example.
      * <strong>Example: Create 10 pay-as-you-go ECS instances</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 10.
-     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
-     *     SpotStrategy: Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
-     * <strong>Example: Create 20 preemptible instances that have a specified bidding policy and a protection period</strong>
-     *     Amount: Set the number of ECS instances that you want to create to 20.
-     *     InstanceChargeType: Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
-     *     SpotStrategy: Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
-     *     SpotDuration: Set the protection period of the preemptible instances to 1. Unit: hours.
-     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Sample request:
+     *     Amount:10, //Set the number of ECS instances that you want to create to 10.
+     *     InstanceChargeType:&quot;PostPaid&quot;, //Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
+     *     SpotStrategy:&quot;NoSpot&quot; //Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
+     * <strong>Example: Create 20 preemptible instances that use a specified bidding policy and a protection period</strong>
+     *     Amount:20, //Set the number of ECS instances that you want to create to 20.
+     *     InstanceChargeType:&quot;PostPaid&quot;,
+     *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
+     *     SpotDuration:1 //Set the protection period of the preemptible instances to 1. Unit: hours.
+     * Call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, use the launch template to create ECS instances in the China (Hangzhou) region. Examples:
      * <strong>Example: Create 10 ECS instances based on a launch template</strong>
-     *     RegionId: Set RegionId to cn-hangzhou, which indicates the China (Hangzhou) region.
-     *     Amount: Set the number of ECS instances that you want to create to 10.
-     *     LaunchTemplateId: Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
+     *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
+     *     Amount:10, //Set the number of ECS instances that you want to create to 10.
+     *     LaunchTemplateId:&quot;lt-bp14xczpoxvb6rre****&quot; //Set the launch template ID to lt-bp14xczpoxvb6rre****.</p>
      * <blockquote>
      * <p> If a parameter is specified both in the launch template that you reference in a request and in the instance parameters of the same request, the value specified in the instance parameters takes precedence. For example, if you set InstanceChargeType in the launch template to PrePaid (subscription) and set InstanceChargeType in the instance parameters to PostPaid (pay-as-you-go), the created instances are pay-as-you-go instances.</p>
      * </blockquote>
@@ -4488,7 +4546,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>The ECS instance must be in the Running state.</li>
      * <li>Cloud Assistant Agent must be installed on the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/87346.html">DescribeCloudAssistantStatus</a> operation to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of the installed Cloud Assistant Agent.<ul>
      * <li>If Cloud Assistant Agent is not installed on the ECS instance, call the <a href="https://help.aliyun.com/document_detail/85916.html">InstallCloudAssistant</a> operation to install Cloud Assistant Agent.</li>
-     * <li>The Cloud Assistant Agent versions that are later than the following ones support the session management feature. If you need to upgrade the Cloud Assistant Agent version, follow the instructions in <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.<ul>
+     * <li>The Cloud Assistant Agent versions that are later than the following ones support the session management feature. If you need to upgrade the Cloud Assistant Agent version, follow the instructions in <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades of Cloud Assistant Agent</a>.<ul>
      * <li>Linux operating system: 2.2.3.256</li>
      * <li>Windows operating system: 2.1.3.256</li>
      * </ul>
@@ -4496,7 +4554,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * </ul>
      * </li>
      * <li>Each WebSocket URL returned by the StartTerminalSession operation remains valid for 10 minutes.</li>
-     * <li>Up to 1,000 sessions can be created and available in a region. Each ECS instance can have up to 20 sessions in the connected state.</li>
+     * <li>If no data is transferred over a session within 3 minutes, Cloud Assistant closes the session connection.</li>
+     * <li>Up to 1,000 sessions can be created and available in a region. Each ECS instance can have up to 20 sessions in the connected state. Each session supports a bandwidth of up to 200 Kbit/s.</li>
+     * <li>The port forwarding feature supports only TCP port forwarding. UDP port forwarding is not supported.</li>
+     * <li>If you want to permanently close a session and invalidate the WebSocket URL, call the EndTerminalSession operation.</li>
      * </ul>
      * 
      * @param request the request parameters of StartTerminalSession  StartTerminalSessionRequest

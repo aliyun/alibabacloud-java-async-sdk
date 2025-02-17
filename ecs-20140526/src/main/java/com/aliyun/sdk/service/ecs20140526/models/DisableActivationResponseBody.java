@@ -220,7 +220,10 @@ public class DisableActivationResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * ActivationId.
+             * <p>The ID of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;

@@ -67,7 +67,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The ID of the diagnostic metric.</p>
+         * <p>The diagnostic metrics.</p>
          */
         public Builder metrics(java.util.List<Metrics> metrics) {
             this.metrics = metrics;
@@ -75,7 +75,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of diagnostic metrics.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -86,7 +86,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned in this call.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -207,10 +207,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             private String supportedOperatingSystem; 
 
             /**
-             * <p>CPU diagnostic</p>
+             * <p>The description of the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>The resource type supported by the diagnostic metric.</p>
+             * <p>CPU diagnostic</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,12 +218,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
-             * <ul>
-             * <li>Windows</li>
-             * <li>Linux</li>
-             * <li>All: both Windows and Linux</li>
-             * </ul>
+             * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -234,7 +229,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the diagnostic metric.</p>
+             * <p>The category of the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>
@@ -245,7 +240,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the diagnostic metric.</p>
+             * <p>The ID of the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
              * <p>GuestOS.WinFirewall</p>
@@ -256,10 +251,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CPU diagnostic</p>
+             * <p>The name of the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>The category of the diagnostic metric.</p>
+             * <p>CPU diagnostic</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -267,7 +262,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
+             * <p>The resource type supported by the diagnostic metric.</p>
              * 
              * <strong>example:</strong>
              * <p>instance</p>
@@ -278,7 +273,15 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedOperatingSystem.
+             * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
+             * <ul>
+             * <li>Windows</li>
+             * <li>Linux</li>
+             * <li>All: Windows and Linux</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder supportedOperatingSystem(String supportedOperatingSystem) {
                 this.supportedOperatingSystem = supportedOperatingSystem;

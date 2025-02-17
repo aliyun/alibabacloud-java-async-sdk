@@ -568,7 +568,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypted.
+             * <blockquote>
+             * <p> This parameter is in invitational preview.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -826,7 +831,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImdsSupport.
+             * <p>The image metadata access mode. Valid values:</p>
+             * <ul>
+             * <li>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</li>
+             * <li>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder imdsSupport(String imdsSupport) {
                 this.imdsSupport = imdsSupport;

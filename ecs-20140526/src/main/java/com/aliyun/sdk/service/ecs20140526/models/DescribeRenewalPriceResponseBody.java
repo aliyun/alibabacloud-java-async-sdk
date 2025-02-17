@@ -205,7 +205,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
      *
      * <p>DescribeRenewalPriceResponseBody</p>
      */
-    public static class ResourcePriceModel extends TeaModel {
+    public static class DetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
@@ -221,7 +221,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
-        private ResourcePriceModel(Builder builder) {
+        private DetailInfo(Builder builder) {
             this.discountPrice = builder.discountPrice;
             this.originalPrice = builder.originalPrice;
             this.resource = builder.resource;
@@ -233,7 +233,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ResourcePriceModel create() {
+        public static DetailInfo create() {
             return builder().build();
         }
 
@@ -331,8 +331,8 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
                 return this;
             }
 
-            public ResourcePriceModel build() {
-                return new ResourcePriceModel(this);
+            public DetailInfo build() {
+                return new DetailInfo(this);
             } 
 
         } 
@@ -345,11 +345,11 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
      * <p>DescribeRenewalPriceResponseBody</p>
      */
     public static class DetailInfos extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ResourcePriceModel")
-        private java.util.List<ResourcePriceModel> resourcePriceModel;
+        @com.aliyun.core.annotation.NameInMap("DetailInfo")
+        private java.util.List<DetailInfo> detailInfo;
 
         private DetailInfos(Builder builder) {
-            this.resourcePriceModel = builder.resourcePriceModel;
+            this.detailInfo = builder.detailInfo;
         }
 
         public static Builder builder() {
@@ -361,20 +361,20 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourcePriceModel
+         * @return detailInfo
          */
-        public java.util.List<ResourcePriceModel> getResourcePriceModel() {
-            return this.resourcePriceModel;
+        public java.util.List<DetailInfo> getDetailInfo() {
+            return this.detailInfo;
         }
 
         public static final class Builder {
-            private java.util.List<ResourcePriceModel> resourcePriceModel; 
+            private java.util.List<DetailInfo> detailInfo; 
 
             /**
-             * ResourcePriceModel.
+             * DetailInfo.
              */
-            public Builder resourcePriceModel(java.util.List<ResourcePriceModel> resourcePriceModel) {
-                this.resourcePriceModel = resourcePriceModel;
+            public Builder detailInfo(java.util.List<DetailInfo> detailInfo) {
+                this.detailInfo = detailInfo;
                 return this;
             }
 

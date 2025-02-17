@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyAutoSnapshotPolicyResponseBody} extends {@link TeaModel}
+ * {@link EndTerminalSessionResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyAutoSnapshotPolicyResponseBody</p>
+ * <p>EndTerminalSessionResponseBody</p>
  */
-public class ModifyAutoSnapshotPolicyResponseBody extends TeaModel {
+public class EndTerminalSessionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyAutoSnapshotPolicyResponseBody(Builder builder) {
+    private EndTerminalSessionResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ModifyAutoSnapshotPolicyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyAutoSnapshotPolicyResponseBody create() {
+    public static EndTerminalSessionResponseBody create() {
         return builder().build();
     }
 
@@ -43,15 +43,18 @@ public class ModifyAutoSnapshotPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyAutoSnapshotPolicyResponseBody build() {
-            return new ModifyAutoSnapshotPolicyResponseBody(this);
+        public EndTerminalSessionResponseBody build() {
+            return new EndTerminalSessionResponseBody(this);
         } 
 
     } 

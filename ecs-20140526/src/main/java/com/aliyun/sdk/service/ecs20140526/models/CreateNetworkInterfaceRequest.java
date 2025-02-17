@@ -588,9 +588,8 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <blockquote>
-         * <p> This parameter is not publicly available.</p>
-         * </blockquote>
+         * <p>The connection tracking configurations of the ENI.</p>
+         * <p>Before you use this parameter, learn about how to manage connection timeout periods. For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Manage connection timeout periods</a>.</p>
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -629,7 +628,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p> This parameter is not publicly available.</p>
          * </blockquote>
          */
         public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
@@ -843,8 +842,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
+         * <p>The number of queue pair (QP) queues supported by the elastic RDMA interface (ERI).</p>
+         * <p>If you want to attach multiple ERIs to an instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <code>QueuePairNumber</code> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QP queues of all ERIs does not exceed the maximum number of QP queues supported by the instance type. For information about the maximum number of QP queues supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</p>
          * <blockquote>
-         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * <p> If you do not specify QueuePairNumber for an ERI, the maximum number of QP queues supported by the instance type may be used as the number of QP queues supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -901,11 +902,14 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         /**
          * <p>The receive (Rx) queue depth of the ENI.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
          * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
          * </ul>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -983,11 +987,14 @@ public class CreateNetworkInterfaceRequest extends Request {
 
         /**
          * <p>The transmit (Tx) queue depth of the ENI.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
          * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
          * </ul>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -999,7 +1006,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
+         * <p>The ID of the vSwitch to which to connect the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
+         * <blockquote>
+         * <p> A secondary ENI can be attached to only an instance that is in the same zone as the ENI. The instance and the ENI can be connected to different vSwitches.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1089,8 +1099,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Integer udpTimeout; 
 
             /**
+             * <p>The timeout period for TCP connections in the TIME_WAIT or CLOSE_WAIT state. Unit: seconds. Valid values: integers from 3 to 15.</p>
+             * <p>Default value: 3.</p>
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p> If the associated Elastic Compute Service (ECS) instance is used with a Network Load Balancer (NLB) or Classic Load Balancer (CLB) instance, the default timeout period for TCP connections in the <code>TIME_WAIT</code> state is 15 seconds.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1102,9 +1114,8 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * <blockquote>
-             * <p> This parameter is not publicly available.</p>
-             * </blockquote>
+             * <p>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</p>
+             * <p>Default value: 910.</p>
              * 
              * <strong>example:</strong>
              * <p>910</p>
@@ -1115,8 +1126,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
+             * <p>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</p>
+             * <p>Default value: 30.</p>
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p> If the associated ECS instance is used with an NLB or CLB instance, the default timeout period for UDP flows is 100 seconds.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1179,7 +1192,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Boolean enableSriov; 
 
             /**
-             * EnableRss.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRss(Boolean enableRss) {
                 this.enableRss = enableRss;
@@ -1309,7 +1327,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * <p>The number of queues supported by the elastic RDMA interface (ERI).</p>
+             * <p>The number of queues supported by the ERI.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1320,7 +1338,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * <p>The receive (Rx) queue depth of the ENI.</p>
+             * <p>The Rx queue depth of the ENI.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>8192</p>
@@ -1331,7 +1352,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * <p>The transmit (Tx) queue depth of the ENI.</p>
+             * <p>The Tx queue depth of the ENI.</p>
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>8192</p>

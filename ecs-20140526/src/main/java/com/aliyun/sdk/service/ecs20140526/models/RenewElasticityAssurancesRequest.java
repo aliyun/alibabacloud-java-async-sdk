@@ -30,6 +30,14 @@ public class RenewElasticityAssurancesRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+    private Integer autoRenewPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -66,6 +74,8 @@ public class RenewElasticityAssurancesRequest extends Request {
         this.privatePoolOptions = builder.privatePoolOptions;
         this.sourceRegionId = builder.sourceRegionId;
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -108,6 +118,20 @@ public class RenewElasticityAssurancesRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -170,6 +194,8 @@ public class RenewElasticityAssurancesRequest extends Request {
         private PrivatePoolOptions privatePoolOptions; 
         private String sourceRegionId; 
         private Boolean autoPay; 
+        private Boolean autoRenew; 
+        private Integer autoRenewPeriod; 
         private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -188,6 +214,8 @@ public class RenewElasticityAssurancesRequest extends Request {
             this.privatePoolOptions = request.privatePoolOptions;
             this.sourceRegionId = request.sourceRegionId;
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -230,6 +258,24 @@ public class RenewElasticityAssurancesRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * AutoRenewPeriod.
+         */
+        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
             return this;
         }
 
