@@ -31,6 +31,10 @@ public class CreateRumAppRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NickName")
     private String nickName;
 
@@ -73,6 +77,7 @@ public class CreateRumAppRequest extends Request {
         this.appGroup = builder.appGroup;
         this.appName = builder.appName;
         this.description = builder.description;
+        this.language = builder.language;
         this.nickName = builder.nickName;
         this.packageName = builder.packageName;
         this.realRegionId = builder.realRegionId;
@@ -116,6 +121,13 @@ public class CreateRumAppRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
     }
 
     /**
@@ -185,6 +197,7 @@ public class CreateRumAppRequest extends Request {
         private String appGroup; 
         private String appName; 
         private String description; 
+        private String language; 
         private String nickName; 
         private String packageName; 
         private String realRegionId; 
@@ -204,6 +217,7 @@ public class CreateRumAppRequest extends Request {
             this.appGroup = request.appGroup;
             this.appName = request.appName;
             this.description = request.description;
+            this.language = request.language;
             this.nickName = request.nickName;
             this.packageName = request.packageName;
             this.realRegionId = request.realRegionId;
@@ -249,6 +263,15 @@ public class CreateRumAppRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

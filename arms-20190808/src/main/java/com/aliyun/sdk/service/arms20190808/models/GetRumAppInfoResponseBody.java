@@ -619,6 +619,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
      * <p>GetRumAppInfoResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppConfig")
+        private String appConfig;
+
         @com.aliyun.core.annotation.NameInMap("AppGroup")
         private String appGroup;
 
@@ -683,6 +686,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private String type;
 
         private Data(Builder builder) {
+            this.appConfig = builder.appConfig;
             this.appGroup = builder.appGroup;
             this.appType = builder.appType;
             this.backendServiceTraceRegion = builder.backendServiceTraceRegion;
@@ -712,6 +716,13 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return appConfig
+         */
+        public String getAppConfig() {
+            return this.appConfig;
         }
 
         /**
@@ -862,6 +873,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appConfig; 
             private String appGroup; 
             private String appType; 
             private String backendServiceTraceRegion; 
@@ -883,6 +895,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String type; 
+
+            /**
+             * AppConfig.
+             */
+            public Builder appConfig(String appConfig) {
+                this.appConfig = appConfig;
+                return this;
+            }
 
             /**
              * <p>The group to which the application belongs.</p>

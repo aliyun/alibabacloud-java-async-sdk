@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateRumAppRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppConfig")
+    private String appConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRestart")
     private Boolean autoRestart;
 
@@ -69,6 +73,7 @@ public class UpdateRumAppRequest extends Request {
 
     private UpdateRumAppRequest(Builder builder) {
         super(builder);
+        this.appConfig = builder.appConfig;
         this.autoRestart = builder.autoRestart;
         this.backendServiceTraceRegion = builder.backendServiceTraceRegion;
         this.bonreeSDKConfigJson = builder.bonreeSDKConfigJson;
@@ -94,6 +99,13 @@ public class UpdateRumAppRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appConfig
+     */
+    public String getAppConfig() {
+        return this.appConfig;
     }
 
     /**
@@ -181,6 +193,7 @@ public class UpdateRumAppRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRumAppRequest, Builder> {
+        private String appConfig; 
         private Boolean autoRestart; 
         private String backendServiceTraceRegion; 
         private String bonreeSDKConfigJson; 
@@ -200,6 +213,7 @@ public class UpdateRumAppRequest extends Request {
 
         private Builder(UpdateRumAppRequest request) {
             super(request);
+            this.appConfig = request.appConfig;
             this.autoRestart = request.autoRestart;
             this.backendServiceTraceRegion = request.backendServiceTraceRegion;
             this.bonreeSDKConfigJson = request.bonreeSDKConfigJson;
@@ -213,6 +227,15 @@ public class UpdateRumAppRequest extends Request {
             this.serviceDomainOperationJson = request.serviceDomainOperationJson;
             this.stop = request.stop;
         } 
+
+        /**
+         * AppConfig.
+         */
+        public Builder appConfig(String appConfig) {
+            this.putQueryParameter("AppConfig", appConfig);
+            this.appConfig = appConfig;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to restart the application the next day. Valid values: true and false.</p>
