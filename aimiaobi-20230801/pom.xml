@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-aimiaobi20230801</artifactId>
-  <version>1.0.27</version>
+  <version>1.0.28</version>
   <packaging>jar</packaging>
   <name>alibabacloud-aimiaobi20230801</name>
   <description>Alibaba Cloud AiMiaoBi (20230801) Async SDK for Java

@@ -470,6 +470,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSearchTasksResponse> listSearchTasks(ListSearchTasksRequest request);
 
     /**
+     * @param request the request parameters of ListStyleLearningResult  ListStyleLearningResultRequest
+     * @return ListStyleLearningResultResponse
+     */
+    CompletableFuture<ListStyleLearningResultResponse> listStyleLearningResult(ListStyleLearningResultRequest request);
+
+    /**
      * @param request the request parameters of ListTimedViewAttitude  ListTimedViewAttitudeRequest
      * @return ListTimedViewAttitudeResponse
      */
@@ -528,6 +534,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunBookSmartCardResponse> runBookSmartCard(RunBookSmartCardRequest request);
 
     ResponseIterable<RunBookSmartCardResponseBody> runBookSmartCardWithResponseIterable(RunBookSmartCardRequest request);
+
+    /**
+     * @param request the request parameters of RunCommentGeneration  RunCommentGenerationRequest
+     * @return RunCommentGenerationResponse
+     */
+    CompletableFuture<RunCommentGenerationResponse> runCommentGeneration(RunCommentGenerationRequest request);
+
+    ResponseIterable<RunCommentGenerationResponseBody> runCommentGenerationWithResponseIterable(RunCommentGenerationRequest request);
 
     /**
      * @param request the request parameters of RunContinueContent  RunContinueContentRequest
@@ -616,6 +630,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunKeywordsExtractionGenerationResponse> runKeywordsExtractionGeneration(RunKeywordsExtractionGenerationRequest request);
 
     ResponseIterable<RunKeywordsExtractionGenerationResponseBody> runKeywordsExtractionGenerationWithResponseIterable(RunKeywordsExtractionGenerationRequest request);
+
+    /**
+     * @param request the request parameters of RunMultiDocIntroduction  RunMultiDocIntroductionRequest
+     * @return RunMultiDocIntroductionResponse
+     */
+    CompletableFuture<RunMultiDocIntroductionResponse> runMultiDocIntroduction(RunMultiDocIntroductionRequest request);
+
+    ResponseIterable<RunMultiDocIntroductionResponseBody> runMultiDocIntroductionWithResponseIterable(RunMultiDocIntroductionRequest request);
 
     /**
      * @param request the request parameters of RunSearchGeneration  RunSearchGenerationRequest

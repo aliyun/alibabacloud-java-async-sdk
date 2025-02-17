@@ -1391,6 +1391,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListStyleLearningResult  ListStyleLearningResultRequest
+     * @return ListStyleLearningResultResponse
+     */
+    @Override
+    public CompletableFuture<ListStyleLearningResultResponse> listStyleLearningResult(ListStyleLearningResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListStyleLearningResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStyleLearningResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStyleLearningResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTimedViewAttitude  ListTimedViewAttitudeRequest
      * @return ListTimedViewAttitudeResponse
      */
@@ -1577,6 +1595,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunBookSmartCard").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runBookSmartCard").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         RunBookSmartCardResponseBodyIterator iterator = RunBookSmartCardResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunCommentGeneration  RunCommentGenerationRequest
+     * @return RunCommentGenerationResponse
+     */
+    @Override
+    public CompletableFuture<RunCommentGenerationResponse> runCommentGeneration(RunCommentGenerationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunCommentGeneration").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runCommentGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunCommentGenerationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunCommentGenerationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunCommentGenerationResponseBody> runCommentGenerationWithResponseIterable(RunCommentGenerationRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunCommentGeneration").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runCommentGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunCommentGenerationResponseBodyIterator iterator = RunCommentGenerationResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
@@ -1885,6 +1931,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunKeywordsExtractionGeneration").setMethod(HttpMethod.POST).setPathRegex("/quanmiao/aimiaobi/runKeywordsExtractionGeneration").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         RunKeywordsExtractionGenerationResponseBodyIterator iterator = RunKeywordsExtractionGenerationResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunMultiDocIntroduction  RunMultiDocIntroductionRequest
+     * @return RunMultiDocIntroductionResponse
+     */
+    @Override
+    public CompletableFuture<RunMultiDocIntroductionResponse> runMultiDocIntroduction(RunMultiDocIntroductionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunMultiDocIntroduction").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runMultiDocIntroduction").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunMultiDocIntroductionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunMultiDocIntroductionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunMultiDocIntroductionResponseBody> runMultiDocIntroductionWithResponseIterable(RunMultiDocIntroductionRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunMultiDocIntroduction").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runMultiDocIntroduction").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunMultiDocIntroductionResponseBodyIterator iterator = RunMultiDocIntroductionResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
