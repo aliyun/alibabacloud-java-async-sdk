@@ -255,7 +255,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         } 
 
         /**
-         * AppCriteria.
+         * <p>Application query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**7ad7e3a</p>
          */
         public Builder appCriteria(String appCriteria) {
             this.putQueryParameter("AppCriteria", appCriteria);
@@ -264,7 +267,13 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * AuthItem.
+         * <p>Instance type. Values:</p>
+         * <ul>
+         * <li><strong>SERVERLESS</strong>: Serverless asset</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVERLESS</p>
          */
         public Builder authItem(String authItem) {
             this.putQueryParameter("AuthItem", authItem);
@@ -273,7 +282,14 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * AutoBind.
+         * <p>Enable auto-binding. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Off</li>
+         * <li><strong>1</strong>: On</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoBind(Integer autoBind) {
             this.putQueryParameter("AutoBind", autoBind);
@@ -282,7 +298,14 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * BindAll.
+         * <p>Whether to bind all. Default is <strong>false</strong>. Values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes</li>
+         * <li><strong>false</strong>: No</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder bindAll(Boolean bindAll) {
             this.putQueryParameter("BindAll", bindAll);
@@ -291,7 +314,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * BindAppList.
+         * <p>List of application IDs to be bound.</p>
+         * <blockquote>
+         * <p>Obtained through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+         * </blockquote>
          */
         public Builder bindAppList(java.util.List<String> bindAppList) {
             this.putQueryParameter("BindAppList", bindAppList);
@@ -300,7 +326,14 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * BindAssetType.
+         * <p>Type of asset to operate on. Values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: Instance</li>
+         * <li><strong>APP</strong>: Application</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>APP</p>
          */
         public Builder bindAssetType(String bindAssetType) {
             this.putQueryParameter("BindAssetType", bindAssetType);
@@ -309,7 +342,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * BindUuidList.
+         * <p>List of asset UUIDs to be bound.</p>
          */
         public Builder bindUuidList(java.util.List<String> bindUuidList) {
             this.putQueryParameter("BindUuidList", bindUuidList);
@@ -318,7 +351,13 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * Criteria.
+         * <p>Set the conditions for searching assets. This parameter is in JSON format, and case sensitivity should be noted when entering parameters.</p>
+         * <blockquote>
+         * <p>Supports searching assets using instance ID, instance name, VPC ID, region, public IP address, etc. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> interface to query supported search conditions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;vulStatus&quot;,&quot;value&quot;:&quot;YES&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -327,7 +366,14 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * LogicalExp.
+         * <p>Set the logical relationship between multiple search conditions. Values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: Indicates an <strong>or</strong> relationship between multiple conditions.</li>
+         * <li><strong>AND</strong>: Indicates an <strong>and</strong> relationship between multiple conditions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -336,7 +382,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * NtmVersion.
+         * <p>NTM version code, used for pre-binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level2</p>
          */
         public Builder ntmVersion(String ntmVersion) {
             this.putQueryParameter("NtmVersion", ntmVersion);
@@ -345,7 +394,17 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * PreBind.
+         * <p>Whether it is a pre-bind operation. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: No</li>
+         * <li><strong>1</strong>: Yes</li>
+         * </ul>
+         * <blockquote>
+         * <p>After enabling pre-binding, the specified server will automatically bind the corresponding version&quot;s authorization count after the purchase is completed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder preBind(Integer preBind) {
             this.putQueryParameter("PreBind", preBind);
@@ -354,7 +413,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * PreBindOrderId.
+         * <p>Pre-bind order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233016**0482</p>
          */
         public Builder preBindOrderId(Long preBindOrderId) {
             this.putQueryParameter("PreBindOrderId", preBindOrderId);
@@ -363,7 +425,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryUid.
+         * <p>UID of the associated resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder resourceDirectoryUid(Long resourceDirectoryUid) {
             this.putQueryParameter("ResourceDirectoryUid", resourceDirectoryUid);
@@ -372,7 +437,10 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * UnBindAppList.
+         * <p>List of application IDs to be unbound.</p>
+         * <blockquote>
+         * <p>Obtained through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+         * </blockquote>
          */
         public Builder unBindAppList(java.util.List<String> unBindAppList) {
             this.putQueryParameter("UnBindAppList", unBindAppList);
@@ -381,7 +449,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         }
 
         /**
-         * UnBindUuidList.
+         * <p>List of asset UUIDs to be unbound.</p>
          */
         public Builder unBindUuidList(java.util.List<String> unBindUuidList) {
             this.putQueryParameter("UnBindUuidList", unBindUuidList);

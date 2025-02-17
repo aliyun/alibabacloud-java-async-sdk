@@ -12186,6 +12186,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is only available to users who have purchased the cloud platform configuration check authorization or enabled the pay-as-you-go service for cloud platform configuration checks.</p>
+     * 
      * @param request the request parameters of ListOperationCheck  ListOperationCheckRequest
      * @return ListOperationCheckResponse
      */
@@ -12986,6 +12989,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyBackupPolicyStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyBinarySecurityPolicy  ModifyBinarySecurityPolicyRequest
+     * @return ModifyBinarySecurityPolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifyBinarySecurityPolicyResponse> modifyBinarySecurityPolicy(ModifyBinarySecurityPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyBinarySecurityPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyBinarySecurityPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyBinarySecurityPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

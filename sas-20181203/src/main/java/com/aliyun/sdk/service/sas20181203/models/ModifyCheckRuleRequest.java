@@ -130,7 +130,7 @@ public class ModifyCheckRuleRequest extends Request {
         } 
 
         /**
-         * AddInstanceList.
+         * <p>The list of instances to be added in this rule update. This parameter does not need to be passed if there are no instances to add.</p>
          */
         public Builder addInstanceList(java.util.List<AddInstanceList> addInstanceList) {
             this.putQueryParameter("AddInstanceList", addInstanceList);
@@ -139,7 +139,7 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * DeleteInstanceList.
+         * <p>The list of instances to be removed in this rule update. This parameter does not need to be passed if there are no instances to remove.</p>
          */
         public Builder deleteInstanceList(java.util.List<DeleteInstanceList> deleteInstanceList) {
             this.putQueryParameter("DeleteInstanceList", deleteInstanceList);
@@ -148,7 +148,10 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRemark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -157,6 +160,10 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
+         * <p>Rule ID.</p>
+         * <blockquote>
+         * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> API.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +176,13 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>Rule type. Default is <strong>WHITE</strong>. Values:</p>
+         * <ul>
+         * <li><strong>WHITE</strong>: Add to whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITE</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -178,7 +191,14 @@ public class ModifyCheckRuleRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>The scope of effect for modifying the rule:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: Instance</li>
+         * <li><strong>ITEM</strong>: Check item</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -238,7 +258,10 @@ public class ModifyCheckRuleRequest extends Request {
             private String regionId; 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9g8ljygfqs1ez3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -246,7 +269,10 @@ public class ModifyCheckRuleRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -305,7 +331,10 @@ public class ModifyCheckRuleRequest extends Request {
             private String regionId; 
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-8vb0e8qdaj0yyxjo****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -313,7 +342,10 @@ public class ModifyCheckRuleRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

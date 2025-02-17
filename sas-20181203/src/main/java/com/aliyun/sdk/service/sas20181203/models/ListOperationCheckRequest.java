@@ -131,7 +131,13 @@ public class ListOperationCheckRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * <p>Check item ID.</p>
+         * <blockquote>
+         * <p>Obtain this parameter by calling the <a href="~~ListCheckResult~~">ListCheckResult</a> interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -140,7 +146,10 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Timestamp (in milliseconds) of the end time of the queried task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719923175001</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -149,7 +158,14 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language type for request and response messages, default value is zh. Values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -158,6 +174,7 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
+         * <p>Information about the operated instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder operationTaskInstances(java.util.List<OperationTaskInstances> operationTaskInstances) {
@@ -167,7 +184,10 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Timestamp (in milliseconds) of the start time of the queried task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719923175000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -176,6 +196,11 @@ public class ListOperationCheckRequest extends Request {
         }
 
         /**
+         * <p>Task type corresponding to the task:</p>
+         * <ul>
+         * <li><strong>REPAIR</strong>: Repair task</li>
+         * <li><strong>ROLLBACK</strong>: Rollback task</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +276,10 @@ public class ListOperationCheckRequest extends Request {
             private String vendor; 
 
             /**
-             * InstanceId.
+             * <p>Cloud asset instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1642ib4bg2bm****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +287,10 @@ public class ListOperationCheckRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -267,7 +298,13 @@ public class ListOperationCheckRequest extends Request {
             }
 
             /**
-             * Vendor.
+             * <p>Asset vendor. Values:</p>
+             * <ul>
+             * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

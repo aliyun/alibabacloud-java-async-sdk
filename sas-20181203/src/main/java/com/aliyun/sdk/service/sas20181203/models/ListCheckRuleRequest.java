@@ -143,7 +143,13 @@ public class ListCheckRuleRequest extends Request {
         } 
 
         /**
-         * CheckId.
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> API to get the check item ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -152,7 +158,10 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * CheckName.
+         * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>checkName</p>
          */
         public Builder checkName(String checkName) {
             this.putQueryParameter("CheckName", checkName);
@@ -161,7 +170,10 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number displayed in a paginated query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,7 +182,14 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Set the language type for the request and response messages. The default is <strong>zh</strong>. Values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +198,10 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of check items displayed per page in a paginated query. The default value is <strong>20</strong>, indicating 20 check items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +210,13 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>The type of rule. Default is <strong>WHITE</strong>. Values:</p>
+         * <ul>
+         * <li><strong>WHITE</strong>: Add to whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITE</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -197,7 +225,14 @@ public class ListCheckRuleRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>The scope where the rule applies. Values:</p>
+         * <ul>
+         * <li><strong>INSTNACE</strong>: Instance</li>
+         * <li><strong>ITEM</strong>: Check item</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

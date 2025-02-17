@@ -73,7 +73,15 @@ public class GetCheckCountStatisticRequest extends Request {
         } 
 
         /**
-         * StatisticType.
+         * <p>Type of data statistics. Values:  </p>
+         * <ul>
+         * <li><strong>user</strong>: Top 5 over-authorized users.  </li>
+         * <li><strong>role</strong>: Top 5 over-authorized roles.  </li>
+         * <li><strong>instance</strong>: Top 5 risky cloud products.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder statisticType(String statisticType) {
             this.putQueryParameter("StatisticType", statisticType);
@@ -82,7 +90,7 @@ public class GetCheckCountStatisticRequest extends Request {
         }
 
         /**
-         * Vendors.
+         * <p>List of cloud vendors.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);

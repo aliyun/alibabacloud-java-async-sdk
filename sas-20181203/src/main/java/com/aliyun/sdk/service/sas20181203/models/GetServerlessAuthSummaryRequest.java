@@ -87,7 +87,10 @@ public class GetServerlessAuthSummaryRequest extends Request {
         } 
 
         /**
-         * AppRegionId.
+         * <p>Application region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder appRegionId(String appRegionId) {
             this.putQueryParameter("AppRegionId", appRegionId);
@@ -96,7 +99,14 @@ public class GetServerlessAuthSummaryRequest extends Request {
         }
 
         /**
-         * MachineType.
+         * <p>Server type: </p>
+         * <ul>
+         * <li><strong>RunD</strong></li>
+         * <li><strong>ECI</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RunD</p>
          */
         public Builder machineType(String machineType) {
             this.putQueryParameter("MachineType", machineType);
@@ -105,7 +115,15 @@ public class GetServerlessAuthSummaryRequest extends Request {
         }
 
         /**
-         * VendorType.
+         * <p>Cloud product: </p>
+         * <ul>
+         * <li><strong>ASK</strong></li>
+         * <li><strong>SAE</strong></li>
+         * <li><strong>ACS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SAE</p>
          */
         public Builder vendorType(String vendorType) {
             this.putQueryParameter("VendorType", vendorType);

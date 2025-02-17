@@ -55,7 +55,7 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Details of the returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A47F77A1***8CD37050E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,14 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
             private Integer resultCode; 
 
             /**
-             * ResultCode.
+             * <p>Result code. Values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Success</li>
+             * <li><strong>1</strong>: Parameter error</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;

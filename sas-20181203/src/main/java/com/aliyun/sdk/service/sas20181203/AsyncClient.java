@@ -4194,6 +4194,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOpaClusterStrategyNewResponse> listOpaClusterStrategyNew(ListOpaClusterStrategyNewRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This interface is only available to users who have purchased the cloud platform configuration check authorization or enabled the pay-as-you-go service for cloud platform configuration checks.</p>
+     * 
      * @param request the request parameters of ListOperationCheck  ListOperationCheckRequest
      * @return ListOperationCheckResponse
      */
@@ -4470,6 +4473,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyBackupPolicyStatusResponse
      */
     CompletableFuture<ModifyBackupPolicyStatusResponse> modifyBackupPolicyStatus(ModifyBackupPolicyStatusRequest request);
+
+    /**
+     * @param request the request parameters of ModifyBinarySecurityPolicy  ModifyBinarySecurityPolicyRequest
+     * @return ModifyBinarySecurityPolicyResponse
+     */
+    CompletableFuture<ModifyBinarySecurityPolicyResponse> modifyBinarySecurityPolicy(ModifyBinarySecurityPolicyRequest request);
 
     /**
      * @param request the request parameters of ModifyCheckRule  ModifyCheckRuleRequest

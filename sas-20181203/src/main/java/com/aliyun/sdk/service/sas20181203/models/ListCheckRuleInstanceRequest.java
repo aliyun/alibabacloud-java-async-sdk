@@ -102,7 +102,10 @@ public class ListCheckRuleInstanceRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page when performing a paginated query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -111,7 +114,7 @@ public class ListCheckRuleInstanceRequest extends Request {
         }
 
         /**
-         * InstanceList.
+         * <p>Instance list.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -120,7 +123,10 @@ public class ListCheckRuleInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of items per page in a paginated query. The default value is <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,6 +135,10 @@ public class ListCheckRuleInstanceRequest extends Request {
         }
 
         /**
+         * <p>Rule ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">LisCheckRule</a> interface to get this parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +202,13 @@ public class ListCheckRuleInstanceRequest extends Request {
             private String regionId; 
 
             /**
-             * InstanceId.
+             * <p>Asset instance ID.</p>
+             * <blockquote>
+             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9fdluqx20mp2x7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -200,7 +216,13 @@ public class ListCheckRuleInstanceRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region where the asset is located.</p>
+             * <blockquote>
+             * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongkong</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

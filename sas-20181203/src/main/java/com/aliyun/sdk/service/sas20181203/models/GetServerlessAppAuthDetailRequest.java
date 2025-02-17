@@ -101,7 +101,13 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>SAE application ID.</p>
+         * <blockquote>
+         * <p>Obtain through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3de9f2ac-f***769226df</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -110,7 +116,10 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         }
 
         /**
-         * AppRegionId.
+         * <p>Application region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder appRegionId(String appRegionId) {
             this.putQueryParameter("AppRegionId", appRegionId);
@@ -119,7 +128,14 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         }
 
         /**
-         * MachineType.
+         * <p>Server type: </p>
+         * <ul>
+         * <li><strong>RunD</strong></li>
+         * <li><strong>ECI</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RunD</p>
          */
         public Builder machineType(String machineType) {
             this.putQueryParameter("MachineType", machineType);
@@ -128,7 +144,15 @@ public class GetServerlessAppAuthDetailRequest extends Request {
         }
 
         /**
-         * VendorType.
+         * <p>Cloud product: </p>
+         * <ul>
+         * <li><strong>ASK</strong></li>
+         * <li><strong>SAE</strong></li>
+         * <li><strong>ACS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SAE</p>
          */
         public Builder vendorType(String vendorType) {
             this.putQueryParameter("VendorType", vendorType);

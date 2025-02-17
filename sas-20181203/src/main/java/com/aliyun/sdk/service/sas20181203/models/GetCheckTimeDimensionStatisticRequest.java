@@ -101,7 +101,10 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         } 
 
         /**
-         * EndTimeStamp.
+         * <p>End time, in timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672285044000</p>
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -110,7 +113,10 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * StartTimeStamp.
+         * <p>Start time, in timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672385044000</p>
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);
@@ -119,7 +125,14 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * StatisticType.
+         * <p>Type of statistical data. Values:</p>
+         * <ul>
+         * <li><strong>CheckPassRate</strong>: Check item pass rate.</li>
+         * <li><strong>AssetPassRate</strong>: Asset pass rate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AssetPassRate</p>
          */
         public Builder statisticType(String statisticType) {
             this.putQueryParameter("StatisticType", statisticType);
@@ -128,7 +141,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         }
 
         /**
-         * Vendors.
+         * <p>List of cloud vendors.</p>
          */
         public Builder vendors(java.util.List<String> vendors) {
             this.putQueryParameter("Vendors", vendors);

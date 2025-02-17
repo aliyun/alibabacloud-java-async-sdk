@@ -103,6 +103,10 @@ public class ModifyCloudVendorTrialConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the audit log configuration to be modified.</p>
+         * <blockquote>
+         * <p>The ID can be queried via <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +119,14 @@ public class ModifyCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * AuthInfo.
+         * <p>Enter the multi-cloud configuration information:</p>
+         * <ul>
+         * <li>AWS: parameters sqsQueueName, sqsRegion</li>
+         * <li>Tencent: parameters kafkaUserName, kafkaBootstrapServers, kafkaTopic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sqsRegion&quot;:&quot;us-west-2&quot;,&quot;sqsQueueName&quot;:&quot;****&quot;}</p>
          */
         public Builder authInfo(String authInfo) {
             this.putQueryParameter("AuthInfo", authInfo);
@@ -124,7 +135,14 @@ public class ModifyCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
-         * DeleteTrail.
+         * <p>Whether to delete this audit log configuration:</p>
+         * <ul>
+         * <li>true: Delete</li>
+         * <li>false: Do not delete</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteTrail(Boolean deleteTrail) {
             this.putQueryParameter("DeleteTrail", deleteTrail);
@@ -133,6 +151,11 @@ public class ModifyCloudVendorTrialConfigRequest extends Request {
         }
 
         /**
+         * <p>Cloud asset vendor. Values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Tencent Cloud</li>
+         * <li><strong>AWS</strong>: AWS</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
