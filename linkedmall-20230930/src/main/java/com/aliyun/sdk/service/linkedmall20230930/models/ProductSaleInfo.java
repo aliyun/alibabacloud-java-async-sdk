@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductSaleInfo} extends {@link TeaModel}
  *
  * <p>ProductSaleInfo</p>
@@ -21,7 +27,7 @@ public class ProductSaleInfo extends TeaModel {
     private String fuzzyQuantity;
 
     @com.aliyun.core.annotation.NameInMap("limitRules")
-    private java.util.List < LimitRule > limitRules;
+    private java.util.List<LimitRule> limitRules;
 
     @com.aliyun.core.annotation.NameInMap("lmItemId")
     private String lmItemId;
@@ -42,7 +48,7 @@ public class ProductSaleInfo extends TeaModel {
     private String shopId;
 
     @com.aliyun.core.annotation.NameInMap("skus")
-    private java.util.List < SkuSaleInfo > skus;
+    private java.util.List<SkuSaleInfo> skus;
 
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
@@ -94,7 +100,7 @@ public class ProductSaleInfo extends TeaModel {
     /**
      * @return limitRules
      */
-    public java.util.List < LimitRule > getLimitRules() {
+    public java.util.List<LimitRule> getLimitRules() {
         return this.limitRules;
     }
 
@@ -143,7 +149,7 @@ public class ProductSaleInfo extends TeaModel {
     /**
      * @return skus
      */
-    public java.util.List < SkuSaleInfo > getSkus() {
+    public java.util.List<SkuSaleInfo> getSkus() {
         return this.skus;
     }
 
@@ -158,14 +164,14 @@ public class ProductSaleInfo extends TeaModel {
         private Boolean canSell; 
         private String divisionCode; 
         private String fuzzyQuantity; 
-        private java.util.List < LimitRule > limitRules; 
+        private java.util.List<LimitRule> limitRules; 
         private String lmItemId; 
         private String productId; 
         private String productStatus; 
         private Long quantity; 
         private String requestId; 
         private String shopId; 
-        private java.util.List < SkuSaleInfo > skus; 
+        private java.util.List<SkuSaleInfo> skus; 
         private String title; 
 
         /**
@@ -195,7 +201,7 @@ public class ProductSaleInfo extends TeaModel {
         /**
          * limitRules.
          */
-        public Builder limitRules(java.util.List < LimitRule > limitRules) {
+        public Builder limitRules(java.util.List<LimitRule> limitRules) {
             this.limitRules = limitRules;
             return this;
         }
@@ -251,7 +257,7 @@ public class ProductSaleInfo extends TeaModel {
         /**
          * skus.
          */
-        public Builder skus(java.util.List < SkuSaleInfo > skus) {
+        public Builder skus(java.util.List<SkuSaleInfo> skus) {
             this.skus = skus;
             return this;
         }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkuSaleInfoListQuery} extends {@link TeaModel}
  *
  * <p>SkuSaleInfoListQuery</p>
@@ -20,7 +26,7 @@ public class SkuSaleInfoListQuery extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("skuQueryParams")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SkuQueryParam > skuQueryParams;
+    private java.util.List<SkuQueryParam> skuQueryParams;
 
     private SkuSaleInfoListQuery(Builder builder) {
         this.divisionCode = builder.divisionCode;
@@ -53,14 +59,14 @@ public class SkuSaleInfoListQuery extends TeaModel {
     /**
      * @return skuQueryParams
      */
-    public java.util.List < SkuQueryParam > getSkuQueryParams() {
+    public java.util.List<SkuQueryParam> getSkuQueryParams() {
         return this.skuQueryParams;
     }
 
     public static final class Builder {
         private String divisionCode; 
         private String purchaserId; 
-        private java.util.List < SkuQueryParam > skuQueryParams; 
+        private java.util.List<SkuQueryParam> skuQueryParams; 
 
         /**
          * divisionCode.
@@ -71,7 +77,10 @@ public class SkuSaleInfoListQuery extends TeaModel {
         }
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21000017</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.purchaserId = purchaserId;
@@ -79,9 +88,9 @@ public class SkuSaleInfoListQuery extends TeaModel {
         }
 
         /**
-         * skuQueryParams.
+         * <p>This parameter is required.</p>
          */
-        public Builder skuQueryParams(java.util.List < SkuQueryParam > skuQueryParams) {
+        public Builder skuQueryParams(java.util.List<SkuQueryParam> skuQueryParams) {
             this.skuQueryParams = skuQueryParams;
             return this;
         }

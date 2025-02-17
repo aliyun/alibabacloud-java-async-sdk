@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GeneralBill} extends {@link TeaModel}
  *
  * <p>GeneralBill</p>
@@ -18,7 +24,7 @@ public class GeneralBill extends TeaModel {
     private String billPeriod;
 
     @com.aliyun.core.annotation.NameInMap("downloadUrl")
-    private java.util.List < String > downloadUrl;
+    private java.util.List<String> downloadUrl;
 
     @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
@@ -79,7 +85,7 @@ public class GeneralBill extends TeaModel {
     /**
      * @return downloadUrl
      */
-    public java.util.List < String > getDownloadUrl() {
+    public java.util.List<String> getDownloadUrl() {
         return this.downloadUrl;
     }
 
@@ -135,7 +141,7 @@ public class GeneralBill extends TeaModel {
     public static final class Builder {
         private String billId; 
         private String billPeriod; 
-        private java.util.List < String > downloadUrl; 
+        private java.util.List<String> downloadUrl; 
         private String endTime; 
         private String gmtCreate; 
         private String gmtModified; 
@@ -163,7 +169,7 @@ public class GeneralBill extends TeaModel {
         /**
          * downloadUrl.
          */
-        public Builder downloadUrl(java.util.List < String > downloadUrl) {
+        public Builder downloadUrl(java.util.List<String> downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
         }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderProductResult} extends {@link TeaModel}
  *
  * <p>OrderProductResult</p>
@@ -15,7 +21,7 @@ public class OrderProductResult extends TeaModel {
     private Boolean canSell;
 
     @com.aliyun.core.annotation.NameInMap("features")
-    private java.util.Map < String, ? > features;
+    private java.util.Map<String, ?> features;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -76,7 +82,7 @@ public class OrderProductResult extends TeaModel {
     /**
      * @return features
      */
-    public java.util.Map < String, ? > getFeatures() {
+    public java.util.Map<String, ?> getFeatures() {
         return this.features;
     }
 
@@ -145,7 +151,7 @@ public class OrderProductResult extends TeaModel {
 
     public static final class Builder {
         private Boolean canSell; 
-        private java.util.Map < String, ? > features; 
+        private java.util.Map<String, ?> features; 
         private String message; 
         private Long price; 
         private String productId; 
@@ -167,7 +173,7 @@ public class OrderProductResult extends TeaModel {
         /**
          * features.
          */
-        public Builder features(java.util.Map < String, ? > features) {
+        public Builder features(java.util.Map<String, ?> features) {
             this.features = features;
             return this;
         }

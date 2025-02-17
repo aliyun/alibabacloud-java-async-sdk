@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShopCreateRequest} extends {@link RequestModel}
  *
  * <p>ShopCreateRequest</p>
@@ -115,7 +121,10 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>店铺描述</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -123,7 +132,10 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
-         * operatorDingTalkId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12344335</p>
          */
         public Builder operatorDingTalkId(String operatorDingTalkId) {
             this.operatorDingTalkId = operatorDingTalkId;
@@ -139,7 +151,10 @@ public class ShopCreateRequest extends Request {
         }
 
         /**
-         * shopName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>店铺名称</p>
          */
         public Builder shopName(String shopName) {
             this.shopName = shopName;

@@ -12,19 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PurchaseOrderCreateResult} extends {@link TeaModel}
+ * {@link DistributeProductResult} extends {@link TeaModel}
  *
- * <p>PurchaseOrderCreateResult</p>
+ * <p>DistributeProductResult</p>
  */
-public class PurchaseOrderCreateResult extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("purchaseOrderId")
-    private String purchaseOrderId;
+public class DistributeProductResult extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private PurchaseOrderCreateResult(Builder builder) {
-        this.purchaseOrderId = builder.purchaseOrderId;
+    private DistributeProductResult(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
     }
 
@@ -32,15 +36,22 @@ public class PurchaseOrderCreateResult extends TeaModel {
         return new Builder();
     }
 
-    public static PurchaseOrderCreateResult create() {
+    public static DistributeProductResult create() {
         return builder().build();
     }
 
     /**
-     * @return purchaseOrderId
+     * @return code
      */
-    public String getPurchaseOrderId() {
-        return this.purchaseOrderId;
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -51,14 +62,23 @@ public class PurchaseOrderCreateResult extends TeaModel {
     }
 
     public static final class Builder {
-        private String purchaseOrderId; 
+        private String code; 
+        private String message; 
         private String requestId; 
 
         /**
-         * purchaseOrderId.
+         * code.
          */
-        public Builder purchaseOrderId(String purchaseOrderId) {
-            this.purchaseOrderId = purchaseOrderId;
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -70,8 +90,8 @@ public class PurchaseOrderCreateResult extends TeaModel {
             return this;
         }
 
-        public PurchaseOrderCreateResult build() {
-            return new PurchaseOrderCreateResult(this);
+        public DistributeProductResult build() {
+            return new DistributeProductResult(this);
         } 
 
     } 

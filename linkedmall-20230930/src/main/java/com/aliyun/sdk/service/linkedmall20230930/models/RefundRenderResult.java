@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundRenderResult} extends {@link TeaModel}
  *
  * <p>RefundRenderResult</p>
@@ -21,7 +27,7 @@ public class RefundRenderResult extends TeaModel {
     private String orderLineId;
 
     @com.aliyun.core.annotation.NameInMap("refundReasonList")
-    private java.util.List < RefundReason > refundReasonList;
+    private java.util.List<RefundReason> refundReasonList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -66,7 +72,7 @@ public class RefundRenderResult extends TeaModel {
     /**
      * @return refundReasonList
      */
-    public java.util.List < RefundReason > getRefundReasonList() {
+    public java.util.List<RefundReason> getRefundReasonList() {
         return this.refundReasonList;
     }
 
@@ -81,7 +87,7 @@ public class RefundRenderResult extends TeaModel {
         private Integer bizClaimType; 
         private DistributionMaxRefundFee maxRefundFeeData; 
         private String orderLineId; 
-        private java.util.List < RefundReason > refundReasonList; 
+        private java.util.List<RefundReason> refundReasonList; 
         private String requestId; 
 
         /**
@@ -111,7 +117,7 @@ public class RefundRenderResult extends TeaModel {
         /**
          * refundReasonList.
          */
-        public Builder refundReasonList(java.util.List < RefundReason > refundReasonList) {
+        public Builder refundReasonList(java.util.List<RefundReason> refundReasonList) {
             this.refundReasonList = refundReasonList;
             return this;
         }

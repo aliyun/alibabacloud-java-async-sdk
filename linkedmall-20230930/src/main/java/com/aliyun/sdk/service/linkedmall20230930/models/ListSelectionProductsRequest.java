@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSelectionProductsRequest} extends {@link RequestModel}
  *
  * <p>ListSelectionProductsRequest</p>
@@ -84,7 +90,10 @@ public class ListSelectionProductsRequest extends Request {
         } 
 
         /**
-         * pageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -93,7 +102,10 @@ public class ListSelectionProductsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -102,7 +114,10 @@ public class ListSelectionProductsRequest extends Request {
         }
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putQueryParameter("purchaserId", purchaserId);

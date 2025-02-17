@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Product} extends {@link TeaModel}
  *
  * <p>Product</p>
@@ -18,7 +24,7 @@ public class Product extends TeaModel {
     private Boolean canSell;
 
     @com.aliyun.core.annotation.NameInMap("categoryChain")
-    private java.util.List < Category > categoryChain;
+    private java.util.List<Category> categoryChain;
 
     @com.aliyun.core.annotation.NameInMap("categoryLeafId")
     private Long categoryLeafId;
@@ -30,16 +36,19 @@ public class Product extends TeaModel {
     private String divisionCode;
 
     @com.aliyun.core.annotation.NameInMap("extendProperties")
-    private java.util.List < ProductExtendProperty > extendProperties;
+    private java.util.List<ProductExtendProperty> extendProperties;
 
     @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
     @com.aliyun.core.annotation.NameInMap("images")
-    private java.util.List < String > images;
+    private java.util.List<String> images;
+
+    @com.aliyun.core.annotation.NameInMap("inGroup")
+    private Boolean inGroup;
 
     @com.aliyun.core.annotation.NameInMap("limitRules")
-    private java.util.List < LimitRule > limitRules;
+    private java.util.List<LimitRule> limitRules;
 
     @com.aliyun.core.annotation.NameInMap("lmItemId")
     private String lmItemId;
@@ -51,7 +60,7 @@ public class Product extends TeaModel {
     private String productId;
 
     @com.aliyun.core.annotation.NameInMap("productSpecs")
-    private java.util.List < ProductSpec > productSpecs;
+    private java.util.List<ProductSpec> productSpecs;
 
     @com.aliyun.core.annotation.NameInMap("productStatus")
     private String productStatus;
@@ -60,7 +69,7 @@ public class Product extends TeaModel {
     private String productType;
 
     @com.aliyun.core.annotation.NameInMap("properties")
-    private java.util.List < ProductProperty > properties;
+    private java.util.List<ProductProperty> properties;
 
     @com.aliyun.core.annotation.NameInMap("quantity")
     private Long quantity;
@@ -72,7 +81,7 @@ public class Product extends TeaModel {
     private String shopId;
 
     @com.aliyun.core.annotation.NameInMap("skus")
-    private java.util.List < Sku > skus;
+    private java.util.List<Sku> skus;
 
     @com.aliyun.core.annotation.NameInMap("soldQuantity")
     private String soldQuantity;
@@ -96,6 +105,7 @@ public class Product extends TeaModel {
         this.extendProperties = builder.extendProperties;
         this.fuzzyQuantity = builder.fuzzyQuantity;
         this.images = builder.images;
+        this.inGroup = builder.inGroup;
         this.limitRules = builder.limitRules;
         this.lmItemId = builder.lmItemId;
         this.picUrl = builder.picUrl;
@@ -139,7 +149,7 @@ public class Product extends TeaModel {
     /**
      * @return categoryChain
      */
-    public java.util.List < Category > getCategoryChain() {
+    public java.util.List<Category> getCategoryChain() {
         return this.categoryChain;
     }
 
@@ -167,7 +177,7 @@ public class Product extends TeaModel {
     /**
      * @return extendProperties
      */
-    public java.util.List < ProductExtendProperty > getExtendProperties() {
+    public java.util.List<ProductExtendProperty> getExtendProperties() {
         return this.extendProperties;
     }
 
@@ -181,14 +191,21 @@ public class Product extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < String > getImages() {
+    public java.util.List<String> getImages() {
         return this.images;
+    }
+
+    /**
+     * @return inGroup
+     */
+    public Boolean getInGroup() {
+        return this.inGroup;
     }
 
     /**
      * @return limitRules
      */
-    public java.util.List < LimitRule > getLimitRules() {
+    public java.util.List<LimitRule> getLimitRules() {
         return this.limitRules;
     }
 
@@ -216,7 +233,7 @@ public class Product extends TeaModel {
     /**
      * @return productSpecs
      */
-    public java.util.List < ProductSpec > getProductSpecs() {
+    public java.util.List<ProductSpec> getProductSpecs() {
         return this.productSpecs;
     }
 
@@ -237,7 +254,7 @@ public class Product extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.List < ProductProperty > getProperties() {
+    public java.util.List<ProductProperty> getProperties() {
         return this.properties;
     }
 
@@ -265,7 +282,7 @@ public class Product extends TeaModel {
     /**
      * @return skus
      */
-    public java.util.List < Sku > getSkus() {
+    public java.util.List<Sku> getSkus() {
         return this.skus;
     }
 
@@ -300,25 +317,26 @@ public class Product extends TeaModel {
     public static final class Builder {
         private String brandName; 
         private Boolean canSell; 
-        private java.util.List < Category > categoryChain; 
+        private java.util.List<Category> categoryChain; 
         private Long categoryLeafId; 
         private String descPath; 
         private String divisionCode; 
-        private java.util.List < ProductExtendProperty > extendProperties; 
+        private java.util.List<ProductExtendProperty> extendProperties; 
         private String fuzzyQuantity; 
-        private java.util.List < String > images; 
-        private java.util.List < LimitRule > limitRules; 
+        private java.util.List<String> images; 
+        private Boolean inGroup; 
+        private java.util.List<LimitRule> limitRules; 
         private String lmItemId; 
         private String picUrl; 
         private String productId; 
-        private java.util.List < ProductSpec > productSpecs; 
+        private java.util.List<ProductSpec> productSpecs; 
         private String productStatus; 
         private String productType; 
-        private java.util.List < ProductProperty > properties; 
+        private java.util.List<ProductProperty> properties; 
         private Long quantity; 
         private String requestId; 
         private String shopId; 
-        private java.util.List < Sku > skus; 
+        private java.util.List<Sku> skus; 
         private String soldQuantity; 
         private String taxCode; 
         private Integer taxRate; 
@@ -343,7 +361,7 @@ public class Product extends TeaModel {
         /**
          * categoryChain.
          */
-        public Builder categoryChain(java.util.List < Category > categoryChain) {
+        public Builder categoryChain(java.util.List<Category> categoryChain) {
             this.categoryChain = categoryChain;
             return this;
         }
@@ -375,7 +393,7 @@ public class Product extends TeaModel {
         /**
          * extendProperties.
          */
-        public Builder extendProperties(java.util.List < ProductExtendProperty > extendProperties) {
+        public Builder extendProperties(java.util.List<ProductExtendProperty> extendProperties) {
             this.extendProperties = extendProperties;
             return this;
         }
@@ -391,15 +409,23 @@ public class Product extends TeaModel {
         /**
          * images.
          */
-        public Builder images(java.util.List < String > images) {
+        public Builder images(java.util.List<String> images) {
             this.images = images;
+            return this;
+        }
+
+        /**
+         * inGroup.
+         */
+        public Builder inGroup(Boolean inGroup) {
+            this.inGroup = inGroup;
             return this;
         }
 
         /**
          * limitRules.
          */
-        public Builder limitRules(java.util.List < LimitRule > limitRules) {
+        public Builder limitRules(java.util.List<LimitRule> limitRules) {
             this.limitRules = limitRules;
             return this;
         }
@@ -431,7 +457,7 @@ public class Product extends TeaModel {
         /**
          * productSpecs.
          */
-        public Builder productSpecs(java.util.List < ProductSpec > productSpecs) {
+        public Builder productSpecs(java.util.List<ProductSpec> productSpecs) {
             this.productSpecs = productSpecs;
             return this;
         }
@@ -455,7 +481,7 @@ public class Product extends TeaModel {
         /**
          * properties.
          */
-        public Builder properties(java.util.List < ProductProperty > properties) {
+        public Builder properties(java.util.List<ProductProperty> properties) {
             this.properties = properties;
             return this;
         }
@@ -487,7 +513,7 @@ public class Product extends TeaModel {
         /**
          * skus.
          */
-        public Builder skus(java.util.List < Sku > skus) {
+        public Builder skus(java.util.List<Sku> skus) {
             this.skus = skus;
             return this;
         }

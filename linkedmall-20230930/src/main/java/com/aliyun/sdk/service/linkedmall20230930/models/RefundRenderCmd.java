@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundRenderCmd} extends {@link TeaModel}
  *
  * <p>RefundRenderCmd</p>
@@ -64,7 +70,10 @@ public class RefundRenderCmd extends TeaModel {
         private String orderLineId; 
 
         /**
-         * bizClaimType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.bizClaimType = bizClaimType;
@@ -72,7 +81,10 @@ public class RefundRenderCmd extends TeaModel {
         }
 
         /**
-         * goodsStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder goodsStatus(Integer goodsStatus) {
             this.goodsStatus = goodsStatus;
@@ -80,7 +92,10 @@ public class RefundRenderCmd extends TeaModel {
         }
 
         /**
-         * orderLineId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6692****5458</p>
          */
         public Builder orderLineId(String orderLineId) {
             this.orderLineId = orderLineId;

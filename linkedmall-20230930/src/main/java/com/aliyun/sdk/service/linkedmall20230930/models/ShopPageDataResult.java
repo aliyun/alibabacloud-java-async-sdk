@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShopPageDataResult} extends {@link TeaModel}
  *
  * <p>ShopPageDataResult</p>
  */
 public class ShopPageDataResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cooperationShops")
-    private java.util.List < CooperationShop > cooperationShops;
+    private java.util.List<CooperationShop> cooperationShops;
 
     @com.aliyun.core.annotation.NameInMap("endDate")
     private String endDate;
@@ -57,7 +63,7 @@ public class ShopPageDataResult extends TeaModel {
     /**
      * @return cooperationShops
      */
-    public java.util.List < CooperationShop > getCooperationShops() {
+    public java.util.List<CooperationShop> getCooperationShops() {
         return this.cooperationShops;
     }
 
@@ -111,7 +117,7 @@ public class ShopPageDataResult extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CooperationShop > cooperationShops; 
+        private java.util.List<CooperationShop> cooperationShops; 
         private String endDate; 
         private String purchaserId; 
         private String shopId; 
@@ -123,7 +129,7 @@ public class ShopPageDataResult extends TeaModel {
         /**
          * cooperationShops.
          */
-        public Builder cooperationShops(java.util.List < CooperationShop > cooperationShops) {
+        public Builder cooperationShops(java.util.List<CooperationShop> cooperationShops) {
             this.cooperationShops = cooperationShops;
             return this;
         }

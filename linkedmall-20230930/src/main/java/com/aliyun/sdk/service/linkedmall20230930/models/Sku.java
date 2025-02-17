@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Sku} extends {@link TeaModel}
  *
  * <p>Sku</p>
@@ -16,6 +22,9 @@ public class Sku extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
+
+    @com.aliyun.core.annotation.NameInMap("discountRetailPrice")
+    private Long discountRetailPrice;
 
     @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
@@ -51,7 +60,7 @@ public class Sku extends TeaModel {
     private String skuId;
 
     @com.aliyun.core.annotation.NameInMap("skuSpecs")
-    private java.util.List < SkuSpec > skuSpecs;
+    private java.util.List<SkuSpec> skuSpecs;
 
     @com.aliyun.core.annotation.NameInMap("skuSpecsCode")
     private String skuSpecsCode;
@@ -68,6 +77,7 @@ public class Sku extends TeaModel {
     private Sku(Builder builder) {
         this.barcode = builder.barcode;
         this.canSell = builder.canSell;
+        this.discountRetailPrice = builder.discountRetailPrice;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
         this.markPrice = builder.markPrice;
@@ -106,6 +116,13 @@ public class Sku extends TeaModel {
      */
     public Boolean getCanSell() {
         return this.canSell;
+    }
+
+    /**
+     * @return discountRetailPrice
+     */
+    public Long getDiscountRetailPrice() {
+        return this.discountRetailPrice;
     }
 
     /**
@@ -188,7 +205,7 @@ public class Sku extends TeaModel {
     /**
      * @return skuSpecs
      */
-    public java.util.List < SkuSpec > getSkuSpecs() {
+    public java.util.List<SkuSpec> getSkuSpecs() {
         return this.skuSpecs;
     }
 
@@ -223,6 +240,7 @@ public class Sku extends TeaModel {
     public static final class Builder {
         private String barcode; 
         private Boolean canSell; 
+        private Long discountRetailPrice; 
         private String divisionCode; 
         private String fuzzyQuantity; 
         private Long markPrice; 
@@ -234,7 +252,7 @@ public class Sku extends TeaModel {
         private Long rankValue; 
         private String shopId; 
         private String skuId; 
-        private java.util.List < SkuSpec > skuSpecs; 
+        private java.util.List<SkuSpec> skuSpecs; 
         private String skuSpecsCode; 
         private String skuStatus; 
         private Long suggestedRetailPrice; 
@@ -253,6 +271,14 @@ public class Sku extends TeaModel {
          */
         public Builder canSell(Boolean canSell) {
             this.canSell = canSell;
+            return this;
+        }
+
+        /**
+         * discountRetailPrice.
+         */
+        public Builder discountRetailPrice(Long discountRetailPrice) {
+            this.discountRetailPrice = discountRetailPrice;
             return this;
         }
 
@@ -347,7 +373,7 @@ public class Sku extends TeaModel {
         /**
          * skuSpecs.
          */
-        public Builder skuSpecs(java.util.List < SkuSpec > skuSpecs) {
+        public Builder skuSpecs(java.util.List<SkuSpec> skuSpecs) {
             this.skuSpecs = skuSpecs;
             return this;
         }

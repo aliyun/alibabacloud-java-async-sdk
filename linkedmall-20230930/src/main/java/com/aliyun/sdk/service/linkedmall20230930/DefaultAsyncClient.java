@@ -94,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CancelRefundOrder  CancelRefundOrderRequest
+     * @return CancelRefundOrderResponse
+     */
     @Override
     public CompletableFuture<CancelRefundOrderResponse> cancelRefundOrder(CancelRefundOrderRequest request) {
         try {
@@ -108,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmDisburse  ConfirmDisburseRequest
+     * @return ConfirmDisburseResponse
+     */
     @Override
     public CompletableFuture<ConfirmDisburseResponse> confirmDisburse(ConfirmDisburseRequest request) {
         try {
@@ -122,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGoodsShippingNotice  CreateGoodsShippingNoticeRequest
+     * @return CreateGoodsShippingNoticeResponse
+     */
     @Override
     public CompletableFuture<CreateGoodsShippingNoticeResponse> createGoodsShippingNotice(CreateGoodsShippingNoticeRequest request) {
         try {
@@ -136,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePurchaseOrder  CreatePurchaseOrderRequest
+     * @return CreatePurchaseOrderResponse
+     */
     @Override
     public CompletableFuture<CreatePurchaseOrderResponse> createPurchaseOrder(CreatePurchaseOrderRequest request) {
         try {
@@ -150,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRefundOrder  CreateRefundOrderRequest
+     * @return CreateRefundOrderResponse
+     */
     @Override
     public CompletableFuture<CreateRefundOrderResponse> createRefundOrder(CreateRefundOrderRequest request) {
         try {
@@ -164,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOrder  GetOrderRequest
+     * @return GetOrderResponse
+     */
     @Override
     public CompletableFuture<GetOrderResponse> getOrder(GetOrderRequest request) {
         try {
@@ -178,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPurchaseOrderStatus  GetPurchaseOrderStatusRequest
+     * @return GetPurchaseOrderStatusResponse
+     */
     @Override
     public CompletableFuture<GetPurchaseOrderStatusResponse> getPurchaseOrderStatus(GetPurchaseOrderStatusRequest request) {
         try {
@@ -192,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPurchaserShop  GetPurchaserShopRequest
+     * @return GetPurchaserShopResponse
+     */
     @Override
     public CompletableFuture<GetPurchaserShopResponse> getPurchaserShop(GetPurchaserShopRequest request) {
         try {
@@ -206,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRefundOrder  GetRefundOrderRequest
+     * @return GetRefundOrderResponse
+     */
     @Override
     public CompletableFuture<GetRefundOrderResponse> getRefundOrder(GetRefundOrderRequest request) {
         try {
@@ -220,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSelectionProduct  GetSelectionProductRequest
+     * @return GetSelectionProductResponse
+     */
     @Override
     public CompletableFuture<GetSelectionProductResponse> getSelectionProduct(GetSelectionProductRequest request) {
         try {
@@ -234,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSelectionProductSaleInfo  GetSelectionProductSaleInfoRequest
+     * @return GetSelectionProductSaleInfoResponse
+     */
     @Override
     public CompletableFuture<GetSelectionProductSaleInfoResponse> getSelectionProductSaleInfo(GetSelectionProductSaleInfoRequest request) {
         try {
@@ -248,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCategories  ListCategoriesRequest
+     * @return ListCategoriesResponse
+     */
     @Override
     public CompletableFuture<ListCategoriesResponse> listCategories(ListCategoriesRequest request) {
         try {
@@ -262,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogisticsOrders  ListLogisticsOrdersRequest
+     * @return ListLogisticsOrdersResponse
+     */
     @Override
     public CompletableFuture<ListLogisticsOrdersResponse> listLogisticsOrders(ListLogisticsOrdersRequest request) {
         try {
@@ -276,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPurchaserShops  ListPurchaserShopsRequest
+     * @return ListPurchaserShopsResponse
+     */
     @Override
     public CompletableFuture<ListPurchaserShopsResponse> listPurchaserShops(ListPurchaserShopsRequest request) {
         try {
@@ -290,6 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSelectionProductSaleInfos  ListSelectionProductSaleInfosRequest
+     * @return ListSelectionProductSaleInfosResponse
+     */
     @Override
     public CompletableFuture<ListSelectionProductSaleInfosResponse> listSelectionProductSaleInfos(ListSelectionProductSaleInfosRequest request) {
         try {
@@ -304,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSelectionProducts  ListSelectionProductsRequest
+     * @return ListSelectionProductsResponse
+     */
     @Override
     public CompletableFuture<ListSelectionProductsResponse> listSelectionProducts(ListSelectionProductsRequest request) {
         try {
@@ -318,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSelectionSkuSaleInfos  ListSelectionSkuSaleInfosRequest
+     * @return ListSelectionSkuSaleInfosResponse
+     */
     @Override
     public CompletableFuture<ListSelectionSkuSaleInfosResponse> listSelectionSkuSaleInfos(ListSelectionSkuSaleInfosRequest request) {
         try {
@@ -332,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryChildDivisionCode  QueryChildDivisionCodeRequest
+     * @return QueryChildDivisionCodeResponse
+     */
     @Override
     public CompletableFuture<QueryChildDivisionCodeResponse> queryChildDivisionCode(QueryChildDivisionCodeRequest request) {
         try {
@@ -346,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrders  QueryOrdersRequest
+     * @return QueryOrdersResponse
+     */
     @Override
     public CompletableFuture<QueryOrdersResponse> queryOrders(QueryOrdersRequest request) {
         try {
@@ -360,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenderPurchaseOrder  RenderPurchaseOrderRequest
+     * @return RenderPurchaseOrderResponse
+     */
     @Override
     public CompletableFuture<RenderPurchaseOrderResponse> renderPurchaseOrder(RenderPurchaseOrderRequest request) {
         try {
@@ -374,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenderRefundOrder  RenderRefundOrderRequest
+     * @return RenderRefundOrderResponse
+     */
     @Override
     public CompletableFuture<RenderRefundOrderResponse> renderRefundOrder(RenderRefundOrderRequest request) {
         try {
@@ -388,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SplitPurchaseOrder  SplitPurchaseOrderRequest
+     * @return SplitPurchaseOrderResponse
+     */
     @Override
     public CompletableFuture<SplitPurchaseOrderResponse> splitPurchaseOrder(SplitPurchaseOrderRequest request) {
         try {

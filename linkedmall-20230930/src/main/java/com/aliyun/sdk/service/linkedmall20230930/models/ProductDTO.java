@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ProductDTO} extends {@link TeaModel}
  *
  * <p>ProductDTO</p>
@@ -97,7 +103,10 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
-         * productId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6736</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -105,7 +114,10 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56****2304</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.purchaserId = purchaserId;
@@ -113,7 +125,10 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
-         * quantity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
@@ -121,7 +136,10 @@ public class ProductDTO extends TeaModel {
         }
 
         /**
-         * skuId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6600****6737</p>
          */
         public Builder skuId(String skuId) {
             this.skuId = skuId;

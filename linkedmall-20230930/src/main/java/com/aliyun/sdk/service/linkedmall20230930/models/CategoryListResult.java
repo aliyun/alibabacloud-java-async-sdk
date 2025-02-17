@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CategoryListResult} extends {@link TeaModel}
  *
  * <p>CategoryListResult</p>
  */
 public class CategoryListResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("categories")
-    private java.util.List < Category > categories;
+    private java.util.List<Category> categories;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class CategoryListResult extends TeaModel {
     /**
      * @return categories
      */
-    public java.util.List < Category > getCategories() {
+    public java.util.List<Category> getCategories() {
         return this.categories;
     }
 
@@ -45,13 +51,13 @@ public class CategoryListResult extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Category > categories; 
+        private java.util.List<Category> categories; 
         private String requestId; 
 
         /**
          * categories.
          */
-        public Builder categories(java.util.List < Category > categories) {
+        public Builder categories(java.util.List<Category> categories) {
             this.categories = categories;
             return this;
         }

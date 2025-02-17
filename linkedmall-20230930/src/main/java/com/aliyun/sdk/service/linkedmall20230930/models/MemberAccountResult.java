@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MemberAccountResult} extends {@link TeaModel}
  *
  * <p>MemberAccountResult</p>
  */
 public class MemberAccountResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("accountNo")
-    private java.util.List < String > accountNo;
+    private java.util.List<String> accountNo;
 
     @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
@@ -33,7 +39,7 @@ public class MemberAccountResult extends TeaModel {
     /**
      * @return accountNo
      */
-    public java.util.List < String > getAccountNo() {
+    public java.util.List<String> getAccountNo() {
         return this.accountNo;
     }
 
@@ -45,13 +51,13 @@ public class MemberAccountResult extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > accountNo; 
+        private java.util.List<String> accountNo; 
         private String shopId; 
 
         /**
          * accountNo.
          */
-        public Builder accountNo(java.util.List < String > accountNo) {
+        public Builder accountNo(java.util.List<String> accountNo) {
             this.accountNo = accountNo;
             return this;
         }

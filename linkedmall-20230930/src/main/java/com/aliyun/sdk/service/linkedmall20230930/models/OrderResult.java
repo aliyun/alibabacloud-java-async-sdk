@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OrderResult} extends {@link TeaModel}
  *
  * <p>OrderResult</p>
@@ -30,7 +36,7 @@ public class OrderResult extends TeaModel {
     private String orderId;
 
     @com.aliyun.core.annotation.NameInMap("orderLineList")
-    private java.util.List < OrderLineResult > orderLineList;
+    private java.util.List<OrderLineResult> orderLineList;
 
     @com.aliyun.core.annotation.NameInMap("orderStatus")
     private String orderStatus;
@@ -103,7 +109,7 @@ public class OrderResult extends TeaModel {
     /**
      * @return orderLineList
      */
-    public java.util.List < OrderLineResult > getOrderLineList() {
+    public java.util.List<OrderLineResult> getOrderLineList() {
         return this.orderLineList;
     }
 
@@ -128,7 +134,7 @@ public class OrderResult extends TeaModel {
         private Long orderAmount; 
         private String orderClosedReason; 
         private String orderId; 
-        private java.util.List < OrderLineResult > orderLineList; 
+        private java.util.List<OrderLineResult> orderLineList; 
         private String orderStatus; 
         private String requestId; 
 
@@ -183,7 +189,7 @@ public class OrderResult extends TeaModel {
         /**
          * orderLineList.
          */
-        public Builder orderLineList(java.util.List < OrderLineResult > orderLineList) {
+        public Builder orderLineList(java.util.List<OrderLineResult> orderLineList) {
             this.orderLineList = orderLineList;
             return this;
         }
