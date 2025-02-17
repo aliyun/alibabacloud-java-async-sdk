@@ -79,7 +79,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceModel.
+         * <p>Instance information.</p>
          */
         public Builder instanceModel(java.util.List<InstanceModel> instanceModel) {
             this.instanceModel = instanceModel;
@@ -87,7 +87,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position in the response. An empty value means all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmma/xxE9WtwL/ADvZ****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -95,7 +98,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -161,7 +170,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * DiskSize.
+             * <p>Disk size (in GB).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -169,7 +181,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>Disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -228,7 +243,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +254,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -320,6 +341,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
         private String networkInterfaceIp;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIpv6Address")
+        private String networkInterfaceIpv6Address;
+
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
@@ -331,6 +355,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private String publicIpAddress;
+
+        @com.aliyun.core.annotation.NameInMap("PublicIpv6Address")
+        private String publicIpv6Address;
 
         @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
@@ -369,10 +396,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.keyPairId = builder.keyPairId;
             this.memory = builder.memory;
             this.networkInterfaceIp = builder.networkInterfaceIp;
+            this.networkInterfaceIpv6Address = builder.networkInterfaceIpv6Address;
             this.officeSiteId = builder.officeSiteId;
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
             this.policyGroupId = builder.policyGroupId;
             this.publicIpAddress = builder.publicIpAddress;
+            this.publicIpv6Address = builder.publicIpv6Address;
             this.rate = builder.rate;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
@@ -536,6 +565,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInterfaceIpv6Address
+         */
+        public String getNetworkInterfaceIpv6Address() {
+            return this.networkInterfaceIpv6Address;
+        }
+
+        /**
          * @return officeSiteId
          */
         public String getOfficeSiteId() {
@@ -561,6 +597,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public String getPublicIpAddress() {
             return this.publicIpAddress;
+        }
+
+        /**
+         * @return publicIpv6Address
+         */
+        public String getPublicIpv6Address() {
+            return this.publicIpv6Address;
         }
 
         /**
@@ -620,10 +663,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String keyPairId; 
             private Integer memory; 
             private String networkInterfaceIp; 
+            private String networkInterfaceIpv6Address; 
             private String officeSiteId; 
             private String persistentAppInstanceId; 
             private String policyGroupId; 
             private String publicIpAddress; 
+            private String publicIpv6Address; 
             private Integer rate; 
             private String regionId; 
             private String renderingType; 
@@ -631,7 +676,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
 
             /**
-             * AndroidInstanceGroupId.
+             * <p>ID of the instance group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ag-ayyhomlal7po****</p>
              */
             public Builder androidInstanceGroupId(String androidInstanceGroupId) {
                 this.androidInstanceGroupId = androidInstanceGroupId;
@@ -639,7 +687,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AndroidInstanceGroupName.
+             * <p>Instance group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AndroidInstanceGroupName</p>
              */
             public Builder androidInstanceGroupName(String androidInstanceGroupName) {
                 this.androidInstanceGroupName = androidInstanceGroupName;
@@ -647,7 +698,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AndroidInstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-8at8h6ejkadjh****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -655,7 +709,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AndroidInstanceName.
+             * <p>Instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder androidInstanceName(String androidInstanceName) {
                 this.androidInstanceName = androidInstanceName;
@@ -663,7 +720,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AndroidInstanceStatus.
+             * <p>Instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder androidInstanceStatus(String androidInstanceStatus) {
                 this.androidInstanceStatus = androidInstanceStatus;
@@ -671,7 +731,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceGroupId.
+             * <p>Delivery group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-i7yv6tkn7kh8dv****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -679,7 +742,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppInstanceId.
+             * <p>Physical instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ai-9ey6io0q58rcd****</p>
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
@@ -687,7 +753,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizedUserId.
+             * <p>Assigned user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder authorizedUserId(String authorizedUserId) {
                 this.authorizedUserId = authorizedUserId;
@@ -695,7 +764,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindUserId.
+             * <p>Bound user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bindUserId(String bindUserId) {
                 this.bindUserId = bindUserId;
@@ -703,7 +775,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>Instance billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -711,7 +786,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>Number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -719,7 +797,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>Disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -727,7 +805,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>Error reason for instance data backup and recovery failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FilePathNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -735,7 +816,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-06 10:42:10</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -743,7 +827,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtExpired.
+             * <p>Expiration time for the subscription instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-15T02:03:33Z</p>
              */
             public Builder gmtExpired(String gmtExpired) {
                 this.gmtExpired = gmtExpired;
@@ -751,7 +838,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-06 10:42:10</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -759,7 +849,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * <p>Image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.5.3.867</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -767,7 +860,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>Instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp.basic.small</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -775,7 +871,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairId.
+             * <p>Key pair ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kp-5hh431emkpucs****</p>
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -783,7 +882,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>Memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -791,7 +893,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIp.
+             * <p>Network interface IP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.22.48</p>
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -799,7 +904,18 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * NetworkInterfaceIpv6Address.
+             */
+            public Builder networkInterfaceIpv6Address(String networkInterfaceIpv6Address) {
+                this.networkInterfaceIpv6Address = networkInterfaceIpv6Address;
+                return this;
+            }
+
+            /**
+             * <p>Office site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen+dir-211620****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -807,7 +923,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PersistentAppInstanceId.
+             * <p>Persistent session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-0btrd5zj8epo****</p>
              */
             public Builder persistentAppInstanceId(String persistentAppInstanceId) {
                 this.persistentAppInstanceId = persistentAppInstanceId;
@@ -815,7 +934,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * <p>Policy group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-0bszojpu0seql****</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -823,7 +945,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIpAddress.
+             * <p>Public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.32.1.41</p>
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -831,7 +956,18 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * PublicIpv6Address.
+             */
+            public Builder publicIpv6Address(String publicIpv6Address) {
+                this.publicIpv6Address = publicIpv6Address;
+                return this;
+            }
+
+            /**
+             * <p>Progress of instance data backup and recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -839,7 +975,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -847,7 +986,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingType.
+             * <p>Rendering type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder renderingType(String renderingType) {
                 this.renderingType = renderingType;
@@ -855,7 +997,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>Session connection status:</p>
+             * <ul>
+             * <li>connect: Connected </li>
+             * <li>disConnect: Not connected</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>connect</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -863,7 +1012,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>List of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

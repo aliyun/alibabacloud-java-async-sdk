@@ -255,7 +255,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>List of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -264,7 +264,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * AndroidInstanceName.
+         * <p>Instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder androidInstanceName(String androidInstanceName) {
             this.putQueryParameter("AndroidInstanceName", androidInstanceName);
@@ -273,7 +276,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>Region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported for purchasing cloud phones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -282,7 +288,14 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>Payment type, supporting prepaid and postpaid. Possible values:</p>
+         * <ul>
+         * <li>PrePaid: Prepaid</li>
+         * <li>PostPaid: Postpaid</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -291,7 +304,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * InstanceGroupId.
+         * <p>Instance group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-25nt4kk9whjh****</p>
          */
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
@@ -300,7 +316,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * InstanceGroupIds.
+         * <p>List of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -309,7 +325,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * InstanceGroupName.
+         * <p>Instance group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceGroupName(String instanceGroupName) {
             this.putQueryParameter("InstanceGroupName", instanceGroupName);
@@ -318,7 +337,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * KeyPairId.
+         * <p>Bound key pair ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kp-5hh431emkpuoi****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);
@@ -327,7 +349,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of items per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -336,7 +361,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position. An empty value means starting from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -345,7 +373,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>Node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_id</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -354,7 +385,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * NodeName.
+         * <p>Node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_name</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -363,7 +397,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>Selling mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
@@ -372,7 +409,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -381,7 +421,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Resource tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -441,7 +481,10 @@ public class DescribeAndroidInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -449,7 +492,10 @@ public class DescribeAndroidInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

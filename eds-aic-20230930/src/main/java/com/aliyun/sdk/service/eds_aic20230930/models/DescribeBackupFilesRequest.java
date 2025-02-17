@@ -228,7 +228,10 @@ public class DescribeBackupFilesRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-34pqe4r0kd9kn****</p>
          */
         public Builder androidInstanceId(String androidInstanceId) {
             this.putQueryParameter("AndroidInstanceId", androidInstanceId);
@@ -237,7 +240,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * AndroidInstanceName.
+         * <p>Fuzzy search for the instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-34pqe4r0kd9kn****</p>
          */
         public Builder androidInstanceName(String androidInstanceName) {
             this.putQueryParameter("AndroidInstanceName", androidInstanceName);
@@ -246,7 +252,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * BackupAll.
+         * <p>Is all data to be backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder backupAll(Boolean backupAll) {
             this.putQueryParameter("BackupAll", backupAll);
@@ -255,7 +264,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * BackupFileId.
+         * <p>Backup file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf-dxrh5jrv0zpb8****</p>
          */
         public Builder backupFileId(String backupFileId) {
             this.putQueryParameter("BackupFileId", backupFileId);
@@ -264,7 +276,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * BackupFileName.
+         * <p>Fuzzy search for the backup file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaulBackupFile</p>
          */
         public Builder backupFileName(String backupFileName) {
             this.putQueryParameter("BackupFileName", backupFileName);
@@ -273,7 +288,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Fuzzy search for the description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -282,7 +300,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>Query backup files before the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-20 10:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -291,7 +312,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * EndUserId.
+         * <p>Owner of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -300,7 +324,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * InstanceGroupId.
+         * <p>Instance group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-fxdx91jsfyiy3****</p>
          */
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
@@ -309,7 +336,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -318,7 +348,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the starting position for reading. An empty value means starting from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -327,7 +360,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Query backup files after the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-23 10:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -336,7 +372,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of backup file status.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);

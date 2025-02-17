@@ -59,7 +59,7 @@ public class StartAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>List of instances.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);

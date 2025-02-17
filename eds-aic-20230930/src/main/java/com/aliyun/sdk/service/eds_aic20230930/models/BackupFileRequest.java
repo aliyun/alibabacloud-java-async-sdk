@@ -173,6 +173,7 @@ public class BackupFileRequest extends Request {
         } 
 
         /**
+         * <p>List of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -182,7 +183,10 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * BackupAll.
+         * <p>Whether all data is to be backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder backupAll(Boolean backupAll) {
             this.putQueryParameter("BackupAll", backupAll);
@@ -191,7 +195,10 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * BackupFileName.
+         * <p>Backup file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultBackupFile</p>
          */
         public Builder backupFileName(String backupFileName) {
             this.putQueryParameter("BackupFileName", backupFileName);
@@ -200,6 +207,10 @@ public class BackupFileRequest extends Request {
         }
 
         /**
+         * <p>Upload address of the backup file.</p>
+         * <blockquote>
+         * <p>If uploading to an OSS bucket, call the describeBuckets interface to get the bucketName, select ossObjectList to get the key, and concatenate it as “oss://${bucketName}/${key}”.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -209,7 +220,10 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Description of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a backup file description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -218,7 +232,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * SourceAppList.
+         * <p>List of apps to be backed up.</p>
          */
         public Builder sourceAppList(java.util.List<String> sourceAppList) {
             this.putQueryParameter("SourceAppList", sourceAppList);
@@ -227,7 +241,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * SourceFilePathList.
+         * <p>List of file paths to be backed up.</p>
          */
         public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
             this.putQueryParameter("SourceFilePathList", sourceFilePathList);
@@ -236,7 +250,13 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * UploadEndpoint.
+         * <p>Domain name of the backup address.</p>
+         * <blockquote>
+         * <p>If uploading to an OSS bucket, call the describeBuckets interface to get the Bucket. If the cloud phone and the bucket are in the same region, obtain the intranetEndpoint field; if they are in different regions, obtain the extranetEndpoint field.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai-internal.aliyuncs.com</p>
          */
         public Builder uploadEndpoint(String uploadEndpoint) {
             this.putQueryParameter("UploadEndpoint", uploadEndpoint);
@@ -245,7 +265,10 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * UploadType.
+         * <p>Type of backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder uploadType(String uploadType) {
             this.putQueryParameter("UploadType", uploadType);

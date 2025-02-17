@@ -55,7 +55,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>Returned result object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Interface request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +148,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
             private String privateKeyBody; 
 
             /**
-             * GmtCreated.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-30 08:45:09.0</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -153,7 +159,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairId.
+             * <p>ADB key pair ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kp-6v2q33ae4tw3*****</p>
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -161,7 +170,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>Key pair name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -169,7 +181,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateKeyBody.
+             * <p>The private key of the key pair. This is the PEM-encoded PKCS#8 format private key that conforms to the ADB key pair specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</p>
              */
             public Builder privateKeyBody(String privateKeyBody) {
                 this.privateKeyBody = privateKeyBody;

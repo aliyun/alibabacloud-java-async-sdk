@@ -176,7 +176,10 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -185,7 +188,10 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the starting position for reading. If left empty, it starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -203,7 +209,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * SpecIds.
+         * <p>List of specification IDs.</p>
          */
         public Builder specIds(java.util.List<String> specIds) {
             this.putQueryParameter("SpecIds", specIds);
@@ -212,7 +218,10 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * SpecStatus.
+         * <p>Specification status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder specStatus(String specStatus) {
             this.putQueryParameter("SpecStatus", specStatus);
@@ -221,7 +230,10 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * <p>Specification type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ARM</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);

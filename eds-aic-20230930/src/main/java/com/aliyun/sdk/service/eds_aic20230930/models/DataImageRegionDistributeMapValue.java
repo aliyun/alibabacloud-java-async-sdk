@@ -55,7 +55,10 @@ public class DataImageRegionDistributeMapValue extends TeaModel {
         private String progress; 
 
         /**
-         * DistributeStatus.
+         * <p>Distribution Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder distributeStatus(String distributeStatus) {
             this.distributeStatus = distributeStatus;
@@ -63,7 +66,10 @@ public class DataImageRegionDistributeMapValue extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>Distribution progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         public Builder progress(String progress) {
             this.progress = progress;

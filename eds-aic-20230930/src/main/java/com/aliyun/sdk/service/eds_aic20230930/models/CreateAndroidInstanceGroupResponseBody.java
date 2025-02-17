@@ -79,7 +79,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceGroupIds.
+         * <p>List of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.instanceGroupIds = instanceGroupIds;
@@ -87,7 +87,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceGroupInfos.
+         * <p>Instance group information.</p>
          */
         public Builder instanceGroupInfos(java.util.List<InstanceGroupInfos> instanceGroupInfos) {
             this.instanceGroupInfos = instanceGroupInfos;
@@ -95,7 +95,10 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22365781890****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -103,7 +106,10 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +167,10 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             private java.util.List<String> instanceIds; 
 
             /**
-             * InstanceGroupId.
+             * <p>Instance group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ag-cuv4scs4obxch****</p>
              */
             public Builder instanceGroupId(String instanceGroupId) {
                 this.instanceGroupId = instanceGroupId;
@@ -169,7 +178,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>List of instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;

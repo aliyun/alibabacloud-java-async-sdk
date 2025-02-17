@@ -43,7 +43,10 @@ public class UpdateCustomImageNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>552B7EED-D434-511F-B838-29EA4E906034</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

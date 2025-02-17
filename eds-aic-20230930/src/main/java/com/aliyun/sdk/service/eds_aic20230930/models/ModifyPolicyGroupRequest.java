@@ -185,7 +185,10 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
         /**
-         * CameraRedirect.
+         * <p>Whether to enable local camera redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder cameraRedirect(String cameraRedirect) {
             this.putBodyParameter("CameraRedirect", cameraRedirect);
@@ -194,7 +197,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Clipboard.
+         * <p>Clipboard permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>readwrite</p>
          */
         public Builder clipboard(String clipboard) {
             this.putBodyParameter("Clipboard", clipboard);
@@ -203,7 +209,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Html5FileTransfer.
+         * <p>Shadow Web client file transfer policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder html5FileTransfer(String html5FileTransfer) {
             this.putBodyParameter("Html5FileTransfer", html5FileTransfer);
@@ -212,7 +221,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * LocalDrive.
+         * <p>Local disk mapping permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder localDrive(String localDrive) {
             this.putBodyParameter("LocalDrive", localDrive);
@@ -221,7 +233,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * LockResolution.
+         * <p>Whether to lock the resolution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder lockResolution(String lockResolution) {
             this.putBodyParameter("LockResolution", lockResolution);
@@ -230,7 +245,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * NetRedirectPolicy.
+         * <p>Network redirection.</p>
          */
         public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
             String netRedirectPolicyShrink = shrink(netRedirectPolicy, "NetRedirectPolicy", "json");
@@ -240,7 +255,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-4bi18ebi9tfjh****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putBodyParameter("PolicyGroupId", policyGroupId);
@@ -249,7 +267,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupName.
+         * <p>Policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultPolicyGroup</p>
          */
         public Builder policyGroupName(String policyGroupName) {
             this.putBodyParameter("PolicyGroupName", policyGroupName);
@@ -258,7 +279,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * ResolutionHeight.
+         * <p>Resolution height. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         public Builder resolutionHeight(Integer resolutionHeight) {
             this.putBodyParameter("ResolutionHeight", resolutionHeight);
@@ -267,7 +291,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * ResolutionWidth.
+         * <p>Resolution width. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder resolutionWidth(Integer resolutionWidth) {
             this.putBodyParameter("ResolutionWidth", resolutionWidth);
@@ -387,7 +414,10 @@ public class ModifyPolicyGroupRequest extends Request {
             private String proxyUserName; 
 
             /**
-             * CustomProxy.
+             * <p>Whether to manually configure a transparent proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder customProxy(String customProxy) {
                 this.customProxy = customProxy;
@@ -395,7 +425,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * HostAddr.
+             * <p>Transparent proxy IP. Format: IPv4 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder hostAddr(String hostAddr) {
                 this.hostAddr = hostAddr;
@@ -403,7 +436,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * NetRedirect.
+             * <p>Whether to enable network redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder netRedirect(String netRedirect) {
                 this.netRedirect = netRedirect;
@@ -411,7 +447,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>Transparent proxy port. Port value range is 1~65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1145</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -419,7 +458,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * ProxyPassword.
+             * <p>Proxy password. Length range is 1~256, and it must not contain Chinese characters or whitespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder proxyPassword(String proxyPassword) {
                 this.proxyPassword = proxyPassword;
@@ -427,7 +469,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * ProxyType.
+             * <p>Proxy protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>socks5</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -435,7 +480,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * ProxyUserName.
+             * <p>Proxy username. Length range is 1~256, and it must not contain Chinese characters or whitespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder proxyUserName(String proxyUserName) {
                 this.proxyUserName = proxyUserName;

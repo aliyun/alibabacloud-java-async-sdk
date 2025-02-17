@@ -91,7 +91,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Data.
+         * <p>List of returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum amount of data read this time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -107,7 +110,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the position of the current read in the call return. An empty value means that all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -115,7 +121,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request. If you encounter any issues, please provide this request ID for troubleshooting by the support staff.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -123,7 +132,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -385,7 +397,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String uploadType; 
 
             /**
-             * AndroidInstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-34pqe4r0kd9kn****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -393,7 +408,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * AndroidInstanceName.
+             * <p>Instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultInstanceName</p>
              */
             public Builder androidInstanceName(String androidInstanceName) {
                 this.androidInstanceName = androidInstanceName;
@@ -401,7 +419,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupAll.
+             * <p>Is all data to be backed up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder backupAll(Boolean backupAll) {
                 this.backupAll = backupAll;
@@ -409,7 +430,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFileId.
+             * <p>Backup file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bf-b0qbg3pbpjkn7****</p>
              */
             public Builder backupFileId(String backupFileId) {
                 this.backupFileId = backupFileId;
@@ -417,7 +441,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFileName.
+             * <p>Backup file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a-58ftsoo90p0qa****.ab</p>
              */
             public Builder backupFileName(String backupFileName) {
                 this.backupFileName = backupFileName;
@@ -425,7 +452,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFilePath.
+             * <p>The directory where the backup file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
              */
             public Builder backupFilePath(String backupFilePath) {
                 this.backupFilePath = backupFilePath;
@@ -433,7 +463,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description information of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is default description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -441,7 +474,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * <p>Owner of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -449,7 +485,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>Total size of the source backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10227168</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -457,7 +496,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-15 17:33:59</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -465,7 +507,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-15 17:33:59</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -473,7 +518,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupId.
+             * <p>Instance group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ag-58ftsoo90p0qi****</p>
              */
             public Builder instanceGroupId(String instanceGroupId) {
                 this.instanceGroupId = instanceGroupId;
@@ -481,7 +529,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -489,7 +540,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAppInfoList.
+             * <p>List of apps to be backed up.</p>
              */
             public Builder sourceAppInfoList(java.util.List<String> sourceAppInfoList) {
                 this.sourceAppInfoList = sourceAppInfoList;
@@ -497,7 +548,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceFilePathList.
+             * <p>List of directories for the source backup files.</p>
              */
             public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
                 this.sourceFilePathList = sourceFilePathList;
@@ -505,7 +556,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Backup file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -513,7 +567,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-bp67acfmxazb4p****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -521,7 +578,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UploadEndpoint.
+             * <p>The domain name of the upload address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-hangzhou.aliyuncs.com</p>
              */
             public Builder uploadEndpoint(String uploadEndpoint) {
                 this.uploadEndpoint = uploadEndpoint;
@@ -529,7 +589,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UploadType.
+             * <p>Backup type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder uploadType(String uploadType) {
                 this.uploadType = uploadType;

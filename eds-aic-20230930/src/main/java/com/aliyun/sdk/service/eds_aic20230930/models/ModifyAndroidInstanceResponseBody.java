@@ -43,7 +43,10 @@ public class ModifyAndroidInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

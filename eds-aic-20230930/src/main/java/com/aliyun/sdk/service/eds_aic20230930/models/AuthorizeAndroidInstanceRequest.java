@@ -87,7 +87,7 @@ public class AuthorizeAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>List of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -96,7 +96,10 @@ public class AuthorizeAndroidInstanceRequest extends Request {
         }
 
         /**
-         * AuthorizeUserId.
+         * <p>User ID to be assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder authorizeUserId(String authorizeUserId) {
             this.putQueryParameter("AuthorizeUserId", authorizeUserId);
@@ -105,7 +108,10 @@ public class AuthorizeAndroidInstanceRequest extends Request {
         }
 
         /**
-         * UnAuthorizeUserId.
+         * <p>User ID to be unassigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder unAuthorizeUserId(String unAuthorizeUserId) {
             this.putQueryParameter("UnAuthorizeUserId", unAuthorizeUserId);

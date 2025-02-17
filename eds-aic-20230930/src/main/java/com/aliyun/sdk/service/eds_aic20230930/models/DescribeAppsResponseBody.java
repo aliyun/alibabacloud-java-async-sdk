@@ -79,7 +79,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Data.
+         * <p>Returned result object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position in the response. An empty value means that all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -95,7 +98,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB95E410-FD1D-53C5-9F7D-93CC44D7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -305,7 +314,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AndroidAppVersion.
+             * <p>Application version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder androidAppVersion(String androidAppVersion) {
                 this.androidAppVersion = androidAppVersion;
@@ -313,7 +325,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ApkSize.
+             * <p>Apk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10244893</p>
              */
             public Builder apkSize(String apkSize) {
                 this.apkSize = apkSize;
@@ -321,7 +336,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10404</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -329,7 +347,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>Application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testapp</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -337,7 +358,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * BizRegionId.
+             * <p>Region id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder bizRegionId(String bizRegionId) {
                 this.bizRegionId = bizRegionId;
@@ -345,7 +369,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Application description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -353,7 +380,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-11 17:45:03</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -361,7 +391,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-11 17:45:03</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -369,7 +402,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * IconUrl.
+             * <p>Application icon URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.png">https://test.png</a></p>
              */
             public Builder iconUrl(String iconUrl) {
                 this.iconUrl = iconUrl;
@@ -377,7 +413,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * InstallationStatus.
+             * <p>The installation/uninstallation status of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLING</p>
              */
             public Builder installationStatus(String installationStatus) {
                 this.installationStatus = installationStatus;
@@ -385,7 +424,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupList.
+             * <p>List of instance groups where the application is installed.</p>
              */
             public Builder instanceGroupList(java.util.List<String> instanceGroupList) {
                 this.instanceGroupList = instanceGroupList;
@@ -393,7 +432,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * MD5.
+             * <p>The value of MD5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>THCIEH73KEK3334</p>
              */
             public Builder mD5(String mD5) {
                 this.mD5 = mD5;
@@ -401,7 +443,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageName.
+             * <p>The name of the application package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn.rdstar.rdstarandroid</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -409,7 +454,10 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Application status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;

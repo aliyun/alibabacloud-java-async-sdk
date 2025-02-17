@@ -145,7 +145,10 @@ public class DescribeImageListRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>Image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -154,7 +157,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>Image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>安卓12系统镜像</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
@@ -163,7 +169,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * ImagePackageType.
+         * <p>Image package type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         public Builder imagePackageType(String imagePackageType) {
             this.putQueryParameter("ImagePackageType", imagePackageType);
@@ -172,6 +181,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
+         * <p>Image type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +194,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page for a paginated query. The value range is 1 to 100, with a default value of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -193,7 +206,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Used to indicate the current read position. An empty value means starting from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -202,7 +218,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

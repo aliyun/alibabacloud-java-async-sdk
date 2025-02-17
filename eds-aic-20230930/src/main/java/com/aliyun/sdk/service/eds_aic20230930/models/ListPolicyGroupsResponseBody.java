@@ -79,7 +79,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NextToken.
+         * <p>Indicates the position read by the current call. An empty value means that the data has been fully read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -87,7 +90,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyGroupModel.
+         * <p>Policy information.</p>
          */
         public Builder policyGroupModel(java.util.List<PolicyGroupModel> policyGroupModel) {
             this.policyGroupModel = policyGroupModel;
@@ -95,7 +98,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -161,7 +170,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private String target; 
 
             /**
-             * RuleType.
+             * <p>Rule type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -169,7 +181,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>Application package name or domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.baidu.com</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -300,7 +315,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private java.util.List<Rules> rules; 
 
             /**
-             * CustomProxy.
+             * <p>Whether to manually configure a transparent proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder customProxy(String customProxy) {
                 this.customProxy = customProxy;
@@ -308,7 +326,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddr.
+             * <p>Transparent proxy IP. The format is an IPv4 address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder hostAddr(String hostAddr) {
                 this.hostAddr = hostAddr;
@@ -316,7 +337,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NetRedirect.
+             * <p>Whether to enable network redirection. When enabled, it defaults to redirecting to the endpoint network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder netRedirect(String netRedirect) {
                 this.netRedirect = netRedirect;
@@ -324,7 +348,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>Transparent proxy port. The port value range is 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1145</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -332,7 +359,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyPassword.
+             * <p>Proxy password. The length range is 1 to 256, and it must not contain Chinese characters or whitespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder proxyPassword(String proxyPassword) {
                 this.proxyPassword = proxyPassword;
@@ -340,7 +370,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyType.
+             * <p>Proxy protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>socks5</p>
              */
             public Builder proxyType(String proxyType) {
                 this.proxyType = proxyType;
@@ -348,7 +381,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyUserName.
+             * <p>Proxy username. The length range is 1 to 256, and it must not contain Chinese characters or whitespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder proxyUserName(String proxyUserName) {
                 this.proxyUserName = proxyUserName;
@@ -356,7 +392,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>List of proxy rules</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -523,7 +559,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private Integer sessionResolutionWidth; 
 
             /**
-             * CameraRedirect.
+             * <p>Whether to enable local camera redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder cameraRedirect(String cameraRedirect) {
                 this.cameraRedirect = cameraRedirect;
@@ -531,7 +570,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Clipboard.
+             * <p>Clipboard permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>readwrite</p>
              */
             public Builder clipboard(String clipboard) {
                 this.clipboard = clipboard;
@@ -539,7 +581,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-04 10:28:54</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -547,7 +592,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Html5FileTransfer.
+             * <p>HTML5 client file transfer policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>download</p>
              */
             public Builder html5FileTransfer(String html5FileTransfer) {
                 this.html5FileTransfer = html5FileTransfer;
@@ -555,7 +603,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalDrive.
+             * <p>Local disk mapping permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder localDrive(String localDrive) {
                 this.localDrive = localDrive;
@@ -563,7 +614,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LockResolution.
+             * <p>Lock resolution</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder lockResolution(String lockResolution) {
                 this.lockResolution = lockResolution;
@@ -571,7 +625,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NetRedirectPolicy.
+             * <p>Network redirection.</p>
              */
             public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
                 this.netRedirectPolicy = netRedirectPolicy;
@@ -579,7 +633,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * <p>Policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-9q6o8qpiy8opkj****</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -587,7 +644,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupName.
+             * <p>Policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认策略。</p>
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
@@ -595,7 +655,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionResolutionHeight.
+             * <p>The height of the resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder sessionResolutionHeight(Integer sessionResolutionHeight) {
                 this.sessionResolutionHeight = sessionResolutionHeight;
@@ -603,7 +666,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionResolutionWidth.
+             * <p>The width of the resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder sessionResolutionWidth(Integer sessionResolutionWidth) {
                 this.sessionResolutionWidth = sessionResolutionWidth;

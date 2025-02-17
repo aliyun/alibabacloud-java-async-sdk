@@ -87,7 +87,10 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Whether to pay automatically.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -96,7 +99,10 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * IncreaseNumberOfInstance.
+         * <p>The number of instances to be added to the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder increaseNumberOfInstance(Integer increaseNumberOfInstance) {
             this.putQueryParameter("IncreaseNumberOfInstance", increaseNumberOfInstance);
@@ -105,7 +111,10 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * InstanceGroupId.
+         * <p>Instance group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-asguicdjh****</p>
          */
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);

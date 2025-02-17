@@ -73,7 +73,10 @@ public class UpdateCustomImageNameRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>Image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -82,7 +85,10 @@ public class UpdateCustomImageNameRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>Image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imagename</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);

@@ -44,6 +44,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
+    private Boolean enableIpv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
     private Boolean gpuAcceleration;
 
@@ -60,6 +64,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupSpec")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceGroupSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Bandwidth")
+    private Integer ipv6Bandwidth;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairId")
@@ -98,10 +106,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
+        this.enableIpv6 = builder.enableIpv6;
         this.gpuAcceleration = builder.gpuAcceleration;
         this.imageId = builder.imageId;
         this.instanceGroupName = builder.instanceGroupName;
         this.instanceGroupSpec = builder.instanceGroupSpec;
+        this.ipv6Bandwidth = builder.ipv6Bandwidth;
         this.keyPairId = builder.keyPairId;
         this.numberOfInstances = builder.numberOfInstances;
         this.officeSiteId = builder.officeSiteId;
@@ -167,6 +177,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return enableIpv6
+     */
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
+    }
+
+    /**
      * @return gpuAcceleration
      */
     public Boolean getGpuAcceleration() {
@@ -192,6 +209,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
      */
     public String getInstanceGroupSpec() {
         return this.instanceGroupSpec;
+    }
+
+    /**
+     * @return ipv6Bandwidth
+     */
+    public Integer getIpv6Bandwidth() {
+        return this.ipv6Bandwidth;
     }
 
     /**
@@ -250,10 +274,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private String bizRegionId; 
         private String chargeType; 
         private String clientToken; 
+        private Boolean enableIpv6; 
         private Boolean gpuAcceleration; 
         private String imageId; 
         private String instanceGroupName; 
         private String instanceGroupSpec; 
+        private Integer ipv6Bandwidth; 
         private String keyPairId; 
         private Integer numberOfInstances; 
         private String officeSiteId; 
@@ -274,10 +300,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
+            this.enableIpv6 = request.enableIpv6;
             this.gpuAcceleration = request.gpuAcceleration;
             this.imageId = request.imageId;
             this.instanceGroupName = request.instanceGroupName;
             this.instanceGroupSpec = request.instanceGroupSpec;
+            this.ipv6Bandwidth = request.ipv6Bandwidth;
             this.keyPairId = request.keyPairId;
             this.numberOfInstances = request.numberOfInstances;
             this.officeSiteId = request.officeSiteId;
@@ -288,7 +316,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>Number of instance groups. The default value is 1, and the maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -297,7 +328,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Whether to automatically pay. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -306,7 +340,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Whether to enable auto-renewal. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -315,6 +352,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>Region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported for purchasing cloud phones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,7 +365,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>Billing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -336,7 +377,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Used to ensure the idempotence of the request, preventing duplicate submissions. No more than 100 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asadbuvwiabdbvchjsbj</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -345,7 +389,25 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * GpuAcceleration.
+         * EnableIpv6.
+         */
+        public Builder enableIpv6(Boolean enableIpv6) {
+            this.putQueryParameter("EnableIpv6", enableIpv6);
+            this.enableIpv6 = enableIpv6;
+            return this;
+        }
+
+        /**
+         * <p>Whether to enable GPU acceleration. The default value is false.</p>
+         * <ul>
+         * <li><p>true: Enable.</p>
+         * </li>
+         * <li><p>false: Disable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gpuAcceleration(Boolean gpuAcceleration) {
             this.putQueryParameter("GpuAcceleration", gpuAcceleration);
@@ -354,6 +416,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>Image ID. You can call <a href="~~DescribeImageList~~">DescribeImageList</a> to query the list of images for cloud phones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,7 +429,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * InstanceGroupName.
+         * <p>Instance group name.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The length of the instance group name should not exceed 30 characters; it must start with uppercase/lowercase letters or Chinese characters, and cannot start with http:// or https://. Only Chinese, English, numbers, colons (:), underscores (_), periods (.), or hyphens (-) are supported.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultInstanceGroup</p>
          */
         public Builder instanceGroupName(String instanceGroupName) {
             this.putQueryParameter("InstanceGroupName", instanceGroupName);
@@ -375,6 +446,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance group specification. You can call <a href="~~DescribeSpec~~">DescribeSpec</a> to query the specifications supported for purchasing cloud phones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -387,7 +459,20 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * KeyPairId.
+         * Ipv6Bandwidth.
+         */
+        public Builder ipv6Bandwidth(Integer ipv6Bandwidth) {
+            this.putQueryParameter("Ipv6Bandwidth", ipv6Bandwidth);
+            this.ipv6Bandwidth = ipv6Bandwidth;
+            return this;
+        }
+
+        /**
+         * <p>Key pair ID. When creating an instance group, if a valid key pair ID is specified, the key pair will be bound to all instances created successfully, and there is no need to call the binding interface again.</p>
+         * <p>Note: Binding key pairs during scaling is not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kp-7o9xywwfutc1l****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);
@@ -396,7 +481,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * NumberOfInstances.
+         * <p>Number of instances in the instance group. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder numberOfInstances(Integer numberOfInstances) {
             this.putQueryParameter("NumberOfInstances", numberOfInstances);
@@ -405,7 +493,16 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>Network ID.</p>
+         * <ul>
+         * <li><p>For creating a shared network instance: The network ID is optional. Fill in the network ID of the <strong>Shared Network</strong> type from the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone Console &gt; Network</a> page. If there is no shared network in the console, you do not need to fill it in, as a shared network will be automatically created when the instance group is created.</p>
+         * </li>
+         * <li><p>For creating a VPC network instance: The network ID is required. Fill in the network ID of the <strong>VPC Network</strong> type from the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone Console &gt; Network</a> page. If there is no VPC network in the console, you need to create one first.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-745976****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -414,7 +511,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>Duration of the purchased resources, specified by PeriodUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -423,7 +523,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>Unit of the duration of the purchased resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -432,7 +535,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>Policy ID. You can call <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> to query the list of policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-b7bxrrwxkijjh****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -441,7 +547,16 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>VSwitch ID. You can call <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> to query the list of VSwitches.</p>
+         * <ul>
+         * <li><p>For creating a shared network instance: Do not fill in.</p>
+         * </li>
+         * <li><p>For creating a VPC network instance: The VSwitch ID is required. Select this VSwitch to create the instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf61uvzhz8ejaw776****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

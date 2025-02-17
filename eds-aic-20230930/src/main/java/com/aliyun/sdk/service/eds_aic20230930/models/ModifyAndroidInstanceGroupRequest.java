@@ -87,7 +87,10 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * InstanceGroupId.
+         * <p>Instance group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-cuv4scs4obxhs****</p>
          */
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
@@ -96,7 +99,15 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * NewInstanceGroupName.
+         * <p>New name of the instance group.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The length of the instance group name should not exceed 30 characters; it must start with a capital/lowercase letter or Chinese character, and cannot begin with http:// or https://. Only supports Chinese, English, numbers, colon (:), underscore (_), period (.), or hyphen (-).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>newName</p>
          */
         public Builder newInstanceGroupName(String newInstanceGroupName) {
             this.putQueryParameter("NewInstanceGroupName", newInstanceGroupName);
@@ -105,7 +116,10 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-2w97kp89gnsif****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);

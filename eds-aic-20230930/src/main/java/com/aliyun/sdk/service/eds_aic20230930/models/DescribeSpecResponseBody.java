@@ -79,7 +79,10 @@ public class DescribeSpecResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position returned by this call. An empty value means that all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -87,7 +90,10 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9888DAD-331E-5FBC-B5A0-F2445115****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,7 +101,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * SpecInfoModel.
+         * <p>Specification information.</p>
          */
         public Builder specInfoModel(java.util.List<SpecInfoModel> specInfoModel) {
             this.specInfoModel = specInfoModel;
@@ -103,7 +109,10 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -233,7 +242,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             private Integer systemDiskSize; 
 
             /**
-             * Core.
+             * <p>Number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -241,7 +253,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>Memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -265,7 +280,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * SpecId.
+             * <p>Specification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp.basic.small</p>
              */
             public Builder specId(String specId) {
                 this.specId = specId;
@@ -273,7 +291,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * SpecStatus.
+             * <p>Specification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder specStatus(String specStatus) {
                 this.specStatus = specStatus;
@@ -281,7 +302,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>Specification type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARM</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -289,7 +313,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>System disk size, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;

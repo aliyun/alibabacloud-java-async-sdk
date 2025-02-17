@@ -79,7 +79,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>List of returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the position read by the current call. An empty value means that all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFbc8N4E1iOlcSxC+8boa0HHH2LKWbggYUinyrZWvtS1oTrMYCg1HuMLGuftj0****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -95,7 +98,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>565FB06A-AE04-5AD0-8A32-5BA92CA5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -173,7 +182,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String keyPairName; 
 
             /**
-             * GmtCreated.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-11T08:53:32Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -181,7 +193,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairId.
+             * <p>ID of the ADB key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kp-6v2q33ae4tw3a****</p>
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -189,7 +204,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairName.
+             * <p>Name of the ADB key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;

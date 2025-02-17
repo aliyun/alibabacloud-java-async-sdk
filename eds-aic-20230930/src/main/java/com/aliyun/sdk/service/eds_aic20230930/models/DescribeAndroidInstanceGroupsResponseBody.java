@@ -79,7 +79,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceGroupModel.
+         * <p>Detailed information of the instance groups.</p>
          */
         public Builder instanceGroupModel(java.util.List<InstanceGroupModel> instanceGroupModel) {
             this.instanceGroupModel = instanceGroupModel;
@@ -87,7 +87,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position returned by the call. An empty value means that the data has been fully read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -95,7 +98,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -161,7 +170,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * DiskSize.
+             * <p>Disk size (in GB).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -169,7 +181,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * <p>Disk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -540,7 +555,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * AppInstanceGroupId.
+             * <p>Delivery group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-48xr63m4dybjk****</p>
              */
             public Builder appInstanceGroupId(String appInstanceGroupId) {
                 this.appInstanceGroupId = appInstanceGroupId;
@@ -548,7 +566,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ArchitectureType.
+             * <p>Architecture type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARM</p>
              */
             public Builder architectureType(String architectureType) {
                 this.architectureType = architectureType;
@@ -556,7 +577,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableInstanceAmount.
+             * <p>Number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -564,7 +588,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>Payment method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -572,7 +599,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>Number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -580,7 +610,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Disks.
+             * <p>Disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -588,7 +618,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -596,7 +629,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-01 10:56:36</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -604,7 +640,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtExpired.
+             * <p>Expiration time for the subscription instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2027-06-29 07:25:31</p>
              */
             public Builder gmtExpired(String gmtExpired) {
                 this.gmtExpired = gmtExpired;
@@ -612,7 +651,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-01 10:56:36</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -620,7 +662,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>Image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imgc-06zyt9m93zwax****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -628,7 +673,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledAppList.
+             * <p>List of installed applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;TikTok&quot;,&quot;WeChat&quot;</p>
              */
             public Builder installedAppList(String installedAppList) {
                 this.installedAppList = installedAppList;
@@ -636,7 +684,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupId.
+             * <p>Instance group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ag-h67a2cs0zprfdh****</p>
              */
             public Builder instanceGroupId(String instanceGroupId) {
                 this.instanceGroupId = instanceGroupId;
@@ -644,7 +695,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupName.
+             * <p>Instance group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defaultInstanceGroup</p>
              */
             public Builder instanceGroupName(String instanceGroupName) {
                 this.instanceGroupName = instanceGroupName;
@@ -652,7 +706,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupSpec.
+             * <p>Instance group specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp.basic.small</p>
              */
             public Builder instanceGroupSpec(String instanceGroupSpec) {
                 this.instanceGroupSpec = instanceGroupSpec;
@@ -660,7 +717,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupSpecDescribe.
+             * <p>Description of the instance group specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ARM-2vCPU4GiB 32GiB</p>
              */
             public Builder instanceGroupSpecDescribe(String instanceGroupSpecDescribe) {
                 this.instanceGroupSpecDescribe = instanceGroupSpecDescribe;
@@ -668,7 +728,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceGroupStatus.
+             * <p>Instance group status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder instanceGroupStatus(String instanceGroupStatus) {
                 this.instanceGroupStatus = instanceGroupStatus;
@@ -676,7 +739,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>Memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -684,7 +750,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NumberOfInstances.
+             * <p>Number of instances in the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder numberOfInstances(String numberOfInstances) {
                 this.numberOfInstances = numberOfInstances;
@@ -692,7 +761,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>Network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai+dir-030598****</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -700,7 +772,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupId.
+             * <p>Policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-c6n38xucps8kl****</p>
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
@@ -708,7 +783,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -716,7 +794,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingType.
+             * <p>The rendering type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder renderingType(String renderingType) {
                 this.renderingType = renderingType;
@@ -724,7 +805,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionHeight.
+             * <p>Resolution height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder resolutionHeight(Integer resolutionHeight) {
                 this.resolutionHeight = resolutionHeight;
@@ -732,7 +816,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionWidth.
+             * <p>Resolution width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder resolutionWidth(Integer resolutionWidth) {
                 this.resolutionWidth = resolutionWidth;
@@ -740,7 +827,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SaleMode.
+             * <p>Sales mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder saleMode(String saleMode) {
                 this.saleMode = saleMode;
@@ -748,7 +838,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemVersion.
+             * <p>System version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Android 12</p>
              */
             public Builder systemVersion(String systemVersion) {
                 this.systemVersion = systemVersion;
@@ -756,7 +849,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>VSwitch ID in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4n0yqs009ho024wt****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

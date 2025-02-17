@@ -60,6 +60,7 @@ public class CreateKeyPairRequest extends Request {
         } 
 
         /**
+         * <p>The name of the key pair. It must be 2 to 128 characters long, consisting of English or Chinese characters. It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with http:// or https://. It can include numbers, colons (:), underscores (_), or hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

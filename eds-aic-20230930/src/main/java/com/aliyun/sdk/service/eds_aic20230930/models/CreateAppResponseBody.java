@@ -55,7 +55,10 @@ public class CreateAppResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppId.
+         * <p>Application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder appId(Integer appId) {
             this.appId = appId;
@@ -63,7 +66,10 @@ public class CreateAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

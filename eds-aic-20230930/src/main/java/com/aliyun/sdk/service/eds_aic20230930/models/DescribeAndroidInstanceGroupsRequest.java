@@ -186,7 +186,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         } 
 
         /**
-         * BizRegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -195,7 +198,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>Payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -204,7 +210,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * InstanceGroupIds.
+         * <p>List of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -213,7 +219,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * InstanceGroupName.
+         * <p>Instance group name. Supports fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultInstanceGroup</p>
          */
         public Builder instanceGroupName(String instanceGroupName) {
             this.putQueryParameter("InstanceGroupName", instanceGroupName);
@@ -222,7 +231,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * KeyPairId.
+         * <p>Key pair ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kp-5htf0ymsrnb7q****</p>
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);
@@ -231,7 +243,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +255,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the starting position for reading. If empty, it starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,7 +267,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * PolicyGroupId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-1b77w6xrqfubi****</p>
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putQueryParameter("PolicyGroupId", policyGroupId);
@@ -258,7 +279,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>Selling mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
@@ -267,7 +291,10 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Instance group status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

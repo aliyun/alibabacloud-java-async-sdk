@@ -130,6 +130,7 @@ public class RecoveryFileRequest extends Request {
         } 
 
         /**
+         * <p>List of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -139,7 +140,10 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * BackupAll.
+         * <p>Whether all data is to be backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder backupAll(Boolean backupAll) {
             this.putQueryParameter("BackupAll", backupAll);
@@ -148,7 +152,10 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * BackupFileId.
+         * <p>Backup file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf-azhps4rdyi2th****</p>
          */
         public Builder backupFileId(String backupFileId) {
             this.putQueryParameter("BackupFileId", backupFileId);
@@ -157,7 +164,10 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * BackupFilePath.
+         * <p>OSS address for uploading the backup file.</p>
+         * <blockquote>
+         * <p>Call the describeBuckets interface to get the bucketName, select ossObjectList to get the key, and concatenate them into “oss://${bucketName}/${key}”.</p>
+         * </blockquote>
          */
         public Builder backupFilePath(String backupFilePath) {
             this.putQueryParameter("BackupFilePath", backupFilePath);
@@ -166,7 +176,13 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * UploadEndpoint.
+         * <p>Domain name of the backup address.</p>
+         * <blockquote>
+         * <p>Call the DescribeBuckets interface to get the Bucket. If the cloud phone and the bucket are in the same region, obtain the IntranetEndpoint field; if they are in different regions, obtain the ExtranetEndpoint field.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
          */
         public Builder uploadEndpoint(String uploadEndpoint) {
             this.putQueryParameter("UploadEndpoint", uploadEndpoint);
@@ -175,7 +191,10 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * UploadType.
+         * <p>Type of backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder uploadType(String uploadType) {
             this.putQueryParameter("UploadType", uploadType);

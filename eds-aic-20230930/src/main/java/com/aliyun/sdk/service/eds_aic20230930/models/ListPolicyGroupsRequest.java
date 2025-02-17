@@ -102,7 +102,10 @@ public class ListPolicyGroupsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, and the default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -111,7 +114,10 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Used to mark the starting position for reading. If left empty, it indicates starting from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -120,7 +126,7 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * PolicyGroupIds.
+         * <p>List of policy IDs.</p>
          */
         public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putBodyParameter("PolicyGroupIds", policyGroupIds);
@@ -129,7 +135,10 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * PolicyGroupName.
+         * <p>Policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultPolicyGroup</p>
          */
         public Builder policyGroupName(String policyGroupName) {
             this.putBodyParameter("PolicyGroupName", policyGroupName);

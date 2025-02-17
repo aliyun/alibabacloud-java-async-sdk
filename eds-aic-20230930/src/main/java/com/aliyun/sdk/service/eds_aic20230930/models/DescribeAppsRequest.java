@@ -158,7 +158,7 @@ public class DescribeAppsRequest extends Request {
         } 
 
         /**
-         * AppIdList.
+         * <p>List of application IDs.</p>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
             this.putQueryParameter("AppIdList", appIdList);
@@ -167,7 +167,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultAppName</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -176,7 +179,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>Region id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -185,7 +191,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * InstallationStatus.
+         * <p>Application installation/uninstallation status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALLING</p>
          */
         public Builder installationStatus(String installationStatus) {
             this.putQueryParameter("InstallationStatus", installationStatus);
@@ -194,7 +203,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * MD5.
+         * <p>The value of MD5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>THCIEH73KEK3334</p>
          */
         public Builder mD5(String mD5) {
             this.putQueryParameter("MD5", mD5);
@@ -203,7 +215,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of items per page in a paginated query. The value range is 1 to 100, with a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -212,7 +227,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the starting position for reading. If empty, it starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -221,7 +239,10 @@ public class DescribeAppsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Application status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

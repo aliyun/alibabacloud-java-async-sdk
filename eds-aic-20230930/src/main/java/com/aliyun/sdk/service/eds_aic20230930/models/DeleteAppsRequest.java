@@ -59,7 +59,7 @@ public class DeleteAppsRequest extends Request {
         } 
 
         /**
-         * AppIdList.
+         * <p>List of application IDs.</p>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
             this.putQueryParameter("AppIdList", appIdList);

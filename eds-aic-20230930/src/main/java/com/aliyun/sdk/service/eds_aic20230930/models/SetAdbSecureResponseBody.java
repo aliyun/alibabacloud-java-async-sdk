@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteImagesResponseBody} extends {@link TeaModel}
+ * {@link SetAdbSecureResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteImagesResponseBody</p>
+ * <p>SetAdbSecureResponseBody</p>
  */
-public class DeleteImagesResponseBody extends TeaModel {
+public class SetAdbSecureResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteImagesResponseBody(Builder builder) {
+    private SetAdbSecureResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class DeleteImagesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteImagesResponseBody create() {
+    public static SetAdbSecureResponseBody create() {
         return builder().build();
     }
 
@@ -55,7 +55,7 @@ public class DeleteImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Deletion result.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,38 +63,39 @@ public class DeleteImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4610632D-D661-5982-B3D7-5D3FD183F595</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteImagesResponseBody build() {
-            return new DeleteImagesResponseBody(this);
+        public SetAdbSecureResponseBody build() {
+            return new SetAdbSecureResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DeleteImagesResponseBody} extends {@link TeaModel}
+     * {@link SetAdbSecureResponseBody} extends {@link TeaModel}
      *
-     * <p>DeleteImagesResponseBody</p>
+     * <p>SetAdbSecureResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FailDeleteImageIds")
-        private java.util.List<String> failDeleteImageIds;
+        @com.aliyun.core.annotation.NameInMap("FailCount")
+        private Integer failCount;
 
-        @com.aliyun.core.annotation.NameInMap("SuccessDeleteImageIds")
-        private java.util.List<String> successDeleteImageIds;
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
+        private java.util.List<String> instanceIds;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
 
         private Data(Builder builder) {
-            this.failDeleteImageIds = builder.failDeleteImageIds;
-            this.successDeleteImageIds = builder.successDeleteImageIds;
+            this.failCount = builder.failCount;
+            this.instanceIds = builder.instanceIds;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -106,36 +107,52 @@ public class DeleteImagesResponseBody extends TeaModel {
         }
 
         /**
-         * @return failDeleteImageIds
+         * @return failCount
          */
-        public java.util.List<String> getFailDeleteImageIds() {
-            return this.failDeleteImageIds;
+        public Integer getFailCount() {
+            return this.failCount;
         }
 
         /**
-         * @return successDeleteImageIds
+         * @return instanceIds
          */
-        public java.util.List<String> getSuccessDeleteImageIds() {
-            return this.successDeleteImageIds;
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
         public static final class Builder {
-            private java.util.List<String> failDeleteImageIds; 
-            private java.util.List<String> successDeleteImageIds; 
+            private Integer failCount; 
+            private java.util.List<String> instanceIds; 
+            private Integer totalCount; 
 
             /**
-             * <p>List of failed to delete image IDs.</p>
+             * FailCount.
              */
-            public Builder failDeleteImageIds(java.util.List<String> failDeleteImageIds) {
-                this.failDeleteImageIds = failDeleteImageIds;
+            public Builder failCount(Integer failCount) {
+                this.failCount = failCount;
                 return this;
             }
 
             /**
-             * <p>List of successfully deleted image IDs.</p>
+             * InstanceIds.
              */
-            public Builder successDeleteImageIds(java.util.List<String> successDeleteImageIds) {
-                this.successDeleteImageIds = successDeleteImageIds;
+            public Builder instanceIds(java.util.List<String> instanceIds) {
+                this.instanceIds = instanceIds;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

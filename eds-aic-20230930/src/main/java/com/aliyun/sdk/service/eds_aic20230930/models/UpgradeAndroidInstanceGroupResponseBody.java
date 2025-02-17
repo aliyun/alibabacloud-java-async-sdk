@@ -67,7 +67,10 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;acp-3vzqq4y3f31f3z3df&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.instanceIds = instanceIds;
@@ -75,7 +78,10 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223684716098****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -83,7 +89,10 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310A783E-CC46-5452-A8A3-71AE5DB59****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

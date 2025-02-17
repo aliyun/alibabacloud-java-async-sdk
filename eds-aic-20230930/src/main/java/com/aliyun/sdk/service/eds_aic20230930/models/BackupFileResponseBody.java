@@ -79,7 +79,10 @@ public class BackupFileResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Count.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -87,7 +90,10 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned result object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -95,7 +101,10 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +112,10 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The batch task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-22ex666a5mco5****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -185,7 +197,10 @@ public class BackupFileResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * AndroidInstanceId.
+             * <p>Instance id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-34pqe4r0kd9kn****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -193,7 +208,10 @@ public class BackupFileResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFileId.
+             * <p>Backup file id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bf-b0qbg3pbpjkn7****</p>
              */
             public Builder backupFileId(String backupFileId) {
                 this.backupFileId = backupFileId;
@@ -201,7 +219,10 @@ public class BackupFileResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFileName.
+             * <p>Backup file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a-58ftsoo90p0qa****.ab</p>
              */
             public Builder backupFileName(String backupFileName) {
                 this.backupFileName = backupFileName;
@@ -209,7 +230,10 @@ public class BackupFileResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-22ex666a5mco5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

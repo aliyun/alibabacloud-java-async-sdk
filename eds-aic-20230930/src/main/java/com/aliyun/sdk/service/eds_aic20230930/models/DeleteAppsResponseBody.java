@@ -43,7 +43,10 @@ public class DeleteAppsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310A783E-CC46-5452-A8A3-71AE5DB5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

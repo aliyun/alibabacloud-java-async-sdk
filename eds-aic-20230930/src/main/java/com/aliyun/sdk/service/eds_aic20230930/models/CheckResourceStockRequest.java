@@ -116,7 +116,10 @@ public class CheckResourceStockRequest extends Request {
         } 
 
         /**
-         * AcpSpecId.
+         * <p>Specification ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp.basic.small</p>
          */
         public Builder acpSpecId(String acpSpecId) {
             this.putQueryParameter("AcpSpecId", acpSpecId);
@@ -134,6 +137,7 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +159,10 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The availability zone of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

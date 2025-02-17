@@ -157,7 +157,10 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>Application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>应用名称1</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -166,7 +169,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>Region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -175,7 +181,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -184,7 +193,16 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The storage name of the application file in OSS. This parameter, together with <code>FilePath</code>, determines a unique OSS address.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Please log in to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise Edition Console</a>, and follow the instructions on the page to upload your application files to the EDS App Center, so as to obtain this parameter.</li>
+         * <li>If <code>OssAppUrl</code> is not provided, then <code>FileName</code>+<code>FilePath</code> are required parameters.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp.apk</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -193,7 +211,13 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The OSS Bucket storage path of the application file. This parameter, together with <code>FileName</code>, determines a unique OSS address.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Please log in to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise Edition Console</a>, and follow the instructions on the page to upload your application files to the EDS App Center, so as to obtain this parameter.</li>
+         * <li>If <code>OssAppUrl</code> is not provided, then <code>FileName</code>+<code>FilePath</code> are required parameters.</li>
+         * </ul>
+         * </blockquote>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -202,7 +226,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * IconUrl.
+         * <p>Application icon URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/icon.png">https://www.example.com/icon.png</a></p>
          */
         public Builder iconUrl(String iconUrl) {
             this.putQueryParameter("IconUrl", iconUrl);
@@ -211,7 +238,10 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * InstallParam.
+         * <p>Installation parameters. The default installation parameter is <code>-r</code> when installing the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-d</p>
          */
         public Builder installParam(String installParam) {
             this.putQueryParameter("InstallParam", installParam);
@@ -220,7 +250,16 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * OssAppUrl.
+         * <p>The OSS address of the application.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Please log in to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise Edition Console</a>, and follow the instructions on the page to upload your application files to the EDS App Center, so as to obtain this parameter.</li>
+         * <li>If <code>FileName</code>+<code>FilePath</code> are not provided, then this parameter is required.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://testApp.apk">http://testApp.apk</a></p>
          */
         public Builder ossAppUrl(String ossAppUrl) {
             this.putQueryParameter("OssAppUrl", ossAppUrl);

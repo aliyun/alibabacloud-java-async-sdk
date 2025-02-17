@@ -101,7 +101,10 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>Application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder appId(Integer appId) {
             this.putQueryParameter("AppId", appId);
@@ -110,7 +113,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>Application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultAppName</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -119,7 +125,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -128,7 +137,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * IconUrl.
+         * <p>Icon URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://defaultIcon.png">https://defaultIcon.png</a></p>
          */
         public Builder iconUrl(String iconUrl) {
             this.putQueryParameter("IconUrl", iconUrl);

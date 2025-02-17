@@ -79,7 +79,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,10 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates the current read position returned by this call. An empty value means that the data has been fully read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -95,7 +98,10 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>620740FF-492F-5956-B1BA-361E966C0269</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +109,10 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -305,7 +314,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             private String systemType; 
 
             /**
-             * AliUid.
+             * <p>Aliyun account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>117819727354****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -313,7 +325,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -321,7 +336,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-01 10:56:36</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -329,7 +347,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-01 10:56:36</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -337,7 +358,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>Image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imgc-075cllfeuazh****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -345,7 +369,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>Image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -353,7 +380,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRegionDistributeMap.
+             * <p>Image distribution information by region, where the key is the region and the value is the distribution information.</p>
              */
             public Builder imageRegionDistributeMap(java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap) {
                 this.imageRegionDistributeMap = imageRegionDistributeMap;
@@ -361,7 +388,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageRegionList.
+             * <p>Available region list.</p>
              */
             public Builder imageRegionList(java.util.List<String> imageRegionList) {
                 this.imageRegionList = imageRegionList;
@@ -369,7 +396,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * <p>Image type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -377,7 +407,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>Language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -385,7 +418,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>Release time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-25 10:06:45</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -393,7 +429,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * RenderingType.
+             * <p>Rendering type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder renderingType(String renderingType) {
                 this.renderingType = renderingType;
@@ -401,7 +440,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Image status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -409,7 +451,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * SystemType.
+             * <p>Operating system type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Android 12</p>
              */
             public Builder systemType(String systemType) {
                 this.systemType = systemType;

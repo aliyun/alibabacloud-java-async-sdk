@@ -60,6 +60,7 @@ public class DeleteImagesRequest extends Request {
         } 
 
         /**
+         * <p>List of image IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder imageIds(java.util.List<String> imageIds) {

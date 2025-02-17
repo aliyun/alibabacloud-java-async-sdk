@@ -73,7 +73,10 @@ public class ModifyAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-8v5bjld0r7tkl****</p>
          */
         public Builder androidInstanceId(String androidInstanceId) {
             this.putQueryParameter("AndroidInstanceId", androidInstanceId);
@@ -82,7 +85,15 @@ public class ModifyAndroidInstanceRequest extends Request {
         }
 
         /**
-         * NewAndroidInstanceName.
+         * <p>The new name of the instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The instance name must not exceed 30 characters; it should start with a letter (uppercase or lowercase) or a Chinese character, and cannot begin with http:// or https://. Only supports Chinese, English, numbers, colon (:), underscore (_), period (.), or hyphen (-).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>new_name</p>
          */
         public Builder newAndroidInstanceName(String newAndroidInstanceName) {
             this.putQueryParameter("NewAndroidInstanceName", newAndroidInstanceName);

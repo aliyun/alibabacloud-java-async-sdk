@@ -43,7 +43,10 @@ public class DeletePolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17C731AB-AAEE-5844-A352-D8D0352D3F0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
