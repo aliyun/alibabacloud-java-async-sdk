@@ -891,6 +891,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnapshotPolicyName")
         private String snapshotPolicyName;
 
+        @com.aliyun.core.annotation.NameInMap("StandardStartTime")
+        private String standardStartTime;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -968,6 +971,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.sessions = builder.sessions;
             this.snapshotPolicyId = builder.snapshotPolicyId;
             this.snapshotPolicyName = builder.snapshotPolicyName;
+            this.standardStartTime = builder.standardStartTime;
             this.startTime = builder.startTime;
             this.supportHibernation = builder.supportHibernation;
             this.systemDiskCategory = builder.systemDiskCategory;
@@ -1351,6 +1355,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return standardStartTime
+         */
+        public String getStandardStartTime() {
+            return this.standardStartTime;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -1459,6 +1470,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private java.util.List<Sessions> sessions; 
             private String snapshotPolicyId; 
             private String snapshotPolicyName; 
+            private String standardStartTime; 
             private String startTime; 
             private Boolean supportHibernation; 
             private String systemDiskCategory; 
@@ -2156,6 +2168,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder snapshotPolicyName(String snapshotPolicyName) {
                 this.snapshotPolicyName = snapshotPolicyName;
+                return this;
+            }
+
+            /**
+             * StandardStartTime.
+             */
+            public Builder standardStartTime(String standardStartTime) {
+                this.standardStartTime = standardStartTime;
                 return this;
             }
 
