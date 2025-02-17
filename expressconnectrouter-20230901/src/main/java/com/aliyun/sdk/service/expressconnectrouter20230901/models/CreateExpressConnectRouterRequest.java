@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressConnectRouterRequest} extends {@link RequestModel}
  *
  * <p>CreateExpressConnectRouterRequest</p>
@@ -37,8 +43,8 @@ public class CreateExpressConnectRouterRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private CreateExpressConnectRouterRequest(Builder builder) {
         super(builder);
@@ -48,7 +54,7 @@ public class CreateExpressConnectRouterRequest extends Request {
         this.dryRun = builder.dryRun;
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
-        this.tags = builder.tags;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -107,10 +113,10 @@ public class CreateExpressConnectRouterRequest extends Request {
     }
 
     /**
-     * @return tags
+     * @return tag
      */
-    public java.util.List < Tags> getTags() {
-        return this.tags;
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateExpressConnectRouterRequest, Builder> {
@@ -120,7 +126,7 @@ public class CreateExpressConnectRouterRequest extends Request {
         private Boolean dryRun; 
         private String name; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -134,11 +140,15 @@ public class CreateExpressConnectRouterRequest extends Request {
             this.dryRun = request.dryRun;
             this.name = request.name;
             this.resourceGroupId = request.resourceGroupId;
-            this.tags = request.tags;
+            this.tag = request.tag;
         } 
 
         /**
-         * AlibabaSideAsn.
+         * <p>The autonomous system number (ASN) of the ECR. Valid values: 45104, 64512 to 65534, and 4200000000 to 4294967294. Default value: 45104. The value 65025 is reserved by Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45104</p>
          */
         public Builder alibabaSideAsn(Long alibabaSideAsn) {
             this.putBodyParameter("AlibabaSideAsn", alibabaSideAsn);
@@ -147,7 +157,14 @@ public class CreateExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -156,7 +173,10 @@ public class CreateExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the ECR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -165,7 +185,14 @@ public class CreateExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -174,7 +201,10 @@ public class CreateExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the ECR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -183,7 +213,10 @@ public class CreateExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the ECR belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvvajg5q****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -192,11 +225,12 @@ public class CreateExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The information about the tags.</p>
+         * <p>You can specify at most 20 tags in each call.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
-            this.putBodyParameter("Tags", tags);
-            this.tags = tags;
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -207,14 +241,20 @@ public class CreateExpressConnectRouterRequest extends Request {
 
     } 
 
-    public static class Tags extends TeaModel {
+    /**
+     * 
+     * {@link CreateExpressConnectRouterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateExpressConnectRouterRequest</p>
+     */
+    public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Tags(Builder builder) {
+        private Tag(Builder builder) {
             this.key = builder.key;
             this.value = builder.value;
         }
@@ -223,7 +263,7 @@ public class CreateExpressConnectRouterRequest extends Request {
             return new Builder();
         }
 
-        public static Tags create() {
+        public static Tag create() {
             return builder().build();
         }
 
@@ -246,7 +286,11 @@ public class CreateExpressConnectRouterRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,15 +298,19 @@ public class CreateExpressConnectRouterRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public Tags build() {
-                return new Tags(this);
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

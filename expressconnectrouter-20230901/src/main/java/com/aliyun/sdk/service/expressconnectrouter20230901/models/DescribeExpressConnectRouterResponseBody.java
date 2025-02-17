@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectRouterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExpressConnectRouterResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     private String dynamicMessage;
 
     @com.aliyun.core.annotation.NameInMap("EcrList")
-    private java.util.List < EcrList> ecrList;
+    private java.util.List<EcrList> ecrList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -101,7 +107,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
     /**
      * @return ecrList
      */
-    public java.util.List < EcrList> getEcrList() {
+    public java.util.List<EcrList> getEcrList() {
         return this.ecrList;
     }
 
@@ -159,7 +165,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         private String code; 
         private String dynamicCode; 
         private String dynamicMessage; 
-        private java.util.List < EcrList> ecrList; 
+        private java.util.List<EcrList> ecrList; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -169,7 +175,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication is failed for ****</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -177,7 +186,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -185,7 +197,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParamFormat.Name</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -193,7 +208,13 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>The param format of Name **** is illegal.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -201,15 +222,18 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * EcrList.
+         * <p>The ECRs.</p>
          */
-        public Builder ecrList(java.util.List < EcrList> ecrList) {
+        public Builder ecrList(java.util.List<EcrList> ecrList) {
             this.ecrList = ecrList;
             return this;
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -217,7 +241,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -225,7 +252,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -233,7 +263,14 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If NextToken is empty, no next page exists.</li>
+         * <li>If a value of NextToken is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2w6Olxc+cMPjUtUMpttDGZkffvHCfhBKKNEyCVaq+WUEzuUWpp9+QOApNf6g==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -241,7 +278,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -249,7 +289,14 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +304,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of ECRs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -270,28 +320,13 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExpressConnectRouterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectRouterResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AliUid")
-        private Long aliUid;
-
-        @com.aliyun.core.annotation.NameInMap("Category")
-        private Integer category;
-
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
-
-        @com.aliyun.core.annotation.NameInMap("RegionNo")
-        private String regionNo;
-
-        @com.aliyun.core.annotation.NameInMap("ResourceId")
-        private String resourceId;
-
-        @com.aliyun.core.annotation.NameInMap("ResuorceType")
-        private String resuorceType;
-
-        @com.aliyun.core.annotation.NameInMap("Scope")
-        private Integer scope;
-
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
@@ -299,13 +334,6 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         private String tagValue;
 
         private Tags(Builder builder) {
-            this.aliUid = builder.aliUid;
-            this.category = builder.category;
-            this.id = builder.id;
-            this.regionNo = builder.regionNo;
-            this.resourceId = builder.resourceId;
-            this.resuorceType = builder.resuorceType;
-            this.scope = builder.scope;
             this.tagKey = builder.tagKey;
             this.tagValue = builder.tagValue;
         }
@@ -316,55 +344,6 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
 
         public static Tags create() {
             return builder().build();
-        }
-
-        /**
-         * @return aliUid
-         */
-        public Long getAliUid() {
-            return this.aliUid;
-        }
-
-        /**
-         * @return category
-         */
-        public Integer getCategory() {
-            return this.category;
-        }
-
-        /**
-         * @return id
-         */
-        public Long getId() {
-            return this.id;
-        }
-
-        /**
-         * @return regionNo
-         */
-        public String getRegionNo() {
-            return this.regionNo;
-        }
-
-        /**
-         * @return resourceId
-         */
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        /**
-         * @return resuorceType
-         */
-        public String getResuorceType() {
-            return this.resuorceType;
-        }
-
-        /**
-         * @return scope
-         */
-        public Integer getScope() {
-            return this.scope;
         }
 
         /**
@@ -382,74 +361,14 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long aliUid; 
-            private Integer category; 
-            private Long id; 
-            private String regionNo; 
-            private String resourceId; 
-            private String resuorceType; 
-            private Integer scope; 
             private String tagKey; 
             private String tagValue; 
 
             /**
-             * AliUid.
-             */
-            public Builder aliUid(Long aliUid) {
-                this.aliUid = aliUid;
-                return this;
-            }
-
-            /**
-             * Category.
-             */
-            public Builder category(Integer category) {
-                this.category = category;
-                return this;
-            }
-
-            /**
-             * Id.
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * RegionNo.
-             */
-            public Builder regionNo(String regionNo) {
-                this.regionNo = regionNo;
-                return this;
-            }
-
-            /**
-             * ResourceId.
-             */
-            public Builder resourceId(String resourceId) {
-                this.resourceId = resourceId;
-                return this;
-            }
-
-            /**
-             * ResuorceType.
-             */
-            public Builder resuorceType(String resuorceType) {
-                this.resuorceType = resuorceType;
-                return this;
-            }
-
-            /**
-             * Scope.
-             */
-            public Builder scope(Integer scope) {
-                this.scope = scope;
-                return this;
-            }
-
-            /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -457,7 +376,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -471,6 +393,12 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExpressConnectRouterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectRouterResponseBody</p>
+     */
     public static class EcrList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlibabaSideAsn")
         private Long alibabaSideAsn;
@@ -503,7 +431,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private EcrList(Builder builder) {
             this.alibabaSideAsn = builder.alibabaSideAsn;
@@ -600,7 +528,7 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -615,10 +543,13 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             private Long ownerId; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
-             * AlibabaSideAsn.
+             * <p>The autonomous system number (ASN) of the ECR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45104</p>
              */
             public Builder alibabaSideAsn(Long alibabaSideAsn) {
                 this.alibabaSideAsn = alibabaSideAsn;
@@ -626,7 +557,14 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * BizStatus.
+             * <p>The business state of the ECR. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal:</strong> The ECR is running as expected.</li>
+             * <li><strong>FinancialLocked</strong>: The ECR is locked due to overdue payments.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder bizStatus(String bizStatus) {
                 this.bizStatus = bizStatus;
@@ -634,7 +572,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the ECR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -642,7 +583,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * EcrId.
+             * <p>The ECR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-mezk2idmsd0vx2****</p>
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -650,7 +594,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the ECR was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-16T01:44:50Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -658,7 +605,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the ECR was modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-16T01:44:50Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -666,7 +616,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the ECR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -674,7 +627,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The ID of the Alibaba Cloud account that owns the ECR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170646818729****</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -682,7 +638,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the ECR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzuscospt****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -690,7 +649,20 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The deployment state of the ECR. Valid values:</p>
+             * <ul>
+             * <li><strong>ACTIVE</strong>: The ECR is created.</li>
+             * <li><strong>UPDATING</strong>: The ECR is being modified.</li>
+             * <li><strong>ASSOCIATING</strong>: The ECR is being associated with resources.</li>
+             * <li><strong>DISSOCIATING</strong>: The resource is being disassociated from resources.</li>
+             * <li><strong>LOCKED_ATTACHING</strong>: The ECR is locked because it is being associated with an external system.</li>
+             * <li><strong>LOCKED_DETACHING</strong>: The ECR is locked because it is being disassociated from an external system.</li>
+             * <li><strong>RECLAIMING</strong>: The ECR is waiting to release resources.</li>
+             * <li><strong>DELETING</strong>: The ECR is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -698,9 +670,9 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceGrantedToExpressConnectRouterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceGrantedToExpressConnectRouterResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     private String dynamicMessage;
 
     @com.aliyun.core.annotation.NameInMap("EcrGrantedInstanceList")
-    private java.util.List < EcrGrantedInstanceList> ecrGrantedInstanceList;
+    private java.util.List<EcrGrantedInstanceList> ecrGrantedInstanceList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -101,7 +107,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
     /**
      * @return ecrGrantedInstanceList
      */
-    public java.util.List < EcrGrantedInstanceList> getEcrGrantedInstanceList() {
+    public java.util.List<EcrGrantedInstanceList> getEcrGrantedInstanceList() {
         return this.ecrGrantedInstanceList;
     }
 
@@ -159,7 +165,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         private String code; 
         private String dynamicCode; 
         private String dynamicMessage; 
-        private java.util.List < EcrGrantedInstanceList> ecrGrantedInstanceList; 
+        private java.util.List<EcrGrantedInstanceList> ecrGrantedInstanceList; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -169,7 +175,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         private Integer totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication is failed for ****</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -177,7 +186,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -185,7 +197,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParamFormat.Name</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -193,7 +208,13 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>The param format of Name **** is illegal.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -201,15 +222,18 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * EcrGrantedInstanceList.
+         * <p>The network instances whose permissions are granted to the ECR.</p>
          */
-        public Builder ecrGrantedInstanceList(java.util.List < EcrGrantedInstanceList> ecrGrantedInstanceList) {
+        public Builder ecrGrantedInstanceList(java.util.List<EcrGrantedInstanceList> ecrGrantedInstanceList) {
             this.ecrGrantedInstanceList = ecrGrantedInstanceList;
             return this;
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -217,7 +241,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * MaxResults.
+         * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -225,7 +252,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -233,7 +263,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFlMqGuJ10uN3l+FX/cBrGDNXUOUifNeOuAJlT4dc3vsWD6DsNSFAC2FtpeH5QOSG2WFdyRoun7gSLCm5o69YnAQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -241,7 +278,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -249,7 +289,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +304,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of network instances whose permissions are granted to the ECR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -270,9 +320,18 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceGrantedToExpressConnectRouterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceGrantedToExpressConnectRouterResponseBody</p>
+     */
     public static class EcrGrantedInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcrId")
         private String ecrId;
+
+        @com.aliyun.core.annotation.NameInMap("EcrOwnerAliUid")
+        private String ecrOwnerAliUid;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -303,6 +362,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
 
         private EcrGrantedInstanceList(Builder builder) {
             this.ecrId = builder.ecrId;
+            this.ecrOwnerAliUid = builder.ecrOwnerAliUid;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.grantId = builder.grantId;
@@ -327,6 +387,13 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
          */
         public String getEcrId() {
             return this.ecrId;
+        }
+
+        /**
+         * @return ecrOwnerAliUid
+         */
+        public String getEcrOwnerAliUid() {
+            return this.ecrOwnerAliUid;
         }
 
         /**
@@ -394,6 +461,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
 
         public static final class Builder {
             private String ecrId; 
+            private String ecrOwnerAliUid; 
             private String gmtCreate; 
             private String gmtModified; 
             private String grantId; 
@@ -405,7 +473,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             private String status; 
 
             /**
-             * EcrId.
+             * <p>The ECR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-mezk2idmsd0vx2****</p>
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -413,7 +484,18 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * GmtCreate.
+             * EcrOwnerAliUid.
+             */
+            public Builder ecrOwnerAliUid(String ecrOwnerAliUid) {
+                this.ecrOwnerAliUid = ecrOwnerAliUid;
+                return this;
+            }
+
+            /**
+             * <p>The time when the network instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669023139000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -421,7 +503,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the network instance was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669023139000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -429,7 +514,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * GrantId.
+             * <p>The authorization ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gr-8gdelo13mi99g1****</p>
              */
             public Builder grantId(String grantId) {
                 this.grantId = grantId;
@@ -437,7 +525,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-j6cwxhgg0s5nuephp****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -445,7 +536,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * NodeOwnerBid.
+             * <p>The ID of the Alibaba Cloud enterprise account that owns the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder nodeOwnerBid(String nodeOwnerBid) {
                 this.nodeOwnerBid = nodeOwnerBid;
@@ -453,7 +547,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * NodeOwnerUid.
+             * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129845258050****</p>
              */
             public Builder nodeOwnerUid(Long nodeOwnerUid) {
                 this.nodeOwnerUid = nodeOwnerUid;
@@ -461,7 +558,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * NodeRegionId.
+             * <p>The region ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder nodeRegionId(String nodeRegionId) {
                 this.nodeRegionId = nodeRegionId;
@@ -469,7 +569,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * NodeType.
+             * <p>The type of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VBR</strong></li>
+             * <li><strong>VPC</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VBR</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -477,7 +584,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * Status.
+             * <p>The state of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

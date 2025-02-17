@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectRouterRequest} extends {@link RequestModel}
  *
  * <p>DescribeExpressConnectRouterRequest</p>
@@ -40,8 +46,8 @@ public class DescribeExpressConnectRouterRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TagModels")
-    private java.util.List < TagModels> tagModels;
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeExpressConnectRouterRequest(Builder builder) {
         super(builder);
@@ -52,7 +58,7 @@ public class DescribeExpressConnectRouterRequest extends Request {
         this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.resourceGroupId = builder.resourceGroupId;
-        this.tagModels = builder.tagModels;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -118,10 +124,10 @@ public class DescribeExpressConnectRouterRequest extends Request {
     }
 
     /**
-     * @return tagModels
+     * @return tag
      */
-    public java.util.List < TagModels> getTagModels() {
-        return this.tagModels;
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeExpressConnectRouterRequest, Builder> {
@@ -132,7 +138,7 @@ public class DescribeExpressConnectRouterRequest extends Request {
         private String name; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < TagModels> tagModels; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -147,11 +153,18 @@ public class DescribeExpressConnectRouterRequest extends Request {
             this.name = request.name;
             this.nextToken = request.nextToken;
             this.resourceGroupId = request.resourceGroupId;
-            this.tagModels = request.tagModels;
+            this.tag = request.tag;
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -160,7 +173,14 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -169,7 +189,10 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * EcrId.
+         * <p>The ECR ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-fu8rszhgv7623c****</p>
          */
         public Builder ecrId(String ecrId) {
             this.putBodyParameter("EcrId", ecrId);
@@ -178,7 +201,10 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -187,7 +213,10 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the ECR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -196,7 +225,14 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>e0a2dbeb69a8beeeb8194e92b702df3fd3e7bfe6ce7bfc16e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -205,7 +241,10 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the ECR belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2aq7f4va****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -214,11 +253,11 @@ public class DescribeExpressConnectRouterRequest extends Request {
         }
 
         /**
-         * TagModels.
+         * <p>The resource tags. You can specify up to 20 tags.</p>
          */
-        public Builder tagModels(java.util.List < TagModels> tagModels) {
-            this.putBodyParameter("TagModels", tagModels);
-            this.tagModels = tagModels;
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -229,62 +268,77 @@ public class DescribeExpressConnectRouterRequest extends Request {
 
     } 
 
-    public static class TagModels extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("TagKey")
-        private String tagKey;
+    /**
+     * 
+     * {@link DescribeExpressConnectRouterRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectRouterRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
 
-        @com.aliyun.core.annotation.NameInMap("TagValue")
-        private String tagValue;
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
 
-        private TagModels(Builder builder) {
-            this.tagKey = builder.tagKey;
-            this.tagValue = builder.tagValue;
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static TagModels create() {
+        public static Tag create() {
             return builder().build();
         }
 
         /**
-         * @return tagKey
+         * @return key
          */
-        public String getTagKey() {
-            return this.tagKey;
+        public String getKey() {
+            return this.key;
         }
 
         /**
-         * @return tagValue
+         * @return value
          */
-        public String getTagValue() {
-            return this.tagValue;
+        public String getValue() {
+            return this.value;
         }
 
         public static final class Builder {
-            private String tagKey; 
-            private String tagValue; 
+            private String key; 
+            private String value; 
 
             /**
-             * TagKey.
+             * <p>The tag keys.</p>
+             * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>You can specify at most 20 tag keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
-            public Builder tagKey(String tagKey) {
-                this.tagKey = tagKey;
+            public Builder key(String key) {
+                this.key = key;
                 return this;
             }
 
             /**
-             * TagValue.
+             * <p>A tag value.</p>
+             * <p>A tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
-            public Builder tagValue(String tagValue) {
-                this.tagValue = tagValue;
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 
-            public TagModels build() {
-                return new TagModels(this);
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

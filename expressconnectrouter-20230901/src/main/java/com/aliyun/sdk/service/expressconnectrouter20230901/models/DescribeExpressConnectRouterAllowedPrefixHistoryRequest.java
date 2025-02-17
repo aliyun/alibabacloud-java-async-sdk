@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectRouterAllowedPrefixHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeExpressConnectRouterAllowedPrefixHistoryRequest</p>
@@ -124,7 +130,13 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         } 
 
         /**
-         * AssociationId.
+         * <p>The ID of the association between the ECR and the virtual private cloud (VPC) or transit router (TR).</p>
+         * <blockquote>
+         * <p> You must specify either <strong>InstanceId</strong> or <strong>AssociationId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-assoc-9p2qxx5phpca2m****</p>
          */
         public Builder associationId(String associationId) {
             this.putBodyParameter("AssociationId", associationId);
@@ -133,7 +145,14 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FF9nMec/RZ6H9oqFn1pvyir/SLRlxCCyHJonbGzqL01hiM6Jb3wJowdHvjCfog7ww1b9rSHMRFJnrUBfVba68TJg==</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -142,7 +161,14 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -151,7 +177,11 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         }
 
         /**
-         * EcrId.
+         * <p>The ECR ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-mezk2idmsd0vx2****</p>
          */
         public Builder ecrId(String ecrId) {
             this.putBodyParameter("EcrId", ecrId);
@@ -160,7 +190,13 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the network instance that is associated with the ECR.</p>
+         * <blockquote>
+         * <p> You must specify either <strong>InstanceId</strong> or <strong>AssociationId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-j6cwxhgg0s5nuephp****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -169,7 +205,14 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryRequest extends Req
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>TR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);

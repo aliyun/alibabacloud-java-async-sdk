@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceGrantedToExpressConnectRouterRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceGrantedToExpressConnectRouterRequest</p>
  */
 public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerType")
+    private String callerType;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
@@ -54,10 +64,11 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagModels")
-    private java.util.List < TagModels> tagModels;
+    private java.util.List<TagModels> tagModels;
 
     private DescribeInstanceGrantedToExpressConnectRouterRequest(Builder builder) {
         super(builder);
+        this.callerType = builder.callerType;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ecrId = builder.ecrId;
@@ -82,6 +93,13 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return callerType
+     */
+    public String getCallerType() {
+        return this.callerType;
     }
 
     /**
@@ -157,11 +175,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
     /**
      * @return tagModels
      */
-    public java.util.List < TagModels> getTagModels() {
+    public java.util.List<TagModels> getTagModels() {
         return this.tagModels;
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceGrantedToExpressConnectRouterRequest, Builder> {
+        private String callerType; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ecrId; 
@@ -172,7 +191,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < TagModels> tagModels; 
+        private java.util.List<TagModels> tagModels; 
 
         private Builder() {
             super();
@@ -180,6 +199,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
 
         private Builder(DescribeInstanceGrantedToExpressConnectRouterRequest request) {
             super(request);
+            this.callerType = request.callerType;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ecrId = request.ecrId;
@@ -194,7 +214,23 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         } 
 
         /**
-         * ClientToken.
+         * CallerType.
+         */
+        public Builder callerType(String callerType) {
+            this.putBodyParameter("CallerType", callerType);
+            this.callerType = callerType;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -203,7 +239,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -212,7 +255,11 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * EcrId.
+         * <p>The ECR ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-mezk2idmsd0vx2****</p>
          */
         public Builder ecrId(String ecrId) {
             this.putBodyParameter("EcrId", ecrId);
@@ -221,7 +268,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-j6cwxhgg0s5nuephp****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -230,7 +280,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * InstanceOwnerId.
+         * <p>The ID of the Alibaba Cloud account that owns the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129845258050****</p>
          */
         public Builder instanceOwnerId(Long instanceOwnerId) {
             this.putBodyParameter("InstanceOwnerId", instanceOwnerId);
@@ -239,7 +292,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * InstanceRegionId.
+         * <p>The region ID of the network instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder instanceRegionId(String instanceRegionId) {
             this.putBodyParameter("InstanceRegionId", instanceRegionId);
@@ -248,7 +304,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * InstanceType.
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VBR</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VBR</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -257,7 +320,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -266,7 +332,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gAAAAABkyGzFbZR2NnxnyVk0EiL7F3qMBtBim8Es0mugRT3qb8yEHAMaHGanzuaHUmiEq9QRmok0RgxJAINBOJZa5KPjopEu_Q==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -275,7 +348,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the network instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2tsvbnfe****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -284,9 +360,9 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         }
 
         /**
-         * TagModels.
+         * <p>The tags.</p>
          */
-        public Builder tagModels(java.util.List < TagModels> tagModels) {
+        public Builder tagModels(java.util.List<TagModels> tagModels) {
             this.putBodyParameter("TagModels", tagModels);
             this.tagModels = tagModels;
             return this;
@@ -299,6 +375,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceGrantedToExpressConnectRouterRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceGrantedToExpressConnectRouterRequest</p>
+     */
     public static class TagModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -338,7 +420,11 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -346,7 +432,11 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
             }
 
             /**
-             * TagValue.
+             * <p>The tag value. You can specify up to 20 tag values. The tag value cannot be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

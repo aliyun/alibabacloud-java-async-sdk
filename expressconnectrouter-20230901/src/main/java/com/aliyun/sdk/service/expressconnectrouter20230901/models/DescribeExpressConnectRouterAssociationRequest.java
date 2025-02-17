@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectRouterAssociationRequest} extends {@link RequestModel}
  *
  * <p>DescribeExpressConnectRouterAssociationRequest</p>
@@ -194,7 +200,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         } 
 
         /**
-         * AssociationId.
+         * <p>The ID of the association between the ECR and the VPC or TR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-assoc-9p2qxx5phpca2m****</p>
          */
         public Builder associationId(String associationId) {
             this.putBodyParameter("AssociationId", associationId);
@@ -203,7 +212,14 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * AssociationNodeType.
+         * <p>The type of the associated resource. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>TR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder associationNodeType(String associationNodeType) {
             this.putBodyParameter("AssociationNodeType", associationNodeType);
@@ -212,7 +228,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * AssociationRegionId.
+         * <p>The region ID of the VPC or TR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder associationRegionId(String associationRegionId) {
             this.putBodyParameter("AssociationRegionId", associationRegionId);
@@ -221,7 +240,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * CenId.
+         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-of3o1the3i4gwb****</p>
          */
         public Builder cenId(String cenId) {
             this.putBodyParameter("CenId", cenId);
@@ -230,7 +252,14 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -239,7 +268,14 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -248,7 +284,11 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * EcrId.
+         * <p>The ECR ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-mezk2idmsd0vx2****</p>
          */
         public Builder ecrId(String ecrId) {
             this.putBodyParameter("EcrId", ecrId);
@@ -257,7 +297,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to read. Valid values: 1 to 2147483647. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -266,7 +309,14 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -275,7 +325,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>The TR ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-2ze4i71c6be454e2l****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putBodyParameter("TransitRouterId", transitRouterId);
@@ -284,7 +337,10 @@ public class DescribeExpressConnectRouterAssociationRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1h37fchc6jmfyln****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);

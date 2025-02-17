@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExpressConnectRouterChildInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExpressConnectRouterChildInstanceResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("ChildInstanceList")
-    private java.util.List < ChildInstanceList> childInstanceList;
+    private java.util.List<ChildInstanceList> childInstanceList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -80,7 +86,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
     /**
      * @return childInstanceList
      */
-    public java.util.List < ChildInstanceList> getChildInstanceList() {
+    public java.util.List<ChildInstanceList> getChildInstanceList() {
         return this.childInstanceList;
     }
 
@@ -156,7 +162,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private java.util.List < ChildInstanceList> childInstanceList; 
+        private java.util.List<ChildInstanceList> childInstanceList; 
         private String code; 
         private String dynamicCode; 
         private String dynamicMessage; 
@@ -169,7 +175,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         private Integer totalCount; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication is failed for ****</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -177,15 +186,18 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * ChildInstanceList.
+         * <p>The VBRs.</p>
          */
-        public Builder childInstanceList(java.util.List < ChildInstanceList> childInstanceList) {
+        public Builder childInstanceList(java.util.List<ChildInstanceList> childInstanceList) {
             this.childInstanceList = childInstanceList;
             return this;
         }
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -193,7 +205,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParamFormat.EcrId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -201,7 +216,13 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>The param format of EcrId **** is illegal.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -209,7 +230,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -217,7 +241,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * MaxResults.
+         * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -225,7 +252,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -233,7 +263,14 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -241,7 +278,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05130E79-588D-5C40-A718-C4863A59****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -249,7 +289,14 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -257,7 +304,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of associated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -270,6 +320,12 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExpressConnectRouterChildInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExpressConnectRouterChildInstanceResponseBody</p>
+     */
     public static class ChildInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociationId")
         private String associationId;
@@ -285,6 +341,9 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
 
         @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
         private String childInstanceType;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("EcrId")
         private String ecrId;
@@ -310,6 +369,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             this.childInstanceOwnerId = builder.childInstanceOwnerId;
             this.childInstanceRegionId = builder.childInstanceRegionId;
             this.childInstanceType = builder.childInstanceType;
+            this.description = builder.description;
             this.ecrId = builder.ecrId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -362,6 +422,13 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return ecrId
          */
         public String getEcrId() {
@@ -409,6 +476,7 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             private Long childInstanceOwnerId; 
             private String childInstanceRegionId; 
             private String childInstanceType; 
+            private String description; 
             private String ecrId; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -417,7 +485,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             private String status; 
 
             /**
-             * AssociationId.
+             * <p>The ID of the association between the ECR and the VPC or TR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-assoc-9p2qxx5phpca2m****</p>
              */
             public Builder associationId(String associationId) {
                 this.associationId = associationId;
@@ -425,7 +496,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * ChildInstanceId.
+             * <p>The VBR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-gw8vjq2zjux3ifsc9****</p>
              */
             public Builder childInstanceId(String childInstanceId) {
                 this.childInstanceId = childInstanceId;
@@ -433,7 +507,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * ChildInstanceOwnerId.
+             * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112101171212****</p>
              */
             public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
                 this.childInstanceOwnerId = childInstanceOwnerId;
@@ -441,7 +518,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * ChildInstanceRegionId.
+             * <p>The region ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder childInstanceRegionId(String childInstanceRegionId) {
                 this.childInstanceRegionId = childInstanceRegionId;
@@ -449,7 +529,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * ChildInstanceType.
+             * <p>The type of the VBR. The value is <strong>VBR</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VBR</p>
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
@@ -457,7 +540,21 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * EcrId.
+             * <p>The description of the ECR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The ECR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-mezk2idmsd0vx2****</p>
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -465,7 +562,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the association was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-09T12:18:23Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -473,7 +573,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the association was modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-09T12:18:23Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -481,7 +584,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * OwnerId.
+             * <p>The ID of the Alibaba Cloud account that owns the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167509154715****</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -489,7 +595,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the VBR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -497,7 +606,18 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * <p>The deployment state of the associated resource. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATING</strong>: The resource is being created.</li>
+             * <li><strong>ACTIVE</strong>: The resource is created.</li>
+             * <li><strong>ASSOCIATING</strong>: The resource is being associated.</li>
+             * <li><strong>DISSOCIATING</strong>: The resource is being disassociated.</li>
+             * <li><strong>UPDATING</strong>: The resource is being modified.</li>
+             * <li><strong>DELETING</strong>: The resource is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;

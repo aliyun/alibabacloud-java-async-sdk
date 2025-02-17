@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExpressConnectRouterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExpressConnectRouterResponseBody</p>
@@ -133,7 +139,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication is failed for ****</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -141,7 +150,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -149,7 +161,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParamFormat.Name</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,7 +172,13 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>The param format of Name **** is illegal.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -165,7 +186,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * EcrId.
+         * <p>The ECR ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecr-fu8rszhgv7623c****</p>
          */
         public Builder ecrId(String ecrId) {
             this.ecrId = ecrId;
@@ -173,7 +197,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +208,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +219,10 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +230,14 @@ public class CreateExpressConnectRouterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the ECR is created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

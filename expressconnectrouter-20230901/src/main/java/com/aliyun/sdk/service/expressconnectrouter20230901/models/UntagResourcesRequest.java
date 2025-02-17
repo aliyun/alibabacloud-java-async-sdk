@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -26,7 +32,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -35,7 +41,7 @@ public class UntagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKey")
-    private java.util.List < String > tagKey;
+    private java.util.List<String> tagKey;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -84,7 +90,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -98,7 +104,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKey
      */
-    public java.util.List < String > getTagKey() {
+    public java.util.List<String> getTagKey() {
         return this.tagKey;
     }
 
@@ -106,9 +112,9 @@ public class UntagResourcesRequest extends Request {
         private Boolean all; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < String > tagKey; 
+        private java.util.List<String> tagKey; 
 
         private Builder() {
             super();
@@ -125,7 +131,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to remove all tags. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putBodyParameter("All", all);
@@ -134,7 +148,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11e9-8e44-00****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -143,7 +164,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("DryRun", dryRun);
@@ -152,16 +180,21 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The ECR IDs.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Set the value to <strong>EXPRESSCONNECTROUTER</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPRESSCONNECTROUTER</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -170,9 +203,9 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The keys of the tags that you want to remove from the ECRs.</p>
          */
-        public Builder tagKey(java.util.List < String > tagKey) {
+        public Builder tagKey(java.util.List<String> tagKey) {
             this.putBodyParameter("TagKey", tagKey);
             this.tagKey = tagKey;
             return this;

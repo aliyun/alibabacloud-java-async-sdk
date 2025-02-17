@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody} extends {@link TeaModel}
  *
  * <p>SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody</p>
@@ -121,7 +127,10 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         private Boolean success; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication is failed for ****</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -129,7 +138,10 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -137,7 +149,10 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParamFormat.EcrId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +160,13 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsInstanceId</strong>, the request parameter <strong>DtsInstanceId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>The param format of EcrId **** is illegal.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +174,10 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +185,10 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +196,10 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +207,14 @@ public class SynchronizeExpressConnectRouterInterRegionBandwidthResponseBody ext
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

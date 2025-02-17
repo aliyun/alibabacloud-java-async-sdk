@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -30,7 +36,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TagResources")
-    private java.util.List < TagResources> tagResources;
+    private java.util.List<TagResources> tagResources;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -99,7 +105,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * @return tagResources
      */
-    public java.util.List < TagResources> getTagResources() {
+    public java.util.List<TagResources> getTagResources() {
         return this.tagResources;
     }
 
@@ -117,11 +123,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TagResources> tagResources; 
+        private java.util.List<TagResources> tagResources; 
         private Integer totalCount; 
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -137,7 +149,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -145,7 +160,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -153,7 +175,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +186,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -169,15 +201,18 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * <p>The tags.</p>
          */
-        public Builder tagResources(java.util.List < TagResources> tagResources) {
+        public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
             return this;
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,6 +225,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -253,7 +294,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-897j0jooxyr1aq****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -261,7 +305,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. The value is <strong>EXPRESSCONNECTROUTER</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPRESSCONNECTROUTER</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -269,7 +316,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -277,7 +327,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExpressConnectRouterSupportedRegionResponseBody} extends {@link TeaModel}
  *
  * <p>ListExpressConnectRouterSupportedRegionResponseBody</p>
@@ -27,7 +33,7 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("SupportedRegionIdList")
-    private java.util.List < String > supportedRegionIdList;
+    private java.util.List<String> supportedRegionIdList;
 
     private ListExpressConnectRouterSupportedRegionResponseBody(Builder builder) {
         this.code = builder.code;
@@ -84,7 +90,7 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
     /**
      * @return supportedRegionIdList
      */
-    public java.util.List < String > getSupportedRegionIdList() {
+    public java.util.List<String> getSupportedRegionIdList() {
         return this.supportedRegionIdList;
     }
 
@@ -94,10 +100,13 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < String > supportedRegionIdList; 
+        private java.util.List<String> supportedRegionIdList; 
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +114,10 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +125,10 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +136,10 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +147,14 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>True</li>
+         * <li>False</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,9 +162,9 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         }
 
         /**
-         * SupportedRegionIdList.
+         * <p>The regions in which the ECR feature is activated.</p>
          */
-        public Builder supportedRegionIdList(java.util.List < String > supportedRegionIdList) {
+        public Builder supportedRegionIdList(java.util.List<String> supportedRegionIdList) {
             this.supportedRegionIdList = supportedRegionIdList;
             return this;
         }

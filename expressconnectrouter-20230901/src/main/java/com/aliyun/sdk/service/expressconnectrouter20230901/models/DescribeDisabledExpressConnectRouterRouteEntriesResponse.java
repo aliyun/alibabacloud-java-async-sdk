@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDisabledExpressConnectRouterRouteEntriesResponse} extends {@link TeaModel}
  *
  * <p>DescribeDisabledExpressConnectRouterRouteEntriesResponse</p>
  */
 public class DescribeDisabledExpressConnectRouterRouteEntriesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
@@ -39,7 +45,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponse extends Re
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -59,7 +65,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponse extends Re
 
     public interface Builder extends Response.Builder<DescribeDisabledExpressConnectRouterRouteEntriesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -73,7 +79,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponse extends Re
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeDisabledExpressConnectRouterRouteEntriesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private DescribeDisabledExpressConnectRouterRouteEntriesResponseBody body; 
 
@@ -92,7 +98,7 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponse extends Re
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
