@@ -183,7 +183,7 @@ public class CreateProjectRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud resource group to which the workspace belongs. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
-         * <p>You can configure this parameter to specify an Alibaba Cloud resource group that you want to use to manage the workspace.</p>
+         * <p>You must configure this parameter to specify an Alibaba Cloud resource group for the workspace that you want to create.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzbn7pti3zff</p>
@@ -206,6 +206,9 @@ public class CreateProjectRequest extends Request {
 
         /**
          * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial analysis group project data development</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -248,6 +251,9 @@ public class CreateProjectRequest extends Request {
         /**
          * <p>The display name of the workspace.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sora financial analysis</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -257,6 +263,12 @@ public class CreateProjectRequest extends Request {
 
         /**
          * <p>The name of the workspace.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The workspace name must be unqiue in a region.</li>
+         * <li>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</li>
+         * <li>The workspace name must be 3 to 28 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

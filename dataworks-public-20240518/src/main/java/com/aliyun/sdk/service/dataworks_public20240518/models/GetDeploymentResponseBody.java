@@ -208,6 +208,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
             /**
              * <p>The description of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Phase description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -224,6 +227,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
             /**
              * <p>The error message returned for the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exception information XXX</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -232,6 +238,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
             /**
              * <p>The name of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Publish package build</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,6 +455,9 @@ public class GetDeploymentResponseBody extends TeaModel {
 
             /**
              * <p>The error message returned when the process fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error message</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -66,7 +66,10 @@ public class CreateDataSourceSharedRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46F594E6-84AB-5FA5-8144-6F3D149961E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

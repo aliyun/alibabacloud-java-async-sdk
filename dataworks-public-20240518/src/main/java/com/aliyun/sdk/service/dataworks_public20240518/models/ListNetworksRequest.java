@@ -125,7 +125,10 @@ public class ListNetworksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +137,10 @@ public class ListNetworksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,6 +149,7 @@ public class ListNetworksRequest extends Request {
         }
 
         /**
+         * <p>Unique identifier of a Serverless resource group</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +162,17 @@ public class ListNetworksRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <ul>
+         * <li>Id (Desc/Asc): the network ID</li>
+         * <li>Status (Desc/Asc): the network status</li>
+         * <li>CreateUser (Desc/Asc): the user who created the network</li>
+         * <li>CreateTime (Desc/Asc): the time when the network was created</li>
+         * </ul>
+         * <p>Default value: CreateTime Asc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime Asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

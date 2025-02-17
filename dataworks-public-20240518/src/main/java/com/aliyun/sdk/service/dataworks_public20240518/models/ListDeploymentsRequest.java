@@ -194,12 +194,12 @@ public class ListDeploymentsRequest extends Request {
          * <p>The status of the processes. This parameter specifies a filter condition.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>INIT</li>
-         * <li>RUNNING</li>
-         * <li>SUCCESS</li>
-         * <li>FAIL</li>
-         * <li>TERMINATION</li>
-         * <li>CANCEL</li>
+         * <li>Init</li>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>Fail</li>
+         * <li>Termination</li>
+         * <li>Cancel</li>
          * </ul>
          * 
          * <strong>example:</strong>

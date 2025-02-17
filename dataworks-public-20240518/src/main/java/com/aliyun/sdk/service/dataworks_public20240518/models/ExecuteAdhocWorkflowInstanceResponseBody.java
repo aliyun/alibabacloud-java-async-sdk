@@ -55,7 +55,10 @@ public class ExecuteAdhocWorkflowInstanceResponseBody extends TeaModel {
         private Long workflowInstanceId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,10 @@ public class ExecuteAdhocWorkflowInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowInstanceId.
+         * <p>The workflow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowInstanceId(Long workflowInstanceId) {
             this.workflowInstanceId = workflowInstanceId;

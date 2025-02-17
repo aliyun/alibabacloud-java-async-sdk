@@ -249,6 +249,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
         /**
          * <p>The description of the monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI data quality monitoring test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -281,6 +284,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
         /**
          * <p>The name of the monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI data quality monitoring test.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -417,7 +423,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>阈值表达式。</p>
+             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <ul>
+             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -427,21 +443,12 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             /**
              * <p>The comparison operator. Valid values:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>&lt;=</li>
-             * <li>&lt;</li>
-             * <li>! =</li>
-             * <li>=</li>
              * <li>&gt;</li>
              * <li>&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -528,7 +535,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>阈值表达式。</p>
+             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <ul>
+             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -538,21 +555,12 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             /**
              * <p>The comparison operator. Valid values:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
+             * <li>&gt;</li>
+             * <li>&gt;=</li>
+             * <li>&lt;</li>
              * <li>&lt;=</li>
              * <li>!=</li>
              * <li>=</li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>&lt;=</li>
-             * <li>&lt;</li>
-             * <li>! =</li>
-             * <li>=</li>
-             * <li>&gt;</li>
-             * <li>&gt;=</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -638,7 +646,17 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>阈值表达式。</p>
+             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <ul>
+             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -648,21 +666,12 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             /**
              * <p>The comparison operator. Valid values:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>&lt;=</li>
-             * <li>&lt;</li>
-             * <li>! =</li>
-             * <li>=</li>
              * <li>&gt;</li>
              * <li>&gt;=</li>
+             * <li>&lt;</li>
+             * <li>&lt;=</li>
+             * <li>!=</li>
+             * <li>=</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -855,15 +864,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The threshold calculation method.</p>
-             * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
+             * <p>The threshold calculation method. Valid values:</p>
              * <ul>
              * <li>Fluctuation</li>
              * <li>Auto</li>
@@ -943,11 +944,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The type of the operation.</p>
-             * <ul>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
+             * <p>The type of the operation. Valid values:</p>
              * <ul>
              * <li>SaveErrorData</li>
              * </ul>
@@ -1037,25 +1034,8 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String settingConfig; 
 
             /**
-             * <p>The metrics used for sampling.</p>
-             * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
+             * <p>The metrics used for sampling.
+             * Valid values:</p>
              * <ul>
              * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
              * <li>DuplicatedCount: the number of duplicated values of the field.</li>
@@ -1262,6 +1242,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
             /**
              * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI test rules</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1300,6 +1283,9 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
 
             /**
              * <p>The name of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI test rules</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1315,15 +1301,10 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The strength of the rule.</p>
+             * <p>The strength of the rule. Valid values:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>High</li>
              * <li>Normal</li>
+             * <li>High</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1465,7 +1446,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private java.util.List<String> channels; 
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -1628,7 +1609,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The alert notification methods.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -1782,8 +1763,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             private String tableGuid; 
 
             /**
-             * <p>The type of the database to which the table belongs.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the database to which the table belongs. Valid values:</p>
              * <ul>
              * <li>maxcompute</li>
              * <li>hologres</li>
@@ -1884,12 +1864,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The trigger type of the monitor.</p>
-             * <ul>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
+             * <p>The trigger type of the monitor. Valid values:</p>
              * <ul>
              * <li>ByScheduledTaskInstance: The monitor is triggered by the associated scheduling tasks.</li>
              * <li>ByManual: The monitor is manually triggered.</li>

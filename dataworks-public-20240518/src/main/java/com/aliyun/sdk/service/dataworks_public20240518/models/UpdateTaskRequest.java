@@ -340,7 +340,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * ClientUniqueCode.
+         * <p>The client unique code of the task, which uniquely identifies a task. It is used to implement asynchronous and idempotent functions. If it is not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task_0bc5213917368545132902xxxxxxxx</p>
          */
         public Builder clientUniqueCode(String clientUniqueCode) {
             this.putBodyParameter("ClientUniqueCode", clientUniqueCode);
@@ -349,7 +352,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <p>The associated data source information.</p>
          */
         public Builder dataSource(DataSource dataSource) {
             String dataSourceShrink = shrink(dataSource, "DataSource", "json");
@@ -359,7 +362,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Dependencies.
+         * <p>Dependency information.</p>
          */
         public Builder dependencies(java.util.List<Dependencies> dependencies) {
             String dependenciesShrink = shrink(dependencies, "Dependencies", "json");
@@ -369,7 +372,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -378,7 +384,14 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The project environment.</p>
+         * <ul>
+         * <li>Prod: Production</li>
+         * <li>Dev: Development</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -387,6 +400,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
+         * <p>The ID of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -399,7 +413,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Inputs.
+         * <p>Enter information.</p>
          */
         public Builder inputs(Inputs inputs) {
             String inputsShrink = shrink(inputs, "Inputs", "json");
@@ -409,7 +423,14 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * InstanceMode.
+         * <p>The instance generation mode.</p>
+         * <ul>
+         * <li>T +1 (second born)</li>
+         * <li>Immediately (generate now)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>T+1</p>
          */
         public Builder instanceMode(String instanceMode) {
             this.putBodyParameter("InstanceMode", instanceMode);
@@ -418,7 +439,11 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -427,7 +452,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Outputs.
+         * <p>The output information.</p>
          */
         public Builder outputs(Outputs outputs) {
             String outputsShrink = shrink(outputs, "Outputs", "json");
@@ -437,6 +462,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
+         * <p>The account ID of the owner of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,7 +475,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * RerunInterval.
+         * <p>The retry interval, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder rerunInterval(Integer rerunInterval) {
             this.putBodyParameter("RerunInterval", rerunInterval);
@@ -458,6 +487,12 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
+         * <p>The configuration of whether the task is allowed to rerun.</p>
+         * <ul>
+         * <li>AllDenied: failure or success cannot be rerun.</li>
+         * <li>FailureAllowed: only failures can be rerun</li>
+         * <li>AllAllowed: you can run again if you fail or succeed.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -470,7 +505,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * RerunTimes.
+         * <p>The number of retries that take effect when the task is set to rerun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder rerunTimes(Integer rerunTimes) {
             this.putBodyParameter("RerunTimes", rerunTimes);
@@ -479,6 +517,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
+         * <p>Configuration of the runtime environment, such as resource group information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
@@ -489,7 +528,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Script.
+         * <p>Run the script information.</p>
          */
         public Builder script(Script script) {
             String scriptShrink = shrink(script, "Script", "json");
@@ -499,7 +538,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of task tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -509,7 +548,10 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period of the task execution, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("Timeout", timeout);
@@ -518,6 +560,7 @@ public class UpdateTaskRequest extends Request {
         }
 
         /**
+         * <p>The trigger method of the task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder trigger(Trigger trigger) {
@@ -567,7 +610,10 @@ public class UpdateTaskRequest extends Request {
             private String name; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -639,6 +685,13 @@ public class UpdateTaskRequest extends Request {
             private Long upstreamTaskId; 
 
             /**
+             * <p>The type of the dependency.</p>
+             * <ul>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency level-1 child nodes</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+             * <li>Normal: same-cycle dependency</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -650,7 +703,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * UpstreamOutput.
+             * <p>The output identifier of the upstream task. (This field is returned when the input content is set depending on the same cycle)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder upstreamOutput(String upstreamOutput) {
                 this.upstreamOutput = upstreamOutput;
@@ -658,7 +714,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * UpstreamTaskId.
+             * <p>The Id of the upstream task. (This field is returned when the input content is not set for cross-cycle dependencies on other nodes and same-cycle dependencies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder upstreamTaskId(Long upstreamTaskId) {
                 this.upstreamTaskId = upstreamTaskId;
@@ -730,7 +789,10 @@ public class UpdateTaskRequest extends Request {
             private String value; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -738,6 +800,13 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
+             * <p>Type.</p>
+             * <ul>
+             * <li>Constant: Constant</li>
+             * <li>PassThrough: parameter node output</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -749,7 +818,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -796,7 +868,7 @@ public class UpdateTaskRequest extends Request {
             private java.util.List<Variables> variables; 
 
             /**
-             * Variables.
+             * <p>The list of variable definitions.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -843,7 +915,10 @@ public class UpdateTaskRequest extends Request {
             private String output; 
 
             /**
-             * Output.
+             * <p>The output identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -915,7 +990,10 @@ public class UpdateTaskRequest extends Request {
             private String value; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -923,6 +1001,13 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
+             * <p>Type.</p>
+             * <ul>
+             * <li>Constant: Constant</li>
+             * <li>PassThrough: parameter node output</li>
+             * <li>System: variable</li>
+             * <li>NodeOutput: script output</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -934,7 +1019,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -993,7 +1081,7 @@ public class UpdateTaskRequest extends Request {
             private java.util.List<OutputsVariables> variables; 
 
             /**
-             * TaskOutputs.
+             * <p>The list of task output definitions.</p>
              */
             public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -1001,7 +1089,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Variables.
+             * <p>The list of variable definitions.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -1073,7 +1161,10 @@ public class UpdateTaskRequest extends Request {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>Configure CU consumption for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -1081,7 +1172,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1089,6 +1183,7 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
+             * <p>The identifier of the scheduling resource group configured for running the task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1151,7 +1246,10 @@ public class UpdateTaskRequest extends Request {
             private String parameters; 
 
             /**
-             * Content.
+             * <p>The script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;helloWorld&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1159,7 +1257,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Parameters.
+             * <p>The list of script parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -1219,6 +1320,7 @@ public class UpdateTaskRequest extends Request {
             private String value; 
 
             /**
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1230,7 +1332,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1326,7 +1431,10 @@ public class UpdateTaskRequest extends Request {
             private String type; 
 
             /**
-             * Cron.
+             * <p>Cron expression, which takes effect when type = Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -1334,7 +1442,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>The expiration time of the periodic trigger, which takes effect when type = Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1342,7 +1453,15 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * Recurrence.
+             * <p>The operation mode when the trigger is triggered. It takes effect when type = Scheduler.</p>
+             * <ul>
+             * <li>Pause: Pause</li>
+             * <li>Skip: empty run</li>
+             * <li>Normal: Normal operation</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -1350,7 +1469,10 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the cycle trigger takes effect. It takes effect when type = Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1358,6 +1480,11 @@ public class UpdateTaskRequest extends Request {
             }
 
             /**
+             * <p>The type of the trigger method.</p>
+             * <ul>
+             * <li>Scheduler: the scheduling cycle is triggered.</li>
+             * <li>Manual: manually triggered</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

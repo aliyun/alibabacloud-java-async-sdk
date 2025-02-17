@@ -128,6 +128,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
+         * <p>The ID of the serverless resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class CreateNetworkRequest extends Request {
         }
 
         /**
+         * <p>The VSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

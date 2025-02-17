@@ -111,6 +111,7 @@ public class UpdateRouteRequest extends Request {
         }
 
         /**
+         * <p>The route ID of the network resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

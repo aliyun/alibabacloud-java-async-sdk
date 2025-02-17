@@ -67,7 +67,7 @@ public class ListNetworksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +86,10 @@ public class ListNetworksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -213,7 +219,10 @@ public class ListNetworksResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the network resource was created. The value is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -221,7 +230,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who creates the network resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11075500042XXXXX</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -229,7 +241,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The network ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -237,7 +252,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the serverless resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -245,7 +263,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze13vamugr7jenXXXXX</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -253,7 +274,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the network resource. Valid values: Pending, Creating, Running, Deleting, and Deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -261,7 +285,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -269,7 +296,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The VSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -352,7 +382,7 @@ public class ListNetworksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * NetworkList.
+             * <p>The network resources of the serverless resource group.</p>
              */
             public Builder networkList(java.util.List<NetworkList> networkList) {
                 this.networkList = networkList;
@@ -360,7 +390,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -368,7 +401,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -376,7 +412,10 @@ public class ListNetworksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -55,7 +55,10 @@ public class CreateDataQualityRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19715</p>
          */
         public Builder id(Long id) {
             this.id = id;

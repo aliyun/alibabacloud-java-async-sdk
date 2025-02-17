@@ -140,6 +140,9 @@ public class ListDataQualityEvaluationTasksRequest extends Request {
 
         /**
          * <p>The name of the data quality monitoring task. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

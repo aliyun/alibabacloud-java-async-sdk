@@ -66,10 +66,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>A5B97987-66EA-5563-9599-A2752292XXXX</p>
          * 
          * <strong>example:</strong>
-         * <p>A5B97987-66EA-5563-9599-A2752292XXXX</p>
+         * <p>The ID of the file resource.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

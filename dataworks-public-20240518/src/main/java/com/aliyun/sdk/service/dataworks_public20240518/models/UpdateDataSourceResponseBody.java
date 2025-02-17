@@ -66,7 +66,14 @@ public class UpdateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the data source has been modified:</p>
+         * <ul>
+         * <li>true: Yes</li>
+         * <li>false: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -149,19 +149,6 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
             /**
              * <p>The code of the role in the DataWorks workspace.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>role_project_admin: workspace administrator</li>
-             * <li>role_project_dev: developer</li>
-             * <li>role_project_dg_admin: data governance administrator</li>
-             * <li>role_project_guest: visitor</li>
-             * <li>role_project_security: security administrator</li>
-             * <li>role_project_deploy: deployer</li>
-             * <li>role_project_owner: workspace owner</li>
-             * <li>role_project_data_analyst: data analyst</li>
-             * <li>role_project_pe: O&amp;M engineer</li>
-             * <li>role_project_erd: model designer</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>role_project_guest</p>
@@ -173,6 +160,9 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
             /**
              * <p>The name of the role in the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Visitors</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -192,7 +182,6 @@ public class GetProjectRoleResponseBody extends TeaModel {
 
             /**
              * <p>The type of the role in the DataWorks workspace.</p>
-             * <p>Valid values:</p>
              * <ul>
              * <li>UserCustom: user-defined role</li>
              * <li>System: system role</li>

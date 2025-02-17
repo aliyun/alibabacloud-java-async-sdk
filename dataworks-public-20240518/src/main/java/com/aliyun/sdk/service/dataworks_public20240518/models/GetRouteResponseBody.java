@@ -67,7 +67,10 @@ public class GetRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,7 +195,10 @@ public class GetRouteResponseBody extends TeaModel {
             private String resourceId; 
 
             /**
-             * CreateTime.
+             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -200,7 +206,10 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidr.
+             * <p>The destination route CIDR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder destinationCidr(String destinationCidr) {
                 this.destinationCidr = destinationCidr;
@@ -208,7 +217,10 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -227,7 +239,10 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -235,7 +250,10 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The unique identifier of the network resource to which it belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-679XXXXX</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

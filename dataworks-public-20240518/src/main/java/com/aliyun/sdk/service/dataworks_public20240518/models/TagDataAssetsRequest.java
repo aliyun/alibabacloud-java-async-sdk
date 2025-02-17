@@ -155,7 +155,10 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * AutoTraceEnabled.
+         * <p>Specifies whether to enable lineage-based automatic backtracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoTraceEnabled(Boolean autoTraceEnabled) {
             this.putQueryParameter("AutoTraceEnabled", autoTraceEnabled);
@@ -164,6 +167,7 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The data asset IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataAssetIds(java.util.List<String> dataAssetIds) {
@@ -174,6 +178,11 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The type of the data asset. Valid values:</p>
+         * <ul>
+         * <li>ACS::DataWorks::Table</li>
+         * <li>ACS::DataWorks::Task</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +195,14 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -195,7 +211,10 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -204,6 +223,7 @@ public class TagDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The tags that you want to add to data assets.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
@@ -267,6 +287,7 @@ public class TagDataAssetsRequest extends Request {
             private String value; 
 
             /**
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -278,7 +299,10 @@ public class TagDataAssetsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

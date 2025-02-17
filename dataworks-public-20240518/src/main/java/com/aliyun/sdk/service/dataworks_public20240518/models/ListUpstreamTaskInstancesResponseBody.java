@@ -791,7 +791,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -854,7 +861,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodNumber.
+             * <p>The sequence number of the period. Indicates which cycle of the day the task instance is in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodNumber(Integer periodNumber) {
                 this.periodNumber = periodNumber;
@@ -936,7 +946,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the resource group with which the instance is associated.</p>
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -977,7 +987,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dependency type.</p>
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li>Normal: same-cycle scheduling dependency</li>
+             * <li>CrossCycle: cross-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
@@ -997,6 +1014,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task for which the instance is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1113,6 +1133,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the workflow to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test workflow</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
@@ -1813,7 +1836,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment in which the data source is used. Valid values:</p>
+             * <ul>
+             * <li>Dev</li>
+             * <li>Prod</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1876,7 +1906,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodNumber.
+             * <p>The sequence number of the cycle. This parameter indicates the cycle of the task instance on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodNumber(Integer periodNumber) {
                 this.periodNumber = periodNumber;
@@ -1884,7 +1917,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * <p>The priority of the task. Minimum value: 1. Maximum value: 8. A larger value indicates a higher priority. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1907,6 +1940,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The rerun mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -1933,7 +1969,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the resource group with which the instance is associated.</p>
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              */
             public Builder runtimeResource(TaskInstanceRuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -1952,7 +1988,21 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance.</p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>NotRun: The instance is not run.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
+             * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
+             * <li>WaitResource: The instance is waiting for resources.</li>
+             * <li>Failure: The instance fails to be run.</li>
+             * <li>Success: The instance is successfully run.</li>
+             * <li>Checking: Data quality is being checked for the instance.</li>
+             * <li>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1972,6 +2022,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task for which the instance is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1979,7 +2032,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task type.</p>
+             * <p>The type of the task for which the instance is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -1988,9 +2044,10 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The timeout period of task running. Unit: seconds.</p>
+             * <p>Note: The value of this parameter is rounded up by hour.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1998,8 +2055,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
-             * <p>Valid values:</p>
+             * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
              * <ul>
              * <li>Pause</li>
              * <li>Skip</li>
@@ -2026,8 +2082,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method to trigger instance scheduling.</p>
-             * <p>Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
              * <li>Scheduler: scheduling cycle-based trigger</li>
              * <li>Manual: manual trigger</li>
@@ -2064,15 +2119,13 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the workflow instance.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the workflow instance. Valid values:</p>
              * <ul>
+             * <li>Normal</li>
+             * <li>Manual</li>
              * <li>SmokeTest</li>
              * <li>SupplementData</li>
-             * <li>Manual</li>
              * <li>ManualWorkflow</li>
-             * <li>Normal</li>
-             * <li>ManualFlow</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2085,6 +2138,9 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the workflow to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test workflow</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;
@@ -2143,7 +2199,14 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             private TaskInstance taskInstance; 
 
             /**
-             * <p>The dependency type.</p>
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>CrossCycle</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder dependencyType(String dependencyType) {
                 this.dependencyType = dependencyType;
@@ -2268,7 +2331,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instances.</p>
+             * <p>The instances. This parameter is deprecated and replaced by the UpstreamTaskInstances parameter.</p>
              */
             public Builder taskInstances(java.util.List<TaskInstances> taskInstances) {
                 this.taskInstances = taskInstances;
@@ -2287,7 +2350,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamTaskInstances.
+             * <p>The ancestor instances.</p>
              */
             public Builder upstreamTaskInstances(java.util.List<UpstreamTaskInstances> upstreamTaskInstances) {
                 this.upstreamTaskInstances = upstreamTaskInstances;

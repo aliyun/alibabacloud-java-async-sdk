@@ -55,7 +55,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -63,7 +63,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1ec92159376</p>
@@ -172,7 +172,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * AutoTraceEnabled.
+             * <p>Indicates whether the lineage-based automatic backtrack feature is enabled for the mapping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoTraceEnabled(Boolean autoTraceEnabled) {
                 this.autoTraceEnabled = autoTraceEnabled;
@@ -180,7 +183,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the mapping between the data asset and the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -188,7 +194,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * DataAssetId.
+             * <p>The data asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7259557313</p>
              */
             public Builder dataAssetId(String dataAssetId) {
                 this.dataAssetId = dataAssetId;
@@ -196,7 +205,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -204,7 +216,14 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * TagSource.
+             * <p>The way in which the mapping between the data asset and the tag is created. Valid values:</p>
+             * <ul>
+             * <li>System</li>
+             * <li>UserDefined</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserDefined</p>
              */
             public Builder tagSource(String tagSource) {
                 this.tagSource = tagSource;
@@ -212,7 +231,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -319,7 +341,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DataAssetTagMappings.
+             * <p>The mappings between data assets and tags.</p>
              */
             public Builder dataAssetTagMappings(java.util.List<DataAssetTagMappings> dataAssetTagMappings) {
                 this.dataAssetTagMappings = dataAssetTagMappings;
@@ -327,7 +349,14 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+             * <ul>
+             * <li>Dev: development environment</li>
+             * <li>Prod: production environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -335,7 +364,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The data asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7259557313</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -343,7 +375,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ali_cn_es_gfn</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -351,7 +386,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The DataWorks workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54275</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -359,7 +397,14 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the data asset. Valid values:</p>
+             * <ul>
+             * <li>ACS::DataWorks::Table</li>
+             * <li>ACS::DataWorks::Task</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::DataWorks::Task</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -442,7 +487,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DataAssets.
+             * <p>The data assets.</p>
              */
             public Builder dataAssets(java.util.List<DataAssets> dataAssets) {
                 this.dataAssets = dataAssets;
@@ -450,7 +495,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -458,7 +506,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -466,7 +517,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

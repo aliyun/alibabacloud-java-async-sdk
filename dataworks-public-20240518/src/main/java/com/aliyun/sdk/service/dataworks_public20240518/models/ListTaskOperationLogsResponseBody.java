@@ -172,6 +172,9 @@ public class ListTaskOperationLogsResponseBody extends TeaModel {
 
             /**
              * <p>The operation content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Freeze tasks</p>
              */
             public Builder operationContent(String operationContent) {
                 this.operationContent = operationContent;

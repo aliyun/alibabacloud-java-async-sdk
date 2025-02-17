@@ -321,6 +321,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The script path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX/OpenAPI/function/function_name</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -691,6 +694,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The overall description of the UDF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -745,6 +751,10 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Example description &gt;&gt;&gt; select tsetUdf(xx,yy);
+             * abc</p>
              */
             public Builder exampleDescription(String exampleDescription) {
                 this.exampleDescription = exampleDescription;
@@ -786,6 +796,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the UDF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Function name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -805,6 +818,10 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx: parameter information XXX
+             * yy: parameter information YYY</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -824,6 +841,9 @@ public class ListFunctionsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the return value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The return value is a string.</p>
              */
             public Builder returnValueDescription(String returnValueDescription) {
                 this.returnValueDescription = returnValueDescription;

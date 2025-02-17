@@ -67,7 +67,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +86,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +147,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -149,7 +158,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -219,7 +231,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Standard.
+             * <p>Specification details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2CU</p>
              */
             public Builder standard(String standard) {
                 this.standard = standard;
@@ -422,7 +437,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AliyunResourceGroupId.
+             * <p>The ID of the Alibaba Cloud resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2kqofrgXXXXX</p>
              */
             public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
                 this.aliyunResourceGroupId = aliyunResourceGroupId;
@@ -430,7 +448,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AliyunResourceTags.
+             * <p>The tags.</p>
              */
             public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
                 this.aliyunResourceTags = aliyunResourceTags;
@@ -438,7 +456,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -446,7 +467,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who created the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11075500042XXXXX</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -454,7 +478,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVpcId.
+             * <p>The default VPC ID bound to the common resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
              */
             public Builder defaultVpcId(String defaultVpcId) {
                 this.defaultVpcId = defaultVpcId;
@@ -462,7 +489,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVswitchId.
+             * <p>The default switch ID bound to the common resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
              */
             public Builder defaultVswitchId(String defaultVswitchId) {
                 this.defaultVswitchId = defaultVswitchId;
@@ -470,7 +500,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -478,7 +511,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common_resource_group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -486,7 +522,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OrderInstanceId.
+             * <p>The ID of the order instance of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
              */
             public Builder orderInstanceId(String orderInstanceId) {
                 this.orderInstanceId = orderInstanceId;
@@ -494,7 +533,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentType.
+             * <p>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -502,7 +544,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create a common resource group for common tasks</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -510,7 +555,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type the resource group. Valid values:</p>
+             * <p>The type of the resource group. Valid values:</p>
              * <ul>
              * <li>CommonV2: serverless resource group</li>
              * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>

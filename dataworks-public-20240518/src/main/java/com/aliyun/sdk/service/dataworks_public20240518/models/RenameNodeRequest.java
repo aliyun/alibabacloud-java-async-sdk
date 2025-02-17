@@ -128,6 +128,9 @@ public class RenameNodeRequest extends Request {
         /**
          * <p>The new name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rename</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

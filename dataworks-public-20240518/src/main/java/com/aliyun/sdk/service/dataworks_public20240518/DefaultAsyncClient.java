@@ -128,6 +128,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of BatchUpdateTasks  BatchUpdateTasksRequest
      * @return BatchUpdateTasksResponse
      */
@@ -210,7 +213,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available for all DataWorks editions.</p>
+     * <p>  This API operation is available for all DataWorks editions.</p>
+     * <ul>
+     * <li>You can call this API operation to create a synchronization task. When you call this API operation, you must configure parameters such as SourceDataSourceSettings, DestinationDataSourceSettings, MigrationType, TransformationRules, TableMappings, and JobSettings. The SourceDataSourceSettings parameter defines the settings related to the source. The DestinationDataSourceSettings parameter defines the settings related to the destination. The MigrationType parameter defines the synchronization task type. The TransformationRules parameter defines the transformation rules for objects involved in the synchronization task. The TableMappings parameter defines the mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. The JobSettings parameter defines the settings for the dimension of the synchronization task, including policies for data type mappings between source fields and destination fields and settings for periodic scheduling.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateDIJob  CreateDIJobRequest
      * @return CreateDIJobResponse
@@ -230,6 +236,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of CreateDataAssetTag  CreateDataAssetTagRequest
      * @return CreateDataAssetTagResponse
      */
@@ -507,9 +516,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> You cannot use this API operation to create multiple file resources at a time. If you specify multiple file resources by using FlowSpec, the system creates only the first specified resource.</p>
-     * </blockquote>
+     * <p>Private</p>
      * 
      * @param request the request parameters of CreateResource  CreateResourceRequest
      * @return CreateResourceResponse
@@ -672,6 +679,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of DeleteDataAssetTag  DeleteDataAssetTagRequest
      * @return DeleteDataAssetTagResponse
      */
@@ -996,6 +1006,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of DeleteWorkflow  DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
      */
@@ -1106,6 +1119,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ExecuteAdhocWorkflowInstance  ExecuteAdhocWorkflowInstanceRequest
      * @return ExecuteAdhocWorkflowInstanceResponse
      */
@@ -1142,6 +1158,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetCreateWorkflowInstancesResult  GetCreateWorkflowInstancesResultRequest
      * @return GetCreateWorkflowInstancesResultResponse
      */
@@ -1583,6 +1602,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of GetWorkflow  GetWorkflowRequest
      * @return GetWorkflowResponse
      */
@@ -1663,9 +1685,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.
-     *  ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</p>
      * </blockquote>
+     * <ul>
+     * <li>You cannot use this API operation to import multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system imports only the first specified workflow.</li>
+     * <li>ImportWorkflowDefinition is an asynchronous operation. After you send a request, an asynchronous task is generated, and the system returns the ID of the asynchronous task. You can call the GetJobStatus operation to query the status of the asynchronous task.</li>
+     * </ul>
      * 
      * @param request the request parameters of ImportWorkflowDefinition  ImportWorkflowDefinitionRequest
      * @return ImportWorkflowDefinitionResponse
@@ -1805,6 +1829,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of ListDataAssetTags  ListDataAssetTagsRequest
      * @return ListDataAssetTagsResponse
      */
@@ -1823,6 +1850,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of ListDataAssets  ListDataAssetsRequest
      * @return ListDataAssetsResponse
      */
@@ -2386,6 +2416,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListWorkflowInstances  ListWorkflowInstancesRequest
      * @return ListWorkflowInstancesResponse
      */
@@ -2404,6 +2437,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of ListWorkflows  ListWorkflowsRequest
      * @return ListWorkflowsResponse
      */
@@ -2755,6 +2791,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available for all DataWorks editions.</p>
+     * 
      * @param request the request parameters of StopWorkflowInstances  StopWorkflowInstancesRequest
      * @return StopWorkflowInstancesResponse
      */
@@ -2794,6 +2833,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of TagDataAssets  TagDataAssetsRequest
      * @return TagDataAssetsResponse
      */
@@ -2833,6 +2875,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of UnTagDataAssets  UnTagDataAssetsRequest
      * @return UnTagDataAssetsResponse
      */
@@ -2908,6 +2953,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * 
      * @param request the request parameters of UpdateDataAssetTag  UpdateDataAssetTagRequest
      * @return UpdateDataAssetTagResponse
      */

@@ -251,7 +251,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The ID of the task.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -262,6 +262,9 @@ public class ListTasksRequest extends Request {
 
         /**
          * <p>The name of the task. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

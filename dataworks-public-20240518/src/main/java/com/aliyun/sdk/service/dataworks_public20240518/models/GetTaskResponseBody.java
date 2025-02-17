@@ -186,13 +186,12 @@ public class GetTaskResponseBody extends TeaModel {
             private String upstreamTaskId; 
 
             /**
-             * <p>The dependency type.</p>
-             * <p>Valid values:</p>
+             * <p>The dependency type. Valid values:</p>
              * <ul>
-             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on the level-1 descendant nodes of a node</li>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on level-1 descendant nodes</li>
              * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
              * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
-             * <li>Normal: same-cycle dependency</li>
+             * <li>Normal: same-cycle scheduling dependency</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -204,7 +203,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>上游任务的输出标识符。（<code>同周期依赖</code>返回此字段）</p>
+             * <p>The output identifier of the upstream task. (This field is returned when <code>same cycle dependence</code> and input content is set).</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -215,7 +214,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>上游任务的Id。（<code>跨周期依赖其他节点</code>依赖返回此字段，其他跨周期依赖类型不返回）</p>
+             * <p>The Id of the upstream task. (This field is returned when the input content is not set for <code>cross-cycle dependency other nodes</code> and <code>same-cycle dependency</code>, otherwise it is not returned).</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -300,11 +299,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type.</p>
-             * <p>Valid values:</p>
+             * <p>The type. Valid values:</p>
              * <ul>
              * <li>Constant: constant</li>
-             * <li>PassThrough: parameter pass-through</li>
+             * <li>PassThrough: node output</li>
              * <li>System: variable</li>
              * <li>NodeOutput: script output</li>
              * </ul>
@@ -500,12 +498,11 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type.</p>
-             * <p>Valid values:</p>
+             * <p>The type. Valid values:</p>
              * <ul>
              * <li>Constant: constant</li>
-             * <li>PassThrough: parameter pass-through</li>
-             * <li>System: system variable</li>
+             * <li>PassThrough: node output</li>
+             * <li>System: variable</li>
              * <li>NodeOutput: script output</li>
              * </ul>
              * 
@@ -1020,8 +1017,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
-             * <p>Valid values:</p>
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
              * <ul>
              * <li>Pause</li>
              * <li>Skip</li>
@@ -1048,11 +1044,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger type.</p>
-             * <p>Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: scheduling cycle-based trigger</li>
-             * <li>Manual: manual trigger</li>
+             * <li>Scheduler: periodic scheduling</li>
+             * <li>Manual: manual scheduling</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1357,6 +1352,9 @@ public class GetTaskResponseBody extends TeaModel {
 
             /**
              * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The baseline ID.</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -1405,7 +1403,14 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1447,6 +1452,9 @@ public class GetTaskResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1476,8 +1484,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the workspace.</p>
-             * <p>Valid values:</p>
+             * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</p>
              * <ul>
              * <li>Prod: production environment</li>
              * <li>Dev: development environment</li>
@@ -1514,12 +1521,11 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun mode.</p>
-             * <p>Valid values:</p>
+             * <p>The rerun mode. Valid values:</p>
              * <ul>
-             * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
-             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-             * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to be run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to be run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to be run.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1650,8 +1656,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the subtask.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the subtask. Valid values:</p>
              * <ul>
              * <li>DoWhile: do-while node</li>
              * <li>Combined: node group</li>
@@ -1849,8 +1854,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
-             * <p>Valid values:</p>
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
              * <ul>
              * <li>Pause</li>
              * <li>Skip</li>
@@ -1877,11 +1881,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger type.</p>
-             * <p>Valid values:</p>
+             * <p>The trigger type. Valid values:</p>
              * <ul>
-             * <li>Scheduler: scheduling cycle-based trigger</li>
-             * <li>Manual: manual trigger</li>
+             * <li>Scheduler: periodic scheduling</li>
+             * <li>Manual: manual scheduling</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2329,7 +2332,14 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -2356,9 +2366,11 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例生成模式。</p>
-             * <p>T+1（第二天生成）</p>
-             * <p>Immediately（立即生成）</p>
+             * <p>The instance generation mode. Valid values:</p>
+             * <ul>
+             * <li>T+1</li>
+             * <li>Immediately</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>T+1</p>
@@ -2392,6 +2404,9 @@ public class GetTaskResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2429,8 +2444,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the workspace.</p>
-             * <p>Valid values:</p>
+             * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</p>
              * <ul>
              * <li>Prod: production environment</li>
              * <li>Dev: development environment</li>
@@ -2467,12 +2481,11 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun mode.</p>
-             * <p>Valid values:</p>
+             * <p>The rerun mode. Valid values:</p>
              * <ul>
-             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
-             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-             * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to be run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to be run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to be run.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -83,6 +83,7 @@ public class GetDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data quality monitoring instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

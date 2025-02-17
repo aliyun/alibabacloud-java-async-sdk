@@ -496,6 +496,9 @@ public class ListTaskInstancesRequest extends Request {
 
         /**
          * <p>The name of the task. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL node</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);
@@ -533,7 +536,7 @@ public class ListTaskInstancesRequest extends Request {
         }
 
         /**
-         * <p>The trigger type. Valid values:</p>
+         * <p>The trigger type.</p>
          * <ul>
          * <li>Scheduler: scheduling cycle-based trigger</li>
          * <li>Manual: manual trigger</li>

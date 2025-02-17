@@ -763,7 +763,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod</li>
+             * <li>Dev</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -818,6 +825,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -847,11 +857,11 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the workspace.</p>
+             * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Prod: production environment</li>
-             * <li>Dev: development environment</li>
+             * <li>Prod</li>
+             * <li>Dev</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1014,7 +1024,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1217,7 +1230,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
              * 
              * <strong>example:</strong>
              * <p>00 00 00 * * ?</p>
@@ -1239,8 +1252,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
-             * <p>Valid values:</p>
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
              * <ul>
              * <li>Pause</li>
              * <li>Skip</li>
@@ -1278,10 +1290,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task.</p>
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>ODPS_SQL</p>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1580,7 +1596,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * <p>The ID of the baseline.</p>
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -1610,7 +1629,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the data source.</p>
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(TaskDataSource dataSource) {
                 this.dataSource = dataSource;
@@ -1629,7 +1648,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod</li>
+             * <li>Dev</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1649,8 +1675,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The instance generation mode. Valid values:</p>
-             * <p>T+1</p>
-             * <p>Immediately</p>
+             * <ul>
+             * <li>T+1</li>
+             * <li>Immediately</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>T+1</p>
@@ -1684,6 +1712,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1703,6 +1734,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The priority of the task. Valid values: 1 to 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1721,7 +1755,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval between two consecutive reruns. Unit: seconds.</p>
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -1729,7 +1766,15 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun mode.</p>
+             * <p>The rerun mode. Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -1737,7 +1782,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of reruns.</p>
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -1754,6 +1802,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1761,7 +1812,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method to trigger the running of the task.</p>
+             * <p>The trigger method.</p>
              */
             public Builder trigger(TaskTrigger trigger) {
                 this.trigger = trigger;
@@ -1770,6 +1821,9 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1839,7 +1893,14 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             private Task task; 
 
             /**
-             * <p>The dependency type.</p>
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li>Normal: same-cycle scheduling dependency</li>
+             * <li>CrossCycle: cross-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder dependencyType(String dependencyType) {
                 this.dependencyType = dependencyType;
@@ -1847,7 +1908,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Task.
+             * <p>The information about the task.</p>
              */
             public Builder task(Task task) {
                 this.task = task;
@@ -1964,7 +2025,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tasks.</p>
+             * <p>The tasks. This parameter is deprecated and replaced by the UpstreamTasks parameter.</p>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
@@ -1983,7 +2044,7 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamTasks.
+             * <p>The ancestor tasks.</p>
              */
             public Builder upstreamTasks(java.util.List<UpstreamTasks> upstreamTasks) {
                 this.upstreamTasks = upstreamTasks;

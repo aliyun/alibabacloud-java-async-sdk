@@ -83,6 +83,7 @@ public class GetResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>Unique identifier of a common resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

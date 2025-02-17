@@ -55,7 +55,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -63,7 +63,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -265,7 +268,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * BizDate.
+             * <p>业务日期。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -273,7 +279,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -281,7 +290,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -289,7 +301,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod</li>
+             * <li>Dev</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -297,7 +316,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * <p>The time when the instance finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder finishedTime(Long finishedTime) {
                 this.finishedTime = finishedTime;
@@ -305,7 +327,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The workflow instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -313,7 +338,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -321,7 +349,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -329,7 +360,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WorkflowInstance1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,7 +371,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -345,7 +382,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartedTime.
+             * <p>The time when the instance started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder startedTime(Long startedTime) {
                 this.startedTime = startedTime;
@@ -353,7 +393,20 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the workflow instance. Valid values:</p>
+             * <ul>
+             * <li>NotRun: The instance is not run.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>WaitTime: The instance is waiting for the scheduling time to arrive.</li>
+             * <li>CheckingCondition: Branch conditions are being checked for the instance.</li>
+             * <li>WaitResource: The instance is waiting for resources.</li>
+             * <li>Failure: The instance fails to be run.</li>
+             * <li>Success: The instance is successfully run.</li>
+             * <li>Checking: Data quality is being checked for the instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -361,7 +414,17 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>工作流实例的类型。</p>
+             * <ul>
+             * <li>Normal：周期调度</li>
+             * <li>Manual：手动任务</li>
+             * <li>SmokeTest：测试</li>
+             * <li>SupplementData：补数据</li>
+             * <li>ManualWorkflow：手动工作流</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -369,7 +432,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -452,7 +518,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private java.util.List<WorkflowInstances> workflowInstances; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -460,7 +529,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -468,7 +540,10 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -476,7 +551,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstances.
+             * <p>The workflow instances.</p>
              */
             public Builder workflowInstances(java.util.List<WorkflowInstances> workflowInstances) {
                 this.workflowInstances = workflowInstances;

@@ -66,7 +66,14 @@ public class AttachDataQualityRulesToEvaluationTaskResponseBody extends TeaModel
         }
 
         /**
-         * Success.
+         * <p>The value of the association is as follows:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: the call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -805,6 +805,9 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
             /**
              * <p>The name of the task.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Quality verification task</p>
              */
             public Builder name(String name) {
                 this.name = name;

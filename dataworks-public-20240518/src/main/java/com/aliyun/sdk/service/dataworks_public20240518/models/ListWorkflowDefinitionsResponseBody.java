@@ -198,6 +198,9 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
             /**
              * <p>The script path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX/OpenAPI_test/workflow_test/OpenAPI_test_workflow_Demo</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -361,6 +364,9 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Workflow description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,6 +397,9 @@ public class ListWorkflowDefinitionsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI test workflow Demo</p>
              */
             public Builder name(String name) {
                 this.name = name;

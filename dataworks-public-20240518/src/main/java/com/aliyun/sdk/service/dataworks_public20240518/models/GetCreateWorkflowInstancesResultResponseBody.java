@@ -55,7 +55,10 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of asynchronously creating a workflow instance.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -133,7 +136,10 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             private java.util.List<Long> workflowInstanceIds; 
 
             /**
-             * FailureMessage.
+             * <p>The error message. This parameter is returned only if the creation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid Param xxx</p>
              */
             public Builder failureMessage(String failureMessage) {
                 this.failureMessage = failureMessage;
@@ -141,7 +147,15 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The creation status. Valid values:</p>
+             * <ul>
+             * <li>Creating</li>
+             * <li>Created</li>
+             * <li>CreateFailure</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -149,7 +163,7 @@ public class GetCreateWorkflowInstancesResultResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowInstanceIds.
+             * <p>The workflow instance IDs. This parameter is returned only if the creation is successful.</p>
              */
             public Builder workflowInstanceIds(java.util.List<Long> workflowInstanceIds) {
                 this.workflowInstanceIds = workflowInstanceIds;

@@ -55,7 +55,10 @@ public class SuccessInfoValue extends TeaModel {
         private String message; 
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -63,7 +66,10 @@ public class SuccessInfoValue extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;

@@ -55,7 +55,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -63,7 +63,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1ec92159376****</p>
@@ -220,7 +220,15 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             private java.util.List<String> values; 
 
             /**
-             * Category.
+             * <p>The type of the tag.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>System</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -228,7 +236,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the tag was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735890003000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -236,7 +247,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The creator of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -244,7 +258,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -252,7 +269,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -260,7 +280,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Managers.
+             * <p>The tag administrators.</p>
              */
             public Builder managers(java.util.List<String> managers) {
                 this.managers = managers;
@@ -268,7 +288,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the tag was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735890003000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -276,7 +299,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The user who last modified the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -284,7 +310,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueType.
+             * <p>The type of the tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -292,7 +321,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The tag values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -375,7 +404,7 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DataAssetTags.
+             * <p>The tags.</p>
              */
             public Builder dataAssetTags(java.util.List<DataAssetTags> dataAssetTags) {
                 this.dataAssetTags = dataAssetTags;
@@ -383,7 +412,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -391,7 +423,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -399,7 +434,10 @@ public class ListDataAssetTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2524</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

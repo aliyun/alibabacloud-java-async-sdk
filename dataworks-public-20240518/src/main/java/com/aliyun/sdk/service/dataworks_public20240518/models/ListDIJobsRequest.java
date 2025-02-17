@@ -167,7 +167,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive. If you do not configure this parameter, the API operation queries synchronization tasks that use all type of destinations.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -248,7 +248,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * <p>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse. If you do not configure this parameter, the API operation queries synchronization tasks that use all types of sources.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>

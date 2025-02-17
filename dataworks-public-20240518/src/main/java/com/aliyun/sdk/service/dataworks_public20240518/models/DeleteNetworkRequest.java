@@ -83,6 +83,7 @@ public class DeleteNetworkRequest extends Request {
         }
 
         /**
+         * <p>The ID of the network that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

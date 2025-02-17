@@ -67,7 +67,10 @@ public class CreateRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Id.
+         * <p>The route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -75,7 +78,10 @@ public class CreateRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

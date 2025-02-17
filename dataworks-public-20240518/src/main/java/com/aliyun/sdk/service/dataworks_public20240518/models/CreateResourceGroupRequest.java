@@ -241,7 +241,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * AliyunResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2kqofrgXXXXX</p>
          */
         public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
             this.putBodyParameter("AliyunResourceGroupId", aliyunResourceGroupId);
@@ -250,7 +253,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * AliyunResourceTags.
+         * <p>The tags.</p>
          */
         public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
@@ -260,7 +263,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * AutoRenewEnabled.
+         * <p>Specifies whether to enable auto-renewal.</p>
          */
         public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
             this.putBodyParameter("AutoRenewEnabled", autoRenewEnabled);
@@ -269,6 +272,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The idempotent identifier of the client is used to ensure idempotent operation of creating a common resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,6 +285,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of a common resource group. It must start with a letter and can contain letters, numbers, and underscores (_). It can be up to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +298,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * PaymentDuration.
+         * <p>The duration of the payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder paymentDuration(Integer paymentDuration) {
             this.putBodyParameter("PaymentDuration", paymentDuration);
@@ -302,7 +310,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * PaymentDurationUnit.
+         * <p>The unit of the subscription duration. Valid values: Month and Year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.putBodyParameter("PaymentDurationUnit", paymentDurationUnit);
@@ -311,6 +322,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The billing method of the serverless resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +335,10 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Note for creating a common resource group, which can contain letters, Chinese characters, numbers, underscores (_), and a maximum of 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create a serverless resource group for common tasks</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
@@ -344,6 +359,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the virtual private cloud (VPC) with which the serverless resource group is associated by default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,6 +372,7 @@ public class CreateResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the vSwitch with which the serverless resource group is associated by default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -419,7 +436,10 @@ public class CreateResourceGroupRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -427,7 +447,10 @@ public class CreateResourceGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -241,7 +241,14 @@ public class ListDataSourceSharedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment to which the target data source belongs. The values are as follows:</p>
+             * <ul>
+             * <li>Dev: the development environment.</li>
+             * <li>Prod: the production environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Dev</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;

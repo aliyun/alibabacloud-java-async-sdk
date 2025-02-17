@@ -38,6 +38,14 @@ public class GetDIJobLogRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
     private GetDIJobLogRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -45,6 +53,8 @@ public class GetDIJobLogRequest extends Request {
         this.failoverId = builder.failoverId;
         this.id = builder.id;
         this.instanceId = builder.instanceId;
+        this.nodeType = builder.nodeType;
+        this.pageNumber = builder.pageNumber;
     }
 
     public static Builder builder() {
@@ -95,12 +105,28 @@ public class GetDIJobLogRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public static final class Builder extends Request.Builder<GetDIJobLogRequest, Builder> {
         private String regionId; 
         private Long DIJobId; 
         private Long failoverId; 
         private Long id; 
         private Long instanceId; 
+        private String nodeType; 
+        private Integer pageNumber; 
 
         private Builder() {
             super();
@@ -113,6 +139,8 @@ public class GetDIJobLogRequest extends Request {
             this.failoverId = request.failoverId;
             this.id = request.id;
             this.instanceId = request.instanceId;
+            this.nodeType = request.nodeType;
+            this.pageNumber = request.pageNumber;
         } 
 
         /**
@@ -169,6 +197,24 @@ public class GetDIJobLogRequest extends Request {
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
             return this;
         }
 

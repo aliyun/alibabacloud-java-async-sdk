@@ -126,7 +126,15 @@ public class ListDataAssetTagsRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>The type of the tag.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>System</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -135,7 +143,10 @@ public class ListDataAssetTagsRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -144,7 +155,10 @@ public class ListDataAssetTagsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,7 +167,10 @@ public class ListDataAssetTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

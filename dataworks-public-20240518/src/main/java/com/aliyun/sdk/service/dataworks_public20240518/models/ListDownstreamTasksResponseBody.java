@@ -112,7 +112,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -183,7 +186,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -191,7 +197,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -199,7 +208,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -306,7 +318,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -314,7 +329,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -322,7 +340,15 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -330,7 +356,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,7 +367,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -346,7 +378,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -645,7 +684,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * <p>The ID of the baseline.</p>
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -653,7 +695,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -661,7 +706,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -669,7 +717,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the data source.</p>
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -677,7 +725,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -685,7 +736,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod</li>
+             * <li>Dev</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -693,7 +751,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -701,7 +762,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceMode.
+             * <p>The instance generation mode. Valid values:</p>
+             * <ul>
+             * <li>T+1</li>
+             * <li>Immediately</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>T+1</p>
              */
             public Builder instanceMode(String instanceMode) {
                 this.instanceMode = instanceMode;
@@ -709,7 +777,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -717,7 +788,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -725,7 +799,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -733,7 +810,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -742,6 +822,9 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The priority of the task. Valid values: 1 to 8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -749,7 +832,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -757,7 +843,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The interval between two consecutive reruns. Unit: seconds.</p>
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -765,7 +854,15 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rerun mode.</p>
+             * <p>The rerun mode. Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -773,7 +870,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of reruns.</p>
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -790,6 +890,9 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -797,7 +900,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method to trigger the running of the task.</p>
+             * <p>The trigger method.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -806,6 +909,9 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -813,7 +919,10 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -872,7 +981,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private Task task; 
 
             /**
-             * <p>The dependency type.</p>
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li>Normal: same-cycle scheduling dependency</li>
+             * <li>CrossCycle: cross-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder dependencyType(String dependencyType) {
                 this.dependencyType = dependencyType;
@@ -880,7 +996,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Task.
+             * <p>The information about the task.</p>
              */
             public Builder task(Task task) {
                 this.task = task;
@@ -1578,7 +1694,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod</li>
+             * <li>Dev</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1597,7 +1720,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceMode.
+             * <p>The instance generation mode. Valid values:</p>
+             * <ul>
+             * <li>T+1</li>
+             * <li>Immediately</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>T+1</p>
              */
             public Builder instanceMode(String instanceMode) {
                 this.instanceMode = instanceMode;
@@ -1628,6 +1758,9 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1657,11 +1790,11 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment of the workspace.</p>
+             * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Prod: production environment</li>
-             * <li>Dev: development environment</li>
+             * <li>Prod</li>
+             * <li>Dev</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1731,7 +1864,14 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StepType.
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li>Normal: same-cycle scheduling dependency</li>
+             * <li>CrossCycle: cross-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
@@ -1867,7 +2007,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DownstreamTasks.
+             * <p>The descendant tasks.</p>
              */
             public Builder downstreamTasks(java.util.List<DownstreamTasks> downstreamTasks) {
                 this.downstreamTasks = downstreamTasks;
@@ -1897,7 +2037,7 @@ public class ListDownstreamTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tasks.</p>
+             * <p>The tasks. This parameter is deprecated and replaced by the DownstreamTasks parameter.</p>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;

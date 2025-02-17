@@ -83,6 +83,7 @@ public class GetCreateWorkflowInstancesResultRequest extends Request {
         }
 
         /**
+         * <p>The operation ID. This parameter is used to query the result of asynchronously creating a workflow instance. You can call the CreateWorkflowInstances operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

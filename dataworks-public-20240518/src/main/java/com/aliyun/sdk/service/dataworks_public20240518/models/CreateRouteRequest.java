@@ -98,6 +98,7 @@ public class CreateRouteRequest extends Request {
         }
 
         /**
+         * <p>The CIDR blocks of the destination-based route.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class CreateRouteRequest extends Request {
         }
 
         /**
+         * <p>The network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

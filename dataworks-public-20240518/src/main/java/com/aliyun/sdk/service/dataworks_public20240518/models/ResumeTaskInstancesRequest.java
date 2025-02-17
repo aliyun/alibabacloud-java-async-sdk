@@ -96,7 +96,10 @@ public class ResumeTaskInstancesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>Remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -105,7 +108,7 @@ public class ResumeTaskInstancesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The ID list of the task instance.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");

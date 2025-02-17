@@ -297,7 +297,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
-             * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+             * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -423,7 +423,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             private Long threshold; 
 
             /**
-             * <p>The types of DDL operations for which the alert rule takes effect. This parameter is returned only if the MetricType parameter is set to DdlReport.</p>
+             * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
              */
             public Builder ddlReportTags(java.util.List<String> ddlReportTags) {
                 this.ddlReportTags = ddlReportTags;

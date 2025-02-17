@@ -154,7 +154,14 @@ public class ListDataQualityRuleTemplatesRequest extends Request {
         }
 
         /**
-         * CreationSource.
+         * <p>The source of the rule template. Required.</p>
+         * <ul>
+         * <li>System: System Template</li>
+         * <li>UserDefined: user-defined Template</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder creationSource(String creationSource) {
             this.putQueryParameter("CreationSource", creationSource);
@@ -163,7 +170,10 @@ public class ListDataQualityRuleTemplatesRequest extends Request {
         }
 
         /**
-         * DirectoryPath.
+         * <p>The category directory where the custom template is stored, slash/divider level. Each level name can be up to 1024 characters in length and cannot contain white space characters or backslashes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ods/order_data</p>
          */
         public Builder directoryPath(String directoryPath) {
             this.putQueryParameter("DirectoryPath", directoryPath);
@@ -172,7 +182,10 @@ public class ListDataQualityRuleTemplatesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Fuzzy matching of template rule names. If it is a system template, the internationalized name of the system template will be fuzzy matching based on the language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table rows</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -205,6 +218,7 @@ public class ListDataQualityRuleTemplatesRequest extends Request {
         }
 
         /**
+         * <p>DataWorks workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

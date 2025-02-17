@@ -157,7 +157,11 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
+         * <p>业务日期。</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -166,7 +170,14 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -175,6 +186,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the workflow instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +199,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
+         * <p>The account ID of the owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +212,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +225,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
         }
 
         /**
+         * <p>The tasks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
@@ -260,10 +275,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String name; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>WorkflowInstance1</p>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +325,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String upstreamOutput; 
 
             /**
-             * UpstreamOutput.
+             * <p>The identifier of the output of the ancestor task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder upstreamOutput(String upstreamOutput) {
                 this.upstreamOutput = upstreamOutput;
@@ -369,10 +387,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String value; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the variable.</p>
              * 
              * <strong>example:</strong>
-             * <p>WorkflowInstance1</p>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -380,7 +398,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -427,7 +448,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private java.util.List<Variables> variables; 
 
             /**
-             * Variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -474,7 +495,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String output; 
 
             /**
-             * Output.
+             * <p>The identifier of the output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -545,10 +569,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String value; 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the variable.</p>
              * 
              * <strong>example:</strong>
-             * <p>WorkflowInstance1</p>
+             * <p>key1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -556,7 +580,16 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the variable. Valid values:</p>
+             * <ul>
+             * <li>System</li>
+             * <li>Constant</li>
+             * <li>NodeOutput</li>
+             * <li>PassThrough</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Constant</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -564,7 +597,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the variable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -623,7 +659,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private java.util.List<OutputsVariables> variables; 
 
             /**
-             * TaskOutputs.
+             * <p>The task outputs.</p>
              */
             public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -631,7 +667,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Variables.
+             * <p>The variables.</p>
              */
             public Builder variables(java.util.List<OutputsVariables> variables) {
                 this.variables = variables;
@@ -703,7 +739,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -711,7 +750,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -719,6 +761,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -781,7 +824,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String parameters; 
 
             /**
-             * Content.
+             * <p>The script content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo &quot;helloWorld&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -789,7 +835,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Parameters.
+             * <p>The script parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -961,6 +1010,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             private String type; 
 
             /**
+             * <p>The unique code of the client. This code uniquely identifies a task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -972,7 +1022,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -980,7 +1030,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Dependencies.
+             * <p>The dependency information.</p>
              */
             public Builder dependencies(java.util.List<Dependencies> dependencies) {
                 this.dependencies = dependencies;
@@ -988,7 +1038,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Inputs.
+             * <p>The input information.</p>
              */
             public Builder inputs(Inputs inputs) {
                 this.inputs = inputs;
@@ -996,7 +1046,11 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
+             * <p>The name of the task.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1004,7 +1058,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Outputs.
+             * <p>The output information.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -1012,6 +1066,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
+             * <p>The account ID of the owner.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1023,6 +1078,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              * <p>This parameter is required.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
@@ -1031,7 +1087,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Script.
+             * <p>The script information.</p>
              */
             public Builder script(Script script) {
                 this.script = script;
@@ -1039,7 +1095,10 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1047,6 +1106,7 @@ public class ExecuteAdhocWorkflowInstanceRequest extends Request {
             }
 
             /**
+             * <p>The type of the task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

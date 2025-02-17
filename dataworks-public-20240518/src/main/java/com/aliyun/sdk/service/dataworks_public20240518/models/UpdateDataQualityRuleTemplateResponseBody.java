@@ -55,7 +55,7 @@ public class UpdateDataQualityRuleTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>691CA452-D37A-4ED0-9441</p>

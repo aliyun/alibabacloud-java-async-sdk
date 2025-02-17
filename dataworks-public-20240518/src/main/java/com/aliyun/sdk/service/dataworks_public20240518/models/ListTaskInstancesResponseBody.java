@@ -959,6 +959,9 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task for which the instance is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -1076,6 +1079,9 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The name of the workflow to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test workflow</p>
              */
             public Builder workflowName(String workflowName) {
                 this.workflowName = workflowName;

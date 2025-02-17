@@ -63,7 +63,7 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -325,6 +325,9 @@ public class GetProjectResponseBody extends TeaModel {
 
             /**
              * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Financial analysis group project data development</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -363,6 +366,9 @@ public class GetProjectResponseBody extends TeaModel {
 
             /**
              * <p>The display name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sora financial analysis</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;

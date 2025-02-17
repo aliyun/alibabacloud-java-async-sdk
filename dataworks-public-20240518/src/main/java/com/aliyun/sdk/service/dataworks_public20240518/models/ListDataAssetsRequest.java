@@ -168,7 +168,7 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * DataAssetIds.
+         * <p>The data asset IDs.</p>
          */
         public Builder dataAssetIds(java.util.List<String> dataAssetIds) {
             String dataAssetIdsShrink = shrink(dataAssetIds, "DataAssetIds", "json");
@@ -178,7 +178,14 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * DataAssetType.
+         * <p>The type of the data asset. Valid values:</p>
+         * <ul>
+         * <li>ACS::DataWorks::Table</li>
+         * <li>ACS::DataWorks::Task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::DataWorks::Task</p>
          */
         public Builder dataAssetType(String dataAssetType) {
             this.putQueryParameter("DataAssetType", dataAssetType);
@@ -187,7 +194,14 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -196,7 +210,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +222,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +234,10 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -223,6 +246,11 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The tags that are added to data assets. This parameter specifies a filter condition.</p>
+         * <ul>
+         * <li>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code>.</li>
+         * <li>If you do not configure this parameter, tag-based filtering is not performed.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
@@ -285,6 +313,8 @@ public class ListDataAssetsRequest extends Request {
             private String value; 
 
             /**
+             * <p>The tag key.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, and the following characters: <code>-@#*&lt;&gt;|[]()+=&amp;%$!~</code>. It cannot start with <code>dw:</code>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -296,7 +326,10 @@ public class ListDataAssetsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

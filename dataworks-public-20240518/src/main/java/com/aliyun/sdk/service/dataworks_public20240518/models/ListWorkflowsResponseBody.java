@@ -55,7 +55,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -63,7 +63,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +160,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -165,7 +171,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the workflow is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -173,7 +182,15 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -181,7 +198,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the workflow is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -189,7 +209,14 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -380,7 +407,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private Trigger trigger; 
 
             /**
-             * ClientUniqueCode.
+             * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
              */
             public Builder clientUniqueCode(String clientUniqueCode) {
                 this.clientUniqueCode = clientUniqueCode;
@@ -388,7 +418,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -396,7 +429,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -404,7 +440,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -412,7 +451,14 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod</li>
+             * <li>Dev</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -420,7 +466,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -428,7 +477,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -436,7 +488,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -444,7 +499,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Workflow1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -452,7 +510,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -460,7 +521,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate para2=$[yyyymmdd]</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -468,7 +532,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -476,7 +543,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>The trigger method.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -559,7 +626,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             private java.util.List<Workflows> workflows; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -567,7 +637,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -575,7 +648,10 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -583,7 +659,7 @@ public class ListWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * Workflows.
+             * <p>The workflows.</p>
              */
             public Builder workflows(java.util.List<Workflows> workflows) {
                 this.workflows = workflows;

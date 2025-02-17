@@ -506,7 +506,10 @@ public class GetAlertRuleResponseBody extends TeaModel {
             private java.util.List<Long> streamTaskIds; 
 
             /**
-             * AutoRerunAlertEnabled.
+             * <p>Indicates whether an alert is triggered if a batch synchronization task is automatically rerun upon a failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRerunAlertEnabled(Boolean autoRerunAlertEnabled) {
                 this.autoRerunAlertEnabled = autoRerunAlertEnabled;
@@ -1050,7 +1053,7 @@ public class GetAlertRuleResponseBody extends TeaModel {
              * <ul>
              * <li>Task: node</li>
              * <li>Baseline: baseline</li>
-             * <li>Project: workspace</li>
+             * <li>project: workspace</li>
              * <li>BizProcess: workflow</li>
              * </ul>
              * 

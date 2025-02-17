@@ -136,7 +136,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CheckedValue.
+             * <p>The value used to compare with the threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder checkedValue(String checkedValue) {
                 this.checkedValue = checkedValue;
@@ -144,7 +147,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ReferencedValue.
+             * <p>Use the referenced sample to participate in the CheckedValue calculation of the benchmark value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder referencedValue(String referencedValue) {
                 this.referencedValue = referencedValue;
@@ -232,7 +238,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+             * <ul>
+             * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+             * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+             * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -259,7 +275,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -330,7 +349,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+             * <ul>
+             * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+             * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+             * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -357,7 +386,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -428,7 +460,17 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+             * <ul>
+             * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+             * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+             * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -455,7 +497,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The threshold value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -613,7 +658,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ReferencedSamplesFilter.
+             * <p>Some types of thresholds need to query some reference samples, and then summarize the values of the reference samples to obtain the threshold for comparison. Here, an expression is used to represent the query method of the reference samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
              */
             public Builder referencedSamplesFilter(String referencedSamplesFilter) {
                 this.referencedSamplesFilter = referencedSamplesFilter;
@@ -699,7 +747,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ErrorDataFilter.
+             * <p>For custom SQL rules, you must specify SQL to filter problem data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM tb_api_log WHERE id IS NULL</p>
              */
             public Builder errorDataFilter(String errorDataFilter) {
                 this.errorDataFilter = errorDataFilter;
@@ -824,7 +875,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricParameters.
+             * <p>Parameters required for sample collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] }</p>
              */
             public Builder metricParameters(String metricParameters) {
                 this.metricParameters = metricParameters;
@@ -832,7 +886,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingFilter.
+             * <p>The condition for secondary filtering of data that is not concerned during sampling, which can be up to 16777215 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id IS NULL</p>
              */
             public Builder samplingFilter(String samplingFilter) {
                 this.samplingFilter = samplingFilter;
@@ -840,7 +897,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * SettingConfig.
+             * <p>Before executing the sample statement, insert some runtime parameter setting statements, which can be up to 1000 characters in length. Currently, only MaxCompute is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SET odps.sql.udf.timeout=600s;</p>
              */
             public Builder settingConfig(String settingConfig) {
                 this.settingConfig = settingConfig;
@@ -931,7 +991,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * <p>The unique ID of the table in the data map.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.unit_test.tb_unit_test</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -1120,7 +1183,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the rule. It can be up to 500 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a odps _sql task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1128,7 +1194,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1144,7 +1213,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1152,7 +1224,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name, a combination of numbers, English letters, Chinese characters, and half-width punctuation marks, can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The table cannot be empty.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1160,7 +1235,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>DataWorks the ID of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1321,7 +1399,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             private Long taskInstanceId; 
 
             /**
-             * CreateTime.
+             * <p>The time when the verification result was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708284916414</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1337,7 +1418,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the verification result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16033</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1353,7 +1437,18 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The sample value used for this verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {
+             *     &quot;gender&quot;: &quot;male&quot;,
+             *     &quot;_count&quot;: 100
+             *   }, {
+             *     &quot;gender&quot;: &quot;female&quot;,
+             *     &quot;_count&quot;: 100
+             *   }
+             * ]</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -1379,7 +1474,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskInstanceId.
+             * <p>The ID of the verification task instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200001</p>
              */
             public Builder taskInstanceId(Long taskInstanceId) {
                 this.taskInstanceId = taskInstanceId;
@@ -1470,7 +1568,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1478,7 +1579,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1486,7 +1590,10 @@ public class ListDataQualityResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

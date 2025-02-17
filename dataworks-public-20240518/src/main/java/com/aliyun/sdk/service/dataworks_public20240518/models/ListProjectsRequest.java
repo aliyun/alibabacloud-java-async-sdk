@@ -209,6 +209,7 @@ public class ListProjectsRequest extends Request {
 
         /**
          * <p>The ID of the Alibaba Cloud resource group to which the workspaces belong. You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> and go to the Resource Group page to query the ID.</p>
+         * <p>This parameter is used to query the information about workspaces that belong to a specific resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzbn7pti3zff</p>

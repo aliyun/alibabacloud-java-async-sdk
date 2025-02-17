@@ -195,7 +195,14 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -204,7 +211,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The IDs of the workflows. You can query multiple workflows at a time by workflow ID.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -214,7 +221,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the workflow. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Workflow1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -223,7 +233,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The account ID of the workflow owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -232,7 +245,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -241,7 +257,10 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -250,6 +269,7 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +282,16 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <ul>
+         * <li>ModifyTime (Desc/Asc)</li>
+         * <li>CreateTime (Desc/Asc)</li>
+         * <li>Id (Desc/Asc)</li>
+         * </ul>
+         * <p>Default value: Id Desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -271,7 +300,14 @@ public class ListWorkflowsRequest extends Request {
         }
 
         /**
-         * TriggerType.
+         * <p>The trigger type. Valid values:</p>
+         * <ul>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduler</p>
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("TriggerType", triggerType);

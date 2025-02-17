@@ -55,7 +55,7 @@ public class UpdateResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4CDF7B72-020B-542A-8465-21CFFA81XXXX</p>

@@ -96,7 +96,10 @@ public class BatchUpdateTasksRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -105,7 +108,7 @@ public class BatchUpdateTasksRequest extends Request {
         }
 
         /**
-         * Tasks.
+         * <p>The tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             String tasksShrink = shrink(tasks, "Tasks", "json");
@@ -154,7 +157,10 @@ public class BatchUpdateTasksRequest extends Request {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +231,10 @@ public class BatchUpdateTasksRequest extends Request {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -233,7 +242,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -241,7 +253,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -301,6 +316,7 @@ public class BatchUpdateTasksRequest extends Request {
             private String value; 
 
             /**
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -312,7 +328,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -407,7 +426,10 @@ public class BatchUpdateTasksRequest extends Request {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -415,7 +437,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -423,7 +448,15 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -431,7 +464,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -439,7 +475,14 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: periodic scheduling</li>
+             * <li>Manual: manual scheduling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -631,7 +674,7 @@ public class BatchUpdateTasksRequest extends Request {
             private Trigger trigger; 
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -639,7 +682,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -647,7 +693,14 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -655,6 +708,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
+             * <p>The task ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -666,7 +720,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -674,7 +731,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -682,7 +742,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * RerunInterval.
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -690,7 +753,15 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * RerunMode.
+             * <p>The rerun mode. Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -698,7 +769,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * RerunTimes.
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -706,7 +780,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -714,7 +788,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -722,7 +796,10 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -730,7 +807,7 @@ public class BatchUpdateTasksRequest extends Request {
             }
 
             /**
-             * Trigger.
+             * <p>The trigger method.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;

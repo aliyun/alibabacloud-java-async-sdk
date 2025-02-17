@@ -97,7 +97,10 @@ public class StopWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a comment</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -106,6 +109,7 @@ public class StopWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The workflow instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List<Long> ids) {

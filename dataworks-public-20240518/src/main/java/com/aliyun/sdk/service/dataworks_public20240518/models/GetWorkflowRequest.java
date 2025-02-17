@@ -97,7 +97,14 @@ public class GetWorkflowRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>Prod: production environment</li>
+         * <li>Dev: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -106,6 +113,7 @@ public class GetWorkflowRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

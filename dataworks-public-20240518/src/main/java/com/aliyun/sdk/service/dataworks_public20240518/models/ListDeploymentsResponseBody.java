@@ -208,6 +208,9 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
             /**
              * <p>The description of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check before going online to development</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -224,6 +227,9 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
             /**
              * <p>The error message returned during the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error message</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -232,6 +238,9 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the stage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check before going online to development</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,6 +455,9 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
             /**
              * <p>The error message returned if the process fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error message</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -578,7 +590,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * <p>The deployment processes.</p>
+             * <p>The processes.</p>
              */
             public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;

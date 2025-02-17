@@ -55,7 +55,10 @@ public class CreateDataQualityRuleTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * <p>The Code of the rule template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefined:3001</p>
          */
         public Builder code(String code) {
             this.code = code;

@@ -124,7 +124,11 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>Hook触发条件</p>
+             * <p>Hook trigger condition. When this condition is met, hook action is triggered. Currently, only two conditional expressions are supported:</p>
+             * <ul>
+             * <li>Specify only one set of rule severity types AND rule verification status, such as <code>${severity} = = &quot;High&quot; AND ${status} = = &quot;Critical&quot;</code>, which indicates that in the executed rule, if the rule verification result of severity High is Critical, the condition is met.</li>
+             * <li>Specify multiple sets of rule severity types AND rule verification status, such as <code>(${severity} = = &quot;High&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Error&quot;)</code>, if the rule verification result of severity High is Critical, the rule verification result of severity Normal is Critical, or the rule verification result of severity Normal is Error, the enumeration that satisfies the condition expression severity is consistent with the enumeration DataQualityRule in severity, and the enumeration of status is consistent with the status in DataQualityResult.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</p>
@@ -136,10 +140,6 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
 
             /**
              * <p>The hook type. Only one hook type is supported.</p>
-             * <ul>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
              * <ul>
              * <li>BlockTaskInstance: Blocks the running of scheduling tasks. A monitor is triggered by scheduling tasks. After a monitor finishes running, the monitor determines whether to block the running of scheduling tasks based on the hook condition.</li>
              * </ul>
@@ -192,7 +192,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private java.util.List<String> channels; 
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -263,7 +263,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private java.util.List<String> receiverValues; 
 
             /**
-             * <p>扩展信息，格式为 json，例如钉钉机器人支持 at 所有人</p>
+             * <p>The extended information.</p>
              * 
              * <strong>example:</strong>
              * <p>{  &quot;atAll&quot;: true }</p>
@@ -296,7 +296,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>告警接收人</p>
+             * <p>The alert recipients.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -355,7 +355,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The alert notification methods.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -422,7 +422,11 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private java.util.List<Notifications> notifications; 
 
             /**
-             * <p>通知触发条件</p>
+             * <p>The notification trigger condition. When this condition is met, a message notification is triggered. Currently, only two conditional expressions are supported:</p>
+             * <ul>
+             * <li>Specify only one set of rule severity types AND rule verification status, such as <code>${severity} = = &quot;High&quot; AND ${status} = = &quot;Critical&quot;</code>, which indicates that in the executed rule, if the rule verification result of severity High is Critical, the condition is met.</li>
+             * <li>Specify multiple sets of rule severity types AND rule verification status, such as <code>(${severity} = = &quot;High&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Critical&quot;) OR (${severity} = &quot;Normal&quot; AND ${status} = &quot;Error&quot;)</code>, if the rule verification result of severity High is Critical, the rule verification result of severity Normal is Critical, or the rule verification result of severity Normal is Error, the enumeration that satisfies the condition expression severity is consistent with the enumeration DataQualityRule in severity, and the enumeration of status is consistent with the status in DataQualityResult.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</p>
@@ -433,7 +437,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the alert notification.</p>
+             * <p>The configurations of alert notifications.</p>
              */
             public Builder notifications(java.util.List<Notifications> notifications) {
                 this.notifications = notifications;
@@ -516,8 +520,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>The type of the database to which the table belongs.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the database to which the table belongs. Valid values:</p>
              * <ul>
              * <li>maxcompute</li>
              * <li>hologres</li>
@@ -537,7 +540,10 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionSpec.
+             * <p>Data quality monitoring partition range settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pt=$[yyyymmdd-1]</p>
              */
             public Builder partitionSpec(String partitionSpec) {
                 this.partitionSpec = partitionSpec;
@@ -545,7 +551,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>表在数据地图中的唯一ID</p>
+             * <p>The ID of the table in Data Map.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.meta_open_api_test_sz.test_partition_tbl</p>
@@ -556,7 +562,10 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>监控对象类型</p>
+             * <p>The type of the monitoring object.</p>
+             * <ul>
+             * <li>Table: Table.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Table</p>
@@ -618,7 +627,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * <p>具体指明哪些调度节点的实例执行成功后可以触发</p>
+             * <p>The IDs of scheduling tasks. This parameter is valid only if you set Type to ByScheduledTaskInstance.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -626,14 +635,9 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trigger type of the monitor.</p>
+             * <p>The trigger type of the monitor. Valid values:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>ByManual (default): The monitor is manually triggered.</li>
+             * <li>ByManual: The monitor is manually triggered.</li>
              * <li>ByScheduledTaskInstance: The monitor is triggered by associated scheduling tasks.</li>
              * <li>ByQualityNode: The monitor is triggered by created data quality monitoring nodes.</li>
              * </ul>
@@ -795,7 +799,10 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private Trigger trigger; 
 
             /**
-             * DataSourceId.
+             * <p>The ID of the data source used by the quality monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45238</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -803,7 +810,10 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>质量监控任务描述</p>
+             * <p>The description of the monitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the quality monitoring task.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -819,7 +829,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>代表资源一级ID的资源属性字段</p>
+             * <p>The ID of the data quality monitor.</p>
              * 
              * <strong>example:</strong>
              * <p>2178</p>
@@ -830,8 +840,11 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>质量监控任务名称</p>
+             * <p>The name of the monitor.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI create a data quality monitoring test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -847,7 +860,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>项目空间Id</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2626</p>
@@ -858,7 +871,15 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>使用数据源时的一些设置，目前只支持指定EMR的yarn队列、采集EMR表时把SQL引擎指定为SPARK-SQL</p>
+             * <p>Extended configuration, JSON-formatted string, takes effect only for EMR-type data quality monitoring.</p>
+             * <ul>
+             * <li>queue: the yarn queue used when performing EMR data quality verification. The default queue is the queue configured for this project.</li>
+             * <li>sqlEngine: SQL engine used when performing EMR data verification<ul>
+             * <li>HIVE_ SQL</li>
+             * <li>SPARK_ SQL</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</p>

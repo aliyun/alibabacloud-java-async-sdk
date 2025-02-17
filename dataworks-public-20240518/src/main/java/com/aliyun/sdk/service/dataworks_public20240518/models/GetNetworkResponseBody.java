@@ -75,7 +75,10 @@ public class GetNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -216,7 +219,10 @@ public class GetNetworkResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * CreateTime.
+             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -224,7 +230,10 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who created the network resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11075500042XXXXX</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -232,7 +241,10 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the network resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -240,7 +252,10 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The unique identifier of the common resource group to which it belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -248,7 +263,10 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group for the network resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze13vamugr7jenXXXXX</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -274,7 +292,10 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID of the network resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -282,7 +303,10 @@ public class GetNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The switch ID of the network resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

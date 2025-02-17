@@ -233,6 +233,9 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
 
         /**
          * <p>The description of the monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI create a data quality monitoring test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -253,6 +256,9 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
         /**
          * <p>The name of the monitor.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI create a data quality monitoring test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -389,7 +395,17 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>阈值表达式。</p>
+             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <ul>
+             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -491,7 +507,17 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>阈值表达式。</p>
+             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <ul>
+             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -592,7 +618,17 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>阈值表达式。</p>
+             * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+             * <ul>
+             * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
+             * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
+             * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -803,8 +839,8 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
              * <p>The threshold calculation method. Valid values:</p>
              * <ul>
              * <li>Fixed</li>
-             * <li>Fluctuation</li>
-             * <li>FluctuationDiscreate</li>
+             * <li>Fluctation</li>
+             * <li>FluctationDiscreate</li>
              * <li>Auto</li>
              * <li>Average</li>
              * </ul>
@@ -1176,6 +1212,9 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
 
             /**
              * <p>The description of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI test rules</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1194,7 +1233,7 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The operations that you can perform after the rule-based check.</p>
+             * <p>The operations that you can perform after the rule-based check fails.</p>
              */
             public Builder errorHandlers(java.util.List<ErrorHandlers> errorHandlers) {
                 this.errorHandlers = errorHandlers;
@@ -1214,6 +1253,9 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
 
             /**
              * <p>The name of the monitoring rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI test rules</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1374,7 +1416,7 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private java.util.List<String> channels; 
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The alert notification methods.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -1459,8 +1501,7 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The type of the alert recipient.</p>
-             * <p>Valid values:</p>
+             * <p>The type of the alert recipient. Valid values:</p>
              * <ul>
              * <li>WebhookUrl</li>
              * <li>FeishuUrl</li>
@@ -1537,7 +1578,7 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private java.util.List<NotificationReceivers> notificationReceivers; 
 
             /**
-             * <p>The alert notification method.</p>
+             * <p>The alert notification methods.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -1688,7 +1729,16 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             private String tableGuid; 
 
             /**
-             * <p>The type of the database to which the table belongs.</p>
+             * <p>The type of the database to which the table belongs. Valid values:</p>
+             * <ul>
+             * <li>maxcompute</li>
+             * <li>hologres</li>
+             * <li>cdh</li>
+             * <li>analyticdb_for_mysql</li>
+             * <li>starrocks</li>
+             * <li>emr</li>
+             * <li>analyticdb_for_postgresql</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>maxcompute</p>
@@ -1699,7 +1749,7 @@ public class CreateDataQualityEvaluationTaskRequest extends Request {
             }
 
             /**
-             * <p>The partition configuration of the partitioned table.</p>
+             * <p>The configuration of the partitioned table.</p>
              * 
              * <strong>example:</strong>
              * <p>pt=$[yyyymmdd-1]</p>

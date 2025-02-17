@@ -218,6 +218,9 @@ public class GetResourceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the file resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAPI_Test_Resource. py</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -248,6 +251,38 @@ public class GetResourceResponseBody extends TeaModel {
 
             /**
              * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow">FlowSpec</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;version&quot;: &quot;1.1.0&quot;,
+             *     &quot;kind&quot;: &quot;Resource&quot;,
+             *     &quot;spec&quot;: {
+             *         &quot;fileResources&quot;: [
+             *             {
+             *                 &quot;name&quot;: &quot;OpenAPI_Test_Resource.py&quot;,
+             *                 &quot;id&quot;: &quot;631478864897630XXXX&quot;,
+             *                 &quot;script&quot;: {
+             *                     &quot;content&quot;: &quot;&quot;,
+             *                     &quot;path&quot;: &quot;XX/OpenAPI_Test/Resource_Test/OpenAPI_Test_Resource.py&quot;,
+             *                     &quot;runtime&quot;: {
+             *                         &quot;command&quot;: &quot;ODPS_PYTHON&quot;
+             *                     }
+             *                 },
+             *                 &quot;type&quot;: &quot;python&quot;,
+             *                 &quot;file&quot;: {
+             *                     &quot;storage&quot;: {}
+             *                 },
+             *                 &quot;datasource&quot;: {
+             *                     &quot;name&quot;: &quot;odps_first&quot;,
+             *                     &quot;type&quot;: &quot;odps&quot;
+             *                 },
+             *                 &quot;metadata&quot;: {
+             *                     &quot;owner&quot;: &quot;110755000425XXXX&quot;
+             *                 }
+             *             }
+             *         ]
+             *     }
+             * }</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;

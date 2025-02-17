@@ -226,7 +226,10 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * AutoStartEnabled.
+         * <p>The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoStartEnabled(Boolean autoStartEnabled) {
             this.putBodyParameter("AutoStartEnabled", autoStartEnabled);
@@ -235,7 +238,10 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Comment.
+         * <p>The reason for the creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create for test</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
@@ -244,7 +250,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * DefaultRunProperties.
+         * <p>Runtime configuration.</p>
          */
         public Builder defaultRunProperties(DefaultRunProperties defaultRunProperties) {
             String defaultRunPropertiesShrink = shrink(defaultRunProperties, "DefaultRunProperties", "json");
@@ -254,7 +260,14 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The project environment.</p>
+         * <ul>
+         * <li>Prod (production)</li>
+         * <li>Dev</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -263,6 +276,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +289,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Periods.
+         * <p>Make up the data cycle settings.</p>
          */
         public Builder periods(Periods periods) {
             String periodsShrink = shrink(periods, "Periods", "json");
@@ -285,6 +299,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +312,13 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * TaskParameters.
+         * <p>Task parameters. Set parameters for a specific task. In JSON format, the key is the Task ID. For more information about the value format, see Task Script parameters (Task.Script. GetTask of the Parameter interface).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;1001&quot;: &quot;key1=val2 key2=val2&quot;, 
+         *   &quot;1002&quot;: &quot;key1=val2 key2=val2&quot;
+         * }</p>
          */
         public Builder taskParameters(String taskParameters) {
             this.putBodyParameter("TaskParameters", taskParameters);
@@ -306,6 +327,11 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The type of the workflow instance.</p>
+         * <ul>
+         * <li>SupplementData: Retroactive data</li>
+         * <li>ManualWorkflow: manual workflow</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +344,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workflow to which the workflow belongs. The default value of WorkflowId for retroactive data is 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +357,13 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * WorkflowParameters.
+         * <p>Workflow parameters. The priority is higher than the task parameters. JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ 
+         *   &quot;key1&quot;: &quot;value1&quot;, 
+         *   &quot;key2&quot;: &quot;value2&quot; 
+         * }</p>
          */
         public Builder workflowParameters(String workflowParameters) {
             this.putBodyParameter("WorkflowParameters", workflowParameters);
@@ -390,7 +423,15 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String type; 
 
             /**
-             * NoticeType.
+             * <p>The notification method.</p>
+             * <ul>
+             * <li>Sms: Sms only</li>
+             * <li>Mail: Mail only</li>
+             * <li>SmsMail: SMS and email.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Sms</p>
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -398,10 +439,15 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The alert policy.</p>
+             * <ul>
+             * <li>Success: successful alert</li>
+             * <li>Failure: failed alarm</li>
+             * <li>SuccessFailure: alerts for both success and failure</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>SupplementData</p>
+             * <p>Succes</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -462,6 +508,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             private Boolean enabled; 
 
             /**
+             * <p>Whether to block the operation if the analysis fails.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -473,6 +520,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
+             * <p>Whether to enable analysis.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -559,7 +607,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String type; 
 
             /**
-             * EndTime.
+             * <p>The end runtime. This field is required if the policy is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59:59</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -567,7 +618,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * Immediately.
+             * <p>The default value is false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder immediately(Boolean immediately) {
                 this.immediately = immediately;
@@ -575,7 +629,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. This field is required if the policy is set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -583,10 +640,14 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The type of the time period. This field is required if the policy is set.</p>
+             * <ul>
+             * <li>Daily: every day</li>
+             * <li>Weekend: Weekends only</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>SupplementData</p>
+             * <p>Daily</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -767,7 +828,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String runtimeResource; 
 
             /**
-             * Alert.
+             * <p>Alarm configuration.</p>
              */
             public Builder alert(Alert alert) {
                 this.alert = alert;
@@ -775,6 +836,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
+             * <p>Analyze the configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder analysis(Analysis analysis) {
@@ -783,7 +845,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * ExcludeProjectIds.
+             * <p>The list of project IDs that do not need to be run.</p>
              */
             public Builder excludeProjectIds(java.util.List<Long> excludeProjectIds) {
                 this.excludeProjectIds = excludeProjectIds;
@@ -791,7 +853,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * ExcludeTaskIds.
+             * <p>The list of task IDs that you do not want to run.</p>
              */
             public Builder excludeTaskIds(java.util.List<Long> excludeTaskIds) {
                 this.excludeTaskIds = excludeTaskIds;
@@ -799,7 +861,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * IncludeProjectIds.
+             * <p>The list of project IDs to be run.</p>
              */
             public Builder includeProjectIds(java.util.List<Long> includeProjectIds) {
                 this.includeProjectIds = includeProjectIds;
@@ -807,7 +869,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * IncludeTaskIds.
+             * <p>The list of task IDs to be run.</p>
              */
             public Builder includeTaskIds(java.util.List<Long> includeTaskIds) {
                 this.includeTaskIds = includeTaskIds;
@@ -815,7 +877,16 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The data replenishment mode. The default value is ManualSelection.</p>
+             * <ul>
+             * <li>General: In normal mode, only one &quot;roottaskkids&quot; can be filled in, and &quot;IncludeTaskIds&quot; is optional. If not, the content in &quot;roottaskkids&quot; will be included by default.</li>
+             * <li>ManualSelection: manually select, &quot;roottaskkids&quot; can be filled in multiple, &quot;IncludeTaskIds&quot; optional, if not, the content in &quot;roottaskkids&quot; will be included by default.</li>
+             * <li>Chain: the link, &quot;roottaskkids&quot; is empty, and &quot;IncludeTaskIds&quot; is filled with two IDs, which are the start and end tasks respectively.</li>
+             * <li>AllDownstream: all downstream, &quot;roottaskkids&quot; can only be filled in one</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ManualSelection</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -823,7 +894,14 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * Order.
+             * <p>The running sequence. Default value: Asc.</p>
+             * <ul>
+             * <li>Asc: ascending order by business date.</li>
+             * <li>Desc: descending order by business date.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Asc</p>
              */
             public Builder order(String order) {
                 this.order = order;
@@ -831,6 +909,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
+             * <p>The number of rows that the task has. Values from 2 to 10 are parallelism and 1 is serial.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -842,7 +921,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * RootTaskIds.
+             * <p>The ID list of the root task.</p>
              */
             public Builder rootTaskIds(java.util.List<Long> rootTaskIds) {
                 this.rootTaskIds = rootTaskIds;
@@ -850,7 +929,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * RunPolicy.
+             * <p>Run the policy. If this field is empty, the task configuration is followed.</p>
              */
             public Builder runPolicy(RunPolicy runPolicy) {
                 this.runPolicy = runPolicy;
@@ -858,7 +937,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The identifier of the custom scheduling Resource Group. If this field is empty, the task configuration is followed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder runtimeResource(String runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -919,6 +1001,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String startBizDate; 
 
             /**
+             * <p>The end date of the business.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -930,6 +1013,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
+             * <p>The start business date.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1005,6 +1089,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String startTime; 
 
             /**
+             * <p>The list of business dates. You can specify a multi-segment business date (up to 7 segments).</p>
              * <p>This parameter is required.</p>
              */
             public Builder bizDates(java.util.List<BizDates> bizDates) {
@@ -1013,7 +1098,11 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>Specifies the end cycle time. Default value: 23:59:59.</p>
+             * <p>If you enter this field, StartTime and EndTime must be filled in at the same time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:59:59</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1021,7 +1110,11 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>Specifies the start cycle time. Default value: 00:00:00.</p>
+             * <p>If you enter this field, StartTime and EndTime must be filled in at the same time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

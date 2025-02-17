@@ -129,6 +129,9 @@ public class CreateDeploymentRequest extends Request {
 
         /**
          * <p>The description of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a OdpsSQL-node publishing process. The function is XXXX.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);

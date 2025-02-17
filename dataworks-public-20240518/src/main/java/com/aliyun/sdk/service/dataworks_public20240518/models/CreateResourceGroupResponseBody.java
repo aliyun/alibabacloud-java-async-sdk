@@ -67,7 +67,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupOrder.
+         * <p>The order information for creating a serverless resource group.</p>
          */
         public Builder resourceGroupOrder(ResourceGroupOrder resourceGroupOrder) {
             this.resourceGroupOrder = resourceGroupOrder;
@@ -83,7 +86,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -153,7 +159,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             private String orderInstanceId; 
 
             /**
-             * Id.
+             * <p>The unique identifier of the serverless resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -161,7 +170,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The ID of the order to create a serverless resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2391982058XXXXX</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -169,7 +181,10 @@ public class CreateResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * OrderInstanceId.
+             * <p>The ID of the order instance that created the serverless resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
              */
             public Builder orderInstanceId(String orderInstanceId) {
                 this.orderInstanceId = orderInstanceId;

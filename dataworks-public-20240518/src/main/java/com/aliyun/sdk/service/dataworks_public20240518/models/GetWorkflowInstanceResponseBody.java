@@ -268,7 +268,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -411,7 +414,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作流类型</p>
+             * <p>The type of the workflow instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>

@@ -210,7 +210,11 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>业务日期。</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -219,7 +223,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The IDs of the workflow instances. You can query multiple instances at a time by instance ID.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -229,7 +233,10 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The instance name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WorkflowInstance1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -238,7 +245,10 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The account ID of the workflow instance owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -247,7 +257,10 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -256,7 +269,10 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -265,6 +281,7 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +294,18 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <ul>
+         * <li>TriggerTime (Desc/Asc)</li>
+         * <li>StartedTime (Desc/Asc)</li>
+         * <li>FinishedTime (Desc/Asc)</li>
+         * <li>CreateTime (Desc/Asc)</li>
+         * <li>Id (Desc/Asc)</li>
+         * </ul>
+         * <p>Default value: Id Desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
@@ -286,7 +314,17 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>工作流实例的类型。</p>
+         * <ul>
+         * <li>Normal：周期调度</li>
+         * <li>Manual：手动任务</li>
+         * <li>SmokeTest：测试</li>
+         * <li>SupplementData：补数据</li>
+         * <li>ManualWorkflow：手动工作流</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -295,7 +333,10 @@ public class ListWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * WorkflowId.
+         * <p>The ID of the workflow to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder workflowId(Long workflowId) {
             this.putBodyParameter("WorkflowId", workflowId);

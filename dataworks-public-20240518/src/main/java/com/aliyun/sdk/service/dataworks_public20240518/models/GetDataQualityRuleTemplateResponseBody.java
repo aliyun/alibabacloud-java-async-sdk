@@ -63,7 +63,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>691CA452-D37A-4ED0-9441</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +124,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ReferencedSamplesFilter.
+             * <p>Some types of thresholds need to query some reference samples, and then summarize the values of the reference samples to obtain the threshold for comparison. Here, an expression is used to represent the query method of the reference samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</p>
              */
             public Builder referencedSamplesFilter(String referencedSamplesFilter) {
                 this.referencedSamplesFilter = referencedSamplesFilter;
@@ -129,7 +135,18 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Threshold Calculation method:</p>
+             * <ul>
+             * <li>Fixed</li>
+             * <li>Fluctation</li>
+             * <li>FluctationDiscreate</li>
+             * <li>Auto</li>
+             * <li>Average</li>
+             * <li>Variance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Fixed</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -200,7 +217,27 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             private String settingConfig; 
 
             /**
-             * Metric.
+             * <p>The name of the sampled metric.</p>
+             * <ul>
+             * <li>Count: number of table rows</li>
+             * <li>Min: minimum value of the field</li>
+             * <li>Max: The maximum value of the field.</li>
+             * <li>Avg: field mean</li>
+             * <li>DistinctCount: number of unique field values</li>
+             * <li>DistinctPercent: the ratio of the number of unique field values to the number of data rows.</li>
+             * <li>DuplicatedCount: number of duplicate field values</li>
+             * <li>DuplicatedPercent: the ratio of the number of duplicate field values to the number of data rows.</li>
+             * <li>TableSize: table size</li>
+             * <li>NullValueCount: number of rows with empty fields</li>
+             * <li>NullValuePercent: the proportion of fields that are empty.</li>
+             * <li>GroupCount: aggregate each value by field value and the corresponding number of data rows</li>
+             * <li>CountNotIn: the enumerated value does not match the number of rows.</li>
+             * <li>CountDistinctNotIn: the number of unique values that the enumerated values do not match.</li>
+             * <li>UserDefinedSql: use custom SQL to collect samples.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Max</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -208,7 +245,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MetricParameters.
+             * <p>Parameters required for sample collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SQL&quot;: &quot;select count(1) from table;&quot;}</p>
              */
             public Builder metricParameters(String metricParameters) {
                 this.metricParameters = metricParameters;
@@ -216,7 +256,11 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SettingConfig.
+             * <p>Before executing the sample statement, insert some runtime parameter setting statements, which can be up to 1000 characters in length. Currently, only MaxCompute is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SET odps.sql.udf.timeout=600s; 
+             * SET odps.sql.python.version=cp27;</p>
              */
             public Builder settingConfig(String settingConfig) {
                 this.settingConfig = settingConfig;
@@ -335,7 +379,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             private String visibleScope; 
 
             /**
-             * CheckingConfig.
+             * <p>Sample verification settings.</p>
              */
             public Builder checkingConfig(CheckingConfig checkingConfig) {
                 this.checkingConfig = checkingConfig;
@@ -343,7 +387,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The Code of the rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_DEFINED:123</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -351,7 +398,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryPath.
+             * <p>The category directory where the custom template is stored, separated by slashes. Each level name can be up to 1024 characters in length and cannot contain white space characters or slashes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/ods/order_data</p>
              */
             public Builder directoryPath(String directoryPath) {
                 this.directoryPath = directoryPath;
@@ -359,7 +409,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the rule template. It can contain up to 512 characters in length, including numbers, letters, Chinese characters, and half-width punctuation marks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table row Count Verification</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -367,7 +420,10 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the DataWorks workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4020</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -375,7 +431,7 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingConfig.
+             * <p>The settings required for sample collection.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -383,7 +439,14 @@ public class GetDataQualityRuleTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * VisibleScope.
+             * <p>Available range of templates:</p>
+             * <ul>
+             * <li>Tenant: all tenants are available</li>
+             * <li>Project: only available in the current Project</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Project</p>
              */
             public Builder visibleScope(String visibleScope) {
                 this.visibleScope = visibleScope;

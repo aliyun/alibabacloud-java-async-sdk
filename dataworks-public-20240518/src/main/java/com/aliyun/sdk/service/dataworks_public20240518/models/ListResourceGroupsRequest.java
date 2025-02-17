@@ -208,7 +208,10 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * AliyunResourceGroupId.
+         * <p>Alibaba Cloud Resource Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2kqofrgXXXXX</p>
          */
         public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
             this.putQueryParameter("AliyunResourceGroupId", aliyunResourceGroupId);
@@ -217,7 +220,7 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * AliyunResourceTags.
+         * <p>Alibaba Cloud tag list</p>
          */
         public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
             String aliyunResourceTagsShrink = shrink(aliyunResourceTags, "AliyunResourceTags", "json");
@@ -301,16 +304,16 @@ public class ListResourceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <p>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</p>
          * <ul>
-         * <li>Id (Desc/Asc): the resource group ID</li>
-         * <li>Name (Desc/Asc): the name of the resource group</li>
-         * <li>Remark (Desc/Asc): the remarks of the resource group</li>
-         * <li>Type (Desc/Asc): the type of the resource group</li>
-         * <li>Status (Desc/Asc): the status of the resource group</li>
-         * <li>Spec (Desc/Asc): the specifications of the resource group</li>
-         * <li>CreateUser (Desc/Asc): the creator of the resource group</li>
-         * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+         * <li>Id (Desc/Asc): resource group ID</li>
+         * <li>Name (Desc/Asc): resource group name</li>
+         * <li>Remark (Desc/Asc): resource group remarks</li>
+         * <li>Type (Desc/Asc): resource group type</li>
+         * <li>Status (Desc/Asc): status of resources in a resource group</li>
+         * <li>Spec (Desc/Asc): resource group specifications</li>
+         * <li>CreateUser (Desc/Asc): creator</li>
+         * <li>CreateTime (Desc/Asc): creation time</li>
          * </ul>
          * <p>Default value: CreateTime Asc</p>
          * 
@@ -385,7 +388,10 @@ public class ListResourceGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag Key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -393,7 +399,10 @@ public class ListResourceGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag Value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

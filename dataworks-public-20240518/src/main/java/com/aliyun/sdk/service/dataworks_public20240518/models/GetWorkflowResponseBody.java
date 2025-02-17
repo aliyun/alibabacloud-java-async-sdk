@@ -55,7 +55,10 @@ public class GetWorkflowResponseBody extends TeaModel {
         private Workflow workflow; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class GetWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Workflow.
+         * <p>The infromation about the workflow.</p>
          */
         public Builder workflow(Workflow workflow) {
             this.workflow = workflow;
@@ -133,7 +136,16 @@ public class GetWorkflowResponseBody extends TeaModel {
             private Long upstreamTaskId; 
 
             /**
-             * Type.
+             * <p>The scheduling dependency type. Valid values:</p>
+             * <ul>
+             * <li>CrossCycleDependsOnChildren: cross-cycle dependency on the level-1 descendant nodes of a node</li>
+             * <li>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</li>
+             * <li>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</li>
+             * <li>Normal: same-cycle scheduling dependency</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -141,7 +153,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamOutput.
+             * <p>The identifier of the output of the ancestor task. This parameter is returned only if <code>same-cycle scheduling dependencies</code> and the node input are configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder upstreamOutput(String upstreamOutput) {
                 this.upstreamOutput = upstreamOutput;
@@ -149,7 +164,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamTaskId.
+             * <p>The ancestor task ID. This parameter is returned only if <code>cross-cycle scheduling dependencies</code> or <code>same-cycle scheduling dependencies</code> and the node input are not configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder upstreamTaskId(Long upstreamTaskId) {
                 this.upstreamTaskId = upstreamTaskId;
@@ -196,7 +214,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * Output.
+             * <p>The identifier of the output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.odps_sql_demo_0</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -243,7 +264,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             private java.util.List<TaskOutputs> taskOutputs; 
 
             /**
-             * TaskOutputs.
+             * <p>The task outputs.</p>
              */
             public Builder taskOutputs(java.util.List<TaskOutputs> taskOutputs) {
                 this.taskOutputs = taskOutputs;
@@ -302,7 +323,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -310,7 +334,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -357,7 +384,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -428,7 +458,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The default number of compute units (CUs) configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -436,7 +469,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The ID of the image configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxxx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -444,7 +480,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group for scheduling configured for task running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -743,7 +782,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * BaselineId.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -751,7 +793,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ClientUniqueCode.
+             * <p>The unique code of the client. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the task, the system automatically generates a unique code. The unique code is uniquely associated with the task ID. If you specify this parameter when you update or delete the task, the value of this parameter must be the unique code that is used to create the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task_0bc5213917368545132902xxxxxxxx</p>
              */
             public Builder clientUniqueCode(String clientUniqueCode) {
                 this.clientUniqueCode = clientUniqueCode;
@@ -759,7 +804,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -767,7 +815,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -775,7 +826,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The information about the associated data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -783,7 +834,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -791,7 +845,14 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -799,7 +860,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -807,7 +871,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -815,7 +882,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -823,7 +893,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -831,7 +904,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the task owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -839,7 +915,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the task. Valid values: 1 to 8. A larger value indicates a higher priority. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -847,7 +926,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -855,7 +937,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * RerunInterval.
+             * <p>The rerun interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder rerunInterval(Integer rerunInterval) {
                 this.rerunInterval = rerunInterval;
@@ -863,7 +948,15 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * RerunMode.
+             * <p>The rerun mode. Valid values:</p>
+             * <ul>
+             * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+             * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AllAllowed</p>
              */
             public Builder rerunMode(String rerunMode) {
                 this.rerunMode = rerunMode;
@@ -871,7 +964,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * RerunTimes.
+             * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rerunTimes(Integer rerunTimes) {
                 this.rerunTimes = rerunTimes;
@@ -879,7 +975,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeResource.
+             * <p>The configurations of the runtime environment, such as the resource group information.</p>
              */
             public Builder runtimeResource(RuntimeResource runtimeResource) {
                 this.runtimeResource = runtimeResource;
@@ -887,7 +983,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period of task running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -895,7 +994,15 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerRecurrence.
+             * <p>The running mode of the task after it is triggered. Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder triggerRecurrence(String triggerRecurrence) {
                 this.triggerRecurrence = triggerRecurrence;
@@ -903,7 +1010,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ODPS_SQL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -911,7 +1021,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
@@ -1006,7 +1119,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Cron.
+             * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00 00 00 * * ?</p>
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -1014,7 +1130,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the time range during which the workflow is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1022,7 +1141,15 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Recurrence.
+             * <p>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</p>
+             * <ul>
+             * <li>Pause</li>
+             * <li>Skip</li>
+             * <li>Normal</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder recurrence(String recurrence) {
                 this.recurrence = recurrence;
@@ -1030,7 +1157,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the time range during which the workflow is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1038,7 +1168,14 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li>Scheduler: scheduling cycle-based trigger</li>
+             * <li>Manual: manual trigger</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Scheduler</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1277,7 +1414,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             private Trigger trigger; 
 
             /**
-             * ClientUniqueCode.
+             * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
              */
             public Builder clientUniqueCode(String clientUniqueCode) {
                 this.clientUniqueCode = clientUniqueCode;
@@ -1285,7 +1425,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1293,7 +1436,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -1301,7 +1447,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Dependencies.
+             * <p>The dependency information.</p>
              */
             public Builder dependencies(java.util.List<Dependencies> dependencies) {
                 this.dependencies = dependencies;
@@ -1309,7 +1455,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test workflow</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1317,7 +1466,14 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * <p>The environment of the workspace. Valid values:</p>
+             * <ul>
+             * <li>Prod: production environment</li>
+             * <li>Dev: development environment</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prod</p>
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -1325,7 +1481,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1333,7 +1492,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710239005403</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1341,7 +1503,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The account ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -1349,7 +1514,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Workflow</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1357,7 +1525,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * <p>The output information.</p>
              */
             public Builder outputs(Outputs outputs) {
                 this.outputs = outputs;
@@ -1365,7 +1533,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The account ID of the workflow owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1373,7 +1544,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate para2=$[yyyymmdd]</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -1381,7 +1555,10 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1389,7 +1566,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1397,7 +1574,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * <p>The tasks.</p>
              */
             public Builder tasks(java.util.List<Tasks> tasks) {
                 this.tasks = tasks;
@@ -1405,7 +1582,7 @@ public class GetWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>The trigger method.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;

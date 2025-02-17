@@ -127,6 +127,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data quality monitoring task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,10 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
+         * <p>Data quality verification execution parameters in JSON format. The available keys are as follows:</p>
+         * <ul>
+         * <li>triggerTime: the millisecond timestamp of the trigger time. The baseline time of the $[yyyymmdd] expression in the data range of data quality monitoring. Required.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,8 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+         * <p>This parameter is used to determine the DataWorks workspaces used for this API call.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +170,7 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
         }
 
         /**
-         * RuntimeResource.
+         * <p>Resource Group information, which must be filled in when running non-MaxCompute data quality verification.</p>
          */
         public Builder runtimeResource(RuntimeResource runtimeResource) {
             String runtimeResourceShrink = shrink(runtimeResource, "RuntimeResource", "json");
@@ -224,7 +231,10 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
             private String resourceGroupId; 
 
             /**
-             * Cu.
+             * <p>The task runs to configure CU consumption. If Serverless resource groups are used, you must specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cu(Double cu) {
                 this.cu = cu;
@@ -232,7 +242,10 @@ public class CreateDataQualityEvaluationTaskInstanceRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The identifier of the scheduling resource group configured for running the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63900680</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

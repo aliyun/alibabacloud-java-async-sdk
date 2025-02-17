@@ -66,7 +66,14 @@ public class DeleteDataQualityEvaluationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the deletion is successful.</p>
+         * <ul>
+         * <li>true: Successful</li>
+         * <li>false: Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

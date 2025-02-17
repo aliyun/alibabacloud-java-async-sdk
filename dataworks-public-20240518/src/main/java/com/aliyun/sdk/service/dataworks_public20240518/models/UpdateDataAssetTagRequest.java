@@ -126,7 +126,10 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,6 +138,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +151,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * Managers.
+         * <p>The tag administrators.</p>
          */
         public Builder managers(java.util.List<String> managers) {
             String managersShrink = shrink(managers, "Managers", "json");
@@ -157,7 +161,7 @@ public class UpdateDataAssetTagRequest extends Request {
         }
 
         /**
-         * Values.
+         * <p>The tag values.</p>
          */
         public Builder values(java.util.List<String> values) {
             String valuesShrink = shrink(values, "Values", "json");

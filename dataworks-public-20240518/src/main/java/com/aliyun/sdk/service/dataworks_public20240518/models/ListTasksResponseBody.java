@@ -738,7 +738,14 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceMode.
+             * <p>The instance generation mode. Valid values:</p>
+             * <ul>
+             * <li>T+1</li>
+             * <li>Immediately</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>T+1</p>
              */
             public Builder instanceMode(String instanceMode) {
                 this.instanceMode = instanceMode;
@@ -769,6 +776,9 @@ public class ListTasksResponseBody extends TeaModel {
 
             /**
              * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL node</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -872,7 +882,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptParameters.
+             * <p>The list of script parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>para1=$bizdate para2=$[yyyymmdd]</p>
              */
             public Builder scriptParameters(String scriptParameters) {
                 this.scriptParameters = scriptParameters;

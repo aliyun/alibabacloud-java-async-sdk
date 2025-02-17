@@ -55,7 +55,10 @@ public class SetSuccessTaskInstancesResponseBody extends TeaModel {
         private java.util.Map<String, SuccessInfoValue> successInfo; 
 
         /**
-         * RequestId.
+         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

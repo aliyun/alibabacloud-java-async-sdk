@@ -55,7 +55,7 @@ public class UnTagDataAssetsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8754EE08-4AA2-5F77-ADD7-754DBBDA9F75</p>
@@ -66,7 +66,14 @@ public class UnTagDataAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

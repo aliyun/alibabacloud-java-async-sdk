@@ -55,7 +55,10 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OperationId.
+         * <p>The ID of the operation. You can use this field to query the results of the creation operation through the GetCreateWorkflowInstancesResult interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -63,7 +66,10 @@ public class CreateWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

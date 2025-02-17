@@ -67,7 +67,7 @@ public class ListRoutesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,7 +195,10 @@ public class ListRoutesResponseBody extends TeaModel {
             private String resourceId; 
 
             /**
-             * CreateTime.
+             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -200,7 +206,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationCidr.
+             * <p>Route destination CIDR</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder destinationCidr(String destinationCidr) {
                 this.destinationCidr = destinationCidr;
@@ -208,7 +217,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Route ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -216,7 +228,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkId.
+             * <p>Network Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder networkId(Long networkId) {
                 this.networkId = networkId;
@@ -224,7 +239,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Unique identifier of the resource group to which it belongs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -232,7 +250,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>Unique identifier of network resource</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-679XXXXXX</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -315,7 +336,10 @@ public class ListRoutesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -323,7 +347,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -331,7 +358,7 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteList.
+             * <p>The list of network resource routing information obtained.</p>
              */
             public Builder routeList(java.util.List<RouteList> routeList) {
                 this.routeList = routeList;
@@ -339,7 +366,10 @@ public class ListRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>All data entries</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

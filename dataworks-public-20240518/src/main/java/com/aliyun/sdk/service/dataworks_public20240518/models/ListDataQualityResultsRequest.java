@@ -233,7 +233,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * CreateTimeFrom.
+         * <p>The earliest time when data quality verification results are generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder createTimeFrom(Long createTimeFrom) {
             this.putQueryParameter("CreateTimeFrom", createTimeFrom);
@@ -242,7 +245,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * CreateTimeTo.
+         * <p>The latest generation time of data quality verification results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder createTimeTo(Long createTimeTo) {
             this.putQueryParameter("CreateTimeTo", createTimeTo);
@@ -251,7 +257,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * DataQualityEvaluationTaskId.
+         * <p>The ID of the data quality verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200001</p>
          */
         public Builder dataQualityEvaluationTaskId(Long dataQualityEvaluationTaskId) {
             this.putQueryParameter("DataQualityEvaluationTaskId", dataQualityEvaluationTaskId);
@@ -260,7 +269,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * DataQualityEvaluationTaskInstanceId.
+         * <p>The ID of the data quality verification task instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         public Builder dataQualityEvaluationTaskInstanceId(Long dataQualityEvaluationTaskInstanceId) {
             this.putQueryParameter("DataQualityEvaluationTaskInstanceId", dataQualityEvaluationTaskInstanceId);
@@ -269,7 +281,10 @@ public class ListDataQualityResultsRequest extends Request {
         }
 
         /**
-         * DataQualityRuleId.
+         * <p>The ID of the data quality rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder dataQualityRuleId(Long dataQualityRuleId) {
             this.putQueryParameter("DataQualityRuleId", dataQualityRuleId);

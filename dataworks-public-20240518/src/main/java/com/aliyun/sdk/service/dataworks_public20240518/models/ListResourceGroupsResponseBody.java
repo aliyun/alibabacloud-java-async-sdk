@@ -75,7 +75,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -147,7 +147,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String standard; 
 
             /**
-             * Amount.
+             * <p>Quantity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -155,7 +158,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Standard.
+             * <p>Specification details</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2CU</p>
              */
             public Builder standard(String standard) {
                 this.standard = standard;
@@ -346,7 +352,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AliyunResourceGroupId.
+             * <p>Alibaba Cloud Resource Group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2kqofrgXXXXX</p>
              */
             public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
                 this.aliyunResourceGroupId = aliyunResourceGroupId;
@@ -354,7 +363,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1727055811000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -362,7 +374,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The ID of the user who created the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11075500042XXXXX</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -370,7 +385,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVpcId.
+             * <p>Default VPC ID bound to a common resource group</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-m2et4f3oc8msfbccXXXXX</p>
              */
             public Builder defaultVpcId(String defaultVpcId) {
                 this.defaultVpcId = defaultVpcId;
@@ -378,7 +396,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVswicthId.
+             * <p>The default switch ID bound to the common resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf8usrhs7hjd9amsXXXXX</p>
              */
             public Builder defaultVswicthId(String defaultVswicthId) {
                 this.defaultVswicthId = defaultVswicthId;
@@ -386,7 +407,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Unique identifier of a resource group</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -394,7 +418,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>common_resource_group</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +429,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * OrderInstanceId.
+             * <p>The order instance ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c442b330-3b10-4584-959e-736e4edXXXXX</p>
              */
             public Builder orderInstanceId(String orderInstanceId) {
                 this.orderInstanceId = orderInstanceId;
@@ -421,7 +451,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks for resource groups</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create a common resource group for common tasks</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -429,7 +462,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource group. Valid values:</p>
+             * <p>The type of resource group. Valid values:</p>
              * <ul>
              * <li>CommonV2: serverless resource group</li>
              * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
@@ -446,7 +479,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>Resource Group specifications</p>
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -582,7 +615,10 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>All data entries</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

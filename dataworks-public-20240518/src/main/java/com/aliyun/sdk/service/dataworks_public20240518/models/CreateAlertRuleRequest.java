@@ -178,7 +178,7 @@ public class CreateAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the creator of the rule.</p>
+         * <p>The ID of the Alibaba Cloud account used by the owner of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -639,7 +639,10 @@ public class CreateAlertRuleRequest extends Request {
             private java.util.List<Long> streamTaskIds; 
 
             /**
-             * AutoRerunAlertEnabled.
+             * <p>Specifies whether to trigger an alert if a batch synchronization task is automatically rerun upon a failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoRerunAlertEnabled(Boolean autoRerunAlertEnabled) {
                 this.autoRerunAlertEnabled = autoRerunAlertEnabled;

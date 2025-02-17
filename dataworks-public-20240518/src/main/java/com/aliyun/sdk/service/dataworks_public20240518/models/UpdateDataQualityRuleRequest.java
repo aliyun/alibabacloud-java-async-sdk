@@ -270,6 +270,9 @@ public class UpdateDataQualityRuleRequest extends Request {
 
         /**
          * <p>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The table cannot be empty.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -388,7 +391,17 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+             * <ul>
+             * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+             * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+             * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.05</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -490,7 +503,17 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+             * <ul>
+             * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+             * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+             * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &lt;= 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -592,7 +615,17 @@ public class UpdateDataQualityRuleRequest extends Request {
             private String value; 
 
             /**
-             * Expression.
+             * <p>The threshold expression.</p>
+             * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+             * <ul>
+             * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
+             * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
+             * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+             * </ul>
+             * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$checkValue &gt; 0.01</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;

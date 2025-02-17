@@ -97,6 +97,7 @@ public class DeleteDataAssetTagRequest extends Request {
         }
 
         /**
+         * <p>The tag key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,7 @@ public class DeleteDataAssetTagRequest extends Request {
         }
 
         /**
-         * Values.
+         * <p>The tag values.</p>
          */
         public Builder values(java.util.List<String> values) {
             String valuesShrink = shrink(values, "Values", "json");

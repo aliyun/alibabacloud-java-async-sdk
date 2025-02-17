@@ -23,7 +23,6 @@ public class ListRoutesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long networkId;
 
     @com.aliyun.core.annotation.Query
@@ -35,6 +34,11 @@ public class ListRoutesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -44,6 +48,7 @@ public class ListRoutesRequest extends Request {
         this.networkId = builder.networkId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sortBy = builder.sortBy;
     }
 
@@ -89,6 +94,13 @@ public class ListRoutesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -100,6 +112,7 @@ public class ListRoutesRequest extends Request {
         private Long networkId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String sortBy; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListRoutesRequest extends Request {
             this.networkId = request.networkId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.sortBy = request.sortBy;
         } 
 
@@ -125,7 +139,7 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -137,7 +151,10 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +163,10 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +175,29 @@ public class ListRoutesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The ID of the resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+         * <ul>
+         * <li>Id (Desc/Asc): the route ID</li>
+         * <li>DestinationCidr (Desc/Asc): the destination CIDR block of the route</li>
+         * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+         * </ul>
+         * <p>Default value: CreateTime Asc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime Asc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

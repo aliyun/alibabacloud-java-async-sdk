@@ -82,7 +82,10 @@ public class GetDataQualityEvaluationTaskRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The ID of the data quality monitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1006455182</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

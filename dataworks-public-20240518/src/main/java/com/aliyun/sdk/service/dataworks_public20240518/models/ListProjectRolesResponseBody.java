@@ -159,7 +159,10 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the role in the DataWorks workspace.</p>
+             * <p>The name of the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Visitors</p>
              */
             public Builder name(String name) {
                 this.name = name;

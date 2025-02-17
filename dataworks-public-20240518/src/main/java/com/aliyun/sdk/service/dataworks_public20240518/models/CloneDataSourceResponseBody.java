@@ -66,7 +66,10 @@ public class CloneDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCD583B9-346B-5E75-82C1-4A7C192C48DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

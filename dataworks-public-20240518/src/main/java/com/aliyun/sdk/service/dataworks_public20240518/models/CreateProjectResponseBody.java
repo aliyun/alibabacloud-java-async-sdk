@@ -68,7 +68,10 @@ public class CreateProjectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -76,7 +79,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The workspace ID. Note: This parameter is deprecated and is replaced by the Id parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>

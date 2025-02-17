@@ -141,6 +141,7 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The data asset IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder dataAssetIds(java.util.List<String> dataAssetIds) {
@@ -151,6 +152,11 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The type of the data asset. Valid values:</p>
+         * <ul>
+         * <li>ACS::DataWorks::Table</li>
+         * <li>ACS::DataWorks::Task</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,14 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <ul>
+         * <li>Dev: development environment</li>
+         * <li>Prod: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -172,7 +185,10 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -181,6 +197,7 @@ public class UnTagDataAssetsRequest extends Request {
         }
 
         /**
+         * <p>The tags that you want to remove.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
@@ -244,6 +261,7 @@ public class UnTagDataAssetsRequest extends Request {
             private String value; 
 
             /**
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -255,7 +273,10 @@ public class UnTagDataAssetsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

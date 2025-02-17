@@ -55,7 +55,10 @@ public class BatchUpdateTasksResponseBody extends TeaModel {
         private java.util.Map<String, SuccessInfoValue> successInfo; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,7 @@ public class BatchUpdateTasksResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessInfo.
+         * <p>The result of the batch operation, which is in the MAP structure. The task ID serves as a key, and the result serves as a value.</p>
          */
         public Builder successInfo(java.util.Map<String, SuccessInfoValue> successInfo) {
             this.successInfo = successInfo;
