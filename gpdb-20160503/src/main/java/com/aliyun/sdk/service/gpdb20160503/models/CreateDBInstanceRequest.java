@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AINodeSpecInfos")
+    private java.util.List<AINodeSpecInfos> AINodeSpecInfos;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
@@ -200,6 +204,7 @@ public class CreateDBInstanceRequest extends Request {
 
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
+        this.AINodeSpecInfos = builder.AINodeSpecInfos;
         this.backupId = builder.backupId;
         this.clientToken = builder.clientToken;
         this.createSampleData = builder.createSampleData;
@@ -257,6 +262,13 @@ public class CreateDBInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return AINodeSpecInfos
+     */
+    public java.util.List<AINodeSpecInfos> getAINodeSpecInfos() {
+        return this.AINodeSpecInfos;
     }
 
     /**
@@ -568,6 +580,7 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
+        private java.util.List<AINodeSpecInfos> AINodeSpecInfos; 
         private String backupId; 
         private String clientToken; 
         private Boolean createSampleData; 
@@ -619,6 +632,7 @@ public class CreateDBInstanceRequest extends Request {
 
         private Builder(CreateDBInstanceRequest request) {
             super(request);
+            this.AINodeSpecInfos = request.AINodeSpecInfos;
             this.backupId = request.backupId;
             this.clientToken = request.clientToken;
             this.createSampleData = request.createSampleData;
@@ -664,6 +678,15 @@ public class CreateDBInstanceRequest extends Request {
             this.vectorConfigurationStatus = request.vectorConfigurationStatus;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AINodeSpecInfos.
+         */
+        public Builder AINodeSpecInfos(java.util.List<AINodeSpecInfos> AINodeSpecInfos) {
+            this.putQueryParameter("AINodeSpecInfos", AINodeSpecInfos);
+            this.AINodeSpecInfos = AINodeSpecInfos;
+            return this;
+        }
 
         /**
          * <p>Backup set ID.</p>
@@ -1406,6 +1429,73 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceRequest</p>
+     */
+    public static class AINodeSpecInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AINodeNum")
+        private String AINodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("AINodeSpec")
+        private String AINodeSpec;
+
+        private AINodeSpecInfos(Builder builder) {
+            this.AINodeNum = builder.AINodeNum;
+            this.AINodeSpec = builder.AINodeSpec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AINodeSpecInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return AINodeNum
+         */
+        public String getAINodeNum() {
+            return this.AINodeNum;
+        }
+
+        /**
+         * @return AINodeSpec
+         */
+        public String getAINodeSpec() {
+            return this.AINodeSpec;
+        }
+
+        public static final class Builder {
+            private String AINodeNum; 
+            private String AINodeSpec; 
+
+            /**
+             * AINodeNum.
+             */
+            public Builder AINodeNum(String AINodeNum) {
+                this.AINodeNum = AINodeNum;
+                return this;
+            }
+
+            /**
+             * AINodeSpec.
+             */
+            public Builder AINodeSpec(String AINodeSpec) {
+                this.AINodeSpec = AINodeSpec;
+                return this;
+            }
+
+            public AINodeSpecInfos build() {
+                return new AINodeSpecInfos(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateDBInstanceRequest} extends {@link TeaModel}
