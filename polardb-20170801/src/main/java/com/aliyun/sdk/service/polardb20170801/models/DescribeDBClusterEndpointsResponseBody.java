@@ -89,6 +89,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
+        @com.aliyun.core.annotation.NameInMap("DashboardUsed")
+        private Boolean dashboardUsed;
+
         @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
@@ -112,6 +115,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
 
         private AddressItems(Builder builder) {
             this.connectionString = builder.connectionString;
+            this.dashboardUsed = builder.dashboardUsed;
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.port = builder.port;
@@ -134,6 +138,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
          */
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        /**
+         * @return dashboardUsed
+         */
+        public Boolean getDashboardUsed() {
+            return this.dashboardUsed;
         }
 
         /**
@@ -187,6 +198,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String connectionString; 
+            private Boolean dashboardUsed; 
             private String IPAddress; 
             private String netType; 
             private String port; 
@@ -203,6 +215,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * DashboardUsed.
+             */
+            public Builder dashboardUsed(Boolean dashboardUsed) {
+                this.dashboardUsed = dashboardUsed;
                 return this;
             }
 

@@ -55,6 +55,10 @@ public class CreateAccountRequest extends Request {
     private String DBName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -84,6 +88,7 @@ public class CreateAccountRequest extends Request {
         this.clientToken = builder.clientToken;
         this.DBClusterId = builder.DBClusterId;
         this.DBName = builder.DBName;
+        this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.privForAllDB = builder.privForAllDB;
@@ -161,6 +166,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -204,6 +216,7 @@ public class CreateAccountRequest extends Request {
         private String clientToken; 
         private String DBClusterId; 
         private String DBName; 
+        private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String privForAllDB; 
@@ -224,6 +237,7 @@ public class CreateAccountRequest extends Request {
             this.clientToken = request.clientToken;
             this.DBClusterId = request.DBClusterId;
             this.DBName = request.DBName;
+            this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.privForAllDB = request.privForAllDB;
@@ -376,6 +390,15 @@ public class CreateAccountRequest extends Request {
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
             this.DBName = DBName;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
             return this;
         }
 

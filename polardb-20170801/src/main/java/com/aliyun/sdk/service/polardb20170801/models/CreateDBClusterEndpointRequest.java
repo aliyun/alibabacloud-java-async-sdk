@@ -480,6 +480,11 @@ public class CreateDBClusterEndpointRequest extends Request {
          * <li><strong>ON</strong></li>
          * <li><strong>OFF</strong></li>
          * </ul>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>on</li>
+         * <li>off</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>

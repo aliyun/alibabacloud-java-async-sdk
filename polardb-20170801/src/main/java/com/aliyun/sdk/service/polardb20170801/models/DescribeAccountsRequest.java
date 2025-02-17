@@ -27,6 +27,10 @@ public class DescribeAccountsRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -54,6 +58,7 @@ public class DescribeAccountsRequest extends Request {
         super(builder);
         this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
+        this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -87,6 +92,13 @@ public class DescribeAccountsRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     /**
@@ -134,6 +146,7 @@ public class DescribeAccountsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAccountsRequest, Builder> {
         private String accountName; 
         private String DBClusterId; 
+        private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -149,6 +162,7 @@ public class DescribeAccountsRequest extends Request {
             super(request);
             this.accountName = request.accountName;
             this.DBClusterId = request.DBClusterId;
+            this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -179,6 +193,15 @@ public class DescribeAccountsRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
             return this;
         }
 
