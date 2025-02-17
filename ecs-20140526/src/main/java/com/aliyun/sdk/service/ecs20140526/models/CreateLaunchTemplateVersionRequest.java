@@ -2208,6 +2208,9 @@ public class CreateLaunchTemplateVersionRequest extends Request {
      * <p>CreateLaunchTemplateVersionRequest</p>
      */
     public static class NetworkInterface extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
+        private Boolean deleteOnRelease;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -2233,6 +2236,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private String vSwitchId;
 
         private NetworkInterface(Builder builder) {
+            this.deleteOnRelease = builder.deleteOnRelease;
             this.description = builder.description;
             this.instanceType = builder.instanceType;
             this.networkInterfaceName = builder.networkInterfaceName;
@@ -2249,6 +2253,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
 
         public static NetworkInterface create() {
             return builder().build();
+        }
+
+        /**
+         * @return deleteOnRelease
+         */
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         /**
@@ -2308,6 +2319,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean deleteOnRelease; 
             private String description; 
             private String instanceType; 
             private String networkInterfaceName; 
@@ -2316,6 +2328,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String securityGroupId; 
             private java.util.List<String> securityGroupIds; 
             private String vSwitchId; 
+
+            /**
+             * DeleteOnRelease.
+             */
+            public Builder deleteOnRelease(Boolean deleteOnRelease) {
+                this.deleteOnRelease = deleteOnRelease;
+                return this;
+            }
 
             /**
              * <p>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>

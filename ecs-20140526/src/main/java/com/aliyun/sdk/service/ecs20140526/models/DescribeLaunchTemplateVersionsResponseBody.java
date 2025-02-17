@@ -573,6 +573,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      * <p>DescribeLaunchTemplateVersionsResponseBody</p>
      */
     public static class NetworkInterface extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
+        private Boolean deleteOnRelease;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -598,6 +601,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         private String vSwitchId;
 
         private NetworkInterface(Builder builder) {
+            this.deleteOnRelease = builder.deleteOnRelease;
             this.description = builder.description;
             this.instanceType = builder.instanceType;
             this.networkInterfaceName = builder.networkInterfaceName;
@@ -614,6 +618,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static NetworkInterface create() {
             return builder().build();
+        }
+
+        /**
+         * @return deleteOnRelease
+         */
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         /**
@@ -673,6 +684,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean deleteOnRelease; 
             private String description; 
             private String instanceType; 
             private String networkInterfaceName; 
@@ -681,6 +693,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String securityGroupId; 
             private SecurityGroupIds securityGroupIds; 
             private String vSwitchId; 
+
+            /**
+             * DeleteOnRelease.
+             */
+            public Builder deleteOnRelease(Boolean deleteOnRelease) {
+                this.deleteOnRelease = deleteOnRelease;
+                return this;
+            }
 
             /**
              * <p>The description of the secondary ENI.</p>
