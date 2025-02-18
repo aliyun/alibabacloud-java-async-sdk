@@ -82,7 +82,297 @@ public class GetMmsJobResponseBody extends TeaModel {
      *
      * <p>GetMmsJobResponseBody</p>
      */
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("columnMapping")
+        private java.util.Map<String, String> columnMapping;
+
+        @com.aliyun.core.annotation.NameInMap("enableVerification")
+        private Boolean enableVerification;
+
+        @com.aliyun.core.annotation.NameInMap("increment")
+        private Boolean increment;
+
+        @com.aliyun.core.annotation.NameInMap("others")
+        private java.util.Map<String, ?> others;
+
+        @com.aliyun.core.annotation.NameInMap("partitionFilters")
+        private java.util.Map<String, String> partitionFilters;
+
+        @com.aliyun.core.annotation.NameInMap("partitions")
+        private java.util.List<Long> partitions;
+
+        @com.aliyun.core.annotation.NameInMap("schemaOnly")
+        private Boolean schemaOnly;
+
+        @com.aliyun.core.annotation.NameInMap("tableBlackList")
+        private java.util.List<String> tableBlackList;
+
+        @com.aliyun.core.annotation.NameInMap("tableMapping")
+        private java.util.Map<String, String> tableMapping;
+
+        @com.aliyun.core.annotation.NameInMap("tableWhiteList")
+        private java.util.List<String> tableWhiteList;
+
+        @com.aliyun.core.annotation.NameInMap("tables")
+        private java.util.List<String> tables;
+
+        @com.aliyun.core.annotation.NameInMap("taskType")
+        private String taskType;
+
+        @com.aliyun.core.annotation.NameInMap("tunnelQuota")
+        private String tunnelQuota;
+
+        private Config(Builder builder) {
+            this.columnMapping = builder.columnMapping;
+            this.enableVerification = builder.enableVerification;
+            this.increment = builder.increment;
+            this.others = builder.others;
+            this.partitionFilters = builder.partitionFilters;
+            this.partitions = builder.partitions;
+            this.schemaOnly = builder.schemaOnly;
+            this.tableBlackList = builder.tableBlackList;
+            this.tableMapping = builder.tableMapping;
+            this.tableWhiteList = builder.tableWhiteList;
+            this.tables = builder.tables;
+            this.taskType = builder.taskType;
+            this.tunnelQuota = builder.tunnelQuota;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return columnMapping
+         */
+        public java.util.Map<String, String> getColumnMapping() {
+            return this.columnMapping;
+        }
+
+        /**
+         * @return enableVerification
+         */
+        public Boolean getEnableVerification() {
+            return this.enableVerification;
+        }
+
+        /**
+         * @return increment
+         */
+        public Boolean getIncrement() {
+            return this.increment;
+        }
+
+        /**
+         * @return others
+         */
+        public java.util.Map<String, ?> getOthers() {
+            return this.others;
+        }
+
+        /**
+         * @return partitionFilters
+         */
+        public java.util.Map<String, String> getPartitionFilters() {
+            return this.partitionFilters;
+        }
+
+        /**
+         * @return partitions
+         */
+        public java.util.List<Long> getPartitions() {
+            return this.partitions;
+        }
+
+        /**
+         * @return schemaOnly
+         */
+        public Boolean getSchemaOnly() {
+            return this.schemaOnly;
+        }
+
+        /**
+         * @return tableBlackList
+         */
+        public java.util.List<String> getTableBlackList() {
+            return this.tableBlackList;
+        }
+
+        /**
+         * @return tableMapping
+         */
+        public java.util.Map<String, String> getTableMapping() {
+            return this.tableMapping;
+        }
+
+        /**
+         * @return tableWhiteList
+         */
+        public java.util.List<String> getTableWhiteList() {
+            return this.tableWhiteList;
+        }
+
+        /**
+         * @return tables
+         */
+        public java.util.List<String> getTables() {
+            return this.tables;
+        }
+
+        /**
+         * @return taskType
+         */
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        /**
+         * @return tunnelQuota
+         */
+        public String getTunnelQuota() {
+            return this.tunnelQuota;
+        }
+
+        public static final class Builder {
+            private java.util.Map<String, String> columnMapping; 
+            private Boolean enableVerification; 
+            private Boolean increment; 
+            private java.util.Map<String, ?> others; 
+            private java.util.Map<String, String> partitionFilters; 
+            private java.util.List<Long> partitions; 
+            private Boolean schemaOnly; 
+            private java.util.List<String> tableBlackList; 
+            private java.util.Map<String, String> tableMapping; 
+            private java.util.List<String> tableWhiteList; 
+            private java.util.List<String> tables; 
+            private String taskType; 
+            private String tunnelQuota; 
+
+            /**
+             * columnMapping.
+             */
+            public Builder columnMapping(java.util.Map<String, String> columnMapping) {
+                this.columnMapping = columnMapping;
+                return this;
+            }
+
+            /**
+             * enableVerification.
+             */
+            public Builder enableVerification(Boolean enableVerification) {
+                this.enableVerification = enableVerification;
+                return this;
+            }
+
+            /**
+             * increment.
+             */
+            public Builder increment(Boolean increment) {
+                this.increment = increment;
+                return this;
+            }
+
+            /**
+             * others.
+             */
+            public Builder others(java.util.Map<String, ?> others) {
+                this.others = others;
+                return this;
+            }
+
+            /**
+             * partitionFilters.
+             */
+            public Builder partitionFilters(java.util.Map<String, String> partitionFilters) {
+                this.partitionFilters = partitionFilters;
+                return this;
+            }
+
+            /**
+             * partitions.
+             */
+            public Builder partitions(java.util.List<Long> partitions) {
+                this.partitions = partitions;
+                return this;
+            }
+
+            /**
+             * schemaOnly.
+             */
+            public Builder schemaOnly(Boolean schemaOnly) {
+                this.schemaOnly = schemaOnly;
+                return this;
+            }
+
+            /**
+             * tableBlackList.
+             */
+            public Builder tableBlackList(java.util.List<String> tableBlackList) {
+                this.tableBlackList = tableBlackList;
+                return this;
+            }
+
+            /**
+             * tableMapping.
+             */
+            public Builder tableMapping(java.util.Map<String, String> tableMapping) {
+                this.tableMapping = tableMapping;
+                return this;
+            }
+
+            /**
+             * tableWhiteList.
+             */
+            public Builder tableWhiteList(java.util.List<String> tableWhiteList) {
+                this.tableWhiteList = tableWhiteList;
+                return this;
+            }
+
+            /**
+             * tables.
+             */
+            public Builder tables(java.util.List<String> tables) {
+                this.tables = tables;
+                return this;
+            }
+
+            /**
+             * taskType.
+             */
+            public Builder taskType(String taskType) {
+                this.taskType = taskType;
+                return this;
+            }
+
+            /**
+             * tunnelQuota.
+             */
+            public Builder tunnelQuota(String tunnelQuota) {
+                this.tunnelQuota = tunnelQuota;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMmsJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMmsJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
@@ -94,6 +384,9 @@ public class GetMmsJobResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("dstSchemaName")
         private String dstSchemaName;
+
+        @com.aliyun.core.annotation.NameInMap("eta")
+        private String eta;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
@@ -129,10 +422,12 @@ public class GetMmsJobResponseBody extends TeaModel {
         private String type;
 
         private Data(Builder builder) {
+            this.config = builder.config;
             this.createTime = builder.createTime;
             this.dbId = builder.dbId;
             this.dstDbName = builder.dstDbName;
             this.dstSchemaName = builder.dstSchemaName;
+            this.eta = builder.eta;
             this.id = builder.id;
             this.name = builder.name;
             this.sourceId = builder.sourceId;
@@ -152,6 +447,13 @@ public class GetMmsJobResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
         }
 
         /**
@@ -180,6 +482,13 @@ public class GetMmsJobResponseBody extends TeaModel {
          */
         public String getDstSchemaName() {
             return this.dstSchemaName;
+        }
+
+        /**
+         * @return eta
+         */
+        public String getEta() {
+            return this.eta;
         }
 
         /**
@@ -260,10 +569,12 @@ public class GetMmsJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Config config; 
             private String createTime; 
             private Long dbId; 
             private String dstDbName; 
             private String dstSchemaName; 
+            private String eta; 
             private Long id; 
             private String name; 
             private Long sourceId; 
@@ -275,6 +586,14 @@ public class GetMmsJobResponseBody extends TeaModel {
             private Integer taskDone; 
             private Integer taskNum; 
             private String type; 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
 
             /**
              * createTime.
@@ -305,6 +624,14 @@ public class GetMmsJobResponseBody extends TeaModel {
              */
             public Builder dstSchemaName(String dstSchemaName) {
                 this.dstSchemaName = dstSchemaName;
+                return this;
+            }
+
+            /**
+             * eta.
+             */
+            public Builder eta(String eta) {
+                this.eta = eta;
                 return this;
             }
 

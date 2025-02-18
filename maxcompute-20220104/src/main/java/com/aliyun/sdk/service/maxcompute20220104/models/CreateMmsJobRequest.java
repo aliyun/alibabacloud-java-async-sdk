@@ -40,6 +40,10 @@ public class CreateMmsJobRequest extends Request {
     private Boolean enableVerification;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("eta")
+    private String eta;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("increment")
     private Boolean increment;
 
@@ -102,6 +106,7 @@ public class CreateMmsJobRequest extends Request {
         this.dstDbName = builder.dstDbName;
         this.dstSchemaName = builder.dstSchemaName;
         this.enableVerification = builder.enableVerification;
+        this.eta = builder.eta;
         this.increment = builder.increment;
         this.name = builder.name;
         this.others = builder.others;
@@ -164,6 +169,13 @@ public class CreateMmsJobRequest extends Request {
      */
     public Boolean getEnableVerification() {
         return this.enableVerification;
+    }
+
+    /**
+     * @return eta
+     */
+    public String getEta() {
+        return this.eta;
     }
 
     /**
@@ -270,6 +282,7 @@ public class CreateMmsJobRequest extends Request {
         private String dstDbName; 
         private String dstSchemaName; 
         private Boolean enableVerification; 
+        private String eta; 
         private Boolean increment; 
         private String name; 
         private java.util.Map<String, ?> others; 
@@ -296,6 +309,7 @@ public class CreateMmsJobRequest extends Request {
             this.dstDbName = request.dstDbName;
             this.dstSchemaName = request.dstSchemaName;
             this.enableVerification = request.enableVerification;
+            this.eta = request.eta;
             this.increment = request.increment;
             this.name = request.name;
             this.others = request.others;
@@ -355,6 +369,15 @@ public class CreateMmsJobRequest extends Request {
         public Builder enableVerification(Boolean enableVerification) {
             this.putBodyParameter("enableVerification", enableVerification);
             this.enableVerification = enableVerification;
+            return this;
+        }
+
+        /**
+         * eta.
+         */
+        public Builder eta(String eta) {
+            this.putBodyParameter("eta", eta);
+            this.eta = eta;
             return this;
         }
 

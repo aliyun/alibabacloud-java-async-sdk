@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetQuotaUsageResponseBody} extends {@link TeaModel}
+ * {@link ListJobMetricResponseBody} extends {@link TeaModel}
  *
- * <p>GetQuotaUsageResponseBody</p>
+ * <p>ListJobMetricResponseBody</p>
  */
-public class GetQuotaUsageResponseBody extends TeaModel {
+public class ListJobMetricResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
@@ -32,7 +32,7 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private GetQuotaUsageResponseBody(Builder builder) {
+    private ListJobMetricResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMsg = builder.errorMsg;
@@ -44,7 +44,7 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetQuotaUsageResponseBody create() {
+    public static ListJobMetricResponseBody create() {
         return builder().build();
     }
 
@@ -121,13 +121,13 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>HTTP status code.</p>
          * <ul>
-         * <li>1xx: informational response. The request is received and is being processed.</li>
-         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-         * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
-         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * <li>1xx: Informational response - Request received, processing continues.</li>
+         * <li>2xx: Success - The request has been successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: Redirection - Further action must be taken to complete the request.</li>
+         * <li>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</li>
+         * <li>5xx: Server error - The server failed to fulfill an apparently valid request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,107 +142,81 @@ public class GetQuotaUsageResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0b87b7a416652014358483492eea0b</p>
+         * <p>0be3e0aa16667684362147582e038f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetQuotaUsageResponseBody build() {
-            return new GetQuotaUsageResponseBody(this);
+        public ListJobMetricResponseBody build() {
+            return new ListJobMetricResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetQuotaUsageResponseBody} extends {@link TeaModel}
+     * {@link ListJobMetricResponseBody} extends {@link TeaModel}
      *
-     * <p>GetQuotaUsageResponseBody</p>
+     * <p>ListJobMetricResponseBody</p>
      */
-    public static class Plot extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("title")
-        private String title;
+    public static class Metrics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("metric")
+        private java.util.Map<String, String> metric;
 
-        @com.aliyun.core.annotation.NameInMap("type")
-        private String type;
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<java.util.List<Double>> values;
 
-        @com.aliyun.core.annotation.NameInMap("yAxis")
-        private java.util.List<String> yAxis;
-
-        private Plot(Builder builder) {
-            this.title = builder.title;
-            this.type = builder.type;
-            this.yAxis = builder.yAxis;
+        private Metrics(Builder builder) {
+            this.metric = builder.metric;
+            this.values = builder.values;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Plot create() {
+        public static Metrics create() {
             return builder().build();
         }
 
         /**
-         * @return title
+         * @return metric
          */
-        public String getTitle() {
-            return this.title;
+        public java.util.Map<String, String> getMetric() {
+            return this.metric;
         }
 
         /**
-         * @return type
+         * @return values
          */
-        public String getType() {
-            return this.type;
-        }
-
-        /**
-         * @return yAxis
-         */
-        public java.util.List<String> getYAxis() {
-            return this.yAxis;
+        public java.util.List<java.util.List<Double>> getValues() {
+            return this.values;
         }
 
         public static final class Builder {
-            private String title; 
-            private String type; 
-            private java.util.List<String> yAxis; 
+            private java.util.Map<String, String> metric; 
+            private java.util.List<java.util.List<Double>> values; 
 
             /**
-             * <p>The title of the chart.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>request</p>
+             * <p>Metric related information.</p>
              */
-            public Builder title(String title) {
-                this.title = title;
+            public Builder metric(java.util.Map<String, String> metric) {
+                this.metric = metric;
                 return this;
             }
 
             /**
-             * <p>The type of the chart.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>request</p>
+             * <p>Metric values information.</p>
              */
-            public Builder type(String type) {
-                this.type = type;
+            public Builder values(java.util.List<java.util.List<Double>> values) {
+                this.values = values;
                 return this;
             }
 
-            /**
-             * <p>The data metric field.</p>
-             */
-            public Builder yAxis(java.util.List<String> yAxis) {
-                this.yAxis = yAxis;
-                return this;
-            }
-
-            public Plot build() {
-                return new Plot(this);
+            public Metrics build() {
+                return new Metrics(this);
             } 
 
         } 
@@ -250,20 +224,28 @@ public class GetQuotaUsageResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetQuotaUsageResponseBody} extends {@link TeaModel}
+     * {@link ListJobMetricResponseBody} extends {@link TeaModel}
      *
-     * <p>GetQuotaUsageResponseBody</p>
+     * <p>ListJobMetricResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("metrics")
-        private java.util.Map<String, ?> metrics;
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
 
-        @com.aliyun.core.annotation.NameInMap("plot")
-        private java.util.List<Plot> plot;
+        @com.aliyun.core.annotation.NameInMap("metrics")
+        private java.util.List<Metrics> metrics;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("period")
+        private Long period;
 
         private Data(Builder builder) {
+            this.category = builder.category;
             this.metrics = builder.metrics;
-            this.plot = builder.plot;
+            this.name = builder.name;
+            this.period = builder.period;
         }
 
         public static Builder builder() {
@@ -275,36 +257,77 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
          * @return metrics
          */
-        public java.util.Map<String, ?> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
         /**
-         * @return plot
+         * @return name
          */
-        public java.util.List<Plot> getPlot() {
-            return this.plot;
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
         }
 
         public static final class Builder {
-            private java.util.Map<String, ?> metrics; 
-            private java.util.List<Plot> plot; 
+            private String category; 
+            private java.util.List<Metrics> metrics; 
+            private String name; 
+            private Long period; 
 
             /**
-             * <p>The metric results.</p>
+             * <p>The category of the metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job</p>
              */
-            public Builder metrics(java.util.Map<String, ?> metrics) {
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * <p>Metric details.</p>
+             */
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
 
             /**
-             * <p>The information about the chart.</p>
+             * <p>The name of observation metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>num</p>
              */
-            public Builder plot(java.util.List<Plot> plot) {
-                this.plot = plot;
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The monitoring statistical period.Unit:Second(s).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
+             */
+            public Builder period(Long period) {
+                this.period = period;
                 return this;
             }
 

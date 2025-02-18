@@ -26,10 +26,15 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List<UpdateTunnelQuotaTimerRequestBody> body;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("timezone")
+    private String timezone;
+
     private UpdateTunnelQuotaTimerRequest(Builder builder) {
         super(builder);
         this.nickname = builder.nickname;
         this.body = builder.body;
+        this.timezone = builder.timezone;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         return this.body;
     }
 
+    /**
+     * @return timezone
+     */
+    public String getTimezone() {
+        return this.timezone;
+    }
+
     public static final class Builder extends Request.Builder<UpdateTunnelQuotaTimerRequest, Builder> {
         private String nickname; 
         private java.util.List<UpdateTunnelQuotaTimerRequestBody> body; 
+        private String timezone; 
 
         private Builder() {
             super();
@@ -71,9 +84,11 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             super(request);
             this.nickname = request.nickname;
             this.body = request.body;
+            this.timezone = request.timezone;
         } 
 
         /**
+         * <p>The alias of the level-1 Tunnel quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,11 +101,20 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.List<UpdateTunnelQuotaTimerRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
+            return this;
+        }
+
+        /**
+         * timezone.
+         */
+        public Builder timezone(String timezone) {
+            this.putQueryParameter("timezone", timezone);
+            this.timezone = timezone;
             return this;
         }
 
@@ -146,7 +170,10 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             private Long slotNum; 
 
             /**
-             * elasticReservedSlotNum.
+             * <p>The number of elastically reserved slots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder elasticReservedSlotNum(Long elasticReservedSlotNum) {
                 this.elasticReservedSlotNum = elasticReservedSlotNum;
@@ -154,7 +181,10 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             }
 
             /**
-             * slotNum.
+             * <p>The number of reserved slots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder slotNum(Long slotNum) {
                 this.slotNum = slotNum;
@@ -181,16 +211,12 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
-        @com.aliyun.core.annotation.NameInMap("timezone")
-        private String timezone;
-
         @com.aliyun.core.annotation.NameInMap("tunnelQuotaParameter")
         private TunnelQuotaParameter tunnelQuotaParameter;
 
         private UpdateTunnelQuotaTimerRequestBody(Builder builder) {
             this.beginTime = builder.beginTime;
             this.endTime = builder.endTime;
-            this.timezone = builder.timezone;
             this.tunnelQuotaParameter = builder.tunnelQuotaParameter;
         }
 
@@ -217,13 +243,6 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         }
 
         /**
-         * @return timezone
-         */
-        public String getTimezone() {
-            return this.timezone;
-        }
-
-        /**
          * @return tunnelQuotaParameter
          */
         public TunnelQuotaParameter getTunnelQuotaParameter() {
@@ -233,11 +252,13 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         public static final class Builder {
             private String beginTime; 
             private String endTime; 
-            private String timezone; 
             private TunnelQuotaParameter tunnelQuotaParameter; 
 
             /**
-             * beginTime.
+             * <p>The start time of the time-specific configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -245,7 +266,10 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the time-specific configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -253,15 +277,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             }
 
             /**
-             * timezone.
-             */
-            public Builder timezone(String timezone) {
-                this.timezone = timezone;
-                return this;
-            }
-
-            /**
-             * tunnelQuotaParameter.
+             * <p>The parameters for the time-specific configuration.</p>
              */
             public Builder tunnelQuotaParameter(TunnelQuotaParameter tunnelQuotaParameter) {
                 this.tunnelQuotaParameter = tunnelQuotaParameter;

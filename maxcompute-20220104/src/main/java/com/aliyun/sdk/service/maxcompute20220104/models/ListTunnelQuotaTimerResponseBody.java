@@ -91,7 +91,7 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OBJECT_NOT_EXIST</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -107,7 +110,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This object does not exist.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -115,7 +121,17 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>1xx: informational response. The request is received and is being processed.</li>
+         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+         * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
+         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -123,7 +139,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0be3e0b716671885050924814e3623</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +200,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             private Long slotNum; 
 
             /**
-             * elasticReservedSlotNum.
+             * <p>The number of elastically reserved slots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder elasticReservedSlotNum(Long elasticReservedSlotNum) {
                 this.elasticReservedSlotNum = elasticReservedSlotNum;
@@ -189,7 +211,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             }
 
             /**
-             * slotNum.
+             * <p>The number of reserved slots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder slotNum(Long slotNum) {
                 this.slotNum = slotNum;
@@ -272,7 +297,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             private TunnelQuotaParameter tunnelQuotaParameter; 
 
             /**
-             * beginTime.
+             * <p>The start time of the time-specific configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -280,7 +308,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the time-specific configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -288,7 +319,10 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             }
 
             /**
-             * timezone.
+             * <p>The time zone property for the time-specific configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -296,7 +330,7 @@ public class ListTunnelQuotaTimerResponseBody extends TeaModel {
             }
 
             /**
-             * tunnelQuotaParameter.
+             * <p>The parameters for the time-specific configuration.</p>
              */
             public Builder tunnelQuotaParameter(TunnelQuotaParameter tunnelQuotaParameter) {
                 this.tunnelQuotaParameter = tunnelQuotaParameter;

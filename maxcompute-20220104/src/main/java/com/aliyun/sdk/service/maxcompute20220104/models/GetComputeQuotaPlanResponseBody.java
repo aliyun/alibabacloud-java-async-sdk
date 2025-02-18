@@ -678,7 +678,7 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID。</p>
+             * <p>Region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1147,7 +1147,7 @@ public class GetComputeQuotaPlanResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>ture/false</p>
+             * <p>true/false</p>
              */
             public Builder isEffective(Boolean isEffective) {
                 this.isEffective = isEffective;

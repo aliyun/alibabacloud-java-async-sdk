@@ -215,6 +215,7 @@ public class ListStorageTablesInfoRequest extends Request {
         } 
 
         /**
+         * <p>The name of the MaxCompute project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +228,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * ascOrder.
+         * <p>Specifies whether to sort data in ascending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ascOrder(Boolean ascOrder) {
             this.putQueryParameter("ascOrder", ascOrder);
@@ -236,6 +240,7 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
+         * <p>The date on which the statistics are collected, in days. Set this parameter to a value in the <code>YYYYMMdd</code> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +253,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * orderColumn.
+         * <p>The sorting column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalFrequency</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("orderColumn", orderColumn);
@@ -257,7 +265,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -266,7 +277,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -275,7 +289,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * recentDays.
+         * <p>The number of recent days for comparison.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recentDays(Integer recentDays) {
             this.putQueryParameter("recentDays", recentDays);
@@ -284,7 +301,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -293,7 +313,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * schema.
+         * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("schema", schema);
@@ -302,7 +325,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * tablePrefix.
+         * <p>The name of the table that you want to use for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bank</p>
          */
         public Builder tablePrefix(String tablePrefix) {
             this.putQueryParameter("tablePrefix", tablePrefix);
@@ -311,7 +337,10 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * <p>The ID of the tenant. You can log on to the MaxCompute console, and choose <strong>Tenants</strong> &gt; <strong>Tenant Property</strong> from the left-side navigation pane to view the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28074710977****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
@@ -320,7 +349,7 @@ public class ListStorageTablesInfoRequest extends Request {
         }
 
         /**
-         * types.
+         * <p>The storage types.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "types", "simple");

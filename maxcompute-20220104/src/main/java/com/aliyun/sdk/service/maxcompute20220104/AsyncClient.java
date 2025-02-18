@@ -256,6 +256,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<KillJobsResponse> killJobs(KillJobsRequest request);
 
     /**
+     * @param request the request parameters of ListComputeMetricsByInstance  ListComputeMetricsByInstanceRequest
+     * @return ListComputeMetricsByInstanceResponse
+     */
+    CompletableFuture<ListComputeMetricsByInstanceResponse> listComputeMetricsByInstance(ListComputeMetricsByInstanceRequest request);
+
+    /**
      * @param request the request parameters of ListComputeQuotaPlan  ListComputeQuotaPlanRequest
      * @return ListComputeQuotaPlanResponse
      */
@@ -272,6 +278,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListJobInfosResponse
      */
     CompletableFuture<ListJobInfosResponse> listJobInfos(ListJobInfosRequest request);
+
+    /**
+     * @param request the request parameters of ListJobMetric  ListJobMetricRequest
+     * @return ListJobMetricResponse
+     */
+    CompletableFuture<ListJobMetricResponse> listJobMetric(ListJobMetricRequest request);
+
+    /**
+     * @param request the request parameters of ListJobSnapshotInfos  ListJobSnapshotInfosRequest
+     * @return ListJobSnapshotInfosResponse
+     */
+    CompletableFuture<ListJobSnapshotInfosResponse> listJobSnapshotInfos(ListJobSnapshotInfosRequest request);
 
     /**
      * @param request the request parameters of ListMmsDataSources  ListMmsDataSourcesRequest
@@ -486,6 +504,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateQuotaScheduleResponse> updateQuotaSchedule(UpdateQuotaScheduleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</p>
+     * 
      * @param request the request parameters of UpdateTunnelQuotaTimer  UpdateTunnelQuotaTimerRequest
      * @return UpdateTunnelQuotaTimerResponse
      */

@@ -91,7 +91,7 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -99,7 +99,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OBJECT_NOT_EXIST</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -107,7 +110,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This object does not exist.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -115,7 +121,17 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li>1xx: informational response. The request is received and is being processed.</li>
+         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+         * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -123,7 +139,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc12e6a16679892465424670db3eb</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -433,7 +452,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             private String totalStorageUnit; 
 
             /**
-             * date.
+             * <p>The date on which the statistics are collected. This value is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241205</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -441,7 +463,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * isPartitioned.
+             * <p>Indicates whether the table is a partitioned table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPartitioned(Boolean isPartitioned) {
                 this.isPartitioned = isPartitioned;
@@ -449,7 +474,13 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lastAccessTime.
+             * <p>The time when the table was last accessed. This value is returned when the table is a non-partitioned table.</p>
+             * <blockquote>
+             * <p> The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1694589365</p>
              */
             public Builder lastAccessTime(Long lastAccessTime) {
                 this.lastAccessTime = lastAccessTime;
@@ -457,7 +488,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * longTermStorage.
+             * <p>The storage usage at the long-term storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder longTermStorage(Double longTermStorage) {
                 this.longTermStorage = longTermStorage;
@@ -465,7 +499,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * longTermStorageFileCount.
+             * <p>The number of long-term storage files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder longTermStorageFileCount(Long longTermStorageFileCount) {
                 this.longTermStorageFileCount = longTermStorageFileCount;
@@ -473,7 +510,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * longTermStorageUnit.
+             * <p>The unit of the storage usage at the long-term storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B</p>
              */
             public Builder longTermStorageUnit(String longTermStorageUnit) {
                 this.longTermStorageUnit = longTermStorageUnit;
@@ -481,7 +521,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lowFreqStorage.
+             * <p>The storage usage at the low-frequency tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowFreqStorage(Double lowFreqStorage) {
                 this.lowFreqStorage = lowFreqStorage;
@@ -489,7 +532,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lowFreqStorageFileCount.
+             * <p>The number of low-frequency storage files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowFreqStorageFileCount(Long lowFreqStorageFileCount) {
                 this.lowFreqStorageFileCount = lowFreqStorageFileCount;
@@ -497,7 +543,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lowFreqStorageUnit.
+             * <p>The unit of the storage usage at the low-frequency storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B</p>
              */
             public Builder lowFreqStorageUnit(String lowFreqStorageUnit) {
                 this.lowFreqStorageUnit = lowFreqStorageUnit;
@@ -505,7 +554,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -513,7 +565,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The change rate of the total storage usage compared with that of the recent {$recentDays} days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rate(Double rate) {
                 this.rate = rate;
@@ -521,7 +576,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * schemaName.
+             * <p>The schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -529,7 +587,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * standardStorage.
+             * <p>The storage usage at the standard storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder standardStorage(Double standardStorage) {
                 this.standardStorage = standardStorage;
@@ -537,7 +598,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * standardStorageFileCount.
+             * <p>The number of standard storage files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder standardStorageFileCount(Long standardStorageFileCount) {
                 this.standardStorageFileCount = standardStorageFileCount;
@@ -545,7 +609,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * standardStorageUnit.
+             * <p>The unit of the storage usage at the standard storage tier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KB</p>
              */
             public Builder standardStorageUnit(String standardStorageUnit) {
                 this.standardStorageUnit = standardStorageUnit;
@@ -553,7 +620,16 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * storageType.
+             * <p>The table storage type.</p>
+             * <ul>
+             * <li>standard</li>
+             * <li>lowfrequency</li>
+             * <li>longterm</li>
+             * <li>unknown: This value is returned when the table is a partitioned table. You can call the ListStoragePartitionsInfo operation to query the storage type of each partition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -561,7 +637,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * tableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bank_data</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -569,7 +648,24 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalFrequency.
+             * <p>The access frequency.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>Access behaviors include:</p>
+             * </li>
+             * <li><p>The table is used as the input table of an SQL task.</p>
+             * </li>
+             * <li><p>The table is downloaded by Tunnel.</p>
+             * </li>
+             * <li><p>The table is read by calling the Storage API. The partition granularity of the partitioned table is not available. Each time an access operation is performed, the access frequency is incremented by 1.</p>
+             * </li>
+             * <li><p>The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the access frequency cannot be collected.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalFrequency(Long totalFrequency) {
                 this.totalFrequency = totalFrequency;
@@ -577,7 +673,13 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalInputAmount.
+             * <p>The total amount of accessed data.</p>
+             * <blockquote>
+             * <p> The amount of data that is read by all access behaviors.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalInputAmount(Double totalInputAmount) {
                 this.totalInputAmount = totalInputAmount;
@@ -585,7 +687,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalInputAmountUnit.
+             * <p>The unit of the total amount of accessed data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder totalInputAmountUnit(String totalInputAmountUnit) {
                 this.totalInputAmountUnit = totalInputAmountUnit;
@@ -593,7 +698,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalStorage.
+             * <p>The total storage usage. For a partitioned table, this parameter indicates the sum of the storage usage of all partitions. If the storage types of partitions are different, the value is the sum of the storage usage of each storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder totalStorage(Double totalStorage) {
                 this.totalStorage = totalStorage;
@@ -601,7 +709,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalStorageFileCount.
+             * <p>The total number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalStorageFileCount(Long totalStorageFileCount) {
                 this.totalStorageFileCount = totalStorageFileCount;
@@ -609,7 +720,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalStorageUnit.
+             * <p>The unit of storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KB</p>
              */
             public Builder totalStorageUnit(String totalStorageUnit) {
                 this.totalStorageUnit = totalStorageUnit;
@@ -704,7 +818,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * date.
+             * <p>The date on which the statistics are collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241205</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -712,7 +829,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -720,7 +840,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -728,7 +851,7 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * storageTableInfoList.
+             * <p>The table storage information.</p>
              */
             public Builder storageTableInfoList(java.util.List<StorageTableInfoList> storageTableInfoList) {
                 this.storageTableInfoList = storageTableInfoList;
@@ -736,7 +859,10 @@ public class ListStorageTablesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

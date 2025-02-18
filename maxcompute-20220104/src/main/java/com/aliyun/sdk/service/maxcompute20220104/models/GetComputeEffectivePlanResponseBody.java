@@ -883,7 +883,7 @@ public class GetComputeEffectivePlanResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>ture/false</p>
+             * <p>true/false</p>
              */
             public Builder isEffective(Boolean isEffective) {
                 this.isEffective = isEffective;

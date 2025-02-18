@@ -161,6 +161,180 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
      *
      * <p>ListComputeQuotaPlanResponseBody</p>
      */
+    public static class Parameter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("elasticReservedCU")
+        private Long elasticReservedCU;
+
+        @com.aliyun.core.annotation.NameInMap("maxCU")
+        private Long maxCU;
+
+        @com.aliyun.core.annotation.NameInMap("minCU")
+        private Long minCU;
+
+        private Parameter(Builder builder) {
+            this.elasticReservedCU = builder.elasticReservedCU;
+            this.maxCU = builder.maxCU;
+            this.minCU = builder.minCU;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elasticReservedCU
+         */
+        public Long getElasticReservedCU() {
+            return this.elasticReservedCU;
+        }
+
+        /**
+         * @return maxCU
+         */
+        public Long getMaxCU() {
+            return this.maxCU;
+        }
+
+        /**
+         * @return minCU
+         */
+        public Long getMinCU() {
+            return this.minCU;
+        }
+
+        public static final class Builder {
+            private Long elasticReservedCU; 
+            private Long maxCU; 
+            private Long minCU; 
+
+            /**
+             * elasticReservedCU.
+             */
+            public Builder elasticReservedCU(Long elasticReservedCU) {
+                this.elasticReservedCU = elasticReservedCU;
+                return this;
+            }
+
+            /**
+             * maxCU.
+             */
+            public Builder maxCU(Long maxCU) {
+                this.maxCU = maxCU;
+                return this;
+            }
+
+            /**
+             * minCU.
+             */
+            public Builder minCU(Long minCU) {
+                this.minCU = minCU;
+                return this;
+            }
+
+            public Parameter build() {
+                return new Parameter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListComputeQuotaPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComputeQuotaPlanResponseBody</p>
+     */
+    public static class SubQuotaInfoListParameter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("elasticReservedCU")
+        private Long elasticReservedCU;
+
+        @com.aliyun.core.annotation.NameInMap("maxCU")
+        private Long maxCU;
+
+        @com.aliyun.core.annotation.NameInMap("minCU")
+        private Long minCU;
+
+        private SubQuotaInfoListParameter(Builder builder) {
+            this.elasticReservedCU = builder.elasticReservedCU;
+            this.maxCU = builder.maxCU;
+            this.minCU = builder.minCU;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubQuotaInfoListParameter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return elasticReservedCU
+         */
+        public Long getElasticReservedCU() {
+            return this.elasticReservedCU;
+        }
+
+        /**
+         * @return maxCU
+         */
+        public Long getMaxCU() {
+            return this.maxCU;
+        }
+
+        /**
+         * @return minCU
+         */
+        public Long getMinCU() {
+            return this.minCU;
+        }
+
+        public static final class Builder {
+            private Long elasticReservedCU; 
+            private Long maxCU; 
+            private Long minCU; 
+
+            /**
+             * elasticReservedCU.
+             */
+            public Builder elasticReservedCU(Long elasticReservedCU) {
+                this.elasticReservedCU = elasticReservedCU;
+                return this;
+            }
+
+            /**
+             * maxCU.
+             */
+            public Builder maxCU(Long maxCU) {
+                this.maxCU = maxCU;
+                return this;
+            }
+
+            /**
+             * minCU.
+             */
+            public Builder minCU(Long minCU) {
+                this.minCU = minCU;
+                return this;
+            }
+
+            public SubQuotaInfoListParameter build() {
+                return new SubQuotaInfoListParameter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListComputeQuotaPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListComputeQuotaPlanResponseBody</p>
+     */
     public static class SubQuotaInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
@@ -181,7 +355,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map<String, ?> parameter;
+        private SubQuotaInfoListParameter parameter;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -266,7 +440,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map<String, ?> getParameter() {
+        public SubQuotaInfoListParameter getParameter() {
             return this.parameter;
         }
 
@@ -312,7 +486,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map<String, ?> parameter; 
+            private SubQuotaInfoListParameter parameter; 
             private String regionId; 
             private String status; 
             private String tenantId; 
@@ -399,7 +573,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
              *   &quot;schedulerType&quot;: &quot;Fifo&quot;
              * }</p>
              */
-            public Builder parameter(java.util.Map<String, ?> parameter) {
+            public Builder parameter(SubQuotaInfoListParameter parameter) {
                 this.parameter = parameter;
                 return this;
             }
@@ -492,7 +666,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("parameter")
-        private java.util.Map<String, ?> parameter;
+        private Parameter parameter;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -581,7 +755,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.Map<String, ?> getParameter() {
+        public Parameter getParameter() {
             return this.parameter;
         }
 
@@ -634,7 +808,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String nickName; 
-            private java.util.Map<String, ?> parameter; 
+            private Parameter parameter; 
             private String regionId; 
             private String status; 
             private java.util.List<SubQuotaInfoList> subQuotaInfoList; 
@@ -722,7 +896,7 @@ public class ListComputeQuotaPlanResponseBody extends TeaModel {
              *   &quot;schedulerType&quot;: &quot;Fifo&quot;
              * }</p>
              */
-            public Builder parameter(java.util.Map<String, ?> parameter) {
+            public Builder parameter(Parameter parameter) {
                 this.parameter = parameter;
                 return this;
             }

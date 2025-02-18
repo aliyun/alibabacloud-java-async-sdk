@@ -787,6 +787,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListComputeMetricsByInstance  ListComputeMetricsByInstanceRequest
+     * @return ListComputeMetricsByInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ListComputeMetricsByInstanceResponse> listComputeMetricsByInstance(ListComputeMetricsByInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListComputeMetricsByInstance").setMethod(HttpMethod.POST).setPathRegex("/api/v1/computeMetrics/listByInstance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListComputeMetricsByInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListComputeMetricsByInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListComputeQuotaPlan  ListComputeQuotaPlanRequest
      * @return ListComputeQuotaPlanResponse
      */
@@ -835,6 +853,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListJobInfosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobMetric  ListJobMetricRequest
+     * @return ListJobMetricResponse
+     */
+    @Override
+    public CompletableFuture<ListJobMetricResponse> listJobMetric(ListJobMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobMetric").setMethod(HttpMethod.POST).setPathRegex("/api/v1/jobs/metric").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobMetricResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobSnapshotInfos  ListJobSnapshotInfosRequest
+     * @return ListJobSnapshotInfosResponse
+     */
+    @Override
+    public CompletableFuture<ListJobSnapshotInfosResponse> listJobSnapshotInfos(ListJobSnapshotInfosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListJobSnapshotInfos").setMethod(HttpMethod.POST).setPathRegex("/api/v1/jobs/snapshot").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobSnapshotInfosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobSnapshotInfosResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1461,6 +1515,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</p>
+     * 
      * @param request the request parameters of UpdateTunnelQuotaTimer  UpdateTunnelQuotaTimerRequest
      * @return UpdateTunnelQuotaTimerResponse
      */

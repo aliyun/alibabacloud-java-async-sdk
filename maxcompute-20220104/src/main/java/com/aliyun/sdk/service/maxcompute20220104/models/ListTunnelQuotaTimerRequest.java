@@ -60,6 +60,7 @@ public class ListTunnelQuotaTimerRequest extends Request {
         } 
 
         /**
+         * <p>The alias of the level-1 Tunnel quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

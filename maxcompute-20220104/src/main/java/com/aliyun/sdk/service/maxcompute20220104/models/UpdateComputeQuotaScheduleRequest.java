@@ -26,10 +26,15 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List<UpdateComputeQuotaScheduleRequestBody> body;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scheduleTimezone")
+    private String scheduleTimezone;
+
     private UpdateComputeQuotaScheduleRequest(Builder builder) {
         super(builder);
         this.nickname = builder.nickname;
         this.body = builder.body;
+        this.scheduleTimezone = builder.scheduleTimezone;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         return this.body;
     }
 
+    /**
+     * @return scheduleTimezone
+     */
+    public String getScheduleTimezone() {
+        return this.scheduleTimezone;
+    }
+
     public static final class Builder extends Request.Builder<UpdateComputeQuotaScheduleRequest, Builder> {
         private String nickname; 
         private java.util.List<UpdateComputeQuotaScheduleRequestBody> body; 
+        private String scheduleTimezone; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
             super(request);
             this.nickname = request.nickname;
             this.body = request.body;
+            this.scheduleTimezone = request.scheduleTimezone;
         } 
 
         /**
@@ -92,6 +106,15 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         public Builder body(java.util.List<UpdateComputeQuotaScheduleRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
+            return this;
+        }
+
+        /**
+         * scheduleTimezone.
+         */
+        public Builder scheduleTimezone(String scheduleTimezone) {
+            this.putQueryParameter("scheduleTimezone", scheduleTimezone);
+            this.scheduleTimezone = scheduleTimezone;
             return this;
         }
 
@@ -168,9 +191,6 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String plan;
 
-        @com.aliyun.core.annotation.NameInMap("timezone")
-        private String timezone;
-
         @com.aliyun.core.annotation.NameInMap("type")
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
@@ -178,7 +198,6 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         private UpdateComputeQuotaScheduleRequestBody(Builder builder) {
             this.condition = builder.condition;
             this.plan = builder.plan;
-            this.timezone = builder.timezone;
             this.type = builder.type;
         }
 
@@ -205,13 +224,6 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         }
 
         /**
-         * @return timezone
-         */
-        public String getTimezone() {
-            return this.timezone;
-        }
-
-        /**
          * @return type
          */
         public String getType() {
@@ -221,7 +233,6 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         public static final class Builder {
             private Condition condition; 
             private String plan; 
-            private String timezone; 
             private String type; 
 
             /**
@@ -241,20 +252,6 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
              */
             public Builder plan(String plan) {
                 this.plan = plan;
-                return this;
-            }
-
-            /**
-             * <p>Time zone.</p>
-             * <blockquote>
-             * <p>Default Key: UTC+8</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>UTC+8</p>
-             */
-            public Builder timezone(String timezone) {
-                this.timezone = timezone;
                 return this;
             }
 
