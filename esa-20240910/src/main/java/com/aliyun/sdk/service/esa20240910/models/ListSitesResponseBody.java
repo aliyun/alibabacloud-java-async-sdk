@@ -173,6 +173,9 @@ public class ListSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameServerList")
         private String nameServerList;
 
+        @com.aliyun.core.annotation.NameInMap("OfflineReason")
+        private String offlineReason;
+
         @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
@@ -210,6 +213,7 @@ public class ListSitesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
             this.nameServerList = builder.nameServerList;
+            this.offlineReason = builder.offlineReason;
             this.planName = builder.planName;
             this.planSpecName = builder.planSpecName;
             this.resourceGroupId = builder.resourceGroupId;
@@ -270,6 +274,13 @@ public class ListSitesResponseBody extends TeaModel {
          */
         public String getNameServerList() {
             return this.nameServerList;
+        }
+
+        /**
+         * @return offlineReason
+         */
+        public String getOfflineReason() {
+            return this.offlineReason;
         }
 
         /**
@@ -349,6 +360,7 @@ public class ListSitesResponseBody extends TeaModel {
             private String createTime; 
             private String instanceId; 
             private String nameServerList; 
+            private String offlineReason; 
             private String planName; 
             private String planSpecName; 
             private String resourceGroupId; 
@@ -432,6 +444,14 @@ public class ListSitesResponseBody extends TeaModel {
              */
             public Builder nameServerList(String nameServerList) {
                 this.nameServerList = nameServerList;
+                return this;
+            }
+
+            /**
+             * OfflineReason.
+             */
+            public Builder offlineReason(String offlineReason) {
+                this.offlineReason = offlineReason;
                 return this;
             }
 
