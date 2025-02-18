@@ -237,6 +237,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindInfo")
         private BindInfo bindInfo;
 
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -245,6 +248,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MainEthPublicIp")
         private String mainEthPublicIp;
+
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
 
         @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
@@ -256,9 +262,11 @@ public class ListAppInstancesResponseBody extends TeaModel {
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceId = builder.appInstanceId;
             this.bindInfo = builder.bindInfo;
+            this.chargeType = builder.chargeType;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.mainEthPublicIp = builder.mainEthPublicIp;
+            this.nodeId = builder.nodeId;
             this.sessionStatus = builder.sessionStatus;
             this.status = builder.status;
         }
@@ -293,6 +301,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -314,6 +329,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
          * @return sessionStatus
          */
         public String getSessionStatus() {
@@ -331,9 +353,11 @@ public class ListAppInstancesResponseBody extends TeaModel {
             private String appInstanceGroupId; 
             private String appInstanceId; 
             private BindInfo bindInfo; 
+            private String chargeType; 
             private String gmtCreate; 
             private String gmtModified; 
             private String mainEthPublicIp; 
+            private String nodeId; 
             private String sessionStatus; 
             private String status; 
 
@@ -368,6 +392,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
              * <p>The time when the application instance was created.</p>
              * 
              * <strong>example:</strong>
@@ -397,6 +429,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
              */
             public Builder mainEthPublicIp(String mainEthPublicIp) {
                 this.mainEthPublicIp = mainEthPublicIp;
+                return this;
+            }
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
                 return this;
             }
 
