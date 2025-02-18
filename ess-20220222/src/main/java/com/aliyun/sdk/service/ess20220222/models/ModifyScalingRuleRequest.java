@@ -494,7 +494,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * HybridMetrics.
+         * <p>The Hybrid Cloud Monitoring metrics.</p>
          */
         public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
             this.putQueryParameter("HybridMetrics", hybridMetrics);
@@ -503,7 +503,11 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * HybridMonitorNamespace.
+         * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
+         * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-test</p>
          */
         public Builder hybridMonitorNamespace(String hybridMonitorNamespace) {
             this.putQueryParameter("HybridMonitorNamespace", hybridMonitorNamespace);
@@ -554,7 +558,15 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>system: system metrics of CloudMonitor.</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -863,10 +875,10 @@ public class ModifyScalingRuleRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * <p>The dimension key of the metric.</p>
+             * <p>The key of the metric dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>rulePool</p>
+             * <p>queue</p>
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -874,10 +886,10 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * <p>The dimension value of the metric.</p>
+             * <p>The value of the metric dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>sgp-l1cbirz451yxu2dxxx</p>
+             * <p>testQueue</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -972,7 +984,7 @@ public class ModifyScalingRuleRequest extends Request {
             private String statistic; 
 
             /**
-             * Dimensions.
+             * <p>The metric dimensions. You can use this parameter to specify the monitored resources.</p>
              */
             public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -980,7 +992,11 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * Expression.
+             * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
+             * <p>The expression must be written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(a+b)/2</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -988,7 +1004,10 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The reference ID of the metric in the metric expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -996,28 +1015,10 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * <p>The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.</p>
-             * <p>Valid values if you create a target tracking scaling rule:</p>
-             * <ul>
-             * <li>CpuUtilizationAgent (recommended): the CPU utilization.</li>
-             * <li>MemoryUtilization (recommended): the memory usage.</li>
-             * <li>CpuUtilization: the average CPU utilization.</li>
-             * <li>IntranetTx: the average outbound traffic over an internal network.</li>
-             * <li>IntranetRx: the average inbound traffic over an internal network.</li>
-             * <li>VpcInternetTx: the average outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
-             * <li>VpcInternetRx: the average inbound traffic from the Internet to a VPC.</li>
-             * <li>LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.</li>
-             * </ul>
-             * <p>Valid values if you create a predictive scaling rule:</p>
-             * <ul>
-             * <li>CpuUtilization: the average CPU utilization.</li>
-             * <li>IntranetRx: the average inbound traffic over an internal network.</li>
-             * <li>IntranetTx: the average outbound traffic over an internal network.</li>
-             * </ul>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
+             * <p>The name of the Hybrid Cloud Monitoring metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>CpuUtilization</p>
+             * <p>AliyunSmq_NumberOfMessagesVisible</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1025,7 +1026,15 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * Statistic.
+             * <p>The statistical method of the metric value. Valid values:</p>
+             * <ul>
+             * <li>Average: calculates the average value of all metric values within a specified interval.</li>
+             * <li>Minimum: calculates the minimum value of all metric values within a specified interval.</li>
+             * <li>Maximum: calculates the maximum value of all metric values within a specified interval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistic(String statistic) {
                 this.statistic = statistic;

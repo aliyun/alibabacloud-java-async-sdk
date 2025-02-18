@@ -217,7 +217,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The error code that is returned when the scaling activity failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperationDenied.NoStock</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -225,7 +228,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the scaling activity exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fail to create instances into scaling group.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +239,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * FailedInstanceIds.
+             * <p>The IDs of the instances included in the failed scaling activities.</p>
              */
             public Builder failedInstanceIds(java.util.List<String> failedInstanceIds) {
                 this.failedInstanceIds = failedInstanceIds;
@@ -241,7 +247,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message that is returned when the scaling activity failed or is partially successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The resource is out of stock in the specified zone. Please try other types, or choose other regions and zones.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -847,7 +856,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessages.
+             * <p>The error messages that are returned when the scaling activities failed or are partially successful.</p>
              */
             public Builder errorMessages(java.util.List<ErrorMessages> errorMessages) {
                 this.errorMessages = errorMessages;

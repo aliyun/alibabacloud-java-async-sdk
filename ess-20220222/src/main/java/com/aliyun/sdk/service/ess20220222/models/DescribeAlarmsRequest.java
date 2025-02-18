@@ -241,10 +241,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * <p>The metric type. Valid values:</p>
+         * <p>The type of the metric. Valid values:</p>
          * <ul>
          * <li>system: system metrics of CloudMonitor</li>
          * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
          * </ul>
          * 
          * <strong>example:</strong>

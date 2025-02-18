@@ -260,6 +260,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
         private Integer onDemandPercentageAboveBaseCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("PriceComparisonMode")
+        private String priceComparisonMode;
+
         @com.aliyun.core.annotation.NameInMap("SpotAutoReplaceOnDemand")
         private Boolean spotAutoReplaceOnDemand;
 
@@ -267,6 +270,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
             this.onDemandBaseCapacity = builder.onDemandBaseCapacity;
             this.onDemandPercentageAboveBaseCapacity = builder.onDemandPercentageAboveBaseCapacity;
+            this.priceComparisonMode = builder.priceComparisonMode;
             this.spotAutoReplaceOnDemand = builder.spotAutoReplaceOnDemand;
         }
 
@@ -300,6 +304,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return priceComparisonMode
+         */
+        public String getPriceComparisonMode() {
+            return this.priceComparisonMode;
+        }
+
+        /**
          * @return spotAutoReplaceOnDemand
          */
         public Boolean getSpotAutoReplaceOnDemand() {
@@ -310,6 +321,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private Boolean compensateWithOnDemand; 
             private Integer onDemandBaseCapacity; 
             private Integer onDemandPercentageAboveBaseCapacity; 
+            private String priceComparisonMode; 
             private Boolean spotAutoReplaceOnDemand; 
 
             /**
@@ -346,6 +358,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              */
             public Builder onDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
                 this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+                return this;
+            }
+
+            /**
+             * PriceComparisonMode.
+             */
+            public Builder priceComparisonMode(String priceComparisonMode) {
+                this.priceComparisonMode = priceComparisonMode;
                 return this;
             }
 

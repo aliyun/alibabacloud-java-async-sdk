@@ -591,14 +591,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String dimensionValue; 
 
             /**
-             * <p>The key of the dimension that is associated with the metric. Valid values:</p>
-             * <ul>
-             * <li>ScalingGroupId: the ID of the scaling group.</li>
-             * <li>userId: the ID of the user account.</li>
-             * </ul>
+             * <p>The key of the metric dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>scaling_group</p>
+             * <p>queue</p>
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -606,10 +602,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the dimension that is associated with the metric.</p>
+             * <p>The key of the metric dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>asg-bp18p2yfxow2dloq****</p>
+             * <p>testQueue</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -704,7 +700,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             private String statistic; 
 
             /**
-             * <p>The dimensions of the event-triggered task that is associated with the scaling rule.</p>
+             * <p>The metric dimensions. This parameter is used to specify the monitored resources.</p>
              */
             public Builder dimensions(java.util.List<HybridMetricsDimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -712,7 +708,11 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
+             * <p>The expression is written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(a+b)/2</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -720,7 +720,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The reference ID of the metric in the metric expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -728,10 +731,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metric of the event-triggered task that is associated with the scaling rule.</p>
+             * <p>The name of the Hybrid Cloud Monitoring metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>CpuUtilization</p>
+             * <p>AliyunSmq_NumberOfMessagesVisible</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -739,7 +742,15 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Statistic.
+             * <p>The statistical method of the metric value. Valid values:</p>
+             * <ul>
+             * <li>Average: The average value of all metric values within a specified interval is calculated.</li>
+             * <li>Minimum: The minimum value of all metric values within a specified interval is calculated.</li>
+             * <li>Maximum: The maximum value of all metric values within a specified interval is calculated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistic(String statistic) {
                 this.statistic = statistic;
@@ -1286,7 +1297,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * HybridMetrics.
+             * <p>The Hybrid Cloud Monitoring metrics.</p>
              */
             public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
                 this.hybridMetrics = hybridMetrics;
@@ -1294,7 +1305,11 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * HybridMonitorNamespace.
+             * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
+             * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-test</p>
              */
             public Builder hybridMonitorNamespace(String hybridMonitorNamespace) {
                 this.hybridMonitorNamespace = hybridMonitorNamespace;
@@ -1335,10 +1350,11 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the metric of the event-triggered task that is associated with the scaling rule. Valid values:</p>
+             * <p>The metric type. Valid values:</p>
              * <ul>
-             * <li>system: system metrics</li>
-             * <li>custom: custom metrics</li>
+             * <li>system: system metrics of CloudMonitor.</li>
+             * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+             * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
              * </ul>
              * 
              * <strong>example:</strong>

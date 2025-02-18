@@ -483,16 +483,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private String dimensionValue; 
 
             /**
-             * <p>The dimension key of the metric. Valid values:</p>
-             * <ul>
-             * <li>user_id: the ID of your Alibaba Cloud account.</li>
-             * <li>scaling_group: the scaling group that is monitored by the event-triggered task.</li>
-             * <li>device: the NIC type.</li>
-             * <li>state: the status of the TCP connection.</li>
-             * </ul>
+             * <p>The key of the metric dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>device</p>
+             * <p>queue</p>
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -500,28 +494,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dimension value of the metric. The value of DimensionValue varies based on the value of DimensionKey.</p>
-             * <ul>
-             * <li><p>If you set DimensionKey to <code>user_id</code>, the system specifies the value of DimensionValue.</p>
-             * </li>
-             * <li><p>If you set DimensionKey to <code>scaling_group</code>, the system specifies the value of DimensionValue.</p>
-             * </li>
-             * <li><p>If you set DimensionKey to <code>device</code>, you can set DimensionValue to eth0 or eth1.</p>
-             * <ul>
-             * <li>For instances of the classic network type, eth0 indicates the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.</li>
-             * <li>For instances of the classic network type, eth1 indicates the public NIC.</li>
-             * </ul>
-             * </li>
-             * <li><p>If you set DimensionKey to <code>state</code>, you can set DimensionValue to TCP_TOTAL or ESTABLISHED.</p>
-             * <ul>
-             * <li>TCP_TOTAL indicates the total number of TCP connections.</li>
-             * <li>ESTABLISHED indicates the number of TCP connections that are established.</li>
-             * </ul>
-             * </li>
-             * </ul>
+             * <p>The key of the metric dimension.</p>
              * 
              * <strong>example:</strong>
-             * <p>eth0</p>
+             * <p>testQueue</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -616,7 +592,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private String statistic; 
 
             /**
-             * Dimensions.
+             * <p>The metric dimensions. This parameter is used to specify the monitored resources.</p>
              */
             public Builder dimensions(java.util.List<HybridMetricsDimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -624,7 +600,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * <p>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</p>
+             * <p>The expression is written in Reverse Polish Notation (RPN) format and supports only the following operators: <code>+, -, *, /</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(a+b)/2</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -632,7 +612,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The reference ID of the metric in the metric expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -640,38 +623,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metric that is specified in the multi-metric alert rule. Valid values:</p>
-             * <ul>
-             * <li>CpuUtilization: the CPU utilization of an ECS instance. Unit: %.</li>
-             * <li>ConcurrentConnections: the number of current connections to an ECS instance.</li>
-             * <li>IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</li>
-             * <li>IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</li>
-             * <li>VpcInternetTx: the outbound traffic over a VPC. Unit: KB/min.</li>
-             * <li>VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</li>
-             * <li>SystemDiskReadBps: the number of bytes read from the system disk per second.</li>
-             * <li>SystemDiskWriteBps: the number of bytes written to the system disk per second.</li>
-             * <li>SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</li>
-             * <li>SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</li>
-             * <li>CpuUtilizationAgent: the CPU utilization. Unit: %.</li>
-             * <li>GpuUtilizationAgent: the GPU utilization. Unit: %.</li>
-             * <li>GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</li>
-             * <li>GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</li>
-             * <li>MemoryUtilization: the memory usage. Unit: %.</li>
-             * <li>LoadAverage: the average system load.</li>
-             * <li>TcpConnection: the total number of TCP connections.</li>
-             * <li>TcpConnection: the number of established TCP connections.</li>
-             * <li>PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.</li>
-             * <li>PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</li>
-             * <li>PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</li>
-             * <li>PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</li>
-             * <li>EciPodCpuUtilization: the CPU utilization. Unit: %.</li>
-             * <li>EciPodMemoryUtilization: the memory usage. Unit: %.</li>
-             * <li>LoadBalancerRealServerAverageQps: the QPS of an instance.</li>
-             * </ul>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
+             * <p>The name of the Hybrid Cloud Monitoring metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>CpuUtilization</p>
+             * <p>AliyunSmq_NumberOfMessagesVisible</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -679,7 +634,15 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Statistic.
+             * <p>The statistical method of the metric value. Valid values:</p>
+             * <ul>
+             * <li>Average: The average value of all metric values within a specified interval is calculated.</li>
+             * <li>Minimum: The minimum value of all metric values within a specified interval is calculated.</li>
+             * <li>Maximum: The maximum value of all metric values within a specified interval is calculated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistic(String statistic) {
                 this.statistic = statistic;
@@ -1083,7 +1046,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * HybridMetrics.
+             * <p>The Hybrid Cloud Monitoring metrics.</p>
              */
             public Builder hybridMetrics(java.util.List<HybridMetrics> hybridMetrics) {
                 this.hybridMetrics = hybridMetrics;
@@ -1091,7 +1054,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * HybridMonitorNamespace.
+             * <p>The ID of the Hybrid Cloud Monitoring namespace.</p>
+             * <p>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-test</p>
              */
             public Builder hybridMonitorNamespace(String hybridMonitorNamespace) {
                 this.hybridMonitorNamespace = hybridMonitorNamespace;
@@ -1138,10 +1105,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric type. Valid values:</p>
+             * <p>The type of the metric. Valid values:</p>
              * <ul>
              * <li>system: system metrics of CloudMonitor</li>
              * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+             * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1185,7 +1153,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * PromQL.
+             * <p>The PromQL statement of Hybrid Cloud Monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(avg(last_over_time(AliyunMnsnew_ActiveMessages{region=&quot;cn-hangzhou&quot;,userId=&quot;123456****&quot;,queue=&quot;testQueue&quot;}[900s])) by (userId))/(avg(last_over_time(AliyunEss_RunningInstanceCount{instanceId=&quot;asg-bp1****&quot;}[900s])) by (userId) != 0)</p>
              */
             public Builder promQL(String promQL) {
                 this.promQL = promQL;
