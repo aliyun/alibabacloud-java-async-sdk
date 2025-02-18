@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     private String cert;
 
     @com.aliyun.core.annotation.NameInMap("CertChain")
-    private java.util.List < CertChain> certChain;
+    private java.util.List<CertChain> certChain;
 
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
@@ -65,6 +70,12 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("NotAfter")
+    private Long notAfter;
+
+    @com.aliyun.core.annotation.NameInMap("NotBefore")
+    private Long notBefore;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
@@ -118,6 +129,8 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         this.issuer = builder.issuer;
         this.key = builder.key;
         this.name = builder.name;
+        this.notAfter = builder.notAfter;
+        this.notBefore = builder.notBefore;
         this.orderId = builder.orderId;
         this.orgName = builder.orgName;
         this.province = builder.province;
@@ -163,7 +176,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     /**
      * @return certChain
      */
-    public java.util.List < CertChain> getCertChain() {
+    public java.util.List<CertChain> getCertChain() {
         return this.certChain;
     }
 
@@ -266,6 +279,20 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return notAfter
+     */
+    public Long getNotAfter() {
+        return this.notAfter;
+    }
+
+    /**
+     * @return notBefore
+     */
+    public Long getNotBefore() {
+        return this.notBefore;
+    }
+
+    /**
      * @return orderId
      */
     public Long getOrderId() {
@@ -346,7 +373,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String algorithm; 
         private Boolean buyInAliyun; 
         private String cert; 
-        private java.util.List < CertChain> certChain; 
+        private java.util.List<CertChain> certChain; 
         private String certIdentifier; 
         private String city; 
         private String common; 
@@ -361,6 +388,8 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String issuer; 
         private String key; 
         private String name; 
+        private Long notAfter; 
+        private Long notBefore; 
         private Long orderId; 
         private String orgName; 
         private String province; 
@@ -413,13 +442,13 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         /**
          * <p>The certificate chain.</p>
          */
-        public Builder certChain(java.util.List < CertChain> certChain) {
+        public Builder certChain(java.util.List<CertChain> certChain) {
             this.certChain = certChain;
             return this;
         }
 
         /**
-         * <p>The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</p>
+         * <p>The certificate identifier. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
          * 
          * <strong>example:</strong>
          * <p>10741304-cn-hangzhou</p>
@@ -577,6 +606,28 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The end of the validity period of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17322613180000</p>
+         */
+        public Builder notAfter(Long notAfter) {
+            this.notAfter = notAfter;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the validity period of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17312613180000</p>
+         */
+        public Builder notBefore(Long notBefore) {
+            this.notBefore = notBefore;
             return this;
         }
 
@@ -828,7 +879,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
              * <p>The beginning of the validity period of the certificate.</p>
              * 
              * <strong>example:</strong>
-             * <p>17322633180000</p>
+             * <p>17302633180000</p>
              */
             public Builder notBefore(Long notBefore) {
                 this.notBefore = notBefore;

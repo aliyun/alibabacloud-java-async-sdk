@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListContactResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContactList")
-    private java.util.List < ContactList> contactList;
+    private java.util.List<ContactList> contactList;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -50,7 +55,7 @@ public class ListContactResponseBody extends TeaModel {
     /**
      * @return contactList
      */
-    public java.util.List < ContactList> getContactList() {
+    public java.util.List<ContactList> getContactList() {
         return this.contactList;
     }
 
@@ -90,7 +95,7 @@ public class ListContactResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContactList> contactList; 
+        private java.util.List<ContactList> contactList; 
         private Integer currentPage; 
         private String keyword; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListContactResponseBody extends TeaModel {
         /**
          * <p>The contacts.</p>
          */
-        public Builder contactList(java.util.List < ContactList> contactList) {
+        public Builder contactList(java.util.List<ContactList> contactList) {
             this.contactList = contactList;
             return this;
         }

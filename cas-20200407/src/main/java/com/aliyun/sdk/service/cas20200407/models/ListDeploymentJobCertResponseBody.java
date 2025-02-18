@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDeploymentJobCertResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -46,13 +51,13 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
          * <p>The response parameters.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -118,7 +123,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         private Long orderId;
 
         @com.aliyun.core.annotation.NameInMap("Sans")
-        private java.util.List < String > sans;
+        private java.util.List<String> sans;
 
         @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
@@ -235,7 +240,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         /**
          * @return sans
          */
-        public java.util.List < String > getSans() {
+        public java.util.List<String> getSans() {
             return this.sans;
         }
 
@@ -259,7 +264,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             private Long notAfterTime; 
             private Long notBeforeTime; 
             private Long orderId; 
-            private java.util.List < String > sans; 
+            private java.util.List<String> sans; 
             private String statusCode; 
 
             /**
@@ -409,7 +414,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             /**
              * <p>The subject alternative name (SAN) extensions of the certificate.</p>
              */
-            public Builder sans(java.util.List < String > sans) {
+            public Builder sans(java.util.List<String> sans) {
                 this.sans = sans;
                 return this;
             }

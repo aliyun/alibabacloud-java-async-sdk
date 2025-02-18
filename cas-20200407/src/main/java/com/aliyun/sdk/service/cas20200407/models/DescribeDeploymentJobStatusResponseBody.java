@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
     private Integer matchWorkerCount;
 
     @com.aliyun.core.annotation.NameInMap("ProductWorkerCount")
-    private java.util.List < ProductWorkerCount> productWorkerCount;
+    private java.util.List<ProductWorkerCount> productWorkerCount;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -117,7 +122,7 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
     /**
      * @return productWorkerCount
      */
-    public java.util.List < ProductWorkerCount> getProductWorkerCount() {
+    public java.util.List<ProductWorkerCount> getProductWorkerCount() {
         return this.productWorkerCount;
     }
 
@@ -183,7 +188,7 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         private Integer costCount; 
         private Integer failedCount; 
         private Integer matchWorkerCount; 
-        private java.util.List < ProductWorkerCount> productWorkerCount; 
+        private java.util.List<ProductWorkerCount> productWorkerCount; 
         private String requestId; 
         private Integer resourceCount; 
         private Integer rollbackCount; 
@@ -251,7 +256,7 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         /**
          * <p>The number of cloud resources to which certificates are deployed in the deployment task.</p>
          */
-        public Builder productWorkerCount(java.util.List < ProductWorkerCount> productWorkerCount) {
+        public Builder productWorkerCount(java.util.List<ProductWorkerCount> productWorkerCount) {
             this.productWorkerCount = productWorkerCount;
             return this;
         }

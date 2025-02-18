@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class UploadUserCertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private UploadUserCertificateRequest(Builder builder) {
         super(builder);
@@ -133,7 +138,7 @@ public class UploadUserCertificateRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -146,7 +151,7 @@ public class UploadUserCertificateRequest extends Request {
         private String resourceGroupId; 
         private String signCert; 
         private String signPrivateKey; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -220,7 +225,7 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * <p>The name of the certificate. The name can contain up to 128 characters in length. The name can contain all types of characters, such as letters, digits, and underscores (_).</p>
+         * <p>The name of the certificate. The name can be up to 64 characters in length, and can contain all types of characters, such as letters, digits, and underscores (_).</p>
          * <blockquote>
          * <p> The name must be unique within an Alibaba Cloud account.</p>
          * </blockquote>
@@ -275,9 +280,9 @@ public class UploadUserCertificateRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -335,12 +340,10 @@ public class UploadUserCertificateRequest extends Request {
             private String value; 
 
             /**
-             * <p>The private key of the certificate in the PEM format.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>-----BEGIN CERTIFICATE-----
-             * MIICDzCCAbagAw****
-             * -----END CERTIFICATE-----</p>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -348,7 +351,10 @@ public class UploadUserCertificateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

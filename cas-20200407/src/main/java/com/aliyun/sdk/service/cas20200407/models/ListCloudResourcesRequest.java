@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListCloudResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertIds")
-    private java.util.List < Long > certIds;
+    private java.util.List<Long> certIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudName")
@@ -67,7 +72,7 @@ public class ListCloudResourcesRequest extends Request {
     /**
      * @return certIds
      */
-    public java.util.List < Long > getCertIds() {
+    public java.util.List<Long> getCertIds() {
         return this.certIds;
     }
 
@@ -114,7 +119,7 @@ public class ListCloudResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCloudResourcesRequest, Builder> {
-        private java.util.List < Long > certIds; 
+        private java.util.List<Long> certIds; 
         private String cloudName; 
         private String cloudProduct; 
         private Integer currentPage; 
@@ -140,7 +145,7 @@ public class ListCloudResourcesRequest extends Request {
         /**
          * <p>The certificate IDs.</p>
          */
-        public Builder certIds(java.util.List < Long > certIds) {
+        public Builder certIds(java.util.List<Long> certIds) {
             String certIdsShrink = shrink(certIds, "CertIds", "json");
             this.putQueryParameter("CertIds", certIdsShrink);
             this.certIds = certIds;

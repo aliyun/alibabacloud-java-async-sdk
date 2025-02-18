@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCertResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CertList")
-    private java.util.List < CertList> certList;
+    private java.util.List<CertList> certList;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
@@ -46,7 +51,7 @@ public class ListCertResponseBody extends TeaModel {
     /**
      * @return certList
      */
-    public java.util.List < CertList> getCertList() {
+    public java.util.List<CertList> getCertList() {
         return this.certList;
     }
 
@@ -79,7 +84,7 @@ public class ListCertResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CertList> certList; 
+        private java.util.List<CertList> certList; 
         private Long currentPage; 
         private String requestId; 
         private Long showSize; 
@@ -88,7 +93,7 @@ public class ListCertResponseBody extends TeaModel {
         /**
          * <p>An array that consists of the certificates.</p>
          */
-        public Builder certList(java.util.List < CertList> certList) {
+        public Builder certList(java.util.List<CertList> certList) {
             this.certList = certList;
             return this;
         }

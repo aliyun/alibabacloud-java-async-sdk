@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDeploymentJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CasContacts")
-    private java.util.List < CasContacts> casContacts;
+    private java.util.List<CasContacts> casContacts;
 
     @com.aliyun.core.annotation.NameInMap("CertDomain")
     private String certDomain;
@@ -102,7 +107,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     /**
      * @return casContacts
      */
-    public java.util.List < CasContacts> getCasContacts() {
+    public java.util.List<CasContacts> getCasContacts() {
         return this.casContacts;
     }
 
@@ -233,7 +238,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CasContacts> casContacts; 
+        private java.util.List<CasContacts> casContacts; 
         private String certDomain; 
         private String certType; 
         private String config; 
@@ -256,7 +261,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         /**
          * <p>The information about the contact.</p>
          */
-        public Builder casContacts(java.util.List < CasContacts> casContacts) {
+        public Builder casContacts(java.util.List<CasContacts> casContacts) {
             this.casContacts = casContacts;
             return this;
         }

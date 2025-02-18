@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCsrResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CsrList")
-    private java.util.List < CsrList> csrList;
+    private java.util.List<CsrList> csrList;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
@@ -46,7 +51,7 @@ public class ListCsrResponseBody extends TeaModel {
     /**
      * @return csrList
      */
-    public java.util.List < CsrList> getCsrList() {
+    public java.util.List<CsrList> getCsrList() {
         return this.csrList;
     }
 
@@ -79,7 +84,7 @@ public class ListCsrResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CsrList> csrList; 
+        private java.util.List<CsrList> csrList; 
         private Long currentPage; 
         private String requestId; 
         private Long showSize; 
@@ -88,7 +93,7 @@ public class ListCsrResponseBody extends TeaModel {
         /**
          * <p>The CSRs.</p>
          */
-        public Builder csrList(java.util.List < CsrList> csrList) {
+        public Builder csrList(java.util.List<CsrList> csrList) {
             this.csrList = csrList;
             return this;
         }

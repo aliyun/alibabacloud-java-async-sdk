@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCloudAccessResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudAccessList")
-    private java.util.List < CloudAccessList> cloudAccessList;
+    private java.util.List<CloudAccessList> cloudAccessList;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -46,7 +51,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
     /**
      * @return cloudAccessList
      */
-    public java.util.List < CloudAccessList> getCloudAccessList() {
+    public java.util.List<CloudAccessList> getCloudAccessList() {
         return this.cloudAccessList;
     }
 
@@ -79,7 +84,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudAccessList> cloudAccessList; 
+        private java.util.List<CloudAccessList> cloudAccessList; 
         private Integer currentPage; 
         private String requestId; 
         private Integer showSize; 
@@ -88,7 +93,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         /**
          * <p>The list of the AccessKey pairs.</p>
          */
-        public Builder cloudAccessList(java.util.List < CloudAccessList> cloudAccessList) {
+        public Builder cloudAccessList(java.util.List<CloudAccessList> cloudAccessList) {
             this.cloudAccessList = cloudAccessList;
             return this;
         }

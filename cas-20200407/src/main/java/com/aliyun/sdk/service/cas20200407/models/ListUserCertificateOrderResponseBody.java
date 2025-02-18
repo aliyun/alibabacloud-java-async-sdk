@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserCertificateOrderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CertificateOrderList")
-    private java.util.List < CertificateOrderList> certificateOrderList;
+    private java.util.List<CertificateOrderList> certificateOrderList;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
@@ -46,7 +51,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     /**
      * @return certificateOrderList
      */
-    public java.util.List < CertificateOrderList> getCertificateOrderList() {
+    public java.util.List<CertificateOrderList> getCertificateOrderList() {
         return this.certificateOrderList;
     }
 
@@ -79,7 +84,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CertificateOrderList> certificateOrderList; 
+        private java.util.List<CertificateOrderList> certificateOrderList; 
         private Long currentPage; 
         private String requestId; 
         private Long showSize; 
@@ -88,7 +93,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         /**
          * <p>The certificates and orders.</p>
          */
-        public Builder certificateOrderList(java.util.List < CertificateOrderList> certificateOrderList) {
+        public Builder certificateOrderList(java.util.List<CertificateOrderList> certificateOrderList) {
             this.certificateOrderList = certificateOrderList;
             return this;
         }
