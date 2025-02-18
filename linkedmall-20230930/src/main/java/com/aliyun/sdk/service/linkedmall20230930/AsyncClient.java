@@ -146,6 +146,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenderRefundOrderResponse> renderRefundOrder(RenderRefundOrderRequest request);
 
     /**
+     * @param request the request parameters of SearchProducts  SearchProductsRequest
+     * @return SearchProductsResponse
+     */
+    CompletableFuture<SearchProductsResponse> searchProducts(SearchProductsRequest request);
+
+    /**
+     * @param request the request parameters of SelectionGroupAddProduct  SelectionGroupAddProductRequest
+     * @return SelectionGroupAddProductResponse
+     */
+    CompletableFuture<SelectionGroupAddProductResponse> selectionGroupAddProduct(SelectionGroupAddProductRequest request);
+
+    /**
+     * @param request the request parameters of SelectionGroupRemoveProduct  SelectionGroupRemoveProductRequest
+     * @return SelectionGroupRemoveProductResponse
+     */
+    CompletableFuture<SelectionGroupRemoveProductResponse> selectionGroupRemoveProduct(SelectionGroupRemoveProductRequest request);
+
+    /**
      * @param request the request parameters of SplitPurchaseOrder  SplitPurchaseOrderRequest
      * @return SplitPurchaseOrderResponse
      */

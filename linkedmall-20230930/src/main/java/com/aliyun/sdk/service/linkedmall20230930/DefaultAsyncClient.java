@@ -473,6 +473,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SearchProducts  SearchProductsRequest
+     * @return SearchProductsResponse
+     */
+    @Override
+    public CompletableFuture<SearchProductsResponse> searchProducts(SearchProductsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SearchProducts").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/selection-group/product/command/searchProduct").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchProductsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchProductsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SelectionGroupAddProduct  SelectionGroupAddProductRequest
+     * @return SelectionGroupAddProductResponse
+     */
+    @Override
+    public CompletableFuture<SelectionGroupAddProductResponse> selectionGroupAddProduct(SelectionGroupAddProductRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SelectionGroupAddProduct").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/selection-group/product/command/addProduct").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SelectionGroupAddProductResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SelectionGroupAddProductResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SelectionGroupRemoveProduct  SelectionGroupRemoveProductRequest
+     * @return SelectionGroupRemoveProductResponse
+     */
+    @Override
+    public CompletableFuture<SelectionGroupRemoveProductResponse> selectionGroupRemoveProduct(SelectionGroupRemoveProductRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SelectionGroupRemoveProduct").setMethod(HttpMethod.POST).setPathRegex("/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/selection-group/product/command/removeProduct").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SelectionGroupRemoveProductResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SelectionGroupRemoveProductResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SplitPurchaseOrder  SplitPurchaseOrderRequest
      * @return SplitPurchaseOrderResponse
      */
