@@ -68,6 +68,9 @@ public class ScorePageItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("siteLabel")
     private String siteLabel;
 
+    @com.aliyun.core.annotation.NameInMap("snippet")
+    private String snippet;
+
     @com.aliyun.core.annotation.NameInMap("title")
     @com.aliyun.core.annotation.Validation(required = true)
     private String title;
@@ -88,6 +91,7 @@ public class ScorePageItem extends TeaModel {
         this.publishTime = builder.publishTime;
         this.score = builder.score;
         this.siteLabel = builder.siteLabel;
+        this.snippet = builder.snippet;
         this.title = builder.title;
     }
 
@@ -205,6 +209,13 @@ public class ScorePageItem extends TeaModel {
     }
 
     /**
+     * @return snippet
+     */
+    public String getSnippet() {
+        return this.snippet;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -227,6 +238,7 @@ public class ScorePageItem extends TeaModel {
         private Long publishTime; 
         private Double score; 
         private String siteLabel; 
+        private String snippet; 
         private String title; 
 
         /**
@@ -364,6 +376,14 @@ public class ScorePageItem extends TeaModel {
          */
         public Builder siteLabel(String siteLabel) {
             this.siteLabel = siteLabel;
+            return this;
+        }
+
+        /**
+         * snippet.
+         */
+        public Builder snippet(String snippet) {
+            this.snippet = snippet;
             return this;
         }
 
