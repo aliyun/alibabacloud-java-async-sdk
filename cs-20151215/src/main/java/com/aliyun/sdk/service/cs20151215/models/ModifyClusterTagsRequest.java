@@ -87,7 +87,7 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * <p>The data of the labels that you want to modify.</p>
+         * <p>The data of the tags that you want to modify.</p>
          */
         public Builder body(java.util.List<Tag> body) {
             this.putBodyParameter("body", body);

@@ -28,6 +28,10 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     private String nodepoolId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("containerd_config")
+    private ContainerdConfig containerdConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("kubelet_config")
     private KubeletConfig kubeletConfig;
 
@@ -43,6 +47,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.containerdConfig = builder.containerdConfig;
         this.kubeletConfig = builder.kubeletConfig;
         this.osConfig = builder.osConfig;
         this.rollingPolicy = builder.rollingPolicy;
@@ -76,6 +81,13 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     }
 
     /**
+     * @return containerdConfig
+     */
+    public ContainerdConfig getContainerdConfig() {
+        return this.containerdConfig;
+    }
+
+    /**
      * @return kubeletConfig
      */
     public KubeletConfig getKubeletConfig() {
@@ -99,6 +111,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyNodePoolNodeConfigRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private ContainerdConfig containerdConfig; 
         private KubeletConfig kubeletConfig; 
         private OsConfig osConfig; 
         private RollingPolicy rollingPolicy; 
@@ -111,6 +124,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.containerdConfig = request.containerdConfig;
             this.kubeletConfig = request.kubeletConfig;
             this.osConfig = request.osConfig;
             this.rollingPolicy = request.rollingPolicy;
@@ -143,7 +157,16 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The kubelet configuration.</p>
+         * containerd_config.
+         */
+        public Builder containerdConfig(ContainerdConfig containerdConfig) {
+            this.putBodyParameter("containerd_config", containerdConfig);
+            this.containerdConfig = containerdConfig;
+            return this;
+        }
+
+        /**
+         * <p>The parameters of the kubelet.</p>
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -161,7 +184,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The rotation configuration.</p>
+         * <p>The rolling policy configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);

@@ -102,6 +102,9 @@ public class StartAlertRequest extends Request {
 
         /**
          * <p>The name of the alert rule set to be enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder alertRuleGroupName(String alertRuleGroupName) {
             this.putBodyParameter("alert_rule_group_name", alertRuleGroupName);
@@ -111,6 +114,9 @@ public class StartAlertRequest extends Request {
 
         /**
          * <p>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample</p>
          */
         public Builder alertRuleName(String alertRuleName) {
             this.putBodyParameter("alert_rule_name", alertRuleName);

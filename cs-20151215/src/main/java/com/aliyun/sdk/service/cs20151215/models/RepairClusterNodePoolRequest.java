@@ -29,6 +29,7 @@ public class RepairClusterNodePoolRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("auto_restart")
+    @Deprecated
     private Boolean autoRestart;
 
     @com.aliyun.core.annotation.Body
