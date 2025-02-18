@@ -103,7 +103,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>The configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -273,7 +288,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
             private Integer siteVersion; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID,</p>
+             * 
+             * <strong>example:</strong>
+             * <p>395386449776640</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -281,7 +299,14 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The type of the configuration. Valid values:</p>
+             * <ul>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -289,7 +314,14 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether cache reserve is enabled. Indicates whether the task name is valid. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -297,7 +329,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content, which is a policy or conditional expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -305,7 +340,14 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -313,7 +355,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -321,7 +366,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -329,7 +377,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The version number of the website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;

@@ -103,7 +103,7 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>The configuration list of modifying a response header.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -213,7 +228,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             private String value; 
 
             /**
-             * Name.
+             * <p>The name of the response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headerName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -221,7 +239,15 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * Operation.
+             * <p>The action. Valid values:</p>
+             * <ul>
+             * <li>add: adds a response header.</li>
+             * <li>del: deletes a response header.</li>
+             * <li>modify: modifies a response header.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -229,7 +255,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * Value.
+             * <p>The value of the response header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headerValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -360,7 +389,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             private Integer siteVersion; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35281609698****</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -368,7 +400,14 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * ConfigType.
+             * <p>The type of the configuration. Valid values:</p>
+             * <ul>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rule</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -376,7 +415,7 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * ResponseHeaderModification.
+             * <p>The configurations of modifying response headers. You can add, delete, or modify a response header.</p>
              */
             public Builder responseHeaderModification(java.util.List<ResponseHeaderModification> responseHeaderModification) {
                 this.responseHeaderModification = responseHeaderModification;
@@ -384,7 +423,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -392,7 +434,14 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -400,7 +449,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -408,7 +460,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -416,7 +471,10 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
             }
 
             /**
-             * SiteVersion.
+             * <p>The version number of the website configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;

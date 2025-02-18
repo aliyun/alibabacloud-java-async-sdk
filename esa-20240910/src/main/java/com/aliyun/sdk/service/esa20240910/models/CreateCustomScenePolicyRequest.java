@@ -120,7 +120,7 @@ public class CreateCustomScenePolicyRequest extends Request {
 
         /**
          * <p>The time when the policy expires.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class CreateCustomScenePolicyRequest extends Request {
 
         /**
          * <p>The time when the policy takes effect.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

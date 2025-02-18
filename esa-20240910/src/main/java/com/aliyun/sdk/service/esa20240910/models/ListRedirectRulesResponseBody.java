@@ -103,7 +103,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>The configuration list of the the URL redirect rule.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -309,7 +324,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35281609698****</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -317,7 +335,14 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The type of the configuration. Valid values:</p>
+             * <ul>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rule</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -325,7 +350,14 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveQueryString.
+             * <p>Indicates whether the feature of retaining the query string is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder reserveQueryString(String reserveQueryString) {
                 this.reserveQueryString = reserveQueryString;
@@ -333,7 +365,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -341,7 +376,14 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li>on</li>
+             * <li>off</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -349,7 +391,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -357,7 +402,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>The order in which the rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -365,7 +413,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The version of the website configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;
@@ -373,7 +424,17 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusCode.
+             * <p>The response code that you want to use to indicate URL redirection. Valid values:</p>
+             * <ul>
+             * <li>301</li>
+             * <li>302</li>
+             * <li>303</li>
+             * <li>307</li>
+             * <li>308</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -381,7 +442,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TargetUrl.
+             * <p>The destination URL to which requests are redirected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -389,7 +453,13 @@ public class ListRedirectRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The redirect type. Valid values:</p>
+             * <ul>
+             * <li>static</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder type(String type) {
                 this.type = type;

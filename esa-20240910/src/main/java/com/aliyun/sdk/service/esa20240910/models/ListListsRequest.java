@@ -291,7 +291,10 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * Kind.
+             * <p>The type of the custom list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;

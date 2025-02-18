@@ -612,6 +612,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDDoSL7QpsListResponse> describeDDoSL7QpsList(DescribeDDoSL7QpsListRequest request);
 
     /**
+     * @param request the request parameters of DescribeEdgeContainerAppStats  DescribeEdgeContainerAppStatsRequest
+     * @return DescribeEdgeContainerAppStatsResponse
+     */
+    CompletableFuture<DescribeEdgeContainerAppStatsResponse> describeEdgeContainerAppStats(DescribeEdgeContainerAppStatsRequest request);
+
+    /**
      * @param request the request parameters of DescribeHttpDDoSAttackIntelligentProtection  DescribeHttpDDoSAttackIntelligentProtectionRequest
      * @return DescribeHttpDDoSAttackIntelligentProtectionResponse
      */
@@ -742,6 +748,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetEdgeContainerAppResponse
      */
     CompletableFuture<GetEdgeContainerAppResponse> getEdgeContainerApp(GetEdgeContainerAppRequest request);
+
+    /**
+     * @param request the request parameters of GetEdgeContainerAppLogRiver  GetEdgeContainerAppLogRiverRequest
+     * @return GetEdgeContainerAppLogRiverResponse
+     */
+    CompletableFuture<GetEdgeContainerAppLogRiverResponse> getEdgeContainerAppLogRiver(GetEdgeContainerAppLogRiverRequest request);
 
     /**
      * @param request the request parameters of GetEdgeContainerAppStatus  GetEdgeContainerAppStatusRequest
@@ -1531,6 +1543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDevelopmentModeResponse
      */
     CompletableFuture<UpdateDevelopmentModeResponse> updateDevelopmentMode(UpdateDevelopmentModeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEdgeContainerAppLogRiver  UpdateEdgeContainerAppLogRiverRequest
+     * @return UpdateEdgeContainerAppLogRiverResponse
+     */
+    CompletableFuture<UpdateEdgeContainerAppLogRiverResponse> updateEdgeContainerAppLogRiver(UpdateEdgeContainerAppLogRiverRequest request);
 
     /**
      * @param request the request parameters of UpdateHttpRequestHeaderModificationRule  UpdateHttpRequestHeaderModificationRuleRequest
