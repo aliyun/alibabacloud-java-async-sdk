@@ -32,11 +32,16 @@ public class SwitchGdnMemberRoleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String switchMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskTimeout")
+    private Long taskTimeout;
+
     private SwitchGdnMemberRoleRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.regionId = builder.regionId;
         this.switchMode = builder.switchMode;
+        this.taskTimeout = builder.taskTimeout;
     }
 
     public static Builder builder() {
@@ -73,10 +78,18 @@ public class SwitchGdnMemberRoleRequest extends Request {
         return this.switchMode;
     }
 
+    /**
+     * @return taskTimeout
+     */
+    public Long getTaskTimeout() {
+        return this.taskTimeout;
+    }
+
     public static final class Builder extends Request.Builder<SwitchGdnMemberRoleRequest, Builder> {
         private String DBInstanceName; 
         private String regionId; 
         private String switchMode; 
+        private Long taskTimeout; 
 
         private Builder() {
             super();
@@ -87,6 +100,7 @@ public class SwitchGdnMemberRoleRequest extends Request {
             this.DBInstanceName = request.DBInstanceName;
             this.regionId = request.regionId;
             this.switchMode = request.switchMode;
+            this.taskTimeout = request.taskTimeout;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class SwitchGdnMemberRoleRequest extends Request {
         public Builder switchMode(String switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);
             this.switchMode = switchMode;
+            return this;
+        }
+
+        /**
+         * TaskTimeout.
+         */
+        public Builder taskTimeout(Long taskTimeout) {
+            this.putQueryParameter("TaskTimeout", taskTimeout);
+            this.taskTimeout = taskTimeout;
             return this;
         }
 

@@ -171,6 +171,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
+        private String taskStatus;
+
         @com.aliyun.core.annotation.NameInMap("TertiaryZone")
         private String tertiaryZone;
 
@@ -194,6 +197,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             this.secondaryZone = builder.secondaryZone;
             this.secondsBehindMaster = builder.secondsBehindMaster;
             this.status = builder.status;
+            this.taskStatus = builder.taskStatus;
             this.tertiaryZone = builder.tertiaryZone;
             this.zoneId = builder.zoneId;
         }
@@ -319,6 +323,13 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskStatus
+         */
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
+        /**
          * @return tertiaryZone
          */
         public String getTertiaryZone() {
@@ -349,6 +360,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
             private String secondaryZone; 
             private String secondsBehindMaster; 
             private String status; 
+            private String taskStatus; 
             private String tertiaryZone; 
             private String zoneId; 
 
@@ -477,6 +489,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TaskStatus.
+             */
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
                 return this;
             }
 
