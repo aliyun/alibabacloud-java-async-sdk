@@ -27,6 +27,10 @@ public class GetWorkflowDefinitionRequest extends Request {
     private Long id;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeScriptContent")
+    private Boolean includeScriptContent;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
@@ -34,6 +38,7 @@ public class GetWorkflowDefinitionRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.id = builder.id;
+        this.includeScriptContent = builder.includeScriptContent;
         this.projectId = builder.projectId;
     }
 
@@ -65,6 +70,13 @@ public class GetWorkflowDefinitionRequest extends Request {
     }
 
     /**
+     * @return includeScriptContent
+     */
+    public Boolean getIncludeScriptContent() {
+        return this.includeScriptContent;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -74,6 +86,7 @@ public class GetWorkflowDefinitionRequest extends Request {
     public static final class Builder extends Request.Builder<GetWorkflowDefinitionRequest, Builder> {
         private String regionId; 
         private Long id; 
+        private Boolean includeScriptContent; 
         private Long projectId; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class GetWorkflowDefinitionRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.id = request.id;
+            this.includeScriptContent = request.includeScriptContent;
             this.projectId = request.projectId;
         } 
 
@@ -106,6 +120,15 @@ public class GetWorkflowDefinitionRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * IncludeScriptContent.
+         */
+        public Builder includeScriptContent(Boolean includeScriptContent) {
+            this.putQueryParameter("IncludeScriptContent", includeScriptContent);
+            this.includeScriptContent = includeScriptContent;
             return this;
         }
 

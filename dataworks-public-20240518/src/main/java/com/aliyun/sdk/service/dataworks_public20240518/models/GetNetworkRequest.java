@@ -83,7 +83,7 @@ public class GetNetworkRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network resource.</p>
+         * <p>The network ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

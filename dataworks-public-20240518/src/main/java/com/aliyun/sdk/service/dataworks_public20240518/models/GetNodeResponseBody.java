@@ -107,6 +107,9 @@ public class GetNodeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private Long taskId;
+
         private Node(Builder builder) {
             this.createTime = builder.createTime;
             this.id = builder.id;
@@ -115,6 +118,7 @@ public class GetNodeResponseBody extends TeaModel {
             this.owner = builder.owner;
             this.projectId = builder.projectId;
             this.spec = builder.spec;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -174,6 +178,13 @@ public class GetNodeResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return taskId
+         */
+        public Long getTaskId() {
+            return this.taskId;
+        }
+
         public static final class Builder {
             private Long createTime; 
             private Long id; 
@@ -182,6 +193,7 @@ public class GetNodeResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
             private String spec; 
+            private Long taskId; 
 
             /**
              * <p>The time when the node was created. This value is a UNIX timestamp.</p>
@@ -340,6 +352,14 @@ public class GetNodeResponseBody extends TeaModel {
              */
             public Builder spec(String spec) {
                 this.spec = spec;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(Long taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

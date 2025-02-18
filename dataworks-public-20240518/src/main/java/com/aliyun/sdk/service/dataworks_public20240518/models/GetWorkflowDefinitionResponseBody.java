@@ -107,6 +107,9 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
+        private Long workflowId;
+
         private WorkflowDefinition(Builder builder) {
             this.createTime = builder.createTime;
             this.id = builder.id;
@@ -115,6 +118,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             this.owner = builder.owner;
             this.projectId = builder.projectId;
             this.spec = builder.spec;
+            this.workflowId = builder.workflowId;
         }
 
         public static Builder builder() {
@@ -174,6 +178,13 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             return this.spec;
         }
 
+        /**
+         * @return workflowId
+         */
+        public Long getWorkflowId() {
+            return this.workflowId;
+        }
+
         public static final class Builder {
             private Long createTime; 
             private Long id; 
@@ -182,6 +193,7 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             private String owner; 
             private Long projectId; 
             private String spec; 
+            private Long workflowId; 
 
             /**
              * <p>The time when the workflow was created. This value is a UNIX timestamp.</p>
@@ -330,6 +342,14 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
              */
             public Builder spec(String spec) {
                 this.spec = spec;
+                return this;
+            }
+
+            /**
+             * WorkflowId.
+             */
+            public Builder workflowId(Long workflowId) {
+                this.workflowId = workflowId;
                 return this;
             }
 

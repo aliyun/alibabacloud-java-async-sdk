@@ -585,13 +585,15 @@ public class GetResourceGroupResponseBody extends TeaModel {
              * <li>Normal: The resource group is running or in use.</li>
              * <li>Stop: The resource group is expired.</li>
              * <li>Deleted: The resource group is released or destroyed.</li>
-             * <li>Creating: The resource group is being started.</li>
-             * <li>CreateFailed: The resource group fails to be started.</li>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>CreateFailed: The resource group fails to be created.</li>
              * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
              * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
              * <li>Deleting: The resource group is being released or destroyed.</li>
              * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
              * <li>Timeout: The operations that are performed on the resource group time out.</li>
+             * <li>Freezed: The resource group is frozen.</li>
+             * <li>Starting: The resource group is being started.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -181,7 +181,7 @@ public class GetProjectRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the role in the DataWorks workspace.</p>
+             * <p>The type of the role in the DataWorks workspace. Valid values:</p>
              * <ul>
              * <li>UserCustom: user-defined role</li>
              * <li>System: system role</li>

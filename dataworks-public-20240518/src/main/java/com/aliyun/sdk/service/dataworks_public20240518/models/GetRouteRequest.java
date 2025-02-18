@@ -83,7 +83,7 @@ public class GetRouteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The route ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

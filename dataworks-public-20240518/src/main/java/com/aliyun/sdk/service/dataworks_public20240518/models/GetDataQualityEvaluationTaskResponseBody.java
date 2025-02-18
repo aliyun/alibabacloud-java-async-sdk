@@ -799,7 +799,7 @@ public class GetDataQualityEvaluationTaskResponseBody extends TeaModel {
             private Trigger trigger; 
 
             /**
-             * <p>The ID of the data source used by the quality monitoring task.</p>
+             * <p>The ID of the data source used for the monitor.</p>
              * 
              * <strong>example:</strong>
              * <p>45238</p>

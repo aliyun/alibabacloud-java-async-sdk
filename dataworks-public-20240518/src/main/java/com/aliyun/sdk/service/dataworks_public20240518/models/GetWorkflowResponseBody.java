@@ -66,7 +66,7 @@ public class GetWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The infromation about the workflow.</p>
+         * <p>The information about the workflow.</p>
          */
         public Builder workflow(Workflow workflow) {
             this.workflow = workflow;

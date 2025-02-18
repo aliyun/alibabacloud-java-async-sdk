@@ -268,7 +268,7 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             private Long workflowId; 
 
             /**
-             * <p>The business date.</p>
+             * <p>The data timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1710239005403</p>
@@ -414,7 +414,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the workflow instance.</p>
+             * <p>The type of the workflow instance. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Manual</li>
+             * <li>SmokeTest</li>
+             * <li>SupplementData</li>
+             * <li>ManualWorkflow</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Normal</p>

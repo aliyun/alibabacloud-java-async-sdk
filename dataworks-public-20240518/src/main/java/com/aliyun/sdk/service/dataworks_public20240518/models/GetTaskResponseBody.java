@@ -203,7 +203,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The output identifier of the upstream task. (This field is returned when <code>same cycle dependence</code> and input content is set).</p>
+             * <p>The identifier of the output of the ancestor task. This parameter is returned only if <code>same-cycle scheduling dependencies</code> and the node input are configured.</p>
              * 
              * <strong>example:</strong>
              * <p>pre.odps_sql_demo_0</p>
@@ -214,7 +214,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Id of the upstream task. (This field is returned when the input content is not set for <code>cross-cycle dependency other nodes</code> and <code>same-cycle dependency</code>, otherwise it is not returned).</p>
+             * <p>The ancestor task ID. This parameter is returned only if <code>cross-cycle scheduling dependencies</code> or <code>same-cycle scheduling dependencies</code> and the node input are not configured.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>

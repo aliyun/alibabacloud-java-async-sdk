@@ -803,7 +803,7 @@ public class ListDataQualityEvaluationTaskInstancesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The name of the monitor.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

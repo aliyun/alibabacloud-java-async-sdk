@@ -67,7 +67,7 @@ public class GetRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The ID of the request. It is used to locate logs and troubleshoot problems.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</p>
@@ -195,7 +195,7 @@ public class GetRouteResponseBody extends TeaModel {
             private String resourceId; 
 
             /**
-             * <p>The creation time, which is a 64-bit timestamp.</p>
+             * <p>The time when the route was created. The value is a 64-bit timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1727055811000</p>
@@ -206,7 +206,7 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination route CIDR.</p>
+             * <p>The CIDR block of the destination-based route.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>
@@ -217,7 +217,7 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the route.</p>
+             * <p>The route ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -250,7 +250,7 @@ public class GetRouteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the network resource to which it belongs.</p>
+             * <p>The network resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ns-679XXXXX</p>
