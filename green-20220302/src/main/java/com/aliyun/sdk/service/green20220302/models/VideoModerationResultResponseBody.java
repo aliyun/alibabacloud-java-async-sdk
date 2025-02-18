@@ -132,6 +132,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
      * <p>VideoModerationResultResponseBody</p>
      */
     public static class AudioSummarys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
@@ -139,6 +142,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Integer labelSum;
 
         private AudioSummarys(Builder builder) {
+            this.description = builder.description;
             this.label = builder.label;
             this.labelSum = builder.labelSum;
         }
@@ -149,6 +153,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static AudioSummarys create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -166,8 +177,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String label; 
             private Integer labelSum; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * <p>The voice label.</p>
@@ -205,6 +225,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
      * <p>VideoModerationResultResponseBody</p>
      */
     public static class SliceDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Descriptions")
+        private String descriptions;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -242,6 +265,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private String url;
 
         private SliceDetails(Builder builder) {
+            this.descriptions = builder.descriptions;
             this.endTime = builder.endTime;
             this.endTimestamp = builder.endTimestamp;
             this.extend = builder.extend;
@@ -262,6 +286,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static SliceDetails create() {
             return builder().build();
+        }
+
+        /**
+         * @return descriptions
+         */
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         /**
@@ -349,6 +380,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String descriptions; 
             private Long endTime; 
             private Long endTimestamp; 
             private String extend; 
@@ -361,6 +393,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Long startTimestamp; 
             private String text; 
             private String url; 
+
+            /**
+             * Descriptions.
+             */
+            public Builder descriptions(String descriptions) {
+                this.descriptions = descriptions;
+                return this;
+            }
 
             /**
              * <p>The end time of the text after voice-to-text conversion. Unit: seconds.</p>

@@ -486,6 +486,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Descriptions")
+        private String descriptions;
+
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
@@ -509,6 +512,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
         private TextResult(Builder builder) {
             this.description = builder.description;
+            this.descriptions = builder.descriptions;
             this.labels = builder.labels;
             this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
@@ -531,6 +535,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return descriptions
+         */
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         /**
@@ -584,6 +595,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String descriptions; 
             private String labels; 
             private String riskLevel; 
             private String riskTips; 
@@ -600,6 +612,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Descriptions.
+             */
+            public Builder descriptions(String descriptions) {
+                this.descriptions = descriptions;
                 return this;
             }
 
@@ -996,6 +1016,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
      * <p>DescribeFileModerationResultResponseBody</p>
      */
     public static class TextLabels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
@@ -1003,6 +1026,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private Integer labelSum;
 
         private TextLabels(Builder builder) {
+            this.description = builder.description;
             this.label = builder.label;
             this.labelSum = builder.labelSum;
         }
@@ -1013,6 +1037,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
         public static TextLabels create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -1030,8 +1061,20 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String label; 
             private Integer labelSum; 
+
+            /**
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * <p>The details of the labels.</p>

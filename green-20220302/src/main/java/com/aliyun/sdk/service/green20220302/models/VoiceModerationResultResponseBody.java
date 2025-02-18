@@ -132,6 +132,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
      * <p>VoiceModerationResultResponseBody</p>
      */
     public static class SliceDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Descriptions")
+        private String descriptions;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -172,6 +175,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private String url;
 
         private SliceDetails(Builder builder) {
+            this.descriptions = builder.descriptions;
             this.endTime = builder.endTime;
             this.endTimestamp = builder.endTimestamp;
             this.extend = builder.extend;
@@ -193,6 +197,13 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
         public static SliceDetails create() {
             return builder().build();
+        }
+
+        /**
+         * @return descriptions
+         */
+        public String getDescriptions() {
+            return this.descriptions;
         }
 
         /**
@@ -287,6 +298,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String descriptions; 
             private Long endTime; 
             private Long endTimestamp; 
             private String extend; 
@@ -300,6 +312,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private Long startTimestamp; 
             private String text; 
             private String url; 
+
+            /**
+             * Descriptions.
+             */
+            public Builder descriptions(String descriptions) {
+                this.descriptions = descriptions;
+                return this;
+            }
 
             /**
              * <p>The end time of the audio segment in seconds.</p>
