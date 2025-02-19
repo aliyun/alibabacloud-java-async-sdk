@@ -42,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloseCreatedByResponse> closeCreatedBy(CloseCreatedByRequest request);
 
     /**
+     * @param request the request parameters of CreateAssociatedResourceRules  CreateAssociatedResourceRulesRequest
+     * @return CreateAssociatedResourceRulesResponse
+     */
+    CompletableFuture<CreateAssociatedResourceRulesResponse> createAssociatedResourceRules(CreateAssociatedResourceRulesRequest request);
+
+    /**
      * <b>description</b> :
      * <h3></h3>
      * <p>This topic provides an example on how to call the API operation to create a tag policy named <code>test</code>. In this example, the Tag Policy feature in multi-account mode is used. The tag policy defines that resources to which the <code>CostCenter:Beijing</code> or <code>CostCenter:Shanghai</code> tag is added are compliant and other resources are not compliant.</p>
@@ -61,6 +67,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateTagsResponse
      */
     CompletableFuture<CreateTagsResponse> createTags(CreateTagsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAssociatedResourceRule  DeleteAssociatedResourceRuleRequest
+     * @return DeleteAssociatedResourceRuleResponse
+     */
+    CompletableFuture<DeleteAssociatedResourceRuleResponse> deleteAssociatedResourceRule(DeleteAssociatedResourceRuleRequest request);
 
     /**
      * <b>description</b> :
@@ -157,6 +169,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPolicyEnableStatusResponse
      */
     CompletableFuture<GetPolicyEnableStatusResponse> getPolicyEnableStatus(GetPolicyEnableStatusRequest request);
+
+    /**
+     * @param request the request parameters of ListAssociatedResourceRules  ListAssociatedResourceRulesRequest
+     * @return ListAssociatedResourceRulesResponse
+     */
+    CompletableFuture<ListAssociatedResourceRulesResponse> listAssociatedResourceRules(ListAssociatedResourceRulesRequest request);
 
     /**
      * <b>description</b> :
@@ -285,5 +303,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAssociatedResourceRule  UpdateAssociatedResourceRuleRequest
+     * @return UpdateAssociatedResourceRuleResponse
+     */
+    CompletableFuture<UpdateAssociatedResourceRuleResponse> updateAssociatedResourceRule(UpdateAssociatedResourceRuleRequest request);
 
 }
