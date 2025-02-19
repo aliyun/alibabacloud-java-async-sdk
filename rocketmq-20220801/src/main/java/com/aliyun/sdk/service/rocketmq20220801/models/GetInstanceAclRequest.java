@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateInstanceAccountRequest} extends {@link RequestModel}
+ * {@link GetInstanceAclRequest} extends {@link RequestModel}
  *
- * <p>UpdateInstanceAccountRequest</p>
+ * <p>GetInstanceAclRequest</p>
  */
-public class UpdateInstanceAccountRequest extends Request {
+public class GetInstanceAclRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -28,26 +28,28 @@ public class UpdateInstanceAccountRequest extends Request {
     private String username;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("accountStatus")
-    private String accountStatus;
+    @com.aliyun.core.annotation.NameInMap("resourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("password")
-    private String password;
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceType;
 
-    private UpdateInstanceAccountRequest(Builder builder) {
+    private GetInstanceAclRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.username = builder.username;
-        this.accountStatus = builder.accountStatus;
-        this.password = builder.password;
+        this.resourceName = builder.resourceName;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateInstanceAccountRequest create() {
+    public static GetInstanceAclRequest create() {
         return builder().build();
     }
 
@@ -71,39 +73,38 @@ public class UpdateInstanceAccountRequest extends Request {
     }
 
     /**
-     * @return accountStatus
+     * @return resourceName
      */
-    public String getAccountStatus() {
-        return this.accountStatus;
+    public String getResourceName() {
+        return this.resourceName;
     }
 
     /**
-     * @return password
+     * @return resourceType
      */
-    public String getPassword() {
-        return this.password;
+    public String getResourceType() {
+        return this.resourceType;
     }
 
-    public static final class Builder extends Request.Builder<UpdateInstanceAccountRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetInstanceAclRequest, Builder> {
         private String instanceId; 
         private String username; 
-        private String accountStatus; 
-        private String password; 
+        private String resourceName; 
+        private String resourceType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateInstanceAccountRequest request) {
+        private Builder(GetInstanceAclRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.username = request.username;
-            this.accountStatus = request.accountStatus;
-            this.password = request.password;
+            this.resourceName = request.resourceName;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,11 +117,10 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The username of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>abc</p>
          */
         public Builder username(String username) {
             this.putPathParameter("username", username);
@@ -129,37 +129,32 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * <p>The status of the account.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>DISABLE</li>
-         * <li>ENABLE</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ENABLE</p>
-         */
-        public Builder accountStatus(String accountStatus) {
-            this.putQueryParameter("accountStatus", accountStatus);
-            this.accountStatus = accountStatus;
-            return this;
-        }
-
-        /**
-         * <p>The password of the account.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
          */
-        public Builder password(String password) {
-            this.putQueryParameter("password", password);
-            this.password = password;
+        public Builder resourceName(String resourceName) {
+            this.putQueryParameter("resourceName", resourceName);
+            this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic</p>
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("resourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
         @Override
-        public UpdateInstanceAccountRequest build() {
-            return new UpdateInstanceAccountRequest(this);
+        public GetInstanceAclRequest build() {
+            return new GetInstanceAclRequest(this);
         } 
 
     } 

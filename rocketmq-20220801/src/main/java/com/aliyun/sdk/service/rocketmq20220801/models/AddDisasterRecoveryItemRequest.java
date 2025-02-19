@@ -108,6 +108,9 @@ public class AddDisasterRecoveryItemRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
+        private String deliveryOrderType;
+
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
@@ -122,6 +125,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
 
         private Topics(Builder builder) {
             this.consumerGroupId = builder.consumerGroupId;
+            this.deliveryOrderType = builder.deliveryOrderType;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.regionId = builder.regionId;
@@ -141,6 +145,13 @@ public class AddDisasterRecoveryItemRequest extends Request {
          */
         public String getConsumerGroupId() {
             return this.consumerGroupId;
+        }
+
+        /**
+         * @return deliveryOrderType
+         */
+        public String getDeliveryOrderType() {
+            return this.deliveryOrderType;
         }
 
         /**
@@ -173,6 +184,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
 
         public static final class Builder {
             private String consumerGroupId; 
+            private String deliveryOrderType; 
             private String instanceId; 
             private String instanceType; 
             private String regionId; 
@@ -183,6 +195,14 @@ public class AddDisasterRecoveryItemRequest extends Request {
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
+                return this;
+            }
+
+            /**
+             * deliveryOrderType.
+             */
+            public Builder deliveryOrderType(String deliveryOrderType) {
+                this.deliveryOrderType = deliveryOrderType;
                 return this;
             }
 

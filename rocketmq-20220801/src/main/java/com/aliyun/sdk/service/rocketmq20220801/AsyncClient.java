@@ -190,6 +190,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceAccountResponse> getInstanceAccount(GetInstanceAccountRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceAcl  GetInstanceAclRequest
+     * @return GetInstanceAclResponse
+     */
+    CompletableFuture<GetInstanceAclResponse> getInstanceAcl(GetInstanceAclRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceIpWhitelist  GetInstanceIpWhitelistRequest
+     * @return GetInstanceIpWhitelistResponse
+     */
+    CompletableFuture<GetInstanceIpWhitelistResponse> getInstanceIpWhitelist(GetInstanceIpWhitelistRequest request);
+
+    /**
      * @param request the request parameters of GetMessageDetail  GetMessageDetailRequest
      * @return GetMessageDetailResponse
      */

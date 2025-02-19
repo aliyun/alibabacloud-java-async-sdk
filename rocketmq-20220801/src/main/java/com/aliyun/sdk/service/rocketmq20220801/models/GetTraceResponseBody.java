@@ -306,10 +306,14 @@ public class GetTraceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("presetDelayTime")
         private String presetDelayTime;
 
+        @com.aliyun.core.annotation.NameInMap("recallResult")
+        private String recallResult;
+
         private BrokerInfo(Builder builder) {
             this.delayStatus = builder.delayStatus;
             this.operations = builder.operations;
             this.presetDelayTime = builder.presetDelayTime;
+            this.recallResult = builder.recallResult;
         }
 
         public static Builder builder() {
@@ -341,10 +345,18 @@ public class GetTraceResponseBody extends TeaModel {
             return this.presetDelayTime;
         }
 
+        /**
+         * @return recallResult
+         */
+        public String getRecallResult() {
+            return this.recallResult;
+        }
+
         public static final class Builder {
             private String delayStatus; 
             private java.util.List<Operations> operations; 
             private String presetDelayTime; 
+            private String recallResult; 
 
             /**
              * <p>Delay status.</p>
@@ -373,6 +385,14 @@ public class GetTraceResponseBody extends TeaModel {
              */
             public Builder presetDelayTime(String presetDelayTime) {
                 this.presetDelayTime = presetDelayTime;
+                return this;
+            }
+
+            /**
+             * recallResult.
+             */
+            public Builder recallResult(String recallResult) {
+                this.recallResult = recallResult;
                 return this;
             }
 
@@ -1293,6 +1313,9 @@ public class GetTraceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("produceTime")
         private String produceTime;
 
+        @com.aliyun.core.annotation.NameInMap("recallTime")
+        private String recallTime;
+
         @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
@@ -1305,6 +1328,7 @@ public class GetTraceResponseBody extends TeaModel {
             this.produceDuration = builder.produceDuration;
             this.produceStatus = builder.produceStatus;
             this.produceTime = builder.produceTime;
+            this.recallTime = builder.recallTime;
             this.userName = builder.userName;
         }
 
@@ -1373,6 +1397,13 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
+         * @return recallTime
+         */
+        public String getRecallTime() {
+            return this.recallTime;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -1388,6 +1419,7 @@ public class GetTraceResponseBody extends TeaModel {
             private Long produceDuration; 
             private String produceStatus; 
             private String produceTime; 
+            private String recallTime; 
             private String userName; 
 
             /**
@@ -1475,6 +1507,14 @@ public class GetTraceResponseBody extends TeaModel {
              */
             public Builder produceTime(String produceTime) {
                 this.produceTime = produceTime;
+                return this;
+            }
+
+            /**
+             * recallTime.
+             */
+            public Builder recallTime(String recallTime) {
+                this.recallTime = recallTime;
                 return this;
             }
 

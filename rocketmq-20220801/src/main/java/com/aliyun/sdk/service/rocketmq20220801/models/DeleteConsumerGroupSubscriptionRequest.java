@@ -166,11 +166,6 @@ public class DeleteConsumerGroupSubscriptionRequest extends Request {
          * <li>SQL: filters messages by using SQL expressions.</li>
          * <li>TAG: filters messages by using tags.</li>
          * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>TAG: filters messages by using SQL expressions.</li>
-         * <li>SQL: filters messages by using SQL expressions.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

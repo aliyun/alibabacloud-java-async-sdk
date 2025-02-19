@@ -28,12 +28,12 @@ public class ListInstanceIpWhitelistRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageSize")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 10)
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 10)
     private Integer pageSize;
 
     private ListInstanceIpWhitelistRequest(Builder builder) {
@@ -130,7 +130,6 @@ public class ListInstanceIpWhitelistRequest extends Request {
 
         /**
          * <p>The page number. Default value: 1.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +142,6 @@ public class ListInstanceIpWhitelistRequest extends Request {
 
         /**
          * <p>The number of entries to return on each page.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

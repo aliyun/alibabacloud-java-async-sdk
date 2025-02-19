@@ -474,6 +474,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetInstanceAcl  GetInstanceAclRequest
+     * @return GetInstanceAclResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceAclResponse> getInstanceAcl(GetInstanceAclRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceAcl").setMethod(HttpMethod.GET).setPathRegex("/instances/{instanceId}/acl/account/{username}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceAclResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceAclResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetInstanceIpWhitelist  GetInstanceIpWhitelistRequest
+     * @return GetInstanceIpWhitelistResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceIpWhitelistResponse> getInstanceIpWhitelist(GetInstanceIpWhitelistRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceIpWhitelist").setMethod(HttpMethod.GET).setPathRegex("/instances/{instanceId}/ip/whitelists").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceIpWhitelistResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceIpWhitelistResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetMessageDetail  GetMessageDetailRequest
      * @return GetMessageDetailResponse
      */

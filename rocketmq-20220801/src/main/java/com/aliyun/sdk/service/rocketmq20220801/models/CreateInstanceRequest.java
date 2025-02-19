@@ -926,12 +926,6 @@ public class CreateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
-        @com.aliyun.core.annotation.NameInMap("chargeType")
-        private String chargeType;
-
-        @com.aliyun.core.annotation.NameInMap("intranetSpec")
-        private String intranetSpec;
-
         @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
@@ -950,8 +944,6 @@ public class CreateInstanceRequest extends Request {
 
         private ProductInfo(Builder builder) {
             this.autoScaling = builder.autoScaling;
-            this.chargeType = builder.chargeType;
-            this.intranetSpec = builder.intranetSpec;
             this.messageRetentionTime = builder.messageRetentionTime;
             this.msgProcessSpec = builder.msgProcessSpec;
             this.sendReceiveRatio = builder.sendReceiveRatio;
@@ -972,20 +964,6 @@ public class CreateInstanceRequest extends Request {
          */
         public Boolean getAutoScaling() {
             return this.autoScaling;
-        }
-
-        /**
-         * @return chargeType
-         */
-        public String getChargeType() {
-            return this.chargeType;
-        }
-
-        /**
-         * @return intranetSpec
-         */
-        public String getIntranetSpec() {
-            return this.intranetSpec;
         }
 
         /**
@@ -1025,8 +1003,6 @@ public class CreateInstanceRequest extends Request {
 
         public static final class Builder {
             private Boolean autoScaling; 
-            private String chargeType; 
-            private String intranetSpec; 
             private Integer messageRetentionTime; 
             private String msgProcessSpec; 
             private Float sendReceiveRatio; 
@@ -1050,33 +1026,6 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
-                return this;
-            }
-
-            /**
-             * <p>The billing method.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>provisioned</li>
-             * <li>ondemand</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>provisioned</p>
-             */
-            public Builder chargeType(String chargeType) {
-                this.chargeType = chargeType;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is no longer used. You do not need to configure this parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>xxxx</p>
-             */
-            public Builder intranetSpec(String intranetSpec) {
-                this.intranetSpec = intranetSpec;
                 return this;
             }
 

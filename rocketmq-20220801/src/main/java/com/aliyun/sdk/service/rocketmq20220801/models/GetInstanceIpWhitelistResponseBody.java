@@ -12,19 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteConsumerGroupSubscriptionResponseBody} extends {@link TeaModel}
+ * {@link GetInstanceIpWhitelistResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteConsumerGroupSubscriptionResponseBody</p>
+ * <p>GetInstanceIpWhitelistResponseBody</p>
  */
-public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("accessDeniedDetail")
-    private String accessDeniedDetail;
-
+public class GetInstanceIpWhitelistResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Boolean data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
@@ -44,8 +41,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private DeleteConsumerGroupSubscriptionResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
+    private GetInstanceIpWhitelistResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
@@ -60,15 +56,8 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteConsumerGroupSubscriptionResponseBody create() {
+    public static GetInstanceIpWhitelistResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return accessDeniedDetail
-     */
-    public String getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
     }
 
     /**
@@ -81,7 +70,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -128,9 +117,8 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String accessDeniedDetail; 
         private String code; 
-        private Boolean data; 
+        private Data data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -139,21 +127,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
-        public Builder accessDeniedDetail(String accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
-
-        /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -161,21 +135,15 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * data.
          */
-        public Builder data(Boolean data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The dynamic error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceId</p>
+         * dynamicCode.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -183,10 +151,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceId</p>
+         * dynamicMessage.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -194,10 +159,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * httpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -205,10 +167,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Parameter instanceId is mandatory for this action .</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -216,10 +175,7 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>723CDA5C-E25C-5EAF-9601-******</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,20 +183,104 @@ public class DeleteConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public DeleteConsumerGroupSubscriptionResponseBody build() {
-            return new DeleteConsumerGroupSubscriptionResponseBody(this);
+        public GetInstanceIpWhitelistResponseBody build() {
+            return new GetInstanceIpWhitelistResponseBody(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceIpWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceIpWhitelistResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("ipWhitelists")
+        private java.util.List<String> ipWhitelists;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
+        private String regionId;
+
+        private Data(Builder builder) {
+            this.instanceId = builder.instanceId;
+            this.ipWhitelists = builder.ipWhitelists;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return ipWhitelists
+         */
+        public java.util.List<String> getIpWhitelists() {
+            return this.ipWhitelists;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+            private java.util.List<String> ipWhitelists; 
+            private String regionId; 
+
+            /**
+             * instanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * ipWhitelists.
+             */
+            public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
+                this.ipWhitelists = ipWhitelists;
+                return this;
+            }
+
+            /**
+             * regionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

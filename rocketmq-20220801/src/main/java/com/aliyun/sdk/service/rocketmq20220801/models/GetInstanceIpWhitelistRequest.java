@@ -12,29 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteInstanceIpWhitelistRequest} extends {@link RequestModel}
+ * {@link GetInstanceIpWhitelistRequest} extends {@link RequestModel}
  *
- * <p>DeleteInstanceIpWhitelistRequest</p>
+ * <p>GetInstanceIpWhitelistRequest</p>
  */
-public class DeleteInstanceIpWhitelistRequest extends Request {
+public class GetInstanceIpWhitelistRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ipWhitelist")
-    @Deprecated
-    private String ipWhitelist;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ipWhitelists")
     private java.util.List<String> ipWhitelists;
 
-    private DeleteInstanceIpWhitelistRequest(Builder builder) {
+    private GetInstanceIpWhitelistRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.ipWhitelist = builder.ipWhitelist;
         this.ipWhitelists = builder.ipWhitelists;
     }
 
@@ -42,7 +36,7 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteInstanceIpWhitelistRequest create() {
+    public static GetInstanceIpWhitelistRequest create() {
         return builder().build();
     }
 
@@ -59,37 +53,27 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
     }
 
     /**
-     * @return ipWhitelist
-     */
-    public String getIpWhitelist() {
-        return this.ipWhitelist;
-    }
-
-    /**
      * @return ipWhitelists
      */
     public java.util.List<String> getIpWhitelists() {
         return this.ipWhitelists;
     }
 
-    public static final class Builder extends Request.Builder<DeleteInstanceIpWhitelistRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetInstanceIpWhitelistRequest, Builder> {
         private String instanceId; 
-        private String ipWhitelist; 
         private java.util.List<String> ipWhitelists; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstanceIpWhitelistRequest request) {
+        private Builder(GetInstanceIpWhitelistRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.ipWhitelist = request.ipWhitelist;
             this.ipWhitelists = request.ipWhitelists;
         } 
 
         /**
-         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,18 +82,6 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * <p>The IP address whitelist.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.0.0.0/0</p>
-         */
-        public Builder ipWhitelist(String ipWhitelist) {
-            this.putQueryParameter("ipWhitelist", ipWhitelist);
-            this.ipWhitelist = ipWhitelist;
             return this;
         }
 
@@ -124,8 +96,8 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         }
 
         @Override
-        public DeleteInstanceIpWhitelistRequest build() {
-            return new DeleteInstanceIpWhitelistRequest(this);
+        public GetInstanceIpWhitelistRequest build() {
+            return new GetInstanceIpWhitelistRequest(this);
         } 
 
     } 

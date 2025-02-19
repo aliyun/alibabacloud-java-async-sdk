@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetInstanceAccountResponseBody} extends {@link TeaModel}
+ * {@link GetInstanceAclResponseBody} extends {@link TeaModel}
  *
- * <p>GetInstanceAccountResponseBody</p>
+ * <p>GetInstanceAclResponseBody</p>
  */
-public class GetInstanceAccountResponseBody extends TeaModel {
+public class GetInstanceAclResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -41,7 +41,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private GetInstanceAccountResponseBody(Builder builder) {
+    private GetInstanceAclResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
@@ -56,7 +56,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetInstanceAccountResponseBody create() {
+    public static GetInstanceAclResponseBody create() {
         return builder().build();
     }
 
@@ -127,10 +127,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MissingInstanceId</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +135,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -146,10 +143,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ConsumerGroupId</p>
+         * dynamicCode.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,10 +151,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceId</p>
+         * dynamicMessage.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -168,10 +159,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * httpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -179,10 +167,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The instance cannot be found.</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,10 +175,10 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID, each request&quot;s ID is unique and can be used for troubleshooting and problem localization.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>B5C59E80-FCFC-5796-ABE4-D39EAAE578E4</p>
+         * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,41 +186,62 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public GetInstanceAccountResponseBody build() {
-            return new GetInstanceAccountResponseBody(this);
+        public GetInstanceAclResponseBody build() {
+            return new GetInstanceAclResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetInstanceAccountResponseBody} extends {@link TeaModel}
+     * {@link GetInstanceAclResponseBody} extends {@link TeaModel}
      *
-     * <p>GetInstanceAccountResponseBody</p>
+     * <p>GetInstanceAclResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("accountStatus")
-        private String accountStatus;
+        @com.aliyun.core.annotation.NameInMap("aclType")
+        private String aclType;
 
-        @com.aliyun.core.annotation.NameInMap("password")
-        private String password;
+        @com.aliyun.core.annotation.NameInMap("actions")
+        private java.util.List<String> actions;
+
+        @com.aliyun.core.annotation.NameInMap("decision")
+        private String decision;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("ipWhitelists")
+        private java.util.List<String> ipWhitelists;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("resourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("resourceType")
+        private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Data(Builder builder) {
-            this.accountStatus = builder.accountStatus;
-            this.password = builder.password;
+            this.aclType = builder.aclType;
+            this.actions = builder.actions;
+            this.decision = builder.decision;
+            this.instanceId = builder.instanceId;
+            this.ipWhitelists = builder.ipWhitelists;
+            this.regionId = builder.regionId;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
             this.username = builder.username;
         }
 
@@ -248,17 +254,59 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * @return accountStatus
+         * @return aclType
          */
-        public String getAccountStatus() {
-            return this.accountStatus;
+        public String getAclType() {
+            return this.aclType;
         }
 
         /**
-         * @return password
+         * @return actions
          */
-        public String getPassword() {
-            return this.password;
+        public java.util.List<String> getActions() {
+            return this.actions;
+        }
+
+        /**
+         * @return decision
+         */
+        public String getDecision() {
+            return this.decision;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return ipWhitelists
+         */
+        public java.util.List<String> getIpWhitelists() {
+            return this.ipWhitelists;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         /**
@@ -269,34 +317,82 @@ public class GetInstanceAccountResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String accountStatus; 
-            private String password; 
+            private String aclType; 
+            private java.util.List<String> actions; 
+            private String decision; 
+            private String instanceId; 
+            private java.util.List<String> ipWhitelists; 
+            private String regionId; 
+            private String resourceName; 
+            private String resourceType; 
             private String username; 
 
             /**
-             * accountStatus.
+             * aclType.
              */
-            public Builder accountStatus(String accountStatus) {
-                this.accountStatus = accountStatus;
+            public Builder aclType(String aclType) {
+                this.aclType = aclType;
                 return this;
             }
 
             /**
-             * <p>The password of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <hr>
+             * actions.
              */
-            public Builder password(String password) {
-                this.password = password;
+            public Builder actions(java.util.List<String> actions) {
+                this.actions = actions;
                 return this;
             }
 
             /**
-             * <p>The username of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>xxx</p>
+             * decision.
+             */
+            public Builder decision(String decision) {
+                this.decision = decision;
+                return this;
+            }
+
+            /**
+             * instanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * ipWhitelists.
+             */
+            public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
+                this.ipWhitelists = ipWhitelists;
+                return this;
+            }
+
+            /**
+             * regionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * resourceName.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * resourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;

@@ -29,7 +29,7 @@ public class UpdateInstanceAclRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("actions")
-    private String actions;
+    private java.util.List<String> actions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("decision")
@@ -90,7 +90,7 @@ public class UpdateInstanceAclRequest extends Request {
     /**
      * @return actions
      */
-    public String getActions() {
+    public java.util.List<String> getActions() {
         return this.actions;
     }
 
@@ -125,7 +125,7 @@ public class UpdateInstanceAclRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceAclRequest, Builder> {
         private String instanceId; 
         private String username; 
-        private String actions; 
+        private java.util.List<String> actions; 
         private String decision; 
         private java.util.List<String> ipWhitelists; 
         private String resourceName; 
@@ -188,7 +188,7 @@ public class UpdateInstanceAclRequest extends Request {
          * <strong>example:</strong>
          * <p>Pub</p>
          */
-        public Builder actions(String actions) {
+        public Builder actions(java.util.List<String> actions) {
             this.putBodyParameter("actions", actions);
             this.actions = actions;
             return this;

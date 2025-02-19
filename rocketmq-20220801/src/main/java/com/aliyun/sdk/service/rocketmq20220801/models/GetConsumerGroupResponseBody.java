@@ -361,6 +361,9 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("maxReceiveTps")
+        private Long maxReceiveTps;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
@@ -379,6 +382,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.deliveryOrderType = builder.deliveryOrderType;
             this.instanceId = builder.instanceId;
+            this.maxReceiveTps = builder.maxReceiveTps;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
             this.status = builder.status;
@@ -429,6 +433,13 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxReceiveTps
+         */
+        public Long getMaxReceiveTps() {
+            return this.maxReceiveTps;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -462,6 +473,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
             private String createTime; 
             private String deliveryOrderType; 
             private String instanceId; 
+            private Long maxReceiveTps; 
             private String regionId; 
             private String remark; 
             private String status; 
@@ -536,6 +548,14 @@ public class GetConsumerGroupResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * maxReceiveTps.
+             */
+            public Builder maxReceiveTps(Long maxReceiveTps) {
+                this.maxReceiveTps = maxReceiveTps;
                 return this;
             }
 
