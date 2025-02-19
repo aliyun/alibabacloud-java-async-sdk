@@ -17,11 +17,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Rules</p>
  */
 public class Rules extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("SchedulingRule")
-    private SchedulingRule schedulingRule;
+    @com.aliyun.core.annotation.NameInMap("Scheduling")
+    private SchedulingRule scheduling;
 
     private Rules(Builder builder) {
-        this.schedulingRule = builder.schedulingRule;
+        this.scheduling = builder.scheduling;
     }
 
     public static Builder builder() {
@@ -33,20 +33,20 @@ public class Rules extends TeaModel {
     }
 
     /**
-     * @return schedulingRule
+     * @return scheduling
      */
-    public SchedulingRule getSchedulingRule() {
-        return this.schedulingRule;
+    public SchedulingRule getScheduling() {
+        return this.scheduling;
     }
 
     public static final class Builder {
-        private SchedulingRule schedulingRule; 
+        private SchedulingRule scheduling; 
 
         /**
-         * SchedulingRule.
+         * Scheduling.
          */
-        public Builder schedulingRule(SchedulingRule schedulingRule) {
-            this.schedulingRule = schedulingRule;
+        public Builder scheduling(SchedulingRule scheduling) {
+            this.scheduling = scheduling;
             return this;
         }
 

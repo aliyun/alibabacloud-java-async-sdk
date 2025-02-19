@@ -29,8 +29,14 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnablePreemptSubquotaWorkloads")
     private Boolean enablePreemptSubquotaWorkloads;
 
+    @com.aliyun.core.annotation.NameInMap("EnableSubQuotaPreemption")
+    private Boolean enableSubQuotaPreemption;
+
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
     private java.util.List<WorkspaceSpecs> resourceSpecs;
+
+    @com.aliyun.core.annotation.NameInMap("SubQuotaPreemptionConfig")
+    private SubQuotaPreemptionConfig subQuotaPreemptionConfig;
 
     @com.aliyun.core.annotation.NameInMap("SupportGPUDrivers")
     private java.util.List<String> supportGPUDrivers;
@@ -46,7 +52,9 @@ public class QuotaConfig extends TeaModel {
         this.clusterId = builder.clusterId;
         this.defaultGPUDriver = builder.defaultGPUDriver;
         this.enablePreemptSubquotaWorkloads = builder.enablePreemptSubquotaWorkloads;
+        this.enableSubQuotaPreemption = builder.enableSubQuotaPreemption;
         this.resourceSpecs = builder.resourceSpecs;
+        this.subQuotaPreemptionConfig = builder.subQuotaPreemptionConfig;
         this.supportGPUDrivers = builder.supportGPUDrivers;
         this.supportRDMA = builder.supportRDMA;
         this.userVpc = builder.userVpc;
@@ -89,10 +97,24 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return enableSubQuotaPreemption
+     */
+    public Boolean getEnableSubQuotaPreemption() {
+        return this.enableSubQuotaPreemption;
+    }
+
+    /**
      * @return resourceSpecs
      */
     public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
+    }
+
+    /**
+     * @return subQuotaPreemptionConfig
+     */
+    public SubQuotaPreemptionConfig getSubQuotaPreemptionConfig() {
+        return this.subQuotaPreemptionConfig;
     }
 
     /**
@@ -121,7 +143,9 @@ public class QuotaConfig extends TeaModel {
         private String clusterId; 
         private String defaultGPUDriver; 
         private Boolean enablePreemptSubquotaWorkloads; 
+        private Boolean enableSubQuotaPreemption; 
         private java.util.List<WorkspaceSpecs> resourceSpecs; 
+        private SubQuotaPreemptionConfig subQuotaPreemptionConfig; 
         private java.util.List<String> supportGPUDrivers; 
         private Boolean supportRDMA; 
         private UserVpc userVpc; 
@@ -159,10 +183,26 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
+         * EnableSubQuotaPreemption.
+         */
+        public Builder enableSubQuotaPreemption(Boolean enableSubQuotaPreemption) {
+            this.enableSubQuotaPreemption = enableSubQuotaPreemption;
+            return this;
+        }
+
+        /**
          * ResourceSpecs.
          */
         public Builder resourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
             this.resourceSpecs = resourceSpecs;
+            return this;
+        }
+
+        /**
+         * SubQuotaPreemptionConfig.
+         */
+        public Builder subQuotaPreemptionConfig(SubQuotaPreemptionConfig subQuotaPreemptionConfig) {
+            this.subQuotaPreemptionConfig = subQuotaPreemptionConfig;
             return this;
         }
 

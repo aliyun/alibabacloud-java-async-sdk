@@ -76,6 +76,10 @@ public class ListQuotaWorkloadsRequest extends Request {
     private String userIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithHistoricalData")
+    private Boolean withHistoricalData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkloadCreatedTimeRange")
     private TimeRangeFilter workloadCreatedTimeRange;
 
@@ -111,6 +115,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         this.status = builder.status;
         this.subQuotaIds = builder.subQuotaIds;
         this.userIds = builder.userIds;
+        this.withHistoricalData = builder.withHistoricalData;
         this.workloadCreatedTimeRange = builder.workloadCreatedTimeRange;
         this.workloadIds = builder.workloadIds;
         this.workloadStatuses = builder.workloadStatuses;
@@ -230,6 +235,13 @@ public class ListQuotaWorkloadsRequest extends Request {
     }
 
     /**
+     * @return withHistoricalData
+     */
+    public Boolean getWithHistoricalData() {
+        return this.withHistoricalData;
+    }
+
+    /**
      * @return workloadCreatedTimeRange
      */
     public TimeRangeFilter getWorkloadCreatedTimeRange() {
@@ -279,6 +291,7 @@ public class ListQuotaWorkloadsRequest extends Request {
         private String status; 
         private String subQuotaIds; 
         private String userIds; 
+        private Boolean withHistoricalData; 
         private TimeRangeFilter workloadCreatedTimeRange; 
         private String workloadIds; 
         private String workloadStatuses; 
@@ -305,6 +318,7 @@ public class ListQuotaWorkloadsRequest extends Request {
             this.status = request.status;
             this.subQuotaIds = request.subQuotaIds;
             this.userIds = request.userIds;
+            this.withHistoricalData = request.withHistoricalData;
             this.workloadCreatedTimeRange = request.workloadCreatedTimeRange;
             this.workloadIds = request.workloadIds;
             this.workloadStatuses = request.workloadStatuses;
@@ -439,6 +453,15 @@ public class ListQuotaWorkloadsRequest extends Request {
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);
             this.userIds = userIds;
+            return this;
+        }
+
+        /**
+         * WithHistoricalData.
+         */
+        public Builder withHistoricalData(Boolean withHistoricalData) {
+            this.putQueryParameter("WithHistoricalData", withHistoricalData);
+            this.withHistoricalData = withHistoricalData;
             return this;
         }
 
