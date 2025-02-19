@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SelectionGroupRemoveProductRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("productIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> productIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("purchaserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String purchaserId;
 
     private SelectionGroupRemoveProductRequest(Builder builder) {
@@ -73,7 +75,7 @@ public class SelectionGroupRemoveProductRequest extends Request {
         } 
 
         /**
-         * productIds.
+         * <p>This parameter is required.</p>
          */
         public Builder productIds(java.util.List<String> productIds) {
             this.putBodyParameter("productIds", productIds);
@@ -82,7 +84,10 @@ public class SelectionGroupRemoveProductRequest extends Request {
         }
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PIDxxxxx</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putBodyParameter("purchaserId", purchaserId);

@@ -103,10 +103,12 @@ public class SearchProductsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Body
@@ -127,6 +129,7 @@ public class SearchProductsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("purchaserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String purchaserId;
 
     @com.aliyun.core.annotation.Body
@@ -654,7 +657,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -663,7 +669,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -708,7 +717,10 @@ public class SearchProductsRequest extends Request {
         }
 
         /**
-         * purchaserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PIDxxxx</p>
          */
         public Builder purchaserId(String purchaserId) {
             this.putBodyParameter("purchaserId", purchaserId);
