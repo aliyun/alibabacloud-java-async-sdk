@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlertPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateAlertPlanRequest</p>
@@ -84,7 +90,10 @@ public class UpdateAlertPlanRequest extends Request {
         } 
 
         /**
-         * dataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fb6001a73749c24fd9cb356</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("dataSourceId", dataSourceId);
@@ -93,7 +102,10 @@ public class UpdateAlertPlanRequest extends Request {
         }
 
         /**
-         * planId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18288</p>
          */
         public Builder planId(Long planId) {
             this.putQueryParameter("planId", planId);
@@ -102,7 +114,10 @@ public class UpdateAlertPlanRequest extends Request {
         }
 
         /**
-         * versions.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;1.1.0,1.2.0,1.3.0&quot;</p>
          */
         public Builder versions(String versions) {
             this.putQueryParameter("versions", versions);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNetworkTrendRequest} extends {@link RequestModel}
  *
  * <p>GetNetworkTrendRequest</p>
@@ -122,7 +128,10 @@ public class GetNetworkTrendRequest extends Request {
         }
 
         /**
-         * dataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fb6001a73749c24fd9cb356</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("dataSourceId", dataSourceId);
@@ -131,7 +140,10 @@ public class GetNetworkTrendRequest extends Request {
         }
 
         /**
-         * endDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-03</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);
@@ -140,7 +152,10 @@ public class GetNetworkTrendRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-01</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("startDate", startDate);
@@ -149,7 +164,10 @@ public class GetNetworkTrendRequest extends Request {
         }
 
         /**
-         * timeUnit.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder timeUnit(String timeUnit) {
             this.putQueryParameter("timeUnit", timeUnit);

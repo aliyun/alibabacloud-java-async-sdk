@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of DeleteSymRecords  DeleteSymRecordsRequest
+     * @return DeleteSymRecordsResponse
+     */
     @Override
     public CompletableFuture<DeleteSymRecordsResponse> deleteSymRecords(DeleteSymRecordsRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetH5PageTrend  GetH5PageTrendRequest
+     * @return GetH5PageTrendResponse
+     */
     @Override
     public CompletableFuture<GetH5PageTrendResponse> getH5PageTrend(GetH5PageTrendRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLaunchTrend  GetLaunchTrendRequest
+     * @return GetLaunchTrendResponse
+     */
     @Override
     public CompletableFuture<GetLaunchTrendResponse> getLaunchTrend(GetLaunchTrendRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNativePageTrend  GetNativePageTrendRequest
+     * @return GetNativePageTrendResponse
+     */
     @Override
     public CompletableFuture<GetNativePageTrendResponse> getNativePageTrend(GetNativePageTrendRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetNetworkTrend  GetNetworkTrendRequest
+     * @return GetNetworkTrendResponse
+     */
     @Override
     public CompletableFuture<GetNetworkTrendResponse> getNetworkTrend(GetNetworkTrendRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStatTrend  GetStatTrendRequest
+     * @return GetStatTrendResponse
+     */
     @Override
     public CompletableFuture<GetStatTrendResponse> getStatTrend(GetStatTrendRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSymUploadParam  GetSymUploadParamRequest
+     * @return GetSymUploadParamResponse
+     */
     @Override
     public CompletableFuture<GetSymUploadParamResponse> getSymUploadParam(GetSymUploadParamRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTodayStatTrend  GetTodayStatTrendRequest
+     * @return GetTodayStatTrendResponse
+     */
     @Override
     public CompletableFuture<GetTodayStatTrendResponse> getTodayStatTrend(GetTodayStatTrendRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlertPlan  UpdateAlertPlanRequest
+     * @return UpdateAlertPlanResponse
+     */
     @Override
     public CompletableFuture<UpdateAlertPlanResponse> updateAlertPlan(UpdateAlertPlanRequest request) {
         try {

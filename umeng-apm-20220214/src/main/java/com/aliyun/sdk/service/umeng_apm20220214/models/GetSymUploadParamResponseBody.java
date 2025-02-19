@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSymUploadParamResponseBody} extends {@link TeaModel}
  *
  * <p>GetSymUploadParamResponseBody</p>
@@ -93,7 +99,7 @@ public class GetSymUploadParamResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,7 +123,10 @@ public class GetSymUploadParamResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f07c516457690916816858d94ea</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -130,6 +139,12 @@ public class GetSymUploadParamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSymUploadParamResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSymUploadParamResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessKeyId")
         private String accessKeyId;

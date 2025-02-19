@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetNetworkTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetNetworkTrendResponseBody</p>
@@ -15,7 +21,7 @@ public class GetNetworkTrendResponseBody extends TeaModel {
     private Long code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
@@ -48,7 +54,7 @@ public class GetNetworkTrendResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +74,7 @@ public class GetNetworkTrendResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String msg; 
         private Boolean success; 
 
@@ -83,7 +89,7 @@ public class GetNetworkTrendResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -110,6 +116,12 @@ public class GetNetworkTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetNetworkTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetNetworkTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("avgCost")
         private Double avgCost;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSymRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSymRecordsResponseBody</p>
@@ -85,7 +91,10 @@ public class DeleteSymRecordsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * code
+         * <p>code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -117,7 +126,10 @@ public class DeleteSymRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * traceId
+         * <p>traceId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210f07c516457690916816858d94ea</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

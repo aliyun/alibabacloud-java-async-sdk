@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTodayStatTrendRequest} extends {@link RequestModel}
  *
  * <p>GetTodayStatTrendRequest</p>
@@ -92,7 +98,10 @@ public class GetTodayStatTrendRequest extends Request {
         }
 
         /**
-         * dataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fb6001a73749c24fd9cb356</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("dataSourceId", dataSourceId);
@@ -101,7 +110,10 @@ public class GetTodayStatTrendRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("type", type);

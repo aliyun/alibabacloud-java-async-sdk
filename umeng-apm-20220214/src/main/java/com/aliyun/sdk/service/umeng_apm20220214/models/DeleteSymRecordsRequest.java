@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSymRecordsRequest} extends {@link RequestModel}
  *
  * <p>DeleteSymRecordsRequest</p>
@@ -14,7 +20,7 @@ public class DeleteSymRecordsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("appVersions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > appVersions;
+    private java.util.List<String> appVersions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dataSourceId")
@@ -49,7 +55,7 @@ public class DeleteSymRecordsRequest extends Request {
     /**
      * @return appVersions
      */
-    public java.util.List < String > getAppVersions() {
+    public java.util.List<String> getAppVersions() {
         return this.appVersions;
     }
 
@@ -68,7 +74,7 @@ public class DeleteSymRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteSymRecordsRequest, Builder> {
-        private java.util.List < String > appVersions; 
+        private java.util.List<String> appVersions; 
         private String dataSourceId; 
         private Integer fileType; 
 
@@ -84,9 +90,9 @@ public class DeleteSymRecordsRequest extends Request {
         } 
 
         /**
-         * appVersions.
+         * <p>This parameter is required.</p>
          */
-        public Builder appVersions(java.util.List < String > appVersions) {
+        public Builder appVersions(java.util.List<String> appVersions) {
             String appVersionsShrink = shrink(appVersions, "appVersions", "simple");
             this.putBodyParameter("appVersions", appVersionsShrink);
             this.appVersions = appVersions;
@@ -94,7 +100,10 @@ public class DeleteSymRecordsRequest extends Request {
         }
 
         /**
-         * dataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fb6001a73749c24fd9cb356</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("dataSourceId", dataSourceId);
@@ -103,7 +112,10 @@ public class DeleteSymRecordsRequest extends Request {
         }
 
         /**
-         * fileType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileType(Integer fileType) {
             this.putBodyParameter("fileType", fileType);

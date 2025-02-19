@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSymUploadParamRequest} extends {@link RequestModel}
  *
  * <p>GetSymUploadParamRequest</p>
@@ -28,7 +34,7 @@ public class GetSymUploadParamRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("fileType")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 4, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 7, minimum = 1)
     private Integer fileType;
 
     @com.aliyun.core.annotation.Query
@@ -113,7 +119,10 @@ public class GetSymUploadParamRequest extends Request {
         } 
 
         /**
-         * appVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.3</p>
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("appVersion", appVersion);
@@ -122,7 +131,10 @@ public class GetSymUploadParamRequest extends Request {
         }
 
         /**
-         * dataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5fb6001a73749c24fd9cb356</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("dataSourceId", dataSourceId);
@@ -131,7 +143,10 @@ public class GetSymUploadParamRequest extends Request {
         }
 
         /**
-         * fileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>symbol.zip</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("fileName", fileName);
@@ -140,7 +155,10 @@ public class GetSymUploadParamRequest extends Request {
         }
 
         /**
-         * fileType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileType(Integer fileType) {
             this.putQueryParameter("fileType", fileType);
