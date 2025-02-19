@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeCustomScenePoliciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
@@ -89,7 +89,6 @@ public class DescribeCustomScenePoliciesRequest extends Request {
 
         /**
          * <p>The number of the page to return. Valid values: <strong>1 to 100000</strong>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
