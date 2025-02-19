@@ -114,6 +114,10 @@ public class DescribePriceRequest extends Request {
     private String priceUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecurrenceRules")
+    private java.util.List<RecurrenceRules> recurrenceRules;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -141,6 +145,10 @@ public class DescribePriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -172,6 +180,7 @@ public class DescribePriceRequest extends Request {
         this.period = builder.period;
         this.platform = builder.platform;
         this.priceUnit = builder.priceUnit;
+        this.recurrenceRules = builder.recurrenceRules;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -179,6 +188,7 @@ public class DescribePriceRequest extends Request {
         this.scope = builder.scope;
         this.spotDuration = builder.spotDuration;
         this.spotStrategy = builder.spotStrategy;
+        this.startTime = builder.startTime;
         this.zoneId = builder.zoneId;
     }
 
@@ -364,6 +374,13 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return recurrenceRules
+     */
+    public java.util.List<RecurrenceRules> getRecurrenceRules() {
+        return this.recurrenceRules;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -413,6 +430,13 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -444,6 +468,7 @@ public class DescribePriceRequest extends Request {
         private Integer period; 
         private String platform; 
         private String priceUnit; 
+        private java.util.List<RecurrenceRules> recurrenceRules; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -451,6 +476,7 @@ public class DescribePriceRequest extends Request {
         private String scope; 
         private Integer spotDuration; 
         private String spotStrategy; 
+        private String startTime; 
         private String zoneId; 
 
         private Builder() {
@@ -483,6 +509,7 @@ public class DescribePriceRequest extends Request {
             this.period = request.period;
             this.platform = request.platform;
             this.priceUnit = request.priceUnit;
+            this.recurrenceRules = request.recurrenceRules;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -490,6 +517,7 @@ public class DescribePriceRequest extends Request {
             this.scope = request.scope;
             this.spotDuration = request.spotDuration;
             this.spotStrategy = request.spotStrategy;
+            this.startTime = request.startTime;
             this.zoneId = request.zoneId;
         } 
 
@@ -814,6 +842,15 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
+         * RecurrenceRules.
+         */
+        public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
+            this.putQueryParameter("RecurrenceRules", recurrenceRules);
+            this.recurrenceRules = recurrenceRules;
+            return this;
+        }
+
+        /**
          * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
          * <p>This parameter is required.</p>
          * 
@@ -920,6 +957,15 @@ public class DescribePriceRequest extends Request {
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
             this.spotStrategy = spotStrategy;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
@@ -1274,6 +1320,115 @@ public class DescribePriceRequest extends Request {
 
             public SystemDisk build() {
                 return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePriceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePriceRequest</p>
+     */
+    public static class RecurrenceRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndHour")
+        @com.aliyun.core.annotation.Validation(maximum = 24)
+        private Integer endHour;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
+        private String recurrenceType;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
+        private String recurrenceValue;
+
+        @com.aliyun.core.annotation.NameInMap("StartHour")
+        @com.aliyun.core.annotation.Validation(maximum = 24)
+        private Integer startHour;
+
+        private RecurrenceRules(Builder builder) {
+            this.endHour = builder.endHour;
+            this.recurrenceType = builder.recurrenceType;
+            this.recurrenceValue = builder.recurrenceValue;
+            this.startHour = builder.startHour;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecurrenceRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endHour
+         */
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        /**
+         * @return recurrenceType
+         */
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        /**
+         * @return recurrenceValue
+         */
+        public String getRecurrenceValue() {
+            return this.recurrenceValue;
+        }
+
+        /**
+         * @return startHour
+         */
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+        public static final class Builder {
+            private Integer endHour; 
+            private String recurrenceType; 
+            private String recurrenceValue; 
+            private Integer startHour; 
+
+            /**
+             * EndHour.
+             */
+            public Builder endHour(Integer endHour) {
+                this.endHour = endHour;
+                return this;
+            }
+
+            /**
+             * RecurrenceType.
+             */
+            public Builder recurrenceType(String recurrenceType) {
+                this.recurrenceType = recurrenceType;
+                return this;
+            }
+
+            /**
+             * RecurrenceValue.
+             */
+            public Builder recurrenceValue(String recurrenceValue) {
+                this.recurrenceValue = recurrenceValue;
+                return this;
+            }
+
+            /**
+             * StartHour.
+             */
+            public Builder startHour(Integer startHour) {
+                this.startHour = startHour;
+                return this;
+            }
+
+            public RecurrenceRules build() {
+                return new RecurrenceRules(this);
             } 
 
         } 

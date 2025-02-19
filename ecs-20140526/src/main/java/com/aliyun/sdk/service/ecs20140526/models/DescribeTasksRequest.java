@@ -368,6 +368,7 @@ public class DescribeTasksRequest extends Request {
          * <li>ExportImage</li>
          * <li>RedeployInstance</li>
          * <li>ModifyDiskSpec</li>
+         * <li>ArchiveSnapshot</li>
          * </ul>
          * 
          * <strong>example:</strong>

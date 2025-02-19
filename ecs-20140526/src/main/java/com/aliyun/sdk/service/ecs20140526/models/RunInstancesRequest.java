@@ -286,7 +286,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotDuration")
-    @com.aliyun.core.annotation.Validation(maximum = 6)
+    @com.aliyun.core.annotation.Validation(maximum = 720)
     private Integer spotDuration;
 
     @com.aliyun.core.annotation.Query

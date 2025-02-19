@@ -667,7 +667,10 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String topologyType; 
 
             /**
-             * Core.
+             * <p>The number of CPU cores. This parameter cannot be specified but only uses its default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder core(Integer core) {
                 this.core = core;
@@ -675,7 +678,14 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * ThreadsPerCore.
+             * <p>The number of threads per CPU core. The following formula is used to calculate the number of vCPUs of the instance: <code>CpuOptions.Core</code> value × <code>CpuOptions.ThreadsPerCore</code> value.</p>
+             * <ul>
+             * <li>If <code>CpuOptionsThreadPerCore</code> is set to 1, Hyper-Threading (HT) is disabled.</li>
+             * <li>This parameter is applicable only to specific instance types.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder threadsPerCore(Integer threadsPerCore) {
                 this.threadsPerCore = threadsPerCore;

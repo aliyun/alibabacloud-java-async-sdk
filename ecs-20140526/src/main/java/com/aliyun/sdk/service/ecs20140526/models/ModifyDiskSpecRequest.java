@@ -223,7 +223,12 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * DestinationZoneId.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);

@@ -699,7 +699,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the promotion rules.</p>
+             * <p>The information about the promotion rules.</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

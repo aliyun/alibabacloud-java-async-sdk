@@ -51,6 +51,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
+    private String packageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
@@ -93,6 +97,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.packageType = builder.packageType;
         this.platform = builder.platform;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -173,6 +178,13 @@ public class DescribeElasticityAssurancesRequest extends Request {
     }
 
     /**
+     * @return packageType
+     */
+    public String getPackageType() {
+        return this.packageType;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
@@ -237,6 +249,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String packageType; 
         private String platform; 
         private String regionId; 
         private String resourceGroupId; 
@@ -260,6 +273,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.packageType = request.packageType;
             this.platform = request.platform;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -354,6 +368,15 @@ public class DescribeElasticityAssurancesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PackageType.
+         */
+        public Builder packageType(String packageType) {
+            this.putQueryParameter("PackageType", packageType);
+            this.packageType = packageType;
             return this;
         }
 

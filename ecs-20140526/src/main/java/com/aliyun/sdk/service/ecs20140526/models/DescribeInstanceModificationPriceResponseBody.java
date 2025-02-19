@@ -124,7 +124,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Description.
+             * <p>The description of the pricing rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -132,7 +132,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the pricing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>315716429631488</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -274,7 +277,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * DiscountPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>655.2</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -282,7 +288,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4368</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -290,7 +299,17 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The resource name. Valid values:</p>
+             * <ul>
+             * <li>InstanceType</li>
+             * <li>bandwidth</li>
+             * <li>image</li>
+             * <li>SystemDisk</li>
+             * <li>DataDisk</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceType</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -298,7 +317,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * SubRules.
+             * <p>The pricing rules.</p>
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;
@@ -306,7 +325,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3712.8</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -448,9 +470,11 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * <p>The currency unit.</p>
-             * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
-             * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
+             * <p>The currency unit. Valid values:</p>
+             * <ul>
+             * <li>Alibaba Cloud China site (aliyun.com): CNY</li>
+             * <li>Alibaba Cloud International site (alibabacloud.com): USD</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -461,7 +485,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DetailInfos.
+             * <p>The information about the price.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when ResourceType is set to instance.</p>
+             * </blockquote>
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;

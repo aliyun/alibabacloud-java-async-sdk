@@ -6679,15 +6679,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>A private pool is generated after an elasticity assurance or a capacity reservation is created. The private pool is associated with information about the instances that are created by using the resources in the private pool. When you create ECS instances, you can configure the instances to use private pool resources, matching them to active elasticity assurances or capacity reservations.</p>
+     * <p>A private pool is generated after an elasticity assurance or a capacity reservation is created. The private pool is associated with information about the instances that use the private pool. You can specify whether to use a private pool when you create an ECS instance to match the instance with the associated elasticity assurance or capacity reservation.</p>
      * <ul>
-     * <li>This operation does not require you to restart the instances for the changes to take effect.</li>
-     * <li>When you call the following operations on an instance, the system attempts to match the instance with active private pools. If the instance is configured to a specific private pool. the call may fail because the private pool is no longer active or does not have sufficient resources. If the call fails, call the ModifyInstanceAttachmentAttributes operation to change the match mode of the private pool to <code>Open</code>.<ul>
-     * <li>StartInstance: starts an instance that is stopped in economical mode.</li>
-     * <li>ReActivateInstances</li>
-     * <li>ModifyInstanceChargeType</li>
-     * <li>ModifyPrepayInstanceSpec</li>
-     * <li>ReplaceSystemDisk</li>
+     * <li>After you call this operation to modify the private pool attributes of an ECS instance, you do not need to restart the instance for the changes to take effect.</li>
+     * <li>When you call the following operations on an ECS instance, the system attempts to match the instance with active private pools. If the instance is already matched to a specified private pool, the call to an operation may fail when the private pool capacity is used up or the private pool expires. If the call fails, call the ModifyInstanceAttachmentAttributes operation to change the type of the private pool to <code>Open</code>.<ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a>: start an ECS instance that is stopped in economical mode.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/2679707.html">ReActivateInstances</a>: reactivates an ECS instance that has expired or is reclaimed due to an overdue payment.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/2679704.html">ModifyInstanceChargeType</a>: changes the billing method of an ECS instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/2679706.html">ModifyPrepayInstanceSpec</a>: changes the instance type of an ECS instance.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/2679771.html">ReplaceSystemDisk</a>: replaces the operating system of an ECS instance.</li>
      * </ul>
      * </li>
      * </ul>

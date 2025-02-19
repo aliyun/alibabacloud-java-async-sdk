@@ -516,6 +516,160 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
      *
      * <p>DescribeElasticityAssurancesResponseBody</p>
      */
+    public static class RecurrenceRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndHour")
+        private Integer endHour;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
+        private String recurrenceType;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
+        private String recurrenceValue;
+
+        @com.aliyun.core.annotation.NameInMap("StartHour")
+        private Integer startHour;
+
+        private RecurrenceRule(Builder builder) {
+            this.endHour = builder.endHour;
+            this.recurrenceType = builder.recurrenceType;
+            this.recurrenceValue = builder.recurrenceValue;
+            this.startHour = builder.startHour;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecurrenceRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endHour
+         */
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        /**
+         * @return recurrenceType
+         */
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        /**
+         * @return recurrenceValue
+         */
+        public String getRecurrenceValue() {
+            return this.recurrenceValue;
+        }
+
+        /**
+         * @return startHour
+         */
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+        public static final class Builder {
+            private Integer endHour; 
+            private String recurrenceType; 
+            private String recurrenceValue; 
+            private Integer startHour; 
+
+            /**
+             * EndHour.
+             */
+            public Builder endHour(Integer endHour) {
+                this.endHour = endHour;
+                return this;
+            }
+
+            /**
+             * RecurrenceType.
+             */
+            public Builder recurrenceType(String recurrenceType) {
+                this.recurrenceType = recurrenceType;
+                return this;
+            }
+
+            /**
+             * RecurrenceValue.
+             */
+            public Builder recurrenceValue(String recurrenceValue) {
+                this.recurrenceValue = recurrenceValue;
+                return this;
+            }
+
+            /**
+             * StartHour.
+             */
+            public Builder startHour(Integer startHour) {
+                this.startHour = startHour;
+                return this;
+            }
+
+            public RecurrenceRule build() {
+                return new RecurrenceRule(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
+    public static class RecurrenceRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RecurrenceRule")
+        private java.util.List<RecurrenceRule> recurrenceRule;
+
+        private RecurrenceRules(Builder builder) {
+            this.recurrenceRule = builder.recurrenceRule;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecurrenceRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return recurrenceRule
+         */
+        public java.util.List<RecurrenceRule> getRecurrenceRule() {
+            return this.recurrenceRule;
+        }
+
+        public static final class Builder {
+            private java.util.List<RecurrenceRule> recurrenceRule; 
+
+            /**
+             * RecurrenceRule.
+             */
+            public Builder recurrenceRule(java.util.List<RecurrenceRule> recurrenceRule) {
+                this.recurrenceRule = recurrenceRule;
+                return this;
+            }
+
+            public RecurrenceRules build() {
+                return new RecurrenceRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -655,6 +809,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatestStartTime")
         private String latestStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("PackageType")
+        private String packageType;
+
         @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
@@ -663,6 +820,9 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsName")
         private String privatePoolOptionsName;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceRules")
+        private RecurrenceRules recurrenceRules;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -695,9 +855,11 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.instanceChargeType = builder.instanceChargeType;
             this.latestStartTime = builder.latestStartTime;
+            this.packageType = builder.packageType;
             this.privatePoolOptionsId = builder.privatePoolOptionsId;
             this.privatePoolOptionsMatchCriteria = builder.privatePoolOptionsMatchCriteria;
             this.privatePoolOptionsName = builder.privatePoolOptionsName;
+            this.recurrenceRules = builder.recurrenceRules;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.startTime = builder.startTime;
@@ -759,6 +921,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageType
+         */
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        /**
          * @return privatePoolOptionsId
          */
         public String getPrivatePoolOptionsId() {
@@ -777,6 +946,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
          */
         public String getPrivatePoolOptionsName() {
             return this.privatePoolOptionsName;
+        }
+
+        /**
+         * @return recurrenceRules
+         */
+        public RecurrenceRules getRecurrenceRules() {
+            return this.recurrenceRules;
         }
 
         /**
@@ -842,9 +1018,11 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String endTime; 
             private String instanceChargeType; 
             private String latestStartTime; 
+            private String packageType; 
             private String privatePoolOptionsId; 
             private String privatePoolOptionsMatchCriteria; 
             private String privatePoolOptionsName; 
+            private RecurrenceRules recurrenceRules; 
             private String regionId; 
             private String resourceGroupId; 
             private String startTime; 
@@ -922,6 +1100,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
+             * PackageType.
+             */
+            public Builder packageType(String packageType) {
+                this.packageType = packageType;
+                return this;
+            }
+
+            /**
              * <p>The ID of the elasticity assurance.</p>
              * 
              * <strong>example:</strong>
@@ -955,6 +1141,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
              */
             public Builder privatePoolOptionsName(String privatePoolOptionsName) {
                 this.privatePoolOptionsName = privatePoolOptionsName;
+                return this;
+            }
+
+            /**
+             * RecurrenceRules.
+             */
+            public Builder recurrenceRules(RecurrenceRules recurrenceRules) {
+                this.recurrenceRules = recurrenceRules;
                 return this;
             }
 

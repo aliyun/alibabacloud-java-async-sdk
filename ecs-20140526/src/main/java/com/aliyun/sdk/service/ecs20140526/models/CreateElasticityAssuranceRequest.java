@@ -71,6 +71,10 @@ public class CreateElasticityAssuranceRequest extends Request {
     private String periodUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecurrenceRules")
+    private java.util.List<RecurrenceRules> recurrenceRules;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -115,6 +119,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.recurrenceRules = builder.recurrenceRules;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -229,6 +234,13 @@ public class CreateElasticityAssuranceRequest extends Request {
     }
 
     /**
+     * @return recurrenceRules
+     */
+    public java.util.List<RecurrenceRules> getRecurrenceRules() {
+        return this.recurrenceRules;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -291,6 +303,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         private Long ownerId; 
         private Integer period; 
         private String periodUnit; 
+        private java.util.List<RecurrenceRules> recurrenceRules; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -318,6 +331,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             this.ownerId = request.ownerId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.recurrenceRules = request.recurrenceRules;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -485,6 +499,15 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
+         * RecurrenceRules.
+         */
+        public Builder recurrenceRules(java.util.List<RecurrenceRules> recurrenceRules) {
+            this.putQueryParameter("RecurrenceRules", recurrenceRules);
+            this.recurrenceRules = recurrenceRules;
+            return this;
+        }
+
+        /**
          * <p>The ID of the region in which to create the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
@@ -641,6 +664,115 @@ public class CreateElasticityAssuranceRequest extends Request {
 
             public PrivatePoolOptions build() {
                 return new PrivatePoolOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateElasticityAssuranceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateElasticityAssuranceRequest</p>
+     */
+    public static class RecurrenceRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndHour")
+        @com.aliyun.core.annotation.Validation(maximum = 24)
+        private Integer endHour;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
+        private String recurrenceType;
+
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
+        private String recurrenceValue;
+
+        @com.aliyun.core.annotation.NameInMap("StartHour")
+        @com.aliyun.core.annotation.Validation(maximum = 24)
+        private Integer startHour;
+
+        private RecurrenceRules(Builder builder) {
+            this.endHour = builder.endHour;
+            this.recurrenceType = builder.recurrenceType;
+            this.recurrenceValue = builder.recurrenceValue;
+            this.startHour = builder.startHour;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecurrenceRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endHour
+         */
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        /**
+         * @return recurrenceType
+         */
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        /**
+         * @return recurrenceValue
+         */
+        public String getRecurrenceValue() {
+            return this.recurrenceValue;
+        }
+
+        /**
+         * @return startHour
+         */
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+        public static final class Builder {
+            private Integer endHour; 
+            private String recurrenceType; 
+            private String recurrenceValue; 
+            private Integer startHour; 
+
+            /**
+             * EndHour.
+             */
+            public Builder endHour(Integer endHour) {
+                this.endHour = endHour;
+                return this;
+            }
+
+            /**
+             * RecurrenceType.
+             */
+            public Builder recurrenceType(String recurrenceType) {
+                this.recurrenceType = recurrenceType;
+                return this;
+            }
+
+            /**
+             * RecurrenceValue.
+             */
+            public Builder recurrenceValue(String recurrenceValue) {
+                this.recurrenceValue = recurrenceValue;
+                return this;
+            }
+
+            /**
+             * StartHour.
+             */
+            public Builder startHour(Integer startHour) {
+                this.startHour = startHour;
+                return this;
+            }
+
+            public RecurrenceRules build() {
+                return new RecurrenceRules(this);
             } 
 
         } 
