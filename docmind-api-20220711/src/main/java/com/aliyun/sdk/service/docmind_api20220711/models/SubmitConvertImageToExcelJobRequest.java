@@ -33,12 +33,22 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageUrls")
     private java.util.List<String> imageUrls;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    private String ossBucket;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
+    private String ossEndpoint;
+
     private SubmitConvertImageToExcelJobRequest(Builder builder) {
         super(builder);
         this.forceMergeExcel = builder.forceMergeExcel;
         this.imageNameExtension = builder.imageNameExtension;
         this.imageNames = builder.imageNames;
         this.imageUrls = builder.imageUrls;
+        this.ossBucket = builder.ossBucket;
+        this.ossEndpoint = builder.ossEndpoint;
     }
 
     public static Builder builder() {
@@ -82,11 +92,27 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
         return this.imageUrls;
     }
 
+    /**
+     * @return ossBucket
+     */
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    /**
+     * @return ossEndpoint
+     */
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
+    }
+
     public static final class Builder extends Request.Builder<SubmitConvertImageToExcelJobRequest, Builder> {
         private Boolean forceMergeExcel; 
         private String imageNameExtension; 
         private java.util.List<String> imageNames; 
         private java.util.List<String> imageUrls; 
+        private String ossBucket; 
+        private String ossEndpoint; 
 
         private Builder() {
             super();
@@ -98,6 +124,8 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
             this.imageNameExtension = request.imageNameExtension;
             this.imageNames = request.imageNames;
             this.imageUrls = request.imageUrls;
+            this.ossBucket = request.ossBucket;
+            this.ossEndpoint = request.ossEndpoint;
         } 
 
         /**
@@ -135,6 +163,24 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
             String imageUrlsShrink = shrink(imageUrls, "ImageUrls", "simple");
             this.putQueryParameter("ImageUrls", imageUrlsShrink);
             this.imageUrls = imageUrls;
+            return this;
+        }
+
+        /**
+         * OssBucket.
+         */
+        public Builder ossBucket(String ossBucket) {
+            this.putQueryParameter("OssBucket", ossBucket);
+            this.ossBucket = ossBucket;
+            return this;
+        }
+
+        /**
+         * OssEndpoint.
+         */
+        public Builder ossEndpoint(String ossEndpoint) {
+            this.putQueryParameter("OssEndpoint", ossEndpoint);
+            this.ossEndpoint = ossEndpoint;
             return this;
         }
 
