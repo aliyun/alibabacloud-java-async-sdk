@@ -27,6 +27,10 @@ public class RestartDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParallelOperation")
+    private Boolean parallelOperation;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -44,6 +48,7 @@ public class RestartDBClusterRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.parallelOperation = builder.parallelOperation;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -77,6 +82,13 @@ public class RestartDBClusterRequest extends Request {
     }
 
     /**
+     * @return parallelOperation
+     */
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -100,6 +112,7 @@ public class RestartDBClusterRequest extends Request {
     public static final class Builder extends Request.Builder<RestartDBClusterRequest, Builder> {
         private String DBClusterId; 
         private String DBInstanceId; 
+        private Boolean parallelOperation; 
         private String regionId; 
         private String resourceGroupId; 
         private Long resourceOwnerId; 
@@ -112,6 +125,7 @@ public class RestartDBClusterRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.DBInstanceId = request.DBInstanceId;
+            this.parallelOperation = request.parallelOperation;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -140,6 +154,15 @@ public class RestartDBClusterRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putBodyParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * ParallelOperation.
+         */
+        public Builder parallelOperation(Boolean parallelOperation) {
+            this.putQueryParameter("ParallelOperation", parallelOperation);
+            this.parallelOperation = parallelOperation;
             return this;
         }
 

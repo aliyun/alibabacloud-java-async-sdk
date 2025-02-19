@@ -149,6 +149,7 @@ public class CreateElasticRuleRequest extends Request {
         } 
 
         /**
+         * <p>The rule for computing resources of the required cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +162,7 @@ public class CreateElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +175,7 @@ public class CreateElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +188,7 @@ public class CreateElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The time when you want to execute the scheduled scaling rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +201,11 @@ public class CreateElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The execution cycle.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Day</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +218,7 @@ public class CreateElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

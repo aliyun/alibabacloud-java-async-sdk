@@ -55,7 +55,7 @@ public class CreateElasticRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +172,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * ClusterClass.
+             * <p>The rule for computing resources of the required cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb.2xlarge</p>
              */
             public Builder clusterClass(String clusterClass) {
                 this.clusterClass = clusterClass;
@@ -177,7 +183,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-xxxb9f2w-be</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -185,7 +194,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213cjv****</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -193,7 +205,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticRuleStartTime.
+             * <p>The time when the scheduled scaling rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder elasticRuleStartTime(String elasticRuleStartTime) {
                 this.elasticRuleStartTime = elasticRuleStartTime;
@@ -201,7 +216,14 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionPeriod.
+             * <p>The execution cycle.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>Day</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Day</p>
              */
             public Builder executionPeriod(String executionPeriod) {
                 this.executionPeriod = executionPeriod;
@@ -209,7 +231,10 @@ public class CreateElasticRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5465</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

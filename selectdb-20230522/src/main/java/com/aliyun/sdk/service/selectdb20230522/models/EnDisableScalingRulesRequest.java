@@ -133,6 +133,7 @@ public class EnDisableScalingRulesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class EnDisableScalingRulesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +159,10 @@ public class EnDisableScalingRulesRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -166,6 +171,7 @@ public class EnDisableScalingRulesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,12 @@ public class EnDisableScalingRulesRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the scheduled scaling policy.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

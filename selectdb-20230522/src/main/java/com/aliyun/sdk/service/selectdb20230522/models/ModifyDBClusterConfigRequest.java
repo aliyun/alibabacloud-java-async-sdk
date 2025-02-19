@@ -33,6 +33,10 @@ public class ModifyDBClusterConfigRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParallelOperation")
+    private Boolean parallelOperation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
     @com.aliyun.core.annotation.Validation(required = true)
     private String parameters;
@@ -50,6 +54,7 @@ public class ModifyDBClusterConfigRequest extends Request {
         this.configKey = builder.configKey;
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.parallelOperation = builder.parallelOperation;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
         this.switchTimeMode = builder.switchTimeMode;
@@ -90,6 +95,13 @@ public class ModifyDBClusterConfigRequest extends Request {
     }
 
     /**
+     * @return parallelOperation
+     */
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
+    }
+
+    /**
      * @return parameters
      */
     public String getParameters() {
@@ -114,6 +126,7 @@ public class ModifyDBClusterConfigRequest extends Request {
         private String configKey; 
         private String DBClusterId; 
         private String DBInstanceId; 
+        private Boolean parallelOperation; 
         private String parameters; 
         private String regionId; 
         private String switchTimeMode; 
@@ -127,6 +140,7 @@ public class ModifyDBClusterConfigRequest extends Request {
             this.configKey = request.configKey;
             this.DBClusterId = request.DBClusterId;
             this.DBInstanceId = request.DBInstanceId;
+            this.parallelOperation = request.parallelOperation;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
             this.switchTimeMode = request.switchTimeMode;
@@ -165,6 +179,15 @@ public class ModifyDBClusterConfigRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * ParallelOperation.
+         */
+        public Builder parallelOperation(Boolean parallelOperation) {
+            this.putQueryParameter("ParallelOperation", parallelOperation);
+            this.parallelOperation = parallelOperation;
             return this;
         }
 

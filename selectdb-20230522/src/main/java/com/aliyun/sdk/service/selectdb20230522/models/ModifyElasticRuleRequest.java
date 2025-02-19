@@ -175,7 +175,10 @@ public class ModifyElasticRuleRequest extends Request {
         } 
 
         /**
-         * ClusterClass.
+         * <p>The rule for computing resources of the required cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb.2xlarge</p>
          */
         public Builder clusterClass(String clusterClass) {
             this.putQueryParameter("ClusterClass", clusterClass);
@@ -184,6 +187,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +200,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +213,10 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
-         * ElasticRuleStartTime.
+         * <p>The time when you want to execute the scheduled scaling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
          */
         public Builder elasticRuleStartTime(String elasticRuleStartTime) {
             this.putQueryParameter("ElasticRuleStartTime", elasticRuleStartTime);
@@ -217,7 +225,14 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
-         * ExecutionPeriod.
+         * <p>The execution cycle.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Day</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Day</p>
          */
         public Builder executionPeriod(String executionPeriod) {
             this.putQueryParameter("ExecutionPeriod", executionPeriod);
@@ -226,7 +241,10 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -235,6 +253,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,6 +275,7 @@ public class ModifyElasticRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

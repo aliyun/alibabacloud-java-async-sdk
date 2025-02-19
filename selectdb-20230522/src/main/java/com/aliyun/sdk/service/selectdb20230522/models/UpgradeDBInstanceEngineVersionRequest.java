@@ -28,6 +28,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
     private String engineVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParallelOperation")
+    private Boolean parallelOperation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -44,6 +48,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.engineVersion = builder.engineVersion;
+        this.parallelOperation = builder.parallelOperation;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.switchTimeMode = builder.switchTimeMode;
@@ -77,6 +82,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
     }
 
     /**
+     * @return parallelOperation
+     */
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -100,6 +112,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
     public static final class Builder extends Request.Builder<UpgradeDBInstanceEngineVersionRequest, Builder> {
         private String DBInstanceId; 
         private String engineVersion; 
+        private Boolean parallelOperation; 
         private String regionId; 
         private Long resourceOwnerId; 
         private String switchTimeMode; 
@@ -112,6 +125,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
             this.engineVersion = request.engineVersion;
+            this.parallelOperation = request.parallelOperation;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.switchTimeMode = request.switchTimeMode;
@@ -140,6 +154,15 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * ParallelOperation.
+         */
+        public Builder parallelOperation(Boolean parallelOperation) {
+            this.putQueryParameter("ParallelOperation", parallelOperation);
+            this.parallelOperation = parallelOperation;
             return this;
         }
 

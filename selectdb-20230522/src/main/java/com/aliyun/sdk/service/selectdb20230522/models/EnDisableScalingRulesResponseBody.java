@@ -55,7 +55,7 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,10 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +136,10 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
             private Boolean scalingRulesEnable; 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-pe33jc1nd01-be</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -141,7 +147,10 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-7213cjv****</p>
              */
             public Builder dbInstanceId(String dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -149,7 +158,15 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingRulesEnable.
+             * <p>Indicates whether the scheduled scaling policy is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder scalingRulesEnable(Boolean scalingRulesEnable) {
                 this.scalingRulesEnable = scalingRulesEnable;

@@ -134,7 +134,10 @@ public class DescribeDBClusterConfigChangeLogsRequest extends Request {
         } 
 
         /**
-         * ConfigKey.
+         * <p>The configuration file to be modified. For a compute cluster, set the value to be.conf. For a frontend (FE) cluster, set the value to fe.conf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be.conf</p>
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
