@@ -89,6 +89,7 @@ public class UploadClientCaCertificateRequest extends Request {
         } 
 
         /**
+         * <p>The certificate content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class UploadClientCaCertificateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -110,6 +114,7 @@ public class UploadClientCaCertificateRequest extends Request {
         }
 
         /**
+         * <p>The website ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

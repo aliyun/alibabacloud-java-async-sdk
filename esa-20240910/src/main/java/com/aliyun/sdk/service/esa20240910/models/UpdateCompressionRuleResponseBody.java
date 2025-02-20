@@ -43,7 +43,10 @@ public class UpdateCompressionRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE8EB0DE-3267-53D1-AB83-F36377D63FD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

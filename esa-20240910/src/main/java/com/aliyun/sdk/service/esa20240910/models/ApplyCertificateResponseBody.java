@@ -79,7 +79,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,7 +90,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>List of free certificate application details.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -95,7 +98,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>Site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;
@@ -103,7 +109,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Number of certificates applied for, which is the same as the number of input domains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -173,7 +182,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Domain.
+             * <p>Certificate domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*.example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -181,7 +193,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000478</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -189,7 +204,10 @@ public class ApplyCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status of the certificate application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Applying</p>
              */
             public Builder status(String status) {
                 this.status = status;

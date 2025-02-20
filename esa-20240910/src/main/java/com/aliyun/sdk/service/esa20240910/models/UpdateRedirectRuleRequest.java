@@ -173,6 +173,7 @@ public class UpdateRedirectRuleRequest extends Request {
         } 
 
         /**
+         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,14 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * ReserveQueryString.
+         * <p>Preserve query string. The value range is:</p>
+         * <ul>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder reserveQueryString(String reserveQueryString) {
             this.putQueryParameter("ReserveQueryString", reserveQueryString);
@@ -194,7 +202,10 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -203,7 +214,14 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule enable status, supports:</p>
+         * <ul>
+         * <li><strong>on</strong>: indicates enabled.</li>
+         * <li><strong>off</strong>: indicates disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -212,7 +230,10 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -221,6 +242,7 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +255,17 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * StatusCode.
+         * <p>The response status code used by the node when responding to the client with a redirect address. The value range is:</p>
+         * <ul>
+         * <li>301</li>
+         * <li>302</li>
+         * <li>303</li>
+         * <li>307</li>
+         * <li>308</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         public Builder statusCode(String statusCode) {
             this.putQueryParameter("StatusCode", statusCode);
@@ -242,7 +274,10 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * TargetUrl.
+         * <p>Target URL after redirection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
          */
         public Builder targetUrl(String targetUrl) {
             this.putQueryParameter("TargetUrl", targetUrl);
@@ -251,7 +286,13 @@ public class UpdateRedirectRuleRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Redirect type. The value range is:</p>
+         * <ul>
+         * <li>static: static mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

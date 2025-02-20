@@ -172,7 +172,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         } 
 
         /**
-         * QueryString.
+         * <p>Query string after rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example=123</p>
          */
         public Builder queryString(String queryString) {
             this.putQueryParameter("QueryString", queryString);
@@ -181,7 +184,13 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RewriteQueryStringType.
+         * <p>Query string rewrite type. Value range:</p>
+         * <ul>
+         * <li>static: Static mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder rewriteQueryStringType(String rewriteQueryStringType) {
             this.putQueryParameter("RewriteQueryStringType", rewriteQueryStringType);
@@ -190,7 +199,13 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RewriteUriType.
+         * <p>URI rewrite type. Value range:</p>
+         * <ul>
+         * <li>static: Static mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder rewriteUriType(String rewriteUriType) {
             this.putQueryParameter("RewriteUriType", rewriteUriType);
@@ -199,7 +214,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -208,7 +226,14 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -217,7 +242,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -226,6 +254,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +267,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -247,7 +279,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>Target URI after rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/image/example.jpg</p>
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

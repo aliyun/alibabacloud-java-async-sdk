@@ -55,7 +55,10 @@ public class CreateOriginPoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>The ID of the newly created origin address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103852052519****</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -63,7 +66,10 @@ public class CreateOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -103,7 +103,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>List of HTTP request header modification configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * PageNumber.
+         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * PageSize.
+         * <p>Page size, default is <strong>500</strong>, range: <strong>1~500</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -213,7 +228,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             private String value; 
 
             /**
-             * Name.
+             * <p>Request header name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headerName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -221,7 +239,15 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * Operation.
+             * <p>Operation method. Value range:</p>
+             * <ul>
+             * <li>add: Add. </li>
+             * <li>del: Delete. </li>
+             * <li>modify: Modify.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -229,7 +255,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * Value.
+             * <p>The value of the request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headerValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -360,7 +389,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             private Integer siteVersion; 
 
             /**
-             * ConfigId.
+             * <p>Configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35281609698****</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -368,7 +400,14 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * ConfigType.
+             * <p>Configuration type. Possible values:</p>
+             * <ul>
+             * <li>global: Global configuration;</li>
+             * <li>rule: Rule configuration;</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -376,7 +415,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * RequestHeaderModification.
+             * <p>Modify request headers, supporting add, delete, and modify operations.</p>
              */
             public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
                 this.requestHeaderModification = requestHeaderModification;
@@ -384,7 +423,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * Rule.
+             * <p>Rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -392,7 +434,14 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch. Possible values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -400,7 +449,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -408,7 +460,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * Sequence.
+             * <p>Rule execution sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -416,7 +471,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * SiteVersion.
+             * <p>Version number of the site configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;

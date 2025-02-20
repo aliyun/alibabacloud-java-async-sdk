@@ -130,7 +130,14 @@ public class CreateImageTransformRequest extends Request {
         } 
 
         /**
-         * Enable.
+         * <p>Indicates whether image transformation is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -139,7 +146,10 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content, specifically the strategy or condition expression being implemented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -148,7 +158,14 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -157,7 +174,10 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -166,6 +186,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +199,10 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

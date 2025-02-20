@@ -79,7 +79,10 @@ public class ListCiphersResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * CiphersGroup.
+         * <p>Name of the cipher suite group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder ciphersGroup(String ciphersGroup) {
             this.ciphersGroup = ciphersGroup;
@@ -87,7 +90,10 @@ public class ListCiphersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,7 +101,7 @@ public class ListCiphersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returned result.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;
@@ -103,7 +109,10 @@ public class ListCiphersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of cipher suites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -103,7 +103,7 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>Response body configuration.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The size of each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -369,7 +384,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             private String tls13; 
 
             /**
-             * Ciphersuite.
+             * <p>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
              */
             public Builder ciphersuite(String ciphersuite) {
                 this.ciphersuite = ciphersuite;
@@ -377,7 +395,15 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * CiphersuiteGroup.
+             * <p>Cipher suite group, default is all cipher suites. Value range:</p>
+             * <ul>
+             * <li>all: All cipher suites.</li>
+             * <li>strict: Strong cipher suites.</li>
+             * <li>custom: Custom cipher suites.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>strict</p>
              */
             public Builder ciphersuiteGroup(String ciphersuiteGroup) {
                 this.ciphersuiteGroup = ciphersuiteGroup;
@@ -385,7 +411,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>Configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>395386449776640</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -393,7 +422,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+             * <ul>
+             * <li>global: Query global configuration.</li>
+             * <li>rule: Query rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -401,7 +437,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Http2.
+             * <p>Indicates whether HTTP2 is enabled. Default is on. Possible values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder http2(String http2) {
                 this.http2 = http2;
@@ -409,7 +452,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Http3.
+             * <p>Indicates whether HTTP3 is enabled. Default is on. Possible values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder http3(String http3) {
                 this.http3 = http3;
@@ -417,7 +467,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Https.
+             * <p>Whether to enable HTTPS, default is enabled. Value range:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder https(String https) {
                 this.https = https;
@@ -425,7 +482,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * OcspStapling.
+             * <p>Indicates whether OCSP is enabled. Default is off. Possible values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ocspStapling(String ocspStapling) {
                 this.ocspStapling = ocspStapling;
@@ -433,7 +497,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>Rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -441,7 +508,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch. Value range:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -449,7 +523,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -457,7 +534,10 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>Rule execution sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -465,7 +545,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tls10.
+             * <p>Whether to enable TLS1.0, default is disabled. Value range:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder tls10(String tls10) {
                 this.tls10 = tls10;
@@ -473,7 +560,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tls11.
+             * <p>Whether to enable TLS1.1, default is disabled. Value range:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder tls11(String tls11) {
                 this.tls11 = tls11;
@@ -481,7 +575,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tls12.
+             * <p>Whether to enable TLS1.2, default is disabled. Value range:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder tls12(String tls12) {
                 this.tls12 = tls12;
@@ -489,7 +590,14 @@ public class ListHttpsBasicConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tls13.
+             * <p>Whether to enable TLS1.3, default is disabled. Value range:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder tls13(String tls13) {
                 this.tls13 = tls13;

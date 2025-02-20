@@ -187,7 +187,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         private String websocket; 
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -195,7 +198,14 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <ul>
+         * <li>global: Query global configuration.</li>
+         * <li>rule: Query rule configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -203,7 +213,14 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * Grpc.
+         * <p>Whether to enable GRPC, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled</li>
+         * <li>off: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder grpc(String grpc) {
             this.grpc = grpc;
@@ -211,7 +228,14 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * Http2Origin.
+         * <p>Whether to enable HTTP2 origin, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled</li>
+         * <li>off: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder http2Origin(String http2Origin) {
             this.http2Origin = http2Origin;
@@ -219,7 +243,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +254,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -235,7 +265,14 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Values:</p>
+         * <ul>
+         * <li>on: Enabled</li>
+         * <li>off: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -243,7 +280,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -251,7 +291,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>Rule execution sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -259,7 +302,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;
@@ -267,7 +313,14 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * SmartRouting.
+         * <p>Whether to enable smart routing service, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled</li>
+         * <li>off: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder smartRouting(String smartRouting) {
             this.smartRouting = smartRouting;
@@ -275,7 +328,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * UploadMaxFilesize.
+         * <p>Maximum upload file size, in MB, value range: 100～500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder uploadMaxFilesize(String uploadMaxFilesize) {
             this.uploadMaxFilesize = uploadMaxFilesize;
@@ -283,7 +339,14 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * Websocket.
+         * <p>Whether to enable Websocket, default is enabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled</li>
+         * <li>off: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder websocket(String websocket) {
             this.websocket = websocket;

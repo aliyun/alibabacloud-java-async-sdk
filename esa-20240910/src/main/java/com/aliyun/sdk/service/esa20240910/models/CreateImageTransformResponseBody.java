@@ -55,7 +55,10 @@ public class CreateImageTransformResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816096987136</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -63,7 +66,10 @@ public class CreateImageTransformResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

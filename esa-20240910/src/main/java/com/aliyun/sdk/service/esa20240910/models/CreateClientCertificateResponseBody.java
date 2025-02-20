@@ -199,7 +199,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         private String validityDays; 
 
         /**
-         * CACertificateId.
+         * <p>The ID of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb1dbb</p>
          */
         public Builder CACertificateId(String CACertificateId) {
             this.CACertificateId = CACertificateId;
@@ -207,7 +210,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Certificate.
+         * <p>The certificate content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -215,7 +221,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * CommonName.
+         * <p>The Common Name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -223,7 +232,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * FingerprintSha256.
+         * <p>The SHA-256 fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</p>
          */
         public Builder fingerprintSha256(String fingerprintSha256) {
             this.fingerprintSha256 = fingerprintSha256;
@@ -231,7 +243,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The certificate ID on ESA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb1d95</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -239,7 +254,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Issuer.
+         * <p>The CA that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCDN CA</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -247,7 +265,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NotAfter.
+         * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-01T02:12:49Z</p>
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -255,7 +276,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NotBefore.
+         * <p>The time when the certificate takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-01T02:12:49Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -263,7 +287,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateKey.
+         * <p>The private key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PRIVATE KEY-----</p>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;
@@ -271,7 +298,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -279,7 +309,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SerialNumber.
+         * <p>The serial number of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb1daa</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
@@ -287,7 +320,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureAlgorithm.
+         * <p>The signature algorithm of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256-RSA</p>
          */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
@@ -295,7 +331,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -303,7 +342,10 @@ public class CreateClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ValidityDays.
+         * <p>The validity period of the certificate. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365</p>
          */
         public Builder validityDays(String validityDays) {
             this.validityDays = validityDays;

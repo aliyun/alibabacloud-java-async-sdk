@@ -55,7 +55,10 @@ public class CreateHttpRequestHeaderModificationRuleResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -63,7 +66,10 @@ public class CreateHttpRequestHeaderModificationRuleResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -75,10 +75,11 @@ public class DeleteOriginPoolRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the origin address pool, which can be obtained by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DeleteOriginPool</p>
+         * <p>103852052519****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -87,7 +88,11 @@ public class DeleteOriginPoolRequest extends Request {
         }
 
         /**
+         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21655860979****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

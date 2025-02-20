@@ -131,6 +131,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         } 
 
         /**
+         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * RequestHeaderModification.
+         * <p>Modify request headers, supporting add, delete, and modify operations.</p>
          */
         public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
             String requestHeaderModificationShrink = shrink(requestHeaderModification, "RequestHeaderModification", "json");
@@ -153,7 +154,10 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -162,7 +166,14 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule enable status, supports:</p>
+         * <ul>
+         * <li><strong>on</strong>: indicates enabled.</li>
+         * <li><strong>off</strong>: indicates disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -171,7 +182,10 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -180,6 +194,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +272,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
             private String value; 
 
             /**
+             * <p>Request header name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -268,6 +284,12 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
             }
 
             /**
+             * <p>Operation type. Value range:</p>
+             * <ul>
+             * <li>add: Add.</li>
+             * <li>del: Delete.</li>
+             * <li>modify: Modify.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -279,7 +301,10 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Request header value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headerValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -55,7 +55,14 @@ public class GetIPv6ResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enable.
+         * <p>IPv6 switch. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -63,7 +70,10 @@ public class GetIPv6ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

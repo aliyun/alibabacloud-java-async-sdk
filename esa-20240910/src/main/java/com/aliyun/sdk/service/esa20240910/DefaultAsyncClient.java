@@ -566,6 +566,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Multiple origins can be added under the origin address, supporting domain names, IPs, OSS, S3, and other types of origins. It supports authentication for OSS and S3 type origins.</p>
+     * 
      * @param request the request parameters of CreateOriginPool  CreateOriginPoolRequest
      * @return CreateOriginPoolResponse
      */
@@ -954,6 +957,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Can only be disabled when there is only version 0 and the default environment.</p>
+     * 
      * @param request the request parameters of DeactivateVersionManagement  DeactivateVersionManagementRequest
      * @return DeactivateVersionManagementResponse
      */

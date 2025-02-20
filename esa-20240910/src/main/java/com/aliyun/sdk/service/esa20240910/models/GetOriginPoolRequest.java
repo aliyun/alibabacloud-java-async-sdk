@@ -75,10 +75,11 @@ public class GetOriginPoolRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>GetOriginPool</p>
+         * <p>1038520525196928</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -87,7 +88,11 @@ public class GetOriginPoolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the site, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216558609793952</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

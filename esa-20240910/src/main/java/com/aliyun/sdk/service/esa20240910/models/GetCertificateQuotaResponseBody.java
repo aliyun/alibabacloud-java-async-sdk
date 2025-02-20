@@ -103,7 +103,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * Quota.
+         * <p>Free certificate quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder quota(Long quota) {
             this.quota = quota;
@@ -111,7 +114,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaUsage.
+         * <p>Usage of free certificate quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder quotaUsage(Long quotaUsage) {
             this.quotaUsage = quotaUsage;
@@ -119,7 +125,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,7 +136,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * SiteCount.
+         * <p>Number of sites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder siteCount(Long siteCount) {
             this.siteCount = siteCount;
@@ -135,7 +147,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * SiteUsage.
+         * <p>List of site usage details.</p>
          */
         public Builder siteUsage(java.util.List<SiteUsage> siteUsage) {
             this.siteUsage = siteUsage;
@@ -143,7 +155,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Certificate Quota type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>free</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -213,7 +228,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             private Long siteUsage; 
 
             /**
-             * SiteId.
+             * <p>Site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165929521496928</p>
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
@@ -221,7 +239,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>Site name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -229,7 +250,10 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * SiteUsage.
+             * <p>Site usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder siteUsage(Long siteUsage) {
                 this.siteUsage = siteUsage;

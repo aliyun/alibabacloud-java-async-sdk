@@ -75,6 +75,7 @@ public class DeleteClientCertificateRequest extends Request {
         } 
 
         /**
+         * <p>The certificate ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteClientCertificateRequest extends Request {
         }
 
         /**
+         * <p>The website ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

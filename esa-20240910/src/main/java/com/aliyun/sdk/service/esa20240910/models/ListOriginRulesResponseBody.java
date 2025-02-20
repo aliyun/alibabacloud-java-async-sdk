@@ -103,7 +103,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>Response body configuration.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The size of each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -345,7 +360,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             private Integer siteVersion; 
 
             /**
-             * ConfigId.
+             * <p>Configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>395386449776640</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -353,7 +371,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+             * <ul>
+             * <li>global: Query global configuration.</li>
+             * <li>rule: Query rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -361,7 +386,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DnsRecord.
+             * <p>Rewrite the DNS resolution record for the origin request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.example.com</p>
              */
             public Builder dnsRecord(String dnsRecord) {
                 this.dnsRecord = dnsRecord;
@@ -369,7 +397,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginHost.
+             * <p>HOST carried in the origin request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin.example.com</p>
              */
             public Builder originHost(String originHost) {
                 this.originHost = originHost;
@@ -377,7 +408,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginHttpPort.
+             * <p>The origin server port accessed when using the HTTP protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder originHttpPort(String originHttpPort) {
                 this.originHttpPort = originHttpPort;
@@ -385,7 +419,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginHttpsPort.
+             * <p>The origin server port to access when using the HTTPS protocol for back-to-origin requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4433</p>
              */
             public Builder originHttpsPort(String originHttpsPort) {
                 this.originHttpsPort = originHttpsPort;
@@ -393,7 +430,15 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginScheme.
+             * <p>Protocol used for the origin request. Value range:</p>
+             * <ul>
+             * <li>http: Use HTTP protocol for origin requests.</li>
+             * <li>https: Use HTTPS protocol for origin requests.</li>
+             * <li>follow: Follow the client&quot;s protocol for origin requests.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder originScheme(String originScheme) {
                 this.originScheme = originScheme;
@@ -401,7 +446,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OriginSni.
+             * <p>SNI carried in the origin request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin.example.com</p>
              */
             public Builder originSni(String originSni) {
                 this.originSni = originSni;
@@ -409,7 +457,15 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Range.
+             * <p>Use range slicing to download files from the origin. The value range is:</p>
+             * <ul>
+             * <li>on: enabled</li>
+             * <li>off: disabled</li>
+             * <li>force: forced</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder range(String range) {
                 this.range = range;
@@ -417,7 +473,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>Rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -425,7 +484,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch. Value range:</p>
+             * <ul>
+             * <li>on: Enabled</li>
+             * <li>off: Disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -433,7 +499,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -441,7 +510,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>Rule execution sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -449,7 +521,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>Site version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;

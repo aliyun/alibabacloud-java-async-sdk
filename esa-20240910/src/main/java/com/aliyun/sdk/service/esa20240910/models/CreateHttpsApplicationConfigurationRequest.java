@@ -256,7 +256,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         } 
 
         /**
-         * AltSvc.
+         * <p>Alt-Svc feature switch. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvc(String altSvc) {
             this.putQueryParameter("AltSvc", altSvc);
@@ -265,7 +272,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * AltSvcClear.
+         * <p>Whether the Alt-Svc header includes the clear parameter. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvcClear(String altSvcClear) {
             this.putQueryParameter("AltSvcClear", altSvcClear);
@@ -274,7 +288,10 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * AltSvcMa.
+         * <p>Validity period of Alt-Svc in seconds. The default is 86400 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder altSvcMa(String altSvcMa) {
             this.putQueryParameter("AltSvcMa", altSvcMa);
@@ -283,7 +300,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * AltSvcPersist.
+         * <p>Whether the Alt-Svc header includes the persist parameter. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvcPersist(String altSvcPersist) {
             this.putQueryParameter("AltSvcPersist", altSvcPersist);
@@ -292,7 +316,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * Hsts.
+         * <p>Whether to enable HSTS. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hsts(String hsts) {
             this.putQueryParameter("Hsts", hsts);
@@ -301,7 +332,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HstsIncludeSubdomains.
+         * <p>Whether to include subdomains in HSTS. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hstsIncludeSubdomains(String hstsIncludeSubdomains) {
             this.putQueryParameter("HstsIncludeSubdomains", hstsIncludeSubdomains);
@@ -310,7 +348,10 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HstsMaxAge.
+         * <p>HSTS expiration time in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder hstsMaxAge(String hstsMaxAge) {
             this.putQueryParameter("HstsMaxAge", hstsMaxAge);
@@ -319,7 +360,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HstsPreload.
+         * <p>Whether to enable HSTS preloading. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hstsPreload(String hstsPreload) {
             this.putQueryParameter("HstsPreload", hstsPreload);
@@ -328,7 +376,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HttpsForce.
+         * <p>Whether to enable forced HTTPS. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder httpsForce(String httpsForce) {
             this.putQueryParameter("HttpsForce", httpsForce);
@@ -337,7 +392,16 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HttpsForceCode.
+         * <p>Status code for forced HTTPS redirection. Possible values:</p>
+         * <ul>
+         * <li>301</li>
+         * <li>302</li>
+         * <li>307</li>
+         * <li>308</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         public Builder httpsForceCode(String httpsForceCode) {
             this.putQueryParameter("HttpsForceCode", httpsForceCode);
@@ -346,7 +410,10 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -355,7 +422,14 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -364,7 +438,10 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -373,6 +450,7 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -385,7 +463,10 @@ public class CreateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site for which the configuration will take effect. The default is version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

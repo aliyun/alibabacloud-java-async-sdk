@@ -144,7 +144,10 @@ public class ListOriginRulesRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -153,7 +156,15 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <ul>
+         * <li>global: Query global configuration.</li>
+         * <li>rule: Query rule configuration.</li>
+         * </ul>
+         * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -162,7 +173,10 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, defaulting to 1 if not provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +185,10 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page, with a maximum of 500. Defaults to 500 if not provided.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +197,10 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name, which can be used to find the rule with the specified name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -189,6 +209,7 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +222,10 @@ public class ListOriginRulesRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

@@ -257,7 +257,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         } 
 
         /**
-         * AltSvc.
+         * <p>Feature switch, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvc(String altSvc) {
             this.putQueryParameter("AltSvc", altSvc);
@@ -266,7 +273,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * AltSvcClear.
+         * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvcClear(String altSvcClear) {
             this.putQueryParameter("AltSvcClear", altSvcClear);
@@ -275,7 +289,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * AltSvcMa.
+         * <p>Alt-Svc validity period in seconds, default is 86400 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder altSvcMa(String altSvcMa) {
             this.putQueryParameter("AltSvcMa", altSvcMa);
@@ -284,7 +301,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * AltSvcPersist.
+         * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvcPersist(String altSvcPersist) {
             this.putQueryParameter("AltSvcPersist", altSvcPersist);
@@ -293,6 +317,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
+         * <p>Configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +330,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * Hsts.
+         * <p>Whether to enable HSTS, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hsts(String hsts) {
             this.putQueryParameter("Hsts", hsts);
@@ -314,7 +346,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HstsIncludeSubdomains.
+         * <p>Whether to include subdomains in HSTS, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hstsIncludeSubdomains(String hstsIncludeSubdomains) {
             this.putQueryParameter("HstsIncludeSubdomains", hstsIncludeSubdomains);
@@ -323,7 +362,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HstsMaxAge.
+         * <p>HSTS expiration time in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder hstsMaxAge(String hstsMaxAge) {
             this.putQueryParameter("HstsMaxAge", hstsMaxAge);
@@ -332,7 +374,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HstsPreload.
+         * <p>Whether to enable HSTS preload, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hstsPreload(String hstsPreload) {
             this.putQueryParameter("HstsPreload", hstsPreload);
@@ -341,7 +390,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HttpsForce.
+         * <p>Whether to enable forced HTTPS, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder httpsForce(String httpsForce) {
             this.putQueryParameter("HttpsForce", httpsForce);
@@ -350,7 +406,16 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * HttpsForceCode.
+         * <p>Forced HTTPS redirect status code. Values:</p>
+         * <ul>
+         * <li>301</li>
+         * <li>302</li>
+         * <li>307</li>
+         * <li>308</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         public Builder httpsForceCode(String httpsForceCode) {
             this.putQueryParameter("HttpsForceCode", httpsForceCode);
@@ -359,7 +424,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -368,7 +436,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -377,7 +452,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -386,6 +464,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

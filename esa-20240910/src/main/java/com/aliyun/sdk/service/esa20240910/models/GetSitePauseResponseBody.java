@@ -55,7 +55,14 @@ public class GetSitePauseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Paused.
+         * <p>Whether the acceleration has been paused. Value range: </p>
+         * <ul>
+         * <li>true: The site acceleration has been paused. </li>
+         * <li>false: The site is accelerating normally.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder paused(Boolean paused) {
             this.paused = paused;
@@ -63,7 +70,10 @@ public class GetSitePauseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

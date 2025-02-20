@@ -158,7 +158,14 @@ public class CreateCompressionRuleRequest extends Request {
         } 
 
         /**
-         * Brotli.
+         * <p>Brotli compression. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder brotli(String brotli) {
             this.putQueryParameter("Brotli", brotli);
@@ -167,7 +174,14 @@ public class CreateCompressionRuleRequest extends Request {
         }
 
         /**
-         * Gzip.
+         * <p>Gzip compression. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder gzip(String gzip) {
             this.putQueryParameter("Gzip", gzip);
@@ -176,7 +190,10 @@ public class CreateCompressionRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -185,7 +202,14 @@ public class CreateCompressionRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable.</li>
+         * <li><strong>off</strong>: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -194,7 +218,10 @@ public class CreateCompressionRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -203,6 +230,7 @@ public class CreateCompressionRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +243,10 @@ public class CreateCompressionRuleRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site, defaulting to version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

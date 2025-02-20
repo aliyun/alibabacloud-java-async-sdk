@@ -211,7 +211,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         private Integer siteVersion; 
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816096987136</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -219,7 +222,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <ul>
+         * <li>global: Query global configuration.</li>
+         * <li>rule: Query rule configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -227,7 +237,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DnsRecord.
+         * <p>Rewrite the DNS resolution record for the origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.example.com</p>
          */
         public Builder dnsRecord(String dnsRecord) {
             this.dnsRecord = dnsRecord;
@@ -235,7 +248,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginHost.
+         * <p>HOST carried in the origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>origin.example.com</p>
          */
         public Builder originHost(String originHost) {
             this.originHost = originHost;
@@ -243,7 +259,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginHttpPort.
+         * <p>Source site port accessed when using the HTTP protocol for origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder originHttpPort(String originHttpPort) {
             this.originHttpPort = originHttpPort;
@@ -251,7 +270,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginHttpsPort.
+         * <p>Source site port accessed when using the HTTPS protocol for origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4433</p>
          */
         public Builder originHttpsPort(String originHttpsPort) {
             this.originHttpsPort = originHttpsPort;
@@ -259,7 +281,15 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginScheme.
+         * <p>Protocol used for the origin request. Value range:</p>
+         * <ul>
+         * <li>http: Use HTTP protocol for origin.</li>
+         * <li>https: Use HTTPS protocol for origin.</li>
+         * <li>follow: Follow client protocol for origin.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder originScheme(String originScheme) {
             this.originScheme = originScheme;
@@ -267,7 +297,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * OriginSni.
+         * <p>SNI carried in the origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>origin.example.com</p>
          */
         public Builder originSni(String originSni) {
             this.originSni = originSni;
@@ -275,7 +308,15 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Range.
+         * <p>Use range chunking method for origin download. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * <li>force: Force.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder range(String range) {
             this.range = range;
@@ -283,7 +324,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -291,7 +335,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -299,7 +346,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -307,7 +361,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -315,7 +372,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>Rule execution sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -323,7 +383,10 @@ public class GetOriginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;

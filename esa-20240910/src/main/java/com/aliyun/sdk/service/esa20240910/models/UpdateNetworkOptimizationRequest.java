@@ -187,6 +187,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         } 
 
         /**
+         * <p>Configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +200,14 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Grpc.
+         * <p>Whether to enable GRPC, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder grpc(String grpc) {
             this.putQueryParameter("Grpc", grpc);
@@ -208,7 +216,14 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Http2Origin.
+         * <p>Whether to enable HTTP2 origin, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder http2Origin(String http2Origin) {
             this.putQueryParameter("Http2Origin", http2Origin);
@@ -217,7 +232,10 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -226,7 +244,14 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -235,7 +260,10 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -244,6 +272,7 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +285,14 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * SmartRouting.
+         * <p>Whether to enable smart routing service, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder smartRouting(String smartRouting) {
             this.putQueryParameter("SmartRouting", smartRouting);
@@ -265,7 +301,10 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * UploadMaxFilesize.
+         * <p>Maximum upload file size, in MB, value range: 100～500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder uploadMaxFilesize(String uploadMaxFilesize) {
             this.putQueryParameter("UploadMaxFilesize", uploadMaxFilesize);
@@ -274,7 +313,14 @@ public class UpdateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Websocket.
+         * <p>Whether to enable Websocket, default is enabled. Value range:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder websocket(String websocket) {
             this.putQueryParameter("Websocket", websocket);

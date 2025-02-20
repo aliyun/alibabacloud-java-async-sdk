@@ -131,6 +131,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         } 
 
         /**
+         * <p>Modify request headers, supporting add, delete, and modify operations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
@@ -141,7 +142,10 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -150,7 +154,14 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -159,7 +170,10 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -168,6 +182,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +195,10 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Version number of the site configuration. For sites with version management enabled, this parameter specifies the version to apply the configuration to, defaulting to version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -254,6 +272,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
             private String value; 
 
             /**
+             * <p>Request header name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -265,6 +284,12 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
             }
 
             /**
+             * <p>Operation type. Possible values:</p>
+             * <ul>
+             * <li>add: Add.</li>
+             * <li>del: Delete.</li>
+             * <li>modify: Modify.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -276,7 +301,10 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Request header value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headervalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

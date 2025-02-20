@@ -75,6 +75,7 @@ public class DeleteNetworkOptimizationRequest extends Request {
         } 
 
         /**
+         * <p>ConfigId of the configuration, which can be obtained by calling the <a href="~~ListNetworkOptimizations~~">ListNetworkOptimizations</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteNetworkOptimizationRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

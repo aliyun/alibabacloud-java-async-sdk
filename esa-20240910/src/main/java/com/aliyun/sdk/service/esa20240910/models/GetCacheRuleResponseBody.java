@@ -367,7 +367,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         private String userLanguage; 
 
         /**
-         * AdditionalCacheablePorts.
+         * <p>Enable caching on the specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2095</p>
          */
         public Builder additionalCacheablePorts(String additionalCacheablePorts) {
             this.additionalCacheablePorts = additionalCacheablePorts;
@@ -375,7 +378,15 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * BrowserCacheMode.
+         * <p>Browser cache mode. Value range:</p>
+         * <ul>
+         * <li>no_cache: Do not cache.</li>
+         * <li>follow_origin: Follow origin cache policy.</li>
+         * <li>override_origin: Override origin cache policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>follow_origin</p>
          */
         public Builder browserCacheMode(String browserCacheMode) {
             this.browserCacheMode = browserCacheMode;
@@ -383,7 +394,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * BrowserCacheTtl.
+         * <p>Browser cache expiration time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder browserCacheTtl(String browserCacheTtl) {
             this.browserCacheTtl = browserCacheTtl;
@@ -391,7 +405,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * BypassCache.
+         * <p>Set bypass cache mode. Value range:</p>
+         * <ul>
+         * <li>cache_all: Cache all requests.</li>
+         * <li>bypass_all: Bypass cache for all requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cache_all</p>
          */
         public Builder bypassCache(String bypassCache) {
             this.bypassCache = bypassCache;
@@ -399,7 +420,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CacheDeceptionArmor.
+         * <p>Cache deception defense. Used to defend against web cache deception attacks. Only the verified cache content will be cached. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder cacheDeceptionArmor(String cacheDeceptionArmor) {
             this.cacheDeceptionArmor = cacheDeceptionArmor;
@@ -407,7 +435,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CacheReserveEligibility.
+         * <p>Cache reserve eligibility. Used to control whether user requests bypass the cache reserve node when returning to the origin. Value range:</p>
+         * <ul>
+         * <li>bypass_cache_reserve: Requests bypass the cache reserve.</li>
+         * <li>eligible_for_cache_reserve: Eligible for cache reserve.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bypass_cache_reserve</p>
          */
         public Builder cacheReserveEligibility(String cacheReserveEligibility) {
             this.cacheReserveEligibility = cacheReserveEligibility;
@@ -415,7 +450,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CheckPresenceCookie.
+         * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cookiename</p>
          */
         public Builder checkPresenceCookie(String checkPresenceCookie) {
             this.checkPresenceCookie = checkPresenceCookie;
@@ -423,7 +461,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * CheckPresenceHeader.
+         * <p>When generating the cache key, check if the header exists. If it does, add the header name (case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>headername</p>
          */
         public Builder checkPresenceHeader(String checkPresenceHeader) {
             this.checkPresenceHeader = checkPresenceHeader;
@@ -431,7 +472,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816096987136</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -439,7 +483,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <ul>
+         * <li>global: Query global configuration;</li>
+         * <li>rule: Query rule configuration;</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -447,7 +498,16 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * EdgeCacheMode.
+         * <p>Edge cache mode. Value range:</p>
+         * <ul>
+         * <li>follow_origin: Follow origin cache policy (if exists), otherwise use default cache policy.</li>
+         * <li>no_cache: Do not cache.</li>
+         * <li>override_origin: Override origin cache policy.</li>
+         * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>follow_origin</p>
          */
         public Builder edgeCacheMode(String edgeCacheMode) {
             this.edgeCacheMode = edgeCacheMode;
@@ -455,7 +515,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * EdgeCacheTtl.
+         * <p>Edge cache expiration time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder edgeCacheTtl(String edgeCacheTtl) {
             this.edgeCacheTtl = edgeCacheTtl;
@@ -463,7 +526,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * EdgeStatusCodeCacheTtl.
+         * <p>Status code cache expiration time, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder edgeStatusCodeCacheTtl(String edgeStatusCodeCacheTtl) {
             this.edgeStatusCodeCacheTtl = edgeStatusCodeCacheTtl;
@@ -471,7 +537,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IncludeCookie.
+         * <p>When generating the cache key, include the specified cookie names and their values. Supports multiple values, separated by spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cookie_exapmle</p>
          */
         public Builder includeCookie(String includeCookie) {
             this.includeCookie = includeCookie;
@@ -479,7 +548,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IncludeHeader.
+         * <p>When generating the cache key, include the specified header names and their values. Supports multiple values, separated by spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder includeHeader(String includeHeader) {
             this.includeHeader = includeHeader;
@@ -487,7 +559,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * QueryString.
+         * <p>Query strings to be retained or deleted. Supports multiple values, separated by spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder queryString(String queryString) {
             this.queryString = queryString;
@@ -495,7 +570,16 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * QueryStringMode.
+         * <p>The processing mode for query strings when generating cache keys. Value range:</p>
+         * <ul>
+         * <li>ignore_all: Ignore all.</li>
+         * <li>exclude_query_string: Exclude specified query strings.</li>
+         * <li>reserve_all: Default, reserve all.</li>
+         * <li>include_query_string: Include specified query strings.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>reserve_all</p>
          */
         public Builder queryStringMode(String queryStringMode) {
             this.queryStringMode = queryStringMode;
@@ -503,7 +587,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -511,7 +598,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -519,7 +609,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -527,7 +624,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -535,7 +635,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>Rule execution sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -543,7 +646,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ServeStale.
+         * <p>Serve stale cache. When enabled, the node can still use the cached expired files to respond to user requests even if the origin server is unavailable. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder serveStale(String serveStale) {
             this.serveStale = serveStale;
@@ -551,7 +661,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;
@@ -559,7 +672,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SortQueryStringForCache.
+         * <p>Query string sorting. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder sortQueryStringForCache(String sortQueryStringForCache) {
             this.sortQueryStringForCache = sortQueryStringForCache;
@@ -567,7 +687,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * UserDeviceType.
+         * <p>When generating the cache key, include the client device type. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder userDeviceType(String userDeviceType) {
             this.userDeviceType = userDeviceType;
@@ -575,7 +702,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * UserGeo.
+         * <p>When generating the cache key, include the client&quot;s geographic location. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder userGeo(String userGeo) {
             this.userGeo = userGeo;
@@ -583,7 +717,14 @@ public class GetCacheRuleResponseBody extends TeaModel {
         }
 
         /**
-         * UserLanguage.
+         * <p>When generating the cache key, include the client&quot;s language type. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder userLanguage(String userLanguage) {
             this.userLanguage = userLanguage;

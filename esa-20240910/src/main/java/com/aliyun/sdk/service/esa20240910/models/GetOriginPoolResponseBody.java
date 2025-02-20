@@ -139,7 +139,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
         private Long siteId; 
 
         /**
-         * Enabled.
+         * <p>Whether the origin pool is enabled:</p>
+         * <ul>
+         * <li>true: Enabled;</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -147,7 +154,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Origin pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103852052519****</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -155,7 +165,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Name of the origin pool. The name is unique under a single site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -163,7 +176,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Origins.
+         * <p>Information about the origins added to the origin pool.</p>
          */
         public Builder origins(java.util.List<Origins> origins) {
             this.origins = origins;
@@ -171,7 +184,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RecordName.
+         * <p>The domain name assigned to the origin pool, which can be used as the origin address for records under the site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1.example.com</p>
          */
         public Builder recordName(String recordName) {
             this.recordName = recordName;
@@ -179,7 +195,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * ReferenceLBCount.
+         * <p>The number of load balancers that reference this origin pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder referenceLBCount(Integer referenceLBCount) {
             this.referenceLBCount = referenceLBCount;
@@ -187,7 +206,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * References.
+         * <p>Reference information for the origin pool. The origin pool is considered referenced when it is configured in a load balancer or set as the origin for a record.</p>
          */
         public Builder references(References references) {
             this.references = references;
@@ -195,7 +214,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +225,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>ID of the site to which the origin pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21655860979****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -297,7 +322,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AccessKey.
+             * <p>The AccessKey required when AuthType is set to private_cross_account or private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI5tSpj224hDfLmXEx****</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -305,7 +333,16 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * AuthType.
+             * <p>The type of authentication:</p>
+             * <ul>
+             * <li>public: Public read/write, used when the origin is OSS or S3 and is publicly readable/writable;</li>
+             * <li>private_same_account: Private same account, used when the origin is OSS and the authentication type is private within the same account;</li>
+             * <li>private_cross_account: Private cross account, used when the origin is OSS and the authentication type is private across accounts;</li>
+             * <li>private: Used when the origin is S3 and the authentication type is private.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -313,7 +350,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The source Region to be passed when the origin is AWS S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-east-1</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -321,7 +361,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * SecretKey.
+             * <p>The SecretKey required when AuthType is set to private_cross_account or private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tzXL8ub4GtjkjZOJhS****</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -329,7 +372,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The signature version required when the origin is an AWS S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -460,7 +506,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Address.
+             * <p>The address of the origin, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -468,7 +517,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * AuthConf.
+             * <p>Authentication information. When the origin is an OSS or S3, and authentication is required, you need to provide the relevant configuration information.</p>
              */
             public Builder authConf(AuthConf authConf) {
                 this.authConf = authConf;
@@ -476,7 +525,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Whether the origin is enabled:</p>
+             * <ul>
+             * <li>true: Enabled;</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -484,7 +540,14 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Header.
+             * <p>The request header to be included when fetching from the origin, only supports Host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;Host&quot;: [
+             *           &quot;example.com&quot;
+             *         ]
+             *       }</p>
              */
             public Builder header(Object header) {
                 this.header = header;
@@ -492,7 +555,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the origin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99750209487****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -500,7 +566,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the origin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>origin1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -508,7 +577,15 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the origin:</p>
+             * <ul>
+             * <li>ip_domain: IP or domain type origin;</li>
+             * <li>OSS: OSS address origin;</li>
+             * <li>S3: AWS S3 origin.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip_domain</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -516,7 +593,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight, an integer between 0 and 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -575,7 +655,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * <p>Record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104285288635****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -583,7 +666,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -642,7 +728,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * <p>记录ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104285288635****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -650,7 +739,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipa.example.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -709,7 +801,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * <p>ID of the load balancer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99874066052****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -717,7 +812,10 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the load balancer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb1.example.com</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -788,7 +886,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
             private java.util.List<LoadBalancers> loadBalancers; 
 
             /**
-             * DnsRecords.
+             * <p>List of layer 7 records using this origin pool as the origin.</p>
              */
             public Builder dnsRecords(java.util.List<DnsRecords> dnsRecords) {
                 this.dnsRecords = dnsRecords;
@@ -796,7 +894,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * IPARecords.
+             * <p>List of layer 4 records using this origin pool as the origin.</p>
              */
             public Builder IPARecords(java.util.List<IPARecords> IPARecords) {
                 this.IPARecords = IPARecords;
@@ -804,7 +902,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancers.
+             * <p>List of load balancers using this origin pool.</p>
              */
             public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
                 this.loadBalancers = loadBalancers;

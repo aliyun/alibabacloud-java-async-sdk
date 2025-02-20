@@ -103,7 +103,10 @@ public class CreateClientCertificateRequest extends Request {
         } 
 
         /**
-         * CSR.
+         * <p>The certificate signing request (CSR).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST-----</p>
          */
         public Builder CSR(String CSR) {
             this.putBodyParameter("CSR", CSR);
@@ -112,7 +115,10 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
-         * PkeyType.
+         * <p>The type of the private key algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         public Builder pkeyType(String pkeyType) {
             this.putBodyParameter("PkeyType", pkeyType);
@@ -121,6 +127,7 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
+         * <p>The website ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +140,7 @@ public class CreateClientCertificateRequest extends Request {
         }
 
         /**
+         * <p>The validity period of the certificate. Unit: day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

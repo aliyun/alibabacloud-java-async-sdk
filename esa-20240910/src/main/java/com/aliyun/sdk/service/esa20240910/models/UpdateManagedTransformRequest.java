@@ -102,7 +102,14 @@ public class UpdateManagedTransformRequest extends Request {
         } 
 
         /**
-         * AddClientGeolocationHeader.
+         * <p>Add visitor geolocation header. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder addClientGeolocationHeader(String addClientGeolocationHeader) {
             this.putQueryParameter("AddClientGeolocationHeader", addClientGeolocationHeader);
@@ -111,7 +118,14 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * AddRealClientIpHeader.
+         * <p>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder addRealClientIpHeader(String addRealClientIpHeader) {
             this.putQueryParameter("AddRealClientIpHeader", addRealClientIpHeader);
@@ -120,6 +134,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +147,10 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default is version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

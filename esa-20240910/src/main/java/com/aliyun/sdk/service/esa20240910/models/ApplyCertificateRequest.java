@@ -89,6 +89,7 @@ public class ApplyCertificateRequest extends Request {
         } 
 
         /**
+         * <p>List of domains, separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class ApplyCertificateRequest extends Request {
         }
 
         /**
+         * <p>Site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class ApplyCertificateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Certificate type. Possible values: lets_encrypt: Let&quot;s Encrypt certificate; digicert_single: Digicert single domain certificate; digicert_wildcard: Digicert wildcard certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lets_encrypt</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

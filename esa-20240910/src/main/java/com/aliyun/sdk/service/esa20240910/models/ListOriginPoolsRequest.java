@@ -130,7 +130,14 @@ public class ListOriginPoolsRequest extends Request {
         } 
 
         /**
-         * MatchType.
+         * <p>Type of name match query, supporting the following two types, with exact match as the default.</p>
+         * <ul>
+         * <li>fuzzy: Fuzzy query.</li>
+         * <li>exact: Exact query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -139,7 +146,10 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Name of the origin pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +158,14 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>Sorting, supports ascending and descending order by ID, default is descending by ID, which is positively correlated with creation time.</p>
+         * <ul>
+         * <li>-id: Sort by ID in descending order.</li>
+         * <li>id: Sort by ID in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -157,7 +174,10 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number, default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +186,10 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, an integer greater than 0, with a maximum of 500. If the value exceeds 500, it will be set to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +198,11 @@ public class ListOriginPoolsRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151538882642832</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

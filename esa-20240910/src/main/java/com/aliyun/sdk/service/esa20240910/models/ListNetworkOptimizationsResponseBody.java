@@ -103,7 +103,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>Response body configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The size of the page, i.e., the number of items per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -321,7 +336,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             private String websocket; 
 
             /**
-             * ConfigId.
+             * <p>Configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>395386449776640</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -329,7 +347,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</p>
+             * <ul>
+             * <li>global: Query global configuration.</li>
+             * <li>rule: Query rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -337,7 +362,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * Grpc.
+             * <p>Whether to enable GRPC, defaulting to disabled. The value range is as follows:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder grpc(String grpc) {
                 this.grpc = grpc;
@@ -345,7 +377,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * Http2Origin.
+             * <p>Whether to enable HTTP2 origin, defaulting to disabled. The value range is as follows:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder http2Origin(String http2Origin) {
                 this.http2Origin = http2Origin;
@@ -353,7 +392,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>Rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -361,7 +403,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch. The value range is as follows:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -369,7 +418,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -377,7 +429,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>Rule execution sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -385,7 +440,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>Site version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;
@@ -393,7 +451,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * SmartRouting.
+             * <p>Whether to enable smart routing service, defaulting to disabled. The value range is as follows:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder smartRouting(String smartRouting) {
                 this.smartRouting = smartRouting;
@@ -401,7 +466,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * UploadMaxFilesize.
+             * <p>Maximum upload file size in MB, with a range from 100 to 500.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder uploadMaxFilesize(String uploadMaxFilesize) {
                 this.uploadMaxFilesize = uploadMaxFilesize;
@@ -409,7 +477,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * Websocket.
+             * <p>Whether to enable Websocket, defaulting to enabled. The value range is as follows:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder websocket(String websocket) {
                 this.websocket = websocket;

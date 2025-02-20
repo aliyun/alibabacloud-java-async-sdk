@@ -186,7 +186,14 @@ public class CreateNetworkOptimizationRequest extends Request {
         } 
 
         /**
-         * Grpc.
+         * <p>Indicates whether to enable GRPC, disabled by default. Possible values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder grpc(String grpc) {
             this.putQueryParameter("Grpc", grpc);
@@ -195,7 +202,14 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Http2Origin.
+         * <p>Indicates whether to enable HTTP2 origin, disabled by default. Possible values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder http2Origin(String http2Origin) {
             this.putQueryParameter("Http2Origin", http2Origin);
@@ -204,7 +218,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -213,7 +230,14 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -222,7 +246,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -231,6 +258,7 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +271,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Version number of the site configuration. For sites with version management enabled, this parameter specifies the version to which the configuration applies, defaulting to version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);
@@ -252,7 +283,14 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * SmartRouting.
+         * <p>Indicates whether to enable smart routing service, disabled by default. Possible values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder smartRouting(String smartRouting) {
             this.putQueryParameter("SmartRouting", smartRouting);
@@ -261,7 +299,10 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * UploadMaxFilesize.
+         * <p>Maximum file size for upload, in MB. Range: 100～500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder uploadMaxFilesize(String uploadMaxFilesize) {
             this.putQueryParameter("UploadMaxFilesize", uploadMaxFilesize);
@@ -270,7 +311,14 @@ public class CreateNetworkOptimizationRequest extends Request {
         }
 
         /**
-         * Websocket.
+         * <p>Indicates whether to enable Websocket, enabled by default. Possible values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder websocket(String websocket) {
             this.putQueryParameter("Websocket", websocket);

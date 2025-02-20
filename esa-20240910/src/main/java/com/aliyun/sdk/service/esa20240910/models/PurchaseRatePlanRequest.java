@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PurchaseRatePlanRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 99, minimum = 1)
+    private Integer amount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -55,6 +60,7 @@ public class PurchaseRatePlanRequest extends Request {
 
     private PurchaseRatePlanRequest(Builder builder) {
         super(builder);
+        this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.chargeType = builder.chargeType;
@@ -77,6 +83,13 @@ public class PurchaseRatePlanRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return amount
+     */
+    public Integer getAmount() {
+        return this.amount;
     }
 
     /**
@@ -143,6 +156,7 @@ public class PurchaseRatePlanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PurchaseRatePlanRequest, Builder> {
+        private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String chargeType; 
@@ -159,6 +173,7 @@ public class PurchaseRatePlanRequest extends Request {
 
         private Builder(PurchaseRatePlanRequest request) {
             super(request);
+            this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.chargeType = request.chargeType;
@@ -169,6 +184,15 @@ public class PurchaseRatePlanRequest extends Request {
             this.siteName = request.siteName;
             this.type = request.type;
         } 
+
+        /**
+         * Amount.
+         */
+        public Builder amount(Integer amount) {
+            this.putQueryParameter("Amount", amount);
+            this.amount = amount;
+            return this;
+        }
 
         /**
          * AutoPay.

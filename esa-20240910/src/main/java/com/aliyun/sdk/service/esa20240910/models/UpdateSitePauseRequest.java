@@ -75,6 +75,11 @@ public class UpdateSitePauseRequest extends Request {
         } 
 
         /**
+         * <p>Used to temporarily pause the proxy acceleration function of the entire site. When enabled, all DNS records will directly return their values to the client. Value range:</p>
+         * <ul>
+         * <li>true: Pause site acceleration.</li>
+         * <li>false: Normal site acceleration.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +92,7 @@ public class UpdateSitePauseRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

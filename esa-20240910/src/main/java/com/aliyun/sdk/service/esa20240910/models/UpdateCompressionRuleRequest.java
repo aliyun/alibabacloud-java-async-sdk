@@ -159,7 +159,14 @@ public class UpdateCompressionRuleRequest extends Request {
         } 
 
         /**
-         * Brotli.
+         * <p>Brotli compression. Value range:</p>
+         * <ul>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder brotli(String brotli) {
             this.putQueryParameter("Brotli", brotli);
@@ -168,6 +175,7 @@ public class UpdateCompressionRuleRequest extends Request {
         }
 
         /**
+         * <p>Configuration ID. It can be obtained by calling the <a href="~~ListCompressionRules~~">ListCompressionRules</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +188,14 @@ public class UpdateCompressionRuleRequest extends Request {
         }
 
         /**
-         * Gzip.
+         * <p>Gzip compression. Value range:</p>
+         * <ul>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder gzip(String gzip) {
             this.putQueryParameter("Gzip", gzip);
@@ -189,7 +204,10 @@ public class UpdateCompressionRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -198,7 +216,14 @@ public class UpdateCompressionRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule enable status, supports:</p>
+         * <ul>
+         * <li><strong>on</strong>: indicates enabled.</li>
+         * <li><strong>off</strong>: indicates disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -207,7 +232,10 @@ public class UpdateCompressionRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -216,6 +244,7 @@ public class UpdateCompressionRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

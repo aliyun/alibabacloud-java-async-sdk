@@ -163,7 +163,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         private String zstd; 
 
         /**
-         * Brotli.
+         * <p>Brotli compression. Value range: </p>
+         * <ul>
+         * <li>on: Enable. </li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder brotli(String brotli) {
             this.brotli = brotli;
@@ -171,7 +178,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35281609698****</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -179,7 +189,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>Configuration type. Possible values:</p>
+         * <ul>
+         * <li>global: Global configuration.</li>
+         * <li>rule: Rule configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -187,7 +204,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Gzip.
+         * <p>Gzip compression. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder gzip(String gzip) {
             this.gzip = gzip;
@@ -195,7 +219,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186C6DF2-D96A-5102-B04E-FB92C16C9867</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +230,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -211,7 +241,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Possible values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -219,7 +256,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -227,7 +267,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>Rule execution sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -235,7 +278,10 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;
@@ -243,7 +289,14 @@ public class GetCompressionRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Zstd.
+         * <p>Zstd compression. Value range: </p>
+         * <ul>
+         * <li>on: Enable. </li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder zstd(String zstd) {
             this.zstd = zstd;

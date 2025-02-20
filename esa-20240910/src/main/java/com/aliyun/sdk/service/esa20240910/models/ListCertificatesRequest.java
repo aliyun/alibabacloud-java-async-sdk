@@ -116,7 +116,10 @@ public class ListCertificatesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -125,7 +128,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -134,7 +140,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -143,6 +152,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * ValidOnly.
+         * <p>Whether to return only valid certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder validOnly(Boolean validOnly) {
             this.putQueryParameter("ValidOnly", validOnly);

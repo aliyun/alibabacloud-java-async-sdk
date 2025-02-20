@@ -75,6 +75,11 @@ public class UpdateIPv6Request extends Request {
         } 
 
         /**
+         * <p>Switch. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable.</li>
+         * <li><strong>off</strong>: Disable.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +92,7 @@ public class UpdateIPv6Request extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

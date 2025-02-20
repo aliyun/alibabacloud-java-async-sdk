@@ -103,7 +103,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         private Integer totalPage; 
 
         /**
-         * Configs.
+         * <p>Response body configuration.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -111,7 +111,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -119,7 +122,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The size of the page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -127,7 +133,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +144,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -143,7 +155,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -381,7 +396,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             private Integer siteVersion; 
 
             /**
-             * AltSvc.
+             * <p>Alt-Svc feature switch, default is disabled. Values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder altSvc(String altSvc) {
                 this.altSvc = altSvc;
@@ -389,7 +411,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * AltSvcClear.
+             * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder altSvcClear(String altSvcClear) {
                 this.altSvcClear = altSvcClear;
@@ -397,7 +426,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * AltSvcMa.
+             * <p>The effective duration of Alt-Svc, in seconds. The default is 86400 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder altSvcMa(String altSvcMa) {
                 this.altSvcMa = altSvcMa;
@@ -405,7 +437,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * AltSvcPersist.
+             * <p>Whether the Alt-Svc header contains the persist parameter, default is off. Values: - on: enabled. - off: disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder altSvcPersist(String altSvcPersist) {
                 this.altSvcPersist = altSvcPersist;
@@ -413,7 +448,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>Configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>395386449776640</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -421,7 +459,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+             * <ul>
+             * <li>global: Query global configuration.</li>
+             * <li>rule: Query rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -429,7 +474,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Hsts.
+             * <p>Indicates whether HSTS is enabled. The default is off. Possible values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder hsts(String hsts) {
                 this.hsts = hsts;
@@ -437,7 +489,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HstsIncludeSubdomains.
+             * <p>Indicates whether to include subdomains in HSTS. The default is off. Possible values:</p>
+             * <ul>
+             * <li>on: Include subdomains.</li>
+             * <li>off: Do not include subdomains.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder hstsIncludeSubdomains(String hstsIncludeSubdomains) {
                 this.hstsIncludeSubdomains = hstsIncludeSubdomains;
@@ -445,7 +504,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HstsMaxAge.
+             * <p>The expiration time of HSTS, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder hstsMaxAge(String hstsMaxAge) {
                 this.hstsMaxAge = hstsMaxAge;
@@ -453,7 +515,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HstsPreload.
+             * <p>Indicates whether HSTS preloading is enabled. The default is off. Possible values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder hstsPreload(String hstsPreload) {
                 this.hstsPreload = hstsPreload;
@@ -461,7 +530,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsForce.
+             * <p>Whether to enable forced HTTPS, default is disabled. Values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder httpsForce(String httpsForce) {
                 this.httpsForce = httpsForce;
@@ -469,7 +545,16 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsForceCode.
+             * <p>Forced HTTPS redirect status code, value range:</p>
+             * <ul>
+             * <li>301</li>
+             * <li>302</li>
+             * <li>307</li>
+             * <li>308</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder httpsForceCode(String httpsForceCode) {
                 this.httpsForceCode = httpsForceCode;
@@ -477,7 +562,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>Rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(http.host eq &quot;video.example.com&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -485,7 +573,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleEnable.
+             * <p>Rule switch. Values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder ruleEnable(String ruleEnable) {
                 this.ruleEnable = ruleEnable;
@@ -493,7 +588,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_example</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -501,7 +599,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * <p>Rule execution sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -509,7 +610,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>Site version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;

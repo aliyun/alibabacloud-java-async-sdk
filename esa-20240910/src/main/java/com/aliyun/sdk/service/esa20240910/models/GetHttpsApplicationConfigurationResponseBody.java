@@ -247,7 +247,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         private Integer siteVersion; 
 
         /**
-         * AltSvc.
+         * <p>Alt-Svc feature switch, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvc(String altSvc) {
             this.altSvc = altSvc;
@@ -255,7 +262,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * AltSvcClear.
+         * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvcClear(String altSvcClear) {
             this.altSvcClear = altSvcClear;
@@ -263,7 +277,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * AltSvcMa.
+         * <p>Alt-Svc validity period in seconds, default is 86400 seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder altSvcMa(String altSvcMa) {
             this.altSvcMa = altSvcMa;
@@ -271,7 +288,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * AltSvcPersist.
+         * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder altSvcPersist(String altSvcPersist) {
             this.altSvcPersist = altSvcPersist;
@@ -279,7 +303,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816096987136</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -287,7 +314,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+         * <ul>
+         * <li>global: Query global configuration.</li>
+         * <li>rule: Query rule configuration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -295,7 +329,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Hsts.
+         * <p>Whether to enable HSTS, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hsts(String hsts) {
             this.hsts = hsts;
@@ -303,7 +344,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * HstsIncludeSubdomains.
+         * <p>Whether to include subdomains in HSTS, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hstsIncludeSubdomains(String hstsIncludeSubdomains) {
             this.hstsIncludeSubdomains = hstsIncludeSubdomains;
@@ -311,7 +359,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * HstsMaxAge.
+         * <p>HSTS expiration time in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder hstsMaxAge(String hstsMaxAge) {
             this.hstsMaxAge = hstsMaxAge;
@@ -319,7 +370,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * HstsPreload.
+         * <p>Whether to enable HSTS preload, default is off. Value range:</p>
+         * <ul>
+         * <li>on: enabled. </li>
+         * <li>off: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder hstsPreload(String hstsPreload) {
             this.hstsPreload = hstsPreload;
@@ -327,7 +385,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpsForce.
+         * <p>Whether to enable forced HTTPS, default is disabled. Value range:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder httpsForce(String httpsForce) {
             this.httpsForce = httpsForce;
@@ -335,7 +400,16 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpsForceCode.
+         * <p>Forced HTTPS redirect status code. Value range:</p>
+         * <ul>
+         * <li>301</li>
+         * <li>302</li>
+         * <li>307</li>
+         * <li>308</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         public Builder httpsForceCode(String httpsForceCode) {
             this.httpsForceCode = httpsForceCode;
@@ -343,7 +417,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3790430-3A06-535F-A424-0998BD9A6C9F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -351,7 +428,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -359,7 +439,14 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -367,7 +454,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -375,7 +465,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>Rule execution sequence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -383,7 +476,10 @@ public class GetHttpsApplicationConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>Site version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;

@@ -103,7 +103,14 @@ public class CreateOriginPoolRequest extends Request {
         } 
 
         /**
-         * Enabled.
+         * <p>Whether the origin address pool is enabled:</p>
+         * <ul>
+         * <li>true: Enabled;</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -112,10 +119,11 @@ public class CreateOriginPoolRequest extends Request {
         }
 
         /**
+         * <p>The name of the origin address pool, which must be unique within a site.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CreateOriginPool</p>
+         * <p>pool1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,7 +132,7 @@ public class CreateOriginPoolRequest extends Request {
         }
 
         /**
-         * Origins.
+         * <p>Information about the origins added to the origin address pool, with multiple origins passed as an array.</p>
          */
         public Builder origins(java.util.List<Origins> origins) {
             String originsShrink = shrink(origins, "Origins", "json");
@@ -134,7 +142,11 @@ public class CreateOriginPoolRequest extends Request {
         }
 
         /**
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21655860979****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -230,7 +242,10 @@ public class CreateOriginPoolRequest extends Request {
             private String version; 
 
             /**
-             * AccessKey.
+             * <p>The access key required for private authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI5tGLgmPe1wFwpX86****</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -238,7 +253,16 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * AuthType.
+             * <p>The type of authentication.</p>
+             * <ul>
+             * <li>public: Public read/write, used when the origin is OSS or S3 and is set to public read/write;</li>
+             * <li>private_same_account: Private same account, used when the origin is OSS and the authentication type is private within the same account;</li>
+             * <li>private_cross_account: Private cross-account, used when the origin is OSS and the authentication type is private across accounts;</li>
+             * <li>private: Used when the origin is S3 and the authentication type is private.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -246,7 +270,10 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * Region.
+             * <p>The region of the origin required when the origin is AWS S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-east-1</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -254,7 +281,10 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * SecretKey.
+             * <p>The secret key required for private authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bd8tjba5lXxxxxiRXFIBvoCIfJI****</p>
              */
             public Builder secretKey(String secretKey) {
                 this.secretKey = secretKey;
@@ -262,7 +292,10 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The signature version required when the origin is AWS S3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -381,7 +414,10 @@ public class CreateOriginPoolRequest extends Request {
             private Integer weight; 
 
             /**
-             * Address.
+             * <p>The address of the origin, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -389,7 +425,7 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * AuthConf.
+             * <p>Authentication information, required when the origin is OSS or S3 and needs authentication, including related configuration details.</p>
              */
             public Builder authConf(AuthConf authConf) {
                 this.authConf = authConf;
@@ -397,7 +433,14 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Whether the origin is enabled:</p>
+             * <ul>
+             * <li>true: Enabled;</li>
+             * <li>false: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -405,7 +448,14 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * Header.
+             * <p>The request header to be included when fetching from the origin, only Host is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;Host&quot;: [
+             *           &quot;example.com&quot;
+             *         ]
+             *       }</p>
              */
             public Builder header(Object header) {
                 this.header = header;
@@ -413,10 +463,10 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the origin, which must be unique within an origin address.</p>
              * 
              * <strong>example:</strong>
-             * <p>CreateOriginPool</p>
+             * <p>origin1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -424,7 +474,15 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the origin:</p>
+             * <ul>
+             * <li>ip_domain: IP or domain name type origin;</li>
+             * <li>OSS: OSS address origin;</li>
+             * <li>S3: AWS S3 origin.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ip_domain</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -432,7 +490,10 @@ public class CreateOriginPoolRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight, an integer between 0 and 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

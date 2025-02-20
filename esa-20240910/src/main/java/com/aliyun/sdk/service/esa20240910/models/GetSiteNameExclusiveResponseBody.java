@@ -55,7 +55,14 @@ public class GetSiteNameExclusiveResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enable.
+         * <p>Feature switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -63,7 +70,10 @@ public class GetSiteNameExclusiveResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

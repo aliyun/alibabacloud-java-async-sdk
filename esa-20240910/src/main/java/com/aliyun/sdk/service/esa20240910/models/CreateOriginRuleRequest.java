@@ -214,7 +214,10 @@ public class CreateOriginRuleRequest extends Request {
         } 
 
         /**
-         * DnsRecord.
+         * <p>Rewrite the DNS resolution record for the origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.example.com</p>
          */
         public Builder dnsRecord(String dnsRecord) {
             this.putQueryParameter("DnsRecord", dnsRecord);
@@ -223,7 +226,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginHost.
+         * <p>The HOST carried in the origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>origin.example.com</p>
          */
         public Builder originHost(String originHost) {
             this.putQueryParameter("OriginHost", originHost);
@@ -232,7 +238,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginHttpPort.
+         * <p>Port of the origin server when using the HTTP protocol for origin requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder originHttpPort(String originHttpPort) {
             this.putQueryParameter("OriginHttpPort", originHttpPort);
@@ -241,7 +250,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginHttpsPort.
+         * <p>Port of the origin server when using the HTTPS protocol for origin requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4433</p>
          */
         public Builder originHttpsPort(String originHttpsPort) {
             this.putQueryParameter("OriginHttpsPort", originHttpsPort);
@@ -250,7 +262,15 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginScheme.
+         * <p>Protocol used for the origin request. Possible values:</p>
+         * <ul>
+         * <li>http: Use HTTP protocol for origin requests.</li>
+         * <li>https: Use HTTPS protocol for origin requests.</li>
+         * <li>follow: Follow the client&quot;s protocol for origin requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder originScheme(String originScheme) {
             this.putQueryParameter("OriginScheme", originScheme);
@@ -259,7 +279,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginSni.
+         * <p>The SNI carried in the origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>origin.example.com</p>
          */
         public Builder originSni(String originSni) {
             this.putQueryParameter("OriginSni", originSni);
@@ -268,7 +291,15 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * Range.
+         * <p>Use range chunking for downloading files from the origin. Possible values:</p>
+         * <ul>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * <li>force: Force</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder range(String range) {
             this.putQueryParameter("Range", range);
@@ -277,7 +308,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -286,7 +320,14 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -295,7 +336,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -304,6 +348,7 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +361,10 @@ public class CreateOriginRuleRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site where the configuration takes effect. The default is version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

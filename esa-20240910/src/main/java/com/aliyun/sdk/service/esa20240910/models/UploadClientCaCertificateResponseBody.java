@@ -163,7 +163,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         private String validityDays; 
 
         /**
-         * CommonName.
+         * <p>The Common Name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -171,7 +174,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * FingerprintSha256.
+         * <p>The SHA-256 fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</p>
          */
         public Builder fingerprintSha256(String fingerprintSha256) {
             this.fingerprintSha256 = fingerprintSha256;
@@ -179,7 +185,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baba39055622c008b90285a8838ed09a</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -187,7 +196,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Issuer.
+         * <p>The CA that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GlobalSign nv-sa</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -195,7 +207,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NotAfter.
+         * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-01T02:13:07Z</p>
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -203,7 +218,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * NotBefore.
+         * <p>The time when the certificate takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-01T02:13:07Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -211,7 +229,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +240,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SerialNumber.
+         * <p>The serial number of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
          */
         public Builder serialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
@@ -227,7 +251,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureAlgorithm.
+         * <p>The signature algorithm of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256-RSA</p>
          */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
@@ -235,7 +262,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -243,7 +273,10 @@ public class UploadClientCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * ValidityDays.
+         * <p>The validity period of the certificate. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder validityDays(String validityDays) {
             this.validityDays = validityDays;

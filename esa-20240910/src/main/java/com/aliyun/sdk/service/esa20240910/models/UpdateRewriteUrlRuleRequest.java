@@ -173,6 +173,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         } 
 
         /**
+         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * QueryString.
+         * <p>Query string after rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example=123</p>
          */
         public Builder queryString(String queryString) {
             this.putQueryParameter("QueryString", queryString);
@@ -194,7 +198,13 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RewriteQueryStringType.
+         * <p>Query string rewrite type. Value range:</p>
+         * <ul>
+         * <li>static: Static mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder rewriteQueryStringType(String rewriteQueryStringType) {
             this.putQueryParameter("RewriteQueryStringType", rewriteQueryStringType);
@@ -203,7 +213,13 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RewriteUriType.
+         * <p>URI rewrite type. Value range:</p>
+         * <ul>
+         * <li>static: Static mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder rewriteUriType(String rewriteUriType) {
             this.putQueryParameter("RewriteUriType", rewriteUriType);
@@ -212,7 +228,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -221,7 +240,14 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -230,7 +256,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example=123</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -239,6 +268,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +281,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>Target URI after rewriting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/image/example.jpg</p>
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);
