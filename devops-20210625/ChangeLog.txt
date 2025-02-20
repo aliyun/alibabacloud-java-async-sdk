@@ -1,3 +1,6 @@
+2025-02-20 Version: 5.0.1
+- Generated java-async 2021-06-25 for devops.
+
 2025-01-03 Version: 5.0.0
 - Generated java-async 2021-06-25 for devops.
 

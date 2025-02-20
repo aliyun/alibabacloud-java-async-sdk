@@ -40,6 +40,10 @@ public class CreateCommentRequest extends Request {
     private String filePath;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fromPachSetBizId")
+    private String fromPachSetBizId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("lineNumber")
     private Integer lineNumber;
 
@@ -54,6 +58,10 @@ public class CreateCommentRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resolved")
     private Boolean resolved;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("toPatchSetBizId")
+    private String toPatchSetBizId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("localId")
@@ -77,10 +85,12 @@ public class CreateCommentRequest extends Request {
         this.content = builder.content;
         this.draft = builder.draft;
         this.filePath = builder.filePath;
+        this.fromPachSetBizId = builder.fromPachSetBizId;
         this.lineNumber = builder.lineNumber;
         this.parentCommentBizId = builder.parentCommentBizId;
         this.patchSetBizId = builder.patchSetBizId;
         this.resolved = builder.resolved;
+        this.toPatchSetBizId = builder.toPatchSetBizId;
         this.localId = builder.localId;
         this.organizationId = builder.organizationId;
         this.repositoryIdentity = builder.repositoryIdentity;
@@ -135,6 +145,13 @@ public class CreateCommentRequest extends Request {
     }
 
     /**
+     * @return fromPachSetBizId
+     */
+    public String getFromPachSetBizId() {
+        return this.fromPachSetBizId;
+    }
+
+    /**
      * @return lineNumber
      */
     public Integer getLineNumber() {
@@ -160,6 +177,13 @@ public class CreateCommentRequest extends Request {
      */
     public Boolean getResolved() {
         return this.resolved;
+    }
+
+    /**
+     * @return toPatchSetBizId
+     */
+    public String getToPatchSetBizId() {
+        return this.toPatchSetBizId;
     }
 
     /**
@@ -189,10 +213,12 @@ public class CreateCommentRequest extends Request {
         private String content; 
         private Boolean draft; 
         private String filePath; 
+        private String fromPachSetBizId; 
         private Integer lineNumber; 
         private String parentCommentBizId; 
         private String patchSetBizId; 
         private Boolean resolved; 
+        private String toPatchSetBizId; 
         private Long localId; 
         private String organizationId; 
         private String repositoryIdentity; 
@@ -208,10 +234,12 @@ public class CreateCommentRequest extends Request {
             this.content = request.content;
             this.draft = request.draft;
             this.filePath = request.filePath;
+            this.fromPachSetBizId = request.fromPachSetBizId;
             this.lineNumber = request.lineNumber;
             this.parentCommentBizId = request.parentCommentBizId;
             this.patchSetBizId = request.patchSetBizId;
             this.resolved = request.resolved;
+            this.toPatchSetBizId = request.toPatchSetBizId;
             this.localId = request.localId;
             this.organizationId = request.organizationId;
             this.repositoryIdentity = request.repositoryIdentity;
@@ -266,6 +294,15 @@ public class CreateCommentRequest extends Request {
         }
 
         /**
+         * fromPachSetBizId.
+         */
+        public Builder fromPachSetBizId(String fromPachSetBizId) {
+            this.putBodyParameter("fromPachSetBizId", fromPachSetBizId);
+            this.fromPachSetBizId = fromPachSetBizId;
+            return this;
+        }
+
+        /**
          * lineNumber.
          */
         public Builder lineNumber(Integer lineNumber) {
@@ -298,6 +335,15 @@ public class CreateCommentRequest extends Request {
         public Builder resolved(Boolean resolved) {
             this.putBodyParameter("resolved", resolved);
             this.resolved = resolved;
+            return this;
+        }
+
+        /**
+         * toPatchSetBizId.
+         */
+        public Builder toPatchSetBizId(String toPatchSetBizId) {
+            this.putBodyParameter("toPatchSetBizId", toPatchSetBizId);
+            this.toPatchSetBizId = toPatchSetBizId;
             return this;
         }
 
