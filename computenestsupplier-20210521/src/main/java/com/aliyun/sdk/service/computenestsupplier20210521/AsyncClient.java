@@ -65,10 +65,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceInstanceResponse> createServiceInstance(CreateServiceInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceTestCase  CreateServiceTestCaseRequest
+     * @return CreateServiceTestCaseResponse
+     */
+    CompletableFuture<CreateServiceTestCaseResponse> createServiceTestCase(CreateServiceTestCaseRequest request);
+
+    /**
+     * @param request the request parameters of CreateServiceTestTask  CreateServiceTestTaskRequest
+     * @return CreateServiceTestTaskResponse
+     */
+    CompletableFuture<CreateServiceTestTaskResponse> createServiceTestTask(CreateServiceTestTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateServiceUsage  CreateServiceUsageRequest
      * @return CreateServiceUsageResponse
      */
     CompletableFuture<CreateServiceUsageResponse> createServiceUsage(CreateServiceUsageRequest request);
+
+    /**
+     * @param request the request parameters of CreateSupplierRegistration  CreateSupplierRegistrationRequest
+     * @return CreateSupplierRegistrationResponse
+     */
+    CompletableFuture<CreateSupplierRegistrationResponse> createSupplierRegistration(CreateSupplierRegistrationRequest request);
 
     /**
      * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
@@ -89,10 +107,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
 
     /**
+     * @param request the request parameters of DeleteServiceTestCase  DeleteServiceTestCaseRequest
+     * @return DeleteServiceTestCaseResponse
+     */
+    CompletableFuture<DeleteServiceTestCaseResponse> deleteServiceTestCase(DeleteServiceTestCaseRequest request);
+
+    /**
      * @param request the request parameters of DeployServiceInstance  DeployServiceInstanceRequest
      * @return DeployServiceInstanceResponse
      */
     CompletableFuture<DeployServiceInstanceResponse> deployServiceInstance(DeployServiceInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GenerateDefaultServiceTestConfig  GenerateDefaultServiceTestConfigRequest
+     * @return GenerateDefaultServiceTestConfigResponse
+     */
+    CompletableFuture<GenerateDefaultServiceTestConfigResponse> generateDefaultServiceTestConfig(GenerateDefaultServiceTestConfigRequest request);
 
     /**
      * @param request the request parameters of GenerateServicePolicy  GenerateServicePolicyRequest
@@ -143,6 +173,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceTemplateParameterConstraintsResponse> getServiceTemplateParameterConstraints(GetServiceTemplateParameterConstraintsRequest request);
 
     /**
+     * @param request the request parameters of GetServiceTestTask  GetServiceTestTaskRequest
+     * @return GetServiceTestTaskResponse
+     */
+    CompletableFuture<GetServiceTestTaskResponse> getServiceTestTask(GetServiceTestTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetSupplierInformation  GetSupplierInformationRequest
+     * @return GetSupplierInformationResponse
+     */
+    CompletableFuture<GetSupplierInformationResponse> getSupplierInformation(GetSupplierInformationRequest request);
+
+    /**
      * @param request the request parameters of GetUploadCredentials  GetUploadCredentialsRequest
      * @return GetUploadCredentialsResponse
      */
@@ -167,6 +209,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAcrImageTagsResponse> listAcrImageTags(ListAcrImageTagsRequest request);
 
     /**
+     * @param request the request parameters of ListArtifactRisks  ListArtifactRisksRequest
+     * @return ListArtifactRisksResponse
+     */
+    CompletableFuture<ListArtifactRisksResponse> listArtifactRisks(ListArtifactRisksRequest request);
+
+    /**
      * @param request the request parameters of ListArtifactVersions  ListArtifactVersionsRequest
      * @return ListArtifactVersionsResponse
      */
@@ -183,6 +231,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListServiceInstanceDeployDetailsResponse
      */
     CompletableFuture<ListServiceInstanceDeployDetailsResponse> listServiceInstanceDeployDetails(ListServiceInstanceDeployDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceInstanceResources  ListServiceInstanceResourcesRequest
+     * @return ListServiceInstanceResourcesResponse
+     */
+    CompletableFuture<ListServiceInstanceResourcesResponse> listServiceInstanceResources(ListServiceInstanceResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceInstanceUpgradeHistory  ListServiceInstanceUpgradeHistoryRequest
+     * @return ListServiceInstanceUpgradeHistoryResponse
+     */
+    CompletableFuture<ListServiceInstanceUpgradeHistoryResponse> listServiceInstanceUpgradeHistory(ListServiceInstanceUpgradeHistoryRequest request);
 
     /**
      * @param request the request parameters of ListServiceInstances  ListServiceInstancesRequest
@@ -203,6 +263,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceSharedAccountsResponse> listServiceSharedAccounts(ListServiceSharedAccountsRequest request);
 
     /**
+     * @param request the request parameters of ListServiceTestCases  ListServiceTestCasesRequest
+     * @return ListServiceTestCasesResponse
+     */
+    CompletableFuture<ListServiceTestCasesResponse> listServiceTestCases(ListServiceTestCasesRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceTestTaskLogs  ListServiceTestTaskLogsRequest
+     * @return ListServiceTestTaskLogsResponse
+     */
+    CompletableFuture<ListServiceTestTaskLogsResponse> listServiceTestTaskLogs(ListServiceTestTaskLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceTestTasks  ListServiceTestTasksRequest
+     * @return ListServiceTestTasksResponse
+     */
+    CompletableFuture<ListServiceTestTasksResponse> listServiceTestTasks(ListServiceTestTasksRequest request);
+
+    /**
      * @param request the request parameters of ListServiceUsages  ListServiceUsagesRequest
      * @return ListServiceUsagesResponse
      */
@@ -215,10 +293,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
     /**
+     * @param request the request parameters of ListSupplierRegistrations  ListSupplierRegistrationsRequest
+     * @return ListSupplierRegistrationsResponse
+     */
+    CompletableFuture<ListSupplierRegistrationsResponse> listSupplierRegistrations(ListSupplierRegistrationsRequest request);
+
+    /**
      * @param request the request parameters of ListTagKeys  ListTagKeysRequest
      * @return ListTagKeysResponse
      */
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
      * @param request the request parameters of ListTagValues  ListTagValuesRequest
@@ -329,10 +419,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateServiceInstanceSpecResponse> updateServiceInstanceSpec(UpdateServiceInstanceSpecRequest request);
 
     /**
+     * @param request the request parameters of UpdateServiceTestCase  UpdateServiceTestCaseRequest
+     * @return UpdateServiceTestCaseResponse
+     */
+    CompletableFuture<UpdateServiceTestCaseResponse> updateServiceTestCase(UpdateServiceTestCaseRequest request);
+
+    /**
      * @param request the request parameters of UpdateSharedAccountPermission  UpdateSharedAccountPermissionRequest
      * @return UpdateSharedAccountPermissionResponse
      */
     CompletableFuture<UpdateSharedAccountPermissionResponse> updateSharedAccountPermission(UpdateSharedAccountPermissionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSupplierInformation  UpdateSupplierInformationRequest
+     * @return UpdateSupplierInformationResponse
+     */
+    CompletableFuture<UpdateSupplierInformationResponse> updateSupplierInformation(UpdateSupplierInformationRequest request);
 
     /**
      * @param request the request parameters of UpgradeServiceInstance  UpgradeServiceInstanceRequest

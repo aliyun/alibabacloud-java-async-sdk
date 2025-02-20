@@ -154,6 +154,9 @@ public class LaunchServiceRequest extends Request {
 
         /**
          * <p>Whether to set the recommended service publishing to the service directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recommend(Boolean recommend) {
             this.putQueryParameter("Recommend", recommend);
