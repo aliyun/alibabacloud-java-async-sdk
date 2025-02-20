@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
+    private String backupSetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -55,6 +59,10 @@ public class CreateDBInstanceRequest extends Request {
     private String scaleMin;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBInstanceId")
+    private String sourceDBInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
@@ -68,6 +76,7 @@ public class CreateDBInstanceRequest extends Request {
 
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
+        this.backupSetId = builder.backupSetId;
         this.clientToken = builder.clientToken;
         this.DBInstanceDescription = builder.DBInstanceDescription;
         this.deploySchema = builder.deploySchema;
@@ -77,6 +86,7 @@ public class CreateDBInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.scaleMax = builder.scaleMax;
         this.scaleMin = builder.scaleMin;
+        this.sourceDBInstanceId = builder.sourceDBInstanceId;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
         this.zoneId = builder.zoneId;
@@ -93,6 +103,13 @@ public class CreateDBInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backupSetId
+     */
+    public String getBackupSetId() {
+        return this.backupSetId;
     }
 
     /**
@@ -159,6 +176,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return sourceDBInstanceId
+     */
+    public String getSourceDBInstanceId() {
+        return this.sourceDBInstanceId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -180,6 +204,7 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
+        private String backupSetId; 
         private String clientToken; 
         private String DBInstanceDescription; 
         private String deploySchema; 
@@ -189,6 +214,7 @@ public class CreateDBInstanceRequest extends Request {
         private String regionId; 
         private String scaleMax; 
         private String scaleMin; 
+        private String sourceDBInstanceId; 
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
@@ -199,6 +225,7 @@ public class CreateDBInstanceRequest extends Request {
 
         private Builder(CreateDBInstanceRequest request) {
             super(request);
+            this.backupSetId = request.backupSetId;
             this.clientToken = request.clientToken;
             this.DBInstanceDescription = request.DBInstanceDescription;
             this.deploySchema = request.deploySchema;
@@ -208,10 +235,20 @@ public class CreateDBInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.scaleMax = request.scaleMax;
             this.scaleMin = request.scaleMin;
+            this.sourceDBInstanceId = request.sourceDBInstanceId;
             this.vpcId = request.vpcId;
             this.vswitchId = request.vswitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * BackupSetId.
+         */
+        public Builder backupSetId(String backupSetId) {
+            this.putQueryParameter("BackupSetId", backupSetId);
+            this.backupSetId = backupSetId;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -298,6 +335,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
             this.scaleMin = scaleMin;
+            return this;
+        }
+
+        /**
+         * SourceDBInstanceId.
+         */
+        public Builder sourceDBInstanceId(String sourceDBInstanceId) {
+            this.putQueryParameter("SourceDBInstanceId", sourceDBInstanceId);
+            this.sourceDBInstanceId = sourceDBInstanceId;
             return this;
         }
 
