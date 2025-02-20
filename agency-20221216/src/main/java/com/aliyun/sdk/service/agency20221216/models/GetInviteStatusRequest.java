@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class GetInviteStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InviteStatusList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < InviteStatusList> inviteStatusList;
+    private java.util.List<InviteStatusList> inviteStatusList;
 
     private GetInviteStatusRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class GetInviteStatusRequest extends Request {
     /**
      * @return inviteStatusList
      */
-    public java.util.List < InviteStatusList> getInviteStatusList() {
+    public java.util.List<InviteStatusList> getInviteStatusList() {
         return this.inviteStatusList;
     }
 
     public static final class Builder extends Request.Builder<GetInviteStatusRequest, Builder> {
-        private java.util.List < InviteStatusList> inviteStatusList; 
+        private java.util.List<InviteStatusList> inviteStatusList; 
 
         private Builder() {
             super();
@@ -59,7 +64,7 @@ public class GetInviteStatusRequest extends Request {
          * <code>Sub-levels &lt;= 5</code></p>
          * <p>This parameter is required.</p>
          */
-        public Builder inviteStatusList(java.util.List < InviteStatusList> inviteStatusList) {
+        public Builder inviteStatusList(java.util.List<InviteStatusList> inviteStatusList) {
             this.putQueryParameter("InviteStatusList", inviteStatusList);
             this.inviteStatusList = inviteStatusList;
             return this;

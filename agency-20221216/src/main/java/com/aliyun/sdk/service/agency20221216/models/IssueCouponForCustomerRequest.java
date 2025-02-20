@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,6 +27,10 @@ public class IssueCouponForCustomerRequest extends Request {
     private Long couponTemplateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsUseBenefit")
+    private Boolean isUseBenefit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uidlist")
     @com.aliyun.core.annotation.Validation(required = true)
     private String uidlist;
@@ -30,6 +39,7 @@ public class IssueCouponForCustomerRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.couponTemplateId = builder.couponTemplateId;
+        this.isUseBenefit = builder.isUseBenefit;
         this.uidlist = builder.uidlist;
     }
 
@@ -61,6 +71,13 @@ public class IssueCouponForCustomerRequest extends Request {
     }
 
     /**
+     * @return isUseBenefit
+     */
+    public Boolean getIsUseBenefit() {
+        return this.isUseBenefit;
+    }
+
+    /**
      * @return uidlist
      */
     public String getUidlist() {
@@ -70,6 +87,7 @@ public class IssueCouponForCustomerRequest extends Request {
     public static final class Builder extends Request.Builder<IssueCouponForCustomerRequest, Builder> {
         private String acceptLanguage; 
         private Long couponTemplateId; 
+        private Boolean isUseBenefit; 
         private String uidlist; 
 
         private Builder() {
@@ -80,6 +98,7 @@ public class IssueCouponForCustomerRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.couponTemplateId = request.couponTemplateId;
+            this.isUseBenefit = request.isUseBenefit;
             this.uidlist = request.uidlist;
         } 
 
@@ -101,6 +120,15 @@ public class IssueCouponForCustomerRequest extends Request {
         public Builder couponTemplateId(Long couponTemplateId) {
             this.putQueryParameter("CouponTemplateId", couponTemplateId);
             this.couponTemplateId = couponTemplateId;
+            return this;
+        }
+
+        /**
+         * IsUseBenefit.
+         */
+        public Builder isUseBenefit(Boolean isUseBenefit) {
+            this.putQueryParameter("IsUseBenefit", isUseBenefit);
+            this.isUseBenefit = isUseBenefit;
             return this;
         }
 

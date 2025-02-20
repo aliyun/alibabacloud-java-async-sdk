@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -157,7 +162,7 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         private String expireddate;
 
         @com.aliyun.core.annotation.NameInMap("ProductType")
-        private java.util.List < String > productType;
+        private java.util.List<String> productType;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -238,7 +243,7 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         /**
          * @return productType
          */
-        public java.util.List < String > getProductType() {
+        public java.util.List<String> getProductType() {
             return this.productType;
         }
 
@@ -290,7 +295,7 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             private Long couponTemplateID; 
             private String createTime; 
             private String expireddate; 
-            private java.util.List < String > productType; 
+            private java.util.List<String> productType; 
             private String status; 
             private String templateName; 
             private String vailddate; 
@@ -341,7 +346,7 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
             /**
              * ProductType.
              */
-            public Builder productType(java.util.List < String > productType) {
+            public Builder productType(java.util.List<String> productType) {
                 this.productType = productType;
                 return this;
             }

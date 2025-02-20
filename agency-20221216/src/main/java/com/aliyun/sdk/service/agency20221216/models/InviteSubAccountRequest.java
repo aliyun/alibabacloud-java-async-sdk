@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class InviteSubAccountRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountInfoList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AccountInfoList> accountInfoList;
+    private java.util.List<AccountInfoList> accountInfoList;
 
     private InviteSubAccountRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class InviteSubAccountRequest extends Request {
     /**
      * @return accountInfoList
      */
-    public java.util.List < AccountInfoList> getAccountInfoList() {
+    public java.util.List<AccountInfoList> getAccountInfoList() {
         return this.accountInfoList;
     }
 
     public static final class Builder extends Request.Builder<InviteSubAccountRequest, Builder> {
-        private java.util.List < AccountInfoList> accountInfoList; 
+        private java.util.List<AccountInfoList> accountInfoList; 
 
         private Builder() {
             super();
@@ -59,7 +64,7 @@ public class InviteSubAccountRequest extends Request {
          * <code>Sub-levels &lt;= 5</code></p>
          * <p>This parameter is required.</p>
          */
-        public Builder accountInfoList(java.util.List < AccountInfoList> accountInfoList) {
+        public Builder accountInfoList(java.util.List<AccountInfoList> accountInfoList) {
             this.putQueryParameter("AccountInfoList", accountInfoList);
             this.accountInfoList = accountInfoList;
             return this;

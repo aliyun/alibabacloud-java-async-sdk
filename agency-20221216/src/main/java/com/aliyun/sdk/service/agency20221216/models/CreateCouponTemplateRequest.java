@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class CreateCouponTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductType")
-    private java.util.List < String > productType;
+    private java.util.List<String> productType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PurchaseType")
@@ -153,7 +158,7 @@ public class CreateCouponTemplateRequest extends Request {
     /**
      * @return productType
      */
-    public java.util.List < String > getProductType() {
+    public java.util.List<String> getProductType() {
         return this.productType;
     }
 
@@ -213,7 +218,7 @@ public class CreateCouponTemplateRequest extends Request {
         private String couponDescription; 
         private String expireddate; 
         private String limitPerPerson; 
-        private java.util.List < String > productType; 
+        private java.util.List<String> productType; 
         private String purchaseType; 
         private String reasonForApplication; 
         private String templateName; 
@@ -313,7 +318,7 @@ public class CreateCouponTemplateRequest extends Request {
         /**
          * ProductType.
          */
-        public Builder productType(java.util.List < String > productType) {
+        public Builder productType(java.util.List<String> productType) {
             String productTypeShrink = shrink(productType, "ProductType", "json");
             this.putQueryParameter("ProductType", productTypeShrink);
             this.productType = productType;

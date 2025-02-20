@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -323,7 +328,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
      */
     public static class InviteInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InviteInfo")
-        private java.util.List < InviteInfo> inviteInfo;
+        private java.util.List<InviteInfo> inviteInfo;
 
         private InviteInfoList(Builder builder) {
             this.inviteInfo = builder.inviteInfo;
@@ -340,17 +345,17 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         /**
          * @return inviteInfo
          */
-        public java.util.List < InviteInfo> getInviteInfo() {
+        public java.util.List<InviteInfo> getInviteInfo() {
             return this.inviteInfo;
         }
 
         public static final class Builder {
-            private java.util.List < InviteInfo> inviteInfo; 
+            private java.util.List<InviteInfo> inviteInfo; 
 
             /**
              * InviteInfo.
              */
-            public Builder inviteInfo(java.util.List < InviteInfo> inviteInfo) {
+            public Builder inviteInfo(java.util.List<InviteInfo> inviteInfo) {
                 this.inviteInfo = inviteInfo;
                 return this;
             }

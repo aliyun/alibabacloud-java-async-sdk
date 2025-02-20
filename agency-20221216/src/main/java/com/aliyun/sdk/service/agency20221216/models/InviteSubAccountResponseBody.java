@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -365,7 +370,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < ResultsResult> result;
+        private java.util.List<ResultsResult> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -382,17 +387,17 @@ public class InviteSubAccountResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < ResultsResult> getResult() {
+        public java.util.List<ResultsResult> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < ResultsResult> result; 
+            private java.util.List<ResultsResult> result; 
 
             /**
              * <p>Returning Message of Invitation Results</p>
              */
-            public Builder result(java.util.List < ResultsResult> result) {
+            public Builder result(java.util.List<ResultsResult> result) {
                 this.result = result;
                 return this;
             }

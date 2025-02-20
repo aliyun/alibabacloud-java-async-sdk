@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -594,7 +599,7 @@ public class GetAccountInfoResponseBody extends TeaModel {
      */
     public static class AccountInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountInfo")
-        private java.util.List < AccountInfo> accountInfo;
+        private java.util.List<AccountInfo> accountInfo;
 
         private AccountInfoList(Builder builder) {
             this.accountInfo = builder.accountInfo;
@@ -611,17 +616,17 @@ public class GetAccountInfoResponseBody extends TeaModel {
         /**
          * @return accountInfo
          */
-        public java.util.List < AccountInfo> getAccountInfo() {
+        public java.util.List<AccountInfo> getAccountInfo() {
             return this.accountInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AccountInfo> accountInfo; 
+            private java.util.List<AccountInfo> accountInfo; 
 
             /**
              * AccountInfo.
              */
-            public Builder accountInfo(java.util.List < AccountInfo> accountInfo) {
+            public Builder accountInfo(java.util.List<AccountInfo> accountInfo) {
                 this.accountInfo = accountInfo;
                 return this;
             }
