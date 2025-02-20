@@ -982,6 +982,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("serviceChannelKeywords")
         private java.util.List<String> serviceChannelKeywords;
 
+        @com.aliyun.core.annotation.NameInMap("vocabularyId")
+        private String vocabularyId;
+
         @com.aliyun.core.annotation.NameInMap("voiceFileUrl")
         @com.aliyun.core.annotation.Validation(required = true)
         private String voiceFileUrl;
@@ -994,6 +997,7 @@ public class CreateTaskRequest extends Request {
             this.level = builder.level;
             this.serviceChannel = builder.serviceChannel;
             this.serviceChannelKeywords = builder.serviceChannelKeywords;
+            this.vocabularyId = builder.vocabularyId;
             this.voiceFileUrl = builder.voiceFileUrl;
         }
 
@@ -1055,6 +1059,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return vocabularyId
+         */
+        public String getVocabularyId() {
+            return this.vocabularyId;
+        }
+
+        /**
          * @return voiceFileUrl
          */
         public String getVoiceFileUrl() {
@@ -1069,6 +1080,7 @@ public class CreateTaskRequest extends Request {
             private String level; 
             private Integer serviceChannel; 
             private java.util.List<String> serviceChannelKeywords; 
+            private String vocabularyId; 
             private String voiceFileUrl; 
 
             /**
@@ -1127,6 +1139,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder serviceChannelKeywords(java.util.List<String> serviceChannelKeywords) {
                 this.serviceChannelKeywords = serviceChannelKeywords;
+                return this;
+            }
+
+            /**
+             * vocabularyId.
+             */
+            public Builder vocabularyId(String vocabularyId) {
+                this.vocabularyId = vocabularyId;
                 return this;
             }
 
