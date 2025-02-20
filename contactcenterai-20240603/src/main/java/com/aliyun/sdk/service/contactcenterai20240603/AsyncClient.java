@@ -44,10 +44,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateVocab  CreateVocabRequest
+     * @return CreateVocabResponse
+     */
+    CompletableFuture<CreateVocabResponse> createVocab(CreateVocabRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVocab  DeleteVocabRequest
+     * @return DeleteVocabResponse
+     */
+    CompletableFuture<DeleteVocabResponse> deleteVocab(DeleteVocabRequest request);
+
+    /**
      * @param request the request parameters of GetTaskResult  GetTaskResultRequest
      * @return GetTaskResultResponse
      */
     CompletableFuture<GetTaskResultResponse> getTaskResult(GetTaskResultRequest request);
+
+    /**
+     * @param request the request parameters of GetVocab  GetVocabRequest
+     * @return GetVocabResponse
+     */
+    CompletableFuture<GetVocabResponse> getVocab(GetVocabRequest request);
+
+    /**
+     * @param request the request parameters of ListVocab  ListVocabRequest
+     * @return ListVocabResponse
+     */
+    CompletableFuture<ListVocabResponse> listVocab(ListVocabRequest request);
 
     /**
      * @param request the request parameters of RunCompletion  RunCompletionRequest
@@ -64,5 +88,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunCompletionMessageResponse> runCompletionMessage(RunCompletionMessageRequest request);
 
     ResponseIterable<RunCompletionMessageResponseBody> runCompletionMessageWithResponseIterable(RunCompletionMessageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVocab  UpdateVocabRequest
+     * @return UpdateVocabResponse
+     */
+    CompletableFuture<UpdateVocabResponse> updateVocab(UpdateVocabRequest request);
 
 }
