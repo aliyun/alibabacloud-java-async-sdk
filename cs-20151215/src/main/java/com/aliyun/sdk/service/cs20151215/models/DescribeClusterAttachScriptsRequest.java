@@ -27,6 +27,10 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     private String arch;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expired")
+    private Long expired;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
@@ -50,6 +54,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.arch = builder.arch;
+        this.expired = builder.expired;
         this.formatDisk = builder.formatDisk;
         this.keepInstanceName = builder.keepInstanceName;
         this.nodepoolId = builder.nodepoolId;
@@ -82,6 +87,13 @@ public class DescribeClusterAttachScriptsRequest extends Request {
      */
     public String getArch() {
         return this.arch;
+    }
+
+    /**
+     * @return expired
+     */
+    public Long getExpired() {
+        return this.expired;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeClusterAttachScriptsRequest, Builder> {
         private String clusterId; 
         private String arch; 
+        private Long expired; 
         private Boolean formatDisk; 
         private Boolean keepInstanceName; 
         private String nodepoolId; 
@@ -136,6 +149,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.arch = request.arch;
+            this.expired = request.expired;
             this.formatDisk = request.formatDisk;
             this.keepInstanceName = request.keepInstanceName;
             this.nodepoolId = request.nodepoolId;
@@ -169,6 +183,15 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         public Builder arch(String arch) {
             this.putBodyParameter("arch", arch);
             this.arch = arch;
+            return this;
+        }
+
+        /**
+         * expired.
+         */
+        public Builder expired(Long expired) {
+            this.putBodyParameter("expired", expired);
+            this.expired = expired;
             return this;
         }
 
