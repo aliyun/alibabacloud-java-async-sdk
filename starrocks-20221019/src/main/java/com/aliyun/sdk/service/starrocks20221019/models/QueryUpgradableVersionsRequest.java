@@ -97,6 +97,7 @@ public class QueryUpgradableVersionsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,14 @@ public class QueryUpgradableVersionsRequest extends Request {
         }
 
         /**
-         * Minor.
+         * <p>Specifies whether to query the minor versions that you can upgrade to. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true: The minor versions that you can upgrade to.</li>
+         * <li>false: The major versions that you can upgrade to.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder minor(Boolean minor) {
             this.putQueryParameter("Minor", minor);

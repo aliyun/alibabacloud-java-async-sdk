@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-starrocks20221019</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>alibabacloud-starrocks20221019</name>
   <description>Alibaba Cloud starrocks (20221019) Async SDK for Java

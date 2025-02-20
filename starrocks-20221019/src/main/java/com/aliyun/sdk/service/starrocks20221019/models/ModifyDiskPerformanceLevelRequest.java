@@ -113,6 +113,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         }
 
         /**
+         * <p>The warehouse ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,14 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         }
 
         /**
+         * <p>The disk performance level to which you want to change.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>pl0</li>
+         * <li>pl1</li>
+         * <li>pl2</li>
+         * <li>pl3</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

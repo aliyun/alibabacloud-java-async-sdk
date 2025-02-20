@@ -113,6 +113,7 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
+         * <p>The warehouse ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
+         * <p>The number of nodes to which you want to change to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

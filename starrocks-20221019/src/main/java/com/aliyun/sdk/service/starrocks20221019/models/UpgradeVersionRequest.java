@@ -22,6 +22,10 @@ public class UpgradeVersionRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FastMode")
+    private Boolean fastMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -38,6 +42,7 @@ public class UpgradeVersionRequest extends Request {
     private UpgradeVersionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.fastMode = builder.fastMode;
         this.instanceId = builder.instanceId;
         this.minor = builder.minor;
         this.targetVersion = builder.targetVersion;
@@ -64,6 +69,13 @@ public class UpgradeVersionRequest extends Request {
     }
 
     /**
+     * @return fastMode
+     */
+    public Boolean getFastMode() {
+        return this.fastMode;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -86,6 +98,7 @@ public class UpgradeVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeVersionRequest, Builder> {
         private String regionId; 
+        private Boolean fastMode; 
         private String instanceId; 
         private Boolean minor; 
         private String targetVersion; 
@@ -97,6 +110,7 @@ public class UpgradeVersionRequest extends Request {
         private Builder(UpgradeVersionRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.fastMode = request.fastMode;
             this.instanceId = request.instanceId;
             this.minor = request.minor;
             this.targetVersion = request.targetVersion;
@@ -112,6 +126,16 @@ public class UpgradeVersionRequest extends Request {
         }
 
         /**
+         * FastMode.
+         */
+        public Builder fastMode(Boolean fastMode) {
+            this.putQueryParameter("FastMode", fastMode);
+            this.fastMode = fastMode;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +148,14 @@ public class UpgradeVersionRequest extends Request {
         }
 
         /**
-         * Minor.
+         * <p>Specifies whether the minor version is upgraded. Default value: true. Valid values:</p>
+         * <ul>
+         * <li>true: The minor version is upgraded.</li>
+         * <li>false: The major version is upgraded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder minor(Boolean minor) {
             this.putQueryParameter("Minor", minor);
@@ -133,6 +164,7 @@ public class UpgradeVersionRequest extends Request {
         }
 
         /**
+         * <p>The version to which you want to upgrade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

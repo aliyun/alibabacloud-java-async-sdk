@@ -22,6 +22,10 @@ public class ModifyDiskNumberRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FastMode")
+    private Boolean fastMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -39,6 +43,7 @@ public class ModifyDiskNumberRequest extends Request {
     private ModifyDiskNumberRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.fastMode = builder.fastMode;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.target = builder.target;
@@ -65,6 +70,13 @@ public class ModifyDiskNumberRequest extends Request {
     }
 
     /**
+     * @return fastMode
+     */
+    public Boolean getFastMode() {
+        return this.fastMode;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -87,6 +99,7 @@ public class ModifyDiskNumberRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskNumberRequest, Builder> {
         private String regionId; 
+        private Boolean fastMode; 
         private String instanceId; 
         private String nodeGroupId; 
         private Integer target; 
@@ -98,6 +111,7 @@ public class ModifyDiskNumberRequest extends Request {
         private Builder(ModifyDiskNumberRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.fastMode = request.fastMode;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.target = request.target;
@@ -113,6 +127,16 @@ public class ModifyDiskNumberRequest extends Request {
         }
 
         /**
+         * FastMode.
+         */
+        public Builder fastMode(Boolean fastMode) {
+            this.putQueryParameter("FastMode", fastMode);
+            this.fastMode = fastMode;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +149,7 @@ public class ModifyDiskNumberRequest extends Request {
         }
 
         /**
+         * <p>The warehouse ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +162,7 @@ public class ModifyDiskNumberRequest extends Request {
         }
 
         /**
+         * <p>The number of disks to which you want to change to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

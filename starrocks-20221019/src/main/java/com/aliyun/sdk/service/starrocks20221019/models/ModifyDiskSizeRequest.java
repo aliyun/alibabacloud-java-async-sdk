@@ -113,6 +113,7 @@ public class ModifyDiskSizeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class ModifyDiskSizeRequest extends Request {
         }
 
         /**
+         * <p>The warehouse ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +139,7 @@ public class ModifyDiskSizeRequest extends Request {
         }
 
         /**
+         * <p>The disk size to which you want to change to. Unit: GB.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
