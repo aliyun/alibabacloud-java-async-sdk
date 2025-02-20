@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -47,6 +51,7 @@ public class ListTagResourcesRequest extends Request {
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
+        this.category = builder.category;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -66,6 +71,13 @@ public class ListTagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -111,6 +123,7 @@ public class ListTagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListTagResourcesRequest, Builder> {
+        private String category; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -124,6 +137,7 @@ public class ListTagResourcesRequest extends Request {
 
         private Builder(ListTagResourcesRequest request) {
             super(request);
+            this.category = request.category;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
@@ -131,6 +145,15 @@ public class ListTagResourcesRequest extends Request {
             this.resourceType = request.resourceType;
             this.tag = request.tag;
         } 
+
+        /**
+         * Category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("Category", category);
+            this.category = category;
+            return this;
+        }
 
         /**
          * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>

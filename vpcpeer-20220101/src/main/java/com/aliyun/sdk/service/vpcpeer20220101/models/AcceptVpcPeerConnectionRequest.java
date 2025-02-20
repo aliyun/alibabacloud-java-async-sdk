@@ -38,6 +38,10 @@ public class AcceptVpcPeerConnectionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private AcceptVpcPeerConnectionRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -45,6 +49,7 @@ public class AcceptVpcPeerConnectionRequest extends Request {
         this.instanceId = builder.instanceId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -95,12 +100,20 @@ public class AcceptVpcPeerConnectionRequest extends Request {
         return this.resourceOwnerAccount;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<AcceptVpcPeerConnectionRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
         private String instanceId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -113,6 +126,7 @@ public class AcceptVpcPeerConnectionRequest extends Request {
             this.instanceId = request.instanceId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.tag = request.tag;
         } 
 
         /**
@@ -182,6 +196,15 @@ public class AcceptVpcPeerConnectionRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public AcceptVpcPeerConnectionRequest build() {
             return new AcceptVpcPeerConnectionRequest(this);
@@ -189,4 +212,71 @@ public class AcceptVpcPeerConnectionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AcceptVpcPeerConnectionRequest} extends {@link TeaModel}
+     *
+     * <p>AcceptVpcPeerConnectionRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
