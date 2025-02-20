@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +17,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobsResponseBody</p>
  */
 public class ListJobsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("accessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Job > data;
+    private java.util.List<Job> data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -40,6 +48,7 @@ public class ListJobsResponseBody extends TeaModel {
     private Integer totalSize;
 
     private ListJobsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -60,9 +69,16 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
      * @return data
      */
-    public java.util.List < Job > getData() {
+    public java.util.List<Job> getData() {
         return this.data;
     }
 
@@ -123,7 +139,8 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Job > data; 
+        private String accessDeniedDetail; 
+        private java.util.List<Job> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -134,12 +151,20 @@ public class ListJobsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
+         * accessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
          * <ul>
          * <li>If the value of success was true, all jobs that meet the condition were returned.</li>
          * <li>If the value of success was false, a null value was returned.</li>
          * </ul>
          */
-        public Builder data(java.util.List < Job > data) {
+        public Builder data(java.util.List<Job> data) {
             this.data = data;
             return this;
         }

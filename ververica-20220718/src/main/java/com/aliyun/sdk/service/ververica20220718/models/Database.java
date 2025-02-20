@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class Database extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("properties")
-    private java.util.Map < String, ? > properties;
+    private java.util.Map<String, ?> properties;
 
     private Database(Builder builder) {
         this.comment = builder.comment;
@@ -52,14 +57,14 @@ public class Database extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.Map < String, ? > getProperties() {
+    public java.util.Map<String, ?> getProperties() {
         return this.properties;
     }
 
     public static final class Builder {
         private String comment; 
         private String name; 
-        private java.util.Map < String, ? > properties; 
+        private java.util.Map<String, ?> properties; 
 
         /**
          * comment.
@@ -80,7 +85,7 @@ public class Database extends TeaModel {
         /**
          * properties.
          */
-        public Builder properties(java.util.Map < String, ? > properties) {
+        public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
             return this;
         }

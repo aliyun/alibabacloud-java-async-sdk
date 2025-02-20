@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTablesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Table > data;
+    private java.util.List<Table> data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class GetTablesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Table > getData() {
+    public java.util.List<Table> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetTablesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Table > data; 
+        private java.util.List<Table> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -100,7 +105,7 @@ public class GetTablesResponseBody extends TeaModel {
         /**
          * <p>If the value of success was true, the list and details of tables that meet the condition were returned. If the value of success was false, a null value was returned.</p>
          */
-        public Builder data(java.util.List < Table > data) {
+        public Builder data(java.util.List<Table> data) {
             this.data = data;
             return this;
         }

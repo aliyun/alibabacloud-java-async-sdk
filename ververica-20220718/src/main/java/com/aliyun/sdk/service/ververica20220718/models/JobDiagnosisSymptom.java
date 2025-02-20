@@ -12,38 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Variable} extends {@link TeaModel}
+ * {@link JobDiagnosisSymptom} extends {@link TeaModel}
  *
- * <p>Variable</p>
+ * <p>JobDiagnosisSymptom</p>
  */
-public class Variable extends TeaModel {
+public class JobDiagnosisSymptom extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("kind")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String kind;
-
     @com.aliyun.core.annotation.NameInMap("name")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @com.aliyun.core.annotation.NameInMap("value")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String value;
+    @com.aliyun.core.annotation.NameInMap("recommendation")
+    private String recommendation;
 
-    private Variable(Builder builder) {
+    private JobDiagnosisSymptom(Builder builder) {
         this.description = builder.description;
-        this.kind = builder.kind;
         this.name = builder.name;
-        this.value = builder.value;
+        this.recommendation = builder.recommendation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Variable create() {
+    public static JobDiagnosisSymptom create() {
         return builder().build();
     }
 
@@ -55,13 +48,6 @@ public class Variable extends TeaModel {
     }
 
     /**
-     * @return kind
-     */
-    public String getKind() {
-        return this.kind;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -69,17 +55,16 @@ public class Variable extends TeaModel {
     }
 
     /**
-     * @return value
+     * @return recommendation
      */
-    public String getValue() {
-        return this.value;
+    public String getRecommendation() {
+        return this.recommendation;
     }
 
     public static final class Builder {
         private String description; 
-        private String kind; 
         private String name; 
-        private String value; 
+        private String recommendation; 
 
         /**
          * description.
@@ -90,21 +75,7 @@ public class Variable extends TeaModel {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Plain</p>
-         */
-        public Builder kind(String kind) {
-            this.kind = kind;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>variableName</p>
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -112,18 +83,15 @@ public class Variable extends TeaModel {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>variableValue</p>
+         * recommendation.
          */
-        public Builder value(String value) {
-            this.value = value;
+        public Builder recommendation(String recommendation) {
+            this.recommendation = recommendation;
             return this;
         }
 
-        public Variable build() {
-            return new Variable(this);
+        public JobDiagnosisSymptom build() {
+            return new JobDiagnosisSymptom(this);
         } 
 
     } 

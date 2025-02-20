@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Event > data;
+    private java.util.List<Event> data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -62,7 +67,7 @@ public class GetEventsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Event > getData() {
+    public java.util.List<Event> getData() {
         return this.data;
     }
 
@@ -123,7 +128,7 @@ public class GetEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Event > data; 
+        private java.util.List<Event> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -136,7 +141,7 @@ public class GetEventsResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Event > data) {
+        public Builder data(java.util.List<Event> data) {
             this.data = data;
             return this;
         }

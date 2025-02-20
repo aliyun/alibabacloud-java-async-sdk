@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateUdfArtifactResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("collidingClasses")
-    private java.util.List < UdfClass > collidingClasses;
+    private java.util.List<UdfClass> collidingClasses;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("missingClasses")
-    private java.util.List < UdfClass > missingClasses;
+    private java.util.List<UdfClass> missingClasses;
 
     @com.aliyun.core.annotation.NameInMap("udfArtifact")
     private UdfArtifact udfArtifact;
@@ -46,7 +51,7 @@ public class UpdateUdfArtifactResult extends TeaModel {
     /**
      * @return collidingClasses
      */
-    public java.util.List < UdfClass > getCollidingClasses() {
+    public java.util.List<UdfClass> getCollidingClasses() {
         return this.collidingClasses;
     }
 
@@ -60,7 +65,7 @@ public class UpdateUdfArtifactResult extends TeaModel {
     /**
      * @return missingClasses
      */
-    public java.util.List < UdfClass > getMissingClasses() {
+    public java.util.List<UdfClass> getMissingClasses() {
         return this.missingClasses;
     }
 
@@ -79,16 +84,16 @@ public class UpdateUdfArtifactResult extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < UdfClass > collidingClasses; 
+        private java.util.List<UdfClass> collidingClasses; 
         private String message; 
-        private java.util.List < UdfClass > missingClasses; 
+        private java.util.List<UdfClass> missingClasses; 
         private UdfArtifact udfArtifact; 
         private Boolean updateSuccess; 
 
         /**
          * collidingClasses.
          */
-        public Builder collidingClasses(java.util.List < UdfClass > collidingClasses) {
+        public Builder collidingClasses(java.util.List<UdfClass> collidingClasses) {
             this.collidingClasses = collidingClasses;
             return this;
         }
@@ -104,7 +109,7 @@ public class UpdateUdfArtifactResult extends TeaModel {
         /**
          * missingClasses.
          */
-        public Builder missingClasses(java.util.List < UdfClass > missingClasses) {
+        public Builder missingClasses(java.util.List<UdfClass> missingClasses) {
             this.missingClasses = missingClasses;
             return this;
         }

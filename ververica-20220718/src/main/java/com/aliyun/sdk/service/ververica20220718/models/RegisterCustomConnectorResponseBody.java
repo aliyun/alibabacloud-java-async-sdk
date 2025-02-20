@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RegisterCustomConnectorResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Connector > data;
+    private java.util.List<Connector> data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -50,7 +55,7 @@ public class RegisterCustomConnectorResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Connector > getData() {
+    public java.util.List<Connector> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class RegisterCustomConnectorResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Connector > data; 
+        private java.util.List<Connector> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -100,7 +105,7 @@ public class RegisterCustomConnectorResponseBody extends TeaModel {
         /**
          * <p>If the value of success was true, a list of deployments in which custom connectors were deleted was returned. If the value of success was false, a null value was returned.</p>
          */
-        public Builder data(java.util.List < Connector > data) {
+        public Builder data(java.util.List<Connector> data) {
             this.data = data;
             return this;
         }

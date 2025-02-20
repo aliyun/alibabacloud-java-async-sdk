@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("editableNamespaces")
-        private java.util.List < EditableNamespace > editableNamespaces;
+        private java.util.List<EditableNamespace> editableNamespaces;
 
         @com.aliyun.core.annotation.NameInMap("pageIndex")
         private String pageIndex;
@@ -188,7 +193,7 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
         /**
          * @return editableNamespaces
          */
-        public java.util.List < EditableNamespace > getEditableNamespaces() {
+        public java.util.List<EditableNamespace> getEditableNamespaces() {
             return this.editableNamespaces;
         }
 
@@ -214,7 +219,7 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EditableNamespace > editableNamespaces; 
+            private java.util.List<EditableNamespace> editableNamespaces; 
             private String pageIndex; 
             private String pageSize; 
             private String total; 
@@ -222,7 +227,7 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
             /**
              * editableNamespaces.
              */
-            public Builder editableNamespaces(java.util.List < EditableNamespace > editableNamespaces) {
+            public Builder editableNamespaces(java.util.List<EditableNamespace> editableNamespaces) {
                 this.editableNamespaces = editableNamespaces;
                 return this;
             }

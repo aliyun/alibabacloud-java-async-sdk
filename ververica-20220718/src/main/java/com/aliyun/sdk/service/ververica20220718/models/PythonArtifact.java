@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PythonArtifact extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("additionalDependencies")
-    private java.util.List < String > additionalDependencies;
+    private java.util.List<String> additionalDependencies;
 
     @com.aliyun.core.annotation.NameInMap("additionalPythonArchives")
-    private java.util.List < String > additionalPythonArchives;
+    private java.util.List<String> additionalPythonArchives;
 
     @com.aliyun.core.annotation.NameInMap("additionalPythonLibraries")
-    private java.util.List < String > additionalPythonLibraries;
+    private java.util.List<String> additionalPythonLibraries;
 
     @com.aliyun.core.annotation.NameInMap("entryModule")
     private String entryModule;
@@ -50,21 +55,21 @@ public class PythonArtifact extends TeaModel {
     /**
      * @return additionalDependencies
      */
-    public java.util.List < String > getAdditionalDependencies() {
+    public java.util.List<String> getAdditionalDependencies() {
         return this.additionalDependencies;
     }
 
     /**
      * @return additionalPythonArchives
      */
-    public java.util.List < String > getAdditionalPythonArchives() {
+    public java.util.List<String> getAdditionalPythonArchives() {
         return this.additionalPythonArchives;
     }
 
     /**
      * @return additionalPythonLibraries
      */
-    public java.util.List < String > getAdditionalPythonLibraries() {
+    public java.util.List<String> getAdditionalPythonLibraries() {
         return this.additionalPythonLibraries;
     }
 
@@ -90,9 +95,9 @@ public class PythonArtifact extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > additionalDependencies; 
-        private java.util.List < String > additionalPythonArchives; 
-        private java.util.List < String > additionalPythonLibraries; 
+        private java.util.List<String> additionalDependencies; 
+        private java.util.List<String> additionalPythonArchives; 
+        private java.util.List<String> additionalPythonLibraries; 
         private String entryModule; 
         private String mainArgs; 
         private String pythonArtifactUri; 
@@ -100,7 +105,7 @@ public class PythonArtifact extends TeaModel {
         /**
          * additionalDependencies.
          */
-        public Builder additionalDependencies(java.util.List < String > additionalDependencies) {
+        public Builder additionalDependencies(java.util.List<String> additionalDependencies) {
             this.additionalDependencies = additionalDependencies;
             return this;
         }
@@ -108,7 +113,7 @@ public class PythonArtifact extends TeaModel {
         /**
          * additionalPythonArchives.
          */
-        public Builder additionalPythonArchives(java.util.List < String > additionalPythonArchives) {
+        public Builder additionalPythonArchives(java.util.List<String> additionalPythonArchives) {
             this.additionalPythonArchives = additionalPythonArchives;
             return this;
         }
@@ -116,7 +121,7 @@ public class PythonArtifact extends TeaModel {
         /**
          * additionalPythonLibraries.
          */
-        public Builder additionalPythonLibraries(java.util.List < String > additionalPythonLibraries) {
+        public Builder additionalPythonLibraries(java.util.List<String> additionalPythonLibraries) {
             this.additionalPythonLibraries = additionalPythonLibraries;
             return this;
         }

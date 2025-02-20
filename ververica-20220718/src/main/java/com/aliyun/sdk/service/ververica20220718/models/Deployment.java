@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,16 +51,16 @@ public class Deployment extends TeaModel {
     private String executionMode;
 
     @com.aliyun.core.annotation.NameInMap("flinkConf")
-    private java.util.Map < String, ? > flinkConf;
+    private java.util.Map<String, ?> flinkConf;
 
     @com.aliyun.core.annotation.NameInMap("jobSummary")
     private JobSummary jobSummary;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, ? > labels;
+    private java.util.Map<String, ?> labels;
 
     @com.aliyun.core.annotation.NameInMap("localVariables")
-    private java.util.List < LocalVariable > localVariables;
+    private java.util.List<LocalVariable> localVariables;
 
     @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
@@ -199,7 +204,7 @@ public class Deployment extends TeaModel {
     /**
      * @return flinkConf
      */
-    public java.util.Map < String, ? > getFlinkConf() {
+    public java.util.Map<String, ?> getFlinkConf() {
         return this.flinkConf;
     }
 
@@ -213,14 +218,14 @@ public class Deployment extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.Map < String, ? > getLabels() {
+    public java.util.Map<String, ?> getLabels() {
         return this.labels;
     }
 
     /**
      * @return localVariables
      */
-    public java.util.List < LocalVariable > getLocalVariables() {
+    public java.util.List<LocalVariable> getLocalVariables() {
         return this.localVariables;
     }
 
@@ -299,10 +304,10 @@ public class Deployment extends TeaModel {
         private String description; 
         private String engineVersion; 
         private String executionMode; 
-        private java.util.Map < String, ? > flinkConf; 
+        private java.util.Map<String, ?> flinkConf; 
         private JobSummary jobSummary; 
-        private java.util.Map < String, ? > labels; 
-        private java.util.List < LocalVariable > localVariables; 
+        private java.util.Map<String, ?> labels; 
+        private java.util.List<LocalVariable> localVariables; 
         private Logging logging; 
         private String modifiedAt; 
         private String modifier; 
@@ -404,7 +409,7 @@ public class Deployment extends TeaModel {
         /**
          * flinkConf.
          */
-        public Builder flinkConf(java.util.Map < String, ? > flinkConf) {
+        public Builder flinkConf(java.util.Map<String, ?> flinkConf) {
             this.flinkConf = flinkConf;
             return this;
         }
@@ -420,7 +425,7 @@ public class Deployment extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, ? > labels) {
+        public Builder labels(java.util.Map<String, ?> labels) {
             this.labels = labels;
             return this;
         }
@@ -428,7 +433,7 @@ public class Deployment extends TeaModel {
         /**
          * localVariables.
          */
-        public Builder localVariables(java.util.List < LocalVariable > localVariables) {
+        public Builder localVariables(java.util.List<LocalVariable> localVariables) {
             this.localVariables = localVariables;
             return this;
         }

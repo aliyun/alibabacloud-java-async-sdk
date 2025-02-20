@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartJobWithParamsResponseBody</p>
  */
 public class StartJobWithParamsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("accessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("data")
     private Job data;
 
@@ -31,6 +39,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     private Boolean success;
 
     private StartJobWithParamsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -45,6 +54,13 @@ public class StartJobWithParamsResponseBody extends TeaModel {
 
     public static StartJobWithParamsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -90,12 +106,21 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Job data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * accessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>The details of the job of the deployment returned.</p>

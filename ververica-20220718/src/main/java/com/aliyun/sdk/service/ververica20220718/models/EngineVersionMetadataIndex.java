@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class EngineVersionMetadataIndex extends TeaModel {
     private String defaultEngineVersion;
 
     @com.aliyun.core.annotation.NameInMap("engineVersionMetadata")
-    private java.util.List < EngineVersionMetadata > engineVersionMetadata;
+    private java.util.List<EngineVersionMetadata> engineVersionMetadata;
 
     private EngineVersionMetadataIndex(Builder builder) {
         this.defaultEngineVersion = builder.defaultEngineVersion;
@@ -41,13 +46,13 @@ public class EngineVersionMetadataIndex extends TeaModel {
     /**
      * @return engineVersionMetadata
      */
-    public java.util.List < EngineVersionMetadata > getEngineVersionMetadata() {
+    public java.util.List<EngineVersionMetadata> getEngineVersionMetadata() {
         return this.engineVersionMetadata;
     }
 
     public static final class Builder {
         private String defaultEngineVersion; 
-        private java.util.List < EngineVersionMetadata > engineVersionMetadata; 
+        private java.util.List<EngineVersionMetadata> engineVersionMetadata; 
 
         /**
          * defaultEngineVersion.
@@ -60,7 +65,7 @@ public class EngineVersionMetadataIndex extends TeaModel {
         /**
          * engineVersionMetadata.
          */
-        public Builder engineVersionMetadata(java.util.List < EngineVersionMetadata > engineVersionMetadata) {
+        public Builder engineVersionMetadata(java.util.List<EngineVersionMetadata> engineVersionMetadata) {
             this.engineVersionMetadata = engineVersionMetadata;
             return this;
         }

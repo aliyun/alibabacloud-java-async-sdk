@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class Folder extends TeaModel {
     private String parentId;
 
     @com.aliyun.core.annotation.NameInMap("subFolder")
-    private java.util.List < SubFolder > subFolder;
+    private java.util.List<SubFolder> subFolder;
 
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
@@ -100,7 +105,7 @@ public class Folder extends TeaModel {
     /**
      * @return subFolder
      */
-    public java.util.List < SubFolder > getSubFolder() {
+    public java.util.List<SubFolder> getSubFolder() {
         return this.subFolder;
     }
 
@@ -118,7 +123,7 @@ public class Folder extends TeaModel {
         private String name; 
         private String namespace; 
         private String parentId; 
-        private java.util.List < SubFolder > subFolder; 
+        private java.util.List<SubFolder> subFolder; 
         private String workspace; 
 
         /**
@@ -172,7 +177,7 @@ public class Folder extends TeaModel {
         /**
          * subFolder.
          */
-        public Builder subFolder(java.util.List < SubFolder > subFolder) {
+        public Builder subFolder(java.util.List<SubFolder> subFolder) {
             this.subFolder = subFolder;
             return this;
         }

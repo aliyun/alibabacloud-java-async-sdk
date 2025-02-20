@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class JarArtifact extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("additionalDependencies")
-    private java.util.List < String > additionalDependencies;
+    private java.util.List<String> additionalDependencies;
 
     @com.aliyun.core.annotation.NameInMap("entryClass")
     private String entryClass;
@@ -42,7 +47,7 @@ public class JarArtifact extends TeaModel {
     /**
      * @return additionalDependencies
      */
-    public java.util.List < String > getAdditionalDependencies() {
+    public java.util.List<String> getAdditionalDependencies() {
         return this.additionalDependencies;
     }
 
@@ -68,7 +73,7 @@ public class JarArtifact extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > additionalDependencies; 
+        private java.util.List<String> additionalDependencies; 
         private String entryClass; 
         private String jarUri; 
         private String mainArgs; 
@@ -76,7 +81,7 @@ public class JarArtifact extends TeaModel {
         /**
          * additionalDependencies.
          */
-        public Builder additionalDependencies(java.util.List < String > additionalDependencies) {
+        public Builder additionalDependencies(java.util.List<String> additionalDependencies) {
             this.additionalDependencies = additionalDependencies;
             return this;
         }

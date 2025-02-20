@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.Map < String, ? > body;
+    private java.util.Map<String, ?> body;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
@@ -69,7 +74,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, ? > getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 
@@ -83,7 +88,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateResourcePlanWithFlinkConfAsyncRequest, Builder> {
         private String namespace; 
         private String deploymentId; 
-        private java.util.Map < String, ? > body; 
+        private java.util.Map<String, ?> body; 
         private String workspace; 
 
         private Builder() {
@@ -127,7 +132,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         /**
          * <p>The Flink configuration that is used to generate a resource plan.</p>
          */
-        public Builder body(java.util.Map < String, ? > body) {
+        public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

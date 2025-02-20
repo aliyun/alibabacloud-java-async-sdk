@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,10 +36,10 @@ public class SessionCluster extends TeaModel {
     private String engineVersion;
 
     @com.aliyun.core.annotation.NameInMap("flinkConf")
-    private java.util.Map < String, ? > flinkConf;
+    private java.util.Map<String, ?> flinkConf;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, ? > labels;
+    private java.util.Map<String, ?> labels;
 
     @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
@@ -136,14 +141,14 @@ public class SessionCluster extends TeaModel {
     /**
      * @return flinkConf
      */
-    public java.util.Map < String, ? > getFlinkConf() {
+    public java.util.Map<String, ?> getFlinkConf() {
         return this.flinkConf;
     }
 
     /**
      * @return labels
      */
-    public java.util.Map < String, ? > getLabels() {
+    public java.util.Map<String, ?> getLabels() {
         return this.labels;
     }
 
@@ -217,8 +222,8 @@ public class SessionCluster extends TeaModel {
         private String creatorName; 
         private String deploymentTargetName; 
         private String engineVersion; 
-        private java.util.Map < String, ? > flinkConf; 
-        private java.util.Map < String, ? > labels; 
+        private java.util.Map<String, ?> flinkConf; 
+        private java.util.Map<String, ?> labels; 
         private Logging logging; 
         private Long modifiedAt; 
         private String modifier; 
@@ -280,7 +285,7 @@ public class SessionCluster extends TeaModel {
         /**
          * flinkConf.
          */
-        public Builder flinkConf(java.util.Map < String, ? > flinkConf) {
+        public Builder flinkConf(java.util.Map<String, ?> flinkConf) {
             this.flinkConf = flinkConf;
             return this;
         }
@@ -288,7 +293,7 @@ public class SessionCluster extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, ? > labels) {
+        public Builder labels(java.util.Map<String, ?> labels) {
             this.labels = labels;
             return this;
         }

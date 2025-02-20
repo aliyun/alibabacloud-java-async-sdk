@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,14 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SqlStatementWithContext extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("additionalDependencies")
-    private java.util.List < String > additionalDependencies;
+    private java.util.List<String> additionalDependencies;
 
     @com.aliyun.core.annotation.NameInMap("batchMode")
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean batchMode;
 
     @com.aliyun.core.annotation.NameInMap("flinkConfiguration")
-    private java.util.Map < String, ? > flinkConfiguration;
+    private java.util.Map<String, ?> flinkConfiguration;
 
     @com.aliyun.core.annotation.NameInMap("statement")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -48,7 +53,7 @@ public class SqlStatementWithContext extends TeaModel {
     /**
      * @return additionalDependencies
      */
-    public java.util.List < String > getAdditionalDependencies() {
+    public java.util.List<String> getAdditionalDependencies() {
         return this.additionalDependencies;
     }
 
@@ -62,7 +67,7 @@ public class SqlStatementWithContext extends TeaModel {
     /**
      * @return flinkConfiguration
      */
-    public java.util.Map < String, ? > getFlinkConfiguration() {
+    public java.util.Map<String, ?> getFlinkConfiguration() {
         return this.flinkConfiguration;
     }
 
@@ -81,16 +86,16 @@ public class SqlStatementWithContext extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > additionalDependencies; 
+        private java.util.List<String> additionalDependencies; 
         private Boolean batchMode; 
-        private java.util.Map < String, ? > flinkConfiguration; 
+        private java.util.Map<String, ?> flinkConfiguration; 
         private String statement; 
         private String versionName; 
 
         /**
          * additionalDependencies.
          */
-        public Builder additionalDependencies(java.util.List < String > additionalDependencies) {
+        public Builder additionalDependencies(java.util.List<String> additionalDependencies) {
             this.additionalDependencies = additionalDependencies;
             return this;
         }
@@ -106,7 +111,7 @@ public class SqlStatementWithContext extends TeaModel {
         /**
          * flinkConfiguration.
          */
-        public Builder flinkConfiguration(java.util.Map < String, ? > flinkConfiguration) {
+        public Builder flinkConfiguration(java.util.Map<String, ?> flinkConfiguration) {
             this.flinkConfiguration = flinkConfiguration;
             return this;
         }

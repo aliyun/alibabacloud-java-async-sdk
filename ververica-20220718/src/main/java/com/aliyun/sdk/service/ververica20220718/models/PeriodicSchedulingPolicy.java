@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class PeriodicSchedulingPolicy extends TeaModel {
     private String periodicSchedulingLevel;
 
     @com.aliyun.core.annotation.NameInMap("periodicSchedulingValues")
-    private java.util.List < Integer > periodicSchedulingValues;
+    private java.util.List<Integer> periodicSchedulingValues;
 
     @com.aliyun.core.annotation.NameInMap("periodicTriggerTime")
     private Long periodicTriggerTime;
@@ -82,7 +87,7 @@ public class PeriodicSchedulingPolicy extends TeaModel {
     /**
      * @return periodicSchedulingValues
      */
-    public java.util.List < Integer > getPeriodicSchedulingValues() {
+    public java.util.List<Integer> getPeriodicSchedulingValues() {
         return this.periodicSchedulingValues;
     }
 
@@ -105,7 +110,7 @@ public class PeriodicSchedulingPolicy extends TeaModel {
         private Long onlyOnceTriggerTime; 
         private Boolean onlyOnceTriggerTimeIsExpired; 
         private String periodicSchedulingLevel; 
-        private java.util.List < Integer > periodicSchedulingValues; 
+        private java.util.List<Integer> periodicSchedulingValues; 
         private Long periodicTriggerTime; 
         private BriefResourceSetting resourceSetting; 
 
@@ -144,7 +149,7 @@ public class PeriodicSchedulingPolicy extends TeaModel {
         /**
          * periodicSchedulingValues.
          */
-        public Builder periodicSchedulingValues(java.util.List < Integer > periodicSchedulingValues) {
+        public Builder periodicSchedulingValues(java.util.List<Integer> periodicSchedulingValues) {
             this.periodicSchedulingValues = periodicSchedulingValues;
             return this;
         }

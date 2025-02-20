@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ScheduledPlan extends TeaModel {
     private String origin;
 
     @com.aliyun.core.annotation.NameInMap("periodicSchedulingPolicies")
-    private java.util.List < PeriodicSchedulingPolicy > periodicSchedulingPolicies;
+    private java.util.List<PeriodicSchedulingPolicy> periodicSchedulingPolicies;
 
     @com.aliyun.core.annotation.NameInMap("scheduledPlanId")
     private String scheduledPlanId;
@@ -156,7 +161,7 @@ public class ScheduledPlan extends TeaModel {
     /**
      * @return periodicSchedulingPolicies
      */
-    public java.util.List < PeriodicSchedulingPolicy > getPeriodicSchedulingPolicies() {
+    public java.util.List<PeriodicSchedulingPolicy> getPeriodicSchedulingPolicies() {
         return this.periodicSchedulingPolicies;
     }
 
@@ -199,7 +204,7 @@ public class ScheduledPlan extends TeaModel {
         private String name; 
         private String namespace; 
         private String origin; 
-        private java.util.List < PeriodicSchedulingPolicy > periodicSchedulingPolicies; 
+        private java.util.List<PeriodicSchedulingPolicy> periodicSchedulingPolicies; 
         private String scheduledPlanId; 
         private String status; 
         private Boolean updatedByUser; 
@@ -288,7 +293,7 @@ public class ScheduledPlan extends TeaModel {
         /**
          * periodicSchedulingPolicies.
          */
-        public Builder periodicSchedulingPolicies(java.util.List < PeriodicSchedulingPolicy > periodicSchedulingPolicies) {
+        public Builder periodicSchedulingPolicies(java.util.List<PeriodicSchedulingPolicy> periodicSchedulingPolicies) {
             this.periodicSchedulingPolicies = periodicSchedulingPolicies;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,13 +48,13 @@ public class Job extends TeaModel {
     private String executionMode;
 
     @com.aliyun.core.annotation.NameInMap("flinkConf")
-    private java.util.Map < String, ? > flinkConf;
+    private java.util.Map<String, ?> flinkConf;
 
     @com.aliyun.core.annotation.NameInMap("jobId")
     private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("localVariables")
-    private java.util.List < LocalVariable > localVariables;
+    private java.util.List<LocalVariable> localVariables;
 
     @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
@@ -85,7 +90,7 @@ public class Job extends TeaModel {
     private StreamingResourceSetting streamingResourceSetting;
 
     @com.aliyun.core.annotation.NameInMap("userFlinkConf")
-    private java.util.Map < String, ? > userFlinkConf;
+    private java.util.Map<String, ?> userFlinkConf;
 
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
@@ -200,7 +205,7 @@ public class Job extends TeaModel {
     /**
      * @return flinkConf
      */
-    public java.util.Map < String, ? > getFlinkConf() {
+    public java.util.Map<String, ?> getFlinkConf() {
         return this.flinkConf;
     }
 
@@ -214,7 +219,7 @@ public class Job extends TeaModel {
     /**
      * @return localVariables
      */
-    public java.util.List < LocalVariable > getLocalVariables() {
+    public java.util.List<LocalVariable> getLocalVariables() {
         return this.localVariables;
     }
 
@@ -298,7 +303,7 @@ public class Job extends TeaModel {
     /**
      * @return userFlinkConf
      */
-    public java.util.Map < String, ? > getUserFlinkConf() {
+    public java.util.Map<String, ?> getUserFlinkConf() {
         return this.userFlinkConf;
     }
 
@@ -320,9 +325,9 @@ public class Job extends TeaModel {
         private Long endTime; 
         private String engineVersion; 
         private String executionMode; 
-        private java.util.Map < String, ? > flinkConf; 
+        private java.util.Map<String, ?> flinkConf; 
         private String jobId; 
-        private java.util.List < LocalVariable > localVariables; 
+        private java.util.List<LocalVariable> localVariables; 
         private Logging logging; 
         private JobMetric metric; 
         private String modifiedAt; 
@@ -334,7 +339,7 @@ public class Job extends TeaModel {
         private Long startTime; 
         private JobStatus status; 
         private StreamingResourceSetting streamingResourceSetting; 
-        private java.util.Map < String, ? > userFlinkConf; 
+        private java.util.Map<String, ?> userFlinkConf; 
         private String workspace; 
 
         /**
@@ -420,7 +425,7 @@ public class Job extends TeaModel {
         /**
          * flinkConf.
          */
-        public Builder flinkConf(java.util.Map < String, ? > flinkConf) {
+        public Builder flinkConf(java.util.Map<String, ?> flinkConf) {
             this.flinkConf = flinkConf;
             return this;
         }
@@ -436,7 +441,7 @@ public class Job extends TeaModel {
         /**
          * localVariables.
          */
-        public Builder localVariables(java.util.List < LocalVariable > localVariables) {
+        public Builder localVariables(java.util.List<LocalVariable> localVariables) {
             this.localVariables = localVariables;
             return this;
         }
@@ -532,7 +537,7 @@ public class Job extends TeaModel {
         /**
          * userFlinkConf.
          */
-        public Builder userFlinkConf(java.util.Map < String, ? > userFlinkConf) {
+        public Builder userFlinkConf(java.util.Map<String, ?> userFlinkConf) {
             this.userFlinkConf = userFlinkConf;
             return this;
         }

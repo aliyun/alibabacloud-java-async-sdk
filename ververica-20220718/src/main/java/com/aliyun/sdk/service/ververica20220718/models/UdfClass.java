@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UdfClass extends TeaModel {
     private String classType;
 
     @com.aliyun.core.annotation.NameInMap("functionNames")
-    private java.util.List < String > functionNames;
+    private java.util.List<String> functionNames;
 
     @com.aliyun.core.annotation.NameInMap("udfArtifactName")
     private String udfArtifactName;
@@ -56,7 +61,7 @@ public class UdfClass extends TeaModel {
     /**
      * @return functionNames
      */
-    public java.util.List < String > getFunctionNames() {
+    public java.util.List<String> getFunctionNames() {
         return this.functionNames;
     }
 
@@ -70,7 +75,7 @@ public class UdfClass extends TeaModel {
     public static final class Builder {
         private String className; 
         private String classType; 
-        private java.util.List < String > functionNames; 
+        private java.util.List<String> functionNames; 
         private String udfArtifactName; 
 
         /**
@@ -92,7 +97,7 @@ public class UdfClass extends TeaModel {
         /**
          * functionNames.
          */
-        public Builder functionNames(java.util.List < String > functionNames) {
+        public Builder functionNames(java.util.List<String> functionNames) {
             this.functionNames = functionNames;
             return this;
         }

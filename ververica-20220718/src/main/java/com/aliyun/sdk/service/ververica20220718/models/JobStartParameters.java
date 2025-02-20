@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class JobStartParameters extends TeaModel {
     private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("localVariables")
-    private java.util.List < LocalVariable > localVariables;
+    private java.util.List<LocalVariable> localVariables;
 
     @com.aliyun.core.annotation.NameInMap("resourceQueueName")
     private String resourceQueueName;
@@ -60,7 +65,7 @@ public class JobStartParameters extends TeaModel {
     /**
      * @return localVariables
      */
-    public java.util.List < LocalVariable > getLocalVariables() {
+    public java.util.List<LocalVariable> getLocalVariables() {
         return this.localVariables;
     }
 
@@ -81,7 +86,7 @@ public class JobStartParameters extends TeaModel {
     public static final class Builder {
         private String deploymentId; 
         private String jobId; 
-        private java.util.List < LocalVariable > localVariables; 
+        private java.util.List<LocalVariable> localVariables; 
         private String resourceQueueName; 
         private DeploymentRestoreStrategy restoreStrategy; 
 
@@ -104,7 +109,7 @@ public class JobStartParameters extends TeaModel {
         /**
          * localVariables.
          */
-        public Builder localVariables(java.util.List < LocalVariable > localVariables) {
+        public Builder localVariables(java.util.List<LocalVariable> localVariables) {
             this.localVariables = localVariables;
             return this;
         }

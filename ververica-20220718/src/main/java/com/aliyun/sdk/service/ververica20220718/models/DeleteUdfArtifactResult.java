@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteUdfArtifactResult extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("referencedClasses")
-    private java.util.List < UdfClass > referencedClasses;
+    private java.util.List<UdfClass> referencedClasses;
 
     private DeleteUdfArtifactResult(Builder builder) {
         this.deleteSuccess = builder.deleteSuccess;
@@ -52,14 +57,14 @@ public class DeleteUdfArtifactResult extends TeaModel {
     /**
      * @return referencedClasses
      */
-    public java.util.List < UdfClass > getReferencedClasses() {
+    public java.util.List<UdfClass> getReferencedClasses() {
         return this.referencedClasses;
     }
 
     public static final class Builder {
         private Boolean deleteSuccess; 
         private String message; 
-        private java.util.List < UdfClass > referencedClasses; 
+        private java.util.List<UdfClass> referencedClasses; 
 
         /**
          * deleteSuccess.
@@ -80,7 +85,7 @@ public class DeleteUdfArtifactResult extends TeaModel {
         /**
          * referencedClasses.
          */
-        public Builder referencedClasses(java.util.List < UdfClass > referencedClasses) {
+        public Builder referencedClasses(java.util.List<UdfClass> referencedClasses) {
             this.referencedClasses = referencedClasses;
             return this;
         }

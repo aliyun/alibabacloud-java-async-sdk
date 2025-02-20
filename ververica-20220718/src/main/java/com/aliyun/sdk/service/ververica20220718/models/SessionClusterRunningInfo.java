@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SessionClusterRunningInfo extends TeaModel {
     private Long lastUpdateTime;
 
     @com.aliyun.core.annotation.NameInMap("referenceDeploymentIds")
-    private java.util.List < String > referenceDeploymentIds;
+    private java.util.List<String> referenceDeploymentIds;
 
     @com.aliyun.core.annotation.NameInMap("startedAt")
     private Long startedAt;
@@ -45,7 +50,7 @@ public class SessionClusterRunningInfo extends TeaModel {
     /**
      * @return referenceDeploymentIds
      */
-    public java.util.List < String > getReferenceDeploymentIds() {
+    public java.util.List<String> getReferenceDeploymentIds() {
         return this.referenceDeploymentIds;
     }
 
@@ -58,7 +63,7 @@ public class SessionClusterRunningInfo extends TeaModel {
 
     public static final class Builder {
         private Long lastUpdateTime; 
-        private java.util.List < String > referenceDeploymentIds; 
+        private java.util.List<String> referenceDeploymentIds; 
         private Long startedAt; 
 
         /**
@@ -72,7 +77,7 @@ public class SessionClusterRunningInfo extends TeaModel {
         /**
          * referenceDeploymentIds.
          */
-        public Builder referenceDeploymentIds(java.util.List < String > referenceDeploymentIds) {
+        public Builder referenceDeploymentIds(java.util.List<String> referenceDeploymentIds) {
             this.referenceDeploymentIds = referenceDeploymentIds;
             return this;
         }

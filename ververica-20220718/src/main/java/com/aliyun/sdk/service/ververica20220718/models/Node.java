@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class Node extends TeaModel {
     private Boolean isTemporary;
 
     @com.aliyun.core.annotation.NameInMap("tables")
-    private java.util.List < LineageTable > tables;
+    private java.util.List<LineageTable> tables;
 
     private Node(Builder builder) {
         this.catalogName = builder.catalogName;
@@ -85,7 +90,7 @@ public class Node extends TeaModel {
     /**
      * @return tables
      */
-    public java.util.List < LineageTable > getTables() {
+    public java.util.List<LineageTable> getTables() {
         return this.tables;
     }
 
@@ -95,7 +100,7 @@ public class Node extends TeaModel {
         private String databaseName; 
         private String id; 
         private Boolean isTemporary; 
-        private java.util.List < LineageTable > tables; 
+        private java.util.List<LineageTable> tables; 
 
         /**
          * catalogName.
@@ -140,7 +145,7 @@ public class Node extends TeaModel {
         /**
          * tables.
          */
-        public Builder tables(java.util.List < LineageTable > tables) {
+        public Builder tables(java.util.List<LineageTable> tables) {
             this.tables = tables;
             return this;
         }

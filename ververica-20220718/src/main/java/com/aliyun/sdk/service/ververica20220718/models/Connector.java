@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class Connector extends TeaModel {
     private String creatorName;
 
     @com.aliyun.core.annotation.NameInMap("dependencies")
-    private java.util.List < String > dependencies;
+    private java.util.List<String> dependencies;
 
     @com.aliyun.core.annotation.NameInMap("lookup")
     private Boolean lookup;
@@ -34,7 +39,7 @@ public class Connector extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("properties")
-    private java.util.List < Property > properties;
+    private java.util.List<Property> properties;
 
     @com.aliyun.core.annotation.NameInMap("sink")
     private Boolean sink;
@@ -43,7 +48,7 @@ public class Connector extends TeaModel {
     private Boolean source;
 
     @com.aliyun.core.annotation.NameInMap("supportedFormats")
-    private java.util.List < String > supportedFormats;
+    private java.util.List<String> supportedFormats;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -88,7 +93,7 @@ public class Connector extends TeaModel {
     /**
      * @return dependencies
      */
-    public java.util.List < String > getDependencies() {
+    public java.util.List<String> getDependencies() {
         return this.dependencies;
     }
 
@@ -123,7 +128,7 @@ public class Connector extends TeaModel {
     /**
      * @return properties
      */
-    public java.util.List < Property > getProperties() {
+    public java.util.List<Property> getProperties() {
         return this.properties;
     }
 
@@ -144,7 +149,7 @@ public class Connector extends TeaModel {
     /**
      * @return supportedFormats
      */
-    public java.util.List < String > getSupportedFormats() {
+    public java.util.List<String> getSupportedFormats() {
         return this.supportedFormats;
     }
 
@@ -158,15 +163,15 @@ public class Connector extends TeaModel {
     public static final class Builder {
         private String creator; 
         private String creatorName; 
-        private java.util.List < String > dependencies; 
+        private java.util.List<String> dependencies; 
         private Boolean lookup; 
         private String modifier; 
         private String modifierName; 
         private String name; 
-        private java.util.List < Property > properties; 
+        private java.util.List<Property> properties; 
         private Boolean sink; 
         private Boolean source; 
-        private java.util.List < String > supportedFormats; 
+        private java.util.List<String> supportedFormats; 
         private String type; 
 
         /**
@@ -188,7 +193,7 @@ public class Connector extends TeaModel {
         /**
          * dependencies.
          */
-        public Builder dependencies(java.util.List < String > dependencies) {
+        public Builder dependencies(java.util.List<String> dependencies) {
             this.dependencies = dependencies;
             return this;
         }
@@ -228,7 +233,7 @@ public class Connector extends TeaModel {
         /**
          * properties.
          */
-        public Builder properties(java.util.List < Property > properties) {
+        public Builder properties(java.util.List<Property> properties) {
             this.properties = properties;
             return this;
         }
@@ -252,7 +257,7 @@ public class Connector extends TeaModel {
         /**
          * supportedFormats.
          */
-        public Builder supportedFormats(java.util.List < String > supportedFormats) {
+        public Builder supportedFormats(java.util.List<String> supportedFormats) {
             this.supportedFormats = supportedFormats;
             return this;
         }

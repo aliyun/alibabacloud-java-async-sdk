@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class Logging extends TeaModel {
     private String log4j2ConfigurationTemplate;
 
     @com.aliyun.core.annotation.NameInMap("log4jLoggers")
-    private java.util.List < Log4jLogger > log4jLoggers;
+    private java.util.List<Log4jLogger> log4jLoggers;
 
     @com.aliyun.core.annotation.NameInMap("logReservePolicy")
     private LogReservePolicy logReservePolicy;
@@ -49,7 +54,7 @@ public class Logging extends TeaModel {
     /**
      * @return log4jLoggers
      */
-    public java.util.List < Log4jLogger > getLog4jLoggers() {
+    public java.util.List<Log4jLogger> getLog4jLoggers() {
         return this.log4jLoggers;
     }
 
@@ -69,7 +74,7 @@ public class Logging extends TeaModel {
 
     public static final class Builder {
         private String log4j2ConfigurationTemplate; 
-        private java.util.List < Log4jLogger > log4jLoggers; 
+        private java.util.List<Log4jLogger> log4jLoggers; 
         private LogReservePolicy logReservePolicy; 
         private String loggingProfile; 
 
@@ -84,7 +89,7 @@ public class Logging extends TeaModel {
         /**
          * log4jLoggers.
          */
-        public Builder log4jLoggers(java.util.List < Log4jLogger > log4jLoggers) {
+        public Builder log4jLoggers(java.util.List<Log4jLogger> log4jLoggers) {
             this.log4jLoggers = log4jLoggers;
             return this;
         }

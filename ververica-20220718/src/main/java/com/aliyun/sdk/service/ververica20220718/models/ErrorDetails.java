@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ErrorDetails extends TeaModel {
     private String endLineNumber;
 
     @com.aliyun.core.annotation.NameInMap("invalidflinkConf")
-    private java.util.List < String > invalidflinkConf;
+    private java.util.List<String> invalidflinkConf;
 
     @com.aliyun.core.annotation.NameInMap("lineNumber")
     private String lineNumber;
@@ -71,7 +76,7 @@ public class ErrorDetails extends TeaModel {
     /**
      * @return invalidflinkConf
      */
-    public java.util.List < String > getInvalidflinkConf() {
+    public java.util.List<String> getInvalidflinkConf() {
         return this.invalidflinkConf;
     }
 
@@ -93,7 +98,7 @@ public class ErrorDetails extends TeaModel {
         private String columnNumber; 
         private String endColumnNumber; 
         private String endLineNumber; 
-        private java.util.List < String > invalidflinkConf; 
+        private java.util.List<String> invalidflinkConf; 
         private String lineNumber; 
         private String message; 
 
@@ -124,7 +129,7 @@ public class ErrorDetails extends TeaModel {
         /**
          * invalidflinkConf.
          */
-        public Builder invalidflinkConf(java.util.List < String > invalidflinkConf) {
+        public Builder invalidflinkConf(java.util.List<String> invalidflinkConf) {
             this.invalidflinkConf = invalidflinkConf;
             return this;
         }

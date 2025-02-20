@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Event extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdAt")
-    private Long createdAt;
+    private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
@@ -58,7 +63,7 @@ public class Event extends TeaModel {
     /**
      * @return createdAt
      */
-    public Long getCreatedAt() {
+    public String getCreatedAt() {
         return this.createdAt;
     }
 
@@ -112,7 +117,7 @@ public class Event extends TeaModel {
     }
 
     public static final class Builder {
-        private Long createdAt; 
+        private String createdAt; 
         private String deploymentId; 
         private String eventId; 
         private String eventName; 
@@ -124,7 +129,7 @@ public class Event extends TeaModel {
         /**
          * createdAt.
          */
-        public Builder createdAt(Long createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
         }

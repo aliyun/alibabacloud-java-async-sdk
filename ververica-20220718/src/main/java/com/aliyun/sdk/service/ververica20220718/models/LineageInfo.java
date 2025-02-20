@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class LineageInfo extends TeaModel {
     private Edge edges;
 
     @com.aliyun.core.annotation.NameInMap("jobInfos")
-    private java.util.List < JobInfo > jobInfos;
+    private java.util.List<JobInfo> jobInfos;
 
     @com.aliyun.core.annotation.NameInMap("nodes")
-    private java.util.List < Node > nodes;
+    private java.util.List<Node> nodes;
 
     private LineageInfo(Builder builder) {
         this.edges = builder.edges;
@@ -45,21 +50,21 @@ public class LineageInfo extends TeaModel {
     /**
      * @return jobInfos
      */
-    public java.util.List < JobInfo > getJobInfos() {
+    public java.util.List<JobInfo> getJobInfos() {
         return this.jobInfos;
     }
 
     /**
      * @return nodes
      */
-    public java.util.List < Node > getNodes() {
+    public java.util.List<Node> getNodes() {
         return this.nodes;
     }
 
     public static final class Builder {
         private Edge edges; 
-        private java.util.List < JobInfo > jobInfos; 
-        private java.util.List < Node > nodes; 
+        private java.util.List<JobInfo> jobInfos; 
+        private java.util.List<Node> nodes; 
 
         /**
          * edges.
@@ -72,7 +77,7 @@ public class LineageInfo extends TeaModel {
         /**
          * jobInfos.
          */
-        public Builder jobInfos(java.util.List < JobInfo > jobInfos) {
+        public Builder jobInfos(java.util.List<JobInfo> jobInfos) {
             this.jobInfos = jobInfos;
             return this;
         }
@@ -80,7 +85,7 @@ public class LineageInfo extends TeaModel {
         /**
          * nodes.
          */
-        public Builder nodes(java.util.List < Node > nodes) {
+        public Builder nodes(java.util.List<Node> nodes) {
             this.nodes = nodes;
             return this;
         }

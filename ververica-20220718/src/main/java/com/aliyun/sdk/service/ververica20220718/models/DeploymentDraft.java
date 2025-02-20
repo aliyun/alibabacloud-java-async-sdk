@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,10 +39,10 @@ public class DeploymentDraft extends TeaModel {
     private String executionMode;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.Map < String, ? > labels;
+    private java.util.Map<String, ?> labels;
 
     @com.aliyun.core.annotation.NameInMap("localVariables")
-    private java.util.List < LocalVariable > localVariables;
+    private java.util.List<LocalVariable> localVariables;
 
     @com.aliyun.core.annotation.NameInMap("lock")
     private Lock lock;
@@ -147,14 +152,14 @@ public class DeploymentDraft extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.Map < String, ? > getLabels() {
+    public java.util.Map<String, ?> getLabels() {
         return this.labels;
     }
 
     /**
      * @return localVariables
      */
-    public java.util.List < LocalVariable > getLocalVariables() {
+    public java.util.List<LocalVariable> getLocalVariables() {
         return this.localVariables;
     }
 
@@ -229,8 +234,8 @@ public class DeploymentDraft extends TeaModel {
         private String deploymentDraftId; 
         private String engineVersion; 
         private String executionMode; 
-        private java.util.Map < String, ? > labels; 
-        private java.util.List < LocalVariable > localVariables; 
+        private java.util.Map<String, ?> labels; 
+        private java.util.List<LocalVariable> localVariables; 
         private Lock lock; 
         private Long modifiedAt; 
         private String modifier; 
@@ -300,7 +305,7 @@ public class DeploymentDraft extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.Map < String, ? > labels) {
+        public Builder labels(java.util.Map<String, ?> labels) {
             this.labels = labels;
             return this;
         }
@@ -308,7 +313,7 @@ public class DeploymentDraft extends TeaModel {
         /**
          * localVariables.
          */
-        public Builder localVariables(java.util.List < LocalVariable > localVariables) {
+        public Builder localVariables(java.util.List<LocalVariable> localVariables) {
             this.localVariables = localVariables;
             return this;
         }

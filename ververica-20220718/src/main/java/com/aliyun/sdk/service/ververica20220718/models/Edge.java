@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Edge extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("columnLineage")
-    private java.util.List < Relation > columnLineage;
+    private java.util.List<Relation> columnLineage;
 
     @com.aliyun.core.annotation.NameInMap("tableLineage")
-    private java.util.List < Relation > tableLineage;
+    private java.util.List<Relation> tableLineage;
 
     private Edge(Builder builder) {
         this.columnLineage = builder.columnLineage;
@@ -34,25 +39,25 @@ public class Edge extends TeaModel {
     /**
      * @return columnLineage
      */
-    public java.util.List < Relation > getColumnLineage() {
+    public java.util.List<Relation> getColumnLineage() {
         return this.columnLineage;
     }
 
     /**
      * @return tableLineage
      */
-    public java.util.List < Relation > getTableLineage() {
+    public java.util.List<Relation> getTableLineage() {
         return this.tableLineage;
     }
 
     public static final class Builder {
-        private java.util.List < Relation > columnLineage; 
-        private java.util.List < Relation > tableLineage; 
+        private java.util.List<Relation> columnLineage; 
+        private java.util.List<Relation> tableLineage; 
 
         /**
          * columnLineage.
          */
-        public Builder columnLineage(java.util.List < Relation > columnLineage) {
+        public Builder columnLineage(java.util.List<Relation> columnLineage) {
             this.columnLineage = columnLineage;
             return this;
         }
@@ -60,7 +65,7 @@ public class Edge extends TeaModel {
         /**
          * tableLineage.
          */
-        public Builder tableLineage(java.util.List < Relation > tableLineage) {
+        public Builder tableLineage(java.util.List<Relation> tableLineage) {
             this.tableLineage = tableLineage;
             return this;
         }

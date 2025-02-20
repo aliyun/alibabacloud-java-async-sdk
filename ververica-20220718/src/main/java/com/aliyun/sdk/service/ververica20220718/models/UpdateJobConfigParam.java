@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateJobConfigParam extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("newFlinkConf")
-    private java.util.Map < String, ? > newFlinkConf;
+    private java.util.Map<String, ?> newFlinkConf;
 
     private UpdateJobConfigParam(Builder builder) {
         this.newFlinkConf = builder.newFlinkConf;
@@ -30,17 +35,17 @@ public class UpdateJobConfigParam extends TeaModel {
     /**
      * @return newFlinkConf
      */
-    public java.util.Map < String, ? > getNewFlinkConf() {
+    public java.util.Map<String, ?> getNewFlinkConf() {
         return this.newFlinkConf;
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > newFlinkConf; 
+        private java.util.Map<String, ?> newFlinkConf; 
 
         /**
          * newFlinkConf.
          */
-        public Builder newFlinkConf(java.util.Map < String, ? > newFlinkConf) {
+        public Builder newFlinkConf(java.util.Map<String, ?> newFlinkConf) {
             this.newFlinkConf = newFlinkConf;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UdfArtifact extends TeaModel {
     private String creator;
 
     @com.aliyun.core.annotation.NameInMap("dependencyJarUris")
-    private java.util.List < String > dependencyJarUris;
+    private java.util.List<String> dependencyJarUris;
 
     @com.aliyun.core.annotation.NameInMap("jarUrl")
     private String jarUrl;
@@ -37,7 +42,7 @@ public class UdfArtifact extends TeaModel {
     private String namespace;
 
     @com.aliyun.core.annotation.NameInMap("udfClasses")
-    private java.util.List < UdfClass > udfClasses;
+    private java.util.List<UdfClass> udfClasses;
 
     private UdfArtifact(Builder builder) {
         this.artifactType = builder.artifactType;
@@ -83,7 +88,7 @@ public class UdfArtifact extends TeaModel {
     /**
      * @return dependencyJarUris
      */
-    public java.util.List < String > getDependencyJarUris() {
+    public java.util.List<String> getDependencyJarUris() {
         return this.dependencyJarUris;
     }
 
@@ -118,7 +123,7 @@ public class UdfArtifact extends TeaModel {
     /**
      * @return udfClasses
      */
-    public java.util.List < UdfClass > getUdfClasses() {
+    public java.util.List<UdfClass> getUdfClasses() {
         return this.udfClasses;
     }
 
@@ -126,12 +131,12 @@ public class UdfArtifact extends TeaModel {
         private String artifactType; 
         private Long createdAt; 
         private String creator; 
-        private java.util.List < String > dependencyJarUris; 
+        private java.util.List<String> dependencyJarUris; 
         private String jarUrl; 
         private Long modifiedAt; 
         private String name; 
         private String namespace; 
-        private java.util.List < UdfClass > udfClasses; 
+        private java.util.List<UdfClass> udfClasses; 
 
         /**
          * artifactType.
@@ -160,7 +165,7 @@ public class UdfArtifact extends TeaModel {
         /**
          * dependencyJarUris.
          */
-        public Builder dependencyJarUris(java.util.List < String > dependencyJarUris) {
+        public Builder dependencyJarUris(java.util.List<String> dependencyJarUris) {
             this.dependencyJarUris = dependencyJarUris;
             return this;
         }
@@ -200,7 +205,7 @@ public class UdfArtifact extends TeaModel {
         /**
          * udfClasses.
          */
-        public Builder udfClasses(java.util.List < UdfClass > udfClasses) {
+        public Builder udfClasses(java.util.List<UdfClass> udfClasses) {
             this.udfClasses = udfClasses;
             return this;
         }
