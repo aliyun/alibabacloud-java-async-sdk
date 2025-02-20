@@ -26,6 +26,10 @@ public class ListVulAutoRepairConfigRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
@@ -38,6 +42,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
         super(builder);
         this.aliasName = builder.aliasName;
         this.currentPage = builder.currentPage;
+        this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.type = builder.type;
     }
@@ -70,6 +75,13 @@ public class ListVulAutoRepairConfigRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -86,6 +98,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ListVulAutoRepairConfigRequest, Builder> {
         private String aliasName; 
         private Integer currentPage; 
+        private String lang; 
         private Integer pageSize; 
         private String type; 
 
@@ -97,6 +110,7 @@ public class ListVulAutoRepairConfigRequest extends Request {
             super(request);
             this.aliasName = request.aliasName;
             this.currentPage = request.currentPage;
+            this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.type = request.type;
         } 
@@ -122,6 +136,15 @@ public class ListVulAutoRepairConfigRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

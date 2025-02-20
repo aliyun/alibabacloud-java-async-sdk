@@ -280,6 +280,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
      */
     public static class Whitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hash")
+        @Deprecated
         private java.util.List<String> hash;
 
         @com.aliyun.core.annotation.NameInMap("Image")

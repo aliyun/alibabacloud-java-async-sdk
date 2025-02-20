@@ -3410,6 +3410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageScanNumInPeriodResponse> getImageScanNumInPeriod(GetImageScanNumInPeriodRequest request);
 
     /**
+     * @param request the request parameters of GetInstallCodeForUuid  GetInstallCodeForUuidRequest
+     * @return GetInstallCodeForUuidResponse
+     */
+    CompletableFuture<GetInstallCodeForUuidResponse> getInstallCodeForUuid(GetInstallCodeForUuidRequest request);
+
+    /**
      * @param request the request parameters of GetInstanceAlarmStatistics  GetInstanceAlarmStatisticsRequest
      * @return GetInstanceAlarmStatisticsResponse
      */

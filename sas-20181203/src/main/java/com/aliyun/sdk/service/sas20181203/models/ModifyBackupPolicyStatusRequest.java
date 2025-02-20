@@ -24,6 +24,7 @@ public class ModifyBackupPolicyStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyVersion")
+    @Deprecated
     @com.aliyun.core.annotation.Validation(required = true)
     private String policyVersion;
 

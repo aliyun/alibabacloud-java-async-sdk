@@ -161,6 +161,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapCount")
         private Integer asapCount;
 
+        @com.aliyun.core.annotation.NameInMap("GmtFirst")
+        private Long gmtFirst;
+
         @com.aliyun.core.annotation.NameInMap("GmtLast")
         private Long gmtLast;
 
@@ -197,6 +200,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         private GroupedVulItems(Builder builder) {
             this.aliasName = builder.aliasName;
             this.asapCount = builder.asapCount;
+            this.gmtFirst = builder.gmtFirst;
             this.gmtLast = builder.gmtLast;
             this.handledCount = builder.handledCount;
             this.languageType = builder.languageType;
@@ -230,6 +234,13 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
          */
         public Integer getAsapCount() {
             return this.asapCount;
+        }
+
+        /**
+         * @return gmtFirst
+         */
+        public Long getGmtFirst() {
+            return this.gmtFirst;
         }
 
         /**
@@ -312,6 +323,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         public static final class Builder {
             private String aliasName; 
             private Integer asapCount; 
+            private Long gmtFirst; 
             private Long gmtLast; 
             private Integer handledCount; 
             private String languageType; 
@@ -347,6 +359,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
+             * GmtFirst.
+             */
+            public Builder gmtFirst(Long gmtFirst) {
+                this.gmtFirst = gmtFirst;
+                return this;
+            }
+
+            /**
              * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -369,7 +389,17 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageType.
+             * <p>The language type associated with the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>java</strong></li>
+             * <li><strong>php</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is valid only for a vulnerability of the sca type.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder languageType(String languageType) {
                 this.languageType = languageType;

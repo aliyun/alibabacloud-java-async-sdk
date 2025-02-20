@@ -75,7 +75,7 @@ public class AddProtectVpcListRequest extends Request {
         /**
          * <p>Collection of new VPC instance IDs.</p>
          * <blockquote>
-         * <p>Call the <a href="~~Describevpclist~~">Describevpclist</a> interface to obtain this parameter.</p>
+         * <p>Call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> interface to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class AddProtectVpcListRequest extends Request {
         /**
          * <p>Collection of VPC instance IDs to be deleted.</p>
          * <blockquote>
-         * <p>Call the <a href="~~Describevpclist~~">Describevpclist</a> interface to obtain this parameter.</p>
+         * <p>Call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> interface to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

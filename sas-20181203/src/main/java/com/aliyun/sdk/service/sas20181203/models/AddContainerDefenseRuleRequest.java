@@ -376,6 +376,7 @@ public class AddContainerDefenseRuleRequest extends Request {
      */
     public static class Whitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hash")
+        @Deprecated
         private java.util.List<String> hash;
 
         @com.aliyun.core.annotation.NameInMap("Image")

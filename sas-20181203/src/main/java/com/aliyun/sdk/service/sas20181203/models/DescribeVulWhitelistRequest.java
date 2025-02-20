@@ -22,12 +22,17 @@ public class DescribeVulWhitelistRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeVulWhitelistRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.lang = builder.lang;
         this.pageSize = builder.pageSize;
     }
 
@@ -52,6 +57,13 @@ public class DescribeVulWhitelistRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -60,6 +72,7 @@ public class DescribeVulWhitelistRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeVulWhitelistRequest, Builder> {
         private Integer currentPage; 
+        private String lang; 
         private Integer pageSize; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DescribeVulWhitelistRequest extends Request {
         private Builder(DescribeVulWhitelistRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.lang = request.lang;
             this.pageSize = request.pageSize;
         } 
 
@@ -81,6 +95,15 @@ public class DescribeVulWhitelistRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 
