@@ -222,6 +222,180 @@ public class GetGatewayConfigResponseBody extends TeaModel {
      *
      * <p>GetGatewayConfigResponseBody</p>
      */
+    public static class EnableK8sSourceWorkloadFilter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("FilterOpt")
+        private String filterOpt;
+
+        @com.aliyun.core.annotation.NameInMap("LabelKey")
+        private String labelKey;
+
+        @com.aliyun.core.annotation.NameInMap("LabelValue")
+        private String labelValue;
+
+        private EnableK8sSourceWorkloadFilter(Builder builder) {
+            this.enable = builder.enable;
+            this.filterOpt = builder.filterOpt;
+            this.labelKey = builder.labelKey;
+            this.labelValue = builder.labelValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnableK8sSourceWorkloadFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return filterOpt
+         */
+        public String getFilterOpt() {
+            return this.filterOpt;
+        }
+
+        /**
+         * @return labelKey
+         */
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        /**
+         * @return labelValue
+         */
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String filterOpt; 
+            private String labelKey; 
+            private String labelValue; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * FilterOpt.
+             */
+            public Builder filterOpt(String filterOpt) {
+                this.filterOpt = filterOpt;
+                return this;
+            }
+
+            /**
+             * LabelKey.
+             */
+            public Builder labelKey(String labelKey) {
+                this.labelKey = labelKey;
+                return this;
+            }
+
+            /**
+             * LabelValue.
+             */
+            public Builder labelValue(String labelValue) {
+                this.labelValue = labelValue;
+                return this;
+            }
+
+            public EnableK8sSourceWorkloadFilter build() {
+                return new EnableK8sSourceWorkloadFilter(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayConfigResponseBody</p>
+     */
+    public static class EnableXffTrustedCidrs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("IpListContent")
+        private String ipListContent;
+
+        private EnableXffTrustedCidrs(Builder builder) {
+            this.enable = builder.enable;
+            this.ipListContent = builder.ipListContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnableXffTrustedCidrs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return ipListContent
+         */
+        public String getIpListContent() {
+            return this.ipListContent;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String ipListContent; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * IpListContent.
+             */
+            public Builder ipListContent(String ipListContent) {
+                this.ipListContent = ipListContent;
+                return this;
+            }
+
+            public EnableXffTrustedCidrs build() {
+                return new EnableXffTrustedCidrs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayConfigResponseBody</p>
+     */
     public static class SlsConfigDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -687,6 +861,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableHttp3")
         private Boolean enableHttp3;
 
+        @com.aliyun.core.annotation.NameInMap("EnableK8sSourceWorkloadFilter")
+        private EnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter;
+
         @com.aliyun.core.annotation.NameInMap("EnableProxyProtocol")
         private Boolean enableProxyProtocol;
 
@@ -695,6 +872,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EnableWaf")
         private Boolean enableWaf;
+
+        @com.aliyun.core.annotation.NameInMap("EnableXffTrustedCidrs")
+        private EnableXffTrustedCidrs enableXffTrustedCidrs;
 
         @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
@@ -752,9 +932,11 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             this.enableHardwareAccelerate = builder.enableHardwareAccelerate;
             this.enableHttp2 = builder.enableHttp2;
             this.enableHttp3 = builder.enableHttp3;
+            this.enableK8sSourceWorkloadFilter = builder.enableK8sSourceWorkloadFilter;
             this.enableProxyProtocol = builder.enableProxyProtocol;
             this.enableSlashMerge = builder.enableSlashMerge;
             this.enableWaf = builder.enableWaf;
+            this.enableXffTrustedCidrs = builder.enableXffTrustedCidrs;
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.initialConnectionWindowSize = builder.initialConnectionWindowSize;
             this.initialStreamWindowSize = builder.initialStreamWindowSize;
@@ -851,6 +1033,13 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableK8sSourceWorkloadFilter
+         */
+        public EnableK8sSourceWorkloadFilter getEnableK8sSourceWorkloadFilter() {
+            return this.enableK8sSourceWorkloadFilter;
+        }
+
+        /**
          * @return enableProxyProtocol
          */
         public Boolean getEnableProxyProtocol() {
@@ -869,6 +1058,13 @@ public class GetGatewayConfigResponseBody extends TeaModel {
          */
         public Boolean getEnableWaf() {
             return this.enableWaf;
+        }
+
+        /**
+         * @return enableXffTrustedCidrs
+         */
+        public EnableXffTrustedCidrs getEnableXffTrustedCidrs() {
+            return this.enableXffTrustedCidrs;
         }
 
         /**
@@ -987,9 +1183,11 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             private Boolean enableHardwareAccelerate; 
             private Boolean enableHttp2; 
             private Boolean enableHttp3; 
+            private EnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter; 
             private Boolean enableProxyProtocol; 
             private Boolean enableSlashMerge; 
             private Boolean enableWaf; 
+            private EnableXffTrustedCidrs enableXffTrustedCidrs; 
             private String gatewayUniqueId; 
             private Integer initialConnectionWindowSize; 
             private Integer initialStreamWindowSize; 
@@ -1087,6 +1285,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             }
 
             /**
+             * EnableK8sSourceWorkloadFilter.
+             */
+            public Builder enableK8sSourceWorkloadFilter(EnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter) {
+                this.enableK8sSourceWorkloadFilter = enableK8sSourceWorkloadFilter;
+                return this;
+            }
+
+            /**
              * EnableProxyProtocol.
              */
             public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
@@ -1107,6 +1313,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
              */
             public Builder enableWaf(Boolean enableWaf) {
                 this.enableWaf = enableWaf;
+                return this;
+            }
+
+            /**
+             * EnableXffTrustedCidrs.
+             */
+            public Builder enableXffTrustedCidrs(EnableXffTrustedCidrs enableXffTrustedCidrs) {
+                this.enableXffTrustedCidrs = enableXffTrustedCidrs;
                 return this;
             }
 

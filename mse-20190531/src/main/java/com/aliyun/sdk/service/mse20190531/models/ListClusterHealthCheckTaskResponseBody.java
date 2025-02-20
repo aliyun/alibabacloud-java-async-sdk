@@ -261,6 +261,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DescriptionEn")
+        private String descriptionEn;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
@@ -285,14 +288,23 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
+        @com.aliyun.core.annotation.NameInMap("RiskNameEn")
+        private String riskNameEn;
+
         @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
         @com.aliyun.core.annotation.NameInMap("Situation")
         private String situation;
 
+        @com.aliyun.core.annotation.NameInMap("SituationEn")
+        private String situationEn;
+
         @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
+
+        @com.aliyun.core.annotation.NameInMap("SuggestionEn")
+        private String suggestionEn;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
@@ -305,6 +317,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
         private RiskList(Builder builder) {
             this.description = builder.description;
+            this.descriptionEn = builder.descriptionEn;
             this.id = builder.id;
             this.module = builder.module;
             this.mute = builder.mute;
@@ -313,9 +326,12 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             this.riskCode = builder.riskCode;
             this.riskLevel = builder.riskLevel;
             this.riskName = builder.riskName;
+            this.riskNameEn = builder.riskNameEn;
             this.riskType = builder.riskType;
             this.situation = builder.situation;
+            this.situationEn = builder.situationEn;
             this.suggestion = builder.suggestion;
+            this.suggestionEn = builder.suggestionEn;
             this.taskId = builder.taskId;
             this.type = builder.type;
             this.values = builder.values;
@@ -334,6 +350,13 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return descriptionEn
+         */
+        public String getDescriptionEn() {
+            return this.descriptionEn;
         }
 
         /**
@@ -393,6 +416,13 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskNameEn
+         */
+        public String getRiskNameEn() {
+            return this.riskNameEn;
+        }
+
+        /**
          * @return riskType
          */
         public String getRiskType() {
@@ -407,10 +437,24 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return situationEn
+         */
+        public String getSituationEn() {
+            return this.situationEn;
+        }
+
+        /**
          * @return suggestion
          */
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+        /**
+         * @return suggestionEn
+         */
+        public String getSuggestionEn() {
+            return this.suggestionEn;
         }
 
         /**
@@ -436,6 +480,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String descriptionEn; 
             private Integer id; 
             private String module; 
             private Boolean mute; 
@@ -444,9 +489,12 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private String riskCode; 
             private String riskLevel; 
             private String riskName; 
+            private String riskNameEn; 
             private String riskType; 
             private String situation; 
+            private String situationEn; 
             private String suggestion; 
+            private String suggestionEn; 
             private Long taskId; 
             private Integer type; 
             private String values; 
@@ -459,6 +507,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DescriptionEn.
+             */
+            public Builder descriptionEn(String descriptionEn) {
+                this.descriptionEn = descriptionEn;
                 return this;
             }
 
@@ -560,6 +616,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
+             * RiskNameEn.
+             */
+            public Builder riskNameEn(String riskNameEn) {
+                this.riskNameEn = riskNameEn;
+                return this;
+            }
+
+            /**
              * <p>The type of the risk.</p>
              * 
              * <strong>example:</strong>
@@ -582,6 +646,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
+             * SituationEn.
+             */
+            public Builder situationEn(String situationEn) {
+                this.situationEn = situationEn;
+                return this;
+            }
+
+            /**
              * <p>The suggestion.</p>
              * 
              * <strong>example:</strong>
@@ -589,6 +661,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
+                return this;
+            }
+
+            /**
+             * SuggestionEn.
+             */
+            public Builder suggestionEn(String suggestionEn) {
+                this.suggestionEn = suggestionEn;
                 return this;
             }
 
