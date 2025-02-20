@@ -127,7 +127,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * <p>The backup jobs that meet the specified conditions.</p>
+         * <p>The returned backup jobs that meet the specified conditions.</p>
          */
         public Builder backupJobs(BackupJobs backupJobs) {
             this.backupJobs = backupJobs;
@@ -168,7 +168,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+         * <p>The number of entries returned per page. Valid values: 1 to 99. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -190,7 +190,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the call is successful.</p>
          * <ul>
          * <li>true: The call is successful.</li>
          * <li>false: The call fails.</li>
@@ -494,24 +494,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ECS instance information, including ECS instance name, instance type, etc.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{
-             *   &quot;i-xxxxxxxx&quot;: {
-             *     &quot;hostName&quot;: &quot;test&quot;,
-             *     &quot;instanceName&quot;: &quot;test&quot;,
-             *     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
-             *     &quot;osType&quot;: &quot;linux&quot;,
-             *     &quot;diskIds&quot;: [
-             *       &quot;d-xxxxxxxx01&quot;,
-             *       &quot;d-xxxxxxxx02&quot;
-             *     ],
-             *     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
-             *     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
-             *     &quot;platform&quot;: &quot;Rocky Linux&quot;
-             *   }
-             * }</p>
+             * <p>The ecs instance infos.</p>
              */
             public Builder instanceInfos(java.util.Map<String, ?> instanceInfos) {
                 this.instanceInfos = instanceInfos;
@@ -616,7 +599,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private TableNames tableNames; 
 
             /**
-             * <p>The names of the tables in the Tablestore instance.</p>
+             * <p>The names of the destination tables in the Tablestore instance.</p>
              */
             public Builder tableNames(TableNames tableNames) {
                 this.tableNames = tableNames;
@@ -672,6 +655,133 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
             public Paths build() {
                 return new Paths(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeBackupJobs2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupJobs2ResponseBody</p>
+     */
+    public static class Report extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FailedFiles")
+        private String failedFiles;
+
+        @com.aliyun.core.annotation.NameInMap("ReportTaskStatus")
+        private String reportTaskStatus;
+
+        @com.aliyun.core.annotation.NameInMap("SkippedFiles")
+        private String skippedFiles;
+
+        @com.aliyun.core.annotation.NameInMap("SuccessFiles")
+        private String successFiles;
+
+        @com.aliyun.core.annotation.NameInMap("TotalFiles")
+        private String totalFiles;
+
+        private Report(Builder builder) {
+            this.failedFiles = builder.failedFiles;
+            this.reportTaskStatus = builder.reportTaskStatus;
+            this.skippedFiles = builder.skippedFiles;
+            this.successFiles = builder.successFiles;
+            this.totalFiles = builder.totalFiles;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Report create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failedFiles
+         */
+        public String getFailedFiles() {
+            return this.failedFiles;
+        }
+
+        /**
+         * @return reportTaskStatus
+         */
+        public String getReportTaskStatus() {
+            return this.reportTaskStatus;
+        }
+
+        /**
+         * @return skippedFiles
+         */
+        public String getSkippedFiles() {
+            return this.skippedFiles;
+        }
+
+        /**
+         * @return successFiles
+         */
+        public String getSuccessFiles() {
+            return this.successFiles;
+        }
+
+        /**
+         * @return totalFiles
+         */
+        public String getTotalFiles() {
+            return this.totalFiles;
+        }
+
+        public static final class Builder {
+            private String failedFiles; 
+            private String reportTaskStatus; 
+            private String skippedFiles; 
+            private String successFiles; 
+            private String totalFiles; 
+
+            /**
+             * FailedFiles.
+             */
+            public Builder failedFiles(String failedFiles) {
+                this.failedFiles = failedFiles;
+                return this;
+            }
+
+            /**
+             * ReportTaskStatus.
+             */
+            public Builder reportTaskStatus(String reportTaskStatus) {
+                this.reportTaskStatus = reportTaskStatus;
+                return this;
+            }
+
+            /**
+             * SkippedFiles.
+             */
+            public Builder skippedFiles(String skippedFiles) {
+                this.skippedFiles = skippedFiles;
+                return this;
+            }
+
+            /**
+             * SuccessFiles.
+             */
+            public Builder successFiles(String successFiles) {
+                this.successFiles = successFiles;
+                return this;
+            }
+
+            /**
+             * TotalFiles.
+             */
+            public Builder totalFiles(String totalFiles) {
+                this.totalFiles = totalFiles;
+                return this;
+            }
+
+            public Report build() {
+                return new Report(this);
             } 
 
         } 
@@ -798,6 +908,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
+        @com.aliyun.core.annotation.NameInMap("Report")
+        private Report report;
+
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
@@ -861,6 +974,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             this.planId = builder.planId;
             this.prefix = builder.prefix;
             this.progress = builder.progress;
+            this.report = builder.report;
             this.sourceType = builder.sourceType;
             this.speed = builder.speed;
             this.speedLimit = builder.speedLimit;
@@ -1146,6 +1260,13 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return report
+         */
+        public Report getReport() {
+            return this.report;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -1240,6 +1361,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private String planId; 
             private String prefix; 
             private Integer progress; 
+            private Report report; 
             private String sourceType; 
             private Long speed; 
             private String speedLimit; 
@@ -1250,7 +1372,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * <p>The actual amount of data that is backed up after the system removes duplicate files. Unit: bytes.</p>
+             * <p>The actual amount of data that is backed up after duplicates are removed. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -1272,7 +1394,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual number of objects that are backed up by the backup job. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the actual number of objects that are backed up by the backup job.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -1283,7 +1405,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type. Only <strong>COMPLETE</strong> may be returned, which indicates full backup.</p>
+             * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
              * 
              * <strong>example:</strong>
              * <p>COMPLETE</p>
@@ -1294,7 +1416,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the OSS bucket that is backed up. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>OSS</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter indicates the name of the OSS bucket that is backed up.</p>
              * 
              * <strong>example:</strong>
              * <p>hbr-backup-oss</p>
@@ -1327,7 +1449,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</p>
+             * <p>The data source details at the destination. Thisparameter is returned only for data synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
@@ -1338,7 +1460,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup client. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the ID of the backup client.</p>
              * 
              * <strong>example:</strong>
              * <p>c-*********************</p>
@@ -1349,7 +1471,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup job was complete. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the backup job was completed. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1554347313</p>
@@ -1360,7 +1482,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file system was created. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>NAS</strong>. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter indicates the time when the file system was created. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1607436917</p>
@@ -1371,7 +1493,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup job was created. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the backup job was created. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1554347313</p>
@@ -1382,7 +1504,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>BackupRole</p>
@@ -1393,7 +1515,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type. Valid values:</p>
+             * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
              * <ul>
              * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
              * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
@@ -1419,7 +1541,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source details at the destination. This parameter is returned only for data synchronization.</p>
+             * <p>Destination data source details. (Required only for synchronization)</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;prefix&quot;:&quot;/&quot;}</p>
@@ -1430,7 +1552,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source ID at the destination. This parameter is returned only for data synchronization.</p>
+             * <p>Destination data source ID. (Required only for synchronization)</p>
              * 
              * <strong>example:</strong>
              * <p>ds-000cov4ufudxklj24zdk</p>
@@ -1441,7 +1563,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type at the destination. This parameter is returned only for data synchronization.</p>
+             * <p>Destination data source type. (Required only for synchronization)</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -1452,7 +1574,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the ECS instance backup job.</p>
+             * <p>The udm backup job detail.</p>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -1471,7 +1593,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The paths to the files that are excluded from the backup job. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>. The value can be up to 255 characters in length.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
@@ -1482,7 +1604,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the NAS file system. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>NAS</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter indicates the ID of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>005494</p>
@@ -1515,7 +1637,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.</p>
+             * <p>The identifier of the container cluster. For a Container Service for Kubernetes (ACK) cluster, specify the cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c83**************************b76</p>
@@ -1537,7 +1659,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>NAS</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter indicates the ID of the ECS instance.</p>
              * 
              * <strong>example:</strong>
              * <p>i-*********************</p>
@@ -1559,7 +1681,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of objects that are backed up. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the number of objects that are backed up.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1570,7 +1692,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of objects in the data source. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the total number of objects in the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1603,11 +1725,11 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates whether Windows VSS is used to define a backup path.</p>
              * <ul>
              * <li>This parameter is available only for Windows ECS instances.</li>
-             * <li>A value of <code>[&quot;UseVSS&quot;:true]</code> indicates that the consistency between the source data and backup data is ensured while data changes occur in the source data.</li>
-             * <li>If VSS is used, multiple directories cannot be backed up at a time.</li>
+             * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before the system sets this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
+             * <li>If you use VSS, you cannot back up data from multiple directories.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1619,7 +1741,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the Tablestore instance.</p>
+             * <p>The details about the Tablestore instance.</p>
              */
             public Builder otsDetail(OtsDetail otsDetail) {
                 this.otsDetail = otsDetail;
@@ -1627,7 +1749,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source paths.</p>
+             * <p>The backup paths.</p>
              */
             public Builder paths(Paths paths) {
                 this.paths = paths;
@@ -1646,7 +1768,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The prefix of objects that are backed up. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>OSS</strong>.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter indicates the prefix of objects that are backed up.</p>
              * 
              * <strong>example:</strong>
              * <p>example/</p>
@@ -1657,7 +1779,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup progress. Valid values: 0 to 10000. For example, a value of 10000 indicates that the progress is 100%.</p>
+             * <p>The backup progress. For example, 10000 indicates that the progress is 100%.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -1668,11 +1790,19 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
+             * Report.
+             */
+            public Builder report(Report report) {
+                this.report = report;
+                return this;
+            }
+
+            /**
              * <p>The type of the data source. Valid values:</p>
              * <ul>
-             * <li><strong>ECS_FILE</strong>: ECS file.</li>
-             * <li><strong>OSS</strong>: OSS bucket.</li>
-             * <li><strong>NAS</strong>: NAS file system.</li>
+             * <li><strong>ECS_FILE</strong>: ECS files</li>
+             * <li><strong>OSS</strong>: OSS buckets</li>
+             * <li><strong>NAS</strong>: NAS file systems</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1695,9 +1825,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The throttling rules. This parameter is returned only if the value of <strong>SourceType</strong> is <strong>ECS_FILE</strong>. Format: <code>{start}:{end}:{bandwidth}</code>. Multiple throttling rules are separated by vertical bars (<code>|</code>). The time ranges of the throttling rules cannot overlap.</p>
+             * <p>This parameter is returned only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter indicates the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Multiple throttling rules are separated with vertical bars (<code>{start}|{end}|{bandwidth}</code>). A specified time range cannot overlap with another one.</p>
              * <ul>
-             * <li><strong>start</strong>: the start hour.</li>
+             * <li><strong>start</strong>: the start hour</li>
              * <li><strong>end</strong>: the end hour</li>
              * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
              * </ul>
@@ -1711,7 +1841,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup job started. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the backup job started. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1554347313</p>
@@ -1722,11 +1852,11 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the backup job. Valid values:</p>
+             * <p>The status of the backup job. Valid values:</p>
              * <ul>
-             * <li><strong>COMPLETE</strong></li>
-             * <li><strong>PARTIAL_COMPLETE</strong></li>
-             * <li><strong>FAILED</strong></li>
+             * <li><strong>COMPLETE</strong>: The backup job is completed.</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: The backup job is partially completed.</li>
+             * <li><strong>FAILED</strong>: The restore job has failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1738,7 +1868,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table in the Tablestore instance.</p>
+             * <p>The name of a destination table in the Tablestore instance.</p>
              * 
              * <strong>example:</strong>
              * <p>table1</p>
@@ -1749,7 +1879,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup job was last updated. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the backup job was updated. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1554347313</p>

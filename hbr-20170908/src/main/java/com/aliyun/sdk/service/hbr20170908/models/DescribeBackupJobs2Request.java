@@ -116,7 +116,7 @@ public class DescribeBackupJobs2Request extends Request {
         } 
 
         /**
-         * <p>The keys in the filter.</p>
+         * <p>The keys that you want to match in the filter.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -248,7 +248,7 @@ public class DescribeBackupJobs2Request extends Request {
             private java.util.List<String> values; 
 
             /**
-             * <p>The key in the filter. Valid values:</p>
+             * <p>The keys in the filter. Valid values:</p>
              * <ul>
              * <li><strong>RegionId</strong>: the ID of a region</li>
              * <li><strong>PlanId</strong>: the ID of a backup plan</li>
@@ -260,7 +260,7 @@ public class DescribeBackupJobs2Request extends Request {
              * <li><strong>Status</strong>: the status of a backup job</li>
              * <li><strong>CreatedTime</strong>: the start time of a backup job</li>
              * <li><strong>CompleteTime</strong>: the end time of a backup job</li>
-             * <li><strong>InstanceName</strong>: the name of a Tablestore instance</li>
+             * <li><strong>instanceName</strong>: the name of a Tablestore instance</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -280,11 +280,11 @@ public class DescribeBackupJobs2Request extends Request {
              * <li><strong>GREATER_THAN_OR_EQUAL</strong>: greater than or equal to</li>
              * <li><strong>LESS_THAN</strong>: less than</li>
              * <li><strong>LESS_THAN_OR_EQUAL</strong>: less than or equal to</li>
-             * <li><strong>BETWEEN</strong>: specifies a JSON array as a range. The results must fall within the range in the <code>[Minimum value,Maximum value]</code> format.</li>
+             * <li><strong>BETWEEN</strong>: specifies a JSON array as a range. The results must fall within the range in the <code>[Minimum value,maximum value]</code> format.</li>
              * <li><strong>IN</strong>: specifies an array as a collection. The results must fall within the collection.</li>
              * </ul>
              * <blockquote>
-             * <p>If you specify the <strong>CompleteTime</strong> parameter as a key to query backup jobs, you cannot use the IN operator to perform a match.</p>
+             * <p> If you specify <strong>CompleteTime</strong> as a key to query backup jobs, you cannot use the IN operator to perform a match.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class DescribeBackupJobs2Request extends Request {
             }
 
             /**
-             * <p>The variable values of the filter.</p>
+             * <p>The values that you want to match in the filter.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;

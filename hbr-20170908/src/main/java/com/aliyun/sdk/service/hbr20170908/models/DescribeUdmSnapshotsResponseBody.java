@@ -727,6 +727,9 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BytesTotal")
         private Long bytesTotal;
 
+        @com.aliyun.core.annotation.NameInMap("CanBeDeleted")
+        private Boolean canBeDeleted;
+
         @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private Long completeTime;
 
@@ -792,6 +795,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             this.advancedRetentionType = builder.advancedRetentionType;
             this.backupType = builder.backupType;
             this.bytesTotal = builder.bytesTotal;
+            this.canBeDeleted = builder.canBeDeleted;
             this.completeTime = builder.completeTime;
             this.createTime = builder.createTime;
             this.createdTime = builder.createdTime;
@@ -848,6 +852,13 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
          */
         public Long getBytesTotal() {
             return this.bytesTotal;
+        }
+
+        /**
+         * @return canBeDeleted
+         */
+        public Boolean getCanBeDeleted() {
+            return this.canBeDeleted;
         }
 
         /**
@@ -995,6 +1006,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private String advancedRetentionType; 
             private String backupType; 
             private Long bytesTotal; 
+            private Boolean canBeDeleted; 
             private Long completeTime; 
             private Long createTime; 
             private Long createdTime; 
@@ -1062,6 +1074,14 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
+                return this;
+            }
+
+            /**
+             * CanBeDeleted.
+             */
+            public Builder canBeDeleted(Boolean canBeDeleted) {
+                this.canBeDeleted = canBeDeleted;
                 return this;
             }
 

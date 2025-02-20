@@ -47,6 +47,10 @@ public class CreateVaultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VaultType")
     private String vaultType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WormEnabled")
+    private Boolean wormEnabled;
+
     private CreateVaultRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -56,6 +60,7 @@ public class CreateVaultRequest extends Request {
         this.vaultRegionId = builder.vaultRegionId;
         this.vaultStorageClass = builder.vaultStorageClass;
         this.vaultType = builder.vaultType;
+        this.wormEnabled = builder.wormEnabled;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class CreateVaultRequest extends Request {
         return this.vaultType;
     }
 
+    /**
+     * @return wormEnabled
+     */
+    public Boolean getWormEnabled() {
+        return this.wormEnabled;
+    }
+
     public static final class Builder extends Request.Builder<CreateVaultRequest, Builder> {
         private String description; 
         private String encryptType; 
@@ -128,6 +140,7 @@ public class CreateVaultRequest extends Request {
         private String vaultRegionId; 
         private String vaultStorageClass; 
         private String vaultType; 
+        private Boolean wormEnabled; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class CreateVaultRequest extends Request {
             this.vaultRegionId = request.vaultRegionId;
             this.vaultStorageClass = request.vaultStorageClass;
             this.vaultType = request.vaultType;
+            this.wormEnabled = request.wormEnabled;
         } 
 
         /**
@@ -235,6 +249,15 @@ public class CreateVaultRequest extends Request {
         public Builder vaultType(String vaultType) {
             this.putQueryParameter("VaultType", vaultType);
             this.vaultType = vaultType;
+            return this;
+        }
+
+        /**
+         * WormEnabled.
+         */
+        public Builder wormEnabled(Boolean wormEnabled) {
+            this.putQueryParameter("WormEnabled", wormEnabled);
+            this.wormEnabled = wormEnabled;
             return this;
         }
 

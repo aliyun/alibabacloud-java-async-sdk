@@ -425,7 +425,7 @@ public class CreateRestoreJobRequest extends Request {
         } 
 
         /**
-         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The name of the role created in the RAM of the original account for cross-account backup managed by the current account.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupRole</p>
@@ -437,10 +437,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <p>Cross-account backup type. Supported values:</p>
          * <ul>
-         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
-         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * <li>SELF_ACCOUNT: Backup within the same account</li>
+         * <li>CROSS_ACCOUNT: Cross-account backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -453,7 +453,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * <p>The original account ID managed by the current account for cross-account backup.</p>
          * 
          * <strong>example:</strong>
          * <p>158975xxxxx4625</p>
@@ -465,7 +465,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The paths to the files that you do not want to restore. No files in the specified paths are restored. The value must be 1 to 255 characters in length.</p>
+         * <p>The path not to be restored. All documents under this path will not be restored. Maximum length is 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
@@ -477,7 +477,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Details of restoration to local.</p>
+         * <p>Details of restoring to the local environment.</p>
          */
         public Builder failbackDetail(java.util.Map<String, ?> failbackDetail) {
             String failbackDetailShrink = shrink(failbackDetail, "FailbackDetail", "json");
@@ -487,7 +487,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The paths to the files that you want to restore. All files in the specified paths are restored. The value must be 1 to 255 characters in length.</p>
+         * <p>The path to be restored. All documents under this path will be restored. Maximum length is 255 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
@@ -499,7 +499,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.</p>
+         * <p>Indicates whether it is called by the container service. Default is false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -511,7 +511,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>Parameters for restoring a task</p>
+         * <p>Parameters for the restore job.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;includes&quot;:[],&quot;excludes&quot;:[],&quot;conflictPolicy&quot;:&quot;OVERWRITE_EXISTING&quot;}</p>
@@ -523,7 +523,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The details about the Tablestore instance.</p>
+         * <p>Details of the Table Store instance.</p>
          */
         public Builder otsDetail(OtsTableRestoreDetail otsDetail) {
             String otsDetailShrink = shrink(otsDetail, "OtsDetail", "json");
@@ -533,13 +533,13 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the restore destination. Valid values:</p>
+         * <p>The type of the restore destination data source. Possible values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: restores data to Elastic Compute Service (ECS) files.</li>
-         * <li><strong>OSS</strong>: restores data to Object Storage Service (OSS) buckets.</li>
-         * <li><strong>NAS</strong>: restores data to Apsara File Storage NAS file systems.</li>
-         * <li><strong>OTS_TABLE</strong>: restores data to Tablestore instances.</li>
-         * <li><strong>UDM_ECS_ROLLBACK</strong>: restores data to ECS instances.</li>
+         * <li><strong>ECS_FILE</strong>: Restore to ECS file.</li>
+         * <li><strong>OSS</strong>: Restore to Alibaba Cloud OSS.</li>
+         * <li><strong>NAS</strong>: Restore to Alibaba Cloud NAS.</li>
+         * <li><strong>OTS_TABLE</strong>: Restore to Alibaba Cloud OTS.</li>
+         * <li><strong>UDM_ECS_ROLLBACK</strong>: Restore to Alibaba Cloud ECS whole machine.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -553,7 +553,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The hash value of the backup snapshot.</p>
+         * <p>The HASH value of the backup snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>f2fe...</p>
@@ -577,13 +577,13 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Valid values:</p>
+         * <p>The type of the data source. Possible values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: ECS files</li>
-         * <li><strong>OSS</strong>: OSS buckets</li>
-         * <li><strong>NAS</strong>: NAS file systems</li>
-         * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
-         * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * <li><strong>ECS_FILE</strong>: Restore ECS file.</li>
+         * <li><strong>OSS</strong>: Restore Alibaba Cloud OSS.</li>
+         * <li><strong>NAS</strong>: Restore Alibaba Cloud NAS.</li>
+         * <li><strong>OTS_TABLE</strong>: Restore to Alibaba Cloud OTS.</li>
+         * <li><strong>UDM_ECS</strong>: Restore to Alibaba Cloud ECS whole machine.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -597,7 +597,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the name of the OSS bucket to which you want to restore data.</p>
+         * <p>Valid only when <strong>RestoreType</strong> is <strong>OSS</strong>. Indicates the name of the OSS bucket at the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>hbr-backup-oss</p>
@@ -609,7 +609,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The details about the container to which you want to restore data.</p>
+         * <p>Details of the target container.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;host&quot;:&quot;k8s-node1&quot;,&quot;hostPrefix&quot;:&quot;/var/lib/kubelet/pods/4acb31fe-8577-40ff-bc8c-eccabd835f73/volumes/kubernetes.io~csi/pvc-b050b00e-ef17-4792-aab1-1642355cf1f4/mount&quot;,&quot;pvPath&quot;:&quot;/&quot;}</p>
@@ -621,7 +621,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the container cluster to which you want to restore data.</p>
+         * <p>The ID of the target container cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-000amjsc7o1h9506oob7</p>
@@ -633,7 +633,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the time when the file system is created.</p>
+         * <p>Valid only when <strong>RestoreType</strong> is <strong>NAS</strong>. Indicates the creation time of the file system at the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>1554347313</p>
@@ -645,7 +645,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the ID of the file system to which you want to restore data.</p>
+         * <p>Valid only when <strong>RestoreType</strong> is <strong>NAS</strong>. Indicates the ID of the file system at the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>005494</p>
@@ -657,7 +657,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the ID of the ECS instance to which you want to restore data.</p>
+         * <p>Valid only when <strong>RestoreType</strong> is <strong>ECS_FILE</strong>. Indicates the ECS instance ID at the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>i-*********************</p>
@@ -669,7 +669,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the Tablestore instance to which you want to restore data.</p>
+         * <p>The name of the target Table Store instance.</p>
          * 
          * <strong>example:</strong>
          * <p>instancename</p>
@@ -681,7 +681,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the destination file path.</p>
+         * <p>Valid only when <strong>RestoreType</strong> is <strong>ECS_FILE</strong>. Indicates the file path at the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>C:\</p>
@@ -693,7 +693,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the prefix of objects that you want to restore.</p>
+         * <p>Valid only when <strong>RestoreType</strong> is <strong>OSS</strong>. Indicates the object prefix at the restore destination.</p>
          * 
          * <strong>example:</strong>
          * <p>hbr</p>
@@ -705,7 +705,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the table that stores the restored data.</p>
+         * <p>The name of the data table in the target Table Store.</p>
          * 
          * <strong>example:</strong>
          * <p>tablename</p>
@@ -717,7 +717,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The time when data is restored to the Tablestore instance. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time of the Table Store to be restored. UNIX timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642496881</p>
@@ -729,7 +729,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The details of ECS instance backup.</p>
+         * <p>Details of the whole machine backup.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sourceInstanceId&quot;:&quot;i-uf62te6pm3iwsyxyz66q&quot;,&quot;bootAfterRestore&quot;:false}</p>
@@ -742,7 +742,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the region to which you want to restore data.</p>
+         * <p>Valid only when <strong>SourceType</strong> is <strong>UDM_ECS</strong>. Indicates the target region for the restore.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -754,7 +754,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup vault to which the backup snapshot belongs.</p>
+         * <p>The ID of the backup vault that the snapshot belongs to.</p>
          * 
          * <strong>example:</strong>
          * <p>v-*********************</p>

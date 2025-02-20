@@ -34,12 +34,17 @@ public class UpdateVaultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("VaultName")
     private String vaultName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WormEnabled")
+    private Boolean wormEnabled;
+
     private UpdateVaultRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.resourceGroupId = builder.resourceGroupId;
         this.vaultId = builder.vaultId;
         this.vaultName = builder.vaultName;
+        this.wormEnabled = builder.wormEnabled;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class UpdateVaultRequest extends Request {
         return this.vaultName;
     }
 
+    /**
+     * @return wormEnabled
+     */
+    public Boolean getWormEnabled() {
+        return this.wormEnabled;
+    }
+
     public static final class Builder extends Request.Builder<UpdateVaultRequest, Builder> {
         private String description; 
         private String resourceGroupId; 
         private String vaultId; 
         private String vaultName; 
+        private Boolean wormEnabled; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class UpdateVaultRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.vaultId = request.vaultId;
             this.vaultName = request.vaultName;
+            this.wormEnabled = request.wormEnabled;
         } 
 
         /**
@@ -147,6 +161,15 @@ public class UpdateVaultRequest extends Request {
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
             this.vaultName = vaultName;
+            return this;
+        }
+
+        /**
+         * WormEnabled.
+         */
+        public Builder wormEnabled(Boolean wormEnabled) {
+            this.putQueryParameter("WormEnabled", wormEnabled);
+            this.wormEnabled = wormEnabled;
             return this;
         }
 

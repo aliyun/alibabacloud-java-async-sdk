@@ -31,6 +31,10 @@ public class CreateBackupPlanRequest extends Request {
     private String changeListPath;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    private String clusterId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
@@ -45,6 +49,10 @@ public class CreateBackupPlanRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    private String dataSourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestDataSourceDetail")
@@ -146,10 +154,12 @@ public class CreateBackupPlanRequest extends Request {
         this.backupType = builder.backupType;
         this.bucket = builder.bucket;
         this.changeListPath = builder.changeListPath;
+        this.clusterId = builder.clusterId;
         this.createTime = builder.createTime;
         this.crossAccountRoleName = builder.crossAccountRoleName;
         this.crossAccountType = builder.crossAccountType;
         this.crossAccountUserId = builder.crossAccountUserId;
+        this.dataSourceId = builder.dataSourceId;
         this.destDataSourceDetail = builder.destDataSourceDetail;
         this.destDataSourceId = builder.destDataSourceId;
         this.destSourceType = builder.destSourceType;
@@ -210,6 +220,13 @@ public class CreateBackupPlanRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return createTime
      */
     public Long getCreateTime() {
@@ -235,6 +252,13 @@ public class CreateBackupPlanRequest extends Request {
      */
     public Long getCrossAccountUserId() {
         return this.crossAccountUserId;
+    }
+
+    /**
+     * @return dataSourceId
+     */
+    public String getDataSourceId() {
+        return this.dataSourceId;
     }
 
     /**
@@ -402,10 +426,12 @@ public class CreateBackupPlanRequest extends Request {
         private String backupType; 
         private String bucket; 
         private String changeListPath; 
+        private String clusterId; 
         private Long createTime; 
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
+        private String dataSourceId; 
         private java.util.Map<String, ?> destDataSourceDetail; 
         private String destDataSourceId; 
         private String destSourceType; 
@@ -439,10 +465,12 @@ public class CreateBackupPlanRequest extends Request {
             this.backupType = request.backupType;
             this.bucket = request.bucket;
             this.changeListPath = request.changeListPath;
+            this.clusterId = request.clusterId;
             this.createTime = request.createTime;
             this.crossAccountRoleName = request.crossAccountRoleName;
             this.crossAccountType = request.crossAccountType;
             this.crossAccountUserId = request.crossAccountUserId;
+            this.dataSourceId = request.dataSourceId;
             this.destDataSourceDetail = request.destDataSourceDetail;
             this.destDataSourceId = request.destDataSourceId;
             this.destSourceType = request.destSourceType;
@@ -506,6 +534,15 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
+         * ClusterId.
+         */
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>NAS</strong>. It represents the creation time of the file system, in UNIX timestamp, in seconds.</p>
          * 
          * <strong>example:</strong>
@@ -554,6 +591,15 @@ public class CreateBackupPlanRequest extends Request {
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
             this.crossAccountUserId = crossAccountUserId;
+            return this;
+        }
+
+        /**
+         * DataSourceId.
+         */
+        public Builder dataSourceId(String dataSourceId) {
+            this.putBodyParameter("DataSourceId", dataSourceId);
+            this.dataSourceId = dataSourceId;
             return this;
         }
 

@@ -145,7 +145,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.</p>
+     * <p>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.Call this operation in the region where the mirror vault resides, which is specified by the VaultRegionId parameter.</p>
      * 
      * @param request the request parameters of CreateReplicationVault  CreateReplicationVaultRequest
      * @return CreateReplicationVaultResponse
@@ -154,9 +154,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You must create a restore job based on the specified backup snapshot and restore destination.</p>
      * <ul>
-     * <li>The type of the data source from which you restore data must be the same as the type of the restore destination.</li>
+     * <li>Create a restore job based on the selected snapshot and the restore destination.</li>
+     * <li>Currently, the data source type must match the restore destination data source type.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRestoreJob  CreateRestoreJobRequest
