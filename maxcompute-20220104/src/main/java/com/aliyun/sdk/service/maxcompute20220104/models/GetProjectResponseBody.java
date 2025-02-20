@@ -935,11 +935,20 @@ public class GetProjectResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowFullScan")
         private Boolean allowFullScan;
 
+        @com.aliyun.core.annotation.NameInMap("autoMvQuotaGb")
+        private Long autoMvQuotaGb;
+
         @com.aliyun.core.annotation.NameInMap("elderTunnelQuota")
         private String elderTunnelQuota;
 
+        @com.aliyun.core.annotation.NameInMap("enableAutoMv")
+        private Boolean enableAutoMv;
+
         @com.aliyun.core.annotation.NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
+
+        @com.aliyun.core.annotation.NameInMap("enableDr")
+        private Boolean enableDr;
 
         @com.aliyun.core.annotation.NameInMap("enableFdcCacheForce")
         private Boolean enableFdcCacheForce;
@@ -985,8 +994,11 @@ public class GetProjectResponseBody extends TeaModel {
 
         private Properties(Builder builder) {
             this.allowFullScan = builder.allowFullScan;
+            this.autoMvQuotaGb = builder.autoMvQuotaGb;
             this.elderTunnelQuota = builder.elderTunnelQuota;
+            this.enableAutoMv = builder.enableAutoMv;
             this.enableDecimal2 = builder.enableDecimal2;
+            this.enableDr = builder.enableDr;
             this.enableFdcCacheForce = builder.enableFdcCacheForce;
             this.enableTieredStorage = builder.enableTieredStorage;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
@@ -1019,6 +1031,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return autoMvQuotaGb
+         */
+        public Long getAutoMvQuotaGb() {
+            return this.autoMvQuotaGb;
+        }
+
+        /**
          * @return elderTunnelQuota
          */
         public String getElderTunnelQuota() {
@@ -1026,10 +1045,24 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableAutoMv
+         */
+        public Boolean getEnableAutoMv() {
+            return this.enableAutoMv;
+        }
+
+        /**
          * @return enableDecimal2
          */
         public Boolean getEnableDecimal2() {
             return this.enableDecimal2;
+        }
+
+        /**
+         * @return enableDr
+         */
+        public Boolean getEnableDr() {
+            return this.enableDr;
         }
 
         /**
@@ -1132,8 +1165,11 @@ public class GetProjectResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowFullScan; 
+            private Long autoMvQuotaGb; 
             private String elderTunnelQuota; 
+            private Boolean enableAutoMv; 
             private Boolean enableDecimal2; 
+            private Boolean enableDr; 
             private Boolean enableFdcCacheForce; 
             private Boolean enableTieredStorage; 
             private Boolean enableTunnelQuotaRoute; 
@@ -1161,6 +1197,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
+             * autoMvQuotaGb.
+             */
+            public Builder autoMvQuotaGb(Long autoMvQuotaGb) {
+                this.autoMvQuotaGb = autoMvQuotaGb;
+                return this;
+            }
+
+            /**
              * <p>The Tunnel parent resource group that is bound to the project. You do not need to pay attention to this group.</p>
              * 
              * <strong>example:</strong>
@@ -1172,6 +1216,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
+             * enableAutoMv.
+             */
+            public Builder enableAutoMv(Boolean enableAutoMv) {
+                this.enableAutoMv = enableAutoMv;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
              * 
              * <strong>example:</strong>
@@ -1179,6 +1231,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder enableDecimal2(Boolean enableDecimal2) {
                 this.enableDecimal2 = enableDecimal2;
+                return this;
+            }
+
+            /**
+             * enableDr.
+             */
+            public Builder enableDr(Boolean enableDr) {
+                this.enableDr = enableDr;
                 return this;
             }
 
