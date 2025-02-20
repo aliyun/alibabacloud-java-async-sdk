@@ -116,7 +116,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>Interface response code.</p>
+         * <p>API response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -146,7 +146,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Prompt message for the response result.</p>
+         * <p>Prompt message for the result.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -289,7 +289,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
              * <p>Delivered by.</p>
              * 
              * <strong>example:</strong>
-             * <p>张三</p>
+             * <p>luna</p>
              */
             public Builder deliveredBy(String deliveredBy) {
                 this.deliveredBy = deliveredBy;
@@ -300,7 +300,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
              * <p>Report name.</p>
              * 
              * <strong>example:</strong>
-             * <p>季度报告</p>
+             * <p>month report</p>
              */
             public Builder documentName(String documentName) {
                 this.documentName = documentName;
@@ -319,7 +319,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Document primary key ID.</p>
+             * <p>Primary key ID of the document.</p>
              * 
              * <strong>example:</strong>
              * <p>346409</p>
@@ -330,7 +330,10 @@ public class GetDocumentPageResponseBody extends TeaModel {
             }
 
             /**
-             * ReportStatus.
+             * <p>Report status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uploaded</p>
              */
             public Builder reportStatus(String reportStatus) {
                 this.reportStatus = reportStatus;
@@ -423,7 +426,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data items displayed per page.</p>
+             * <p>Number of items per page in the returned data.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -434,7 +437,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of data items found.</p>
+             * <p>Total number of queried items.</p>
              * 
              * <strong>example:</strong>
              * <p>3149</p>

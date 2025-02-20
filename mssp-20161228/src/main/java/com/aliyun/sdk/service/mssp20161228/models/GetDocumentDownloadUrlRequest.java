@@ -87,7 +87,10 @@ public class GetDocumentDownloadUrlRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * <p>Report type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder reportType(String reportType) {
             this.putBodyParameter("ReportType", reportType);

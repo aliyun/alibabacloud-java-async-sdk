@@ -35,6 +35,10 @@ public class SendCustomEventRequest extends Request {
     private String eventDetails;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventMarkdown")
+    private String eventMarkdown;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EventName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String eventName;
@@ -94,6 +98,7 @@ public class SendCustomEventRequest extends Request {
         this.dataSource = builder.dataSource;
         this.eventDescription = builder.eventDescription;
         this.eventDetails = builder.eventDetails;
+        this.eventMarkdown = builder.eventMarkdown;
         this.eventName = builder.eventName;
         this.eventType = builder.eventType;
         this.findTime = builder.findTime;
@@ -147,6 +152,13 @@ public class SendCustomEventRequest extends Request {
      */
     public String getEventDetails() {
         return this.eventDetails;
+    }
+
+    /**
+     * @return eventMarkdown
+     */
+    public String getEventMarkdown() {
+        return this.eventMarkdown;
     }
 
     /**
@@ -238,6 +250,7 @@ public class SendCustomEventRequest extends Request {
         private String dataSource; 
         private String eventDescription; 
         private String eventDetails; 
+        private String eventMarkdown; 
         private String eventName; 
         private String eventType; 
         private Long findTime; 
@@ -261,6 +274,7 @@ public class SendCustomEventRequest extends Request {
             this.dataSource = request.dataSource;
             this.eventDescription = request.eventDescription;
             this.eventDetails = request.eventDetails;
+            this.eventMarkdown = request.eventMarkdown;
             this.eventName = request.eventName;
             this.eventType = request.eventType;
             this.findTime = request.findTime;
@@ -321,6 +335,15 @@ public class SendCustomEventRequest extends Request {
         public Builder eventDetails(String eventDetails) {
             this.putBodyParameter("EventDetails", eventDetails);
             this.eventDetails = eventDetails;
+            return this;
+        }
+
+        /**
+         * EventMarkdown.
+         */
+        public Builder eventMarkdown(String eventMarkdown) {
+            this.putBodyParameter("EventMarkdown", eventMarkdown);
+            this.eventMarkdown = eventMarkdown;
             return this;
         }
 

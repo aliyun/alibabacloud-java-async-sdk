@@ -148,7 +148,7 @@ public class GetDocumentPageRequest extends Request {
          * <p>Delivered by.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>luna</p>
          */
         public Builder deliveredBy(String deliveredBy) {
             this.putBodyParameter("DeliveredBy", deliveredBy);
@@ -160,7 +160,7 @@ public class GetDocumentPageRequest extends Request {
          * <p>Document name.</p>
          * 
          * <strong>example:</strong>
-         * <p>季度报告</p>
+         * <p>month report</p>
          */
         public Builder documentName(String documentName) {
             this.putBodyParameter("DocumentName", documentName);

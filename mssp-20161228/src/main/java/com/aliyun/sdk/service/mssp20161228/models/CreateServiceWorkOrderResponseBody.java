@@ -134,7 +134,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prompt message of the returned result.</p>
+         * <p>Prompt message of the returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -159,7 +159,10 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
         /**
          * <p>Whether the call was successful.</p>
          * <ul>
-         * <li><strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</li>
+         * <li><p><strong>true</strong>: Call succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Call failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,7 +359,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
              * <p>Completion time.</p>
              * 
              * <strong>example:</strong>
-             * <p>2024-03-07 16:45:01</p>
+             * <p>1734788109000</p>
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -367,7 +370,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
              * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
-             * <p>2024-10-04T02:19:55Z</p>
+             * <p>1734788109000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -400,7 +403,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
              * <p>End time.</p>
              * 
              * <strong>example:</strong>
-             * <p>24-03-11 00:00:00</p>
+             * <p>1734788109000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -433,7 +436,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
              * <p>Start time.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-01-21 15:25:25</p>
+             * <p>1734788109000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -455,7 +458,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
              * <p>Work order name.</p>
              * 
              * <strong>example:</strong>
-             * <p>安全月报交付任务</p>
+             * <p>Delivery task of safety monthly report</p>
              */
             public Builder workOrderName(String workOrderName) {
                 this.workOrderName = workOrderName;
@@ -466,7 +469,7 @@ public class CreateServiceWorkOrderResponseBody extends TeaModel {
              * <p>Work order source.</p>
              * 
              * <strong>example:</strong>
-             * <p>工单迁移</p>
+             * <p>Work order migration</p>
              */
             public Builder workOrderSource(String workOrderSource) {
                 this.workOrderSource = workOrderSource;

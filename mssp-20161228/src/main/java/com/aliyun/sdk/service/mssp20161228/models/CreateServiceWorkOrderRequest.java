@@ -38,6 +38,10 @@ public class CreateServiceWorkOrderRequest extends Request {
     private String isAttachment;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsMilestone")
+    private String isMilestone;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IsWorkOrderNotify")
     @com.aliyun.core.annotation.Validation(required = true)
     private String isWorkOrderNotify;
@@ -106,6 +110,7 @@ public class CreateServiceWorkOrderRequest extends Request {
         this.customerId = builder.customerId;
         this.durationDay = builder.durationDay;
         this.isAttachment = builder.isAttachment;
+        this.isMilestone = builder.isMilestone;
         this.isWorkOrderNotify = builder.isWorkOrderNotify;
         this.notifyDay = builder.notifyDay;
         this.notifyId = builder.notifyId;
@@ -160,6 +165,13 @@ public class CreateServiceWorkOrderRequest extends Request {
      */
     public String getIsAttachment() {
         return this.isAttachment;
+    }
+
+    /**
+     * @return isMilestone
+     */
+    public String getIsMilestone() {
+        return this.isMilestone;
     }
 
     /**
@@ -258,6 +270,7 @@ public class CreateServiceWorkOrderRequest extends Request {
         private String customerId; 
         private String durationDay; 
         private String isAttachment; 
+        private String isMilestone; 
         private String isWorkOrderNotify; 
         private String notifyDay; 
         private Long notifyId; 
@@ -282,6 +295,7 @@ public class CreateServiceWorkOrderRequest extends Request {
             this.customerId = request.customerId;
             this.durationDay = request.durationDay;
             this.isAttachment = request.isAttachment;
+            this.isMilestone = request.isMilestone;
             this.isWorkOrderNotify = request.isWorkOrderNotify;
             this.notifyDay = request.notifyDay;
             this.notifyId = request.notifyId;
@@ -350,6 +364,18 @@ public class CreateServiceWorkOrderRequest extends Request {
         }
 
         /**
+         * <p>Is milestone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
+        public Builder isMilestone(String isMilestone) {
+            this.putBodyParameter("IsMilestone", isMilestone);
+            this.isMilestone = isMilestone;
+            return this;
+        }
+
+        /**
          * <p>Whether a reminder is needed.</p>
          * <p>This parameter is required.</p>
          * 
@@ -391,7 +417,7 @@ public class CreateServiceWorkOrderRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>新建</p>
+         * <p>newly built</p>
          */
         public Builder operateRemark(String operateRemark) {
             this.putBodyParameter("OperateRemark", operateRemark);
@@ -439,7 +465,7 @@ public class CreateServiceWorkOrderRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-01-21 15:25:25</p>
+         * <p>1734788109000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -465,7 +491,7 @@ public class CreateServiceWorkOrderRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>安全月报交付任务</p>
+         * <p>Delivery task of safety monthly report</p>
          */
         public Builder workOrderName(String workOrderName) {
             this.putBodyParameter("WorkOrderName", workOrderName);
@@ -478,7 +504,7 @@ public class CreateServiceWorkOrderRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>工单迁移</p>
+         * <p>Work order migration</p>
          */
         public Builder workOrderSource(String workOrderSource) {
             this.putBodyParameter("WorkOrderSource", workOrderSource);
