@@ -83,6 +83,9 @@ public class GetJobResponseBody extends TeaModel {
      * <p>GetJobResponseBody</p>
      */
     public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableENIMapping")
+        private Boolean enableENIMapping;
+
         @com.aliyun.core.annotation.NameInMap("EnableExternalIpAddress")
         private Boolean enableExternalIpAddress;
 
@@ -90,6 +93,7 @@ public class GetJobResponseBody extends TeaModel {
         private java.util.List<String> vswitch;
 
         private Network(Builder builder) {
+            this.enableENIMapping = builder.enableENIMapping;
             this.enableExternalIpAddress = builder.enableExternalIpAddress;
             this.vswitch = builder.vswitch;
         }
@@ -100,6 +104,13 @@ public class GetJobResponseBody extends TeaModel {
 
         public static Network create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableENIMapping
+         */
+        public Boolean getEnableENIMapping() {
+            return this.enableENIMapping;
         }
 
         /**
@@ -117,8 +128,17 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableENIMapping; 
             private Boolean enableExternalIpAddress; 
             private java.util.List<String> vswitch; 
+
+            /**
+             * EnableENIMapping.
+             */
+            public Builder enableENIMapping(Boolean enableENIMapping) {
+                this.enableENIMapping = enableENIMapping;
+                return this;
+            }
 
             /**
              * EnableExternalIpAddress.
