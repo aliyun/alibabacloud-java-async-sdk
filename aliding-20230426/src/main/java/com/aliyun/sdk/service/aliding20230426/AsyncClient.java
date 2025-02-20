@@ -1246,6 +1246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubscribeCalendarResponse> subscribeCalendar(SubscribeCalendarRequest request);
 
     /**
+     * @param request the request parameters of SubscribeEvent  SubscribeEventRequest
+     * @return SubscribeEventResponse
+     */
+    CompletableFuture<SubscribeEventResponse> subscribeEvent(SubscribeEventRequest request);
+
+    /**
      * @param request the request parameters of SyncDingType  SyncDingTypeRequest
      * @return SyncDingTypeResponse
      */
@@ -1268,6 +1274,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnsubscribeCalendarResponse
      */
     CompletableFuture<UnsubscribeCalendarResponse> unsubscribeCalendar(UnsubscribeCalendarRequest request);
+
+    /**
+     * @param request the request parameters of UnsubscribeEvent  UnsubscribeEventRequest
+     * @return UnsubscribeEventResponse
+     */
+    CompletableFuture<UnsubscribeEventResponse> unsubscribeEvent(UnsubscribeEventRequest request);
 
     /**
      * @param request the request parameters of UpdateFormData  UpdateFormDataRequest

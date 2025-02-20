@@ -26,6 +26,10 @@ public class CreateTodoTaskRequest extends Request {
     private TenantContext tenantContext;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("actionList")
+    private java.util.List<ActionList> actionList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contentFieldList")
     private java.util.List<ContentFieldList> contentFieldList;
 
@@ -82,6 +86,7 @@ public class CreateTodoTaskRequest extends Request {
         super(builder);
         this.accountContext = builder.accountContext;
         this.tenantContext = builder.tenantContext;
+        this.actionList = builder.actionList;
         this.contentFieldList = builder.contentFieldList;
         this.creatorId = builder.creatorId;
         this.description = builder.description;
@@ -122,6 +127,13 @@ public class CreateTodoTaskRequest extends Request {
      */
     public TenantContext getTenantContext() {
         return this.tenantContext;
+    }
+
+    /**
+     * @return actionList
+     */
+    public java.util.List<ActionList> getActionList() {
+        return this.actionList;
     }
 
     /**
@@ -218,6 +230,7 @@ public class CreateTodoTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTodoTaskRequest, Builder> {
         private AccountContext accountContext; 
         private TenantContext tenantContext; 
+        private java.util.List<ActionList> actionList; 
         private java.util.List<ContentFieldList> contentFieldList; 
         private String creatorId; 
         private String description; 
@@ -240,6 +253,7 @@ public class CreateTodoTaskRequest extends Request {
             super(request);
             this.accountContext = request.accountContext;
             this.tenantContext = request.tenantContext;
+            this.actionList = request.actionList;
             this.contentFieldList = request.contentFieldList;
             this.creatorId = request.creatorId;
             this.description = request.description;
@@ -272,6 +286,16 @@ public class CreateTodoTaskRequest extends Request {
             String tenantContextShrink = shrink(tenantContext, "TenantContext", "json");
             this.putBodyParameter("TenantContext", tenantContextShrink);
             this.tenantContext = tenantContext;
+            return this;
+        }
+
+        /**
+         * actionList.
+         */
+        public Builder actionList(java.util.List<ActionList> actionList) {
+            String actionListShrink = shrink(actionList, "actionList", "json");
+            this.putBodyParameter("actionList", actionListShrink);
+            this.actionList = actionList;
             return this;
         }
 
@@ -496,6 +520,240 @@ public class CreateTodoTaskRequest extends Request {
 
             public TenantContext build() {
                 return new TenantContext(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
+    public static class Param extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("body")
+        private String body;
+
+        @com.aliyun.core.annotation.NameInMap("header")
+        private java.util.Map<String, String> header;
+
+        private Param(Builder builder) {
+            this.body = builder.body;
+            this.header = builder.header;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Param create() {
+            return builder().build();
+        }
+
+        /**
+         * @return body
+         */
+        public String getBody() {
+            return this.body;
+        }
+
+        /**
+         * @return header
+         */
+        public java.util.Map<String, String> getHeader() {
+            return this.header;
+        }
+
+        public static final class Builder {
+            private String body; 
+            private java.util.Map<String, String> header; 
+
+            /**
+             * body.
+             */
+            public Builder body(String body) {
+                this.body = body;
+                return this;
+            }
+
+            /**
+             * header.
+             */
+            public Builder header(java.util.Map<String, String> header) {
+                this.header = header;
+                return this;
+            }
+
+            public Param build() {
+                return new Param(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateTodoTaskRequest} extends {@link TeaModel}
+     *
+     * <p>CreateTodoTaskRequest</p>
+     */
+    public static class ActionList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("actionKey")
+        private String actionKey;
+
+        @com.aliyun.core.annotation.NameInMap("actionType")
+        private Integer actionType;
+
+        @com.aliyun.core.annotation.NameInMap("buttonStyleType")
+        private Integer buttonStyleType;
+
+        @com.aliyun.core.annotation.NameInMap("param")
+        private Param param;
+
+        @com.aliyun.core.annotation.NameInMap("pcUrl")
+        private String pcUrl;
+
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private ActionList(Builder builder) {
+            this.actionKey = builder.actionKey;
+            this.actionType = builder.actionType;
+            this.buttonStyleType = builder.buttonStyleType;
+            this.param = builder.param;
+            this.pcUrl = builder.pcUrl;
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ActionList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actionKey
+         */
+        public String getActionKey() {
+            return this.actionKey;
+        }
+
+        /**
+         * @return actionType
+         */
+        public Integer getActionType() {
+            return this.actionType;
+        }
+
+        /**
+         * @return buttonStyleType
+         */
+        public Integer getButtonStyleType() {
+            return this.buttonStyleType;
+        }
+
+        /**
+         * @return param
+         */
+        public Param getParam() {
+            return this.param;
+        }
+
+        /**
+         * @return pcUrl
+         */
+        public String getPcUrl() {
+            return this.pcUrl;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String actionKey; 
+            private Integer actionType; 
+            private Integer buttonStyleType; 
+            private Param param; 
+            private String pcUrl; 
+            private String title; 
+            private String url; 
+
+            /**
+             * actionKey.
+             */
+            public Builder actionKey(String actionKey) {
+                this.actionKey = actionKey;
+                return this;
+            }
+
+            /**
+             * actionType.
+             */
+            public Builder actionType(Integer actionType) {
+                this.actionType = actionType;
+                return this;
+            }
+
+            /**
+             * buttonStyleType.
+             */
+            public Builder buttonStyleType(Integer buttonStyleType) {
+                this.buttonStyleType = buttonStyleType;
+                return this;
+            }
+
+            /**
+             * param.
+             */
+            public Builder param(Param param) {
+                this.param = param;
+                return this;
+            }
+
+            /**
+             * pcUrl.
+             */
+            public Builder pcUrl(String pcUrl) {
+                this.pcUrl = pcUrl;
+                return this;
+            }
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public ActionList build() {
+                return new ActionList(this);
             } 
 
         } 

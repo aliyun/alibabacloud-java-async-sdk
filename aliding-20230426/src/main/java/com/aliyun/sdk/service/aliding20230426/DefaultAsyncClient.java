@@ -3723,6 +3723,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubscribeEvent  SubscribeEventRequest
+     * @return SubscribeEventResponse
+     */
+    @Override
+    public CompletableFuture<SubscribeEventResponse> subscribeEvent(SubscribeEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubscribeEvent").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/subscribeEvent").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubscribeEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubscribeEventResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SyncDingType  SyncDingTypeRequest
      * @return SyncDingTypeResponse
      */
@@ -3789,6 +3807,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UnsubscribeCalendarResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnsubscribeEvent  UnsubscribeEventRequest
+     * @return UnsubscribeEventResponse
+     */
+    @Override
+    public CompletableFuture<UnsubscribeEventResponse> unsubscribeEvent(UnsubscribeEventRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UnsubscribeEvent").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/unsubscribeEvent").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnsubscribeEventResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnsubscribeEventResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
