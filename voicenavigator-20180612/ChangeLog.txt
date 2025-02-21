@@ -1,3 +1,6 @@
+2025-02-21 Version: 1.0.9
+- Generated java-async 2018-06-12 for VoiceNavigator.
+
 2025-01-06 Version: 1.0.8
 - Generated java-async 2018-06-12 for VoiceNavigator.
 
