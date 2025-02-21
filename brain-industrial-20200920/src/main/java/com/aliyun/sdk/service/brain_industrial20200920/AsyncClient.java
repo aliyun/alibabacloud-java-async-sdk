@@ -26,10 +26,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActivateLicenseResponse> activateLicense(ActivateLicenseRequest request);
 
     /**
+     * @param request the request parameters of CreateEssOptJob  CreateEssOptJobRequest
+     * @return CreateEssOptJobResponse
+     */
+    CompletableFuture<CreateEssOptJobResponse> createEssOptJob(CreateEssOptJobRequest request);
+
+    /**
+     * @param request the request parameters of CreateLoadForecastJob  CreateLoadForecastJobRequest
+     * @return CreateLoadForecastJobResponse
+     */
+    CompletableFuture<CreateLoadForecastJobResponse> createLoadForecastJob(CreateLoadForecastJobRequest request);
+
+    /**
+     * @param request the request parameters of CreatePowerForecastJob  CreatePowerForecastJobRequest
+     * @return CreatePowerForecastJobResponse
+     */
+    CompletableFuture<CreatePowerForecastJobResponse> createPowerForecastJob(CreatePowerForecastJobRequest request);
+
+    /**
+     * @param request the request parameters of GetAivppAlgoJob  GetAivppAlgoJobRequest
+     * @return GetAivppAlgoJobResponse
+     */
+    CompletableFuture<GetAivppAlgoJobResponse> getAivppAlgoJob(GetAivppAlgoJobRequest request);
+
+    /**
      * @param request the request parameters of GetLicense  GetLicenseRequest
      * @return GetLicenseResponse
      */
     CompletableFuture<GetLicenseResponse> getLicense(GetLicenseRequest request);
+
+    /**
+     * @param request the request parameters of ListAivppResources  ListAivppResourcesRequest
+     * @return ListAivppResourcesResponse
+     */
+    CompletableFuture<ListAivppResourcesResponse> listAivppResources(ListAivppResourcesRequest request);
 
     /**
      * @param request the request parameters of ListLicenses  ListLicensesRequest
