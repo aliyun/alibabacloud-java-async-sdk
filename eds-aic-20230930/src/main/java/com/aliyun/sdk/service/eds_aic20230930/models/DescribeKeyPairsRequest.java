@@ -102,7 +102,7 @@ public class DescribeKeyPairsRequest extends Request {
         } 
 
         /**
-         * <p>List of key pair IDs.</p>
+         * <p>The IDs of the ADB key pairs.</p>
          */
         public Builder keyPairIds(java.util.List<String> keyPairIds) {
             this.putQueryParameter("KeyPairIds", keyPairIds);
@@ -111,7 +111,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * <p>ADB key pair name.</p>
+         * <p>The name of the ADB key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>testKeyPairName</p>
@@ -123,7 +123,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for paginated queries. The value range is 1 to 100, with a default value of 10.</p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -135,7 +135,7 @@ public class DescribeKeyPairsRequest extends Request {
         }
 
         /**
-         * <p>Indicates the starting position for reading. If empty, it means starting from the beginning.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYRHtOLVQzCYj17y+OP7LZQBUVVbi0GTu8g5****</p>

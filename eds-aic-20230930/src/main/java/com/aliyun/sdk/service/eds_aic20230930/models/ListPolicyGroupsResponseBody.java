@@ -79,7 +79,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Indicates the position read by the current call. An empty value means that the data has been fully read.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -90,7 +90,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Policy information.</p>
+         * <p>The policies.</p>
          */
         public Builder policyGroupModel(java.util.List<PolicyGroupModel> policyGroupModel) {
             this.policyGroupModel = policyGroupModel;
@@ -98,7 +98,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
@@ -109,7 +109,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>
@@ -170,7 +170,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private String target; 
 
             /**
-             * <p>Rule type</p>
+             * <p>The type of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>prc: an application package name.</li>
+             * <li>domain: a domain name.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -181,10 +186,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application package name or domain name</p>
+             * <p>The name of the application package or domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>*.baidu.com</p>
+             * <p>*.example.com</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -315,7 +320,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private java.util.List<Rules> rules; 
 
             /**
-             * <p>Whether to manually configure a transparent proxy.</p>
+             * <p>Indicates whether a custom proxy is manually configured.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -326,7 +336,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Transparent proxy IP. The format is an IPv4 address.</p>
+             * <p>The IPv4 address of the custom proxy.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX</p>
@@ -337,7 +347,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable network redirection. When enabled, it defaults to redirecting to the endpoint network.</p>
+             * <p>Indicates whether the network redirection feature is enabled. When this feature is enabled, network traffic is automatically redirected to the on-premises network by default.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -348,7 +363,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Transparent proxy port. The port value range is 1 to 65535.</p>
+             * <p>The port of the custom proxy. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>1145</p>
@@ -359,7 +374,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proxy password. The length range is 1 to 256, and it must not contain Chinese characters or whitespace.</p>
+             * <p>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -370,7 +385,11 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proxy protocol type.</p>
+             * <p>The type of the proxy protocol.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>socks5.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>socks5</p>
@@ -381,7 +400,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Proxy username. The length range is 1 to 256, and it must not contain Chinese characters or whitespace.</p>
+             * <p>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -392,7 +411,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of proxy rules</p>
+             * <p>The proxy rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -559,7 +578,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             private Integer sessionResolutionWidth; 
 
             /**
-             * <p>Whether to enable local camera redirection.</p>
+             * <p>Specifies whether to enable the webcam redirection feature.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -570,7 +594,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Clipboard permission.</p>
+             * <p>The read/write permissions on the clipboard.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>read: read-only.</li>
+             * <li>readwrite: read and write.</li>
+             * <li>off: read/write disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>readwrite</p>
@@ -581,7 +611,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time</p>
+             * <p>The time when the policy was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-04 10:28:54</p>
@@ -592,7 +622,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>HTML5 client file transfer policy.</p>
+             * <p>The file transfer policy of the HTML5 client.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>all: File upload and download are supported.</li>
+             * <li>download: Only file download is supported.</li>
+             * <li>upload: Only file upload is supported.</li>
+             * <li>off: File upload or download is forbidden.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>download</p>
@@ -603,7 +640,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Local disk mapping permission.</p>
+             * <p>The read/write permissions on the on-premises drive.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>read: read-only.</li>
+             * <li>readwrite: ready and write.</li>
+             * <li>off: read/write denied.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -614,7 +657,12 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Lock resolution</p>
+             * <p>Identifies whether the resolution is locked.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -625,7 +673,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network redirection.</p>
+             * <p>The network redirection policy.</p>
              */
             public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
                 this.netRedirectPolicy = netRedirectPolicy;
@@ -633,7 +681,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Policy ID.</p>
+             * <p>The ID of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-9q6o8qpiy8opkj****</p>
@@ -644,10 +692,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Policy name.</p>
+             * <p>The name of the policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认策略。</p>
+             * <p>Default Policy</p>
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;

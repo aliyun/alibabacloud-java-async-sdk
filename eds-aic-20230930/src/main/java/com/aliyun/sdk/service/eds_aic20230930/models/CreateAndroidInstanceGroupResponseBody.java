@@ -79,7 +79,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>List of instance group IDs.</p>
+         * <p>The IDs of the instance groups.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.instanceGroupIds = instanceGroupIds;
@@ -87,7 +87,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Instance group information.</p>
+         * <p>The instance groups.</p>
          */
         public Builder instanceGroupInfos(java.util.List<InstanceGroupInfos> instanceGroupInfos) {
             this.instanceGroupInfos = instanceGroupInfos;
@@ -95,7 +95,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>22365781890****</p>
@@ -106,7 +106,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
@@ -167,7 +167,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             private java.util.List<String> instanceIds; 
 
             /**
-             * <p>Instance group ID.</p>
+             * <p>The ID of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-cuv4scs4obxch****</p>
@@ -178,7 +178,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of instance IDs.</p>
+             * <p>The IDs of the instances.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;

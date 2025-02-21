@@ -171,7 +171,12 @@ public class CreatePolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>Whether to enable local camera redirection.</p>
+         * <p>Specifies whether to enable the webcam redirection feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -183,7 +188,13 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Clipboard permissions.</p>
+         * <p>The read/write permissions on the clipboard.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>read: read-only.</li>
+         * <li>readwrite: read and write.</li>
+         * <li>off: read/write disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>readwrite</p>
@@ -195,7 +206,14 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>File transfer policy for the Alibaba Cloud Workspace web client.</p>
+         * <p>The file transfer policy of the Alibaba Cloud Workspace web client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>all: File upload and download are supported.</li>
+         * <li>download: Only file download is supported.</li>
+         * <li>upload: Only file upload is supported.</li>
+         * <li>off: File upload or download is forbidden.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -207,7 +225,13 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Local disk mapping permissions.</p>
+         * <p>The read/write permissions on the on-premises drive.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>read: read-only.</li>
+         * <li>readwrite: ready and write.</li>
+         * <li>off: read/write disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -219,7 +243,12 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to lock the resolution.</p>
+         * <p>Specifies whether to lock the resolution.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -231,7 +260,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Network redirection.</p>
+         * <p>The network redirection policy.</p>
          */
         public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
             String netRedirectPolicyShrink = shrink(netRedirectPolicy, "NetRedirectPolicy", "json");
@@ -241,7 +270,7 @@ public class CreatePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>Policy name.</p>
+         * <p>The name of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultPolicy</p>
@@ -328,7 +357,12 @@ public class CreatePolicyGroupRequest extends Request {
             private String target; 
 
             /**
-             * <p>Rule type.</p>
+             * <p>The type of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>prc: an application package name.</li>
+             * <li>domain: a domain name.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -339,7 +373,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Application package name or domain name.</p>
+             * <p>The name of the application package or domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>*.example.com</p>
@@ -473,7 +507,12 @@ public class CreatePolicyGroupRequest extends Request {
             private java.util.List<Rules> rules; 
 
             /**
-             * <p>Whether to manually configure a transparent proxy.</p>
+             * <p>Specifies whether to manually configure a custom proxy.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -484,7 +523,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Transparent proxy IP. Format: IPv4 address.</p>
+             * <p>The IPv4 address of the custom proxy.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX</p>
@@ -495,7 +534,12 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable network redirection.</p>
+             * <p>Specifies whether to enable the network redirection feature.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>on</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -506,7 +550,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Transparent proxy port. Port value range is 1~65535.</p>
+             * <p>The port of the custom proxy. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>1145</p>
@@ -517,7 +561,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Proxy password. Length range is 1~256, and it must not contain Chinese characters or whitespace.</p>
+             * <p>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -528,7 +572,11 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Proxy protocol type.</p>
+             * <p>The type of the proxy protocol.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>socks5.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>socks5</p>
@@ -539,7 +587,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>Proxy username. Length range is 1~256, and it must not contain Chinese characters or whitespace.</p>
+             * <p>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -550,7 +598,7 @@ public class CreatePolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>List of proxy rules (up to 100).</p>
+             * <p>The proxy rules. You can create up to 100 proxy rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

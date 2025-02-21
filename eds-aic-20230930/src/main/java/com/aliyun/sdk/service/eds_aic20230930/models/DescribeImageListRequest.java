@@ -145,7 +145,7 @@ public class DescribeImageListRequest extends Request {
         } 
 
         /**
-         * <p>Image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-075cllfeuazh0****</p>
@@ -157,10 +157,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>Image name.</p>
+         * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
-         * <p>安卓12系统镜像</p>
+         * <p>Android 12 image</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
@@ -181,7 +181,12 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>Image type.</p>
+         * <p>The type of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>User: custom images.</li>
+         * <li>System: system images.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +199,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paginated query. The value range is 1 to 100, with a default value of 20.</p>
+         * <p>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -206,7 +211,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>Used to indicate the current read position. An empty value means starting from the beginning.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -218,7 +223,15 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The status of the image.</p>
+         * <p>The state of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE: The image is available.</li>
+         * <li>DELETE: The image is deleted.</li>
+         * <li>INIT: The image is being initialized.</li>
+         * <li>CREATE_FAILED: The image failed to be created.</li>
+         * <li>CREATING: The image is being created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>

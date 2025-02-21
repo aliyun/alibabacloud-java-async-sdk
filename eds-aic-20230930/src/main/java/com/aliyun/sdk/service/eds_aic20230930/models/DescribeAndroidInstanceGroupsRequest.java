@@ -186,7 +186,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         } 
 
         /**
-         * <p>Region ID.</p>
+         * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -198,7 +198,12 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Payment type.</p>
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -210,7 +215,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>List of instance group IDs.</p>
+         * <p>The IDs of the instance groups.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -219,7 +224,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Instance group name. Supports fuzzy search.</p>
+         * <p>The name of the instance group. Instance groups support fuzzy search by name.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultInstanceGroup</p>
@@ -231,7 +236,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Key pair ID.</p>
+         * <p>The ID of the key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>kp-5htf0ymsrnb7q****</p>
@@ -243,7 +248,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+         * <p>The maximum number of entries per page. Value range: 0 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -255,7 +260,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Indicates the starting position for reading. If empty, it starts from the beginning.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -267,7 +272,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-1b77w6xrqfubi****</p>
@@ -279,7 +284,11 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Selling mode.</p>
+         * <p>The sales mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -291,7 +300,18 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         }
 
         /**
-         * <p>Instance group status.</p>
+         * <p>The status of the instance group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>UPDATING_FAILED: The image update for the instance group failed.</li>
+         * <li>FAILED: The instance group failed to be created.</li>
+         * <li>RUNNING: The instance group is available.</li>
+         * <li>EXPIRED: The instance group expired.</li>
+         * <li>DELETING: The instance group is being deleted.</li>
+         * <li>DELETED: The instance group is deleted.</li>
+         * <li>UPDATING: The instance group is undergoing an image update.</li>
+         * <li>CREATING: The instance group is being created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CREATING</p>

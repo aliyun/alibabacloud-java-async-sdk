@@ -43,7 +43,7 @@ public class ModifyKeyPairNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>

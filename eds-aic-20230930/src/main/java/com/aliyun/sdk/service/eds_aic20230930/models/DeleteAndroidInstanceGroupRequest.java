@@ -59,7 +59,7 @@ public class DeleteAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>List of instance group IDs.</p>
+         * <p>The IDs of the instance groups.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);

@@ -87,7 +87,12 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Whether to pay automatically.</p>
+         * <p>Specifies whether to enable the auto-payment feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables the auto-payment feature. Make sure that your Alibaba Cloud account has sufficient balance.</li>
+         * <li>false: disables the auto-payment feature. You need to manually complete the payment process.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -99,7 +104,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of instances to be added to the instance group.</p>
+         * <p>The number of instances that you want to increase.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -111,7 +116,7 @@ public class UpgradeAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Instance group ID.</p>
+         * <p>The ID of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-asguicdjh****</p>

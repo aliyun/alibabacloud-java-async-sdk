@@ -90,7 +90,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result object.</p>
+         * <p>The objects that are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -101,7 +101,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>

@@ -79,7 +79,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>List of returned result objects.</p>
+         * <p>The objects that are returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the position read by the current call. An empty value means that all data has been read.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>FFbc8N4E1iOlcSxC+8boa0HHH2LKWbggYUinyrZWvtS1oTrMYCg1HuMLGuftj0****</p>
@@ -98,7 +98,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of this request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>565FB06A-AE04-5AD0-8A32-5BA92CA5****</p>
@@ -109,7 +109,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -182,7 +182,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String keyPairName; 
 
             /**
-             * <p>Creation time.</p>
+             * <p>The time when the ADB key pair was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-10-11T08:53:32Z</p>
@@ -193,7 +193,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the ADB key pair.</p>
+             * <p>The ID of the ADB key pair.</p>
              * 
              * <strong>example:</strong>
              * <p>kp-6v2q33ae4tw3a****</p>
@@ -204,7 +204,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the ADB key pair.</p>
+             * <p>The name of the ADB key pair.</p>
              * 
              * <strong>example:</strong>
              * <p>testKeyPairName</p>

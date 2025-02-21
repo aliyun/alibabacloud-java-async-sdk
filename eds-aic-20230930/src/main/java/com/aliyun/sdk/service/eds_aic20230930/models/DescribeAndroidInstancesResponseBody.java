@@ -79,7 +79,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Instance information.</p>
+         * <p>The instances.</p>
          */
         public Builder instanceModel(java.util.List<InstanceModel> instanceModel) {
             this.instanceModel = instanceModel;
@@ -87,7 +87,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the current read position in the response. An empty value means all data has been read.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmma/xxE9WtwL/ADvZ****</p>
@@ -98,7 +98,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
@@ -109,7 +109,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -170,7 +170,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String diskType; 
 
             /**
-             * <p>Disk size (in GB).</p>
+             * <p>The size of the disk. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -181,7 +181,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk type.</p>
+             * <p>The type of the disk.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -243,7 +243,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * <p>Tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -254,7 +254,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -676,7 +676,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
 
             /**
-             * <p>ID of the instance group to which the instance belongs.</p>
+             * <p>The ID of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-ayyhomlal7po****</p>
@@ -687,7 +687,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance group name.</p>
+             * <p>The name of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>AndroidInstanceGroupName</p>
@@ -698,7 +698,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-8at8h6ejkadjh****</p>
@@ -709,7 +709,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -720,7 +720,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance status.</p>
+             * <p>The state of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -731,7 +731,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Delivery group ID.</p>
+             * <p>The ID of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-i7yv6tkn7kh8dv****</p>
@@ -742,7 +742,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Physical instance ID.</p>
+             * <p>The ID of the physical instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ai-9ey6io0q58rcd****</p>
@@ -753,7 +753,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Assigned user ID.</p>
+             * <p>The ID of the user to whom the instance is assigned.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -764,7 +764,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Bound user ID.</p>
+             * <p>The ID of the bound user.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -775,7 +775,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance billing type.</p>
+             * <p>The billing method of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -786,7 +786,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of CPU cores.</p>
+             * <p>The number of vCPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -797,7 +797,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk information.</p>
+             * <p>The disks.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -805,7 +805,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error reason for instance data backup and recovery failure.</p>
+             * <p>The cause of the instance data backup failure or restoration failure.</p>
              * 
              * <strong>example:</strong>
              * <p>FilePathNotFound</p>
@@ -816,7 +816,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The time when the instance was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-06 10:42:10</p>
@@ -827,7 +827,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expiration time for the subscription instance group.</p>
+             * <p>The time when the subscription instance group expires.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-15T02:03:33Z</p>
@@ -838,7 +838,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The time when the instance was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-06 10:42:10</p>
@@ -849,7 +849,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image version.</p>
+             * <p>The version of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.3.867</p>
@@ -860,7 +860,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance type.</p>
+             * <p>The type of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>acp.basic.small</p>
@@ -871,7 +871,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Key pair ID.</p>
+             * <p>The ID of the key pair.</p>
              * 
              * <strong>example:</strong>
              * <p>kp-5hh431emkpucs****</p>
@@ -882,7 +882,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory size.</p>
+             * <p>The memory size.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -893,7 +893,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network interface IP.</p>
+             * <p>The IP address of the ENI.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.22.48</p>
@@ -912,7 +912,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Office site ID.</p>
+             * <p>The ID of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen+dir-211620****</p>
@@ -923,7 +923,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Persistent session ID.</p>
+             * <p>The ID of the persistent session.</p>
              * 
              * <strong>example:</strong>
              * <p>p-0btrd5zj8epo****</p>
@@ -934,7 +934,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Policy group ID.</p>
+             * <p>The ID of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-0bszojpu0seql****</p>
@@ -945,7 +945,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Public IP address.</p>
+             * <p>The public IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.32.1.41</p>
@@ -964,7 +964,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Progress of instance data backup and recovery.</p>
+             * <p>The progress of instance data backup or restoration.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -975,7 +975,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -986,7 +986,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rendering type.</p>
+             * <p>The rendering type.</p>
              * 
              * <strong>example:</strong>
              * <p>local</p>
@@ -997,10 +997,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Session connection status:</p>
+             * <p>The status of the session connection.</p>
              * <ul>
-             * <li>connect: Connected </li>
-             * <li>disConnect: Not connected</li>
+             * <li>connect</li>
+             * <li>disConnect</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1012,7 +1012,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of tags.</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

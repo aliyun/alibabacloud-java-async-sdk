@@ -55,7 +55,7 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-exbuu6yrpvb******</p>
@@ -66,7 +66,7 @@ public class CreatePolicyGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC******</p>

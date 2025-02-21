@@ -228,7 +228,7 @@ public class DescribeBackupFilesRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
@@ -240,7 +240,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy search for the instance name.</p>
+         * <p>The name of the instance. Instances support fuzzy search by name.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
@@ -264,7 +264,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Backup file ID.</p>
+         * <p>The ID of the backup file.</p>
          * 
          * <strong>example:</strong>
          * <p>bf-dxrh5jrv0zpb8****</p>
@@ -276,7 +276,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy search for the backup file name.</p>
+         * <p>The name of the backup file. Backup files support fuzzy search by name.</p>
          * 
          * <strong>example:</strong>
          * <p>defaulBackupFile</p>
@@ -288,7 +288,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Fuzzy search for the description.</p>
+         * <p>The description of the backup file. Backup files support fuzzy search by description.</p>
          * 
          * <strong>example:</strong>
          * <p>default description.</p>
@@ -300,7 +300,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Query backup files before the current time.</p>
+         * <p>The end of the period for querying generated backup files.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-20 10:00:00</p>
@@ -312,7 +312,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Owner of the backup file.</p>
+         * <p>The owner of the backup file.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -324,7 +324,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Instance group ID.</p>
+         * <p>The ID of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-fxdx91jsfyiy3****</p>
@@ -336,7 +336,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, with a default value of 10.</p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -348,7 +348,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Indicates the starting position for reading. An empty value means starting from the beginning.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -360,7 +360,7 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>Query backup files after the current time.</p>
+         * <p>The beginning of the period for querying generated backup files.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-23 10:00:00</p>

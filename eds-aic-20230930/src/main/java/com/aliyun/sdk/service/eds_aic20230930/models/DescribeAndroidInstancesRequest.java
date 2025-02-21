@@ -255,7 +255,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         } 
 
         /**
-         * <p>List of instance IDs.</p>
+         * <p>The IDs of the instances.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -264,7 +264,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -276,7 +276,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported for purchasing cloud phones.</p>
+         * <p>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -288,10 +288,10 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Payment type, supporting prepaid and postpaid. Possible values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PrePaid: Prepaid</li>
-         * <li>PostPaid: Postpaid</li>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Instance group ID.</p>
+         * <p>The ID of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-25nt4kk9whjh****</p>
@@ -316,7 +316,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>List of instance group IDs.</p>
+         * <p>The IDs of the instance groups.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -325,7 +325,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Instance group name.</p>
+         * <p>The name of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -337,7 +337,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Bound key pair ID.</p>
+         * <p>The ID of the bound key pair.</p>
          * 
          * <strong>example:</strong>
          * <p>kp-5hh431emkpuoi****</p>
@@ -349,7 +349,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of items per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -361,7 +361,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Indicates the current read position. An empty value means starting from the beginning.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -373,7 +373,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>node_id</p>
@@ -385,7 +385,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Node name.</p>
+         * <p>The name of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>node_name</p>
@@ -397,7 +397,12 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Selling mode.</p>
+         * <p>The sales mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Instance: the standard mode.</li>
+         * <li>Node: the node mode.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -409,7 +414,25 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Instance status.</p>
+         * <p>The state of the instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>BACKUPING: The instance is being backed up.</li>
+         * <li>STARTING: The instance is being started.</li>
+         * <li>RUNNING: The instance group is available.</li>
+         * <li>DELETING: The instance is being deleted.</li>
+         * <li>BACKUP_FAILED: The backup operation failed.</li>
+         * <li>DELETED: The instance is deleted.</li>
+         * <li>FAILED: The instance failed to be created.</li>
+         * <li>STOPPED: The instance is stopped.</li>
+         * <li>RECOVERING: The instance has an ongoing file recovery task.</li>
+         * <li>UNAVAILABLE: The instance has an exception.</li>
+         * <li>REBOOTING: The instance is being restarted.</li>
+         * <li>RESETTING: The instance is being reset.</li>
+         * <li>STOPPING: The instance is being stopped.</li>
+         * <li>RECOVER_FAILED: The file recovery task failed.</li>
+         * <li>CREATING: The instance is being created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -421,7 +444,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         }
 
         /**
-         * <p>Resource tags.</p>
+         * <p>The tags of the resources.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -481,7 +504,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             private String value; 
 
             /**
-             * <p>Tag key.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -492,7 +515,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             }
 
             /**
-             * <p>Tag value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

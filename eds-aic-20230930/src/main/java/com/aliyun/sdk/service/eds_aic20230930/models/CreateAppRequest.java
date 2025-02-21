@@ -26,6 +26,10 @@ public class CreateAppRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAppInfo")
+    private CustomAppInfo customAppInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -53,6 +57,7 @@ public class CreateAppRequest extends Request {
         super(builder);
         this.appName = builder.appName;
         this.bizRegionId = builder.bizRegionId;
+        this.customAppInfo = builder.customAppInfo;
         this.description = builder.description;
         this.fileName = builder.fileName;
         this.filePath = builder.filePath;
@@ -86,6 +91,13 @@ public class CreateAppRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    /**
+     * @return customAppInfo
+     */
+    public CustomAppInfo getCustomAppInfo() {
+        return this.customAppInfo;
     }
 
     /**
@@ -133,6 +145,7 @@ public class CreateAppRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAppRequest, Builder> {
         private String appName; 
         private String bizRegionId; 
+        private CustomAppInfo customAppInfo; 
         private String description; 
         private String fileName; 
         private String filePath; 
@@ -148,6 +161,7 @@ public class CreateAppRequest extends Request {
             super(request);
             this.appName = request.appName;
             this.bizRegionId = request.bizRegionId;
+            this.customAppInfo = request.customAppInfo;
             this.description = request.description;
             this.fileName = request.fileName;
             this.filePath = request.filePath;
@@ -157,10 +171,10 @@ public class CreateAppRequest extends Request {
         } 
 
         /**
-         * <p>Application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>应用名称1</p>
+         * <p>Application Name 1</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -169,7 +183,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -181,7 +195,17 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>Application description.</p>
+         * CustomAppInfo.
+         */
+        public Builder customAppInfo(CustomAppInfo customAppInfo) {
+            String customAppInfoShrink = shrink(customAppInfo, "CustomAppInfo", "json");
+            this.putQueryParameter("CustomAppInfo", customAppInfoShrink);
+            this.customAppInfo = customAppInfo;
+            return this;
+        }
+
+        /**
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -193,13 +217,15 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The storage name of the application file in OSS. This parameter, together with <code>FilePath</code>, determines a unique OSS address.</p>
+         * <p>The name used by the application file in OSS. This parameter, combined with <code>FilePath</code>, uniquely identifies the OSS path of the application file.</p>
          * <blockquote>
-         * <ul>
-         * <li>Please log in to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise Edition Console</a>, and follow the instructions on the page to upload your application files to the EDS App Center, so as to obtain this parameter.</li>
-         * <li>If <code>OssAppUrl</code> is not provided, then <code>FileName</code>+<code>FilePath</code> are required parameters.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</p>
+         * </li>
+         * <li><p>If you do not specify <code>OssAppUrl</code>, you must specify <code>FileName</code> and <code>FilePath</code>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>testApp.apk</p>
@@ -211,13 +237,15 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The OSS Bucket storage path of the application file. This parameter, together with <code>FileName</code>, determines a unique OSS address.</p>
+         * <p>The OSS bucket path to the application file. This parameter, combined with <code>FileName</code>, uniquely identifies the OSS path of the application file.</p>
          * <blockquote>
-         * <ul>
-         * <li>Please log in to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise Edition Console</a>, and follow the instructions on the page to upload your application files to the EDS App Center, so as to obtain this parameter.</li>
-         * <li>If <code>OssAppUrl</code> is not provided, then <code>FileName</code>+<code>FilePath</code> are required parameters.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</p>
+         * </li>
+         * <li><p>If you do not specify <code>OssAppUrl</code>, you must specify <code>FileName</code> and <code>FilePath</code>.</p>
+         * </li>
+         * </ul>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -226,7 +254,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>Application icon URL.</p>
+         * <p>The icon URL of the application.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com/icon.png">https://www.example.com/icon.png</a></p>
@@ -238,7 +266,7 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>Installation parameters. The default installation parameter is <code>-r</code> when installing the application.</p>
+         * <p>The parameters used for installing the application. By default, the <code>-r</code> parameter is included when you install an application.</p>
          * 
          * <strong>example:</strong>
          * <p>-d</p>
@@ -250,13 +278,15 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * <p>The OSS address of the application.</p>
+         * <p>The endpoint of the OSS bucket to which you want to upload the application file.</p>
          * <blockquote>
-         * <ul>
-         * <li>Please log in to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise Edition Console</a>, and follow the instructions on the page to upload your application files to the EDS App Center, so as to obtain this parameter.</li>
-         * <li>If <code>FileName</code>+<code>FilePath</code> are not provided, then this parameter is required.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Cloud Phone console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the value of this parameter.</p>
+         * </li>
+         * <li><p>If you do not specify <code>FileName</code> or <code>FilePath</code>, you must specify this parameter.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p><a href="http://testApp.apk">http://testApp.apk</a></p>
@@ -274,4 +304,157 @@ public class CreateAppRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAppRequest</p>
+     */
+    public static class CustomAppInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApkSize")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String apkSize;
+
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024)
+        private String downloadUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Md5")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String md5;
+
+        @com.aliyun.core.annotation.NameInMap("PackageName")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String packageName;
+
+        @com.aliyun.core.annotation.NameInMap("Version")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
+        private String versionCode;
+
+        private CustomAppInfo(Builder builder) {
+            this.apkSize = builder.apkSize;
+            this.downloadUrl = builder.downloadUrl;
+            this.md5 = builder.md5;
+            this.packageName = builder.packageName;
+            this.version = builder.version;
+            this.versionCode = builder.versionCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomAppInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apkSize
+         */
+        public String getApkSize() {
+            return this.apkSize;
+        }
+
+        /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        /**
+         * @return md5
+         */
+        public String getMd5() {
+            return this.md5;
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return versionCode
+         */
+        public String getVersionCode() {
+            return this.versionCode;
+        }
+
+        public static final class Builder {
+            private String apkSize; 
+            private String downloadUrl; 
+            private String md5; 
+            private String packageName; 
+            private String version; 
+            private String versionCode; 
+
+            /**
+             * ApkSize.
+             */
+            public Builder apkSize(String apkSize) {
+                this.apkSize = apkSize;
+                return this;
+            }
+
+            /**
+             * DownloadUrl.
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
+
+            /**
+             * Md5.
+             */
+            public Builder md5(String md5) {
+                this.md5 = md5;
+                return this;
+            }
+
+            /**
+             * PackageName.
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * VersionCode.
+             */
+            public Builder versionCode(String versionCode) {
+                this.versionCode = versionCode;
+                return this;
+            }
+
+            public CustomAppInfo build() {
+                return new CustomAppInfo(this);
+            } 
+
+        } 
+
+    }
 }

@@ -79,7 +79,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>Returned data.</p>
+         * <p>The objects that are returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the current read position returned by this call. An empty value means that the data has been fully read.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -98,7 +98,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>620740FF-492F-5956-B1BA-361E966C0269</p>
@@ -109,7 +109,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -314,7 +314,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             private String systemType; 
 
             /**
-             * <p>Aliyun account ID.</p>
+             * <p>The ID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>117819727354****</p>
@@ -325,7 +325,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description.</p>
+             * <p>The description of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -336,7 +336,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The time when the image was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-01 10:56:36</p>
@@ -347,7 +347,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Modification time.</p>
+             * <p>The time when the image was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-01 10:56:36</p>
@@ -358,7 +358,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image ID.</p>
+             * <p>The ID of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-075cllfeuazh****</p>
@@ -369,7 +369,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE</p>
@@ -380,7 +380,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image distribution information by region, where the key is the region and the value is the distribution information.</p>
+             * <p>The region where the image is distributed. The key is the region and the value is the distribution information.</p>
              */
             public Builder imageRegionDistributeMap(java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap) {
                 this.imageRegionDistributeMap = imageRegionDistributeMap;
@@ -388,7 +388,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Available region list.</p>
+             * <p>The list of regions.</p>
              */
             public Builder imageRegionList(java.util.List<String> imageRegionList) {
                 this.imageRegionList = imageRegionList;
@@ -396,7 +396,12 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image type.</p>
+             * <p>The type of the image.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>User: custom images.</li>
+             * <li>System: system images.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>System</p>
@@ -407,7 +412,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Language.</p>
+             * <p>The language of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>zh</p>
@@ -418,7 +423,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Release time.</p>
+             * <p>The time when the image was published.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-25 10:06:45</p>
@@ -429,7 +434,13 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rendering type.</p>
+             * <p>The rendering type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>GPURemote</li>
+             * <li>CPU</li>
+             * <li>GPULocal</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>
@@ -440,7 +451,15 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Image status.</p>
+             * <p>The state of the image.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AVAILABLE: The image is available.</li>
+             * <li>DELETE: The image is deleted.</li>
+             * <li>INIT: The image is being initialized.</li>
+             * <li>CREATE_FAILED: The image failed to be created.</li>
+             * <li>CREATING: The image is being created.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -451,7 +470,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operating system type.</p>
+             * <p>The OS type of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>Android 12</p>

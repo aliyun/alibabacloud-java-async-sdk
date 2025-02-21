@@ -95,6 +95,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String policyGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -118,6 +122,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
     }
 
@@ -261,6 +266,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -286,6 +298,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
 
         private Builder() {
@@ -312,11 +325,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
 
         /**
-         * <p>Number of instance groups. The default value is 1, and the maximum value is 100.</p>
+         * <p>The number of instance groups. Default value: 1. Maximum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -328,7 +342,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to automatically pay. The default value is false.</p>
+         * <p>Specifies whether to enable automatic payment. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: enables automatic payment. Make sure that your Alibaba Cloud account has sufficient balance.</li>
+         * <li>false: disables automatic payment. You must manually complete the payment.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -340,7 +359,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable auto-renewal. The default value is false.</p>
+         * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: automatically renew resource upon expiration.</li>
+         * <li>false: manually renew resources upon expiration.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -352,7 +376,16 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported for purchasing cloud phones.</p>
+         * <p>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shenzhen: China (Shenzhen).</li>
+         * <li>cn-beijing: China (Beijing).</li>
+         * <li>cn-shanghai: China (Shanghai).</li>
+         * <li>cn-hongkong: China (Hong Kong).</li>
+         * <li>ap-southeast-1: Singapore.</li>
+         * <li>cn-hangzhou: China (Hangzhou).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +398,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Billing type.</p>
+         * <p>The billing method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -377,7 +415,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Used to ensure the idempotence of the request, preventing duplicate submissions. No more than 100 characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. The value cannot exceed 100 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>asadbuvwiabdbvchjsbj</p>
@@ -398,12 +436,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable GPU acceleration. The default value is false.</p>
+         * <p>Specifies whether to enable GPU acceleration.</p>
          * <ul>
-         * <li><p>true: Enable.</p>
-         * </li>
-         * <li><p>false: Disable.</p>
-         * </li>
+         * <li>true</li>
+         * <li>false (true)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,7 +452,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Image ID. You can call <a href="~~DescribeImageList~~">DescribeImageList</a> to query the list of images for cloud phones.</p>
+         * <p>The ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/2807324.html">DescribeImageList</a> operation to query images.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,11 +465,9 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Instance group name.</p>
+         * <p>The name of the instance group.</p>
          * <blockquote>
-         * <ul>
-         * <li>The length of the instance group name should not exceed 30 characters; it must start with uppercase/lowercase letters or Chinese characters, and cannot start with http:// or https://. Only Chinese, English, numbers, colons (:), underscores (_), periods (.), or hyphens (-) are supported.</li>
-         * </ul>
+         * <p>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -446,7 +480,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Instance group specification. You can call <a href="~~DescribeSpec~~">DescribeSpec</a> to query the specifications supported for purchasing cloud phones.</p>
+         * <p>The specifications of the instance group. You can call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the available specifications.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>acp.perf.large: Performance (8 vCPUs, 16 GiB of memory, and 32 GiB of storage.</li>
+         * <li>acp.basic.small: Lightweight (2 vCPUs, 4 GiB of memory, and 32 GiB of storage).</li>
+         * <li>acp.std.large: Standard (4 vCPUs, 8 GiB of memory, and 32 GiB of storage).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -468,8 +508,8 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Key pair ID. When creating an instance group, if a valid key pair ID is specified, the key pair will be bound to all instances created successfully, and there is no need to call the binding interface again.</p>
-         * <p>Note: Binding key pairs during scaling is not currently supported.</p>
+         * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually call the operation to bind key pairs to individual cloud phone instances.</p>
+         * <p>Take note that binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
          * 
          * <strong>example:</strong>
          * <p>kp-7o9xywwfutc1l****</p>
@@ -481,7 +521,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Number of instances in the instance group. The maximum value is 100.</p>
+         * <p>The number of cloud phones in the instance group. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -493,12 +533,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Network ID.</p>
+         * <p>The ID of the network.</p>
          * <ul>
-         * <li><p>For creating a shared network instance: The network ID is optional. Fill in the network ID of the <strong>Shared Network</strong> type from the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone Console &gt; Network</a> page. If there is no shared network in the console, you do not need to fill it in, as a shared network will be automatically created when the instance group is created.</p>
-         * </li>
-         * <li><p>For creating a VPC network instance: The network ID is required. Fill in the network ID of the <strong>VPC Network</strong> type from the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone Console &gt; Network</a> page. If there is no VPC network in the console, you need to create one first.</p>
-         * </li>
+         * <li>This parameter is required if you assign a shared network to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <strong>shared network</strong>. If no shared network is available in the Cloud Phone console, you can leave this parameter empty. The system automatically creates one when you create an instance group.</li>
+         * <li>This parameter is required if you assign a virtual private cloud (VPC) to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <strong>VPC</strong>. If no VPC is available in the Cloud Phone console, you must first create one.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -511,7 +549,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Duration of the purchased resources, specified by PeriodUnit.</p>
+         * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -523,7 +561,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Unit of the duration of the purchased resources.</p>
+         * <p>The unit of the subscription duration.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * <li>Hour (Note that this unit is supported only by pay-as-you-go.)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -535,7 +579,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Policy ID. You can call <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> to query the list of policies.</p>
+         * <p>The ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/2807352.html">ListPolicyGroups</a> operation to query policies.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-b7bxrrwxkijjh****</p>
@@ -547,12 +591,19 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>VSwitch ID. You can call <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> to query the list of VSwitches.</p>
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query vSwitches.</p>
          * <ul>
-         * <li><p>For creating a shared network instance: Do not fill in.</p>
-         * </li>
-         * <li><p>For creating a VPC network instance: The VSwitch ID is required. Select this VSwitch to create the instance.</p>
-         * </li>
+         * <li>This parameter is not required if you assign a shared network to cloud phones.</li>
+         * <li>This parameter is required if you assign a VPC to cloud phones. The vSwitch specified by this parameter is used to create cloud phones.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -571,4 +622,71 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAndroidInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAndroidInstanceGroupRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

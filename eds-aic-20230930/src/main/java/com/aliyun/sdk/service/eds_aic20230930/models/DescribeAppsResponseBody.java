@@ -79,7 +79,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * <p>Returned result object.</p>
+         * <p>The objects that are returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -87,7 +87,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the current read position in the response. An empty value means that all data has been read.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -98,7 +98,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CB95E410-FD1D-53C5-9F7D-93CC44D7****</p>
@@ -109,7 +109,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -314,7 +314,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * <p>Application version.</p>
+             * <p>The version of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -336,7 +336,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application ID.</p>
+             * <p>The ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>10404</p>
@@ -347,7 +347,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application name.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>testapp</p>
@@ -369,7 +369,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application description</p>
+             * <p>The description of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>default description.</p>
@@ -380,7 +380,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The time when the application was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-11 17:45:03</p>
@@ -391,7 +391,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modified time.</p>
+             * <p>The time when the application was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-11 17:45:03</p>
@@ -402,7 +402,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application icon URL.</p>
+             * <p>The icon URL of the application.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://test.png">https://test.png</a></p>
@@ -414,6 +414,15 @@ public class DescribeAppsResponseBody extends TeaModel {
 
             /**
              * <p>The installation/uninstallation status of the application.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>INSTALLFAILED: The application failed to be installed.</li>
+             * <li>UNINSTALLING: The application is being uninstalled.</li>
+             * <li>INSTALLING: The application is being installed.</li>
+             * <li>UNINSTALLED: The application is uninstalled.</li>
+             * <li>INSTALLED: The application is installed.</li>
+             * <li>UNINSTALLFAILED: The application failed to be uninstalled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>INSTALLING</p>
@@ -424,7 +433,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of instance groups where the application is installed.</p>
+             * <p>The list of instance groups where the application is installed.</p>
              */
             public Builder instanceGroupList(java.util.List<String> instanceGroupList) {
                 this.instanceGroupList = instanceGroupList;
@@ -454,7 +463,13 @@ public class DescribeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application status.</p>
+             * <p>The status of the application.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>FAILED: The application failed to be created.</li>
+             * <li>NORMAL: The application is available.</li>
+             * <li>CREATING: The application is being created.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>

@@ -73,7 +73,7 @@ public class UpdateCustomImageNameRequest extends Request {
         } 
 
         /**
-         * <p>Image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-075cllfeuazh0****</p>
@@ -85,7 +85,7 @@ public class UpdateCustomImageNameRequest extends Request {
         }
 
         /**
-         * <p>Image name.</p>
+         * <p>The name of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>imagename</p>

@@ -60,7 +60,7 @@ public class DeletePolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>List of policy IDs.</p>
+         * <p>The IDs of the policies.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyGroupIds(java.util.List<String> policyGroupIds) {

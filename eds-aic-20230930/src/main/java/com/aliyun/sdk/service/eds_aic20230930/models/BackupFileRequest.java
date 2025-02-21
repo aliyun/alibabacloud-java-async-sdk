@@ -173,7 +173,7 @@ public class BackupFileRequest extends Request {
         } 
 
         /**
-         * <p>List of instance IDs.</p>
+         * <p>The IDs of the instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -207,9 +207,9 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>Upload address of the backup file.</p>
+         * <p>The OSS path of the backup file.</p>
          * <blockquote>
-         * <p>If uploading to an OSS bucket, call the describeBuckets interface to get the bucketName, select ossObjectList to get the key, and concatenate it as “oss://${bucketName}/${key}”.</p>
+         * <p> To upload a backup file to an OSS bucket, you must obtain the name of the bucket. When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -220,7 +220,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>Description of the backup file.</p>
+         * <p>The description of the backup file.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a backup file description.</p>
@@ -241,7 +241,7 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>List of file paths to be backed up.</p>
+         * <p>The paths to the source files.</p>
          */
         public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
             this.putQueryParameter("SourceFilePathList", sourceFilePathList);
@@ -250,9 +250,9 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>Domain name of the backup address.</p>
+         * <p>The endpoint of the OSS bucket to which you want to upload the backup file.</p>
          * <blockquote>
-         * <p>If uploading to an OSS bucket, call the describeBuckets interface to get the Bucket. If the cloud phone and the bucket are in the same region, obtain the intranetEndpoint field; if they are in different regions, obtain the extranetEndpoint field.</p>
+         * <p>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,11 @@ public class BackupFileRequest extends Request {
         }
 
         /**
-         * <p>Type of backup.</p>
+         * <p>The type of the backup.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OSS: uploads the backup file to an OSS bucket.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

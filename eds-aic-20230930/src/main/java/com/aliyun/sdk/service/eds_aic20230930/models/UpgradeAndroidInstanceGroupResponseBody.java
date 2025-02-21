@@ -78,7 +78,7 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>223684716098****</p>
@@ -89,7 +89,7 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>310A783E-CC46-5452-A8A3-71AE5DB59****</p>

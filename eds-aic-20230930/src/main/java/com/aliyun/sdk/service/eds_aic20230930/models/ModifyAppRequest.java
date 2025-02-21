@@ -101,7 +101,7 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * <p>Application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -113,7 +113,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * <p>Application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultAppName</p>
@@ -125,7 +125,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * <p>Application description.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>default description.</p>
@@ -137,7 +137,7 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * <p>Icon URL.</p>
+         * <p>The URL of the icon.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://defaultIcon.png">https://defaultIcon.png</a></p>

@@ -29,7 +29,6 @@ public class SendFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String uploadEndpoint;
 
     @com.aliyun.core.annotation.Query
@@ -141,10 +140,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>oss-cn-hangzhou.aliyuncs.com</p>
+         * UploadEndpoint.
          */
         public Builder uploadEndpoint(String uploadEndpoint) {
             this.putQueryParameter("UploadEndpoint", uploadEndpoint);

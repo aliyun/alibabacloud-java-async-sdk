@@ -91,7 +91,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * <p>List of returned result objects.</p>
+         * <p>The backup files that are returned.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -99,7 +99,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum amount of data read this time.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -110,7 +110,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates the position of the current read in the call return. An empty value means that all data has been read.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -121,7 +121,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. If you encounter any issues, please provide this request ID for troubleshooting by the support staff.</p>
+         * <p>The ID of the request. If the request fails, provide this ID to technical support to assist in diagnosing the issue.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -132,7 +132,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>91</p>
@@ -397,7 +397,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String uploadType; 
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-34pqe4r0kd9kn****</p>
@@ -408,7 +408,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance name.</p>
+             * <p>The name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>defaultInstanceName</p>
@@ -430,7 +430,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup file ID.</p>
+             * <p>The ID of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>bf-b0qbg3pbpjkn7****</p>
@@ -441,7 +441,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup file name.</p>
+             * <p>The name of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>a-58ftsoo90p0qa****.ab</p>
@@ -452,7 +452,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory where the backup file is stored.</p>
+             * <p>The directory in which the backup file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
@@ -463,7 +463,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description information of the backup file.</p>
+             * <p>The description of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>This is default description.</p>
@@ -474,7 +474,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Owner of the backup file.</p>
+             * <p>The owner of the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -485,7 +485,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total size of the source backup file.</p>
+             * <p>The total size of the source files.</p>
              * 
              * <strong>example:</strong>
              * <p>10227168</p>
@@ -496,7 +496,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The time when the backup file was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-15 17:33:59</p>
@@ -507,7 +507,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Update time.</p>
+             * <p>The time when the backup file was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-15 17:33:59</p>
@@ -518,7 +518,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance group ID.</p>
+             * <p>The ID of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-58ftsoo90p0qi****</p>
@@ -548,7 +548,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of directories for the source backup files.</p>
+             * <p>The directories of the source files.</p>
              */
             public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
                 this.sourceFilePathList = sourceFilePathList;
@@ -556,7 +556,12 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup file status.</p>
+             * <p>The status of the backup file.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>AVAILABLE</li>
+             * <li>RECOVERING</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -578,7 +583,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the upload address.</p>
+             * <p>The endpoint of the OSS bucket that stores the backup file.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-hangzhou.aliyuncs.com</p>
@@ -589,7 +594,11 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backup type.</p>
+             * <p>The type of the backup.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>OSS: backup files are stored in OSS buckets. .</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>

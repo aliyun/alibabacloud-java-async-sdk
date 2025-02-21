@@ -130,7 +130,7 @@ public class RecoveryFileRequest extends Request {
         } 
 
         /**
-         * <p>List of instance IDs.</p>
+         * <p>The IDs of the instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -152,7 +152,7 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>Backup file ID.</p>
+         * <p>The ID of the backup file.</p>
          * 
          * <strong>example:</strong>
          * <p>bf-azhps4rdyi2th****</p>
@@ -164,9 +164,9 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>OSS address for uploading the backup file.</p>
+         * <p>The OSS path to which the backup file is uploaded.</p>
          * <blockquote>
-         * <p>Call the describeBuckets interface to get the bucketName, select ossObjectList to get the key, and concatenate them into “oss://${bucketName}/${key}”.</p>
+         * <p> When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</p>
          * </blockquote>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -176,9 +176,9 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>Domain name of the backup address.</p>
+         * <p>The endpoint of the OSS bucket that stores the backup file.</p>
          * <blockquote>
-         * <p>Call the DescribeBuckets interface to get the Bucket. If the cloud phone and the bucket are in the same region, obtain the IntranetEndpoint field; if they are in different regions, obtain the ExtranetEndpoint field.</p>
+         * <p>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,11 @@ public class RecoveryFileRequest extends Request {
         }
 
         /**
-         * <p>Type of backup.</p>
+         * <p>The type of the backup.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OSS: backup files are stored in OSS buckets.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

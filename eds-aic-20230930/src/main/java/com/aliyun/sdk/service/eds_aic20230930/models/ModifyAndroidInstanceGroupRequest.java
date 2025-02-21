@@ -87,7 +87,7 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>Instance group ID.</p>
+         * <p>The ID of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>ag-cuv4scs4obxhs****</p>
@@ -99,12 +99,12 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>New name of the instance group.</p>
+         * <p>The new name of the instance group.</p>
          * <blockquote>
-         * <ul>
-         * <li>The length of the instance group name should not exceed 30 characters; it must start with a capital/lowercase letter or Chinese character, and cannot begin with http:// or https://. Only supports Chinese, English, numbers, colon (:), underscore (_), period (.), or hyphen (-).</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>newName</p>
@@ -116,7 +116,7 @@ public class ModifyAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-2w97kp89gnsif****</p>

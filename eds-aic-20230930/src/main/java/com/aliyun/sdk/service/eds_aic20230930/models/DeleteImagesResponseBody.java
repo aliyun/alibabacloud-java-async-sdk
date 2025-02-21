@@ -55,7 +55,7 @@ public class DeleteImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Deletion result.</p>
+         * <p>The images.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -63,7 +63,7 @@ public class DeleteImagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>4610632D-D661-5982-B3D7-5D3FD183F595</p>
@@ -124,7 +124,7 @@ public class DeleteImagesResponseBody extends TeaModel {
             private java.util.List<String> successDeleteImageIds; 
 
             /**
-             * <p>List of failed to delete image IDs.</p>
+             * <p>The IDs of the images that failed to be deleted.</p>
              */
             public Builder failDeleteImageIds(java.util.List<String> failDeleteImageIds) {
                 this.failDeleteImageIds = failDeleteImageIds;
@@ -132,7 +132,7 @@ public class DeleteImagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of successfully deleted image IDs.</p>
+             * <p>The IDs of the images that are successfully deleted.</p>
              */
             public Builder successDeleteImageIds(java.util.List<String> successDeleteImageIds) {
                 this.successDeleteImageIds = successDeleteImageIds;

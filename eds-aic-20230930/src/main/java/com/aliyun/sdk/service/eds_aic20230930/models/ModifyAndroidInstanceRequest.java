@@ -73,7 +73,7 @@ public class ModifyAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The ID of the cloud phone instance.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-8v5bjld0r7tkl****</p>
@@ -85,11 +85,9 @@ public class ModifyAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The new name of the instance.</p>
+         * <p>The new name of the cloud phone instance.</p>
          * <blockquote>
-         * <ul>
-         * <li>The instance name must not exceed 30 characters; it should start with a letter (uppercase or lowercase) or a Chinese character, and cannot begin with http:// or https://. Only supports Chinese, English, numbers, colon (:), underscore (_), period (.), or hyphen (-).</li>
-         * </ul>
+         * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
