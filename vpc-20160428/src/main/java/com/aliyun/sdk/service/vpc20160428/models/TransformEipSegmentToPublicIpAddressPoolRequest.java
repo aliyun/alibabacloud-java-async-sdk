@@ -131,7 +131,14 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>02fb3da4-130e-11****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +147,11 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the IP address pool.</p>
+         * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddressPoolDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -149,6 +160,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the contiguous EIP group to be migrated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +173,11 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the IP address pool.</p>
+         * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddressPoolName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -170,6 +186,7 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region to which the contiguous EIP group belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +199,10 @@ public class TransformEipSegmentToPublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

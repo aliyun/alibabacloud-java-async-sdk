@@ -26,6 +26,14 @@ public class ModifyFlowLogAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableLogDelivery")
+    private String disableLogDelivery;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTrafficAnalyze")
+    private String enableTrafficAnalyze;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowLogId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String flowLogId;
@@ -59,10 +67,16 @@ public class ModifyFlowLogAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficAnalyzerId")
+    private String trafficAnalyzerId;
+
     private ModifyFlowLogAttributeRequest(Builder builder) {
         super(builder);
         this.aggregationInterval = builder.aggregationInterval;
         this.description = builder.description;
+        this.disableLogDelivery = builder.disableLogDelivery;
+        this.enableTrafficAnalyze = builder.enableTrafficAnalyze;
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
         this.ipVersion = builder.ipVersion;
@@ -71,6 +85,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.trafficAnalyzerId = builder.trafficAnalyzerId;
     }
 
     public static Builder builder() {
@@ -98,6 +113,20 @@ public class ModifyFlowLogAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disableLogDelivery
+     */
+    public String getDisableLogDelivery() {
+        return this.disableLogDelivery;
+    }
+
+    /**
+     * @return enableTrafficAnalyze
+     */
+    public String getEnableTrafficAnalyze() {
+        return this.enableTrafficAnalyze;
     }
 
     /**
@@ -156,9 +185,18 @@ public class ModifyFlowLogAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return trafficAnalyzerId
+     */
+    public String getTrafficAnalyzerId() {
+        return this.trafficAnalyzerId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyFlowLogAttributeRequest, Builder> {
         private Integer aggregationInterval; 
         private String description; 
+        private String disableLogDelivery; 
+        private String enableTrafficAnalyze; 
         private String flowLogId; 
         private String flowLogName; 
         private String ipVersion; 
@@ -167,6 +205,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String trafficAnalyzerId; 
 
         private Builder() {
             super();
@@ -176,6 +215,8 @@ public class ModifyFlowLogAttributeRequest extends Request {
             super(request);
             this.aggregationInterval = request.aggregationInterval;
             this.description = request.description;
+            this.disableLogDelivery = request.disableLogDelivery;
+            this.enableTrafficAnalyze = request.enableTrafficAnalyze;
             this.flowLogId = request.flowLogId;
             this.flowLogName = request.flowLogName;
             this.ipVersion = request.ipVersion;
@@ -184,6 +225,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.trafficAnalyzerId = request.trafficAnalyzerId;
         } 
 
         /**
@@ -208,6 +250,24 @@ public class ModifyFlowLogAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DisableLogDelivery.
+         */
+        public Builder disableLogDelivery(String disableLogDelivery) {
+            this.putQueryParameter("DisableLogDelivery", disableLogDelivery);
+            this.disableLogDelivery = disableLogDelivery;
+            return this;
+        }
+
+        /**
+         * EnableTrafficAnalyze.
+         */
+        public Builder enableTrafficAnalyze(String enableTrafficAnalyze) {
+            this.putQueryParameter("EnableTrafficAnalyze", enableTrafficAnalyze);
+            this.enableTrafficAnalyze = enableTrafficAnalyze;
             return this;
         }
 
@@ -293,6 +353,15 @@ public class ModifyFlowLogAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * TrafficAnalyzerId.
+         */
+        public Builder trafficAnalyzerId(String trafficAnalyzerId) {
+            this.putQueryParameter("TrafficAnalyzerId", trafficAnalyzerId);
+            this.trafficAnalyzerId = trafficAnalyzerId;
             return this;
         }
 

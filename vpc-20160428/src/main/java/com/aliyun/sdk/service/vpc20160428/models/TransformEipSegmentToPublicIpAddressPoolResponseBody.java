@@ -67,7 +67,10 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
         private String resourceGroupId; 
 
         /**
-         * PublicIpAddressPoolId.
+         * <p>The ID of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-6wetvn6fumkgycssx****</p>
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.publicIpAddressPoolId = publicIpAddressPoolId;
@@ -75,7 +78,10 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +89,10 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the IP address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

@@ -147,7 +147,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * VpnRouteCounts.
+         * <p>The information about route entries of the VPN gateway in dual-tunnel mode.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
+         * </blockquote>
          */
         public Builder vpnRouteCounts(VpnRouteCounts vpnRouteCounts) {
             this.vpnRouteCounts = vpnRouteCounts;
@@ -155,7 +158,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of route entries.</p>
+         * <p>The route entry list.</p>
          */
         public Builder vpnRouteEntries(VpnRouteEntries vpnRouteEntries) {
             this.vpnRouteEntries = vpnRouteEntries;
@@ -225,7 +228,10 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * RouteCount.
+             * <p>The number of route entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder routeCount(Integer routeCount) {
                 this.routeCount = routeCount;
@@ -233,7 +239,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteEntryType.
+             * <p>The route type. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong> (default): destination-based route.</li>
+             * <li><strong>bgp</strong> : BGP route entry.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>bgp</p>
              */
             public Builder routeEntryType(String routeEntryType) {
                 this.routeEntryType = routeEntryType;
@@ -241,7 +254,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the BGP route. Valid values:</p>
+             * <ul>
+             * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
+             * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPN_BGP</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -539,7 +559,11 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source CIDR block of the route entry.</p>
+             * <p>The source of the BGP route. Valid values:</p>
+             * <ul>
+             * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
+             * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>192.168.10.0/24</p>

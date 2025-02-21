@@ -1960,6 +1960,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you create an SSL client certificate, make sure that an SSL server is created on the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794075.html">CreateSslVpnServer</a>.</p>
+     * 
      * @param request the request parameters of CreateSslVpnClientCert  CreateSslVpnClientCertRequest
      * @return CreateSslVpnClientCertResponse
      */
@@ -3406,11 +3409,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
-     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.
-     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</p>
+     * <p>  If you delete an SSL client certificate, all SSL-VPN client connections to the SSL server are disconnected. You need to reinitiate connections from SSL clients.
+     *     For example, SSL client certificate 1 and SSL client certificate 2 are created on an SSL server. After you delete certificate 1, all client connections associated with certificate 1 and certificate 2 are disconnected from the SSL server.
+     *     *   If clients associated with certificate 1 require SSL-VPN connections, you need to install other certificates on the clients and reinitiate connections from the clients.
+     *     *   If clients associated with certificate 2 require SSL-VPN connections, you can directly reinitiate connections from the clients.</p>
      * <ul>
-     * <li>You cannot repeatedly call <strong>DeleteSslVpnClientCert</strong> to delete an SSL client certificate from the same VPN gateway within the specified period of time.</li>
+     * <li><strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call <strong>DeleteSslVpnClientCert</strong> within the specified period of time.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteSslVpnClientCert  DeleteSslVpnClientCertRequest
@@ -6466,6 +6475,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyEipAddressAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyEipForwardMode  ModifyEipForwardModeRequest
+     * @return ModifyEipForwardModeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyEipForwardModeResponse> modifyEipForwardMode(ModifyEipForwardModeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyEipForwardMode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyEipForwardModeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyEipForwardModeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

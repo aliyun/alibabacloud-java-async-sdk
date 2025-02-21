@@ -35,7 +35,6 @@ public class CreateFlowLogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LogStoreName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String logStoreName;
 
     @com.aliyun.core.annotation.Query
@@ -48,7 +47,6 @@ public class CreateFlowLogRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     @com.aliyun.core.annotation.Query
@@ -83,6 +81,10 @@ public class CreateFlowLogRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficAnalyzerId")
+    private String trafficAnalyzerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrafficPath")
     private java.util.List<String> trafficPath;
 
@@ -108,6 +110,7 @@ public class CreateFlowLogRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
+        this.trafficAnalyzerId = builder.trafficAnalyzerId;
         this.trafficPath = builder.trafficPath;
         this.trafficType = builder.trafficType;
     }
@@ -231,6 +234,13 @@ public class CreateFlowLogRequest extends Request {
     }
 
     /**
+     * @return trafficAnalyzerId
+     */
+    public String getTrafficAnalyzerId() {
+        return this.trafficAnalyzerId;
+    }
+
+    /**
      * @return trafficPath
      */
     public java.util.List<String> getTrafficPath() {
@@ -260,6 +270,7 @@ public class CreateFlowLogRequest extends Request {
         private Long resourceOwnerId; 
         private String resourceType; 
         private java.util.List<Tag> tag; 
+        private String trafficAnalyzerId; 
         private java.util.List<String> trafficPath; 
         private String trafficType; 
 
@@ -284,6 +295,7 @@ public class CreateFlowLogRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
+            this.trafficAnalyzerId = request.trafficAnalyzerId;
             this.trafficPath = request.trafficPath;
             this.trafficType = request.trafficType;
         } 
@@ -342,7 +354,6 @@ public class CreateFlowLogRequest extends Request {
          * <li>The name must start and end with a lowercase letter or a digit.</li>
          * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowLogStore</p>
@@ -378,7 +389,6 @@ public class CreateFlowLogRequest extends Request {
          * <li>The name must start and end with a lowercase letter or a digit.</li>
          * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowLogProject</p>
@@ -469,6 +479,15 @@ public class CreateFlowLogRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * TrafficAnalyzerId.
+         */
+        public Builder trafficAnalyzerId(String trafficAnalyzerId) {
+            this.putQueryParameter("TrafficAnalyzerId", trafficAnalyzerId);
+            this.trafficAnalyzerId = trafficAnalyzerId;
             return this;
         }
 

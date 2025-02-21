@@ -12,18 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeVpnGatewayAvailableZonesRequest} extends {@link RequestModel}
+ * {@link ModifyEipForwardModeRequest} extends {@link RequestModel}
  *
- * <p>DescribeVpnGatewayAvailableZonesRequest</p>
+ * <p>ModifyEipForwardModeRequest</p>
  */
-public class DescribeVpnGatewayAvailableZonesRequest extends Request {
+public class ModifyEipForwardModeRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
-    private String acceptLanguage;
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
-    private String ownerAccount;
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String mode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -42,27 +48,22 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Spec")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String spec;
-
-    private DescribeVpnGatewayAvailableZonesRequest(Builder builder) {
+    private ModifyEipForwardModeRequest(Builder builder) {
         super(builder);
-        this.acceptLanguage = builder.acceptLanguage;
-        this.ownerAccount = builder.ownerAccount;
+        this.clientToken = builder.clientToken;
+        this.instanceId = builder.instanceId;
+        this.mode = builder.mode;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.spec = builder.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeVpnGatewayAvailableZonesRequest create() {
+    public static ModifyEipForwardModeRequest create() {
         return builder().build();
     }
 
@@ -72,17 +73,24 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
     }
 
     /**
-     * @return acceptLanguage
+     * @return clientToken
      */
-    public String getAcceptLanguage() {
-        return this.acceptLanguage;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
-     * @return ownerAccount
+     * @return instanceId
      */
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
     }
 
     /**
@@ -113,59 +121,60 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return spec
-     */
-    public String getSpec() {
-        return this.spec;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeVpnGatewayAvailableZonesRequest, Builder> {
-        private String acceptLanguage; 
-        private String ownerAccount; 
+    public static final class Builder extends Request.Builder<ModifyEipForwardModeRequest, Builder> {
+        private String clientToken; 
+        private String instanceId; 
+        private String mode; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String spec; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeVpnGatewayAvailableZonesRequest request) {
+        private Builder(ModifyEipForwardModeRequest request) {
             super(request);
-            this.acceptLanguage = request.acceptLanguage;
-            this.ownerAccount = request.ownerAccount;
+            this.clientToken = request.clientToken;
+            this.instanceId = request.instanceId;
+            this.mode = request.mode;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.spec = request.spec;
         } 
 
         /**
-         * <p>The language in which the returned results are displayed. Valid values:</p>
-         * <ul>
-         * <li><strong>zh-CN</strong>: Chinese</li>
-         * <li><strong>en-US</strong> (default): English</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>zh-CN</p>
+         * ClientToken.
          */
-        public Builder acceptLanguage(String acceptLanguage) {
-            this.putQueryParameter("AcceptLanguage", acceptLanguage);
-            this.acceptLanguage = acceptLanguage;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
         /**
-         * OwnerAccount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-j5ebhbw3br92fy****</p>
          */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BINDED</p>
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 
@@ -179,7 +188,6 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,37 +217,9 @@ public class DescribeVpnGatewayAvailableZonesRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The bandwidth specification.</p>
-         * <ul>
-         * <li>If an IPsec-VPN connection can be associated with the VPN gateway, this parameter specifies the bandwidth specification of the VPN gateway.</li>
-         * <li>In scenarios where an IPsec-VPN connection can be associated with a transit router. This parameter specifies the bandwidth specification supported by an IPsec-VPN connection.</li>
-         * </ul>
-         * <p>Different bandwidth specifications may affect returned zone information. Valid values:</p>
-         * <ul>
-         * <li><strong>5M</strong></li>
-         * <li><strong>10M</strong></li>
-         * <li><strong>20M</strong></li>
-         * <li><strong>50M</strong></li>
-         * <li><strong>100M</strong></li>
-         * <li><strong>200M</strong></li>
-         * <li><strong>500M</strong></li>
-         * <li><strong>1000M</strong></li>
-         * </ul>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5M</p>
-         */
-        public Builder spec(String spec) {
-            this.putQueryParameter("Spec", spec);
-            this.spec = spec;
-            return this;
-        }
-
         @Override
-        public DescribeVpnGatewayAvailableZonesRequest build() {
-            return new DescribeVpnGatewayAvailableZonesRequest(this);
+        public ModifyEipForwardModeRequest build() {
+            return new ModifyEipForwardModeRequest(this);
         } 
 
     } 

@@ -274,8 +274,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -287,11 +286,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The type of the route table.</p>
-         * <ul>
-         * <li><strong>System</strong></li>
-         * <li><strong>Custom</strong></li>
-         * </ul>
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -303,7 +298,8 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The region ID of the VPC to which the route table belongs.</p>
+         * <p>You can call <a href="https://www.alibabacloud.com/help/vpc/developer-reference/api-vpc-2016-04-28-describeregions">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +312,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The details of the route table.</p>
+         * <p>The ID of the resource group to which the route table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph****</p>
@@ -346,7 +342,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The ID of the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp145q7glnuzdvzu2****</p>
@@ -358,8 +354,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name of the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>doctest</p>
@@ -371,7 +366,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The time when the route table was created.</p>
+         * <p>The type of the route table.</p>
+         * <ul>
+         * <li><strong>System</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -383,8 +382,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPC to which the route table belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The ID of vRouter to which the route table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-bp1lhl0taikrteen8****</p>
@@ -396,7 +394,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+         * <p>The type of the router to which the route table belongs. Valid value:</p>
+         * <ul>
+         * <li><strong>VRouter</strong> (default): a vRouter</li>
+         * <li><strong>VBR</strong>: a VBR</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VRouter</p>
@@ -408,7 +410,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -417,7 +419,8 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The ID of the VPC to which the route table belongs. </p>
+         * <p>When this parameter is set, the value of <strong>RouterType</strong> is automatically assigned to <strong>VRouter</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72****</p>
@@ -480,7 +483,8 @@ public class DescribeRouteTableListRequest extends Request {
             private String value; 
 
             /**
-             * <p>The detailed information about the route tables.</p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceDept</p>
@@ -491,7 +495,8 @@ public class DescribeRouteTableListRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC to which the route table belongs.</p>
+             * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>FinanceJoshua</p>
