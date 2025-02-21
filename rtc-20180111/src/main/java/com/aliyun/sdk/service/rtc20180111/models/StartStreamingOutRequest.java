@@ -56,6 +56,18 @@ public class StartStreamingOutRequest extends Request {
     private RegionColor regionColor;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservePaneForNoCameraUser")
+    private Boolean reservePaneForNoCameraUser;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartWithoutChannel")
+    private Boolean startWithoutChannel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartWithoutChannelWaitTime")
+    private Integer startWithoutChannelWaitTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(maxLength = 55, minLength = 1)
     private String taskId;
@@ -85,6 +97,9 @@ public class StartStreamingOutRequest extends Request {
         this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
         this.regionColor = builder.regionColor;
+        this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
+        this.startWithoutChannel = builder.startWithoutChannel;
+        this.startWithoutChannelWaitTime = builder.startWithoutChannelWaitTime;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.texts = builder.texts;
@@ -168,6 +183,27 @@ public class StartStreamingOutRequest extends Request {
     }
 
     /**
+     * @return reservePaneForNoCameraUser
+     */
+    public Boolean getReservePaneForNoCameraUser() {
+        return this.reservePaneForNoCameraUser;
+    }
+
+    /**
+     * @return startWithoutChannel
+     */
+    public Boolean getStartWithoutChannel() {
+        return this.startWithoutChannel;
+    }
+
+    /**
+     * @return startWithoutChannelWaitTime
+     */
+    public Integer getStartWithoutChannelWaitTime() {
+        return this.startWithoutChannelWaitTime;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -205,6 +241,9 @@ public class StartStreamingOutRequest extends Request {
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List<Panes> panes; 
         private RegionColor regionColor; 
+        private Boolean reservePaneForNoCameraUser; 
+        private Boolean startWithoutChannel; 
+        private Integer startWithoutChannelWaitTime; 
         private String taskId; 
         private String templateId; 
         private java.util.List<Texts> texts; 
@@ -225,6 +264,9 @@ public class StartStreamingOutRequest extends Request {
             this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
             this.regionColor = request.regionColor;
+            this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
+            this.startWithoutChannel = request.startWithoutChannel;
+            this.startWithoutChannelWaitTime = request.startWithoutChannelWaitTime;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
@@ -316,6 +358,33 @@ public class StartStreamingOutRequest extends Request {
         public Builder regionColor(RegionColor regionColor) {
             this.putQueryParameter("RegionColor", regionColor);
             this.regionColor = regionColor;
+            return this;
+        }
+
+        /**
+         * ReservePaneForNoCameraUser.
+         */
+        public Builder reservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
+            this.putQueryParameter("ReservePaneForNoCameraUser", reservePaneForNoCameraUser);
+            this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
+            return this;
+        }
+
+        /**
+         * StartWithoutChannel.
+         */
+        public Builder startWithoutChannel(Boolean startWithoutChannel) {
+            this.putQueryParameter("StartWithoutChannel", startWithoutChannel);
+            this.startWithoutChannel = startWithoutChannel;
+            return this;
+        }
+
+        /**
+         * StartWithoutChannelWaitTime.
+         */
+        public Builder startWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
+            this.putQueryParameter("StartWithoutChannelWaitTime", startWithoutChannelWaitTime);
+            this.startWithoutChannelWaitTime = startWithoutChannelWaitTime;
             return this;
         }
 
@@ -2055,6 +2124,9 @@ public class StartStreamingOutRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String paneId;
 
+        @com.aliyun.core.annotation.NameInMap("ReservePaneForOfflineUser")
+        private Boolean reservePaneForOfflineUser;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -2064,6 +2136,9 @@ public class StartStreamingOutRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Texts")
         private java.util.List<PanesTexts> texts;
 
+        @com.aliyun.core.annotation.NameInMap("VideoOrder")
+        private String videoOrder;
+
         @com.aliyun.core.annotation.NameInMap("Whiteboard")
         private Whiteboard whiteboard;
 
@@ -2071,9 +2146,11 @@ public class StartStreamingOutRequest extends Request {
             this.images = builder.images;
             this.paneCropMode = builder.paneCropMode;
             this.paneId = builder.paneId;
+            this.reservePaneForOfflineUser = builder.reservePaneForOfflineUser;
             this.source = builder.source;
             this.sourceType = builder.sourceType;
             this.texts = builder.texts;
+            this.videoOrder = builder.videoOrder;
             this.whiteboard = builder.whiteboard;
         }
 
@@ -2107,6 +2184,13 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * @return reservePaneForOfflineUser
+         */
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -2128,6 +2212,13 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * @return videoOrder
+         */
+        public String getVideoOrder() {
+            return this.videoOrder;
+        }
+
+        /**
          * @return whiteboard
          */
         public Whiteboard getWhiteboard() {
@@ -2138,9 +2229,11 @@ public class StartStreamingOutRequest extends Request {
             private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
             private String paneId; 
+            private Boolean reservePaneForOfflineUser; 
             private String source; 
             private String sourceType; 
             private java.util.List<PanesTexts> texts; 
+            private String videoOrder; 
             private Whiteboard whiteboard; 
 
             /**
@@ -2171,6 +2264,14 @@ public class StartStreamingOutRequest extends Request {
             }
 
             /**
+             * ReservePaneForOfflineUser.
+             */
+            public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+                this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+                return this;
+            }
+
+            /**
              * Source.
              */
             public Builder source(String source) {
@@ -2191,6 +2292,14 @@ public class StartStreamingOutRequest extends Request {
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
+                return this;
+            }
+
+            /**
+             * VideoOrder.
+             */
+            public Builder videoOrder(String videoOrder) {
+                this.videoOrder = videoOrder;
                 return this;
             }
 

@@ -56,6 +56,10 @@ public class StartCloudRecordRequest extends Request {
     private RegionColor regionColor;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservePaneForNoCameraUser")
+    private Boolean reservePaneForNoCameraUser;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageConfig")
     @com.aliyun.core.annotation.Validation(required = true)
     private StorageConfig storageConfig;
@@ -85,6 +89,7 @@ public class StartCloudRecordRequest extends Request {
         this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
         this.regionColor = builder.regionColor;
+        this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
         this.storageConfig = builder.storageConfig;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
@@ -168,6 +173,13 @@ public class StartCloudRecordRequest extends Request {
     }
 
     /**
+     * @return reservePaneForNoCameraUser
+     */
+    public Boolean getReservePaneForNoCameraUser() {
+        return this.reservePaneForNoCameraUser;
+    }
+
+    /**
      * @return storageConfig
      */
     public StorageConfig getStorageConfig() {
@@ -205,6 +217,7 @@ public class StartCloudRecordRequest extends Request {
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List<Panes> panes; 
         private RegionColor regionColor; 
+        private Boolean reservePaneForNoCameraUser; 
         private StorageConfig storageConfig; 
         private String taskId; 
         private String templateId; 
@@ -225,6 +238,7 @@ public class StartCloudRecordRequest extends Request {
             this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
             this.regionColor = request.regionColor;
+            this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
             this.storageConfig = request.storageConfig;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
@@ -318,6 +332,15 @@ public class StartCloudRecordRequest extends Request {
         public Builder regionColor(RegionColor regionColor) {
             this.putQueryParameter("RegionColor", regionColor);
             this.regionColor = regionColor;
+            return this;
+        }
+
+        /**
+         * ReservePaneForNoCameraUser.
+         */
+        public Builder reservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
+            this.putQueryParameter("ReservePaneForNoCameraUser", reservePaneForNoCameraUser);
+            this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
             return this;
         }
 
@@ -2059,6 +2082,9 @@ public class StartCloudRecordRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true, maximum = 15)
         private Integer paneId;
 
+        @com.aliyun.core.annotation.NameInMap("ReservePaneForOfflineUser")
+        private Boolean reservePaneForOfflineUser;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -2068,6 +2094,9 @@ public class StartCloudRecordRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Texts")
         private java.util.List<PanesTexts> texts;
 
+        @com.aliyun.core.annotation.NameInMap("VideoOrder")
+        private String videoOrder;
+
         @com.aliyun.core.annotation.NameInMap("Whiteboard")
         private Whiteboard whiteboard;
 
@@ -2075,9 +2104,11 @@ public class StartCloudRecordRequest extends Request {
             this.images = builder.images;
             this.paneCropMode = builder.paneCropMode;
             this.paneId = builder.paneId;
+            this.reservePaneForOfflineUser = builder.reservePaneForOfflineUser;
             this.source = builder.source;
             this.sourceType = builder.sourceType;
             this.texts = builder.texts;
+            this.videoOrder = builder.videoOrder;
             this.whiteboard = builder.whiteboard;
         }
 
@@ -2111,6 +2142,13 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
+         * @return reservePaneForOfflineUser
+         */
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -2132,6 +2170,13 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
+         * @return videoOrder
+         */
+        public String getVideoOrder() {
+            return this.videoOrder;
+        }
+
+        /**
          * @return whiteboard
          */
         public Whiteboard getWhiteboard() {
@@ -2142,9 +2187,11 @@ public class StartCloudRecordRequest extends Request {
             private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
             private Integer paneId; 
+            private Boolean reservePaneForOfflineUser; 
             private String source; 
             private String sourceType; 
             private java.util.List<PanesTexts> texts; 
+            private String videoOrder; 
             private Whiteboard whiteboard; 
 
             /**
@@ -2176,6 +2223,14 @@ public class StartCloudRecordRequest extends Request {
             }
 
             /**
+             * ReservePaneForOfflineUser.
+             */
+            public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+                this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+                return this;
+            }
+
+            /**
              * <p>source</p>
              */
             public Builder source(String source) {
@@ -2199,6 +2254,14 @@ public class StartCloudRecordRequest extends Request {
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
+                return this;
+            }
+
+            /**
+             * VideoOrder.
+             */
+            public Builder videoOrder(String videoOrder) {
+                this.videoOrder = videoOrder;
                 return this;
             }
 
@@ -2322,6 +2385,9 @@ public class StartCloudRecordRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
         private String bucket;
 
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        private String endpoint;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         @com.aliyun.core.annotation.Validation(required = true)
         private Integer region;
@@ -2337,6 +2403,7 @@ public class StartCloudRecordRequest extends Request {
         private StorageConfig(Builder builder) {
             this.accessKey = builder.accessKey;
             this.bucket = builder.bucket;
+            this.endpoint = builder.endpoint;
             this.region = builder.region;
             this.secretKey = builder.secretKey;
             this.vendor = builder.vendor;
@@ -2365,6 +2432,13 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
          * @return region
          */
         public Integer getRegion() {
@@ -2388,6 +2462,7 @@ public class StartCloudRecordRequest extends Request {
         public static final class Builder {
             private String accessKey; 
             private String bucket; 
+            private String endpoint; 
             private Integer region; 
             private String secretKey; 
             private Integer vendor; 
@@ -2413,6 +2488,14 @@ public class StartCloudRecordRequest extends Request {
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * Endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
                 return this;
             }
 

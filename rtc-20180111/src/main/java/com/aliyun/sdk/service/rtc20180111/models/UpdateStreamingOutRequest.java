@@ -1985,6 +1985,9 @@ public class UpdateStreamingOutRequest extends Request {
         @com.aliyun.core.annotation.Validation(maximum = 15)
         private Integer paneId;
 
+        @com.aliyun.core.annotation.NameInMap("ReservePaneForOfflineUser")
+        private Boolean reservePaneForOfflineUser;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -1994,6 +1997,9 @@ public class UpdateStreamingOutRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Texts")
         private java.util.List<PanesTexts> texts;
 
+        @com.aliyun.core.annotation.NameInMap("VideoOrder")
+        private String videoOrder;
+
         @com.aliyun.core.annotation.NameInMap("Whiteboard")
         private Whiteboard whiteboard;
 
@@ -2001,9 +2007,11 @@ public class UpdateStreamingOutRequest extends Request {
             this.images = builder.images;
             this.paneCropMode = builder.paneCropMode;
             this.paneId = builder.paneId;
+            this.reservePaneForOfflineUser = builder.reservePaneForOfflineUser;
             this.source = builder.source;
             this.sourceType = builder.sourceType;
             this.texts = builder.texts;
+            this.videoOrder = builder.videoOrder;
             this.whiteboard = builder.whiteboard;
         }
 
@@ -2037,6 +2045,13 @@ public class UpdateStreamingOutRequest extends Request {
         }
 
         /**
+         * @return reservePaneForOfflineUser
+         */
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -2058,6 +2073,13 @@ public class UpdateStreamingOutRequest extends Request {
         }
 
         /**
+         * @return videoOrder
+         */
+        public String getVideoOrder() {
+            return this.videoOrder;
+        }
+
+        /**
          * @return whiteboard
          */
         public Whiteboard getWhiteboard() {
@@ -2068,9 +2090,11 @@ public class UpdateStreamingOutRequest extends Request {
             private java.util.List<PanesImages> images; 
             private Integer paneCropMode; 
             private Integer paneId; 
+            private Boolean reservePaneForOfflineUser; 
             private String source; 
             private String sourceType; 
             private java.util.List<PanesTexts> texts; 
+            private String videoOrder; 
             private Whiteboard whiteboard; 
 
             /**
@@ -2098,6 +2122,14 @@ public class UpdateStreamingOutRequest extends Request {
             }
 
             /**
+             * ReservePaneForOfflineUser.
+             */
+            public Builder reservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+                this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+                return this;
+            }
+
+            /**
              * Source.
              */
             public Builder source(String source) {
@@ -2118,6 +2150,14 @@ public class UpdateStreamingOutRequest extends Request {
              */
             public Builder texts(java.util.List<PanesTexts> texts) {
                 this.texts = texts;
+                return this;
+            }
+
+            /**
+             * VideoOrder.
+             */
+            public Builder videoOrder(String videoOrder) {
+                this.videoOrder = videoOrder;
                 return this;
             }
 
