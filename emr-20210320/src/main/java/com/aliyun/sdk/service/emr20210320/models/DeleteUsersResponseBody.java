@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateClusterAttributeResponseBody} extends {@link TeaModel}
+ * {@link DeleteUsersResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateClusterAttributeResponseBody</p>
+ * <p>DeleteUsersResponseBody</p>
  */
-public class UpdateClusterAttributeResponseBody extends TeaModel {
+public class DeleteUsersResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Boolean data;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateClusterAttributeResponseBody(Builder builder) {
+    private DeleteUsersResponseBody(Builder builder) {
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -28,8 +32,15 @@ public class UpdateClusterAttributeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateClusterAttributeResponseBody create() {
+    public static DeleteUsersResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return data
+     */
+    public Boolean getData() {
+        return this.data;
     }
 
     /**
@@ -40,21 +51,27 @@ public class UpdateClusterAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean data; 
         private String requestId; 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+         * Data.
+         */
+        public Builder data(Boolean data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateClusterAttributeResponseBody build() {
-            return new UpdateClusterAttributeResponseBody(this);
+        public DeleteUsersResponseBody build() {
+            return new DeleteUsersResponseBody(this);
         } 
 
     } 

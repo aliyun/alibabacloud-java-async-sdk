@@ -47,6 +47,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScriptResponse> createScript(CreateScriptRequest request);
 
     /**
+     * @param request the request parameters of CreateUsers  CreateUsersRequest
+     * @return CreateUsersResponse
+     */
+    CompletableFuture<CreateUsersResponse> createUsers(CreateUsersRequest request);
+
+    /**
      * @param request the request parameters of DecreaseNodes  DecreaseNodesRequest
      * @return DecreaseNodesResponse
      */
@@ -72,6 +78,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteScriptResponse
      */
     CompletableFuture<DeleteScriptResponse> deleteScript(DeleteScriptRequest request);
+
+    /**
+     * @param request the request parameters of DeleteUsers  DeleteUsersRequest
+     * @return DeleteUsersResponse
+     */
+    CompletableFuture<DeleteUsersResponse> deleteUsers(DeleteUsersRequest request);
 
     /**
      * @param request the request parameters of GetApiTemplate  GetApiTemplateRequest
@@ -452,6 +464,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListUsers  ListUsersRequest
+     * @return ListUsersResponse
+     */
+    CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to configure auto scaling policies.</p>
      * 
@@ -525,5 +543,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateScriptResponse
      */
     CompletableFuture<UpdateScriptResponse> updateScript(UpdateScriptRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUserAttribute  UpdateUserAttributeRequest
+     * @return UpdateUserAttributeResponse
+     */
+    CompletableFuture<UpdateUserAttributeResponse> updateUserAttribute(UpdateUserAttributeRequest request);
 
 }

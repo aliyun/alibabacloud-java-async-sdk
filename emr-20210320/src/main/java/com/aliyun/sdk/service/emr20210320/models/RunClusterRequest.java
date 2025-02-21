@@ -381,7 +381,15 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>Specifies whether to enable release protection for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true: enables release protection for the cluster.</li>
+         * <li>false: disables release protection for the cluster.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("DeletionProtection", deletionProtection);

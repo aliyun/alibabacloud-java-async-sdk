@@ -37,12 +37,17 @@ public class CreateScriptRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Script> scripts;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutSecs")
+    private String timeoutSecs;
+
     private CreateScriptRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.regionId = builder.regionId;
         this.scriptType = builder.scriptType;
         this.scripts = builder.scripts;
+        this.timeoutSecs = builder.timeoutSecs;
     }
 
     public static Builder builder() {
@@ -86,11 +91,19 @@ public class CreateScriptRequest extends Request {
         return this.scripts;
     }
 
+    /**
+     * @return timeoutSecs
+     */
+    public String getTimeoutSecs() {
+        return this.timeoutSecs;
+    }
+
     public static final class Builder extends Request.Builder<CreateScriptRequest, Builder> {
         private String clusterId; 
         private String regionId; 
         private String scriptType; 
         private java.util.List<Script> scripts; 
+        private String timeoutSecs; 
 
         private Builder() {
             super();
@@ -102,6 +115,7 @@ public class CreateScriptRequest extends Request {
             this.regionId = request.regionId;
             this.scriptType = request.scriptType;
             this.scripts = request.scripts;
+            this.timeoutSecs = request.timeoutSecs;
         } 
 
         /**
@@ -148,12 +162,21 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * <p>The scripts.</p>
+         * <p>The common scripts or bootstrap actions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder scripts(java.util.List<Script> scripts) {
             this.putQueryParameter("Scripts", scripts);
             this.scripts = scripts;
+            return this;
+        }
+
+        /**
+         * <p>The timeout period for manually running a common script. You cannot specify the timeout period for a bootstrap action.</p>
+         */
+        public Builder timeoutSecs(String timeoutSecs) {
+            this.putQueryParameter("TimeoutSecs", timeoutSecs);
+            this.timeoutSecs = timeoutSecs;
             return this;
         }
 

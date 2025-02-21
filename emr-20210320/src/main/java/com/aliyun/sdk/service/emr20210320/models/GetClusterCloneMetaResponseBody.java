@@ -147,7 +147,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of nodes that you can configure based on your business requirements.</p>
+             * <p>The maximum number of pay-as-you-go nodes in the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder maxOnDemandCapacity(Integer maxOnDemandCapacity) {
                 this.maxOnDemandCapacity = maxOnDemandCapacity;
@@ -355,6 +358,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("NodeGroupName")
+        private String nodeGroupName;
+
         @com.aliyun.core.annotation.NameInMap("ScalingPolicyId")
         private String scalingPolicyId;
 
@@ -368,6 +374,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             this.clusterId = builder.clusterId;
             this.constraints = builder.constraints;
             this.nodeGroupId = builder.nodeGroupId;
+            this.nodeGroupName = builder.nodeGroupName;
             this.scalingPolicyId = builder.scalingPolicyId;
             this.scalingPolicyType = builder.scalingPolicyType;
             this.scalingRules = builder.scalingRules;
@@ -403,6 +410,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeGroupName
+         */
+        public String getNodeGroupName() {
+            return this.nodeGroupName;
+        }
+
+        /**
          * @return scalingPolicyId
          */
         public String getScalingPolicyId() {
@@ -427,6 +441,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String clusterId; 
             private Constraints constraints; 
             private String nodeGroupId; 
+            private String nodeGroupName; 
             private String scalingPolicyId; 
             private String scalingPolicyType; 
             private java.util.List<ScalingRules> scalingRules; 
@@ -462,6 +477,17 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-etltask</p>
+             */
+            public Builder nodeGroupName(String nodeGroupName) {
+                this.nodeGroupName = nodeGroupName;
+                return this;
+            }
+
+            /**
              * <p>The ID of the auto scaling policy.</p>
              * 
              * <strong>example:</strong>
@@ -481,7 +507,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of auto scaling rules.</p>
+             * <p>The auto scaling rules.</p>
              */
             public Builder scalingRules(java.util.List<ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;
@@ -776,7 +802,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The services deployed in the cluster.</p>
+             * <p>The services.</p>
              */
             public Builder applications(java.util.List<Application> applications) {
                 this.applications = applications;
@@ -854,7 +880,15 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * <p>Indicates whether release protection is enabled for the cluster. Valid values:</p>
+             * <ul>
+             * <li>true: Release protection is enabled for the cluster.</li>
+             * <li>false: Release protection is disabled for the cluster.</li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;

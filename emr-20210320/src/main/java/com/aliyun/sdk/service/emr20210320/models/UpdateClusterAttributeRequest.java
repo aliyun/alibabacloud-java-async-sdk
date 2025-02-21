@@ -117,7 +117,7 @@ public class UpdateClusterAttributeRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class UpdateClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>集群名称。</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>emrtest</p>
@@ -142,7 +142,10 @@ public class UpdateClusterAttributeRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * <p>Specifies whether release protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -151,7 +154,10 @@ public class UpdateClusterAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Emr cluster for ETL</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -160,7 +166,7 @@ public class UpdateClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

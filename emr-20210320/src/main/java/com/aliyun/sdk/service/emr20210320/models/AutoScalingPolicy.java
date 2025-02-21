@@ -17,10 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AutoScalingPolicy</p>
  */
 public class AutoScalingPolicy extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("constraints")
+    @com.aliyun.core.annotation.NameInMap("Constraints")
     private Constraints constraints;
 
-    @com.aliyun.core.annotation.NameInMap("scalingRules")
+    @com.aliyun.core.annotation.NameInMap("ScalingRules")
     private java.util.List<ScalingRule> scalingRules;
 
     private AutoScalingPolicy(Builder builder) {
@@ -55,7 +55,7 @@ public class AutoScalingPolicy extends TeaModel {
         private java.util.List<ScalingRule> scalingRules; 
 
         /**
-         * constraints.
+         * Constraints.
          */
         public Builder constraints(Constraints constraints) {
             this.constraints = constraints;
@@ -63,7 +63,7 @@ public class AutoScalingPolicy extends TeaModel {
         }
 
         /**
-         * scalingRules.
+         * ScalingRules.
          */
         public Builder scalingRules(java.util.List<ScalingRule> scalingRules) {
             this.scalingRules = scalingRules;
@@ -83,10 +83,10 @@ public class AutoScalingPolicy extends TeaModel {
      * <p>AutoScalingPolicy</p>
      */
     public static class Constraints extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("maxCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
 
-        @com.aliyun.core.annotation.NameInMap("minCapacity")
+        @com.aliyun.core.annotation.NameInMap("MinCapacity")
         private Integer minCapacity;
 
         private Constraints(Builder builder) {
@@ -121,7 +121,7 @@ public class AutoScalingPolicy extends TeaModel {
             private Integer minCapacity; 
 
             /**
-             * maxCapacity.
+             * MaxCapacity.
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -129,7 +129,7 @@ public class AutoScalingPolicy extends TeaModel {
             }
 
             /**
-             * minCapacity.
+             * MinCapacity.
              */
             public Builder minCapacity(Integer minCapacity) {
                 this.minCapacity = minCapacity;

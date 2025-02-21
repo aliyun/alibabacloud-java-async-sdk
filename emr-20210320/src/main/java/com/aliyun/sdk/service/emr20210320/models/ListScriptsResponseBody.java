@@ -124,7 +124,7 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of scripts.</p>
+         * <p>The scripts.</p>
          */
         public Builder scripts(java.util.List<Scripts> scripts) {
             this.scripts = scripts;
@@ -404,7 +404,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node selector.</p>
+             * <p>The node selector.</p>
              */
             public Builder nodeSelector(NodeSelector nodeSelector) {
                 this.nodeSelector = nodeSelector;

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListScriptsRequest} extends {@link RequestModel}
+ * {@link ListUsersRequest} extends {@link RequestModel}
  *
- * <p>ListScriptsRequest</p>
+ * <p>ListUsersRequest</p>
  */
-public class ListScriptsRequest extends Request {
+public class ListUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -36,39 +36,28 @@ public class ListScriptsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ScriptId")
-    private String scriptId;
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    private String userName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ScriptName")
-    private String scriptName;
+    @com.aliyun.core.annotation.NameInMap("UserNames")
+    private java.util.List<String> userNames;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ScriptType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String scriptType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Statuses")
-    private java.util.List<String> statuses;
-
-    private ListScriptsRequest(Builder builder) {
+    private ListUsersRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
-        this.scriptId = builder.scriptId;
-        this.scriptName = builder.scriptName;
-        this.scriptType = builder.scriptType;
-        this.statuses = builder.statuses;
+        this.userName = builder.userName;
+        this.userNames = builder.userNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListScriptsRequest create() {
+    public static ListUsersRequest create() {
         return builder().build();
     }
 
@@ -106,61 +95,43 @@ public class ListScriptsRequest extends Request {
     }
 
     /**
-     * @return scriptId
+     * @return userName
      */
-    public String getScriptId() {
-        return this.scriptId;
+    public String getUserName() {
+        return this.userName;
     }
 
     /**
-     * @return scriptName
+     * @return userNames
      */
-    public String getScriptName() {
-        return this.scriptName;
+    public java.util.List<String> getUserNames() {
+        return this.userNames;
     }
 
-    /**
-     * @return scriptType
-     */
-    public String getScriptType() {
-        return this.scriptType;
-    }
-
-    /**
-     * @return statuses
-     */
-    public java.util.List<String> getStatuses() {
-        return this.statuses;
-    }
-
-    public static final class Builder extends Request.Builder<ListScriptsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private String clusterId; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private String scriptId; 
-        private String scriptName; 
-        private String scriptType; 
-        private java.util.List<String> statuses; 
+        private String userName; 
+        private java.util.List<String> userNames; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListScriptsRequest request) {
+        private Builder(ListUsersRequest request) {
             super(request);
             this.clusterId = request.clusterId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
-            this.scriptId = request.scriptId;
-            this.scriptName = request.scriptName;
-            this.scriptType = request.scriptType;
-            this.statuses = request.statuses;
+            this.userName = request.userName;
+            this.userNames = request.userNames;
         } 
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>集群ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,10 +144,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to retrieve at once.</p>
+         * <p>一次获取的最大记录数。取值范围：1~100。</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -185,10 +156,10 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>Marks the current position to start reading from.</p>
+         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
          * 
          * <strong>example:</strong>
-         * <p>dd6b1b2a-5837-5237-abe4-ff0c89568980</p>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +168,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>区域ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,52 +181,29 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>The script ID. Only common scripts are supported.</p>
-         */
-        public Builder scriptId(String scriptId) {
-            this.putQueryParameter("ScriptId", scriptId);
-            this.scriptId = scriptId;
-            return this;
-        }
-
-        /**
-         * <p>The name of the script. Only common scripts are supported. Fuzzy search is supported.</p>
-         */
-        public Builder scriptName(String scriptName) {
-            this.putQueryParameter("ScriptName", scriptName);
-            this.scriptName = scriptName;
-            return this;
-        }
-
-        /**
-         * <p>Type of cluster script. Possible values:</p>
-         * <ul>
-         * <li>BOOTSTRAP: Bootstrap script.</li>
-         * <li>NORMAL: Regular cluster script.</li>
-         * </ul>
-         * <p>This parameter is required.</p>
+         * <p>用户名，支持模糊搜索。</p>
          * 
          * <strong>example:</strong>
-         * <p>BOOTSTRAP</p>
+         * <p>test</p>
          */
-        public Builder scriptType(String scriptType) {
-            this.putQueryParameter("ScriptType", scriptType);
-            this.scriptType = scriptType;
+        public Builder userName(String userName) {
+            this.putQueryParameter("UserName", userName);
+            this.userName = userName;
             return this;
         }
 
         /**
-         * <p>The status of the script. Only common scripts are supported.</p>
+         * UserNames.
          */
-        public Builder statuses(java.util.List<String> statuses) {
-            this.putQueryParameter("Statuses", statuses);
-            this.statuses = statuses;
+        public Builder userNames(java.util.List<String> userNames) {
+            this.putQueryParameter("UserNames", userNames);
+            this.userNames = userNames;
             return this;
         }
 
         @Override
-        public ListScriptsRequest build() {
-            return new ListScriptsRequest(this);
+        public ListUsersRequest build() {
+            return new ListUsersRequest(this);
         } 
 
     } 
