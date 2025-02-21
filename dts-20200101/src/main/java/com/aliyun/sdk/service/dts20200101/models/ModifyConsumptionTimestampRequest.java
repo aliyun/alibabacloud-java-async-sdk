@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyConsumptionTimestampRequest} extends {@link RequestModel}
  *
  * <p>ModifyConsumptionTimestampRequest</p>
@@ -125,7 +131,10 @@ public class ModifyConsumptionTimestampRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -134,7 +143,11 @@ public class ModifyConsumptionTimestampRequest extends Request {
         }
 
         /**
-         * The consumption checkpoint. The format is *yyyy-MM-dd*T*HH:mm:ss*Z. The time is displayed in UTC.
+         * <p>The consumption checkpoint. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z. The time is displayed in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-15T17:20:03Z</p>
          */
         public Builder consumptionTimestamp(String consumptionTimestamp) {
             this.putQueryParameter("ConsumptionTimestamp", consumptionTimestamp);
@@ -161,7 +174,10 @@ public class ModifyConsumptionTimestampRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -170,7 +186,11 @@ public class ModifyConsumptionTimestampRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.
+         * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsg2m10r1x15a****</p>
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

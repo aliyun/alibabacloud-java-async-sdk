@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEndpointSwitchStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEndpointSwitchStatusResponseBody</p>
@@ -97,7 +103,10 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -105,7 +114,10 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -113,7 +125,10 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is no longer available.
+         * <p>This parameter is no longer available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +136,10 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DD6B201-604B-4CAB-B6A8-4B2953B5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,14 +147,17 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Initializing</strong>: The task is being initialized.</li>
+         * <li><strong>Switching</strong>: The task is running.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Finished</strong>: The task is completed.</li>
+         * </ul>
          * 
-         * *   **NotStarted**: The task is not started.
-         * *   **Initializing**: The task is being initialized.
-         * *   **Switching**: The task is running.
-         * *   **Failed**: The task failed.
-         * *   **Finished**: The task is completed.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -144,7 +165,10 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

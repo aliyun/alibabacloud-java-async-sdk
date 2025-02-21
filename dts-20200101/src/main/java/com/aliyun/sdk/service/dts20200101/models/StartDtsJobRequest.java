@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDtsJobRequest} extends {@link RequestModel}
  *
  * <p>StartDtsJobRequest</p>
@@ -123,10 +129,13 @@ public class StartDtsJobRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking instance.
-         * <p>
+         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/208139.html">DescribeMigrationJobs</a>, <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMigrationJobs](~~208139~~), [DescribeSubscriptionInstances](~~49442~~), or [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID
+         * <strong>example:</strong>
+         * <p>dtsl3m1213ye7l****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -135,7 +144,10 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -144,7 +156,10 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * The region ID of the Data Transmission Service (DTS) instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +168,10 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2ilvoxlrdcby</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -162,14 +180,19 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * The synchronization direction. Default value: Forward. Valid values:
-         * <p>
+         * <p>The synchronization direction. Default value: Forward. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</p>
+         * </li>
+         * <li><p><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization task only if the topology is two-way synchronization.</p>
+         * </blockquote>
          * 
-         * *   **Forward**: Data is synchronized from the source database to the destination database.
-         * 
-         * *   **Reverse**: Data is synchronized from the destination database to the source database.
-         * 
-         * >You can set this parameter to **Reverse** to start the reverse synchronization task only if the topology is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -178,7 +201,13 @@ public class StartDtsJobRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

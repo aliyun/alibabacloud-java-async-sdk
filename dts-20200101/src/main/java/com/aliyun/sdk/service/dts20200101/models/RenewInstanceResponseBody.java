@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RenewInstanceResponseBody</p>
@@ -157,7 +163,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The billing method of the DTS instance. **PREPAY** is returned, which indicates the subscription billing method.
+         * <p>The billing method of the DTS instance. Only <strong>PREPAY</strong> may be returned, which indicates the subscription billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -165,10 +174,13 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
+         * <p>The error code returned if the request failed.</p>
+         * <blockquote>
+         * <p>This parameter will be removed in the future.</p>
+         * </blockquote>
          * 
-         * >  This parameter will be removed in the future.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -176,7 +188,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data synchronization or change tracking task.
+         * <p>The ID of the data synchronization or change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qi0r643lc31****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -184,10 +199,13 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the value of <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p>If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -195,10 +213,13 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ssZZZ* format. The time is displayed in UTC.
-         * <p>
+         * <p>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZZZ</em> format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p><strong>ZZZ</strong> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <strong>+00:00</strong>.</p>
+         * </blockquote>
          * 
-         * >  **ZZZ** indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as **+00:00**.
+         * <strong>example:</strong>
+         * <p>2021-08-04T16:00:00.000+00:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -206,7 +227,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -214,7 +238,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -222,7 +249,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -230,7 +260,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DTS instance.
+         * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsqi0r643lc31****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -238,7 +271,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1112E255-0C38-4970-8159-1D54AD92****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,11 +282,14 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

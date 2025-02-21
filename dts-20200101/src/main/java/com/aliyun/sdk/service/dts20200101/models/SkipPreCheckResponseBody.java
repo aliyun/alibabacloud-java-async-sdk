@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkipPreCheckResponseBody} extends {@link TeaModel}
  *
  * <p>SkipPreCheckResponseBody</p>
@@ -157,7 +163,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code. This parameter will be removed in the future.
+         * <p>The error code. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -165,10 +174,13 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace %s in ErrMessage.</p>
+         * <blockquote>
+         * <p>If JobId is invalid, JobId is returned for DynamicMessage, and the following message is returned for ErrMessage: The Value of Input Parameter %s is not valid.</p>
+         * </blockquote>
          * 
-         * >  If the specified **JobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **JobId** is returned for **DynamicMessage**.
+         * <strong>example:</strong>
+         * <p>JobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -176,7 +188,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -184,7 +199,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -192,7 +210,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status codes returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -200,7 +221,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DTS task on which the precheck is performed.
+         * <p>The precheck task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4my3zg929a****</p>
          */
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = migrationJobId;
@@ -208,7 +232,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C498360-7892-433C-847A-BA71A850****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -216,7 +243,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the precheck task.
+         * <p>The precheck task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4my3zg929a****</p>
          */
         public Builder scheduleJobId(String scheduleJobId) {
             this.scheduleJobId = scheduleJobId;
@@ -224,7 +254,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The shortened name of the precheck item.
+         * <p>The shortened name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_SAME_OBJ</p>
          */
         public Builder skipItems(String skipItems) {
             this.skipItems = skipItems;
@@ -232,7 +265,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the precheck item.
+         * <p>The precheck item name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_SAME_OBJ_DETAIL</p>
          */
         public Builder skipNames(String skipNames) {
             this.skipNames = skipNames;
@@ -240,7 +276,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

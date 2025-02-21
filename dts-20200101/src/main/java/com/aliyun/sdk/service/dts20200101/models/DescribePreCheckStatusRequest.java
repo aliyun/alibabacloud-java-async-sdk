@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePreCheckStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribePreCheckStatusRequest</p>
@@ -181,7 +187,11 @@ public class DescribePreCheckStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -190,13 +200,17 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The task code that specifies the type of the DTS subtask. Valid values:
-         * <p>
+         * <p>The task code that specifies the type of the DTS subtask. Valid values:</p>
+         * <ul>
+         * <li><strong>01</strong>: precheck.</li>
+         * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
+         * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
+         * <li><strong>04</strong>: incremental data migration or synchronization.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **01**: precheck
-         * *   **02**: schema migration or initial schema synchronization
-         * *   **03**: full data migration or initial full data synchronization
-         * *   **04**: incremental data migration or synchronization
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder jobCode(String jobCode) {
             this.putQueryParameter("JobCode", jobCode);
@@ -205,7 +219,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The filter item used to filter tables in fuzzy match.
+         * <p>The filter item used to filter tables in fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dewuprop</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -214,7 +231,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -223,7 +243,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +255,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +267,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz4us4iruleja</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -250,7 +279,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The filter item used to filter tables, views, and functions during schema migration.
+         * <p>The filter item used to filter tables, views, and functions during schema migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>View</p>
          */
         public Builder structPhase(String structPhase) {
             this.putQueryParameter("StructPhase", structPhase);
@@ -259,11 +291,14 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * The type of schema definition. Valid values:
-         * <p>
+         * <p>The type of schema definition. Valid values:</p>
+         * <ul>
+         * <li><strong>before</strong>: schema migration or initial schema synchronization.</li>
+         * <li><strong>after</strong>: DDL operations performed during incremental data migration or synchronization.</li>
+         * </ul>
          * 
-         * *   **before**: schema migration or initial schema synchronization
-         * *   **after**: DDL operations performed during incremental data migration or synchronization
+         * <strong>example:</strong>
+         * <p>before</p>
          */
         public Builder structType(String structType) {
             this.putQueryParameter("StructType", structType);
@@ -272,7 +307,13 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

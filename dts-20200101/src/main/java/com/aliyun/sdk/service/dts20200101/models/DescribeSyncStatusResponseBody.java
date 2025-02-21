@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSyncStatusResponseBody</p>
@@ -36,7 +42,7 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("SyncStatusList")
-    private java.util.List < SyncStatusList> syncStatusList;
+    private java.util.List<SyncStatusList> syncStatusList;
 
     private DescribeSyncStatusResponseBody(Builder builder) {
         this.dynamicCode = builder.dynamicCode;
@@ -117,7 +123,7 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
     /**
      * @return syncStatusList
      */
-    public java.util.List < SyncStatusList> getSyncStatusList() {
+    public java.util.List<SyncStatusList> getSyncStatusList() {
         return this.syncStatusList;
     }
 
@@ -130,7 +136,7 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
         private Integer pageNumber; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < SyncStatusList> syncStatusList; 
+        private java.util.List<SyncStatusList> syncStatusList; 
 
         /**
          * DynamicCode.
@@ -199,7 +205,7 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
         /**
          * SyncStatusList.
          */
-        public Builder syncStatusList(java.util.List < SyncStatusList> syncStatusList) {
+        public Builder syncStatusList(java.util.List<SyncStatusList> syncStatusList) {
             this.syncStatusList = syncStatusList;
             return this;
         }
@@ -210,6 +216,12 @@ public class DescribeSyncStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSyncStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncStatusResponseBody</p>
+     */
     public static class SyncStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private Long checkpoint;

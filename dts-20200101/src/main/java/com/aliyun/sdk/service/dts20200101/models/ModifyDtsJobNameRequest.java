@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDtsJobNameRequest} extends {@link RequestModel}
  *
  * <p>ModifyDtsJobNameRequest</p>
@@ -111,7 +117,11 @@ public class ModifyDtsJobNameRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the DTS task. The DTS task can be a data migration, data synchronization, or change tracking task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -120,10 +130,14 @@ public class ModifyDtsJobNameRequest extends Request {
         }
 
         /**
-         * The new name of the DTS task.
-         * <p>
+         * <p>The new name of the DTS task.</p>
+         * <blockquote>
+         * <p> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder dtsJobName(String dtsJobName) {
             this.putQueryParameter("DtsJobName", dtsJobName);
@@ -132,7 +146,10 @@ public class ModifyDtsJobNameRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,7 +158,10 @@ public class ModifyDtsJobNameRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzfkjjb5gyy6i</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -150,7 +170,13 @@ public class ModifyDtsJobNameRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

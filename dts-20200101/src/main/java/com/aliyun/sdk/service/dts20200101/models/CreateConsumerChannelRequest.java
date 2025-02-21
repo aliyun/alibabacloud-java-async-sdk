@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConsumerChannelRequest} extends {@link RequestModel}
  *
  * <p>CreateConsumerChannelRequest</p>
@@ -141,7 +147,11 @@ public class CreateConsumerChannelRequest extends Request {
         } 
 
         /**
-         * The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use an informative name for easy identification.
+         * <p>The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>订阅组A</p>
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -150,11 +160,15 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * The password of the consumer group.
-         * <p>
+         * <p>The password of the consumer group.</p>
+         * <ul>
+         * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>A password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-         * *   A password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder consumerGroupPassword(String consumerGroupPassword) {
             this.putQueryParameter("ConsumerGroupPassword", consumerGroupPassword);
@@ -163,11 +177,15 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * The username of the consumer group.
-         * <p>
+         * <p>The username of the consumer group.</p>
+         * <ul>
+         * <li>A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</li>
+         * <li>A username cannot exceed 16 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (\_).
-         * *   A username cannot exceed 16 characters in length.
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder consumerGroupUserName(String consumerGroupUserName) {
             this.putQueryParameter("ConsumerGroupUserName", consumerGroupUserName);
@@ -176,10 +194,13 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
-         * <p>
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong>. parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId**. parameters.
+         * <strong>example:</strong>
+         * <p>dtsboss6pn1w******</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -188,10 +209,13 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
-         * <p>
+         * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong>. parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId**. parameters.
+         * <strong>example:</strong>
+         * <p>boss6pn1w******</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -200,7 +224,11 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +237,10 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2zx4uizich7y</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

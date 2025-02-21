@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendSynchronizationJobRequest} extends {@link RequestModel}
  *
  * <p>SuspendSynchronizationJobRequest</p>
@@ -124,7 +130,10 @@ public class SuspendSynchronizationJobRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -151,7 +160,10 @@ public class SuspendSynchronizationJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -160,15 +172,20 @@ public class SuspendSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to pause reverse synchronization only when the topology is two-way synchronization.</li>
+         * </ul>
          * 
-         * *   **Forward**
-         * *   **Reverse**
-         * 
-         * > 
-         * *   Default value: **Forward**.
-         * *   You can set this parameter to **Reverse** to pause reverse synchronization only when the topology is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -177,7 +194,11 @@ public class SuspendSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The ID of the data synchronization instance. You can call the **DescribeSynchronizationJobs** operation to query the instance ID.
+         * <p>The ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsmr1q4mc2152****</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

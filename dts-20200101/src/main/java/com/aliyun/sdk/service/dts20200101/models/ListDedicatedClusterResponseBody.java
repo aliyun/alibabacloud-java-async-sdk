@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDedicatedClusterResponseBody} extends {@link TeaModel}
  *
  * <p>ListDedicatedClusterResponseBody</p>
@@ -133,7 +139,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The statuses of all clusters.
+         * <p>The statuses of all clusters.</p>
          */
         public Builder dedicatedClusterStatusList(DedicatedClusterStatusList dedicatedClusterStatusList) {
             this.dedicatedClusterStatusList = dedicatedClusterStatusList;
@@ -141,7 +147,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -149,7 +158,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -157,7 +169,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -165,7 +180,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
+         * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -173,7 +191,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -181,7 +202,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +213,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -197,7 +224,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of clusters that meet the query condition.
+         * <p>The total number of clusters that meet the query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -210,6 +240,12 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDedicatedClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDedicatedClusterResponseBody</p>
+     */
     public static class DedicatedClusterStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuUtilization")
         private Long cpuUtilization;
@@ -465,7 +501,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             private Long usedMemGBSize; 
 
             /**
-             * The CPU utilization, in percentage.
+             * <p>The CPU utilization, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder cpuUtilization(Long cpuUtilization) {
                 this.cpuUtilization = cpuUtilization;
@@ -473,7 +512,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtscluster*******</p>
              */
             public Builder dedicatedClusterId(String dedicatedClusterId) {
                 this.dedicatedClusterId = dedicatedClusterId;
@@ -481,7 +523,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>daily_test</p>
              */
             public Builder dedicatedClusterName(String dedicatedClusterName) {
                 this.dedicatedClusterName = dedicatedClusterName;
@@ -489,7 +534,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The disk usage.
+             * <p>The disk usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder diskUtilization(Long diskUtilization) {
                 this.diskUtilization = diskUtilization;
@@ -497,7 +545,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DTS instance.
+             * <p>The ID of the DTS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsi03e3zty16i****</p>
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -505,7 +556,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of DTS units (DUs).
+             * <p>The number of DTS units (DUs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder du(Long du) {
                 this.du = du;
@@ -513,7 +567,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The DU usage, in percentage.
+             * <p>The DU usage, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.6667</p>
              */
             public Builder duUtilization(Long duUtilization) {
                 this.duUtilization = duUtilization;
@@ -521,7 +578,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1647424384606</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -529,7 +589,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The memory usage.
+             * <p>The memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder memUtilization(Long memUtilization) {
                 this.memUtilization = memUtilization;
@@ -537,7 +600,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes in the cluster.
+             * <p>The number of nodes in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -545,7 +611,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of over-provisioned DUs.
+             * <p>The number of over-provisioned DUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder oversoldDu(Long oversoldDu) {
                 this.oversoldDu = oversoldDu;
@@ -553,7 +622,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the DTS instance resides.
+             * <p>The ID of the region in which the DTS instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -561,17 +633,20 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>init</strong>: The cluster is being initialized.</li>
+             * <li><strong>schedule</strong>: The cluster is pending scheduling.</li>
+             * <li><strong>running</strong>: The cluster is running.</li>
+             * <li><strong>upgrade</strong>: The cluster is being upgraded.</li>
+             * <li><strong>downgrade</strong>: The cluster is being downgraded.</li>
+             * <li><strong>locked</strong>: The cluster is locked.</li>
+             * <li><strong>releasing</strong>: The cluster is being released.</li>
+             * <li><strong>released</strong>: The cluster is released.</li>
+             * </ul>
              * 
-             * *   **init**: The cluster is being initialized.
-             * *   **schedule**: The cluster is pending scheduling.
-             * *   **running**: The cluster is running.
-             * *   **upgrade**: The cluster is being upgraded.
-             * *   **downgrade**: The cluster is being downgraded.
-             * *   **locked**: The cluster is locked.
-             * *   **releasing**: The cluster is being released.
-             * *   **released**: The cluster is released.
+             * <strong>example:</strong>
+             * <p>init</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -579,7 +654,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of CPU cores.
+             * <p>The total number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCpuCore(Long totalCpuCore) {
                 this.totalCpuCore = totalCpuCore;
@@ -587,7 +665,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total disk capacity. Unit: GB.
+             * <p>The total disk capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder totalDiskGBSize(Long totalDiskGBSize) {
                 this.totalDiskGBSize = totalDiskGBSize;
@@ -595,7 +676,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory capacity. Unit: GB.
+             * <p>The total memory capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder totalMemGBSize(Long totalMemGBSize) {
                 this.totalMemGBSize = totalMemGBSize;
@@ -603,7 +687,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used CPU cores.
+             * <p>The number of used CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder usedCpuCore(Long usedCpuCore) {
                 this.usedCpuCore = usedCpuCore;
@@ -611,7 +698,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The used disk capacity. Unit: GB.
+             * <p>The used disk capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder usedDiskGBSize(Long usedDiskGBSize) {
                 this.usedDiskGBSize = usedDiskGBSize;
@@ -619,7 +709,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used DUs.
+             * <p>The number of used DUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder usedDu(Long usedDu) {
                 this.usedDu = usedDu;
@@ -627,7 +720,10 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The used memory capacity. Unit: GB.
+             * <p>The used memory capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder usedMemGBSize(Long usedMemGBSize) {
                 this.usedMemGBSize = usedMemGBSize;
@@ -641,9 +737,15 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDedicatedClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDedicatedClusterResponseBody</p>
+     */
     public static class DedicatedClusterStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedClusterStatus")
-        private java.util.List < DedicatedClusterStatus> dedicatedClusterStatus;
+        private java.util.List<DedicatedClusterStatus> dedicatedClusterStatus;
 
         private DedicatedClusterStatusList(Builder builder) {
             this.dedicatedClusterStatus = builder.dedicatedClusterStatus;
@@ -660,17 +762,17 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
         /**
          * @return dedicatedClusterStatus
          */
-        public java.util.List < DedicatedClusterStatus> getDedicatedClusterStatus() {
+        public java.util.List<DedicatedClusterStatus> getDedicatedClusterStatus() {
             return this.dedicatedClusterStatus;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedClusterStatus> dedicatedClusterStatus; 
+            private java.util.List<DedicatedClusterStatus> dedicatedClusterStatus; 
 
             /**
              * DedicatedClusterStatus.
              */
-            public Builder dedicatedClusterStatus(java.util.List < DedicatedClusterStatus> dedicatedClusterStatus) {
+            public Builder dedicatedClusterStatus(java.util.List<DedicatedClusterStatus> dedicatedClusterStatus) {
                 this.dedicatedClusterStatus = dedicatedClusterStatus;
                 return this;
             }

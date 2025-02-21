@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SummaryJobDetailRequest} extends {@link RequestModel}
  *
  * <p>SummaryJobDetailRequest</p>
@@ -153,10 +159,13 @@ public class SummaryJobDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration or data synchronization instance.
-         * <p>
+         * <p>The ID of the data migration or data synchronization instance.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the DtsJobId and DtsInstanceId parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the DtsJobId and DtsInstanceId parameters.
+         * <strong>example:</strong>
+         * <p>dtsl3m1213ye7l****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -165,10 +174,14 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the data migration or data synchronization task.
-         * <p>
+         * <p>The ID of the data migration or data synchronization task.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the DtsJobId and DtsInstanceId parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify at least one of the DtsJobId and DtsInstanceId parameters.
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -177,11 +190,15 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * The phase of the data migration task. Valid values:
-         * <p>
+         * <p>The phase of the data migration task. Valid values:</p>
+         * <ul>
+         * <li><strong>02</strong>: The task is in the schema migration phase.</li>
+         * <li><strong>03</strong>: The task is in the incremental migration phase.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **02**: The task is in the schema migration phase.
-         * *   **03**: The task is in the incremental migration phase.
+         * <strong>example:</strong>
+         * <p>02</p>
          */
         public Builder jobCode(String jobCode) {
             this.putQueryParameter("JobCode", jobCode);
@@ -190,7 +207,10 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,7 +219,10 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek25bwhtt22cjq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -208,11 +231,14 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * The type of schema definition. Valid values:
-         * <p>
+         * <p>The type of schema definition. Valid values:</p>
+         * <ul>
+         * <li><strong>before</strong>: schema migration or initial schema synchronization</li>
+         * <li><strong>after</strong>: DDL operations performed during incremental data migration or synchronization</li>
+         * </ul>
          * 
-         * *   **before**: schema migration or initial schema synchronization
-         * *   **after**: DDL operations performed during incremental data migration or synchronization
+         * <strong>example:</strong>
+         * <p>before</p>
          */
         public Builder structType(String structType) {
             this.putQueryParameter("StructType", structType);
@@ -221,15 +247,20 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * The synchronization direction of the data synchronization task. Valid values:
-         * <p>
+         * <p>The synchronization direction of the data synchronization task. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
+         * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to delete the reverse synchronization task only if the topology is two-way synchronization.</li>
+         * </ul>
          * 
-         * *   **Forward**: Data is synchronized from the source database to the destination database.
-         * *   **Reverse**: Data is synchronized from the destination database to the source database.
-         * 
-         * > 
-         * *   Default value: **Forward**.
-         * *   You can set this parameter to **Reverse** to delete the reverse synchronization task only if the topology is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -238,7 +269,13 @@ public class SummaryJobDetailRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

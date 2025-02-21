@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConsumerChannelRequest} extends {@link RequestModel}
  *
  * <p>DescribeConsumerChannelRequest</p>
@@ -138,10 +144,13 @@ public class DescribeConsumerChannelRequest extends Request {
         } 
 
         /**
-         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
-         * <p>
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
+         * <strong>example:</strong>
+         * <p>dtsboss6pn1w******</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -150,10 +159,13 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
-         * <p>
+         * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
+         * <strong>example:</strong>
+         * <p>boss6pn1w******</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -162,7 +174,10 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -171,7 +186,10 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +198,10 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * The parent task ID of the distributed task.
+         * <p>The parent task ID of the distributed task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsan5114c52******</p>
          */
         public Builder parentChannelId(String parentChannelId) {
             this.putQueryParameter("ParentChannelId", parentChannelId);
@@ -189,7 +210,11 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +223,10 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

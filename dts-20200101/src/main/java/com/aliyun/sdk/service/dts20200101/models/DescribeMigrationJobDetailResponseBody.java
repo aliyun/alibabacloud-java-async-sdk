@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMigrationJobDetailResponseBody</p>
@@ -145,7 +151,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * The details of full data migration.
+         * <p>The maximum number of data migration instances that can be displayed on one page.</p>
          */
         public Builder dataInitializationDetailList(DataInitializationDetailList dataInitializationDetailList) {
             this.dataInitializationDetailList = dataInitializationDetailList;
@@ -153,7 +159,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of incremental data migration.
+         * <p>The error message returned if full data migration failed.</p>
          */
         public Builder dataSynchronizationDetailList(DataSynchronizationDetailList dataSynchronizationDetailList) {
             this.dataSynchronizationDetailList = dataSynchronizationDetailList;
@@ -161,7 +167,19 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>Specifies whether to query the details of incremental data migration. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>false</strong></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,7 +187,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -177,7 +198,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -185,7 +209,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of data migration instances that can be displayed on one page.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -193,7 +220,19 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>Specifies whether to query the details of full data migration. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>false</strong></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0AE3CD0B-4148-426F-A90E-952467CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +240,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of schema migration.
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
          */
         public Builder structureInitializationDetailList(StructureInitializationDetailList structureInitializationDetailList) {
             this.structureInitializationDetailList = structureInitializationDetailList;
@@ -209,7 +248,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -217,7 +259,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that are returned.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -230,6 +275,12 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class DataInitializationDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
@@ -341,7 +392,16 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String totalRowNum; 
 
             /**
-             * The name of the database to which the migration object in the destination instance belongs.
+             * <p>The status of full data migration. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Full data migration is not started.</li>
+             * <li><strong>Migrating</strong>: Full data migration is in progress.</li>
+             * <li><strong>Failed</strong>: Full data migration failed.</li>
+             * <li><strong>Finished</strong>: Full data migration is completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -349,7 +409,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if full data migration failed.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -357,7 +420,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of records that have been migrated.
+             * <p>The details of full data migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200001</p>
              */
             public Builder finishRowNum(String finishRowNum) {
                 this.finishRowNum = finishRowNum;
@@ -365,7 +431,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time taken by full data migration.
+             * <p>The name of the database to which the migration object in the source instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder migrationTime(String migrationTime) {
                 this.migrationTime = migrationTime;
@@ -373,7 +442,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the migration object in the source instance belongs.
+             * <p>Indicates whether the call was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -381,13 +453,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of full data migration. Valid values:
-             * <p>
+             * <p>The total number of entries that are returned.</p>
              * 
-             * - **NotStarted**: Full data migration is not started.
-             * - **Migrating**: Full data migration is in progress.
-             * - **Failed**: Full data migration failed.
-             * - **Finished**: Full data migration is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +464,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The error message returned if the call failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -403,7 +475,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of records that are supposed to be migrated by the task.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201477</p>
              */
             public Builder totalRowNum(String totalRowNum) {
                 this.totalRowNum = totalRowNum;
@@ -417,9 +492,15 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class DataInitializationDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataInitializationDetail")
-        private java.util.List < DataInitializationDetail> dataInitializationDetail;
+        private java.util.List<DataInitializationDetail> dataInitializationDetail;
 
         private DataInitializationDetailList(Builder builder) {
             this.dataInitializationDetail = builder.dataInitializationDetail;
@@ -436,17 +517,17 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         /**
          * @return dataInitializationDetail
          */
-        public java.util.List < DataInitializationDetail> getDataInitializationDetail() {
+        public java.util.List<DataInitializationDetail> getDataInitializationDetail() {
             return this.dataInitializationDetail;
         }
 
         public static final class Builder {
-            private java.util.List < DataInitializationDetail> dataInitializationDetail; 
+            private java.util.List<DataInitializationDetail> dataInitializationDetail; 
 
             /**
              * DataInitializationDetail.
              */
-            public Builder dataInitializationDetail(java.util.List < DataInitializationDetail> dataInitializationDetail) {
+            public Builder dataInitializationDetail(java.util.List<DataInitializationDetail> dataInitializationDetail) {
                 this.dataInitializationDetail = dataInitializationDetail;
                 return this;
             }
@@ -458,6 +539,12 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class DataSynchronizationDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
@@ -533,7 +620,16 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the database to which the migration object in the destination instance belongs.
+             * <p>The status of incremental data migration. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Incremental data migration is not started.</li>
+             * <li><strong>Migrating</strong>: Incremental data migration is in progress.</li>
+             * <li><strong>Failed</strong>: Incremental data migration failed.</li>
+             * <li><strong>Finished</strong>: Incremental data migration is completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -541,7 +637,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if incremental data migration failed.
+             * <p>The total number of records that are supposed to be migrated by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The details of incremental data migration.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -549,7 +648,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the migration object in the source instance belongs.
+             * <p>The time taken by full data migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -557,13 +659,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of incremental data migration. Valid values:
-             * <p>
+             * <p>The number of records that have been migrated.</p>
              * 
-             * *   **NotStarted**: Incremental data migration is not started.
-             * *   **Migrating**: Incremental data migration is in progress.
-             * *   **Failed**: Incremental data migration failed.
-             * *   **Finished**: Incremental data migration is completed.
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -571,7 +670,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -585,9 +687,15 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class DataSynchronizationDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSynchronizationDetail")
-        private java.util.List < DataSynchronizationDetail> dataSynchronizationDetail;
+        private java.util.List<DataSynchronizationDetail> dataSynchronizationDetail;
 
         private DataSynchronizationDetailList(Builder builder) {
             this.dataSynchronizationDetail = builder.dataSynchronizationDetail;
@@ -604,17 +712,17 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         /**
          * @return dataSynchronizationDetail
          */
-        public java.util.List < DataSynchronizationDetail> getDataSynchronizationDetail() {
+        public java.util.List<DataSynchronizationDetail> getDataSynchronizationDetail() {
             return this.dataSynchronizationDetail;
         }
 
         public static final class Builder {
-            private java.util.List < DataSynchronizationDetail> dataSynchronizationDetail; 
+            private java.util.List<DataSynchronizationDetail> dataSynchronizationDetail; 
 
             /**
              * DataSynchronizationDetail.
              */
-            public Builder dataSynchronizationDetail(java.util.List < DataSynchronizationDetail> dataSynchronizationDetail) {
+            public Builder dataSynchronizationDetail(java.util.List<DataSynchronizationDetail> dataSynchronizationDetail) {
                 this.dataSynchronizationDetail = dataSynchronizationDetail;
                 return this;
             }
@@ -626,6 +734,12 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class StructureInitializationDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
@@ -725,7 +839,16 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the database to which the migration object in the destination instance belongs.
+             * <p>The status of constraint creation. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong></li>
+             * <li><strong>Migrating</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Finished</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -733,7 +856,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if constraints failed to be created.
+             * <p>The constraints of the migration object, such as indexes and foreign keys. </p>
+             * <blockquote>
+             * <p> This parameter is returned only if the <strong>ObjectType</strong> parameter is set to <strong>Table</strong> and the migration object has constraints.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist；</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -741,7 +870,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The syntax to create constraints.
+             * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE SEQUENCE &quot;public&quot;.&quot;collections_id_seq&quot;   MINVALUE 1   MAXVALUE 9223372036854775807   START 249   INCREMENT BY 1 ;</p>
              */
             public Builder objectDefinition(String objectDefinition) {
                 this.objectDefinition = objectDefinition;
@@ -749,7 +881,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of migration object.
+             * <p>The name of the database to which the migration object in the source instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -757,7 +892,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the migration object. The value is **Table**.
+             * <p>The name of migration object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -765,7 +903,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the migration object in the source instance belongs.
+             * <p>The error message returned if schema migration failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -773,13 +914,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of constraint creation. Valid values:
-             * <p>
+             * <p>The type of the migration object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
              * 
-             * - **NotStarted**
-             * - **Migrating**
-             * - **Failed**
-             * - **Finished**
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -793,9 +931,15 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class ConstraintList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StructureInitializationDetail")
-        private java.util.List < StructureInitializationDetail> structureInitializationDetail;
+        private java.util.List<StructureInitializationDetail> structureInitializationDetail;
 
         private ConstraintList(Builder builder) {
             this.structureInitializationDetail = builder.structureInitializationDetail;
@@ -812,17 +956,17 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         /**
          * @return structureInitializationDetail
          */
-        public java.util.List < StructureInitializationDetail> getStructureInitializationDetail() {
+        public java.util.List<StructureInitializationDetail> getStructureInitializationDetail() {
             return this.structureInitializationDetail;
         }
 
         public static final class Builder {
-            private java.util.List < StructureInitializationDetail> structureInitializationDetail; 
+            private java.util.List<StructureInitializationDetail> structureInitializationDetail; 
 
             /**
              * StructureInitializationDetail.
              */
-            public Builder structureInitializationDetail(java.util.List < StructureInitializationDetail> structureInitializationDetail) {
+            public Builder structureInitializationDetail(java.util.List<StructureInitializationDetail> structureInitializationDetail) {
                 this.structureInitializationDetail = structureInitializationDetail;
                 return this;
             }
@@ -834,6 +978,12 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class StructureInitializationDetailListStructureInitializationDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConstraintList")
         private ConstraintList constraintList;
@@ -945,10 +1095,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The constraints of the migration object, such as indexes and foreign keys. 
-             * <p>
-             * 
-             * >  This parameter is returned only if the **ObjectType** parameter is set to **Table** and the migration object has constraints.
+             * <p>The schema of the migration object.</p>
              */
             public Builder constraintList(ConstraintList constraintList) {
                 this.constraintList = constraintList;
@@ -956,7 +1103,16 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the migration object in the destination instance belongs.
+             * <p>The status of schema migration. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: Schema migration is not started.</li>
+             * <li><strong>Migrating</strong>: Schema migration is in progress.</li>
+             * <li><strong>Failed</strong>: Schema migration failed.</li>
+             * <li><strong>Finished</strong>: Schema migration is completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -964,7 +1120,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if schema migration failed.
+             * <p>The details of schema migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: DTS-1020042 Execute sql error sql: ERROR: column &quot;id&quot; named in key does not exist</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -972,7 +1131,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the migration object.
+             * <p>The task has failed for too long and cannot be restored</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>runoob_id</code>  int(10) unsigned   auto_increment  COMMENT &quot;&quot;   NOT NULL   , \n<code>runoob_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT &quot;&quot;   NOT NULL   , \n<code>runoob_author1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT &quot;&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT &quot;&quot;   NULL   \n, PRIMARY KEY (<code>runoob_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = &quot;&quot; ;\n</p>
              */
             public Builder objectDefinition(String objectDefinition) {
                 this.objectDefinition = objectDefinition;
@@ -980,7 +1142,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of migration object.
+             * <p>The name of the database to which the migration object in the source instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -988,7 +1153,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the migration object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.
+             * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -996,7 +1164,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database to which the migration object in the source instance belongs.
+             * <p>The error message returned if incremental data migration failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -1004,13 +1175,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of schema migration. Valid values:
-             * <p>
+             * <p>The table name.</p>
              * 
-             * - **NotStarted**: Schema migration is not started.
-             * - **Migrating**: Schema migration is in progress.
-             * - **Failed**: Schema migration failed.
-             * - **Finished**: Schema migration is completed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1024,9 +1192,15 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailResponseBody</p>
+     */
     public static class StructureInitializationDetailList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StructureInitializationDetail")
-        private java.util.List < StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail;
+        private java.util.List<StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail;
 
         private StructureInitializationDetailList(Builder builder) {
             this.structureInitializationDetail = builder.structureInitializationDetail;
@@ -1043,17 +1217,17 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         /**
          * @return structureInitializationDetail
          */
-        public java.util.List < StructureInitializationDetailListStructureInitializationDetail> getStructureInitializationDetail() {
+        public java.util.List<StructureInitializationDetailListStructureInitializationDetail> getStructureInitializationDetail() {
             return this.structureInitializationDetail;
         }
 
         public static final class Builder {
-            private java.util.List < StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail; 
+            private java.util.List<StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail; 
 
             /**
              * StructureInitializationDetail.
              */
-            public Builder structureInitializationDetail(java.util.List < StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail) {
+            public Builder structureInitializationDetail(java.util.List<StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail) {
                 this.structureInitializationDetail = structureInitializationDetail;
                 return this;
             }

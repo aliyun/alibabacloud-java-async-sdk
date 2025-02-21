@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendDtsJobsRequest} extends {@link RequestModel}
  *
  * <p>SuspendDtsJobsRequest</p>
@@ -96,12 +102,17 @@ public class SuspendDtsJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration or data synchronization task.
-         * <p>
+         * <p>The ID of the data migration or data synchronization task.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>For multiple tasks, separate them with commas (,).</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * *   For multiple tasks, separate them with commas (,).
-         * *   You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <strong>example:</strong>
+         * <p>hfi12iv4z7e****</p>
          */
         public Builder dtsJobIds(String dtsJobIds) {
             this.putQueryParameter("DtsJobIds", dtsJobIds);
@@ -110,7 +121,10 @@ public class SuspendDtsJobsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +133,10 @@ public class SuspendDtsJobsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -128,7 +145,13 @@ public class SuspendDtsJobsRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

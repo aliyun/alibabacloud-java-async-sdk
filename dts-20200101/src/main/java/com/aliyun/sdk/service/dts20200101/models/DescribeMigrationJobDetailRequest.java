@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMigrationJobDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeMigrationJobDetailRequest</p>
@@ -176,7 +182,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -185,7 +194,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,7 +206,11 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.
+         * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsta7w132u12h****</p>
          */
         public Builder migrationJobId(String migrationJobId) {
             this.putQueryParameter("MigrationJobId", migrationJobId);
@@ -212,7 +228,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -221,7 +240,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,7 +252,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the data migration instance resides. For more information, see List of supported regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +264,19 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Specifies whether to query the details of schema migration. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Default value: <strong>false</strong></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -254,6 +291,12 @@ public class DescribeMigrationJobDetailRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMigrationJobDetailRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeMigrationJobDetailRequest</p>
+     */
     public static class MigrationMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
@@ -305,14 +348,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
             private Boolean structureInitialization; 
 
             /**
-             * Specifies whether to query the details of full data migration. Valid values:
-             * <p>
+             * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
              * 
-             * *   **true**: yes
-             * 
-             * *   **false**: no
-             * 
-             * > Default value: **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -320,14 +359,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
             }
 
             /**
-             * Specifies whether to query the details of incremental data migration. Valid values:
-             * <p>
+             * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
              * 
-             * *   **true**: yes
-             * 
-             * *   **false**: no
-             * 
-             * > Default value: **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -335,14 +370,10 @@ public class DescribeMigrationJobDetailRequest extends Request {
             }
 
             /**
-             * Specifies whether to query the details of schema migration. Valid values:
-             * <p>
+             * <p>When you call this operation, the data migration task must be in the Migrating, Failed, Paused, or Finished state.</p>
              * 
-             * *   **true**: yes
-             * 
-             * *   **false**: no
-             * 
-             * > Default value: **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;

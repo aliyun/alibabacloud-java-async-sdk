@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDtsJobDedicatedClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDtsJobDedicatedClusterRequest</p>
@@ -109,7 +115,10 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * DedicatedClusterId.
+         * <p>The dedicated cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsxxxx</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
@@ -118,7 +127,10 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         }
 
         /**
-         * DtsJobIds.
+         * <p>The DTS task IDs. The value can be a JSON array that consists of multiple DTS task IDs. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;dtsxxxx01&quot;, &quot;dtsxxx02&quot;]</p>
          */
         public Builder dtsJobIds(String dtsJobIds) {
             this.putQueryParameter("DtsJobIds", dtsJobIds);
@@ -136,7 +148,13 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the DTS instance resides.</p>
+         * <blockquote>
+         * <p>For information about the regions that support dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated cluster</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +163,10 @@ public class ModifyDtsJobDedicatedClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

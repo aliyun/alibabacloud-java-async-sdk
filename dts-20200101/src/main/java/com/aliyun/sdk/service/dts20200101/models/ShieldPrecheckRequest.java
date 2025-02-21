@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShieldPrecheckRequest} extends {@link RequestModel}
  *
  * <p>ShieldPrecheckRequest</p>
@@ -97,7 +103,14 @@ public class ShieldPrecheckRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration or data synchronization instance. You can call the **DescribeMigrationJobs** or DescribeSynchronizationJobs operation to query the instance ID.
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsi76118o3w92****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -106,20 +119,27 @@ public class ShieldPrecheckRequest extends Request {
         }
 
         /**
-         * The precheck items that you want to ignore. Separate multiple items with commas (,). Valid values:
-         * <p>
+         * <p>The precheck items that you want to ignore. Separate multiple items with commas (,). Valid values:</p>
+         * <ul>
+         * <li><p><strong>CHECK_SAME_OBJ</strong>: schema name conflict</p>
+         * </li>
+         * <li><p><strong>CHECK_SAME_USER</strong>: multiple usernames for one instance</p>
+         * </li>
+         * <li><p><strong>CHECK_SRC</strong>: source database version</p>
+         * </li>
+         * <li><p><strong>CHECK_TOPOLOGY</strong>: topology</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>CHECK_SERVER_ID</strong>: value of server_id in the source database</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CHECK_SAME_OBJ**: schema name conflict
-         * 
-         * *   **CHECK_SAME_USER**: multiple usernames for one instance
-         * 
-         * *   **CHECK_SRC**: source database version
-         * 
-         * *   **CHECK_TOPOLOGY**: topology
-         * 
-         * > For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).
-         * 
-         * *   **CHECK_SERVER_ID**: value of server_id in the source database
+         * <strong>example:</strong>
+         * <p>CHECK_SAME_OBJ</p>
          */
         public Builder precheckItems(String precheckItems) {
             this.putQueryParameter("PrecheckItems", precheckItems);
@@ -137,7 +157,10 @@ public class ShieldPrecheckRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCheckReportUrlRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataCheckReportUrlRequest</p>
@@ -136,11 +142,15 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * The data verification method. Valid values:
-         * <p>
+         * <p>The data verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: full data verification.</li>
+         * <li><strong>2</strong>: incremental data verification.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: full data verification.
-         * *   **2**: incremental data verification.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -149,7 +159,11 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * The name of the verified source database.
+         * <p>The name of the verified source database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsdb</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -158,7 +172,11 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * The ID of the Data Transmission Service (DTS) task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>The ID of the Data Transmission Service (DTS) task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4612nr2182****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -176,7 +194,11 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * The name of the table verified in the source database.
+         * <p>The name of the table verified in the source database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>student</p>
          */
         public Builder tbName(String tbName) {
             this.putQueryParameter("TbName", tbName);

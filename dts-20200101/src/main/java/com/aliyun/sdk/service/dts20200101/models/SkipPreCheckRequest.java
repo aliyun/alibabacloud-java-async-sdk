@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SkipPreCheckRequest} extends {@link RequestModel}
  *
  * <p>SkipPreCheckRequest</p>
@@ -139,7 +145,11 @@ public class SkipPreCheckRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c7412z57g8k****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -148,7 +158,10 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * The ID of the precheck task. You can call the **DescribePreCheckStatus** operation to query the task ID.
+         * <p>The precheck task ID. You can call the <strong>DescribePreCheckStatus</strong> operation to query the task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4my3zg929a****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -157,7 +170,10 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,7 +182,10 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -175,13 +194,15 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * Specifies whether to skip the precheck item. Valid values:
-         * <p>
+         * <p>Specifies whether to skip the precheck item. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: skips the precheck item.
-         * *   **false**: does not skip the precheck item.
-         * 
-         * >  This parameter is required.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder skip(Boolean skip) {
             this.putQueryParameter("Skip", skip);
@@ -190,22 +211,21 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * The shortened name of the precheck item. Valid values:
-         * <p>
+         * <p>The shortened name of the precheck item. Valid values:</p>
+         * <ul>
+         * <li><strong>[&quot;CHECK_SAME_OBJ&quot;]</strong>: object name conflict.</li>
+         * <li><strong>[&quot;CHECK_SAME_USER&quot;]</strong>: username conflict.</li>
+         * <li><strong>[&quot;CHECK_SRC&quot;]</strong>: source database version.</li>
+         * <li><strong>[&quot;CHECK_TOPOLOGY&quot;]</strong>: topology. For more information about the topologies supported by Data Transmission Service (DTS), see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</li>
+         * <li><strong>[&quot;CHECK_SERVER_ID&quot;]</strong>: the server ID of the source database.</li>
+         * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY&quot;]</strong>: existence of objects in the destination database.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Separate multiple item names with commas (,). Example: <strong>[&quot;CHECK_SRC&quot;,&quot;CHECK_SAME_OBJ&quot;]</strong>.</p>
+         * </blockquote>
          * 
-         * *   **CHECK_SAME_OBJ**: object name conflict
-         * 
-         * *   **CHECK_SAME_USER**: multiple usernames for one instance
-         * 
-         * *   **CHECK_SRC**: source database version
-         * 
-         * *   **CHECK_TOPOLOGY**: topology type
-         * 
-         * > For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).
-         * 
-         * *   **CHECK_SERVER_ID**: the server ID of the source database
-         * 
-         * >  Separate multiple shortened names with commas (,).
+         * <strong>example:</strong>
+         * <p>[&quot;CHECK_SAME_OBJ&quot;]</p>
          */
         public Builder skipPreCheckItems(String skipPreCheckItems) {
             this.putQueryParameter("SkipPreCheckItems", skipPreCheckItems);
@@ -214,22 +234,21 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * The name of the precheck item. This parameter corresponds to the **SkipPreCheckItems** parameter. Valid values:
-         * <p>
+         * <p>The precheck item name. This parameter corresponds to <strong>SkipPreCheckItems</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>: object name conflict.</li>
+         * <li><strong>[&quot;CHECK_SAME_USER_DETAIL&quot;]</strong>: username conflict.</li>
+         * <li><strong>[&quot;CHECK_SRC_DETAIL&quot;]</strong>: source database version.</li>
+         * <li><strong>[&quot;CHECK_TOPOLOGY_DETAIL&quot;]</strong>: topology. For more information about the topologies supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Synchronization topologies</a>.</li>
+         * <li><strong>[&quot;CHECK_SERVER_ID_DETAIL&quot;]</strong>: the server ID of the source database.</li>
+         * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY_DETAIL&quot;]</strong>: empty tables in the destination database.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Separate multiple item names with commas (,). Example: <strong>[&quot;CHECK_SRC_DETAIL&quot;,&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>.</p>
+         * </blockquote>
          * 
-         * *   **CHECK_SAME_OBJ_DETAIL**: object name conflict
-         * 
-         * *   **CHECK_SAME_USER_DETAIL**: multiple usernames for one instance
-         * 
-         * *   **CHECK_SRC_DETAIL**: source database version
-         * 
-         * *   **CHECK_TOPOLOGY_DETAIL**: topology type
-         * 
-         * > For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).
-         * 
-         * *   **CHECK_SERVER_ID_DETAIL**: the server ID of the source database
-         * 
-         * >  Separate multiple item names with commas (,).
+         * <strong>example:</strong>
+         * <p>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</p>
          */
         public Builder skipPreCheckNames(String skipPreCheckNames) {
             this.putQueryParameter("SkipPreCheckNames", skipPreCheckNames);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDedicatedClusterRequest} extends {@link RequestModel}
  *
  * <p>ListDedicatedClusterRequest</p>
@@ -179,11 +185,14 @@ public class ListDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * The basis on which the retrieved entries are sorted if multiple DTS dedicated clusters are returned. Valid values:
-         * <p>
+         * <p>The basis on which the retrieved entries are sorted if multiple DTS dedicated clusters are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>gmtCreated</strong>: the time when a cluster was created.</li>
+         * <li><strong>orderCount</strong>: the number of nodes in a cluster.</li>
+         * </ul>
          * 
-         * *   **gmtCreated**: the time when a cluster was created.
-         * *   **orderCount**: the number of nodes in a cluster.
+         * <strong>example:</strong>
+         * <p>gmtCreated</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -192,11 +201,14 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the retrieved entries. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the retrieved entries. Valid values:</p>
+         * <ul>
+         * <li>asc: sorts the retrieved entries in ascending order. This is the default value.</li>
+         * <li>desc: sorts the retrieved entries in descending order.</li>
+         * </ul>
          * 
-         * *   asc: sorts the retrieved entries in ascending order. This is the default value.
-         * *   desc: sorts the retrieved entries in descending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putQueryParameter("OrderDirection", orderDirection);
@@ -214,7 +226,10 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,7 +238,10 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The number of clusters to return on each page.
+         * <p>The number of clusters to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,10 +250,13 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The content of the query condition.
-         * <p>
+         * <p>The content of the query condition.</p>
+         * <blockquote>
+         * <p> You must set the <strong>Type parameter</strong> to specify the type of the query condition.</p>
+         * </blockquote>
          * 
-         * >  You must set the **Type parameter** to specify the type of the query condition.
+         * <strong>example:</strong>
+         * <p>dtspk3f13r731m****</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -244,7 +265,10 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +277,10 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfntftbiobqyky</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -262,17 +289,20 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The status of the cluster. Valid values:
-         * <p>
+         * <p>The status of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The cluster is being initialized.</li>
+         * <li><strong>schedule</strong>: The cluster is pending scheduling.</li>
+         * <li><strong>running</strong>: The cluster is running.</li>
+         * <li><strong>upgrade</strong>: The cluster is being upgraded.</li>
+         * <li><strong>downgrade</strong>: The cluster is being downgraded.</li>
+         * <li><strong>locked</strong>: The cluster is locked.</li>
+         * <li><strong>releasing</strong>: The cluster is being released.</li>
+         * <li><strong>released</strong>: The cluster is released.</li>
+         * </ul>
          * 
-         * *   **init**: The cluster is being initialized.
-         * *   **schedule**: The cluster is pending scheduling.
-         * *   **running**: The cluster is running.
-         * *   **upgrade**: The cluster is being upgraded.
-         * *   **downgrade**: The cluster is being downgraded.
-         * *   **locked**: The cluster is locked.
-         * *   **releasing**: The cluster is being released.
-         * *   **released**: The cluster is released.
+         * <strong>example:</strong>
+         * <p>init</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -281,14 +311,18 @@ public class ListDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>NAME</strong>: the name of the cluster.</li>
+         * <li><strong>INSTANCE</strong>: the ID of a cluster instance.</li>
+         * <li><strong>DEDICAETEDCLUSTERID</strong>: the ID of a dedicated cluster.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify the query condition by using the <strong>Params</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **NAME**: the name of the cluster.
-         * *   **INSTANCE**: the ID of a cluster instance.
-         * *   **DEDICAETEDCLUSTERID**: the ID of a dedicated cluster.
-         * 
-         * >  You must specify the query condition by using the **Params** parameter.
+         * <strong>example:</strong>
+         * <p>NAME</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

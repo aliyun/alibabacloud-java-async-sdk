@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagValuesRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagValuesRequest</p>
@@ -152,13 +158,17 @@ public class DescribeTagValuesRequest extends Request {
         } 
 
         /**
-         * The type of the tag key. Valid values:
-         * <p>
+         * <p>The type of the tag key. Valid values:</p>
+         * <ul>
+         * <li><strong>Custom</strong>: The tag key is created by users.</li>
+         * <li><strong>System</strong>: The tag key is created by the system.</li>
+         * </ul>
+         * <blockquote>
+         * <p> By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.</p>
+         * </blockquote>
          * 
-         * *   **Custom**: The tag key is created by users.
-         * *   **System**: The tag key is created by the system.
-         * 
-         * >  By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -167,10 +177,13 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * The tag key.
-         * <p>
+         * <p>The tag key.</p>
+         * <blockquote>
+         * <p> This parameter is required.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required.
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -179,7 +192,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * The page number of the start page to return for a tag key that has multiple values. The valid value ranges from 1 to the maximum value of the INTEGER data type. This parameter is often used with the PageSize parameter. Default value: 1.
+         * <p>The page number of the start page to return for a tag key that has multiple values. The valid value ranges from 1 to the maximum value of the INTEGER data type. This parameter is often used with the PageSize parameter. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +204,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * The number of tag values to return each time for a tag key that has multiple values. Default value: 20.
+         * <p>The number of tag values to return each time for a tag key that has multiple values. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +216,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -206,7 +228,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -215,10 +240,13 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
-         * <p>
+         * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> If this parameter is left empty, the values of all tag keys of the current user are returned.</p>
+         * </blockquote>
          * 
-         * >  If this parameter is left empty, the values of all tag keys of the current user are returned.
+         * <strong>example:</strong>
+         * <p>dtsl5o11f9029c****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -227,7 +255,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to **ALIYUN::DTS::INSTANCE**.
+         * <p>The resource type. Set the value to <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::DTS::INSTANCE</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

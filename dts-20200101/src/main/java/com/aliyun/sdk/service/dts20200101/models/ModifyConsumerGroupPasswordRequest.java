@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyConsumerGroupPasswordRequest} extends {@link RequestModel}
  *
  * <p>ModifyConsumerGroupPasswordRequest</p>
@@ -183,7 +189,10 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -192,10 +201,11 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group.
-         * <p>
+         * <p>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the consumer group ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.
+         * <strong>example:</strong>
+         * <p>dtswc411cg617p****</p>
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.putQueryParameter("ConsumerGroupID", consumerGroupID);
@@ -204,7 +214,10 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * The name of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group name.
+         * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -213,7 +226,15 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * The current password of the consumer group.
+         * <p>The new password of the consumer group.</p>
+         * <ul>
+         * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>A password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder consumerGroupPassword(String consumerGroupPassword) {
             this.putQueryParameter("ConsumerGroupPassword", consumerGroupPassword);
@@ -222,7 +243,10 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * The username of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the username.
+         * <p>The username of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder consumerGroupUserName(String consumerGroupUserName) {
             this.putQueryParameter("ConsumerGroupUserName", consumerGroupUserName);
@@ -249,7 +273,10 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -258,7 +285,11 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
+         * <p>The ID of the change tracking instance. You can call the <strong>DescribeSubscriptionInstances</strong> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsg2m10r1x15a****</p>
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);
@@ -267,11 +298,15 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * The new password of the consumer group.
-         * <p>
+         * <p>The new password of the consumer group.</p>
+         * <ul>
+         * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>A password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
-         * *   A password must be 8 to 32 characters in length.
+         * <strong>example:</strong>
+         * <p>Test654321</p>
          */
         public Builder consumerGroupNewPassword(String consumerGroupNewPassword) {
             this.putQueryParameter("consumerGroupNewPassword", consumerGroupNewPassword);

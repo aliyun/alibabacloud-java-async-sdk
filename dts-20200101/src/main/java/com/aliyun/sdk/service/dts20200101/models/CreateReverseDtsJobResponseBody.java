@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReverseDtsJobResponseBody} extends {@link TeaModel}
  *
  * <p>CreateReverseDtsJobResponseBody</p>
@@ -109,7 +115,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DtsInstanceId.
+         * <p>The ID of the instance corresponding to the generated reverse task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsor1f9kr822l****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.dtsInstanceId = dtsInstanceId;
@@ -117,7 +126,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * <p>The ID of the generated reverse synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n99m9jx822k****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -125,7 +137,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +148,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +159,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -149,7 +170,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +181,10 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

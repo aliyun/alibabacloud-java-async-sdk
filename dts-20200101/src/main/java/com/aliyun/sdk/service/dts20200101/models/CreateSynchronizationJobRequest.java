@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSynchronizationJobRequest} extends {@link RequestModel}
  *
  * <p>CreateSynchronizationJobRequest</p>
@@ -286,7 +292,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -295,7 +304,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -304,7 +316,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * If you set the **SourceEndpoint.InstanceType** parameter to **DRDS**, you must specify the DBInstanceCount parameter. This parameter specifies the number of private RDS instances attached to the source PolarDB-X instance. Default value: **1**.
+         * <p>If you set the <strong>SourceEndpoint.InstanceType</strong> parameter to <strong>DRDS</strong>, you must specify the DBInstanceCount parameter. This parameter specifies the number of private RDS instances attached to the source PolarDB-X instance. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder DBInstanceCount(Integer DBInstanceCount) {
             this.putQueryParameter("DBInstanceCount", DBInstanceCount);
@@ -313,10 +328,14 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The ID of the region where the destination database resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
+         * <p>The ID of the region where the destination database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> If the <strong>SourceRegion</strong> parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If the **SourceRegion** parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destRegion(String destRegion) {
             this.putQueryParameter("DestRegion", destRegion);
@@ -334,11 +353,15 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The billing method of the data synchronization instance.
-         * <p>
+         * <p>The billing method of the data synchronization instance.</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong> (default value): pay-as-you-go</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid** (default value): pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -347,13 +370,17 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The billing cycle of the subscription instance. Valid values:
-         * <p>
+         * <p>The billing cycle of the subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify this parameter only if you set the PayType parameter to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * >  You must specify this parameter only if you set the PayType parameter to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -371,7 +398,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -380,7 +410,11 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The ID of the region where the source database resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the source database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);
@@ -389,10 +423,14 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The specification of the data synchronization instance. Valid values: **micro**, **small**, **medium**, and **large**.
-         * <p>
+         * <p>The specification of the data synchronization instance. Valid values: <strong>micro</strong>, <strong>small</strong>, <strong>medium</strong>, and <strong>large</strong>.</p>
+         * <blockquote>
+         * <p> For more information about the test performance of each specification, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the test performance of each specification, see [Specifications of data synchronization instances](~~26605~~).
+         * <strong>example:</strong>
+         * <p>small</p>
          */
         public Builder synchronizationJobClass(String synchronizationJobClass) {
             this.putQueryParameter("SynchronizationJobClass", synchronizationJobClass);
@@ -401,15 +439,20 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The synchronization topology. Valid values:
-         * <p>
+         * <p>The synchronization topology. Valid values:</p>
+         * <ul>
+         * <li><strong>oneway</strong>: one-way synchronization</li>
+         * <li><strong>bidirectional</strong>: two-way synchronization</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The default value is <strong>oneway</strong>.</li>
+         * <li>This parameter can be set to <strong>bidirectional</strong> only when the <strong>SourceEndpoint.InstanceType</strong> and <strong>DestinationEndpoint.InstanceType</strong> parameters are set to <strong>MySQL</strong>, <strong>PolarDB</strong>, or <strong>Redis</strong>.</li>
+         * </ul>
          * 
-         * *   **oneway**: one-way synchronization
-         * *   **bidirectional**: two-way synchronization
-         * 
-         * > 
-         * *   The default value is **oneway**.
-         * *   This parameter can be set to **bidirectional** only when the **SourceEndpoint.InstanceType** and **DestinationEndpoint.InstanceType** parameters are set to **MySQL**, **PolarDB**, or **Redis**.
+         * <strong>example:</strong>
+         * <p>oneway</p>
          */
         public Builder topology(String topology) {
             this.putQueryParameter("Topology", topology);
@@ -418,13 +461,17 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The subscription length.
-         * <p>
+         * <p>The subscription length.</p>
+         * <ul>
+         * <li>If the billing cycle is <strong>Year</strong>, the value range is <strong>1 to 5</strong>.</li>
+         * <li>If the billing cycle is <strong>Month</strong>, the value range is <strong>1 to 60</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify this parameter only if you set the PayType parameter to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   If the billing cycle is **Year**, the value range is **1 to 5**.
-         * *   If the billing cycle is **Month**, the value range is **1 to 60**.
-         * 
-         * >  You must specify this parameter only if you set the PayType parameter to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -433,7 +480,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The network type. Valid value: **Intranet**, which indicates virtual private cloud (VPC).
+         * <p>The network type. Valid value: <strong>Intranet</strong>, which indicates virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("networkType", networkType);
@@ -448,6 +498,12 @@ public class CreateSynchronizationJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSynchronizationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSynchronizationJobRequest</p>
+     */
     public static class DestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -475,17 +531,22 @@ public class CreateSynchronizationJobRequest extends Request {
             private String instanceType; 
 
             /**
-             * The instance type of the destination database. Valid values:
-             * <p>
+             * <p>The instance type of the destination database. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
+             * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
+             * <li><strong>Redis</strong>: Redis database</li>
+             * <li><strong>MaxCompute</strong>: MaxCompute project</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>Default value: <strong>MySQL</strong>.</li>
+             * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Database types, initial synchronization types, and synchronization topologies</a>.</li>
+             * </ul>
              * 
-             * *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
-             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
-             * *   **Redis**: Redis database
-             * *   **MaxCompute**: MaxCompute project
-             * 
-             * > 
-             * *   Default value: **MySQL**.
-             * *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -499,6 +560,12 @@ public class CreateSynchronizationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateSynchronizationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSynchronizationJobRequest</p>
+     */
     public static class SourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -526,17 +593,22 @@ public class CreateSynchronizationJobRequest extends Request {
             private String instanceType; 
 
             /**
-             * The instance type of the source database. Valid values:
-             * <p>
+             * <p>The instance type of the source database. Valid values:</p>
+             * <ul>
+             * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
+             * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
+             * <li><strong>Redis</strong>: Redis database</li>
+             * <li><strong>DRDS</strong>: PolarDB-X instance V1.0</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>Default value: <strong>MySQL</strong>.</li>
+             * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Database types, initial synchronization types, and synchronization topologies</a>.</li>
+             * </ul>
              * 
-             * *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
-             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
-             * *   **Redis**: Redis database
-             * *   **DRDS**: PolarDB-X instance V1.0
-             * 
-             * > 
-             * *   Default value: **MySQL**.
-             * *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

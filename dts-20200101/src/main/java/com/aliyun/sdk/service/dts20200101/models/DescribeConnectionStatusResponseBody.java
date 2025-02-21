@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConnectionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConnectionStatusResponseBody</p>
  */
 public class DescribeConnectionStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DestinationConnectionStatus")
-    private java.util.Map < String, ? > destinationConnectionStatus;
+    private java.util.Map<String, ?> destinationConnectionStatus;
 
     @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
@@ -24,7 +30,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SourceConnectionStatus")
-    private java.util.Map < String, ? > sourceConnectionStatus;
+    private java.util.Map<String, ?> sourceConnectionStatus;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
@@ -49,7 +55,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
     /**
      * @return destinationConnectionStatus
      */
-    public java.util.Map < String, ? > getDestinationConnectionStatus() {
+    public java.util.Map<String, ?> getDestinationConnectionStatus() {
         return this.destinationConnectionStatus;
     }
 
@@ -77,7 +83,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
     /**
      * @return sourceConnectionStatus
      */
-    public java.util.Map < String, ? > getSourceConnectionStatus() {
+    public java.util.Map<String, ?> getSourceConnectionStatus() {
         return this.sourceConnectionStatus;
     }
 
@@ -89,23 +95,29 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > destinationConnectionStatus; 
+        private java.util.Map<String, ?> destinationConnectionStatus; 
         private String errCode; 
         private String errMessage; 
         private String requestId; 
-        private java.util.Map < String, ? > sourceConnectionStatus; 
+        private java.util.Map<String, ?> sourceConnectionStatus; 
         private String success; 
 
         /**
-         * The connectivity of DTS servers to the destination database.
+         * <p>The connectivity of DTS servers to the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;PolarDB_o JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</p>
          */
-        public Builder destinationConnectionStatus(java.util.Map < String, ? > destinationConnectionStatus) {
+        public Builder destinationConnectionStatus(java.util.Map<String, ?> destinationConnectionStatus) {
             this.destinationConnectionStatus = destinationConnectionStatus;
             return this;
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -113,7 +125,10 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -121,7 +136,10 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A47C784-70EF-4111-8677-369CAA00****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,15 +147,21 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The connectivity of DTS servers to the source database.
+         * <p>The connectivity of DTS servers to the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;Oracle JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: false       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</p>
          */
-        public Builder sourceConnectionStatus(java.util.Map < String, ? > sourceConnectionStatus) {
+        public Builder sourceConnectionStatus(java.util.Map<String, ?> sourceConnectionStatus) {
             this.sourceConnectionStatus = sourceConnectionStatus;
             return this;
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

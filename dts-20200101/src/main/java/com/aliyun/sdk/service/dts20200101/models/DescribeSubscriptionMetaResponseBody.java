@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubscriptionMetaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSubscriptionMetaResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SubscriptionMetaList")
-    private java.util.List < SubscriptionMetaList> subscriptionMetaList;
+    private java.util.List<SubscriptionMetaList> subscriptionMetaList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
@@ -77,7 +83,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     /**
      * @return subscriptionMetaList
      */
-    public java.util.List < SubscriptionMetaList> getSubscriptionMetaList() {
+    public java.util.List<SubscriptionMetaList> getSubscriptionMetaList() {
         return this.subscriptionMetaList;
     }
 
@@ -93,11 +99,14 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         private String errMessage; 
         private String httpStatusCode; 
         private String requestId; 
-        private java.util.List < SubscriptionMetaList> subscriptionMetaList; 
+        private java.util.List<SubscriptionMetaList> subscriptionMetaList; 
         private String success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -105,7 +114,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -113,7 +125,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +136,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C12E7A51-09A4-5796-94BE-08B6DA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,15 +147,18 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the subtasks.
+         * <p>The details of the subtasks.</p>
          */
-        public Builder subscriptionMetaList(java.util.List < SubscriptionMetaList> subscriptionMetaList) {
+        public Builder subscriptionMetaList(java.util.List<SubscriptionMetaList> subscriptionMetaList) {
             this.subscriptionMetaList = subscriptionMetaList;
             return this;
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -150,6 +171,12 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSubscriptionMetaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionMetaResponseBody</p>
+     */
     public static class SubscriptionMetaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private Long checkpoint;
@@ -225,10 +252,13 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.
-             * <p>
+             * <p>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</p>
+             * <blockquote>
+             * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+             * </blockquote>
              * 
-             * >  You can use a search engine to obtain a UNIX timestamp converter.
+             * <strong>example:</strong>
+             * <p>1610524452</p>
              */
             public Builder checkpoint(Long checkpoint) {
                 this.checkpoint = checkpoint;
@@ -236,7 +266,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The objects of the subtask. For more information, see [Objects of DTS tasks](~~209545~~).
+             * <p>The objects of the subtask. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dtstestdata&quot;:{&quot;name&quot;:&quot;dtstestdata&quot;,&quot;all&quot;:false,&quot;Table&quot;:{&quot;order&quot;:{&quot;name&quot;:&quot;order&quot;,&quot;all&quot;:true}}}}</p>
              */
             public Builder DBList(String DBList) {
                 this.DBList = DBList;
@@ -244,7 +277,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint and port number of the change tracking instance.
+             * <p>The endpoint and port number of the change tracking instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts-cn-hangzhou.aliyuncs.com:18001</p>
              */
             public Builder dProxyUrl(String dProxyUrl) {
                 this.dProxyUrl = dProxyUrl;
@@ -252,7 +288,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer group ID of the subtask.
+             * <p>The consumer group ID of the subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>z38m91gg2******</p>
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -260,7 +299,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The topic of the subtask.
+             * <p>The topic of the subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

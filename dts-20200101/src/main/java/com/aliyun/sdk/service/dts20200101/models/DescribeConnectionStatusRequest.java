@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConnectionStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeConnectionStatusRequest</p>
@@ -377,13 +383,17 @@ public class DescribeConnectionStatusRequest extends Request {
         } 
 
         /**
-         * You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle**. Valid values:
-         * <p>
+         * <p>You must specify this parameter only if the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>Oracle</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>SID</strong>: non-RAC architecture</li>
+         * <li><strong>RAC</strong>: Real Application Cluster (RAC) architecture</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is optional. The data type of this parameter is String.</p>
+         * </blockquote>
          * 
-         * *   **SID**: non-RAC architecture
-         * *   **RAC**: Real Application Cluster (RAC) architecture
-         * 
-         * >  This parameter is optional. The data type of this parameter is String.
+         * <strong>example:</strong>
+         * <p>SID</p>
          */
         public Builder destinationEndpointArchitecture(String destinationEndpointArchitecture) {
             this.putQueryParameter("DestinationEndpointArchitecture", destinationEndpointArchitecture);
@@ -392,13 +402,17 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The name of the destination database or the authentication database.
-         * <p>
+         * <p>The name of the destination database or the authentication database.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>You must specify this parameter if the <strong>DestinationEndpointEngineName</strong> parameter is set to <strong>PostgreSQL</strong>, <strong>DRDS</strong>, or <strong>MongoDB</strong>. You must also specify this parameter if the <strong>DestinationEndpointInstanceType</strong> parameter is set to <strong>PolarDB_o</strong>.</li>
+         * <li>If the <strong>DestinationEndpointEngineName</strong> parameter is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the destination database. If the DestinationEndpointEngineName parameter is set to <strong>MongoDB</strong>, specify the name of the authentication database.</li>
+         * <li>If the <strong>DestinationEndpointInstanceType</strong> parameter is set to <strong>PolarDB_o</strong>, specify the name of the destination database.</li>
+         * </ul>
          * 
-         * > 
-         * *   You must specify this parameter if the **DestinationEndpointEngineName** parameter is set to **PostgreSQL**, **DRDS**, or **MongoDB**. You must also specify this parameter if the **DestinationEndpointInstanceType** parameter is set to **PolarDB_o**.
-         * *   If the **DestinationEndpointEngineName** parameter is set to **PostgreSQL** or **DRDS**, specify the name of the destination database. If the DestinationEndpointEngineName parameter is set to **MongoDB**, specify the name of the authentication database.
-         * *   If the **DestinationEndpointInstanceType** parameter is set to **PolarDB_o**, specify the name of the destination database.
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         public Builder destinationEndpointDatabaseName(String destinationEndpointDatabaseName) {
             this.putQueryParameter("DestinationEndpointDatabaseName", destinationEndpointDatabaseName);
@@ -407,10 +421,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The engine type of the destination database. Valid values: **MySQL**, **DRDS**, **SQLServer**, **PostgreSQL**, **PPAS**, **MongoDB**, and **Redis**.
-         * <p>
+         * <p>The engine type of the destination database. Valid values: <strong>MySQL</strong>, <strong>DRDS</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>PPAS</strong>, <strong>MongoDB</strong>, and <strong>Redis</strong>.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>DestinationEndpointInstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>DRDS</strong>, <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **DestinationEndpointInstanceType** parameter is set to **RDS**, **DRDS**, **ECS**, **LocalInstance**, or **Express**.
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder destinationEndpointEngineName(String destinationEndpointEngineName) {
             this.putQueryParameter("DestinationEndpointEngineName", destinationEndpointEngineName);
@@ -419,10 +436,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The endpoint of the destination database.
-         * <p>
+         * <p>The endpoint of the destination database.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>DestinationEndpointInstanceType</strong> parameter is set to <strong>LocalInstance</strong> or <strong>Express</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **DestinationEndpointInstanceType** parameter is set to **LocalInstance** or **Express**.
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         public Builder destinationEndpointIP(String destinationEndpointIP) {
             this.putQueryParameter("DestinationEndpointIP", destinationEndpointIP);
@@ -431,7 +451,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The ID of the destination instance.
+         * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         public Builder destinationEndpointInstanceID(String destinationEndpointInstanceID) {
             this.putQueryParameter("DestinationEndpointInstanceID", destinationEndpointInstanceID);
@@ -440,21 +463,26 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The instance type of the destination database. Valid values:
-         * <p>
+         * <p>The instance type of the destination database. Valid values:</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><strong>ECS</strong>: self-managed database that is hosted on Elastic Compute Service (ECS)</li>
+         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+         * <li><strong>DRDS</strong>: PolarDB-X instance</li>
+         * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance</li>
+         * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
+         * <li><strong>PetaData</strong>: HybridDB for MySQL instance</li>
+         * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster</li>
+         * <li><strong>PolarDB_o</strong>: PolarDB for Oracle cluster</li>
+         * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL cluster V3.0 or V2.0</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * *   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)
-         * *   **LocalInstance**: self-managed database with a public IP address
-         * *   **RDS**: ApsaraDB RDS instance
-         * *   **DRDS**: PolarDB-X instance
-         * *   **MongoDB**: ApsaraDB for MongoDB instance
-         * *   **Redis**: ApsaraDB for Redis instance
-         * *   **PetaData**: HybridDB for MySQL instance
-         * *   **POLARDB**: PolarDB for MySQL cluster
-         * *   **PolarDB_o**: PolarDB for Oracle cluster
-         * *   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0
-         * *   **Greenplum**: AnalyticDB for PostgreSQL instance
+         * <strong>example:</strong>
+         * <p>PolarDB_o</p>
          */
         public Builder destinationEndpointInstanceType(String destinationEndpointInstanceType) {
             this.putQueryParameter("DestinationEndpointInstanceType", destinationEndpointInstanceType);
@@ -463,13 +491,17 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * You must specify this parameter only if the **DestinationEndpointEngineName** parameter is set to **Oracle**. Valid values:
-         * <p>
+         * <p>You must specify this parameter only if the <strong>DestinationEndpointEngineName</strong> parameter is set to <strong>Oracle</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>SID</strong>: non-RAC architecture</li>
+         * <li><strong>RAC</strong>: RAC architecture</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is optional. The data type of this parameter is String.</p>
+         * </blockquote>
          * 
-         * *   **SID**: non-RAC architecture
-         * *   **RAC**: RAC architecture
-         * 
-         * >  This parameter is optional. The data type of this parameter is String.
+         * <strong>example:</strong>
+         * <p>SID</p>
          */
         public Builder destinationEndpointOracleSID(String destinationEndpointOracleSID) {
             this.putQueryParameter("DestinationEndpointOracleSID", destinationEndpointOracleSID);
@@ -478,7 +510,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The password of the destination database account.
+         * <p>The password of the destination database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder destinationEndpointPassword(String destinationEndpointPassword) {
             this.putQueryParameter("DestinationEndpointPassword", destinationEndpointPassword);
@@ -487,10 +522,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The service port number of the source database.
-         * <p>
+         * <p>The service port number of the source database.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **SourceEndpointInstanceType** parameter is set to **ECS**, **LocalInstance**, or **Express**.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder destinationEndpointPort(String destinationEndpointPort) {
             this.putQueryParameter("DestinationEndpointPort", destinationEndpointPort);
@@ -499,7 +537,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destinationEndpointRegion(String destinationEndpointRegion) {
             this.putQueryParameter("DestinationEndpointRegion", destinationEndpointRegion);
@@ -508,10 +549,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The database account of the destination database.
-         * <p>
+         * <p>The database account of the destination database.</p>
+         * <blockquote>
+         * <p> The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a> and <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a>.</p>
+         * </blockquote>
          * 
-         * >  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder destinationEndpointUserName(String destinationEndpointUserName) {
             this.putQueryParameter("DestinationEndpointUserName", destinationEndpointUserName);
@@ -520,7 +564,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -529,7 +576,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -538,13 +588,17 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle**. Valid values:
-         * <p>
+         * <p>You must specify this parameter only if the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>Oracle</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>SID</strong>: non-RAC architecture</li>
+         * <li><strong>RAC</strong>: RAC architecture</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is optional.</p>
+         * </blockquote>
          * 
-         * *   **SID**: non-RAC architecture
-         * *   **RAC**: RAC architecture
-         * 
-         * >  This parameter is optional.
+         * <strong>example:</strong>
+         * <p>SID</p>
          */
         public Builder sourceEndpointArchitecture(String sourceEndpointArchitecture) {
             this.putQueryParameter("SourceEndpointArchitecture", sourceEndpointArchitecture);
@@ -553,13 +607,17 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The name of the source database or the authentication database.
-         * <p>
+         * <p>The name of the source database or the authentication database.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>You must specify this parameter if the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>PostgreSQL</strong> or <strong>MongoDB</strong>. You must also specify this parameter if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>PolarDB_o</strong>.</li>
+         * <li>If the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the source database. If the SourceEndpointEngineName parameter is set to <strong>MongoDB</strong>, specify the name of the authentication database.</li>
+         * <li>If the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>PolarDB_o</strong>, specify the name of the source database.</li>
+         * </ul>
          * 
-         * > 
-         * *   You must specify this parameter if the **SourceEndpointEngineName** parameter is set to **PostgreSQL** or **MongoDB**. You must also specify this parameter if the **SourceEndpointInstanceType** parameter is set to **PolarDB_o**.
-         * *   If the **SourceEndpointEngineName** parameter is set to **PostgreSQL** or **DRDS**, specify the name of the source database. If the SourceEndpointEngineName parameter is set to **MongoDB**, specify the name of the authentication database.
-         * *   If the **SourceEndpointInstanceType** parameter is set to **PolarDB_o**, specify the name of the source database.
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         public Builder sourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
             this.putQueryParameter("SourceEndpointDatabaseName", sourceEndpointDatabaseName);
@@ -568,10 +626,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The engine type of the source database. Valid values: **MySQL**, **TiDB**, **SQLServer**, **PostgreSQL**, **Oracle**, **MongoDB**, and **Redis**.
-         * <p>
+         * <p>The engine type of the source database. Valid values: <strong>MySQL</strong>, <strong>TiDB</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, <strong>MongoDB</strong>, and <strong>Redis</strong>.</p>
+         * <blockquote>
+         * <p> Default value: <strong>MySQL</strong>.</p>
+         * </blockquote>
          * 
-         * >  Default value: **MySQL**.
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder sourceEndpointEngineName(String sourceEndpointEngineName) {
             this.putQueryParameter("SourceEndpointEngineName", sourceEndpointEngineName);
@@ -580,10 +641,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The endpoint of the source database.
-         * <p>
+         * <p>The endpoint of the source database.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>LocalInstance</strong> or <strong>Express</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **SourceEndpointInstanceType** parameter is set to **LocalInstance** or **Express**.
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         public Builder sourceEndpointIP(String sourceEndpointIP) {
             this.putQueryParameter("SourceEndpointIP", sourceEndpointIP);
@@ -592,7 +656,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The ID of the source instance.
+         * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1imrtn6fq7h****</p>
          */
         public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
             this.putQueryParameter("SourceEndpointInstanceID", sourceEndpointInstanceID);
@@ -601,17 +668,21 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The type of the source instance. Valid values:
-         * <p>
+         * <p>The type of the source instance. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+         * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
+         * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+         * <li><strong>dg</strong>: self-managed database that is connected over Database Gateway</li>
+         * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance</li>
+         * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster</li>
+         * <li><strong>PolarDB_o</strong>: PolarDB for Oracle cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **RDS**: ApsaraDB RDS instance
-         * *   **LocalInstance**: self-managed database with a public IP address
-         * *   **ECS**: self-managed database that is hosted on ECS
-         * *   **Express**: self-managed database that is connected over Express Connect
-         * *   **dg**: self-managed database that is connected over Database Gateway
-         * *   **MongoDB**: ApsaraDB for MongoDB instance
-         * *   **POLARDB**: PolarDB for MySQL cluster
-         * *   **PolarDB_o**: PolarDB for Oracle cluster
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
             this.putQueryParameter("SourceEndpointInstanceType", sourceEndpointInstanceType);
@@ -620,10 +691,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The SID of the Oracle database.
-         * <p>
+         * <p>The SID of the Oracle database.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpointEngineName</strong> parameter is set to <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         public Builder sourceEndpointOracleSID(String sourceEndpointOracleSID) {
             this.putQueryParameter("SourceEndpointOracleSID", sourceEndpointOracleSID);
@@ -632,7 +706,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The password of the source database account.
+         * <p>The password of the source database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder sourceEndpointPassword(String sourceEndpointPassword) {
             this.putQueryParameter("SourceEndpointPassword", sourceEndpointPassword);
@@ -641,10 +718,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The service port number of the source database.
-         * <p>
+         * <p>The service port number of the source database.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpointInstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **SourceEndpointInstanceType** parameter is set to **ECS**, **LocalInstance**, or **Express**.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder sourceEndpointPort(String sourceEndpointPort) {
             this.putQueryParameter("SourceEndpointPort", sourceEndpointPort);
@@ -653,7 +733,10 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceEndpointRegion(String sourceEndpointRegion) {
             this.putQueryParameter("SourceEndpointRegion", sourceEndpointRegion);
@@ -662,10 +745,13 @@ public class DescribeConnectionStatusRequest extends Request {
         }
 
         /**
-         * The database account of the source database.
-         * <p>
+         * <p>The database account of the source database.</p>
+         * <blockquote>
+         * <p> The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a> and <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a>.</p>
+         * </blockquote>
          * 
-         * >  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putQueryParameter("SourceEndpointUserName", sourceEndpointUserName);

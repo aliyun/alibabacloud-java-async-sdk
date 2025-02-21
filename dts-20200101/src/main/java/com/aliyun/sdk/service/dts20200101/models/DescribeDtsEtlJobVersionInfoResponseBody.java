@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDtsEtlJobVersionInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDtsEtlJobVersionInfoResponseBody</p>
  */
 public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DtsEtlJobVersionInfos")
-    private java.util.List < DtsEtlJobVersionInfos> dtsEtlJobVersionInfos;
+    private java.util.List<DtsEtlJobVersionInfos> dtsEtlJobVersionInfos;
 
     @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
@@ -69,7 +75,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     /**
      * @return dtsEtlJobVersionInfos
      */
-    public java.util.List < DtsEtlJobVersionInfos> getDtsEtlJobVersionInfos() {
+    public java.util.List<DtsEtlJobVersionInfos> getDtsEtlJobVersionInfos() {
         return this.dtsEtlJobVersionInfos;
     }
 
@@ -144,7 +150,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DtsEtlJobVersionInfos> dtsEtlJobVersionInfos; 
+        private java.util.List<DtsEtlJobVersionInfos> dtsEtlJobVersionInfos; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errCode; 
@@ -157,15 +163,18 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of ETL tasks.
+         * <p>The details of ETL tasks.</p>
          */
-        public Builder dtsEtlJobVersionInfos(java.util.List < DtsEtlJobVersionInfos> dtsEtlJobVersionInfos) {
+        public Builder dtsEtlJobVersionInfos(java.util.List<DtsEtlJobVersionInfos> dtsEtlJobVersionInfos) {
             this.dtsEtlJobVersionInfos = dtsEtlJobVersionInfos;
             return this;
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -173,7 +182,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * <p>The dynamic part in the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>present environment is not support,so skip</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -181,7 +193,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error code. This example indicates that the specified ETL task ID is invalid.
+         * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidJobId</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -189,7 +204,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may have been deleted.
+         * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may have been deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified dts job id %s is not exists.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -197,7 +215,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -205,7 +226,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Default value: 1.
+         * <p>The page number of the returned page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -213,7 +237,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of records returned on the current page.
+         * <p>The number of records returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -221,7 +248,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +259,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. If the call failed, false is returned.
+         * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +270,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of records.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -250,6 +286,12 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDtsEtlJobVersionInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsEtlJobVersionInfoResponseBody</p>
+     */
     public static class DtsEtlJobVersionInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -385,7 +427,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             private Integer version; 
 
             /**
-             * The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637229315000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -393,7 +438,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000000</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -401,7 +449,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the creator.
+             * <p>The username of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>@</strong></em>*.com</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -409,7 +460,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DTS instance.
+             * <p>The ID of the DTS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsg******gd</p>
              */
             public Builder dtsInstanceId(String dtsInstanceId) {
                 this.dtsInstanceId = dtsInstanceId;
@@ -417,7 +471,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ETL task.
+             * <p>The ID of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>l5512es7w15****</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -425,7 +482,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ETL task.
+             * <p>The name of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_sql</p>
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -433,7 +493,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ETL task was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the ETL task was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637230117000</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -441,7 +504,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The safe checkpoint of the ETL task.
+             * <p>The safe checkpoint of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637230117000</p>
              */
             public Builder safeCheckpoint(String safeCheckpoint) {
                 this.safeCheckpoint = safeCheckpoint;
@@ -449,7 +515,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The log level. Valid values: ERROR, WARN, INFO, and DEBUG.
+             * <p>The log level. Valid values: ERROR, WARN, INFO, and DEBUG.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -457,7 +526,10 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the ETL task.
+             * <p>The version number of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

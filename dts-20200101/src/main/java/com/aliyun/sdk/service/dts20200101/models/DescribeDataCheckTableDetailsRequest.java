@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCheckTableDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataCheckTableDetailsRequest</p>
@@ -178,11 +184,15 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The data verification method. Valid values:
-         * <p>
+         * <p>The data verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: full data verification.</li>
+         * <li><strong>2</strong>: incremental data verification.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: full data verification.
-         * *   **2**: incremental data verification.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -191,7 +201,11 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xd4e4xb419q****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -200,7 +214,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -209,7 +226,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +238,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz4us4iruleja</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -227,7 +250,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The name of the schema whose data is verified in the source database.
+         * <p>The name of the schema whose data is verified in the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -236,11 +262,14 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The status of the data verification result. Valid values:
-         * <p>
+         * <p>The status of the data verification result. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong> (default): All status.</li>
+         * <li><strong>6</strong>: Inconsistent data detected in the table.</li>
+         * </ul>
          * 
-         * *   **-1** (default): All status.
-         * *   **6**: Inconsistent data detected in the table.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -249,7 +278,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * The name of the table whose data is verified in the source database.
+         * <p>The name of the table whose data is verified in the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>student</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

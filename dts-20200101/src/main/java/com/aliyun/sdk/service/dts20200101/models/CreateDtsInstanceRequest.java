@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDtsInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDtsInstanceRequest</p>
@@ -365,11 +371,14 @@ public class CreateDtsInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically renew the DTS instance when it expires. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically renew the DTS instance when it expires. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: does not automatically renew the DTS instance when it expires. This is the default value.</li>
+         * <li><strong>true</strong>: automatically renews the DTS instance when it expires.</li>
+         * </ul>
          * 
-         * *   **false**: does not automatically renew the DTS instance when it expires. This is the default value.
-         * *   **true**: automatically renews the DTS instance when it expires.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -378,11 +387,17 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically start the task after the DTS instance is purchased. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically start the task after the DTS instance is purchased. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter can be set to <strong>true</strong> and take effect only if you specify a valid value for <strong>JobId</strong>.</p>
+         * </blockquote>
          * 
-         * *   **false**: does not automatically start the task after the DTS instance is purchased. This is the default value.
-         * *   **true**: automatically starts the task after the DTS instance is purchased.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoStart(Boolean autoStart) {
             this.putQueryParameter("AutoStart", autoStart);
@@ -391,7 +406,10 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.
+         * <p>The specification of the extract, transform, and load (ETL) instance. The unit is compute unit (CU). One CU is equal to 1 vCPU and 4 GB of memory. The value of this parameter must be an integer greater than or equal to 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder computeUnit(Integer computeUnit) {
             this.putQueryParameter("ComputeUnit", computeUnit);
@@ -400,10 +418,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The number of private custom ApsaraDB RDS instances in a PolarDB-X instance. Default value: **1**.
-         * <p>
+         * <p>The number of custom ApsaraDB RDS instances in the PolarDB-X instance. Default value: <strong>1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is required only if <strong>SourceEndpointEngineName</strong> is set to <strong>drds</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **drds**.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder databaseCount(Integer databaseCount) {
             this.putQueryParameter("DatabaseCount", databaseCount);
@@ -412,34 +433,39 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The database engine of the destination instance.
-         * <p>
+         * <p>The database engine of the destination instance.</p>
+         * <ul>
+         * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
+         * <li><strong>polardb_o</strong>: PolarDB for Oracle cluster</li>
+         * <li><strong>polardb_pg</strong>: PolarDB for PostgreSQL cluster</li>
+         * <li><strong>Redis</strong>: ApsaraDB for Redis instance or self-managed Redis database</li>
+         * <li><strong>DRDS</strong>: PolarDB-X 1.0 or PolarDB-X 2.0 instance</li>
+         * <li><strong>PostgreSQL</strong>: self-managed PostgreSQL database</li>
+         * <li><strong>odps</strong>: MaxCompute project</li>
+         * <li><strong>oracle</strong>: self-managed Oracle database</li>
+         * <li><strong>mongodb</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database</li>
+         * <li><strong>tidb</strong>: TiDB database</li>
+         * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster</li>
+         * <li><strong>ADB30</strong>: AnalyticDB for MySQL V3.0 cluster</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+         * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</li>
+         * <li><strong>kafka</strong>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</li>
+         * <li><strong>DataHub</strong>: DataHub project</li>
+         * <li><strong>DB2</strong>: self-managed Db2 for LUW database</li>
+         * <li><strong>as400</strong>: AS/400</li>
+         * <li><strong>Tablestore</strong>: Tablestore instance</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The default value is <strong>MySQL</strong>.</li>
+         * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</li>
+         * <li>You must specify one of this parameter and the <strong>JobId</strong> parameter.</li>
+         * </ul>
          * 
-         * *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
-         * *   **PolarDB**: PolarDB for MySQL cluster
-         * *   **polardb_o**: PolarDB for Oracle cluster
-         * *   **polardb_pg**: PolarDB for PostgreSQL cluster
-         * *   **Redis**: ApsaraDB for Redis instance or self-managed Redis database
-         * *   **DRDS**: PolarDB-X 1.0 or PolarDB-X 2.0 instance
-         * *   **PostgreSQL**: self-managed PostgreSQL database
-         * *   **odps**: MaxCompute project
-         * *   **oracle**: self-managed Oracle database
-         * *   **mongodb**: ApsaraDB for MongoDB instance or self-managed MongoDB database
-         * *   **tidb**: TiDB database
-         * *   **ADS**: AnalyticDB for MySQL V2.0 cluster
-         * *   **ADB30**: AnalyticDB for MySQL V3.0 cluster
-         * *   **Greenplum**: AnalyticDB for PostgreSQL instance
-         * *   **MSSQL**: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database
-         * *   **kafka**: Message Queue for Apache Kafka instance or self-managed Kafka cluster
-         * *   **DataHub**: DataHub project
-         * *   **DB2**: self-managed Db2 for LUW database
-         * *   **as400**: AS/400
-         * *   **Tablestore**: Tablestore instance
-         * 
-         * > 
-         * *   The default value is **MySQL**.
-         * *   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](~~130744~~) and [Overview of data migration scenarios](~~26618~~).
-         * *   You must specify one of this parameter and the **JobId** parameter.
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder destinationEndpointEngineName(String destinationEndpointEngineName) {
             this.putQueryParameter("DestinationEndpointEngineName", destinationEndpointEngineName);
@@ -448,10 +474,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> You must specify one of this parameter and the <strong>JobId</strong> parameter.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of this parameter and the **JobId** parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destinationRegion(String destinationRegion) {
             this.putQueryParameter("DestinationRegion", destinationRegion);
@@ -460,7 +489,10 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * DtsRegion.
+         * <p>The region ID of the DTS instance. Set this parameter to the value of <strong>RegionId</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder dtsRegion(String dtsRegion) {
             this.putQueryParameter("DtsRegion", dtsRegion);
@@ -469,11 +501,15 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The number of DTS units (DUs) that are assigned to a DTS task that is run on a DTS dedicated cluster. Valid values: **1** to **100**.
-         * <p>
+         * <p>The number of DTS units (DUs) that are assigned to a DTS task that is run on a DTS dedicated cluster. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The value of this parameter must be within the range of the number of DUs available for the DTS dedicated cluster.</li>
+         * </ul>
          * 
-         * > 
-         * *   The value of this parameter must be within the range of the number of DUs available for the DTS dedicated cluster.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder du(Integer du) {
             this.putQueryParameter("Du", du);
@@ -482,7 +518,10 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The billing type for a change tracking instance. Valid values: ONLY_CONFIGURATION_FEE and CONFIGURATION_FEE_AND_DATA_FEE. ONLY_CONFIGURATION_FEE: charges only configuration fees. CONFIGURATION_FEE_AND_DATA_FEE: charges configuration fees and data traffic fees.
+         * <p>The billing type for a change tracking instance. Valid values: ONLY_CONFIGURATION_FEE and CONFIGURATION_FEE_AND_DATA_FEE. ONLY_CONFIGURATION_FEE: charges only configuration fees. CONFIGURATION_FEE_AND_DATA_FEE: charges configuration fees and data traffic fees.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLY_CONFIGURATION_FEE</p>
          */
         public Builder feeType(String feeType) {
             this.putQueryParameter("FeeType", feeType);
@@ -491,13 +530,17 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The instance class.
-         * <p>
+         * <p>The instance class.</p>
+         * <ul>
+         * <li>DTS supports the following instance classes for a data migration instance: <strong>xxlarge</strong>, <strong>xlarge</strong>, <strong>large</strong>, <strong>medium</strong>, and <strong>small</strong>.</li>
+         * <li>DTS supports the following instance classes for a data synchronization instance: <strong>large</strong>, <strong>medium</strong>, <strong>small</strong>, and <strong>micro</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+         * </blockquote>
          * 
-         * *   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.
-         * *   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.
-         * 
-         * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
+         * <strong>example:</strong>
+         * <p>xxlarge</p>
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -506,10 +549,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can call the **ConfigureDtsJob** operation to obtain the task ID from the **DtsJobId** parameter.
-         * <p>
+         * <p>The ID of the task. You can call the <strong>ConfigureDtsJob</strong> operation to obtain the task ID from the <strong>DtsJobId</strong> parameter.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, you do not need to specify the <strong>SourceRegion</strong>, <strong>DestinationRegion</strong>, <strong>Type</strong>, <strong>SourceEndpointEngineName</strong>, or <strong>DestinationEndpointEngineName</strong> parameter. Even if these parameters are specified, the value of the <strong>JobId</strong> parameter takes precedence.</p>
+         * </blockquote>
          * 
-         * >  If this parameter is specified, you do not need to specify the **SourceRegion**, **DestinationRegion**, **Type**, **SourceEndpointEngineName**, or **DestinationEndpointEngineName** parameter. Even if these parameters are specified, the value of the **JobId** parameter takes precedence.
+         * <strong>example:</strong>
+         * <p>bi6e22ay243****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -518,7 +564,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * MaxDu.
+         * <p>Upper limit of DU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder maxDu(Double maxDu) {
             this.putQueryParameter("MaxDu", maxDu);
@@ -527,7 +579,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * MinDu.
+         * <p>Lower limit of DU.</p>
+         * <blockquote>
+         * <p>Only supported by Serverless instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minDu(Double minDu) {
             this.putQueryParameter("MinDu", minDu);
@@ -536,13 +594,17 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter must be specified.</p>
+         * </blockquote>
          * 
-         * *   **PrePaid**: subscription
-         * *   **PostPaid**: pay-as-you-go
-         * 
-         * >  This parameter must be specified.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -551,10 +613,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values: **Year** and **Month**.
-         * <p>
+         * <p>The unit of the subscription duration. Valid values: <strong>Year</strong> and <strong>Month</strong>.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>PayType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+         * </blockquote>
          * 
-         * >  You must specify this parameter only if the **PayType** parameter is set to **PrePaid**.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -563,10 +628,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The number of DTS instances that you want to purchase.
-         * <p>
+         * <p>The number of DTS instances that you want to purchase.</p>
+         * <blockquote>
+         * <p> You can purchase only one DTS instance each time you call this operation.</p>
+         * </blockquote>
          * 
-         * >  Only a single instance can be purchased each time.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -575,7 +643,10 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -584,7 +655,10 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -593,34 +667,39 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The database engine of the source instance.
-         * <p>
+         * <p>The database engine of the source instance.</p>
+         * <ul>
+         * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL instance or self-managed MySQL database</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
+         * <li><strong>polardb_o</strong>: PolarDB for Oracle cluster</li>
+         * <li><strong>polardb_pg</strong>: PolarDB for PostgreSQL cluster</li>
+         * <li><strong>Redis</strong>: ApsaraDB for Redis instance or self-managed Redis database</li>
+         * <li><strong>DRDS</strong>: PolarDB-X 1.0 or PolarDB-X 2.0 instance</li>
+         * <li><strong>PostgreSQL</strong>: self-managed PostgreSQL database</li>
+         * <li><strong>odps</strong>: MaxCompute project</li>
+         * <li><strong>oracle</strong>: self-managed Oracle database</li>
+         * <li><strong>mongodb</strong>: ApsaraDB for MongoDB instance or self-managed MongoDB database</li>
+         * <li><strong>tidb</strong>: TiDB database</li>
+         * <li><strong>ADS</strong>: AnalyticDB for MySQL V2.0 cluster</li>
+         * <li><strong>ADB30</strong>: AnalyticDB for MySQL V3.0 cluster</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+         * <li><strong>MSSQL</strong>: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database</li>
+         * <li><strong>kafka</strong>: Message Queue for Apache Kafka instance or self-managed Kafka cluster</li>
+         * <li><strong>DataHub</strong>: DataHub project</li>
+         * <li><strong>DB2</strong>: self-managed Db2 for LUW database</li>
+         * <li><strong>as400</strong>: AS/400</li>
+         * <li><strong>Tablestore</strong>: Tablestore instance</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The default value is <strong>MySQL</strong>.</li>
+         * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Overview of data synchronization scenarios</a> and <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</li>
+         * <li>You must specify one of this parameter and the <strong>JobId</strong> parameter.</li>
+         * </ul>
          * 
-         * *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
-         * *   **PolarDB**: PolarDB for MySQL cluster
-         * *   **polardb_o**: PolarDB for Oracle cluster
-         * *   **polardb_pg**: PolarDB for PostgreSQL cluster
-         * *   **Redis**: ApsaraDB for Redis instance or self-managed Redis database
-         * *   **DRDS**: PolarDB-X 1.0 or PolarDB-X 2.0 instance
-         * *   **PostgreSQL**: self-managed PostgreSQL database
-         * *   **odps**: MaxCompute project
-         * *   **oracle**: self-managed Oracle database
-         * *   **mongodb**: ApsaraDB for MongoDB instance or self-managed MongoDB database
-         * *   **tidb**: TiDB database
-         * *   **ADS**: AnalyticDB for MySQL V2.0 cluster
-         * *   **ADB30**: AnalyticDB for MySQL V3.0 cluster
-         * *   **Greenplum**: AnalyticDB for PostgreSQL instance
-         * *   **MSSQL**: ApsaraDB RDS for SQL Server instance or self-managed SQL Server database
-         * *   **kafka**: Message Queue for Apache Kafka instance or self-managed Kafka cluster
-         * *   **DataHub**: DataHub project
-         * *   **DB2**: self-managed Db2 for LUW database
-         * *   **as400**: AS/400
-         * *   **Tablestore**: Tablestore instance
-         * 
-         * > 
-         * *   The default value is **MySQL**.
-         * *   For more information about the supported source and destination databases, see [Overview of data synchronization scenarios](~~130744~~) and [Overview of data migration scenarios](~~26618~~).
-         * *   You must specify one of this parameter and the **JobId** parameter.
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         public Builder sourceEndpointEngineName(String sourceEndpointEngineName) {
             this.putQueryParameter("SourceEndpointEngineName", sourceEndpointEngineName);
@@ -629,10 +708,13 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
+         * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> You must specify one of this parameter and the <strong>JobId</strong> parameter.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of this parameter and the **JobId** parameter.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);
@@ -641,11 +723,14 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The synchronization topology. Valid values:
-         * <p>
+         * <p>The synchronization topology. Valid values:</p>
+         * <ul>
+         * <li><strong>oneway</strong>: one-way synchronization. This is the default value.</li>
+         * <li><strong>bidirectional</strong>: two-way synchronization.</li>
+         * </ul>
          * 
-         * *   **oneway**: one-way synchronization. This is the default value.
-         * *   **bidirectional**: two-way synchronization.
+         * <strong>example:</strong>
+         * <p>oneway</p>
          */
         public Builder syncArchitecture(String syncArchitecture) {
             this.putQueryParameter("SyncArchitecture", syncArchitecture);
@@ -654,16 +739,21 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The type of the DTS instance. Valid values:
-         * <p>
+         * <p>The type of the DTS instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MIGRATION</strong>: data migration instance</p>
+         * </li>
+         * <li><p><strong>SYNC</strong>: data synchronization instance</p>
+         * </li>
+         * <li><p><strong>SUBSCRIBE</strong>: change tracking instance</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify one of this parameter and the <strong>JobId</strong> parameter.</p>
+         * </blockquote>
          * 
-         * *   **MIGRATION**: data migration instance
-         * 
-         * *   **SYNC**: data synchronization instance
-         * 
-         * *   **SUBSCRIBE**: change tracking instance
-         * 
-         * > You must specify one of this parameter and the **JobId** parameter.
+         * <strong>example:</strong>
+         * <p>SYNC</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -672,15 +762,22 @@ public class CreateDtsInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration.
-         * <p>
+         * <p>The subscription duration.</p>
+         * <ul>
+         * <li>Valid values if <strong>Period</strong> is set to <strong>Month</strong>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>Valid values if <strong>Period</strong> is set to <strong>Year</strong>: 1, 2, 3, and 5.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is valid and required only if <strong>PayType</strong> is set to <strong>PrePaid</strong>.</p>
+         * </li>
+         * <li><p>You can configure <strong>Period</strong> to specify the unit of the subscription duration.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values if the **Period** parameter is set to **Month**: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * 
-         * *   Valid values if the **Period** parameter is set to **Year**: 1, 2, 3, and 5.
-         * 
-         * > *   You must specify this parameter only if the **PayType** parameter is set to **PrePaid**.
-         *    *   You can set the **Period** parameter to specify the unit of the subscription duration.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

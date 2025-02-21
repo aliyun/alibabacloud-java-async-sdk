@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDtsInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDtsInstanceResponseBody</p>
@@ -97,7 +103,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -105,7 +114,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -113,7 +125,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DTS instance.
+         * <p>The ID of the DTS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsbi6e22ay243****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -121,7 +136,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bi6e22ay243****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -129,7 +147,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C166D79D-436B-45F0-B5A5-25E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +158,10 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

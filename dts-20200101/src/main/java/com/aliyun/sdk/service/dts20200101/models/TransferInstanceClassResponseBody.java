@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferInstanceClassResponseBody} extends {@link TeaModel}
  *
  * <p>TransferInstanceClassResponseBody</p>
@@ -157,11 +163,14 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The billing method of the DTS instance. Valid values:
-         * <p>
+         * <p>The billing method of the DTS instance. Valid values:</p>
+         * <ul>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * <li><strong>PREPAY</strong>: subscription.</li>
+         * </ul>
          * 
-         * *   **POSTPAY**: pay-as-you-go
-         * *   **PREPAY**: subscription
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -169,7 +178,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -177,7 +189,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data migration or data synchronization task.
+         * <p>The ID of the data migration or data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r4yr723m199****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -185,10 +200,13 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the value of the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p>For example, if the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified value of the <strong>DtsJobId</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -196,10 +214,13 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the DTS instance.
-         * <p>
+         * <p>The expiration time of the DTS instance.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the value of the ChargeType parameter is <strong>PREPAY</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if the ChargeType parameter is set to **PREPAY**.
+         * <strong>example:</strong>
+         * <p>2021-08-04T16:00:00.000+00:00</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -207,7 +228,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -215,7 +239,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -223,7 +250,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -231,7 +261,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of DTS instance.
+         * <p>The ID of the DTS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsr4yr723m199****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -239,7 +272,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>716DB03E-2D0B-4DC3-BC4C-F7A9EE21****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -247,11 +283,14 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**: The call was successful.
-         * *   **false**:The call failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

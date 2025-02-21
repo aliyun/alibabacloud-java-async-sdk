@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMigrationJobAlertResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMigrationJobAlertResponseBody</p>
@@ -157,7 +163,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The mobile phone numbers that receive latency-related alerts.
+         * <p>Phone number of the contact for delay alarm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.delayAlertPhone = delayAlertPhone;
@@ -165,11 +174,13 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether task latency is monitored. Valid values:
-         * <p>
+         * <p>Whether to monitor the delay status, return values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: Yes. - <strong>disable</strong>: No.</li>
+         * </ul>
          * 
-         * *   **enable**: yes
-         * *   **disable**: no
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.delayAlertStatus = delayAlertStatus;
@@ -177,7 +188,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold for triggering latency alerts. Unit: seconds.
+         * <p>The threshold for triggering a delayed alarm, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.delayOverSeconds = delayOverSeconds;
@@ -185,7 +199,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>Error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -193,7 +210,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -201,7 +221,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile phone numbers that receive status-related alerts.
+         * <p>Phone number of the contact for abnormal alarm notifications</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.errorAlertPhone = errorAlertPhone;
@@ -209,11 +232,13 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether task status is monitored. Valid values:
-         * <p>
+         * <p>Whether to monitor for abnormal status, return values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: Yes. - <strong>disable</strong>: No.</li>
+         * </ul>
          * 
-         * *   **enable**: yes
-         * *   **disable**: no
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.errorAlertStatus = errorAlertStatus;
@@ -221,7 +246,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data migration instance.
+         * <p>Data migration instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtslb9113qq11n****</p>
          */
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = migrationJobId;
@@ -229,7 +257,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the data migration task.
+         * <p>Name of the data migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zwy-test5</p>
          */
         public Builder migrationJobName(String migrationJobName) {
             this.migrationJobName = migrationJobName;
@@ -237,7 +268,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFB89C51-6F03-519C-A921-AAE28D50AEFB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +279,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDtsJobDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDtsJobDetailRequest</p>
@@ -137,7 +143,10 @@ public class DescribeDtsJobDetailRequest extends Request {
         } 
 
         /**
-         * DescribeDtsJobDetail
+         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsta7w132u12h****</p>
          */
         public Builder dtsInstanceID(String dtsInstanceID) {
             this.putQueryParameter("DtsInstanceID", dtsInstanceID);
@@ -146,28 +155,10 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * The state of the data migration or data synchronization task.
-         * <p>
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
          * 
-         * Valid values for a data migration task:
-         * 
-         * *   **NotStarted**: The migration is not started.
-         * *   **Migrating**: The migration is in progress.
-         * *   **Failed**: The migration failed.
-         * *   **Finished**: The migration is complete.
-         * 
-         * Valid values for a data synchronization task:
-         * 
-         * *   **NotStarted**: The task is not started.
-         * *   **Prechecking**: The task is in precheck.
-         * *   **PrecheckFailed**: The task failed to pass the precheck.
-         * *   **Initializing**: The task is performing initial synchronization.
-         * *   **InitializeFailed**: Initial synchronization failed.
-         * *   **Synchronizing**: The task is in progress.
-         * *   **Failed**: The task failed to synchronize data.
-         * *   **Suspending**: The task is paused.
-         * *   **Modifying**: The objects in the task are being modified.
-         * *   **Finished**: The task is complete.
+         * <strong>example:</strong>
+         * <p>ta7w132u12h****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -176,7 +167,10 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -185,7 +179,10 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,7 +191,10 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * SyncSubJobHistory.
+         * <p>Specifies whether to return the information about all data synchronization subtasks. Default value: <strong>false</strong>. A value of false indicates that the system returns only the information about a data synchronization subtask that is running or was most recently run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder syncSubJobHistory(Boolean syncSubJobHistory) {
             this.putQueryParameter("SyncSubJobHistory", syncSubJobHistory);
@@ -203,7 +203,20 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * Queries the details of a data migration, data synchronization, or change tracking task.
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The default value is <strong>Forward</strong>.</li>
+         * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -212,7 +225,14 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Specifies whether to query only zero-extract, transform, load (ETL) integration tasks. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobMonitorRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateJobMonitorRuleResponseBody</p>
@@ -121,7 +127,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code. This parameter will be removed in the future.
+         * <p>The error code. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -137,10 +149,13 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p>If the return value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the specified value of <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
          * 
-         * >  For example, if the specified **DtsJobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -148,7 +163,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -156,7 +174,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -164,7 +185,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -172,7 +196,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C498360-7892-433C-847A-BA71A850****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,11 +207,14 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

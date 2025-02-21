@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCheckJobsRequest</p>
@@ -162,7 +168,10 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * CheckJobId.
+         * <p>Check the task job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>z9p104ib23***</p>
          */
         public Builder checkJobId(String checkJobId) {
             this.putQueryParameter("CheckJobId", checkJobId);
@@ -171,7 +180,15 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * CheckType.
+         * <p>The type of the check</p>
+         * <blockquote>
+         * <blockquote>
+         * <p>1 full quantity, 2 incremental, 3 all</p>
+         * </blockquote>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -180,7 +197,10 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Data migration instance ID, which can be queried by calling the <strong>describemigrationjobs</strong> API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsz9p104ib23e972e</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,7 +209,10 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * JobName.
+         * <p>The name of the data migration or synchronization job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zwy_test</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -198,7 +221,10 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +233,10 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +245,10 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

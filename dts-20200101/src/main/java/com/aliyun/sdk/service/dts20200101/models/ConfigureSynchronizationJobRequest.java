@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigureSynchronizationJobRequest} extends {@link RequestModel}
  *
  * <p>ConfigureSynchronizationJobRequest</p>
@@ -280,7 +286,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -289,7 +298,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The synchronization checkpoint.
+         * <p>The synchronization checkpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610540493</p>
          */
         public Builder checkpoint(String checkpoint) {
             this.putQueryParameter("Checkpoint", checkpoint);
@@ -298,13 +310,18 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform initial full data synchronization. Valid values:
-         * <p>
+         * <p>Specifies whether to perform initial full data synchronization. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: <strong>true</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * >  Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dataInitialization(Boolean dataInitialization) {
             this.putQueryParameter("DataInitialization", dataInitialization);
@@ -313,10 +330,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
-         * <p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * <blockquote>
+         * <p> This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances</a>.</p>
+         * </blockquote>
          * 
-         * >  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](~~155967~~).
+         * <strong>example:</strong>
+         * <p>{     &quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;,     &quot;targetTableMode&quot;: 2 }</p>
          */
         public Builder migrationReserved(String migrationReserved) {
             this.putQueryParameter("MigrationReserved", migrationReserved);
@@ -343,7 +363,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>资源组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -352,13 +375,18 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform initial schema synchronization. Valid values:
-         * <p>
+         * <p>Specifies whether to perform initial schema synchronization. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> Default value: <strong>true</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * >  Default value: **true**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder structureInitialization(Boolean structureInitialization) {
             this.putQueryParameter("StructureInitialization", structureInitialization);
@@ -367,15 +395,20 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</li>
+         * </ul>
          * 
-         * *   **Forward**
-         * *   **Reverse**
-         * 
-         * > 
-         * *   Default value: **Forward**.
-         * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -384,7 +417,11 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.
+         * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsz4ao1dor13d****</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);
@@ -393,10 +430,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The name of the data synchronization task.
-         * <p>
+         * <p>The name of the data synchronization task.</p>
+         * <blockquote>
+         * <p> We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.
+         * <strong>example:</strong>
+         * <p>MySQL同步</p>
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.putQueryParameter("SynchronizationJobName", synchronizationJobName);
@@ -405,7 +445,11 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](~~141901~~).
+         * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;DBName&quot;:&quot;dtstestdata&quot;,&quot;TableIncludes&quot;:[{&quot;TableName&quot;:&quot;customer&quot;}]}]</p>
          */
         public Builder synchronizationObjects(String synchronizationObjects) {
             this.putBodyParameter("SynchronizationObjects", synchronizationObjects);
@@ -420,6 +464,12 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ConfigureSynchronizationJobRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigureSynchronizationJobRequest</p>
+     */
     public static class DestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataBaseName")
         private String dataBaseName;
@@ -519,7 +569,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private String userName; 
 
             /**
-             * The name of the database to which the synchronization object in the destination instance belongs.
+             * <p>The name of the database to which the synchronization object in the destination instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder dataBaseName(String dataBaseName) {
                 this.dataBaseName = dataBaseName;
@@ -527,10 +580,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The IP address of the destination database.
-             * <p>
+             * <p>The IP address of the destination database.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter only if the **DestinationEndpoint.InstanceType** parameter is set to **Express**, **dg**, or **cen**.
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -538,12 +594,14 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The ID of the destination instance.
-             * <p>
+             * <p>The ID of the destination instance.</p>
+             * <blockquote>
+             * <p> If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong> or <strong>DataHub</strong>, you must specify the name of the MaxCompute project or the DataHub project.</p>
+             * </blockquote>
+             * <p>If the destination instance is an AnalyticDB for MySQL cluster, specify the ID of the AnalyticDB for MySQL cluster.</p>
              * 
-             * >  If the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute** or **DataHub**, you must specify the name of the MaxCompute project or the DataHub project.
-             * 
-             * If the destination instance is an AnalyticDB for MySQL cluster, specify the ID of the AnalyticDB for MySQL cluster.
+             * <strong>example:</strong>
+             * <p>rm-bp1r46452ai50****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -551,20 +609,24 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The type of the destination instance. Valid values:
-             * <p>
+             * <p>The type of the destination instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
+             * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+             * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
+             * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
+             * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+             * <li><strong>DataHub</strong>: DataHub project</li>
+             * <li><strong>MaxCompute</strong>: MaxCompute project</li>
+             * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL cluster V3.0 or V2.0</li>
+             * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+             * </ul>
+             * <blockquote>
+             * <p> The default value is <strong>RDS</strong>.</p>
+             * </blockquote>
              * 
-             * *   **Redis**: ApsaraDB for Redis instance
-             * *   **RDS**: ApsaraDB RDS instance
-             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
-             * *   **ECS**: self-managed database that is hosted on ECS
-             * *   **Express**: self-managed database that is connected over Express Connect
-             * *   **DataHub**: DataHub project
-             * *   **MaxCompute**: MaxCompute project
-             * *   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0
-             * *   **Greenplum**: AnalyticDB for PostgreSQL instance
-             * 
-             * >  The default value is **RDS**.
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -572,11 +634,15 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The password of the destination database account.
-             * <p>
+             * <p>The password of the destination database account.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>, you must specify the DestinationEndpoint.Password parameter.</li>
+             * </ul>
              * 
-             * > 
-             * *   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.Password parameter.
+             * <strong>example:</strong>
+             * <p>Test654321</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -584,10 +650,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The service port number of the destination database.
-             * <p>
+             * <p>The service port number of the destination database.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter only if the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -595,14 +664,18 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The database account of the destination database.
-             * <p>
+             * <p>The database account of the destination database.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</li>
+             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>, you must specify the DestinationEndpoint.UserName parameter.</li>
+             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and <strong>DestinationEndpoint.Password</strong> parameters.</li>
+             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>, you do not need to specify the DestinationEndpoint.UserName parameter.</li>
+             * </ul>
              * 
-             * > 
-             * *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).
-             * *   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.UserName parameter.
-             * *   If the **DestinationEndpoint.InstanceType** parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and **DestinationEndpoint.Password** parameters.
-             * *   If the **DestinationEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the DestinationEndpoint.UserName parameter.
+             * <strong>example:</strong>
+             * <p>dtstestaccount</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -616,6 +689,12 @@ public class ConfigureSynchronizationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfigureSynchronizationJobRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigureSynchronizationJobRequest</p>
+     */
     public static class PartitionKey extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifyTime_Day")
         private Boolean modifyTimeDay;
@@ -691,10 +770,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private Boolean modifyTimeYear; 
 
             /**
-             * Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: **true** and **false**.
-             * <p>
+             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modifyTimeDay(Boolean modifyTimeDay) {
                 this.modifyTimeDay = modifyTimeDay;
@@ -702,10 +784,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: **true** and **false**.
-             * <p>
+             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modifyTimeHour(Boolean modifyTimeHour) {
                 this.modifyTimeHour = modifyTimeHour;
@@ -713,10 +798,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: **true** and **false**.
-             * <p>
+             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modifyTimeMinute(Boolean modifyTimeMinute) {
                 this.modifyTimeMinute = modifyTimeMinute;
@@ -724,10 +812,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: **true** and **false**.
-             * <p>
+             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modifyTimeMonth(Boolean modifyTimeMonth) {
                 this.modifyTimeMonth = modifyTimeMonth;
@@ -735,10 +826,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: **true** and **false**.
-             * <p>
+             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modifyTimeYear(Boolean modifyTimeYear) {
                 this.modifyTimeYear = modifyTimeYear;
@@ -752,6 +846,12 @@ public class ConfigureSynchronizationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfigureSynchronizationJobRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigureSynchronizationJobRequest</p>
+     */
     public static class SourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -875,7 +975,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private String userName; 
 
             /**
-             * The name of the database to which the synchronization object in the source instance belongs.
+             * <p>The name of the database to which the synchronization object in the source instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -883,10 +986,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The IP address of the source database.
-             * <p>
+             * <p>The IP address of the source database.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -894,7 +1000,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1i99e8l7913****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -902,18 +1011,22 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The type of the source instance. Valid values:
-             * <p>
+             * <p>The type of the source instance. Valid values:</p>
+             * <ul>
+             * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+             * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
+             * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
+             * <li><strong>ECS</strong>: self-managed database that is hosted on Elastic Compute Service (ECS)</li>
+             * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+             * <li><strong>dg</strong>: self-managed database that is connected over Database Gateway</li>
+             * <li><strong>cen</strong>: self-managed database that is connected over Cloud Enterprise Network (CEN)</li>
+             * </ul>
+             * <blockquote>
+             * <p> The default value is <strong>RDS</strong>.</p>
+             * </blockquote>
              * 
-             * *   **RDS**: ApsaraDB RDS instance
-             * *   **Redis**: ApsaraDB for Redis instance
-             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
-             * *   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)
-             * *   **Express**: self-managed database that is connected over Express Connect
-             * *   **dg**: self-managed database that is connected over Database Gateway
-             * *   **cen**: self-managed database that is connected over Cloud Enterprise Network (CEN)
-             * 
-             * >  The default value is **RDS**.
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -921,10 +1034,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that owns the source RDS instance.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account that owns the source RDS instance.</p>
+             * <blockquote>
+             * <p> You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the <strong>SourceEndpoint.Role</strong> parameter.</p>
+             * </blockquote>
              * 
-             * >  You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the **SourceEndpoint.Role** parameter.
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -932,10 +1048,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The password of the source database account.
-             * <p>
+             * <p>The password of the source database account.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
+             * <strong>example:</strong>
+             * <p>Test123456</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -943,10 +1062,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The service port number of the source database.
-             * <p>
+             * <p>The service port number of the source database.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -954,10 +1076,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
-             * <p>
+             * <p>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</p>
+             * <blockquote>
+             * <p> You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+             * <strong>example:</strong>
+             * <p>ram-for-dts</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -965,13 +1090,17 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * The database account of the source database.
-             * <p>
+             * <p>The database account of the source database.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</li>
+             * <li>If the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>, you do not need to specify the database account.</li>
+             * <li>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</li>
+             * </ul>
              * 
-             * > 
-             * *   You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
-             * *   If the **SourceEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the database account.
-             * *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).
+             * <strong>example:</strong>
+             * <p>dtstestaccount</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

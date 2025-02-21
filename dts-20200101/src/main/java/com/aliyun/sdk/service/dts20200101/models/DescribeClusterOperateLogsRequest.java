@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterOperateLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterOperateLogsRequest</p>
@@ -180,7 +186,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -189,7 +198,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -198,7 +210,11 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The ID of the DTS dedicated cluster on which a DTS task runs.
+         * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsxxxxx</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putBodyParameter("DedicatedClusterId", dedicatedClusterId);
@@ -207,7 +223,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The ID of the data migration or synchronization task.
+         * <p>The ID of the data migration or synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k2gm967v16f****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putBodyParameter("DtsJobId", dtsJobId);
@@ -216,7 +235,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds.
+         * <p>The end of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650866995000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -234,7 +256,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -243,7 +268,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -252,7 +280,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -261,7 +292,10 @@ public class DescribeClusterOperateLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds. If you do not specify this parameter, the data within the last seven days is returned by default.
+         * <p>The beginning of the time range to query. The value must be in the UNIX timestamp format. Unit: milliseconds. If you do not specify this parameter, the data within the last seven days is returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650866955000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

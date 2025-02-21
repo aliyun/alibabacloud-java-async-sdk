@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConsumerChannelResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConsumerChannelResponseBody</p>
@@ -97,7 +103,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.
+         * <p>The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsor2y66j4219****</p>
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.consumerGroupID = consumerGroupID;
@@ -105,7 +114,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -113,7 +125,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -121,7 +136,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +147,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F566C5B-E5B0-4020-A531-FC6F5005****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +158,10 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSubscriptionInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateSubscriptionInstanceRequest</p>
@@ -189,7 +195,10 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -198,7 +207,10 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -216,11 +228,14 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the change tracking instance.
-         * <p>
+         * <p>The billing method of the change tracking instance.</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -229,13 +244,17 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * The billing cycle of the subscription instance. Valid values:
-         * <p>
+         * <p>The billing cycle of the subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong></li>
+         * <li><strong>Month</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify this parameter only if you set the PayType parameter to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   **Year**
-         * *   **Month**
-         * 
-         * >  You must specify this parameter only if you set the PayType parameter to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -244,7 +263,11 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see [List of supported regions](~~141033~~).
+         * <p>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -253,7 +276,10 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the change tracking instance. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +288,10 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -271,13 +300,17 @@ public class CreateSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * The subscription length.
-         * <p>
+         * <p>The subscription length.</p>
+         * <ul>
+         * <li>If the billing cycle is <strong>Year</strong>, the value range is <strong>1 to 5</strong>.</li>
+         * <li>If the billing cycle is <strong>Month</strong>, the value range is <strong>1 to 60</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You must specify this parameter only if you set the PayType parameter to <strong>Prepaid</strong>.</p>
+         * </blockquote>
          * 
-         * *   If the billing cycle is **Year**, the value range is **1 to 5**.
-         * *   If the billing cycle is **Month**, the value range is **1 to 60**.
-         * 
-         * >  You must specify this parameter only if you set the PayType parameter to **Prepaid**.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -292,6 +325,12 @@ public class CreateSubscriptionInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSubscriptionInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSubscriptionInstanceRequest</p>
+     */
     public static class SourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -319,10 +358,13 @@ public class CreateSubscriptionInstanceRequest extends Request {
             private String instanceType; 
 
             /**
-             * The type of the source instance. Valid values: **MySQL**, **PolarDB**, **DRDS**, and **Oracle**.
-             * <p>
+             * <p>The type of the source instance. Valid values: <strong>MySQL</strong>, <strong>PolarDB</strong>, <strong>DRDS</strong>, and <strong>Oracle</strong>.</p>
+             * <blockquote>
+             * <p> Default value: <strong>MySQL</strong>.</p>
+             * </blockquote>
              * 
-             * >  Default value: **MySQL**.
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

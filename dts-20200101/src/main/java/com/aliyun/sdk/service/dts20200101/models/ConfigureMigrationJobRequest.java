@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigureMigrationJobRequest} extends {@link RequestModel}
  *
  * <p>ConfigureMigrationJobRequest</p>
@@ -237,7 +243,11 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The objects that you want to migrate. The value is a JSON string and can contain regular expressions.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/141227.html">MigrationObject</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -246,7 +256,17 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The start offset of incremental data migration. The value is a UNIX timestamp. Unit: seconds.
+         * <p>Specifies whether to perform incremental data migration. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about databases that support incremental data migration, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder checkpoint(String checkpoint) {
             this.putQueryParameter("Checkpoint", checkpoint);
@@ -255,7 +275,11 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.
+         * <p>system</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operation that you want to perform. Set the value to <strong>ConfigureMigrationJob</strong>.</p>
          */
         public Builder migrationJobId(String migrationJobId) {
             this.putQueryParameter("MigrationJobId", migrationJobId);
@@ -264,7 +288,14 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The name of the data migration task. The name can be up to 32 characters in length. We recommend that you specify an informative name to identify the task. You do not need to use a unique task name.
+         * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> The region ID of the data migration instance is the same as that of the destination database.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL_TO_RDS</p>
          */
         public Builder migrationJobName(String migrationJobName) {
             this.putQueryParameter("MigrationJobName", migrationJobName);
@@ -273,10 +304,18 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The objects that you want to migrate. The value is a JSON string and can contain regular expressions.
-         * <p>
+         * <p>Specifies whether to perform schema migration. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about databases that support schema migration, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * For more information, see [MigrationObject](~~141227~~).
+         * <strong>example:</strong>
+         * <p>[{&quot;DBName&quot;:&quot;dtstestdata&quot;,&quot;TableIncludes&quot;:[{&quot;TableName&quot;:&quot;customer&quot;}]}]</p>
          */
         public Builder migrationObject(String migrationObject) {
             this.putBodyParameter("MigrationObject", migrationObject);
@@ -285,7 +324,17 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+         * <p>Specifies whether to perform full data migration. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> For more information about databases that support full data migration, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;,     &quot;targetTableMode&quot;: 2 }</p>
          */
         public Builder migrationReserved(String migrationReserved) {
             this.putQueryParameter("MigrationReserved", migrationReserved);
@@ -303,10 +352,7 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
-         * 
-         * >  The region ID of the data migration instance is the same as that of the destination database.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -315,7 +361,10 @@ public class ConfigureMigrationJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -330,6 +379,12 @@ public class ConfigureMigrationJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ConfigureMigrationJobRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigureMigrationJobRequest</p>
+     */
     public static class DestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataBaseName")
         private String dataBaseName;
@@ -466,12 +521,13 @@ public class ConfigureMigrationJobRequest extends Request {
             private String userName; 
 
             /**
-             * The name of the destination database or the authentication database.
-             * <p>
+             * <p>The region ID of the destination database.</p>
+             * <blockquote>
+             * <p> If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>LocalInstance</strong>, you can enter <strong>cn-hangzhou</strong> or the ID of the region closest to the self-managed database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+             * </blockquote>
              * 
-             * > 
-             * *   You must specify the database name only if the **DestinationEndpoint.EngineName** parameter is set to **PostgreSQL**, **DRDS**, or **MongoDB**.
-             * *   If the **DestinationEndpoint.EngineName** parameter is set to **PostgreSQL** or **DRDS**, specify the name of the destination database. If the DestinationEndpoint.EngineName parameter is set to **MongoDB**, specify the name of the authentication database.
+             * <strong>example:</strong>
+             * <p>dtstestdatabase</p>
              */
             public Builder dataBaseName(String dataBaseName) {
                 this.dataBaseName = dataBaseName;
@@ -479,10 +535,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The engine type of the destination database. Valid values: **MySQL**, **DRDS**, **SQLServer**, **PostgreSQL**, **PPAS**, **MongoDB**, **Redis**, **POLARDB**, and **polardb_pg**.
-             * <p>
+             * <p>The authorized RAM role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</p>
+             * <blockquote>
+             * <p> For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+             * </blockquote>
              * 
-             * >  You must specify the engine type only if the **DestinationEndpoint.InstanceType** parameter is set to **RDS**, **POLARDB**, **ECS**, **LocalInstance**, or **Express**.
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -490,10 +549,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The endpoint of the destination database.
-             * <p>
+             * <p>The ID of the instance that hosts the destination database.</p>
+             * <blockquote>
+             * <p> You must specify the instance ID only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>DRDS</strong>, <strong>PetaData</strong>, <strong>OceanBase</strong>, <strong>POLARDB</strong>, <strong>PolarDB_o</strong>, <strong>AnalyticDB</strong>, or <strong>Greenplum</strong>. For example, if the DestinationEndpoint.InstanceType parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</p>
+             * </blockquote>
              * 
-             * >  You must specify the endpoint only if the **DestinationEndpoint.InstanceType** parameter is set to **LocalInstance** or **Express**.
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -501,10 +563,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The ID of the instance that hosts the destination database.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account to which the source instance belongs.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only when you configure data migration across different Alibaba Cloud accounts.</p>
+             * </blockquote>
              * 
-             * >  You must specify the instance ID only if the **DestinationEndpoint.InstanceType** parameter is set to **RDS**, **ECS**, **MongoDB**, **Redis**, **DRDS**, **PetaData**, **OceanBase**, **POLARDB**, **PolarDB_o**, **AnalyticDB**, or **Greenplum**. For example, if the DestinationEndpoint.InstanceType parameter is set to **ECS**, you must specify the ID of the ECS instance.
+             * <strong>example:</strong>
+             * <p>rm-bp1r46452ai50****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -512,20 +577,11 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The instance type of the destination database. Valid values:
-             * <p>
+             * <p>The password of the source database account.</p>
+             * <p>This parameter is required.</p>
              * 
-             * *   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)
-             * *   **LocalInstance**: self-managed database with a public IP address
-             * *   **RDS**: ApsaraDB RDS instance
-             * *   **DRDS**: PolarDB-X instance
-             * *   **MongoDB**: ApsaraDB for MongoDB instance
-             * *   **Redis**: ApsaraDB for Redis instance
-             * *   **PetaData**: HybridDB for MySQL instance
-             * *   **POLARDB**: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster
-             * *   **PolarDB_o**: PolarDB O Edition cluster
-             * *   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0
-             * *   **Greenplum**: AnalyticDB for PostgreSQL instance
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -533,10 +589,10 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The SID of the Oracle database.
-             * <p>
+             * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
              * 
-             * >  You must specify this parameter only if the **DestinationEndpoint.EngineName** parameter is set to **Oracle** and the **Oracle** database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -544,7 +600,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The password of the destination database account.
+             * <p>The service port number of the destination database.</p>
+             * <blockquote>
+             * <p> You must specify the service port number only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Test123456</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -552,10 +614,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The service port number of the destination database.
-             * <p>
+             * <p>The engine type of the destination database. Valid values: <strong>MySQL</strong>, <strong>DRDS</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>PPAS</strong>, <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>POLARDB</strong>, and <strong>polardb_pg</strong>.</p>
+             * <blockquote>
+             * <p> You must specify the engine type only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>POLARDB</strong>, <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify the service port number only if the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **LocalInstance**, or **Express**.
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -563,10 +628,23 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The region ID of the destination database.
-             * <p>
+             * <p>The instance type of the destination database. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS</strong>: self-managed database that is hosted on Elastic Compute Service (ECS)</li>
+             * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+             * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+             * <li><strong>DRDS</strong>: PolarDB-X instance</li>
+             * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance</li>
+             * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
+             * <li><strong>PetaData</strong>: HybridDB for MySQL instance</li>
+             * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster</li>
+             * <li><strong>PolarDB_o</strong>: PolarDB O Edition cluster</li>
+             * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL cluster V3.0 or V2.0</li>
+             * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+             * </ul>
              * 
-             * >  If the **DestinationEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](~~141033~~).
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -574,10 +652,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The database account of the destination database.
-             * <p>
+             * <p>The endpoint of the destination database.</p>
+             * <blockquote>
+             * <p> You must specify the endpoint only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>LocalInstance</strong> or <strong>Express</strong>.</p>
+             * </blockquote>
              * 
-             * >  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](~~26618~~).
+             * <strong>example:</strong>
+             * <p>dtstestaccount</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -591,6 +672,12 @@ public class ConfigureMigrationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfigureMigrationJobRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigureMigrationJobRequest</p>
+     */
     public static class MigrationMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataIntialization")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -645,13 +732,14 @@ public class ConfigureMigrationJobRequest extends Request {
             private Boolean structureIntialization; 
 
             /**
-             * Specifies whether to perform full data migration. Valid values:
-             * <p>
+             * <p>The database account of the destination database.</p>
+             * <blockquote>
+             * <p> The permissions that are required for database accounts vary with the migration scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  For more information about databases that support full data migration, see [Supported databases and migration types](~~26618~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataIntialization(Boolean dataIntialization) {
                 this.dataIntialization = dataIntialization;
@@ -659,13 +747,11 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * Specifies whether to perform incremental data migration. Valid values:
-             * <p>
+             * <p>The password of the destination database account.</p>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  For more information about databases that support incremental data migration, see [Supported databases and migration types](~~26618~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -673,13 +759,17 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * Specifies whether to perform schema migration. Valid values:
-             * <p>
+             * <p>The name of the destination database or the authentication database.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>You must specify the database name only if the <strong>DestinationEndpoint.EngineName</strong> parameter is set to <strong>PostgreSQL</strong>, <strong>DRDS</strong>, or <strong>MongoDB</strong>.</li>
+             * <li>If the <strong>DestinationEndpoint.EngineName</strong> parameter is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the destination database. If the DestinationEndpoint.EngineName parameter is set to <strong>MongoDB</strong>, specify the name of the authentication database.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  For more information about databases that support schema migration, see [Supported databases and migration types](~~26618~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder structureIntialization(Boolean structureIntialization) {
                 this.structureIntialization = structureIntialization;
@@ -693,6 +783,12 @@ public class ConfigureMigrationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ConfigureMigrationJobRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigureMigrationJobRequest</p>
+     */
     public static class SourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -853,12 +949,13 @@ public class ConfigureMigrationJobRequest extends Request {
             private String userName; 
 
             /**
-             * The name of the source database or the authentication database.
-             * <p>
+             * <p>The endpoint of the source database.</p>
+             * <blockquote>
+             * <p> You must specify the endpoint only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>LocalInstance</strong> or <strong>Express</strong>.</p>
+             * </blockquote>
              * 
-             * > 
-             * *   You must specify the database name only if the **SourceEndpoint.EngineName** parameter is set to **PostgreSQL** or **MongoDB**.
-             * *   If the **SourceEndpoint.EngineName** parameter is set to **PostgreSQL**, specify the name of the source database. If the SourceEndpoint.EngineName parameter is set to **MongoDB**, specify the name of the authentication database.
+             * <strong>example:</strong>
+             * <p>dtstestdatabase</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -866,10 +963,21 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The engine type of the source database. Valid values: **MySQL**, **TiDB**, **SQLServer**, **PostgreSQL**, **Oracle**, **MongoDB**, **Redis**, **POLARDB**, and **polardb_pg**.
-             * <p>
+             * <p>The instance type of the source database. Valid values:</p>
+             * <ul>
+             * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+             * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
+             * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+             * <li><strong>Express</strong>: self-managed database that is connected over Express Connect, VPN Gateway, or Smart Access Gateway</li>
+             * <li><strong>dg</strong>: self-managed database that is connected over Database Gateway</li>
+             * <li><strong>cen</strong>: self-managed database that is connected over Cloud Enterprise Network (CEN)</li>
+             * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance</li>
+             * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster</li>
+             * <li><strong>PolarDB_o</strong>: PolarDB O Edition cluster</li>
+             * </ul>
              * 
-             * >  You must specify the engine type only if the **DestinationEndpoint.InstanceType** parameter is set to **RDS**, **POLARDB**, **ECS**, **LocalInstance**, or **Express**.
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -877,10 +985,10 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The endpoint of the source database.
-             * <p>
+             * <p>rm-bp1i99e8l7913****</p>
              * 
-             * >  You must specify the endpoint only if the **SourceEndpoint.InstanceType** parameter is set to **LocalInstance** or **Express**.
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -888,12 +996,10 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The ID of the instance that hosts the source database.
-             * <p>
+             * <p>dtsl3m1213ye7l****</p>
              * 
-             * > 
-             * *   You must specify the instance ID only if the **SourceEndpoint.InstanceType** parameter is set to **RDS**, **ECS**, **Express**, **MongoDB**, **POLARDB**, or **PolarDB_o**. For example, if the SourceEndpoint.InstanceType parameter is set to **ECS**, you must specify the ID of the ECS instance.
-             * *   If the **SourceEndpoint.InstanceType** parameter is set to **Express**, you must specify the ID of the virtual private cloud (VPC).
+             * <strong>example:</strong>
+             * <p>The name of the data migration task. The name can be up to 32 characters in length. We recommend that you specify an informative name to identify the task. You do not need to use a unique task name.</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -901,18 +1007,11 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The instance type of the source database. Valid values:
-             * <p>
+             * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
+             * <p>This parameter is required.</p>
              * 
-             * *   **RDS**: ApsaraDB RDS instance
-             * *   **ECS**: self-managed database that is hosted on ECS
-             * *   **LocalInstance**: self-managed database with a public IP address
-             * *   **Express**: self-managed database that is connected over Express Connect, VPN Gateway, or Smart Access Gateway
-             * *   **dg**: self-managed database that is connected over Database Gateway
-             * *   **cen**: self-managed database that is connected over Cloud Enterprise Network (CEN)
-             * *   **MongoDB**: ApsaraDB for MongoDB instance
-             * *   **POLARDB**: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster
-             * *   **PolarDB_o**: PolarDB O Edition cluster
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -920,10 +1019,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The system ID (SID) of the Oracle database.
-             * <p>
+             * <p>The region ID of the source database.</p>
+             * <blockquote>
+             * <p> If the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>LocalInstance</strong>, you can enter <strong>cn-hangzhou</strong> or the ID of the region closest to the self-managed database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+             * </blockquote>
              * 
-             * >  You must specify this parameter only if the **SourceEndpoint.EngineName** parameter is set to **Oracle** and the **Oracle** database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -931,10 +1033,16 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the source instance belongs.
-             * <p>
+             * <p>The name of the source database or the authentication database.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>You must specify the database name only if the <strong>SourceEndpoint.EngineName</strong> parameter is set to <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</li>
+             * <li>If the <strong>SourceEndpoint.EngineName</strong> parameter is set to <strong>PostgreSQL</strong>, specify the name of the source database. If the SourceEndpoint.EngineName parameter is set to <strong>MongoDB</strong>, specify the name of the authentication database.</li>
+             * </ul>
              * 
-             * >  You must specify this parameter only when you configure data migration across different Alibaba Cloud accounts.
+             * <strong>example:</strong>
+             * <p>140692647406****</p>
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -942,7 +1050,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The password of the source database account.
+             * <p>The system ID (SID) of the Oracle database.</p>
+             * <blockquote>
+             * <p> You must specify this parameter only if the <strong>SourceEndpoint.EngineName</strong> parameter is set to <strong>Oracle</strong> and the <strong>Oracle</strong> database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Test123456</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -950,10 +1064,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The service port number of the source database.
-             * <p>
+             * <p>The engine type of the source database. Valid values: <strong>MySQL</strong>, <strong>TiDB</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>POLARDB</strong>, and <strong>polardb_pg</strong>.</p>
+             * <blockquote>
+             * <p> You must specify the engine type only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>POLARDB</strong>, <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+             * </blockquote>
              * 
-             * >  You must specify the service port number only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **LocalInstance**, or **Express**.
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -961,10 +1078,16 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The region ID of the source database.
-             * <p>
+             * <p>The ID of the instance that hosts the source database.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>You must specify the instance ID only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, <strong>POLARDB</strong>, or <strong>PolarDB_o</strong>. For example, if the SourceEndpoint.InstanceType parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</li>
+             * <li>If the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, you must specify the ID of the virtual private cloud (VPC).</li>
+             * </ul>
              * 
-             * >  If the **SourceEndpoint.InstanceType** parameter is set to **LocalInstance**, you can enter **cn-hangzhou** or the ID of the region closest to the self-managed database. For more information, see [List of supported regions](~~141033~~).
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -972,10 +1095,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The authorized RAM role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.
-             * <p>
+             * <p>The database account of the source database.</p>
+             * <blockquote>
+             * <p> The permissions that are required for database accounts vary with the migration scenario. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Overview of data migration scenarios</a>.</p>
+             * </blockquote>
              * 
-             * >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+             * <strong>example:</strong>
+             * <p>ram-for-dts</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -983,10 +1109,13 @@ public class ConfigureMigrationJobRequest extends Request {
             }
 
             /**
-             * The database account of the source database.
-             * <p>
+             * <p>The service port number of the source database.</p>
+             * <blockquote>
+             * <p> You must specify the service port number only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
+             * </blockquote>
              * 
-             * >  The permissions that are required for database accounts vary with the migration scenario. For more information, see [Overview of data migration scenarios](~~26618~~).
+             * <strong>example:</strong>
+             * <p>dtstestaccount</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

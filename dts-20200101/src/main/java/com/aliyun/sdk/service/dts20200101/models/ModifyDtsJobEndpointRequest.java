@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDtsJobEndpointRequest} extends {@link RequestModel}
  *
  * <p>ModifyDtsJobEndpointRequest</p>
@@ -321,7 +327,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         } 
 
         /**
-         * AliyunUid.
+         * <p>The ID of the Alibaba Cloud account (primary account) to which the database instance belongs.</p>
+         * <blockquote>
+         * <p> Passing this parameter indicates that cross-Alibaba Cloud account data synchronization will be performed, and you also need to pass the <strong>RoleName</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>150780020300****</p>
          */
         public Builder aliyunUid(String aliyunUid) {
             this.putQueryParameter("AliyunUid", aliyunUid);
@@ -330,7 +342,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * Database.
+         * <p>When the database type is <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, or <strong>AnalyticDB PostgreSQL</strong>, it represents the database name; when the database type is <strong>MongoDB</strong>, it represents the authentication database name.</p>
+         * <blockquote>
+         * <p>This parameter is only available and must be provided when the database type is <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, <strong>AnalyticDB PostgreSQL</strong>, or <strong>MongoDB</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -339,7 +357,14 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a precheck. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes. After the precheck is passed, the database is not changed.</li>
+         * <li><strong>false</strong> (default): No. After the precheck is passed, the system changes the original database of the DTS task and runs the task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -348,7 +373,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * DtsInstanceId.
+         * <p>The ID of the DTS instance. If this parameter is not provided, <strong>DtsJobId</strong> must be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsaw012y2g15q****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -357,7 +385,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * <p>DTS job ID, which can be queried by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.</p>
+         * <blockquote>
+         * <p>If this parameter is not provided, <strong>DtsInstanceId</strong> must be filled in.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>m4312mab158****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -366,7 +400,14 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * <p>The database instance to be modified, with values:</p>
+         * <ul>
+         * <li><strong>src</strong>: Source database instance. - <strong>dest</strong>: Target database instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src</p>
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -375,7 +416,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * EndpointInstanceId.
+         * <p>ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp10k50h8374w****</p>
          */
         public Builder endpointInstanceId(String endpointInstanceId) {
             this.putQueryParameter("EndpointInstanceId", endpointInstanceId);
@@ -384,7 +428,34 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * EndpointInstanceType.
+         * <p>The type of the database. Valid values:</p>
+         * <ul>
+         * <li><strong>rds</strong>: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, or ApsaraDB RDS for PostgreSQL instance.</li>
+         * <li><strong>polardb</strong>: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster.</li>
+         * <li><strong>mongodb</strong>: ApsaraDB for MongoDB replica set instance.</li>
+         * <li><strong>distributed_mongodb</strong>: ApsaraDB for MongoDB sharded cluster instance.</li>
+         * <li><strong>greenplum</strong>: AnalyticDB for PostgreSQL instance.</li>
+         * <li><strong>kafka</strong>: ApsaraMQ for Kafka instance.</li>
+         * <li><strong>ecs</strong>: self-managed database that is hosted on an Elastic Compute Service (ECS) instance. If you set this parameter to ecs, the database must be the supported one.</li>
+         * <li><strong>express</strong>: database that is connected over Express Connect. If you set this parameter to express, the database must be the supported one.</li>
+         * <li><strong>other</strong>: database that is connected over Internet. If you set this parameter to other, the database must be the supported one.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The following types of databases are supported: <strong>MySQL</strong>, <strong>PolarDB for MySQL</strong>, <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, <strong>MongoDB</strong>, <strong>SQL Server</strong>, <strong>Kafka</strong>, and <strong>AnalyticDB for PostgreSQL</strong>.</p>
+         * </li>
+         * <li><p>If the original database is an ApsaraDB for MongoDB sharded cluster instance, the new database must have the same number of shards as the original database.</p>
+         * </li>
+         * <li><p>If the database that you want to change is a source <strong>PostgreSQL</strong> database, you must make sure that the latency of the DTS instance is less than 30 seconds and no data is written to the source database during the change. Otherwise, data inconsistency may occur.</p>
+         * </li>
+         * <li><p>The value of this parameter is case-insensitive.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder endpointInstanceType(String endpointInstanceType) {
             this.putQueryParameter("EndpointInstanceType", endpointInstanceType);
@@ -393,7 +464,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * EndpointIp.
+         * <p>The IP of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.168.XX.XXX</p>
          */
         public Builder endpointIp(String endpointIp) {
             this.putQueryParameter("EndpointIp", endpointIp);
@@ -402,7 +476,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * EndpointPort.
+         * <p>port of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder endpointPort(String endpointPort) {
             this.putQueryParameter("EndpointPort", endpointPort);
@@ -411,7 +488,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * EndpointRegionId.
+         * <p>The ID of the region in which the database resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder endpointRegionId(String endpointRegionId) {
             this.putQueryParameter("EndpointRegionId", endpointRegionId);
@@ -420,7 +500,14 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * ModifyAccount.
+         * <p>Specifies whether to change the password of the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder modifyAccount(Boolean modifyAccount) {
             this.putQueryParameter("ModifyAccount", modifyAccount);
@@ -429,7 +516,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password of the database account.</p>
+         * <blockquote>
+         * <p> This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DTStest****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -438,7 +531,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the DTS instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -447,7 +543,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -456,7 +555,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * <p>Cross Alibaba Cloud account role name. When performing data synchronization across Alibaba Cloud accounts, this parameter must be passed. For the required permissions and authorization methods for this role, please refer to <a href="https://help.aliyun.com/document_detail/48468.html">How to Configure RAM Authorization for Cross-Account Data Migration or Synchronization</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-for-dts</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);
@@ -465,7 +567,18 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * ShardPassword.
+         * <p>The account password of the shard of the ApsaraDB for MongoDB sharded cluster instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is valid and required only if the source database is an ApsaraDB for MongoDB sharded cluster instance.</p>
+         * </li>
+         * <li><p>This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DTStest****</p>
          */
         public Builder shardPassword(String shardPassword) {
             this.putQueryParameter("ShardPassword", shardPassword);
@@ -474,7 +587,18 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * ShardUsername.
+         * <p>The account username of the shard of the ApsaraDB for MongoDB sharded cluster instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is valid and required only if the source database is an ApsaraDB for MongoDB sharded cluster instance.</p>
+         * </li>
+         * <li><p>This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>shard</p>
          */
         public Builder shardUsername(String shardUsername) {
             this.putQueryParameter("ShardUsername", shardUsername);
@@ -483,7 +607,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * <p>Synchronization direction, with values:</p>
+         * <ul>
+         * <li><strong>Forward</strong> (default): Forward. - <strong>Reverse</strong>: Reverse.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -492,7 +622,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The database account.</p>
+         * <blockquote>
+         * <p> This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

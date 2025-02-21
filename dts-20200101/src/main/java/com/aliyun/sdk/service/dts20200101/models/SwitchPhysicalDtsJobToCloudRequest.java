@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchPhysicalDtsJobToCloudRequest} extends {@link RequestModel}
  *
  * <p>SwitchPhysicalDtsJobToCloudRequest</p>
@@ -109,7 +115,10 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         } 
 
         /**
-         * DtsInstanceId.
+         * <p>Migration, synchronization, or subscription instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsl3m1213ye7l****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -118,7 +127,10 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * <p>Data migration or synchronization instance ID, which can be queried by calling the <strong>describedtsjobs</strong> interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l5512es7w15****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -127,7 +139,10 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID. Pass this parameter to specify the region where the instance is located. For more details, see the list of supported regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -136,7 +151,10 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz4us4iruleja</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -145,7 +163,15 @@ public class SwitchPhysicalDtsJobToCloudRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * <p>Synchronization direction, values: - <strong>Forward</strong>: Forward. - <strong>Reverse</strong>: Reverse.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The default value is <strong>Forward</strong>. - <strong>Reverse</strong> can only be passed when the topology of the data synchronization instance is bidirectional, to release the reverse synchronization link.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);

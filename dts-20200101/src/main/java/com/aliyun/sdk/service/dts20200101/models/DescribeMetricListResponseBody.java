@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMetricListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMetricListResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DataPoints")
-    private java.util.List < DataPoints> dataPoints;
+    private java.util.List<DataPoints> dataPoints;
 
     @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
@@ -80,7 +86,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     /**
      * @return dataPoints
      */
-    public java.util.List < DataPoints> getDataPoints() {
+    public java.util.List<DataPoints> getDataPoints() {
         return this.dataPoints;
     }
 
@@ -156,7 +162,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DataPoints> dataPoints; 
+        private java.util.List<DataPoints> dataPoints; 
         private String dynamicMessage; 
         private String errCode; 
         private String errMessage; 
@@ -169,7 +175,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned by the backend service. The number is incremented.
+         * <p>The error code returned by the backend service. The number is incremented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -177,15 +186,18 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring statistics.
+         * <p>The monitoring statistics.</p>
          */
-        public Builder dataPoints(java.util.List < DataPoints> dataPoints) {
+        public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
             this.dataPoints = dataPoints;
             return this;
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace the %s variable in the **ErrMessage** parameter.
+         * <p>The dynamic part in the error message. This parameter is used to replace the %s variable in the <strong>ErrMessage</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -193,7 +205,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -201,7 +216,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -209,7 +227,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned for an exception.
+         * <p>The HTTP status code returned for an exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -217,14 +238,18 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * *   **InternetOut**: the outbound traffic over the Internet. Unit: byte.
-         * <p>
-         * *   **diskusage_utilization**: the disk usage.
-         * *   **IntranetInRate**: the inbound traffic over the internal network. Unit: byte.
-         * *   **InternetIn**: the inbound traffic from the Internet. Unit: byte.
-         * *   **cpu_total**: the CPU utilization.
-         * *   **memory_usedutilization**: the memory usage.
-         * *   **IntranetOutRate**: the outbound traffic over the internal network. Unit: byte.
+         * <ul>
+         * <li><strong>InternetOut</strong>: the outbound traffic over the Internet. Unit: byte.</li>
+         * <li><strong>diskusage_utilization</strong>: the disk usage.</li>
+         * <li><strong>IntranetInRate</strong>: the inbound traffic over the internal network. Unit: byte.</li>
+         * <li><strong>InternetIn</strong>: the inbound traffic from the Internet. Unit: byte.</li>
+         * <li><strong>cpu_total</strong>: the CPU utilization.</li>
+         * <li><strong>memory_usedutilization</strong>: the memory usage.</li>
+         * <li><strong>IntranetOutRate</strong>: the outbound traffic over the internal network. Unit: byte.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_total</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -232,11 +257,14 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the metrics of the cluster or a node are queried. Valid values:
-         * <p>
+         * <p>Indicates whether the metrics of the cluster or a node are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>CLUSTER</strong>: The metrics of the cluster are queried.</li>
+         * <li><strong>NODE</strong>: The metrics of a node are queried.</li>
+         * </ul>
          * 
-         * *   **CLUSTER**: The metrics of the cluster are queried.
-         * *   **NODE**: The metrics of a node are queried.
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -244,11 +272,14 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The monitored object.
-         * <p>
+         * <p>The monitored object.</p>
+         * <ul>
+         * <li>If the <strong>MetricType</strong> parameter is set to <strong>NODE</strong>, the value of this parameter is the ID of the node that is monitored.****</li>
+         * <li>If the <strong>MetricType</strong> parameter is set to <strong>CLUSTER</strong>, the value of this parameter is the ID of the dedicated cluster. You can obtain the ID by calling the ListDedicatedCluster operation.</li>
+         * </ul>
          * 
-         * *   If the **MetricType** parameter is set to **NODE**, the value of this parameter is the ID of the node that is monitored.****
-         * *   If the **MetricType** parameter is set to **CLUSTER**, the value of this parameter is the ID of the dedicated cluster. You can obtain the ID by calling the ListDedicatedCluster operation.
+         * <strong>example:</strong>
+         * <p>ecs-jhjnjjn</p>
          */
         public Builder param(String param) {
             this.param = param;
@@ -256,7 +287,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The monitoring interval. Unit: seconds. Minimum value: 15.
+         * <p>The monitoring interval. Unit: seconds. Minimum value: 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder period(Long period) {
             this.period = period;
@@ -264,7 +298,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -272,7 +309,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -285,6 +325,12 @@ public class DescribeMetricListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMetricListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMetricListResponseBody</p>
+     */
     public static class DataPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Statistics")
         private Float statistics;
@@ -324,7 +370,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The statistical value.
+             * <p>The statistical value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15.25</p>
              */
             public Builder statistics(Float statistics) {
                 this.statistics = statistics;
@@ -332,7 +381,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the record. Unit: milliseconds.
+             * <p>The timestamp of the record. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1650872310000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

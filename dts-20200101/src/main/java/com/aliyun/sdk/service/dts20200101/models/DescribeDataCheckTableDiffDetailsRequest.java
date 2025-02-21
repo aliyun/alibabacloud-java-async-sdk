@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCheckTableDiffDetailsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataCheckTableDiffDetailsRequest</p>
@@ -164,7 +170,15 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * CheckType.
+         * <p>The data verification method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: full data verification.</li>
+         * <li><strong>2</strong>: incremental data verification.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder checkType(Integer checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -173,7 +187,11 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * DbName.
+         * <p>The name of the database to which the table that contains inconsistent data belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_dtstest</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -182,7 +200,11 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xd4e4xb419q****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -191,7 +213,10 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the page to return. The value must be an integer greater than 0. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +225,10 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -209,7 +237,10 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -218,7 +249,11 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * TbName.
+         * <p>The name of the table that contains inconsistent data exists.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_person</p>
          */
         public Builder tbName(String tbName) {
             this.putQueryParameter("TbName", tbName);

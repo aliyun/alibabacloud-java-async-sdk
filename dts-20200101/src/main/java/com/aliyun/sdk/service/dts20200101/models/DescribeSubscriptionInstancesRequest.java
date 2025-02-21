@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSubscriptionInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSubscriptionInstancesRequest</p>
@@ -46,7 +52,7 @@ public class DescribeSubscriptionInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeSubscriptionInstancesRequest(Builder builder) {
         super(builder);
@@ -133,7 +139,7 @@ public class DescribeSubscriptionInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -146,7 +152,7 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String subscriptionInstanceName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -166,7 +172,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -175,7 +184,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +205,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
+         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -202,7 +217,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +229,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~49442~~).
+         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/49442.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +241,10 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz4us4iruleja</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -229,10 +253,13 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * The name of the change tracking instance.
-         * <p>
+         * <p>The name of the change tracking instance.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, DTS returns all the change tracking instances that match the specified name.</p>
+         * </blockquote>
          * 
-         * >  If you specify this parameter, DTS returns all the change tracking instances that match the specified name.
+         * <strong>example:</strong>
+         * <p>MySQL订阅</p>
          */
         public Builder subscriptionInstanceName(String subscriptionInstanceName) {
             this.putQueryParameter("SubscriptionInstanceName", subscriptionInstanceName);
@@ -241,9 +268,9 @@ public class DescribeSubscriptionInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Tags of the data migration instance, used as a filter. When this is not empty, only instances with this tag will be returned.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -256,6 +283,12 @@ public class DescribeSubscriptionInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSubscriptionInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSubscriptionInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -296,12 +329,17 @@ public class DescribeSubscriptionInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
-             * <p>
+             * <p>The tag key.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+             * <li>This parameter cannot be an empty string.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * > 
-             * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
-             * *   This parameter cannot be an empty string.
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -309,12 +347,16 @@ public class DescribeSubscriptionInstancesRequest extends Request {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+             * <li>This parameter can be an empty string.</li>
+             * </ul>
              * 
-             * > 
-             * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
-             * *   This parameter can be an empty string.
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

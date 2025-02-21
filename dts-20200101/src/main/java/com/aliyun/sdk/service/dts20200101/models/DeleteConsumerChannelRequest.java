@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConsumerChannelRequest} extends {@link RequestModel}
  *
  * <p>DeleteConsumerChannelRequest</p>
@@ -111,7 +117,11 @@ public class DeleteConsumerChannelRequest extends Request {
         } 
 
         /**
-         * The ID of the consumer group. You can call the [DescribeConsumerChannel](~~264169~~) operation to query the consumer group ID.
+         * <p>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/264169.html">DescribeConsumerChannel</a> operation to query the consumer group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsktbb6jdn2******</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("ConsumerGroupId", consumerGroupId);
@@ -120,10 +130,13 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
-         * <p>
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
+         * <strong>example:</strong>
+         * <p>dtsboss6pn1w73****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -132,10 +145,13 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
-         * <p>
+         * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
+         * <strong>example:</strong>
+         * <p>boss6pn1w73****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -144,7 +160,11 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +173,10 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

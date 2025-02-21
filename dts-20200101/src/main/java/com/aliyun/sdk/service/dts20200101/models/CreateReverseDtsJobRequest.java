@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReverseDtsJobRequest} extends {@link RequestModel}
  *
  * <p>CreateReverseDtsJobRequest</p>
@@ -119,7 +125,11 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * <p>The ID of the synchronization or migration task, which can be queried by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n99m9jx822k****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -128,7 +138,10 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource GroupId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -137,7 +150,10 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * ShardPassword.
+         * <p>Shard Password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTStest****</p>
          */
         public Builder shardPassword(String shardPassword) {
             this.putQueryParameter("ShardPassword", shardPassword);
@@ -146,7 +162,10 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * ShardUsername.
+         * <p>Shard User name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder shardUsername(String shardUsername) {
             this.putQueryParameter("ShardUsername", shardUsername);

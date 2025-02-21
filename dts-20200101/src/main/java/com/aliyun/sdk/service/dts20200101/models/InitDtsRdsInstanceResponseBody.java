@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitDtsRdsInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>InitDtsRdsInstanceResponseBody</p>
@@ -109,7 +115,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The built-in account that is used by DTS to connect to the node.
+         * <p>The built-in account that is used by DTS to connect to the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rdsdt_dtsacct</p>
          */
         public Builder adminAccount(String adminAccount) {
             this.adminAccount = adminAccount;
@@ -117,7 +126,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The password of the built-in account.
+         * <p>The password of the built-in account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1jecpqrtc****</p>
          */
         public Builder adminPassword(String adminPassword) {
             this.adminPassword = adminPassword;
@@ -125,7 +137,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * <p>The error code returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +148,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * <p>The error message returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +159,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -149,7 +170,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7796ECE0-9C17-5E4D-9CE6-B7EC825A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +181,10 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

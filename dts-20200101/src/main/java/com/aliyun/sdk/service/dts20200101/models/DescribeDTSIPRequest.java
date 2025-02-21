@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDTSIPRequest} extends {@link RequestModel}
  *
  * <p>DescribeDTSIPRequest</p>
@@ -96,10 +102,13 @@ public class DescribeDTSIPRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
+         * <p>The ID of the region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> If the destination instance is a self-managed database with a public IP address, you can set the parameter to <strong>cn-hangzhou</strong> or the ID of the closest region.</p>
+         * </blockquote>
          * 
-         * >  If the destination instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destinationEndpointRegion(String destinationEndpointRegion) {
             this.putQueryParameter("DestinationEndpointRegion", destinationEndpointRegion);
@@ -108,7 +117,10 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +129,10 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -126,10 +141,14 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
+         * <p>The ID of the region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> If the source instance is a self-managed database with a public IP address, you can set the parameter to <strong>cn-hangzhou</strong> or the ID of the closest region.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If the source instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceEndpointRegion(String sourceEndpointRegion) {
             this.putQueryParameter("SourceEndpointRegion", sourceEndpointRegion);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigureSubscriptionRequest} extends {@link RequestModel}
  *
  * <p>ConfigureSubscriptionRequest</p>
@@ -589,10 +595,13 @@ public class ConfigureSubscriptionRequest extends Request {
         } 
 
         /**
-         * The UNIX timestamp that represents the start time of change tracking. Unit: seconds.
-         * <p>
+         * <p>The UNIX timestamp that represents the start time of change tracking. Unit: seconds.</p>
+         * <blockquote>
+         * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * </blockquote>
          * 
-         * >  You can use a search engine to obtain a UNIX timestamp converter.
+         * <strong>example:</strong>
+         * <p>1616902385</p>
          */
         public Builder checkpoint(String checkpoint) {
             this.putQueryParameter("Checkpoint", checkpoint);
@@ -601,7 +610,11 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The objects for which you want to track data changes. The value must be a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).
+         * <p>The objects for which you want to track data changes. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</p>
          */
         public Builder dbList(String dbList) {
             this.putQueryParameter("DbList", dbList);
@@ -610,7 +623,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the DTS dedicated cluster on which the change tracking task is scheduled to run.
+         * <p>The ID of the DTS dedicated cluster on which the change tracking task is scheduled to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtscluster_atyl3b5214uk***</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
@@ -619,11 +635,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * Specifies whether to monitor the task latency. Valid values:
-         * <p>
+         * <p>Specifies whether to monitor the task latency. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: monitors the task latency.</li>
+         * <li><strong>false</strong>: does not monitor the task latency.</li>
+         * </ul>
          * 
-         * *   **true**: monitors the task latency.
-         * *   **false**: does not monitor the task latency.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder delayNotice(Boolean delayNotice) {
             this.putQueryParameter("DelayNotice", delayNotice);
@@ -632,12 +651,16 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The mobile numbers to which latency-related alerts are sent. Separate multiple mobile numbers with commas (,).
-         * <p>
+         * <p>The mobile numbers to which latency-related alerts are sent. Separate multiple mobile numbers with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</li>
+         * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
+         * </ul>
          * 
-         * > 
-         * *   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.
-         * *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder delayPhone(String delayPhone) {
             this.putQueryParameter("DelayPhone", delayPhone);
@@ -646,10 +669,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.
-         * <p>
+         * <p>The threshold for triggering latency-related alerts. Unit: seconds. The value must be an integer. You can set the threshold based on your business needs. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds.</p>
+         * <blockquote>
+         * <p> If the <strong>DelayNotice</strong> parameter is set to <strong>true</strong>, this parameter is required.</p>
+         * </blockquote>
          * 
-         * >  If the **DelayNotice** parameter is set to **true**, this parameter is required.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder delayRuleTime(Long delayRuleTime) {
             this.putQueryParameter("DelayRuleTime", delayRuleTime);
@@ -658,7 +684,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * DtsBisLabel.
+         * <p>Environment label of the DTS instance, with values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: <strong>general</strong> - <strong>online</strong>: <strong>production</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder dtsBisLabel(String dtsBisLabel) {
             this.putQueryParameter("DtsBisLabel", dtsBisLabel);
@@ -667,7 +699,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+         * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsy0zz3t13h7d****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -676,7 +711,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y0zz3t13h7d****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -685,10 +723,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The name of the change tracking task.
-         * <p>
+         * <p>The name of the change tracking task.</p>
+         * <blockquote>
+         * <p> We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.
+         * <strong>example:</strong>
+         * <p>for_test</p>
          */
         public Builder dtsJobName(String dtsJobName) {
             this.putQueryParameter("DtsJobName", dtsJobName);
@@ -697,11 +739,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * Specifies whether to monitor the task status. Valid values:
-         * <p>
+         * <p>Specifies whether to monitor the task status. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: monitors the task status.</li>
+         * <li><strong>false</strong>: does not monitor the task status.</li>
+         * </ul>
          * 
-         * *   **true**: monitors the task status.
-         * *   **false**: does not monitor the task status.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder errorNotice(Boolean errorNotice) {
             this.putQueryParameter("ErrorNotice", errorNotice);
@@ -710,12 +755,16 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The mobile numbers to which status-related alerts are sent. Separate multiple mobile numbers with commas (,).
-         * <p>
+         * <p>The mobile numbers to which status-related alerts are sent. Separate multiple mobile numbers with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</li>
+         * <li>Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks in the CloudMonitor console</a>.</li>
+         * </ul>
          * 
-         * > 
-         * *   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.
-         * *   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder errorPhone(String errorPhone) {
             this.putQueryParameter("ErrorPhone", errorPhone);
@@ -724,7 +773,11 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * MaxDu.
+         * <p>The DU upper limit of the Serverless instance, with values being: 2, 4, 8, 16. 
+         * Currently, this feature is not supported, please do not pass in parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder maxDu(Double maxDu) {
             this.putQueryParameter("MaxDu", maxDu);
@@ -733,7 +786,11 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * MinDu.
+         * <p>The lower limit of DU for Serverless instances, with values being: 1, 2, 4, 8, 16. 
+         * This feature is currently not supported, please do not pass in parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minDu(Double minDu) {
             this.putQueryParameter("MinDu", minDu);
@@ -742,7 +799,11 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -751,7 +812,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see [MigrationReserved](~~176470~~).
+         * <p>The reserved parameter of DTS. The value must be a JSON string. You can specify this parameter to add more configurations of the source or destination database to the DTS task. For example, you can specify the data storage format of the destination Kafka database and the ID of the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{      &quot;srcInstanceId&quot;: &quot;cen-9kqshqum*******&quot;  }</p>
          */
         public Builder reserve(String reserve) {
             this.putQueryParameter("Reserve", reserve);
@@ -760,7 +824,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -769,7 +836,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The name of the source database.
+         * <p>Name of the database to be subscribed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         public Builder sourceEndpointDatabaseName(String sourceEndpointDatabaseName) {
             this.putQueryParameter("SourceEndpointDatabaseName", sourceEndpointDatabaseName);
@@ -778,10 +848,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The engine of the source database. Valid values: **MySQL**, **PostgreSQL**, and **Oracle**.
-         * <p>
+         * <p>The engine of the source database. Valid values: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>Oracle</strong>.</p>
+         * <blockquote>
+         * <p> If the source database is a self-managed database, you must specify this parameter.</p>
+         * </blockquote>
          * 
-         * >  If the source database is a self-managed database, you must specify this parameter.
+         * <strong>example:</strong>
+         * <p>PostgreSQL</p>
          */
         public Builder sourceEndpointEngineName(String sourceEndpointEngineName) {
             this.putQueryParameter("SourceEndpointEngineName", sourceEndpointEngineName);
@@ -790,10 +863,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The endpoint of the source database.
-         * <p>
+         * <p>The endpoint of the source database.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is a self-managed database.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the source database is a self-managed database.
+         * <strong>example:</strong>
+         * <p>172.16.8*.***</p>
          */
         public Builder sourceEndpointIP(String sourceEndpointIP) {
             this.putQueryParameter("SourceEndpointIP", sourceEndpointIP);
@@ -802,10 +878,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the source database.
-         * <p>
+         * <p>The ID of the source database.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.
+         * <strong>example:</strong>
+         * <p>rm-bp1zc3iyqe3qw****</p>
          */
         public Builder sourceEndpointInstanceID(String sourceEndpointInstanceID) {
             this.putQueryParameter("SourceEndpointInstanceID", sourceEndpointInstanceID);
@@ -814,17 +893,20 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The type of the source database. Valid values:
-         * <p>
+         * <p>The type of the source database. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
+         * <li><strong>DRDS</strong>: PolarDB-X 1.0 instance</li>
+         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+         * <li><strong>ECS</strong>: self-managed database hosted on an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Express</strong>: self-managed database connected over Express Connect</li>
+         * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN)</li>
+         * <li><strong>dg</strong>: self-managed database connected over Database Gateway</li>
+         * </ul>
          * 
-         * *   **RDS**: ApsaraDB RDS for MySQL instance
-         * *   **PolarDB**: PolarDB for MySQL cluster
-         * *   **DRDS**: PolarDB-X 1.0 instance
-         * *   **LocalInstance**: self-managed database with a public IP address
-         * *   **ECS**: self-managed database hosted on an Elastic Compute Service (ECS) instance
-         * *   **Express**: self-managed database connected over Express Connect
-         * *   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)
-         * *   **dg**: self-managed database connected over Database Gateway
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder sourceEndpointInstanceType(String sourceEndpointInstanceType) {
             this.putQueryParameter("SourceEndpointInstanceType", sourceEndpointInstanceType);
@@ -833,10 +915,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The system ID (SID) of the Oracle database.
-         * <p>
+         * <p>The system ID (SID) of the Oracle database.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         public Builder sourceEndpointOracleSID(String sourceEndpointOracleSID) {
             this.putQueryParameter("SourceEndpointOracleSID", sourceEndpointOracleSID);
@@ -845,10 +930,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the source database belongs.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the source database belongs.</p>
+         * <blockquote>
+         * <p> This parameter is required only when you track data changes across different Alibaba Cloud accounts.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when you track data changes across different Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         public Builder sourceEndpointOwnerID(String sourceEndpointOwnerID) {
             this.putQueryParameter("SourceEndpointOwnerID", sourceEndpointOwnerID);
@@ -857,7 +945,10 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The password of the account that is used to connect to the source database.
+         * <p>The password of the account that is used to connect to the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder sourceEndpointPassword(String sourceEndpointPassword) {
             this.putQueryParameter("SourceEndpointPassword", sourceEndpointPassword);
@@ -866,10 +957,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The service port number of the source database.
-         * <p>
+         * <p>The service port number of the source database.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is a self-managed database.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the source database is a self-managed database.
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder sourceEndpointPort(String sourceEndpointPort) {
             this.putQueryParameter("SourceEndpointPort", sourceEndpointPort);
@@ -878,10 +972,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the source database resides. For more information, see [List of supported regions](~~141033~~).
-         * <p>
+         * <p>The ID of the region in which the source database resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <blockquote>
+         * <p> If the source database is a self-managed database with a public IP address, you can set the value of this parameter to <strong>cn-hangzhou</strong> or the ID of the region that is closest to the region in which the self-managed database resides.</p>
+         * </blockquote>
          * 
-         * >  If the source database is a self-managed database with a public IP address, you can set the value of this parameter to **cn-hangzhou** or the ID of the region that is closest to the region in which the self-managed database resides.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder sourceEndpointRegion(String sourceEndpointRegion) {
             this.putQueryParameter("SourceEndpointRegion", sourceEndpointRegion);
@@ -890,10 +987,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.
-         * <p>
+         * <p>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking task. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</p>
+         * <blockquote>
+         * <p> For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+         * </blockquote>
          * 
-         * >  For more information about the permissions that are required for the RAM role and how to grant the permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
+         * <strong>example:</strong>
+         * <p>ram-for-dts</p>
          */
         public Builder sourceEndpointRole(String sourceEndpointRole) {
             this.putQueryParameter("SourceEndpointRole", sourceEndpointRole);
@@ -902,10 +1002,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The username of the account that is used to connect to the source database.
-         * <p>
+         * <p>The username of the account that is used to connect to the source database.</p>
+         * <blockquote>
+         * <p> The permissions that are required for the database account vary with the change tracking scenario. For more information, see <a href="https://help.aliyun.com/document_detail/212653.html">Prepare the source database account for change tracking</a>.</p>
+         * </blockquote>
          * 
-         * >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Prepare the source database account for change tracking](~~212653~~).
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putQueryParameter("SourceEndpointUserName", sourceEndpointUserName);
@@ -914,7 +1017,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * SrcCaCertificateOssUrl.
+         * <p>The path of the certificate authority (CA) certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+         * <blockquote>
+         * <p> This feature is not supported. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder srcCaCertificateOssUrl(String srcCaCertificateOssUrl) {
             this.putQueryParameter("SrcCaCertificateOssUrl", srcCaCertificateOssUrl);
@@ -923,7 +1032,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * SrcCaCertificatePassword.
+         * <p>The key of the CA certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+         * <blockquote>
+         * <p> This feature is not supported. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder srcCaCertificatePassword(String srcCaCertificatePassword) {
             this.putQueryParameter("SrcCaCertificatePassword", srcCaCertificatePassword);
@@ -932,7 +1047,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * SrcClientCertOssUrl.
+         * <p>The path to the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+         * <blockquote>
+         * <p> This feature is not supported. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder srcClientCertOssUrl(String srcClientCertOssUrl) {
             this.putQueryParameter("SrcClientCertOssUrl", srcClientCertOssUrl);
@@ -941,7 +1062,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * SrcClientKeyOssUrl.
+         * <p>The path to the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+         * <blockquote>
+         * <p> This feature is not supported. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder srcClientKeyOssUrl(String srcClientKeyOssUrl) {
             this.putQueryParameter("SrcClientKeyOssUrl", srcClientKeyOssUrl);
@@ -950,7 +1077,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * SrcClientPassword.
+         * <p>The password of the private key of the client certificate that is used if the connection to the source database is encrypted by using the SSL protocol.</p>
+         * <blockquote>
+         * <p> This feature is not supported. Do not specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder srcClientPassword(String srcClientPassword) {
             this.putQueryParameter("SrcClientPassword", srcClientPassword);
@@ -959,11 +1092,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * Specifies whether to track DDL statements. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to track DDL statements. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: tracks DDL statements.</li>
+         * <li><strong>false</strong>: does not track DDL statements.</li>
+         * </ul>
          * 
-         * *   **true**: tracks DDL statements.
-         * *   **false**: does not track DDL statements.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder subscriptionDataTypeDDL(Boolean subscriptionDataTypeDDL) {
             this.putQueryParameter("SubscriptionDataTypeDDL", subscriptionDataTypeDDL);
@@ -972,11 +1108,14 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * Specifies whether to track DML statements. Default value: true. Valid values:
-         * <p>
+         * <p>Specifies whether to track DML statements. Default value: true. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: tracks DML statements.</li>
+         * <li><strong>false</strong>: does not track DML statements.</li>
+         * </ul>
          * 
-         * *   **true**: tracks DML statements.
-         * *   **false**: does not track DML statements.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder subscriptionDataTypeDML(Boolean subscriptionDataTypeDML) {
             this.putQueryParameter("SubscriptionDataTypeDML", subscriptionDataTypeDML);
@@ -985,12 +1124,17 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The network type of the change tracking task. Set the value to **vpc**. A value of vpc indicates the Virtual Private Cloud (VPC) network type.
-         * <p>
+         * <p>The network type of the change tracking task. Set the value to <strong>vpc</strong>. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <strong>SubscriptionInstanceVPCId</strong> and <strong>SubscriptionInstanceVSwitchID</strong> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</li>
+         * <li>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * *   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstanceVPCId** and **SubscriptionInstanceVSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.
-         * *   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder subscriptionInstanceNetworkType(String subscriptionInstanceNetworkType) {
             this.putQueryParameter("SubscriptionInstanceNetworkType", subscriptionInstanceNetworkType);
@@ -999,10 +1143,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which the change tracking instance is deployed.
-         * <p>
+         * <p>The ID of the VPC in which the change tracking instance is deployed.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the <strong>SubscriptionInstanceNetworkType</strong> parameter is set to <strong>vpc</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.
+         * <strong>example:</strong>
+         * <p>vpc-bp1vwnn14rqpyiczj****</p>
          */
         public Builder subscriptionInstanceVPCId(String subscriptionInstanceVPCId) {
             this.putQueryParameter("SubscriptionInstanceVPCId", subscriptionInstanceVPCId);
@@ -1011,10 +1158,13 @@ public class ConfigureSubscriptionRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch in the specified VPC.
-         * <p>
+         * <p>The ID of the vSwitch in the specified VPC.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the <strong>SubscriptionInstanceNetworkType</strong> parameter is set to <strong>vpc</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.
+         * <strong>example:</strong>
+         * <p>vsw-bp10df3mxae6lpmku****</p>
          */
         public Builder subscriptionInstanceVSwitchId(String subscriptionInstanceVSwitchId) {
             this.putQueryParameter("SubscriptionInstanceVSwitchId", subscriptionInstanceVSwitchId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigureSubscriptionResponseBody} extends {@link TeaModel}
  *
  * <p>ConfigureSubscriptionResponseBody</p>
@@ -109,7 +115,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the change tracking instance.
+         * <p>The ID of the change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsy0zz3t13h7d****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.dtsInstanceId = dtsInstanceId;
@@ -117,7 +126,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the change tracking task.
+         * <p>The ID of the change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>y0zz3t13h7d****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -125,7 +137,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +148,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +159,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -149,7 +170,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D6ECADF-C5E9-4C96-8811-77602B31****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +181,10 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

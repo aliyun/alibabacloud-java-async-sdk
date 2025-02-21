@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConsumerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConsumerGroupResponseBody</p>
@@ -85,7 +91,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The ID of the consumer group.
+         * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtswc411cg617p****</p>
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.consumerGroupID = consumerGroupID;
@@ -93,7 +102,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -101,7 +113,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -109,7 +124,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6063641E-BAD1-4BA7-B70B-26FFFD18****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +135,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

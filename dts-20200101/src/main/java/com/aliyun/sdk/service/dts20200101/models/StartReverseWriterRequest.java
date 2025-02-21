@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartReverseWriterRequest} extends {@link RequestModel}
  *
  * <p>StartReverseWriterRequest</p>
@@ -105,10 +111,13 @@ public class StartReverseWriterRequest extends Request {
         }
 
         /**
-         * The offset of the Incremental Write module. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. 
-         * <p>
+         * <p>The offset of the Incremental Write module. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. </p>
+         * <blockquote>
+         * <p>The default value is the offset that is automatically saved by DTS when the task is paused.</p>
+         * </blockquote>
          * 
-         * > The default value is the offset that is automatically saved by DTS when the task is paused.
+         * <strong>example:</strong>
+         * <p>1695613785</p>
          */
         public Builder checkPoint(String checkPoint) {
             this.putQueryParameter("CheckPoint", checkPoint);
@@ -117,7 +126,11 @@ public class StartReverseWriterRequest extends Request {
         }
 
         /**
-         * The ID of the reverse task that was created by calling the CreateReverseDtsJob operation.
+         * <p>The ID of the reverse task that was created by calling the CreateReverseDtsJob operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n99m9jx822k****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);

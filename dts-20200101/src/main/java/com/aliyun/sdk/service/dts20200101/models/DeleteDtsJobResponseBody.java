@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDtsJobResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDtsJobResponseBody</p>
@@ -109,7 +115,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteDtsJob**.
+         * <p>The operation that you want to perform. Set the value to <strong>DeleteDtsJob</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -117,7 +126,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteDtsJob**.
+         * <p>The operation that you want to perform. Set the value to <strong>DeleteDtsJob</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -125,7 +137,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -133,7 +148,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -141,7 +159,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking instance.
+         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -149,16 +170,20 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
+         * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to delete the reverse synchronization task only if the topology is two-way synchronization.</li>
+         * </ul>
          * 
-         * *   **Forward**: Data is synchronized from the source database to the destination database.
-         * *   **Reverse**: Data is synchronized from the destination database to the source database.
-         * 
-         * > 
-         * 
-         * *   Default value: **Forward**.
-         * *   You can set this parameter to **Reverse** to delete the reverse synchronization task only if the topology is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>01B6F25-21E7-4484-99D5-3EF2625C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +191,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

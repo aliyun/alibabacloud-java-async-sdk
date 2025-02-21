@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDtsJobEndpointResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDtsJobEndpointResponseBody</p>
@@ -85,7 +91,10 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrCode.
+         * <p>Error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS.Msg.InvalidEndpoint</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -93,7 +102,10 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The endpoint is invalid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -101,7 +113,10 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +124,10 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FA98DF2-2F81-51FF-8A38-AA5112DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +135,10 @@ public class ModifyDtsJobEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

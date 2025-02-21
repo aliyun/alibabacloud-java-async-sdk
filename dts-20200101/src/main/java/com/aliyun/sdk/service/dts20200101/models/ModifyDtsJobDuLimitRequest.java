@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDtsJobDuLimitRequest} extends {@link RequestModel}
  *
  * <p>ModifyDtsJobDuLimitRequest</p>
@@ -111,7 +117,11 @@ public class ModifyDtsJobDuLimitRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsxxx</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -120,10 +130,14 @@ public class ModifyDtsJobDuLimitRequest extends Request {
         }
 
         /**
-         * The upper limit of DUs for the DTS task.
-         * <p>
+         * <p>The upper limit of DUs for the DTS task.</p>
+         * <blockquote>
+         * <p> Minimum value: <strong>1</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Minimum value: **1**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duLimit(Long duLimit) {
             this.putQueryParameter("DuLimit", duLimit);
@@ -141,7 +155,10 @@ public class ModifyDtsJobDuLimitRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the DTS instance resides.
+         * <p>The ID of the region in which the DTS instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +167,10 @@ public class ModifyDtsJobDuLimitRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

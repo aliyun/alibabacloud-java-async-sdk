@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDtsJobsRequest} extends {@link RequestModel}
  *
  * <p>DeleteDtsJobsRequest</p>
@@ -96,11 +102,17 @@ public class DeleteDtsJobsRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
-         * <p>
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Separate multiple task IDs with commas (,).</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query task IDs.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > *   Separate multiple task IDs with commas (,).
-         * > *   You can call the [DescribeDtsJobs](~~209702~~) operation to query task IDs.
+         * <strong>example:</strong>
+         * <p>l5o11f9029c****</p>
          */
         public Builder dtsJobIds(String dtsJobIds) {
             this.putQueryParameter("DtsJobIds", dtsJobIds);
@@ -109,7 +121,10 @@ public class DeleteDtsJobsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,7 +133,10 @@ public class DeleteDtsJobsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz4us4iruleja</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -127,7 +145,10 @@ public class DeleteDtsJobsRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Is it ZeroETL task</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

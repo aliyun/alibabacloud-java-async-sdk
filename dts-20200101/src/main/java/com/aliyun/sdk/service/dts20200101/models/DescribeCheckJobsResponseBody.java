@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckJobsResponseBody</p>
  */
 public class DescribeCheckJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CheckJobs")
-    private java.util.List < CheckJobs> checkJobs;
+    private java.util.List<CheckJobs> checkJobs;
 
     @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
@@ -69,7 +75,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     /**
      * @return checkJobs
      */
-    public java.util.List < CheckJobs> getCheckJobs() {
+    public java.util.List<CheckJobs> getCheckJobs() {
         return this.checkJobs;
     }
 
@@ -144,7 +150,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckJobs> checkJobs; 
+        private java.util.List<CheckJobs> checkJobs; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errCode; 
@@ -157,15 +163,18 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * CheckJobs.
+         * <p>Item information check.</p>
          */
-        public Builder checkJobs(java.util.List < CheckJobs> checkJobs) {
+        public Builder checkJobs(java.util.List<CheckJobs> checkJobs) {
             this.checkJobs = checkJobs;
             return this;
         }
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code, this parameter will be deprecated soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -173,7 +182,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message, used to replace the <strong>%s</strong> in the <strong>errmessage</strong> return parameter. If <strong>errmessage</strong> returns <strong>thevalueofinputparameter%sisnotvalid</strong>, and <strong>dynamicmessage</strong> returns <em>[1,2,3]</em>, it indicates that the request parameter <strong>dtsjobid</strong> is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>present environment is not support,so skip.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -181,7 +193,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -189,7 +204,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -197,7 +215,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -205,7 +226,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -213,7 +237,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The maximum number of records that can be displayed on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Long pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -221,7 +248,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC1D920B-AB89-52A9-AA5F-AA724C4205E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +259,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +270,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -250,6 +286,12 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckJobsResponseBody</p>
+     */
     public static class CheckJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -457,7 +499,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * ChargeType.
+             * <p>Billing type, return values: - <strong>POSTPAY</strong>: Pay-as-you-go (postpaid). - <strong>PREPAY</strong>: Subscription (prepaid).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -465,7 +510,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckPoint.
+             * <p>checkpoint</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1111****</p>
              */
             public Builder checkPoint(Long checkPoint) {
                 this.checkPoint = checkPoint;
@@ -473,7 +521,13 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckType.
+             * <p>Data validation method, with values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Full validation. - <strong>2</strong>: Incremental validation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -481,7 +535,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DiffCount.
+             * <p>Number of rows with data inconsistency</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder diffCount(Long diffCount) {
                 this.diffCount = diffCount;
@@ -489,7 +546,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DiffSum.
+             * <p>Synchronization initialization progress, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diffSum(Long diffSum) {
                 this.diffSum = diffSum;
@@ -497,7 +557,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DtsInstanceID.
+             * <p>Migration, synchronization, or subscription instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsz8tc99sy2158b36</p>
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -505,7 +568,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * <p>Migration, synchronization, or subscription task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n08o6si4q338b1x</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -513,7 +579,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishCount.
+             * <p>The number of data rows in the table that have completed validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15094</p>
              */
             public Builder finishCount(Long finishCount) {
                 this.finishCount = finishCount;
@@ -521,7 +590,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>DTS task ID. In most cases, there is no need to set this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c3d12dii27t632g</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -529,7 +601,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * <p>Instance specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMALL</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -537,7 +612,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>Check the name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -545,7 +623,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobStepId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>as0e1ks426bq3z0</p>
              */
             public Builder jobStepId(String jobStepId) {
                 this.jobStepId = jobStepId;
@@ -553,7 +634,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentJobType.
+             * <p>This parameter will be deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder parentJobType(String parentJobType) {
                 this.parentJobType = parentJobType;
@@ -561,7 +645,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>Region ID to which it belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -569,7 +656,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Check result, return values: -<strong>0</strong>: Check passed -<strong>1</strong>: Check failed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -577,7 +667,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Verify the total number of rows in the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>159</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

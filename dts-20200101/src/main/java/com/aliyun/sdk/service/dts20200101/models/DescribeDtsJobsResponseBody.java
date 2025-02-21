@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDtsJobsResponseBody</p>
  */
 public class DescribeDtsJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DtsJobList")
-    private java.util.List < DtsJobList> dtsJobList;
+    private java.util.List<DtsJobList> dtsJobList;
 
     @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
@@ -27,7 +33,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     private String errMessage;
 
     @com.aliyun.core.annotation.NameInMap("EtlDemoList")
-    private java.util.List < EtlDemoList> etlDemoList;
+    private java.util.List<EtlDemoList> etlDemoList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -73,7 +79,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     /**
      * @return dtsJobList
      */
-    public java.util.List < DtsJobList> getDtsJobList() {
+    public java.util.List<DtsJobList> getDtsJobList() {
         return this.dtsJobList;
     }
 
@@ -108,7 +114,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     /**
      * @return etlDemoList
      */
-    public java.util.List < EtlDemoList> getEtlDemoList() {
+    public java.util.List<EtlDemoList> getEtlDemoList() {
         return this.etlDemoList;
     }
 
@@ -155,12 +161,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DtsJobList> dtsJobList; 
+        private java.util.List<DtsJobList> dtsJobList; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errCode; 
         private String errMessage; 
-        private java.util.List < EtlDemoList> etlDemoList; 
+        private java.util.List<EtlDemoList> etlDemoList; 
         private Integer httpStatusCode; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
@@ -169,15 +175,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The list of DTS tasks and the details of each task.
+         * <p>The Data Transmission Service (DTS) tasks and the details of each task.</p>
          */
-        public Builder dtsJobList(java.util.List < DtsJobList> dtsJobList) {
+        public Builder dtsJobList(java.util.List<DtsJobList> dtsJobList) {
             this.dtsJobList = dtsJobList;
             return this;
         }
 
         /**
-         * The dynamic error code. This parameter will be removed in the future.
+         * <p>The dynamic error code. This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -185,10 +194,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.
-         * <p>
+         * <p>The dynamic part in the error message. The value of this parameter is used to replace the <strong>%s</strong> variable in the value of the <strong>ErrMessage</strong> parameter.</p>
+         * <blockquote>
+         * <p> For example, if the value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+         * </blockquote>
          * 
-         * >  For example, if the value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -196,7 +208,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -204,7 +219,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Value of Input Parameter %s is not valid.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -212,15 +230,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The DTS tasks and the details of each task.
+         * <p>The DTS tasks and the details of each task.</p>
          */
-        public Builder etlDemoList(java.util.List < EtlDemoList> etlDemoList) {
+        public Builder etlDemoList(java.util.List<EtlDemoList> etlDemoList) {
             this.etlDemoList = etlDemoList;
             return this;
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -228,7 +249,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -236,7 +260,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -244,7 +271,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -252,7 +282,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -260,7 +293,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DTS tasks that meet the query condition.
+         * <p>The total number of DTS tasks that meet the query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -273,6 +309,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DataCloudStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -348,7 +390,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>framework: DTS-31009: In process of processing data ****</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -356,11 +401,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance needs to be upgraded. Valid values:
-             * <p>
+             * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> </li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true** 
-             * - **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -368,7 +416,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task. Unit: percentage.
+             * <p>The progress of the task. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -376,7 +427,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been migrated.
+             * <p>The number of tables that have been migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -384,7 +438,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task. For more information about the valid values, see the description of the request parameter **Status**.
+             * <p>The state of the task. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -398,6 +455,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DataEtlStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -461,7 +524,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task has failed for a long time and cannot be recovered.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -469,7 +535,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the ETL task.
+             * <p>The progress of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -477,7 +546,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of records that have been processed by the ETL task.
+             * <p>The number of records that have been processed by the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -485,14 +557,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ETL task. Valid values:
-             * <p>
+             * <p>The state of the ETL task. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started.</li>
+             * <li><strong>Migrating</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * <li><strong>Catched</strong>: The task is not delayed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: The task is not started.
-             * *   **Migrating**: The task is in progress.
-             * *   **Failed**: The task failed.
-             * *   **Finished**: The task is complete.
-             * *   **Catched**: The task is not delayed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -506,6 +581,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DataInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -569,7 +650,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if full data synchronization failed.
+             * <p>The error message returned if full data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -577,7 +661,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of full data synchronization. This is expressed as a percentage.
+             * <p>The progress of full data synchronization. This is expressed as a percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -585,7 +672,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of records that have been synchronized during full data synchronization.
+             * <p>The number of records that have been synchronized during full data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44755</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -593,13 +683,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of full data synchronization. Valid values:
-             * <p>
+             * <p>The state of full data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started.</li>
+             * <li><strong>Migrating</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: The task is not started.
-             * *   **Migrating**: The task is in progress.
-             * *   **Failed**: The task failed.
-             * *   **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -613,6 +706,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DataSynchronizationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -688,7 +787,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if incremental data migration or synchronization failed.
+             * <p>The error message returned if incremental data migration or synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task has failed for a long time and cannot be recovered.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -696,13 +798,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance needs to be upgraded. Valid values:
-             * <p>
+             * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * <blockquote>
+             * <p> To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+             * </blockquote>
              * 
-             * *   **true**: yes
-             * *   **false**: no
-             * 
-             * >  To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -710,7 +816,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data migration or synchronization.
+             * <p>The progress of incremental data migration or synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -718,7 +827,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of records that have been migrated or synchronized during incremental data migration or synchronization.
+             * <p>The number of records that have been migrated or synchronized during incremental data migration or synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -726,14 +838,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data migration or synchronization. Valid values:
-             * <p>
+             * <p>The state of incremental data migration or synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started.</li>
+             * <li><strong>Migrating</strong>: The task is in progress.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * <li><strong>Catched</strong>: The task is not delayed.</li>
+             * </ul>
              * 
-             * *   **NotStarted**: The task is not started.
-             * *   **Migrating**: The task is in progress.
-             * *   **Failed**: The task failed.
-             * *   **Finished**: The task is complete.
-             * *   **Catched**: The task is not delayed.
+             * <strong>example:</strong>
+             * <p>Catched</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -747,6 +862,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -882,7 +1003,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database to which the migration object in the destination instance belongs.
+             * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -890,7 +1014,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database type of the destination instance.
+             * <p>The database type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -898,7 +1025,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1imrtn6fq7h****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -906,7 +1036,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination instance.
+             * <p>The type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -914,7 +1047,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the destination instance.
+             * <p>The endpoint of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -922,10 +1058,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database.
-             * <p>
+             * <p>The SID of the Oracle database.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the <strong>EngineName</strong> parameter of the destination instance is set to <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the **EngineName** parameter of the destination instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -933,7 +1072,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database service port of the destination instance.
+             * <p>The database service port of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -941,7 +1083,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+             * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -949,13 +1094,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled.</li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled, and the CA certificate is uploaded.</li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.</li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.</li>
+             * </ul>
              * 
-             * *   **DISABLE**: SSL encryption is disabled.
-             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
-             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
-             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -963,7 +1111,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the destination instance.
+             * <p>The database account of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -977,6 +1128,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ErrorDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -1016,7 +1173,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String helpUrl; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-31009</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -1024,7 +1184,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the documentation.
+             * <p>The URL of the documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<strong>.ali</strong>.com/**</p>
              */
             public Builder helpUrl(String helpUrl) {
                 this.helpUrl = helpUrl;
@@ -1038,6 +1201,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class FullDataCheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -1101,7 +1270,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1109,7 +1281,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the full data verification task. Unit: percentage.
+             * <p>The progress of the full data verification task. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1117,7 +1292,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the full data verification task.
+             * <p>The progress of the full data verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 rows/s (row: 5/5, table: 1/1)</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1125,13 +1303,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the full data verification task. Valid values:
-             * <p>
+             * <p>The state of the full data verification task. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The verification is not started. </li>
+             * <li><strong>Checking</strong>: The verification is in progress. </li>
+             * <li><strong>Failed</strong>: The verification failed. </li>
+             * <li><strong>Finished</strong>: The verification is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The verification is not started. 
-             * - **Checking**: The verification is in progress. 
-             * - **Failed**: The verification failed. 
-             * - **Finished**: The verification is complete.
+             * <strong>example:</strong>
+             * <p>Checking</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1145,6 +1326,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class IncDataCheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -1208,7 +1395,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1216,7 +1406,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the incremental data verification task. Unit: percentage.
+             * <p>The progress of the incremental data verification task. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1224,7 +1417,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the incremental data verification task.
+             * <p>The progress of the incremental data verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 rows/s (row: 5/5, table: 1/1)</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1232,13 +1428,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the incremental data verification task. Valid values:
-             * <p>
+             * <p>The state of the incremental data verification task. Valid values:</p>
+             * <ul>
+             * <li><strong>Catched</strong>: The verification is delayed. </li>
+             * <li><strong>NotStarted</strong>: The verification is not started. </li>
+             * <li><strong>Checking</strong>: The verification is in progress. </li>
+             * <li><strong>Failed</strong>: The verification failed.</li>
+             * </ul>
              * 
-             * - **Catched**: The verification is delayed. 
-             * - **NotStarted**: The verification is not started. 
-             * - **Checking**: The verification is in progress. 
-             * - **Failed**: The verification failed.
+             * <strong>example:</strong>
+             * <p>Checking</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1252,6 +1451,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class MigrationMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
@@ -1327,11 +1532,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * Indicates whether full data migration or synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether full data migration or synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -1339,11 +1547,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether incremental data migration or synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -1351,10 +1562,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether full data verification is performed. Valid values:
-             * <p>
-             * -  **true**: yes
-             * -  **false**: no
+             * <p>Indicates whether full data verification is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullDataCheck(Boolean fullDataCheck) {
                 this.fullDataCheck = fullDataCheck;
@@ -1362,10 +1577,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether incremental data verification is performed. Valid values:
-             * <p>
-             * -  **true**: yes
-             * -  **false**: no
+             * <p>Indicates whether incremental data verification is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder incDataCheck(Boolean incDataCheck) {
                 this.incDataCheck = incDataCheck;
@@ -1373,11 +1592,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether schema migration or schema synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether schema migration or schema synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -1391,6 +1613,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class Performance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -1430,7 +1658,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * The size of data that is migrated or synchronized per second. Unit: MB/s.
+             * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -1438,7 +1669,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+             * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -1452,6 +1686,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
@@ -1527,7 +1767,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * The name of the precheck item.
+             * <p>The name of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -1535,7 +1778,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the precheck item.
+             * <p>The description of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC_DETAIL</p>
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -1543,11 +1789,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * *   **Success**
-             * *   **Failed**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -1555,10 +1804,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed to pass the precheck.
-             * <p>
+             * <p>The error message returned if the task failed to pass the precheck.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of the <strong>CheckResult</strong> parameter is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.
+             * <strong>example:</strong>
+             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.***.**&quot; (using password: YES)</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -1566,10 +1818,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method to fix the precheck failure.
-             * <p>
+             * <p>The method to fix the precheck failure.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of the <strong>CheckResult</strong> parameter is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.
+             * <strong>example:</strong>
+             * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -1583,9 +1838,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class PrecheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.List < Detail> detail;
+        private java.util.List<Detail> detail;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -1614,7 +1875,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < Detail> getDetail() {
+        public java.util.List<Detail> getDetail() {
             return this.detail;
         }
 
@@ -1640,21 +1901,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Detail> detail; 
+            private java.util.List<Detail> detail; 
             private String errorMessage; 
             private String percent; 
             private String status; 
 
             /**
-             * The result of each precheck item.
+             * <p>The result of each precheck item.</p>
              */
-            public Builder detail(java.util.List < Detail> detail) {
+            public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * The cause of the precheck failure.
+             * <p>The cause of the precheck failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK__ERROR_SAME_OBJ.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1662,7 +1926,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck progress. This is expressed as a percentage.
+             * <p>The precheck progress. This is expressed as a percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1670,14 +1937,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck status. Valid values:
-             * <p>
+             * <p>The precheck status. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong></li>
+             * <li><strong>Suspending</strong>:</li>
+             * <li><strong>Checking</strong></li>
+             * <li><strong>Failed</strong></li>
+             * <li><strong>Finished</strong></li>
+             * </ul>
              * 
-             * *   **NotStarted**
-             * *   **Suspending**:
-             * *   **Checking**
-             * *   **Failed**
-             * *   **Finished**
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1691,6 +1961,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class RetryState extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
@@ -1874,7 +2150,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean retrying; 
 
             /**
-             * The error message returned if these retries failed.
+             * <p>The error message returned if these retries failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unexpected error</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -1882,7 +2161,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bi6e22ay243****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1890,7 +2172,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum duration of a retry. Unit: seconds.
+             * <p>The maximum duration of a retry. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -1898,7 +2183,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts.retry.err.0046</p>
              */
             public Builder migrationErrCode(String migrationErrCode) {
                 this.migrationErrCode = migrationErrCode;
@@ -1906,7 +2194,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the error code-related documentation.
+             * <p>The ID of the error code-related documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>462133</p>
              */
             public Builder migrationErrHelpDocId(String migrationErrHelpDocId) {
                 this.migrationErrHelpDocId = migrationErrHelpDocId;
@@ -1914,7 +2205,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the error code-related documentation.
+             * <p>The key of the error code-related documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-RETRY-ERR-0046</p>
              */
             public Builder migrationErrHelpDocKey(String migrationErrHelpDocKey) {
                 this.migrationErrHelpDocKey = migrationErrHelpDocKey;
@@ -1922,7 +2216,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts.retry.err.0046.msg</p>
              */
             public Builder migrationErrMsg(String migrationErrMsg) {
                 this.migrationErrMsg = migrationErrMsg;
@@ -1930,7 +2227,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the error code.
+             * <p>The type of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ForeignKey</p>
              */
             public Builder migrationErrType(String migrationErrType) {
                 this.migrationErrType = migrationErrType;
@@ -1938,7 +2238,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The solution to the error.
+             * <p>The solution to the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts.retry.err.0046.workaround</p>
              */
             public Builder migrationErrWorkaround(String migrationErrWorkaround) {
                 this.migrationErrWorkaround = migrationErrWorkaround;
@@ -1946,7 +2249,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the instance when DTS retries.
+             * <p>The progress of the instance when DTS retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -1954,7 +2260,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries that have been performed.
+             * <p>The number of retries that have been performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -1962,12 +2271,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The object on which these retries are performed. Valid values:
-             * <p>
+             * <p>The object on which these retries are performed. Valid values:</p>
+             * <ul>
+             * <li><strong>srcDB</strong>: the source database </li>
+             * <li><strong>destDB</strong>: the destination database </li>
+             * <li><strong>inner_module</strong>: an internal module of DTS</li>
+             * </ul>
              * 
-             * - **srcDB**: the source database 
-             * - **destDB**: the destination database 
-             * - **inner_module**: an internal module of DTS
+             * <strong>example:</strong>
+             * <p>srcDB</p>
              */
             public Builder retryTarget(String retryTarget) {
                 this.retryTarget = retryTarget;
@@ -1975,7 +2287,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time that has elapsed from the time when the first retry starts. Unit: seconds.
+             * <p>The time that has elapsed from the time when the first retry starts. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder retryTime(Integer retryTime) {
                 this.retryTime = retryTime;
@@ -1983,11 +2298,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is being retried. Valid values:
-             * <p>
+             * <p>Indicates whether the task is being retried. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder retrying(Boolean retrying) {
                 this.retrying = retrying;
@@ -2001,6 +2319,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobDataInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -2064,7 +2388,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if initial full data synchronization failed.
+             * <p>The error message returned if initial full data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2072,7 +2399,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of initial full data synchronization. Unit: percentage.
+             * <p>The progress of initial full data synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2080,7 +2410,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been synchronized during initial full data synchronization.
+             * <p>The number of entries that have been synchronized during initial full data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43071</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2088,13 +2421,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial full data synchronization. Valid values:
-             * <p>
+             * <p>The state of initial full data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2108,6 +2444,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobDataSynchronizationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -2183,7 +2525,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if incremental data synchronization failed.
+             * <p>The error message returned if incremental data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task has failed for a long time and cannot be recovered.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2191,13 +2536,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance needs to be upgraded. Valid values:
-             * <p>
+             * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+             * </blockquote>
              * 
-             * - **true**
-             * - **false**
-             * 
-             * > To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -2205,7 +2554,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data synchronization. Unit: percentage.
+             * <p>The progress of incremental data synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2213,7 +2565,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20001</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2221,7 +2576,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data synchronization.
+             * <p>The state of incremental data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2235,6 +2593,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobDestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -2370,7 +2734,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the synchronized objects in the destination instance.
+             * <p>The name of the database that contains the synchronized objects in the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -2378,7 +2745,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the destination instance.
+             * <p>The database engine of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -2386,7 +2756,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1162kryivb8****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -2394,7 +2767,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination instance.
+             * <p>The type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2402,7 +2778,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the destination instance.
+             * <p>The endpoint of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2410,10 +2789,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the destination instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -2421,7 +2803,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the destination instance.
+             * <p>The port number of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -2429,7 +2814,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+             * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -2437,13 +2825,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -2451,7 +2842,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the destination instance.
+             * <p>The database account of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -2465,6 +2859,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobErrorDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -2504,7 +2904,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String helpUrl; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-31009</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -2512,7 +2915,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the documentation.
+             * <p>The URL of the documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<strong>.ali</strong>.com/**</p>
              */
             public Builder helpUrl(String helpUrl) {
                 this.helpUrl = helpUrl;
@@ -2526,6 +2932,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobFullDataCheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -2589,7 +3001,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2597,7 +3012,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the full data verification task. Unit: percentage.
+             * <p>The progress of the full data verification task. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2605,7 +3023,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the full data verification task.
+             * <p>The progress of the full data verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 rows/s (row: 5/5, table: 1/1)</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2613,13 +3034,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the full data verification task. Valid values:
-             * <p>
+             * <p>The state of the full data verification task. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The verification is not started. </li>
+             * <li><strong>Checking</strong>: The verification is in progress. </li>
+             * <li><strong>Failed</strong>: The verification failed. </li>
+             * <li><strong>Finished</strong>: The verification is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The verification is not started. 
-             * - **Checking**: The verification is in progress. 
-             * - **Failed**: The verification failed. 
-             * - **Finished**: The verification is complete.
+             * <strong>example:</strong>
+             * <p>Checking</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2633,6 +3057,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobIncDataCheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -2696,7 +3126,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2704,7 +3137,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the incremental data verification task. Unit: percentage.
+             * <p>The progress of the incremental data verification task. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2712,7 +3148,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the incremental data verification task.
+             * <p>The progress of the incremental data verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1 rows/s (row: 5/5, table: 1/1)</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2720,13 +3159,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the incremental data verification task. Valid values:
-             * <p>
+             * <p>The state of the incremental data verification task. Valid values:</p>
+             * <ul>
+             * <li><strong>Catched</strong>: The verification is delayed. </li>
+             * <li><strong>NotStarted</strong>: The verification is not started. </li>
+             * <li><strong>Checking</strong>: The verification is in progress. </li>
+             * <li><strong>Failed</strong>: The verification failed.</li>
+             * </ul>
              * 
-             * - **Catched**: The verification is delayed. 
-             * - **NotStarted**: The verification is not started. 
-             * - **Checking**: The verification is in progress. 
-             * - **Failed**: The verification failed.
+             * <strong>example:</strong>
+             * <p>Checking</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2740,6 +3182,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobMigrationMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
@@ -2815,11 +3263,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * Indicates whether initial full data synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether initial full data synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * -  **true**
-             * -  **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -2827,10 +3278,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether incremental data synchronization is performed. Valid values:
-             * <p>
-             * -  **true**
-             * -  **false**
+             * <p>Indicates whether incremental data synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -2838,10 +3293,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether full data verification is performed. Valid values:
-             * <p>
-             * -  **true**: yes
-             * -  **false**: no
+             * <p>Indicates whether full data verification is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullDataCheck(Boolean fullDataCheck) {
                 this.fullDataCheck = fullDataCheck;
@@ -2849,10 +3308,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether incremental data verification is performed. Valid values:
-             * <p>
-             * -  **true**: yes
-             * -  **false**: no
+             * <p>Indicates whether incremental data verification is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder incDataCheck(Boolean incDataCheck) {
                 this.incDataCheck = incDataCheck;
@@ -2860,10 +3323,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether initial schema synchronization is performed. Valid values:
-             * <p>
-             * -  **true**
-             * -  **false**
+             * <p>Indicates whether initial schema synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -2877,6 +3344,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobPerformance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -2916,7 +3389,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * The size of data that is synchronized per second. Unit: MB/s.
+             * <p>The size of data that is synchronized per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -2924,7 +3400,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+             * <p>The number of times that SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -2938,6 +3417,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class PrecheckStatusDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
@@ -3013,7 +3498,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * The name of the precheck item.
+             * <p>The name of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -3021,7 +3509,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the precheck item.
+             * <p>The description of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC_DETAIL</p>
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -3029,11 +3520,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * - **Success**
-             * - **Failed**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -3041,7 +3535,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed to pass the precheck.
+             * <p>The error message returned if the task failed to pass the precheck.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.***.**&quot; (using password: YES)</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -3049,7 +3546,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method to fix a precheck failure.
+             * <p>The method to fix a precheck failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -3063,9 +3563,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobPrecheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.List < PrecheckStatusDetail> detail;
+        private java.util.List<PrecheckStatusDetail> detail;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -3094,7 +3600,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < PrecheckStatusDetail> getDetail() {
+        public java.util.List<PrecheckStatusDetail> getDetail() {
             return this.detail;
         }
 
@@ -3120,21 +3626,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PrecheckStatusDetail> detail; 
+            private java.util.List<PrecheckStatusDetail> detail; 
             private String errorMessage; 
             private String percent; 
             private String status; 
 
             /**
-             * The result of each precheck item.
+             * <p>The result of each precheck item.</p>
              */
-            public Builder detail(java.util.List < PrecheckStatusDetail> detail) {
+            public Builder detail(java.util.List<PrecheckStatusDetail> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * The error message returned if the precheck failed.
+             * <p>The error message returned if the precheck failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK__ERROR_SAME_OBJ.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -3142,7 +3651,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck progress. Unit: percentage.
+             * <p>The precheck progress. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -3150,14 +3662,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state. Valid values:
-             * <p>
+             * <p>The precheck state. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+             * <li><strong>Suspending</strong>: The precheck is paused. </li>
+             * <li><strong>Checking</strong>: The precheck is in progress. </li>
+             * <li><strong>Failed</strong>: The precheck failed. </li>
+             * <li><strong>Finished</strong>: The precheck is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The precheck is not started. 
-             * - **Suspending**: The precheck is paused. 
-             * - **Checking**: The precheck is in progress. 
-             * - **Failed**: The precheck failed. 
-             * - **Finished**: The precheck is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3171,6 +3686,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class SourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -3306,7 +3827,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the objects to be migrated from the source instance.
+             * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -3314,7 +3838,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the source instance.
+             * <p>The database engine of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -3322,7 +3849,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1imrtn6fq7h****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -3330,7 +3860,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance.
+             * <p>The type of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -3338,7 +3871,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the source instance.
+             * <p>The endpoint of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -3346,10 +3882,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -3357,7 +3896,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the source instance.
+             * <p>The port number of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -3365,7 +3907,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+             * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -3373,13 +3918,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -3387,7 +3935,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the source instance.
+             * <p>The database account of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -3401,6 +3952,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class StructureInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -3464,7 +4021,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if initial schema synchronization failed.
+             * <p>The error message returned if initial schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -3472,7 +4032,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of initial schema synchronization. Unit: percentage.
+             * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -3480,7 +4043,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been synchronized during initial schema synchronization.
+             * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -3488,13 +4054,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial schema synchronization. Valid values:
-             * <p>
+             * <p>The state of initial schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3508,6 +4077,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
@@ -3555,7 +4130,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private Long duUsage;
 
         @com.aliyun.core.annotation.NameInMap("ErrorDetails")
-        private java.util.List < ReverseJobErrorDetails> errorDetails;
+        private java.util.List<ReverseJobErrorDetails> errorDetails;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -3756,7 +4331,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return errorDetails
          */
-        public java.util.List < ReverseJobErrorDetails> getErrorDetails() {
+        public java.util.List<ReverseJobErrorDetails> getErrorDetails() {
             return this.errorDetails;
         }
 
@@ -3888,7 +4463,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String dtsJobId; 
             private String dtsJobName; 
             private Long duUsage; 
-            private java.util.List < ReverseJobErrorDetails> errorDetails; 
+            private java.util.List<ReverseJobErrorDetails> errorDetails; 
             private String errorMessage; 
             private String etlSafeCheckpoint; 
             private String expireTime; 
@@ -3907,7 +4482,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private StructureInitializationStatus structureInitializationStatus; 
 
             /**
-             * The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616980369</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -3915,7 +4493,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization of the instance. Unit: percentage.
+             * <p>The CPU utilization of the instance. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder cpuUsage(String cpuUsage) {
                 this.cpuUsage = cpuUsage;
@@ -3923,7 +4504,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-03-16T08:01:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -3931,7 +4515,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial full data synchronization.
+             * <p>The state of initial full data synchronization.</p>
              */
             public Builder dataInitializationStatus(ReverseJobDataInitializationStatus dataInitializationStatus) {
                 this.dataInitializationStatus = dataInitializationStatus;
@@ -3939,7 +4523,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data synchronization.
+             * <p>The state of incremental data synchronization.</p>
              */
             public Builder dataSynchronizationStatus(ReverseJobDataSynchronizationStatus dataSynchronizationStatus) {
                 this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -3947,7 +4531,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.
+             * <p>The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -3955,7 +4542,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DTS dedicated cluster on which a DTS task runs.
+             * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtscluster_dpwl3**********</p>
              */
             public Builder dedicatedClusterId(String dedicatedClusterId) {
                 this.dedicatedClusterId = dedicatedClusterId;
@@ -3963,7 +4553,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of incremental data synchronization. Unit: seconds.
+             * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -3971,7 +4564,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the destination instance.
+             * <p>The connection settings of the destination instance.</p>
              */
             public Builder destinationEndpoint(ReverseJobDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -3979,7 +4572,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization instance.
+             * <p>The ID of the data synchronization instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsi03e3zty16i****</p>
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -3987,10 +4583,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance class. 
-             * <p>
+             * <p>The instance class. </p>
+             * <blockquote>
+             * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+             * </blockquote>
              * 
-             * > For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -3998,7 +4597,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization direction. **Reverse** is returned.
+             * <p>The synchronization direction. <strong>Reverse</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reverse</p>
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -4006,7 +4608,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the synchronization task.
+             * <p>The ID of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i03e3zty16i****</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -4014,7 +4619,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data synchronization task.
+             * <p>The name of the data synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS_TO_RDS_MIGRATION</p>
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -4022,7 +4630,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of DUs that have been used.
+             * <p>The number of DUs that have been used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder duUsage(Long duUsage) {
                 this.duUsage = duUsage;
@@ -4030,15 +4641,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
              */
-            public Builder errorDetails(java.util.List < ReverseJobErrorDetails> errorDetails) {
+            public Builder errorDetails(java.util.List<ReverseJobErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
                 return this;
             }
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -4046,7 +4660,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The checkpoint of the ETL task.
+             * <p>The checkpoint of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1610540493</p>
              */
             public Builder etlSafeCheckpoint(String etlSafeCheckpoint) {
                 this.etlSafeCheckpoint = etlSafeCheckpoint;
@@ -4054,10 +4671,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. 
-             * <p>
+             * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>PayType</strong> is <strong>PrePaid</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **PayType** is **PrePaid**.
+             * <strong>example:</strong>
+             * <p>2023-03-16T08:01:19Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -4065,7 +4685,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state information about the full data verification task.
+             * <p>The state information about the full data verification task.</p>
              */
             public Builder fullDataCheckStatus(ReverseJobFullDataCheckStatus fullDataCheckStatus) {
                 this.fullDataCheckStatus = fullDataCheckStatus;
@@ -4073,7 +4693,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state information about the incremental data verification task.
+             * <p>The state information about the incremental data verification task.</p>
              */
             public Builder incDataCheckStatus(ReverseJobIncDataCheckStatus incDataCheckStatus) {
                 this.incDataCheckStatus = incDataCheckStatus;
@@ -4081,7 +4701,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDu.
+             * <p>Upper limit of DU.</p>
+             * <blockquote>
+             * <p>Only supported by Serverless instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxDu(Double maxDu) {
                 this.maxDu = maxDu;
@@ -4089,7 +4715,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory that has been used. Unit: MB.
+             * <p>The memory that has been used. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder memUsage(String memUsage) {
                 this.memUsage = memUsage;
@@ -4097,7 +4726,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The initial synchronization types.
+             * <p>The initial synchronization types.</p>
              */
             public Builder migrationMode(ReverseJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -4105,7 +4734,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MinDu.
+             * <p>Lower limit of DU.</p>
+             * <blockquote>
+             * <p>Only supported by Serverless instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minDu(Double minDu) {
                 this.minDu = minDu;
@@ -4113,11 +4748,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the DTS instance. Valid values:
-             * <p>
+             * <p>The billing method of the DTS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * - **PrePaid**: subscription
-             * - **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -4125,7 +4763,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance of the data synchronization instance.
+             * <p>The performance of the data synchronization instance.</p>
              */
             public Builder performance(ReverseJobPerformance performance) {
                 this.performance = performance;
@@ -4133,7 +4771,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state.
+             * <p>The precheck state.</p>
              */
             public Builder precheckStatus(ReverseJobPrecheckStatus precheckStatus) {
                 this.precheckStatus = precheckStatus;
@@ -4141,7 +4779,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+             * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;srcHostPorts&quot;:&quot;&quot;,&quot;whitelist.dms.online.ddl.enable&quot;:false,&quot;filterDDL&quot;:false,&quot;sqlparser.dms.original.ddl&quot;:true,&quot;srcOracleType&quot;:&quot;sid&quot;,&quot;maxRetryTime&quot;:43200,&quot;destSSL&quot;:&quot;0&quot;,&quot;destOracleType&quot;:&quot;sid&quot;,&quot;srcSSL&quot;:&quot;0&quot;,&quot;dbListCaseChangeMode&quot;:&quot;default&quot;,&quot;SourceEngineVersion&quot;:&quot;8.0.18&quot;,&quot;srcNetType&quot;:&quot;VPC&quot;,&quot;destNetType&quot;:&quot;VPC&quot;,&quot;srcVpcNetMappingInst&quot;:&quot;172.16.1**.<strong>:10803&quot;,&quot;destVpcNetMappingInst&quot;:&quot;172.16.1</strong>.**:11077&quot;,&quot;useJobTask&quot;:&quot;1&quot;}</p>
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -4149,7 +4790,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the source instance.
+             * <p>The connection settings of the source instance.</p>
              */
             public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -4157,7 +4798,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+             * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Synchronizing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4165,7 +4809,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial schema synchronization.
+             * <p>The state of initial schema synchronization.</p>
              */
             public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
                 this.structureInitializationStatus = structureInitializationStatus;
@@ -4179,6 +4823,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DtsJobListSourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -4314,7 +4964,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the objects to be migrated from the source instance.
+             * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -4322,7 +4975,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the source instance.
+             * <p>The database engine of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -4330,7 +4986,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1162kryivb8****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -4338,7 +4997,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance.
+             * <p>The type of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -4346,7 +5008,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the source instance.
+             * <p>The endpoint of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -4354,10 +5019,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -4365,7 +5033,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the source instance.
+             * <p>The port number of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -4373,7 +5044,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+             * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -4381,13 +5055,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICAT</strong>E: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICAT**E: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -4395,7 +5072,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the source instance.
+             * <p>The database account of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -4409,6 +5089,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DtsJobListStructureInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -4472,7 +5158,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if schema migration or initial schema synchronization failed.
+             * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -4480,7 +5169,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of schema migration or initial schema synchronization. Unit: percentage.
+             * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -4488,7 +5180,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.
+             * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -4496,13 +5191,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of schema migration or initial schema synchronization. Valid values:
-             * <p>
+             * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4516,6 +5214,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -4555,7 +5259,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -4563,7 +5270,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -4577,6 +5287,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DtsJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -4651,7 +5367,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private String endTimestamp;
 
         @com.aliyun.core.annotation.NameInMap("ErrorDetails")
-        private java.util.List < ErrorDetails> errorDetails;
+        private java.util.List<ErrorDetails> errorDetails;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -4738,7 +5454,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private DtsJobListStructureInitializationStatus structureInitializationStatus;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < TagList> tagList;
+        private java.util.List<TagList> tagList;
 
         private DtsJobList(Builder builder) {
             this.appName = builder.appName;
@@ -4976,7 +5692,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return errorDetails
          */
-        public java.util.List < ErrorDetails> getErrorDetails() {
+        public java.util.List<ErrorDetails> getErrorDetails() {
             return this.errorDetails;
         }
 
@@ -5179,7 +5895,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < TagList> getTagList() {
+        public java.util.List<TagList> getTagList() {
             return this.tagList;
         }
 
@@ -5208,7 +5924,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String duRealUsage; 
             private Long duUsage; 
             private String endTimestamp; 
-            private java.util.List < ErrorDetails> errorDetails; 
+            private java.util.List<ErrorDetails> errorDetails; 
             private String errorMessage; 
             private String etlSafeCheckpoint; 
             private String expireTime; 
@@ -5237,13 +5953,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private DtsJobListSourceEndpoint sourceEndpoint; 
             private String status; 
             private DtsJobListStructureInitializationStatus structureInitializationStatus; 
-            private java.util.List < TagList> tagList; 
+            private java.util.List<TagList> tagList; 
 
             /**
-             * Indicates whether the **new** change tracking feature is used.
-             * <p>
+             * <p>Indicates whether the <strong>new</strong> change tracking feature is used.</p>
+             * <blockquote>
+             * <p> This parameter is returned only for change tracking instances of the new version.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only for change tracking instances of the new version.
+             * <strong>example:</strong>
+             * <p>new</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -5251,7 +5970,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15T08:25:34Z</p>
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -5259,7 +5981,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start offset of incremental data synchronization. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The start offset of incremental data synchronization. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616899019</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -5267,7 +5992,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-23T07:30:31Z</p>
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -5275,7 +6003,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
+             * <p>The downstream client information, in the following format: &lt;IP address of the downstream client&gt;:&lt;Random ID generated by DTS&gt;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114...:dts******</p>
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -5283,7 +6014,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU utilization of the instance. Unit: percentage.
+             * <p>The CPU utilization of the instance. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuUsage(String cpuUsage) {
                 this.cpuUsage = cpuUsage;
@@ -5291,7 +6025,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The point in time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-16T08:01:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -5299,7 +6036,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the physical gateway-based migration task.
+             * <p>The state of the physical gateway-based migration task.</p>
              */
             public Builder dataCloudStatus(DataCloudStatus dataCloudStatus) {
                 this.dataCloudStatus = dataCloudStatus;
@@ -5307,10 +6044,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the extract, transform, and load (ETL) task. Valid values:
-             * <p>
-             * 
-             * >  This parameter collection is returned only if an ETL task is configured.
+             * <p>The state of the extract, transform, and load (ETL) task. Valid values:</p>
+             * <blockquote>
+             * <p> This parameter collection is returned only if an ETL task is configured.</p>
+             * </blockquote>
              */
             public Builder dataEtlStatus(DataEtlStatus dataEtlStatus) {
                 this.dataEtlStatus = dataEtlStatus;
@@ -5318,7 +6055,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of full data synchronization.
+             * <p>The state of full data synchronization.</p>
              */
             public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
                 this.dataInitializationStatus = dataInitializationStatus;
@@ -5326,7 +6063,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data migration or synchronization.
+             * <p>The state of incremental data migration or synchronization.</p>
              */
             public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
                 this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -5334,7 +6071,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see "Objects of DTS tasks".
+             * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see &quot;Objects of DTS tasks&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -5342,7 +6082,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DTS dedicated cluster on which a DTS task runs.
+             * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtscluster_ft7y3**********</p>
              */
             public Builder dedicatedClusterId(String dedicatedClusterId) {
                 this.dedicatedClusterId = dedicatedClusterId;
@@ -5350,7 +6093,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of incremental data synchronization. Unit: seconds.
+             * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -5358,7 +6104,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the destination instance.
+             * <p>The connection settings of the destination instance.</p>
              */
             public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -5366,11 +6112,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The environment tag of the DTS instance. Valid values:
-             * <p>
+             * <p>The environment tag of the DTS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong></li>
+             * <li><strong>online</strong></li>
+             * </ul>
              * 
-             * - **normal**
-             * - **online**
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder dtsBisLabel(String dtsBisLabel) {
                 this.dtsBisLabel = dtsBisLabel;
@@ -5378,7 +6127,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization instance.
+             * <p>The ID of the data synchronization instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsi03e3zty16i****</p>
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -5386,10 +6138,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance class.
-             * <p>
+             * <p>The instance class.</p>
+             * <blockquote>
+             * <p> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -5397,7 +6152,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization direction. The value is **Reverse**.
+             * <p>The synchronization direction. The value is <strong>Reverse</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Forward</p>
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -5405,7 +6163,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization task.
+             * <p>The ID of the data synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i03e3zty16i****</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -5413,7 +6174,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data synchronization task.
+             * <p>The name of the data synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS_TO_RDS_MIGRATION</p>
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -5421,7 +6185,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DuRealUsage.
+             * <p>The DTS Units (DUs) usage of a task in a DTS dedicated cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.0%</p>
              */
             public Builder duRealUsage(String duRealUsage) {
                 this.duRealUsage = duRealUsage;
@@ -5429,7 +6196,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of DUs that have been used.
+             * <p>The number of DUs that have been used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder duUsage(Long duUsage) {
                 this.duUsage = duUsage;
@@ -5437,7 +6207,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-26T14:03:21Z</p>
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -5445,15 +6218,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
              */
-            public Builder errorDetails(java.util.List < ErrorDetails> errorDetails) {
+            public Builder errorDetails(java.util.List<ErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
                 return this;
             }
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -5461,7 +6237,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The checkpoint of the ETL task.
+             * <p>The checkpoint of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1610540493</p>
              */
             public Builder etlSafeCheckpoint(String etlSafeCheckpoint) {
                 this.etlSafeCheckpoint = etlSafeCheckpoint;
@@ -5469,10 +6248,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             * <p>
+             * <p>The point in time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of the <strong>PayType</strong> parameter is <strong>PrePaid</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned only if the value of the **PayType** parameter is **PrePaid**.
+             * <strong>example:</strong>
+             * <p>2022-03-16T08:01:19Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -5480,7 +6262,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state information about the full data verification task.
+             * <p>The state information about the full data verification task.</p>
              */
             public Builder fullDataCheckStatus(FullDataCheckStatus fullDataCheckStatus) {
                 this.fullDataCheckStatus = fullDataCheckStatus;
@@ -5488,7 +6270,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state information about the incremental data verification task.
+             * <p>The state information about the incremental data verification task.</p>
              */
             public Builder incDataCheckStatus(IncDataCheckStatus incDataCheckStatus) {
                 this.incDataCheckStatus = incDataCheckStatus;
@@ -5496,12 +6278,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DTS task. Valid values:
-             * <p>
+             * <p>The type of the DTS task. Valid values:</p>
+             * <ul>
+             * <li><strong>MIGRATION</strong>: data migration task </li>
+             * <li><strong>SYNC</strong>: data synchronization task </li>
+             * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+             * </ul>
              * 
-             * - **MIGRATION**: data migration task 
-             * - **SYNC**: data synchronization task 
-             * - **SUBSCRIBE**: change tracking task
+             * <strong>example:</strong>
+             * <p>MIGRATION</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -5509,7 +6294,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDu.
+             * <p>Upper limit of DU.</p>
+             * <blockquote>
+             * <p>Only supported by Serverless instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder maxDu(Double maxDu) {
                 this.maxDu = maxDu;
@@ -5517,7 +6308,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory that has been used. Unit: MB.
+             * <p>The memory that has been used. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder memUsage(String memUsage) {
                 this.memUsage = memUsage;
@@ -5525,7 +6319,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts.retry.err.0046</p>
              */
             public Builder migrationErrCode(String migrationErrCode) {
                 this.migrationErrCode = migrationErrCode;
@@ -5533,7 +6330,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the error code-related documentation.
+             * <p>The ID of the error code-related documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>462133</p>
              */
             public Builder migrationErrHelpDocId(String migrationErrHelpDocId) {
                 this.migrationErrHelpDocId = migrationErrHelpDocId;
@@ -5541,7 +6341,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the error code-related documentation.
+             * <p>The key of the error code-related documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-RETRY-ERR-0046</p>
              */
             public Builder migrationErrHelpDocKey(String migrationErrHelpDocKey) {
                 this.migrationErrHelpDocKey = migrationErrHelpDocKey;
@@ -5549,7 +6352,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts.retry.err.0046.msg</p>
              */
             public Builder migrationErrMsg(String migrationErrMsg) {
                 this.migrationErrMsg = migrationErrMsg;
@@ -5557,7 +6363,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the error code.
+             * <p>The type of the error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ForeignKey</p>
              */
             public Builder migrationErrType(String migrationErrType) {
                 this.migrationErrType = migrationErrType;
@@ -5565,7 +6374,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The solution to the error.
+             * <p>The solution to the error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dts.retry.err.0046.workaround</p>
              */
             public Builder migrationErrWorkaround(String migrationErrWorkaround) {
                 this.migrationErrWorkaround = migrationErrWorkaround;
@@ -5573,7 +6385,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration or synchronization modes.
+             * <p>The migration or synchronization modes.</p>
              */
             public Builder migrationMode(MigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -5581,7 +6393,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MinDu.
+             * <p>Lower limit of DU.</p>
+             * <blockquote>
+             * <p>Only supported by Serverless instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minDu(Double minDu) {
                 this.minDu = minDu;
@@ -5589,12 +6407,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the task. Valid values:
-             * <p>
+             * <p>The source of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>PTS</strong></li>
+             * <li><strong>DMS</strong></li>
+             * <li><strong>DTS</strong></li>
+             * </ul>
              * 
-             * *   **PTS**
-             * *   **DMS**
-             * *   **DTS**
+             * <strong>example:</strong>
+             * <p>DTS</p>
              */
             public Builder originType(String originType) {
                 this.originType = originType;
@@ -5602,11 +6423,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the DTS instance. Valid values:
-             * <p>
+             * <p>The billing method of the DTS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * *   **PrePaid**: subscription
-             * *   **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -5614,7 +6438,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance of the data migration or synchronization instance.
+             * <p>The performance of the data migration or synchronization instance.</p>
              */
             public Builder performance(Performance performance) {
                 this.performance = performance;
@@ -5622,7 +6446,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state.
+             * <p>The precheck state.</p>
              */
             public Builder precheckStatus(PrecheckStatus precheckStatus) {
                 this.precheckStatus = precheckStatus;
@@ -5630,7 +6454,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+             * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;srcHostPorts&quot;:&quot;&quot;,&quot;whitelist.dms.online.ddl.enable&quot;:false,&quot;filterDDL&quot;:false,&quot;sqlparser.dms.original.ddl&quot;:true,&quot;srcOracleType&quot;:&quot;sid&quot;,&quot;maxRetryTime&quot;:43200,&quot;destSSL&quot;:&quot;0&quot;,&quot;destOracleType&quot;:&quot;sid&quot;,&quot;srcSSL&quot;:&quot;0&quot;,&quot;dbListCaseChangeMode&quot;:&quot;default&quot;,&quot;SourceEngineVersion&quot;:&quot;8.0.18&quot;,&quot;srcNetType&quot;:&quot;VPC&quot;,&quot;destNetType&quot;:&quot;VPC&quot;,&quot;srcVpcNetMappingInst&quot;:&quot;172.16.1**.<strong>:10803&quot;,&quot;destVpcNetMappingInst&quot;:&quot;172.16.1</strong>.**:11077&quot;,&quot;useJobTask&quot;:&quot;1&quot;}</p>
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -5638,7 +6465,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default resource group</p>
              */
             public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
                 this.resourceGroupDisplayName = resourceGroupDisplayName;
@@ -5646,7 +6476,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxc****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -5654,7 +6487,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the retries performed by DTS due to an exception.
+             * <p>The information about the retries performed by DTS due to an exception.</p>
              */
             public Builder retryState(RetryState retryState) {
                 this.retryState = retryState;
@@ -5662,10 +6495,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data synchronization task in the reverse direction. 
-             * <p>
-             * 
-             * > This parameter is returned only for two-way data synchronization tasks.
+             * <p>The details of the data synchronization task in the reverse direction. </p>
+             * <blockquote>
+             * <p>This parameter is returned only for two-way data synchronization tasks.</p>
+             * </blockquote>
              */
             public Builder reverseJob(ReverseJob reverseJob) {
                 this.reverseJob = reverseJob;
@@ -5673,7 +6506,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the source instance.
+             * <p>The connection settings of the source instance.</p>
              */
             public Builder sourceEndpoint(DtsJobListSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -5681,7 +6514,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+             * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -5689,7 +6525,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of schema migration or initial schema synchronization.
+             * <p>The state of schema migration or initial schema synchronization.</p>
              */
             public Builder structureInitializationStatus(DtsJobListStructureInitializationStatus structureInitializationStatus) {
                 this.structureInitializationStatus = structureInitializationStatus;
@@ -5697,9 +6533,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the task.
+             * <p>The tags of the task.</p>
              */
-            public Builder tagList(java.util.List < TagList> tagList) {
+            public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
                 return this;
             }
@@ -5711,6 +6547,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListDataEtlStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -5774,7 +6616,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if the ETL task failed.
+             * <p>The error message returned if the ETL task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task has failed for a long time and cannot be recovered.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -5782,7 +6627,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the ETL task. Unit: percentage.
+             * <p>The progress of the ETL task. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -5790,7 +6638,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been processed by the ETL task.
+             * <p>The number of entries that have been processed by the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -5798,14 +6649,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ETL task. Valid values:
-             * <p>
+             * <p>The state of the ETL task. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete. </li>
+             * <li><strong>Catched</strong>: The task is not delayed.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete. 
-             * - **Catched**: The task is not delayed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -5819,6 +6673,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListDataInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -5882,7 +6742,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if full data migration or initial full data synchronization failed.
+             * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -5890,7 +6753,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of full data migration or initial full data synchronization. Unit: percentage.
+             * <p>The progress of full data migration or initial full data synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -5898,7 +6764,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been migrated or synchronized during full data migration or initial full data synchronization.
+             * <p>The number of entries that have been migrated or synchronized during full data migration or initial full data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44755</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -5906,13 +6775,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of full data migration or initial full data synchronization. Valid values:
-             * <p>
+             * <p>The state of full data migration or initial full data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -5926,6 +6798,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListDataSynchronizationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -6001,7 +6879,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if incremental data migration or synchronization failed.
+             * <p>The error message returned if incremental data migration or synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task has failed for a long time and cannot be recovered.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -6009,13 +6890,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance needs to be upgraded. Valid values:
-             * <p>
+             * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+             * </blockquote>
              * 
-             * - **true**
-             * - **false**
-             * 
-             * > To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -6023,7 +6908,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data migration or synchronization. Unit: percentage.
+             * <p>The progress of incremental data migration or synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -6031,7 +6919,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0/0</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -6039,14 +6930,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data migration or synchronization. Valid values:
-             * <p>
+             * <p>The state of incremental data migration or synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete. </li>
+             * <li><strong>Catched</strong>: The task is not delayed.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete. 
-             * - **Catched**: The task is not delayed.
+             * <strong>example:</strong>
+             * <p>Catched</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -6060,6 +6954,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListDestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -6195,7 +7095,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the migrated objects in the destination instance.
+             * <p>The name of the database that contains the migrated objects in the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -6203,7 +7106,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the destination instance.
+             * <p>The database engine of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -6211,7 +7117,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1imrtn6fq7h****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -6219,7 +7128,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination instance.
+             * <p>The type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -6227,7 +7139,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the destination instance.
+             * <p>The endpoint of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -6235,10 +7150,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the destination instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -6246,7 +7164,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the destination instance.
+             * <p>The port number of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -6254,7 +7175,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).
+             * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -6262,13 +7186,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -6276,7 +7203,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the destination instance.
+             * <p>The database account of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -6290,6 +7220,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListMigrationMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
@@ -6341,11 +7277,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * Indicates whether full data migration or initial full data synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether full data migration or initial full data synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -6353,11 +7292,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether incremental data migration or synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -6365,11 +7307,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether schema migration or initial schema synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether schema migration or initial schema synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -6383,6 +7328,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListPerformance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -6422,7 +7373,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * The size of data that is migrated or synchronized per second. Unit: MB/s.
+             * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -6430,7 +7384,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+             * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -6444,6 +7401,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListPrecheckStatusDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
@@ -6519,7 +7482,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * The name of the precheck item.
+             * <p>The name of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -6527,7 +7493,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the precheck item.
+             * <p>The description of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC_DETAIL</p>
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -6535,11 +7504,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * - **Success**
-             * - **Failed**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -6547,10 +7519,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed to pass the precheck. 
-             * <p>
+             * <p>The error message returned if the task failed to pass the precheck. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+             * <strong>example:</strong>
+             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.***.**&quot; (using password: YES)</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -6558,10 +7533,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method to fix a precheck failure. 
-             * <p>
+             * <p>The method to fix a precheck failure. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+             * <strong>example:</strong>
+             * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -6575,9 +7553,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListPrecheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.List < EtlDemoListPrecheckStatusDetail> detail;
+        private java.util.List<EtlDemoListPrecheckStatusDetail> detail;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -6606,7 +7590,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < EtlDemoListPrecheckStatusDetail> getDetail() {
+        public java.util.List<EtlDemoListPrecheckStatusDetail> getDetail() {
             return this.detail;
         }
 
@@ -6632,21 +7616,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EtlDemoListPrecheckStatusDetail> detail; 
+            private java.util.List<EtlDemoListPrecheckStatusDetail> detail; 
             private String errorMessage; 
             private String percent; 
             private String status; 
 
             /**
-             * The result of each precheck item.
+             * <p>The result of each precheck item.</p>
              */
-            public Builder detail(java.util.List < EtlDemoListPrecheckStatusDetail> detail) {
+            public Builder detail(java.util.List<EtlDemoListPrecheckStatusDetail> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * The error message returned if the precheck failed.
+             * <p>The error message returned if the precheck failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK__ERROR_SAME_OBJ.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -6654,7 +7641,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck progress. Unit: percentage.
+             * <p>The precheck progress. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -6662,14 +7652,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state. Valid values:
-             * <p>
+             * <p>The precheck state. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+             * <li><strong>Suspending</strong>: The precheck is paused. </li>
+             * <li><strong>Checking</strong>: The precheck is in progress. </li>
+             * <li><strong>Failed</strong>: The precheck failed. </li>
+             * <li><strong>Finished</strong>: The precheck is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The precheck is not started. 
-             * - **Suspending**: The precheck is paused. 
-             * - **Checking**: The precheck is in progress. 
-             * - **Failed**: The precheck failed. 
-             * - **Finished**: The precheck is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -6683,6 +7676,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListRetryState extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
@@ -6794,7 +7793,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean retrying; 
 
             /**
-             * The error message returned if these retries failed.
+             * <p>The error message returned if these retries failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unexpected error</p>
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -6802,7 +7804,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bi6e22ay243****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -6810,7 +7815,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum duration of a retry. Unit: seconds.
+             * <p>The maximum duration of a retry. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -6818,7 +7826,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the instance when DTS retries.
+             * <p>The progress of the instance when DTS retries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -6826,7 +7837,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries that have been performed.
+             * <p>The number of retries that have been performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -6834,12 +7848,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The object on which these retries are performed. Valid values:
-             * <p>
+             * <p>The object on which these retries are performed. Valid values:</p>
+             * <ul>
+             * <li><strong>srcDB</strong>: the source database </li>
+             * <li><strong>destDB</strong>: the destination database </li>
+             * <li><strong>inner_module</strong>: an internal module of DTS</li>
+             * </ul>
              * 
-             * - **srcDB**: the source database 
-             * - **destDB**: the destination database 
-             * - **inner_module**: an internal module of DTS
+             * <strong>example:</strong>
+             * <p>srcDB</p>
              */
             public Builder retryTarget(String retryTarget) {
                 this.retryTarget = retryTarget;
@@ -6847,7 +7864,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time that has elapsed from the time when the first retry starts. Unit: seconds.
+             * <p>The time that has elapsed from the time when the first retry starts. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder retryTime(Integer retryTime) {
                 this.retryTime = retryTime;
@@ -6855,11 +7875,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is being retried. Valid values:
-             * <p>
+             * <p>Indicates whether the task is being retried. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder retrying(Boolean retrying) {
                 this.retrying = retrying;
@@ -6873,6 +7896,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJobDataInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -6936,7 +7965,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if initial full data synchronization failed.
+             * <p>The error message returned if initial full data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -6944,7 +7976,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of initial full data synchronization. Unit: percentage.
+             * <p>The progress of initial full data synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -6952,7 +7987,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been synchronized during initial full data synchronization.
+             * <p>The number of entries that have been synchronized during initial full data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43071</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -6960,13 +7998,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial full data synchronization. Valid values:
-             * <p>
+             * <p>The state of initial full data synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -6980,6 +8021,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJobDataSynchronizationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -7055,7 +8102,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if incremental data synchronization failed.
+             * <p>The error message returned if incremental data synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The task has failed for a long time and cannot be recovered.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -7063,13 +8113,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance needs to be upgraded. Valid values:
-             * <p>
+             * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+             * </blockquote>
              * 
-             * - **true**
-             * - **false**
-             * 
-             * > To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -7077,7 +8131,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of incremental data synchronization. Unit: percentage.
+             * <p>The progress of incremental data synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -7085,7 +8142,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries that have been migrated or synchronized during incremental data migration or synchronization.
+             * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20001</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -7093,7 +8153,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data synchronization.
+             * <p>The state of incremental data synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -7107,6 +8170,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJobDestinationEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -7242,7 +8311,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the synchronized objects in the destination instance.
+             * <p>The name of the database that contains the synchronized objects in the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -7250,7 +8322,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the destination instance.
+             * <p>The database engine of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -7258,7 +8333,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination instance.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1162kryivb8****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -7266,7 +8344,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the destination instance.
+             * <p>The type of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -7274,7 +8355,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the destination instance.
+             * <p>The endpoint of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -7282,10 +8366,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the destination instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -7293,7 +8380,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the destination instance.
+             * <p>The port number of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -7301,7 +8391,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).
+             * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -7309,13 +8402,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -7323,7 +8419,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the destination instance.
+             * <p>The database account of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -7337,6 +8436,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJobMigrationMode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
@@ -7388,11 +8493,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * Indicates whether full data migration or initial full data synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether full data migration or initial full data synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -7400,11 +8508,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether incremental data migration or synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -7412,11 +8523,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether schema migration or initial schema synchronization is performed. Valid values:
-             * <p>
+             * <p>Indicates whether schema migration or initial schema synchronization is performed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * - **true**
-             * - **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -7430,6 +8544,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJobPerformance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
@@ -7469,7 +8589,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * The size of data that is migrated or synchronized per second. Unit: MB/s.
+             * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -7477,7 +8600,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
+             * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -7491,6 +8617,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobPrecheckStatusDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
@@ -7566,7 +8698,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * The name of the precheck item.
+             * <p>The name of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -7574,7 +8709,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the precheck item.
+             * <p>The description of the precheck item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONN_SRC_DETAIL</p>
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -7582,11 +8720,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck result. Valid values:
-             * <p>
+             * <p>The precheck result. Valid values:</p>
+             * <ul>
+             * <li><strong>Success</strong></li>
+             * <li><strong>Failed</strong></li>
+             * </ul>
              * 
-             * - **Success**
-             * - **Failed**
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -7594,10 +8735,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed to pass the precheck. 
-             * <p>
+             * <p>The error message returned if the task failed to pass the precheck. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+             * <strong>example:</strong>
+             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.***.**&quot; (using password: YES)</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -7605,10 +8749,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The method to fix a precheck failure. 
-             * <p>
+             * <p>The method to fix a precheck failure. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **CheckResult** is **Failed**.
+             * <strong>example:</strong>
+             * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -7622,9 +8769,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJobPrecheckStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
-        private java.util.List < ReverseJobPrecheckStatusDetail> detail;
+        private java.util.List<ReverseJobPrecheckStatusDetail> detail;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -7653,7 +8806,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return detail
          */
-        public java.util.List < ReverseJobPrecheckStatusDetail> getDetail() {
+        public java.util.List<ReverseJobPrecheckStatusDetail> getDetail() {
             return this.detail;
         }
 
@@ -7679,21 +8832,24 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ReverseJobPrecheckStatusDetail> detail; 
+            private java.util.List<ReverseJobPrecheckStatusDetail> detail; 
             private String errorMessage; 
             private String percent; 
             private String status; 
 
             /**
-             * The result of each precheck item.
+             * <p>The result of each precheck item.</p>
              */
-            public Builder detail(java.util.List < ReverseJobPrecheckStatusDetail> detail) {
+            public Builder detail(java.util.List<ReverseJobPrecheckStatusDetail> detail) {
                 this.detail = detail;
                 return this;
             }
 
             /**
-             * The error message returned if the precheck failed.
+             * <p>The error message returned if the precheck failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK__ERROR_SAME_OBJ</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -7701,7 +8857,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck progress. Unit: percentage.
+             * <p>The precheck progress. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -7709,14 +8868,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state. Valid values:
-             * <p>
+             * <p>The precheck state. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+             * <li><strong>Suspending</strong>: The precheck is paused. </li>
+             * <li><strong>Checking</strong>: The precheck is in progress. </li>
+             * <li><strong>Failed</strong>: The precheck failed. </li>
+             * <li><strong>Finished</strong>: The precheck is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The precheck is not started. 
-             * - **Suspending**: The precheck is paused. 
-             * - **Checking**: The precheck is in progress. 
-             * - **Failed**: The precheck failed. 
-             * - **Finished**: The precheck is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -7730,6 +8892,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobSourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -7865,7 +9033,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the objects to be migrated from the source instance.
+             * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -7873,7 +9044,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the source instance.
+             * <p>The database engine of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -7881,7 +9055,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1imrtn6fq7h****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -7889,7 +9066,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance.
+             * <p>The type of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -7897,7 +9077,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the source instance.
+             * <p>The endpoint of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -7905,10 +9088,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -7916,7 +9102,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the source instance.
+             * <p>The port number of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -7924,7 +9113,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+             * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -7932,13 +9124,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -7946,7 +9141,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the source instance.
+             * <p>The database account of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -7960,6 +9158,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class ReverseJobStructureInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -8023,7 +9227,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if initial schema synchronization failed.
+             * <p>The error message returned if initial schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8031,7 +9238,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of initial schema synchronization. Unit: percentage.
+             * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -8039,7 +9249,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been synchronized during initial schema synchronization.
+             * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -8047,13 +9260,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial schema synchronization. Valid values:
-             * <p>
+             * <p>The state of initial schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8067,6 +9283,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListReverseJob extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
@@ -8358,7 +9580,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private ReverseJobStructureInitializationStatus structureInitializationStatus; 
 
             /**
-             * The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616980369</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -8366,7 +9591,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-16T08:01:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -8374,7 +9602,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial full data synchronization.
+             * <p>The state of initial full data synchronization.</p>
              */
             public Builder dataInitializationStatus(EtlDemoListReverseJobDataInitializationStatus dataInitializationStatus) {
                 this.dataInitializationStatus = dataInitializationStatus;
@@ -8382,7 +9610,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data synchronization.
+             * <p>The state of incremental data synchronization.</p>
              */
             public Builder dataSynchronizationStatus(EtlDemoListReverseJobDataSynchronizationStatus dataSynchronizationStatus) {
                 this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -8390,7 +9618,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.
+             * <p>The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -8398,7 +9629,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of incremental data synchronization. Unit: seconds.
+             * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -8406,7 +9640,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the destination instance.
+             * <p>The connection settings of the destination instance.</p>
              */
             public Builder destinationEndpoint(EtlDemoListReverseJobDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -8414,7 +9648,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization instance.
+             * <p>The ID of the data synchronization instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsi03e3zty16i****</p>
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -8422,10 +9659,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance class. 
-             * <p>
+             * <p>The instance class. </p>
+             * <blockquote>
+             * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+             * </blockquote>
              * 
-             * > For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -8433,7 +9673,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization direction. **Reverse** is returned.
+             * <p>The synchronization direction. <strong>Reverse</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reverse</p>
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -8441,7 +9684,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the synchronization task.
+             * <p>The ID of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i03e3zty16i****</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -8449,7 +9695,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data synchronization task.
+             * <p>The name of the data synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS_TO_RDS_MIGRATION</p>
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -8457,7 +9706,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8465,7 +9717,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The checkpoint of the ETL task.
+             * <p>The checkpoint of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1610540493</p>
              */
             public Builder etlSafeCheckpoint(String etlSafeCheckpoint) {
                 this.etlSafeCheckpoint = etlSafeCheckpoint;
@@ -8473,10 +9728,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time follows the ISO 8601 standard in the* yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. 
-             * <p>
+             * <p>The time when the instance expires. The time follows the ISO 8601 standard in the* yyyy-MM-dd<em>T</em>HH:mm:ss*Z format. The time is displayed in UTC. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>PayType</strong> is <strong>PrePaid</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **PayType** is **PrePaid**.
+             * <strong>example:</strong>
+             * <p>2022-03-16T08:01:19Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -8484,7 +9742,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration types or initial synchronization types.
+             * <p>The migration types or initial synchronization types.</p>
              */
             public Builder migrationMode(EtlDemoListReverseJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -8492,11 +9750,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the DTS instance. Valid values:
-             * <p>
+             * <p>The billing method of the DTS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * - **PrePaid**: subscription
-             * - **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -8504,7 +9765,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance of the data migration or synchronization instance.
+             * <p>The performance of the data migration or synchronization instance.</p>
              */
             public Builder performance(EtlDemoListReverseJobPerformance performance) {
                 this.performance = performance;
@@ -8512,7 +9773,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state.
+             * <p>The precheck state.</p>
              */
             public Builder precheckStatus(EtlDemoListReverseJobPrecheckStatus precheckStatus) {
                 this.precheckStatus = precheckStatus;
@@ -8520,7 +9781,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+             * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;srcHostPorts&quot;:&quot;&quot;,&quot;whitelist.dms.online.ddl.enable&quot;:false,&quot;filterDDL&quot;:false,&quot;sqlparser.dms.original.ddl&quot;:true,&quot;srcOracleType&quot;:&quot;sid&quot;,&quot;maxRetryTime&quot;:43200,&quot;destSSL&quot;:&quot;0&quot;,&quot;destOracleType&quot;:&quot;sid&quot;,&quot;srcSSL&quot;:&quot;0&quot;,&quot;dbListCaseChangeMode&quot;:&quot;default&quot;,&quot;SourceEngineVersion&quot;:&quot;8.0.18&quot;,&quot;srcNetType&quot;:&quot;VPC&quot;,&quot;destNetType&quot;:&quot;VPC&quot;,&quot;srcVpcNetMappingInst&quot;:&quot;172.16.1**.<strong>:10803&quot;,&quot;destVpcNetMappingInst&quot;:&quot;172.16.1</strong>.**:11077&quot;,&quot;useJobTask&quot;:&quot;1&quot;}</p>
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -8528,7 +9792,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the source instance.
+             * <p>The connection settings of the source instance.</p>
              */
             public Builder sourceEndpoint(ReverseJobSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -8536,7 +9800,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+             * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Synchronizing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8544,7 +9811,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of initial schema synchronization.
+             * <p>The state of initial schema synchronization.</p>
              */
             public Builder structureInitializationStatus(ReverseJobStructureInitializationStatus structureInitializationStatus) {
                 this.structureInitializationStatus = structureInitializationStatus;
@@ -8558,6 +9825,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListSourceEndpoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
@@ -8693,7 +9966,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The name of the database that contains the objects to be migrated from the source instance.
+             * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstestdata</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -8701,7 +9977,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the source instance.
+             * <p>The database engine of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -8709,7 +9988,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source instance.
+             * <p>The ID of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1162kryivb8****</p>
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -8717,7 +9999,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source instance.
+             * <p>The type of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -8725,7 +10010,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the source instance.
+             * <p>The endpoint of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.88.***</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -8733,10 +10021,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The SID of the Oracle database. 
-             * <p>
+             * <p>The SID of the Oracle database. </p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.
+             * <strong>example:</strong>
+             * <p>testsid</p>
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -8744,7 +10035,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the source instance.
+             * <p>The port number of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -8752,7 +10046,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).
+             * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -8760,13 +10057,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SSL encryption is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+             * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+             * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+             * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+             * </ul>
              * 
-             * - **DISABLE**: SSL encryption is disabled. 
-             * - **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. 
-             * - **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. 
-             * - **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.
+             * <strong>example:</strong>
+             * <p>DISABLE</p>
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -8774,7 +10074,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The database account of the source instance.
+             * <p>The database account of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtstest</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -8788,6 +10091,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListStructureInitializationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
@@ -8851,7 +10160,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The error message returned if schema migration or initial schema synchronization failed.
+             * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8859,7 +10171,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of schema migration or initial schema synchronization. Unit: percentage.
+             * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -8867,7 +10182,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.
+             * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -8875,13 +10193,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of schema migration or initial schema synchronization. Valid values:
-             * <p>
+             * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * - **NotStarted**: The task is not started. 
-             * - **Migrating**: The task is in progress. 
-             * - **Failed**: The task failed. 
-             * - **Finished**: The task is complete.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8895,6 +10216,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoListTagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -8934,7 +10261,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -8942,7 +10272,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -8956,6 +10289,12 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class EtlDemoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -9063,7 +10402,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         private EtlDemoListStructureInitializationStatus structureInitializationStatus;
 
         @com.aliyun.core.annotation.NameInMap("TagList")
-        private java.util.List < EtlDemoListTagList> tagList;
+        private java.util.List<EtlDemoListTagList> tagList;
 
         private EtlDemoList(Builder builder) {
             this.appName = builder.appName;
@@ -9360,7 +10699,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         /**
          * @return tagList
          */
-        public java.util.List < EtlDemoListTagList> getTagList() {
+        public java.util.List<EtlDemoListTagList> getTagList() {
             return this.tagList;
         }
 
@@ -9400,13 +10739,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private EtlDemoListSourceEndpoint sourceEndpoint; 
             private String status; 
             private EtlDemoListStructureInitializationStatus structureInitializationStatus; 
-            private java.util.List < EtlDemoListTagList> tagList; 
+            private java.util.List<EtlDemoListTagList> tagList; 
 
             /**
-             * Indicates whether the **new** change tracking feature is used. 
-             * <p>
+             * <p>Indicates whether the <strong>new</strong> change tracking feature is used. </p>
+             * <blockquote>
+             * <p>This parameter is returned only for change tracking instances of the new version.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only for change tracking instances of the new version.
+             * <strong>example:</strong>
+             * <p>new</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -9414,7 +10756,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15T08:25:34Z</p>
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -9422,7 +10767,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The start offset of incremental data migration or data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The start offset of incremental data migration or data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1616899019</p>
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -9430,7 +10778,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-23T07:30:31Z</p>
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -9438,7 +10789,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The downstream client information in the following format: <IP address of the downstream client>:<Random ID generated by DTS>.
+             * <p>The downstream client information in the following format: <IP address of the downstream client>:<Random ID generated by DTS>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114...:dts******</p>
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -9446,7 +10800,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:s*sZ format. The time is displayed in UTC.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:s</em>sZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-16T08:01:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -9454,10 +10811,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the ETL task. 
-             * <p>
-             * 
-             * > This parameter collection is returned only if an ETL task is configured.
+             * <p>The state of the ETL task. </p>
+             * <blockquote>
+             * <p>This parameter collection is returned only if an ETL task is configured.</p>
+             * </blockquote>
              */
             public Builder dataEtlStatus(EtlDemoListDataEtlStatus dataEtlStatus) {
                 this.dataEtlStatus = dataEtlStatus;
@@ -9465,7 +10822,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of full data migration or initial full data synchronization.
+             * <p>The state of full data migration or initial full data synchronization.</p>
              */
             public Builder dataInitializationStatus(EtlDemoListDataInitializationStatus dataInitializationStatus) {
                 this.dataInitializationStatus = dataInitializationStatus;
@@ -9473,7 +10830,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of incremental data migration or synchronization.
+             * <p>The state of incremental data migration or synchronization.</p>
              */
             public Builder dataSynchronizationStatus(EtlDemoListDataSynchronizationStatus dataSynchronizationStatus) {
                 this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -9481,7 +10838,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
+             * <p>The objects of the data migration, data synchronization, or change tracking task. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -9489,10 +10849,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of incremental data migration or synchronization. 
-             * <p>
+             * <p>The latency of incremental data migration or synchronization. </p>
+             * <blockquote>
+             * <p>If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+             * </blockquote>
              * 
-             * > If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -9500,7 +10863,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the destination instance.
+             * <p>The connection settings of the destination instance.</p>
              */
             public Builder destinationEndpoint(EtlDemoListDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -9508,7 +10871,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data migration, data synchronization, or change tracking instance.
+             * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dtsi03e3zty16i****</p>
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -9516,10 +10882,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance class. 
-             * <p>
+             * <p>The instance class. </p>
+             * <blockquote>
+             * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+             * </blockquote>
              * 
-             * > For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
+             * <strong>example:</strong>
+             * <p>large</p>
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -9527,13 +10896,17 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The synchronization direction. Valid values:
-             * <p>
+             * <p>The synchronization direction. Valid values:</p>
+             * <ul>
+             * <li><strong>Forward</strong></li>
+             * <li><strong>Reverse</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.</p>
+             * </blockquote>
              * 
-             * - **Forward**
-             * - **Reverse**
-             * 
-             * > This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
+             * <strong>example:</strong>
+             * <p>Forward</p>
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -9541,7 +10914,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data migration, data synchronization, or change tracking task.
+             * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i03e3zty16i****</p>
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -9549,7 +10925,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data migration, data synchronization, or change tracking task.
+             * <p>The name of the data migration, data synchronization, or change tracking task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS_TO_RDS_MIGRATION</p>
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -9557,7 +10936,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-26T14:03:21Z</p>
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -9565,7 +10947,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task failed.
+             * <p>The error message returned if the task failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -9573,7 +10958,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The checkpoint of the ETL task.
+             * <p>The checkpoint of the ETL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1610540493</p>
              */
             public Builder etlSafeCheckpoint(String etlSafeCheckpoint) {
                 this.etlSafeCheckpoint = etlSafeCheckpoint;
@@ -9581,10 +10969,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             * <p>
+             * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p>This parameter is returned only if the returned value of <strong>PayType</strong> is <strong>PrePaid</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only if the returned value of **PayType** is **PrePaid**.
+             * <strong>example:</strong>
+             * <p>2022-03-16T08:01:19Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -9592,12 +10983,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the DTS task. Valid values:
-             * <p>
+             * <p>The type of the DTS task. Valid values:</p>
+             * <ul>
+             * <li><strong>MIGRATION</strong>: data migration task </li>
+             * <li><strong>SYNC</strong>: data synchronization task </li>
+             * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+             * </ul>
              * 
-             * - **MIGRATION**: data migration task 
-             * - **SYNC**: data synchronization task 
-             * - **SUBSCRIBE**: change tracking task
+             * <strong>example:</strong>
+             * <p>MIGRATION</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -9605,7 +10999,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration types or initial synchronization types.
+             * <p>The migration types or initial synchronization types.</p>
              */
             public Builder migrationMode(EtlDemoListMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -9613,11 +11007,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the task.
-             * <p>
-             * - **PTS**
-             * - **DMS**
-             * - **DTS**
+             * <p>The source of the task.</p>
+             * <ul>
+             * <li><strong>PTS</strong></li>
+             * <li><strong>DMS</strong></li>
+             * <li><strong>DTS</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS</p>
              */
             public Builder originType(String originType) {
                 this.originType = originType;
@@ -9625,11 +11023,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the DTS instance. Valid values:
-             * <p>
+             * <p>The billing method of the DTS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription </li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+             * </ul>
              * 
-             * - **PrePaid**: subscription 
-             * - **PostPaid**: pay-as-you-go
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -9637,7 +11038,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance of the data migration or synchronization instance.
+             * <p>The performance of the data migration or synchronization instance.</p>
              */
             public Builder performance(EtlDemoListPerformance performance) {
                 this.performance = performance;
@@ -9645,7 +11046,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The precheck state.
+             * <p>The precheck state.</p>
              */
             public Builder precheckStatus(EtlDemoListPrecheckStatus precheckStatus) {
                 this.precheckStatus = precheckStatus;
@@ -9653,7 +11054,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+             * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;srcHostPorts&quot;:&quot;&quot;,&quot;whitelist.dms.online.ddl.enable&quot;:false,&quot;filterDDL&quot;:false,&quot;sqlparser.dms.original.ddl&quot;:true,&quot;srcOracleType&quot;:&quot;sid&quot;,&quot;maxRetryTime&quot;:43200,&quot;destSSL&quot;:&quot;0&quot;,&quot;destOracleType&quot;:&quot;sid&quot;,&quot;srcSSL&quot;:&quot;0&quot;,&quot;dbListCaseChangeMode&quot;:&quot;default&quot;,&quot;SourceEngineVersion&quot;:&quot;8.0.18&quot;,&quot;srcNetType&quot;:&quot;VPC&quot;,&quot;destNetType&quot;:&quot;VPC&quot;,&quot;srcVpcNetMappingInst&quot;:&quot;172.16.1**.<strong>:10803&quot;,&quot;destVpcNetMappingInst&quot;:&quot;172.16.1</strong>.**:11077&quot;,&quot;useJobTask&quot;:&quot;1&quot;}</p>
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -9661,7 +11065,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default resource group</p>
              */
             public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
                 this.resourceGroupDisplayName = resourceGroupDisplayName;
@@ -9669,7 +11076,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxc****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -9677,7 +11087,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the retries performed by DTS due to an exception.
+             * <p>The information about the retries performed by DTS due to an exception.</p>
              */
             public Builder retryState(EtlDemoListRetryState retryState) {
                 this.retryState = retryState;
@@ -9685,10 +11095,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data synchronization task in the reverse direction. 
-             * <p>
-             * 
-             * > This parameter is returned only for two-way data synchronization tasks.
+             * <p>The details of the data synchronization task in the reverse direction. </p>
+             * <blockquote>
+             * <p>This parameter is returned only for two-way data synchronization tasks.</p>
+             * </blockquote>
              */
             public Builder reverseJob(EtlDemoListReverseJob reverseJob) {
                 this.reverseJob = reverseJob;
@@ -9696,7 +11106,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The connection settings of the source instance.
+             * <p>The connection settings of the source instance.</p>
              */
             public Builder sourceEndpoint(EtlDemoListSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -9704,7 +11114,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.
+             * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Migrating</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -9712,7 +11125,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of schema migration or initial schema synchronization.
+             * <p>The state of schema migration or initial schema synchronization.</p>
              */
             public Builder structureInitializationStatus(EtlDemoListStructureInitializationStatus structureInitializationStatus) {
                 this.structureInitializationStatus = structureInitializationStatus;
@@ -9720,9 +11133,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the task.
+             * <p>The tags of the task.</p>
              */
-            public Builder tagList(java.util.List < EtlDemoListTagList> tagList) {
+            public Builder tagList(java.util.List<EtlDemoListTagList> tagList) {
                 this.tagList = tagList;
                 return this;
             }

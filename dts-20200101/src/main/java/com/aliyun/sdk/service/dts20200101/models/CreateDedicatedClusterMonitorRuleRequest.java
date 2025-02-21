@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDedicatedClusterMonitorRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateDedicatedClusterMonitorRuleRequest</p>
@@ -195,7 +201,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         } 
 
         /**
-         * The alert threshold for CPU utilization. Unit: percentage.
+         * <p>The alert threshold for CPU utilization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder cpuAlarmThreshold(Long cpuAlarmThreshold) {
             this.putQueryParameter("CpuAlarmThreshold", cpuAlarmThreshold);
@@ -204,7 +213,11 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts-dasd22******</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
@@ -213,7 +226,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The alert threshold for disk usage. Unit: percentage.
+         * <p>The alert threshold for disk usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder diskAlarmThreshold(Long diskAlarmThreshold) {
             this.putQueryParameter("DiskAlarmThreshold", diskAlarmThreshold);
@@ -222,7 +238,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The alert threshold for DTS Unit (DU) usage. Unit: percentage.
+         * <p>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder duAlarmThreshold(Long duAlarmThreshold) {
             this.putQueryParameter("DuAlarmThreshold", duAlarmThreshold);
@@ -231,7 +250,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -240,7 +262,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The alert threshold for memory usage. Unit: percentage.
+         * <p>The alert threshold for memory usage. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder memAlarmThreshold(Long memAlarmThreshold) {
             this.putQueryParameter("MemAlarmThreshold", memAlarmThreshold);
@@ -249,11 +274,14 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the alert feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the alert feature. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the alert feature.</li>
+         * <li><strong>0</strong>: disables the alert feature.</li>
+         * </ul>
          * 
-         * *   **1**: enables the alert feature.
-         * *   **0**: disables the alert feature.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noticeSwitch(Long noticeSwitch) {
             this.putQueryParameter("NoticeSwitch", noticeSwitch);
@@ -271,7 +299,11 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).
+         * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186****7654</p>
          */
         public Builder phones(String phones) {
             this.putQueryParameter("Phones", phones);
@@ -280,7 +312,10 @@ public class CreateDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the Data Transmission Service (DTS) instance resides.
+         * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

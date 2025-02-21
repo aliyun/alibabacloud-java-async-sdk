@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SummaryJobDetailResponseBody} extends {@link TeaModel}
  *
  * <p>SummaryJobDetailResponseBody</p>
@@ -21,7 +27,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("ProgressSummaryDetails")
-    private java.util.List < ProgressSummaryDetails> progressSummaryDetails;
+    private java.util.List<ProgressSummaryDetails> progressSummaryDetails;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -70,7 +76,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     /**
      * @return progressSummaryDetails
      */
-    public java.util.List < ProgressSummaryDetails> getProgressSummaryDetails() {
+    public java.util.List<ProgressSummaryDetails> getProgressSummaryDetails() {
         return this.progressSummaryDetails;
     }
 
@@ -92,12 +98,15 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String jobId; 
-        private java.util.List < ProgressSummaryDetails> progressSummaryDetails; 
+        private java.util.List<ProgressSummaryDetails> progressSummaryDetails; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +114,10 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +125,10 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data migration or data synchronization task.
+         * <p>The ID of the data migration or data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -121,18 +136,21 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information about the migrated or synchronized objects in arrays.
-         * <p>
-         * 
-         * >  The arrays are in the following format: \[{"key":"Function","state":5,"totalCount":22},{"key":"Procedure","state":5,"totalCount":26},{"key":"Table","state":0,"totalCount":68},{"key":"View","state":5,"totalCount":100}].
+         * <p>The returned information about the migrated or synchronized objects in arrays.</p>
+         * <blockquote>
+         * <p> The arrays are in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</p>
+         * </blockquote>
          */
-        public Builder progressSummaryDetails(java.util.List < ProgressSummaryDetails> progressSummaryDetails) {
+        public Builder progressSummaryDetails(java.util.List<ProgressSummaryDetails> progressSummaryDetails) {
             this.progressSummaryDetails = progressSummaryDetails;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9033138C-5AB3-5EB7-BA78-43131F19297C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,11 +158,14 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -157,6 +178,12 @@ public class SummaryJobDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SummaryJobDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>SummaryJobDetailResponseBody</p>
+     */
     public static class ProgressSummaryDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -208,7 +235,10 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The type of migrated or synchronized object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.
+             * <p>The type of migrated or synchronized object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Table</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -216,15 +246,18 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the data migration or data synchronization task. Valid values:
-             * <p>
+             * <p>The state of the data migration or data synchronization task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The task was complete.</li>
+             * <li><strong>1</strong>: The task was waiting to start.</li>
+             * <li><strong>2</strong>: The task was being initialized.</li>
+             * <li><strong>3</strong>: The task was in progress.</li>
+             * <li><strong>4</strong>: An error occurred.</li>
+             * <li><strong>5</strong>: The task failed.</li>
+             * </ul>
              * 
-             * *   **0**: The task was complete.
-             * *   **1**: The task was waiting to start.
-             * *   **2**: The task was being initialized.
-             * *   **3**: The task was in progress.
-             * *   **4**: An error occurred.
-             * *   **5**: The task failed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -232,7 +265,10 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of migrated or synchronized objects.
+             * <p>The total number of migrated or synchronized objects.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

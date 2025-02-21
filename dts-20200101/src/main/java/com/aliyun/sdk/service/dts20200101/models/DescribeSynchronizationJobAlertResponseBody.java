@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSynchronizationJobAlertResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSynchronizationJobAlertResponseBody</p>
@@ -169,7 +175,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         private String synchronizationJobName; 
 
         /**
-         * The mobile phone numbers that receive latency-related alerts.
+         * <p>The mobile phone numbers that receive latency-related alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.delayAlertPhone = delayAlertPhone;
@@ -177,11 +186,14 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether task latency is monitored. Valid values:
-         * <p>
+         * <p>Indicates whether task latency is monitored. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
          * 
-         * *   **enable**: yes
-         * *   **disable**: no
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.delayAlertStatus = delayAlertStatus;
@@ -189,7 +201,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold for triggering latency alerts. Unit: seconds.
+         * <p>The threshold for triggering latency alerts. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.delayOverSeconds = delayOverSeconds;
@@ -197,7 +212,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -205,7 +223,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call failed.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -213,7 +234,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile phone numbers that receive status-related alerts.
+         * <p>The mobile phone numbers that receive status-related alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.errorAlertPhone = errorAlertPhone;
@@ -221,11 +245,14 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether task status is monitored. Valid values:
-         * <p>
+         * <p>Indicates whether task status is monitored. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: yes</li>
+         * <li><strong>disable</strong>: no</li>
+         * </ul>
          * 
-         * *   **enable**: yes
-         * *   **disable**: no
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.errorAlertStatus = errorAlertStatus;
@@ -233,7 +260,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210ec20e16055205968635339d****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -241,7 +271,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -249,14 +282,19 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Forward</strong></p>
+         * </li>
+         * <li><p><strong>Reverse</strong></p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when the topology of data synchronization is two-way synchronization.</p>
+         * </blockquote>
          * 
-         * *   **Forward**
-         * 
-         * *   **Reverse**
-         * 
-         * > This parameter is returned only when the topology of data synchronization is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.synchronizationDirection = synchronizationDirection;
@@ -264,7 +302,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the data synchronization instance.
+         * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kxz1170c10p****</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;
@@ -272,7 +313,10 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the data synchronization task.
+         * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Polar MySQL_TO_RDS MySQL</p>
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.synchronizationJobName = synchronizationJobName;

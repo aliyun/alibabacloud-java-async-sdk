@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDedicatedClusterRequest} extends {@link RequestModel}
  *
  * <p>ModifyDedicatedClusterRequest</p>
@@ -137,10 +143,13 @@ public class ModifyDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of the **InstanceId** and **DedicatedClusterId** parameters.
+         * <strong>example:</strong>
+         * <p>dtscluster_h3fl1cs217sx952</p>
          */
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
@@ -149,7 +158,10 @@ public class ModifyDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtscluster_test_001</p>
          */
         public Builder dedicatedClusterName(String dedicatedClusterName) {
             this.putQueryParameter("DedicatedClusterName", dedicatedClusterName);
@@ -158,10 +170,13 @@ public class ModifyDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of the **InstanceId** and **DedicatedClusterId** parameters.
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +185,10 @@ public class ModifyDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The overcommit ratio. Unit: %.
+         * <p>The overcommit ratio. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         public Builder oversoldRatio(Integer oversoldRatio) {
             this.putQueryParameter("OversoldRatio", oversoldRatio);
@@ -188,7 +206,10 @@ public class ModifyDedicatedClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the Data Transmission Service (DTS) instance resides.
+         * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

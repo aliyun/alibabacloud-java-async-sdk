@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitDtsRdsInstanceRequest} extends {@link RequestModel}
  *
  * <p>InitDtsRdsInstanceRequest</p>
@@ -137,7 +143,10 @@ public class InitDtsRdsInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the data synchronization task.
+         * <p>The ID of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtszvxa4qmot6p****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -146,10 +155,13 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * If the node is a self-managed MySQL database that is connected over CEN, you must specify the ID of the CEN instance.
-         * <p>
+         * <p>If the node is a self-managed MySQL database that is connected over CEN, you must specify the ID of the CEN instance.</p>
+         * <blockquote>
+         * <p>You must specify the <strong>EndpointRegion</strong> and <strong>EndpointInstanceId</strong> parameters or the EndpointCenId parameter based on the type of the node.</p>
+         * </blockquote>
          * 
-         * > You must specify the **EndpointRegion** and **EndpointInstanceId** parameters or the EndpointCenId parameter based on the type of the node.
+         * <strong>example:</strong>
+         * <p>cen-9kqshqum*******</p>
          */
         public Builder endpointCenId(String endpointCenId) {
             this.putQueryParameter("EndpointCenId", endpointCenId);
@@ -158,11 +170,16 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * If the node is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.
-         * <p>
+         * <p>If the node is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You must also specify the <strong>EndpointRegion</strong> parameter.</li>
+         * <li>You must specify the EndpointInstanceId parameter or the <strong>EndpointCenId</strong> parameter based on the type of the node.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   You must also specify the **EndpointRegion** parameter.
-         * >*   You must specify the EndpointInstanceId parameter or the **EndpointCenId** parameter based on the type of the node.
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         public Builder endpointInstanceId(String endpointInstanceId) {
             this.putQueryParameter("EndpointInstanceId", endpointInstanceId);
@@ -171,11 +188,14 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * The type of the node. Valid values:
-         * <p>
+         * <p>The type of the node. Valid values:</p>
+         * <ul>
+         * <li><strong>RDS</strong>: an ApsaraDB RDS for MySQL instance</li>
+         * <li><strong>CEN</strong>: a self-managed MySQL database that is connected over CEN</li>
+         * </ul>
          * 
-         * *   **RDS**: an ApsaraDB RDS for MySQL instance
-         * *   **CEN**: a self-managed MySQL database that is connected over CEN
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder endpointInstanceType(String endpointInstanceType) {
             this.putQueryParameter("EndpointInstanceType", endpointInstanceType);
@@ -184,11 +204,16 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * If the node is an ApsaraDB RDS for MySQL instance, you must specify the region in which the ApsaraDB RDS for MySQL instance resides.
-         * <p>
+         * <p>If the node is an ApsaraDB RDS for MySQL instance, you must specify the region in which the ApsaraDB RDS for MySQL instance resides.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You must also specify the <strong>EndpointInstanceId</strong> parameter.</li>
+         * <li>You must specify the EndpointRegion parameter or the <strong>EndpointCenId</strong> parameter based on the type of the node.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * > *   You must also specify the **EndpointInstanceId** parameter.
-         * >*   You must specify the EndpointRegion parameter or the **EndpointCenId** parameter based on the type of the node.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder endpointRegion(String endpointRegion) {
             this.putQueryParameter("EndpointRegion", endpointRegion);
@@ -197,7 +222,10 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the active geo-redundancy database cluster resides.
+         * <p>The ID of the region in which the active geo-redundancy database cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

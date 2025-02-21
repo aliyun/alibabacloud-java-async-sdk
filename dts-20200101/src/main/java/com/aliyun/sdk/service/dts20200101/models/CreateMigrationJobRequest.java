@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMigrationJobRequest} extends {@link RequestModel}
  *
  * <p>CreateMigrationJobRequest</p>
@@ -139,7 +145,10 @@ public class CreateMigrationJobRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -148,7 +157,10 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -157,12 +169,17 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**.
-         * <p>
+         * <p>The specification of the data migration instance. Valid values: <strong>small</strong>, <strong>medium</strong>, <strong>large</strong>, <strong>xlarge</strong>, and <strong>2xlarge</strong>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>For more information about the test performance of each specification, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a>.</li>
+         * <li>For more information about the pricing of data migration instances, see <a href="https://help.aliyun.com/document_detail/117780.html">Pricing</a>.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * > 
-         * *   For more information about the test performance of each specification, see [Specifications of data migration instances](~~26606~~).
-         * *   For more information about the pricing of data migration instances, see [Pricing](~~117780~~).
+         * <strong>example:</strong>
+         * <p>2xlarge</p>
          */
         public Builder migrationJobClass(String migrationJobClass) {
             this.putQueryParameter("MigrationJobClass", migrationJobClass);
@@ -180,7 +197,11 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * The ID of the region where the data migration instance resides. The region ID of the data migration instance is the same as that of the destination database. For more information, see [List of supported regions](~~141033~~).
+         * <p>The ID of the region where the data migration instance resides. The region ID of the data migration instance is the same as that of the destination database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -189,7 +210,10 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * The ID of the region where the data migration instance resides. You do not need to specify this parameter because this parameter will be removed in the future.
+         * <p>The ID of the region where the data migration instance resides. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,7 +222,10 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

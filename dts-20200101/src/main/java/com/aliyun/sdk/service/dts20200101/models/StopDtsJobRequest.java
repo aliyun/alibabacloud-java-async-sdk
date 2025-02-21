@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopDtsJobRequest} extends {@link RequestModel}
  *
  * <p>StopDtsJobRequest</p>
@@ -123,7 +129,10 @@ public class StopDtsJobRequest extends Request {
         } 
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking instance.
+         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsl3m1213ye7l****</p>
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -132,7 +141,10 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -141,7 +153,10 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -150,7 +165,10 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekznwnajjh4d3a</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -159,15 +177,20 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * The synchronization direction. Valid values:
-         * <p>
+         * <p>The synchronization direction. Valid values:</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to stop the reverse synchronization task only when the topology is two-way synchronization.</li>
+         * </ul>
          * 
-         * *   **Forward**
-         * *   **Reverse**
-         * 
-         * > 
-         * *   Default value: **Forward**.
-         * *   You can set this parameter to **Reverse** to stop the reverse synchronization task only when the topology is two-way synchronization.
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -176,7 +199,13 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <ul>
+         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);
