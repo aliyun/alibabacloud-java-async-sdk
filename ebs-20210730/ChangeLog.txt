@@ -1,3 +1,6 @@
+2025-02-21 Version: 3.0.2
+- Generated java-async 2021-07-30 for ebs.
+
 2025-01-03 Version: 3.0.1
 - Generated java-async 2021-07-30 for ebs.
 

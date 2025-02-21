@@ -324,6 +324,32 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h2>Interface Description</h2>
+     * <p>Query the tag key-value pairs of user\&quot;s cloud disk and snapshot. The search scope can be narrowed down by using filterTagKey.</p>
+     * 
+     * @param request the request parameters of DescribeUserTagKeys  DescribeUserTagKeysRequest
+     * @return DescribeUserTagKeysResponse
+     */
+    CompletableFuture<DescribeUserTagKeysResponse> describeUserTagKeys(DescribeUserTagKeysRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Interface Description</h2>
+     * <blockquote>
+     * <p>The dedicated block storage cluster feature is currently supported in the following regions: South China 2 (Heyuan), Indonesia (Jakarta), and South China 1 (Shenzhen).</p>
+     * </blockquote>
+     * <ul>
+     * <li>The request parameters act as a filter, with a logical AND relationship. If any parameter is empty, the filter does not take effect.</li>
+     * <li>For paginated queries, it is recommended to use the MaxResults and NextToken parameters. Usage instructions: When querying the first page, set only MaxResults to limit the number of returned entries. The NextToken in the response will serve as the token for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response, and set MaxResults to limit the number of returned entries.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DescribeUserTagValues  DescribeUserTagValuesRequest
+     * @return DescribeUserTagValuesResponse
+     */
+    CompletableFuture<DescribeUserTagValuesResponse> describeUserTagValues(DescribeUserTagValuesRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
      * <li>For information about the regions in which the replication pair-consistent group feature is available, see <a href="https://help.aliyun.com/document_detail/314563.html">Overview</a>.</li>
