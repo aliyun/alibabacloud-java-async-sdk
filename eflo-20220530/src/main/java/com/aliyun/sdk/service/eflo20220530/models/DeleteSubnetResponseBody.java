@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSubnetResponseBody</p>
  */
 public class DeleteSubnetResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -30,6 +33,7 @@ public class DeleteSubnetResponseBody extends TeaModel {
     private String requestId;
 
     private DeleteSubnetResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.content = builder.content;
         this.message = builder.message;
@@ -42,6 +46,13 @@ public class DeleteSubnetResponseBody extends TeaModel {
 
     public static DeleteSubnetResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -73,10 +84,19 @@ public class DeleteSubnetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
         private Object content; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>The response status code.</p>

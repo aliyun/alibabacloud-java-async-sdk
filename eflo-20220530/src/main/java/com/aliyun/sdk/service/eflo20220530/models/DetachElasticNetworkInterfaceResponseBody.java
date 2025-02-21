@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachElasticNetworkInterfaceResponseBody</p>
  */
 public class DetachElasticNetworkInterfaceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -27,6 +30,7 @@ public class DetachElasticNetworkInterfaceResponseBody extends TeaModel {
     private String requestId;
 
     private DetachElasticNetworkInterfaceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -38,6 +42,13 @@ public class DetachElasticNetworkInterfaceResponseBody extends TeaModel {
 
     public static DetachElasticNetworkInterfaceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -62,9 +73,18 @@ public class DetachElasticNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>The response status code.</p>

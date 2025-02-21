@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLeniPrivateIpAddressesResponseBody</p>
  */
 public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -30,6 +33,7 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
     private String requestId;
 
     private ListLeniPrivateIpAddressesResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.content = builder.content;
         this.message = builder.message;
@@ -42,6 +46,13 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
 
     public static ListLeniPrivateIpAddressesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -73,10 +84,19 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer code; 
         private Content content; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>The response status code.</p>
