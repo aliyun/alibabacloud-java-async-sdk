@@ -168,6 +168,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("L7Config")
+        private PAL7Config l7Config;
+
         @com.aliyun.core.annotation.NameInMap("L7ProxyDomainAutomatic")
         private String l7ProxyDomainAutomatic;
 
@@ -199,6 +202,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             this.connectorIds = builder.connectorIds;
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.l7Config = builder.l7Config;
             this.l7ProxyDomainAutomatic = builder.l7ProxyDomainAutomatic;
             this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
             this.name = builder.name;
@@ -257,6 +261,13 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return l7Config
+         */
+        public PAL7Config getL7Config() {
+            return this.l7Config;
         }
 
         /**
@@ -322,6 +333,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             private java.util.List<String> connectorIds; 
             private String createTime; 
             private String description; 
+            private PAL7Config l7Config; 
             private String l7ProxyDomainAutomatic; 
             private String l7ProxyDomainCustom; 
             private String name; 
@@ -376,6 +388,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * L7Config.
+             */
+            public Builder l7Config(PAL7Config l7Config) {
+                this.l7Config = l7Config;
                 return this;
             }
 
