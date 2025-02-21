@@ -24,6 +24,7 @@ public class DeleteWaitingRoomRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WaitingRoomRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long waitingRoomRuleId;
 
     private DeleteWaitingRoomRuleRequest(Builder builder) {
@@ -88,6 +89,7 @@ public class DeleteWaitingRoomRuleRequest extends Request {
 
         /**
          * <p>The ID of the waiting room bypass rule.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>3672886****</p>

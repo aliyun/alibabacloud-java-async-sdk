@@ -24,6 +24,7 @@ public class DeleteWaitingRoomEventRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WaitingRoomEventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long waitingRoomEventId;
 
     private DeleteWaitingRoomEventRequest(Builder builder) {
@@ -88,6 +89,7 @@ public class DeleteWaitingRoomEventRequest extends Request {
 
         /**
          * <p>The ID of the waiting room event.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>302909890***</p>

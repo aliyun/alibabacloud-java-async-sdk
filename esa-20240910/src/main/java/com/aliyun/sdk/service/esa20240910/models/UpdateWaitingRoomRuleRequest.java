@@ -39,6 +39,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WaitingRoomRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long waitingRoomRuleId;
 
     private UpdateWaitingRoomRuleRequest(Builder builder) {
@@ -176,6 +177,7 @@ public class UpdateWaitingRoomRuleRequest extends Request {
 
         /**
          * <p>The ID of the waiting room bypass rule that you want to update. You can call <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> to obtain the ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>8987739839****</p>

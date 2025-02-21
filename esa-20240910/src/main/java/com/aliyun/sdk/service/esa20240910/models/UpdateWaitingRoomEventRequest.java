@@ -92,6 +92,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WaitingRoomEventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long waitingRoomEventId;
 
     @com.aliyun.core.annotation.Query
@@ -577,6 +578,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
 
         /**
          * <p>The ID of the waiting room event, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>89677721098****</p>

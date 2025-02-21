@@ -179,10 +179,13 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
      */
     public static class InstanceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheReserveCapacity")
-        private String cacheReserveCapacity;
+        private Long cacheReserveCapacity;
 
         @com.aliyun.core.annotation.NameInMap("CacheReserveRegion")
         private String cacheReserveRegion;
+
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -202,6 +205,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         private InstanceInfo(Builder builder) {
             this.cacheReserveCapacity = builder.cacheReserveCapacity;
             this.cacheReserveRegion = builder.cacheReserveRegion;
+            this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.duration = builder.duration;
             this.expireTime = builder.expireTime;
@@ -220,7 +224,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         /**
          * @return cacheReserveCapacity
          */
-        public String getCacheReserveCapacity() {
+        public Long getCacheReserveCapacity() {
             return this.cacheReserveCapacity;
         }
 
@@ -229,6 +233,13 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
          */
         public String getCacheReserveRegion() {
             return this.cacheReserveRegion;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -267,8 +278,9 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String cacheReserveCapacity; 
+            private Long cacheReserveCapacity; 
             private String cacheReserveRegion; 
+            private String chargeType; 
             private String createTime; 
             private Integer duration; 
             private String expireTime; 
@@ -281,7 +293,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>512000</p>
              */
-            public Builder cacheReserveCapacity(String cacheReserveCapacity) {
+            public Builder cacheReserveCapacity(Long cacheReserveCapacity) {
                 this.cacheReserveCapacity = cacheReserveCapacity;
                 return this;
             }
@@ -294,6 +306,14 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
              */
             public Builder cacheReserveRegion(String cacheReserveRegion) {
                 this.cacheReserveRegion = cacheReserveRegion;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
                 return this;
             }
 

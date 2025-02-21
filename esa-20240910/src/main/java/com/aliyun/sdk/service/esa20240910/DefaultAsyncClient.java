@@ -4067,6 +4067,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
+     * <li>If the acceleration area is not overseas, the site must have successfully completed the filing process.</li>
+     * </ol>
+     * 
      * @param request the request parameters of PurchaseRatePlan  PurchaseRatePlanRequest
      * @return PurchaseRatePlanResponse
      */

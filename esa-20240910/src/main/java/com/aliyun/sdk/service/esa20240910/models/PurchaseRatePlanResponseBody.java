@@ -67,7 +67,10 @@ public class PurchaseRatePlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-ads11w</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -75,7 +78,10 @@ public class PurchaseRatePlanResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -83,7 +89,7 @@ public class PurchaseRatePlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30423A7F-A83D-1E24-B80E-86DD25790758</p>

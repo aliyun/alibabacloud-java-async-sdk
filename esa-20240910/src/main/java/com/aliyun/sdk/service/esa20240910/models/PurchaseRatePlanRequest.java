@@ -195,7 +195,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Automatic payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -204,7 +207,14 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Auto-renewal:</p>
+         * <ul>
+         * <li>true: Enable auto-renewal.</li>
+         * <li>false: Disable auto-renewal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -213,7 +223,14 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>Billing type</p>
+         * <ul>
+         * <li>PREPAY: Prepaid.</li>
+         * <li>POSTPAY: Postpaid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -222,7 +239,15 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * Coverage.
+         * <p>Acceleration area:</p>
+         * <ul>
+         * <li>domestic: Mainland China only.</li>
+         * <li>global: Worldwide.</li>
+         * <li>overseas: Global (excluding Mainland China).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -231,7 +256,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>Subscription period (in months).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -240,7 +268,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * PlanCode.
+         * <p>Package code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entranceplan</p>
          */
         public Builder planCode(String planCode) {
             this.putQueryParameter("PlanCode", planCode);
@@ -249,7 +280,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * PlanName.
+         * <p>Package name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -258,7 +292,10 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * SiteName.
+         * <p>Site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder siteName(String siteName) {
             this.putQueryParameter("SiteName", siteName);
@@ -267,7 +304,14 @@ public class PurchaseRatePlanRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Site access type:</p>
+         * <ul>
+         * <li>NS: NS access.</li>
+         * <li>CNAME: CNAME access.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CNAME</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
