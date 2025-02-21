@@ -31,11 +31,16 @@ public class CreateRouteRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long networkId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CreateRouteRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.destinationCidr = builder.destinationCidr;
         this.networkId = builder.networkId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class CreateRouteRequest extends Request {
         return this.networkId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateRouteRequest, Builder> {
         private String regionId; 
         private String destinationCidr; 
         private Long networkId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class CreateRouteRequest extends Request {
             this.regionId = request.regionId;
             this.destinationCidr = request.destinationCidr;
             this.networkId = request.networkId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -120,6 +134,15 @@ public class CreateRouteRequest extends Request {
         public Builder networkId(Long networkId) {
             this.putBodyParameter("NetworkId", networkId);
             this.networkId = networkId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

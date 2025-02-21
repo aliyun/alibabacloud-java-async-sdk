@@ -108,6 +108,73 @@ public class ListResourceGroupsResponseBody extends TeaModel {
      *
      * <p>ListResourceGroupsResponseBody</p>
      */
+    public static class AliyunResourceTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private AliyunResourceTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AliyunResourceTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public AliyunResourceTags build() {
+                return new AliyunResourceTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceGroupsResponseBody</p>
+     */
     public static class Spec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
@@ -185,6 +252,9 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupId")
         private String aliyunResourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("AliyunResourceTags")
+        private java.util.List<AliyunResourceTags> aliyunResourceTags;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -223,6 +293,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
         private ResourceGroupList(Builder builder) {
             this.aliyunResourceGroupId = builder.aliyunResourceGroupId;
+            this.aliyunResourceTags = builder.aliyunResourceTags;
             this.createTime = builder.createTime;
             this.createUser = builder.createUser;
             this.defaultVpcId = builder.defaultVpcId;
@@ -250,6 +321,13 @@ public class ListResourceGroupsResponseBody extends TeaModel {
          */
         public String getAliyunResourceGroupId() {
             return this.aliyunResourceGroupId;
+        }
+
+        /**
+         * @return aliyunResourceTags
+         */
+        public java.util.List<AliyunResourceTags> getAliyunResourceTags() {
+            return this.aliyunResourceTags;
         }
 
         /**
@@ -338,6 +416,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliyunResourceGroupId; 
+            private java.util.List<AliyunResourceTags> aliyunResourceTags; 
             private Long createTime; 
             private String createUser; 
             private String defaultVpcId; 
@@ -359,6 +438,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
              */
             public Builder aliyunResourceGroupId(String aliyunResourceGroupId) {
                 this.aliyunResourceGroupId = aliyunResourceGroupId;
+                return this;
+            }
+
+            /**
+             * AliyunResourceTags.
+             */
+            public Builder aliyunResourceTags(java.util.List<AliyunResourceTags> aliyunResourceTags) {
+                this.aliyunResourceTags = aliyunResourceTags;
                 return this;
             }
 

@@ -124,7 +124,10 @@ public class GetWorkflowDefinitionRequest extends Request {
         }
 
         /**
-         * IncludeScriptContent.
+         * <p>查询结果是否包含工作流内部节点的脚本内容（对于内容较多的节点，可能存在较长的网络传输延时）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeScriptContent(Boolean includeScriptContent) {
             this.putQueryParameter("IncludeScriptContent", includeScriptContent);

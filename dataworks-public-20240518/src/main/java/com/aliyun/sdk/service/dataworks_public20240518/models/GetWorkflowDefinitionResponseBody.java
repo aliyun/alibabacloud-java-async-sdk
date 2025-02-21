@@ -346,7 +346,10 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
             }
 
             /**
-             * WorkflowId.
+             * <p>The ID of the workflow on the scheduling side after publishing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700006657495</p>
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;

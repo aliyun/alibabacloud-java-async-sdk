@@ -356,7 +356,10 @@ public class GetNodeResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The Id of the scheduled task after the node is published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700006680527</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
