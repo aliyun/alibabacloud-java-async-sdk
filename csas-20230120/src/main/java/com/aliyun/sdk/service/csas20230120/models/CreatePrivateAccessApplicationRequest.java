@@ -31,6 +31,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("L7Config")
+    private PAL7Config l7Config;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("L7ProxyDomainAutomaticPrefix")
     private String l7ProxyDomainAutomaticPrefix;
 
@@ -67,6 +71,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         this.addresses = builder.addresses;
         this.browserAccessStatus = builder.browserAccessStatus;
         this.description = builder.description;
+        this.l7Config = builder.l7Config;
         this.l7ProxyDomainAutomaticPrefix = builder.l7ProxyDomainAutomaticPrefix;
         this.l7ProxyDomainCustom = builder.l7ProxyDomainCustom;
         this.name = builder.name;
@@ -108,6 +113,13 @@ public class CreatePrivateAccessApplicationRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return l7Config
+     */
+    public PAL7Config getL7Config() {
+        return this.l7Config;
     }
 
     /**
@@ -163,6 +175,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         private java.util.List<String> addresses; 
         private String browserAccessStatus; 
         private String description; 
+        private PAL7Config l7Config; 
         private String l7ProxyDomainAutomaticPrefix; 
         private String l7ProxyDomainCustom; 
         private String name; 
@@ -180,6 +193,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             this.addresses = request.addresses;
             this.browserAccessStatus = request.browserAccessStatus;
             this.description = request.description;
+            this.l7Config = request.l7Config;
             this.l7ProxyDomainAutomaticPrefix = request.l7ProxyDomainAutomaticPrefix;
             this.l7ProxyDomainCustom = request.l7ProxyDomainCustom;
             this.name = request.name;
@@ -213,6 +227,16 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * L7Config.
+         */
+        public Builder l7Config(PAL7Config l7Config) {
+            String l7ConfigShrink = shrink(l7Config, "L7Config", "json");
+            this.putBodyParameter("L7Config", l7ConfigShrink);
+            this.l7Config = l7Config;
             return this;
         }
 
