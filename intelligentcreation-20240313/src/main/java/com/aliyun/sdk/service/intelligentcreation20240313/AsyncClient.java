@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FinishAICoachTaskSessionResponse> finishAICoachTaskSession(FinishAICoachTaskSessionRequest request);
 
     /**
+     * @param request the request parameters of GetAICoachScript  GetAICoachScriptRequest
+     * @return GetAICoachScriptResponse
+     */
+    CompletableFuture<GetAICoachScriptResponse> getAICoachScript(GetAICoachScriptRequest request);
+
+    /**
      * @param request the request parameters of GetAICoachTaskSessionHistory  GetAICoachTaskSessionHistoryRequest
      * @return GetAICoachTaskSessionHistoryResponse
      */

@@ -365,6 +365,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAICoachScript  GetAICoachScriptRequest
+     * @return GetAICoachScriptResponse
+     */
+    @Override
+    public CompletableFuture<GetAICoachScriptResponse> getAICoachScript(GetAICoachScriptRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAICoachScript").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/getScript").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAICoachScriptResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAICoachScriptResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAICoachTaskSessionHistory  GetAICoachTaskSessionHistoryRequest
      * @return GetAICoachTaskSessionHistoryResponse
      */

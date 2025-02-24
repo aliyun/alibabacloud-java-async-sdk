@@ -22,6 +22,10 @@ public class SendSdkMessageRequest extends Request {
     private String data;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("header")
+    private String header;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("moduleName")
     private String moduleName;
 
@@ -36,6 +40,7 @@ public class SendSdkMessageRequest extends Request {
     private SendSdkMessageRequest(Builder builder) {
         super(builder);
         this.data = builder.data;
+        this.header = builder.header;
         this.moduleName = builder.moduleName;
         this.operationName = builder.operationName;
         this.userId = builder.userId;
@@ -62,6 +67,13 @@ public class SendSdkMessageRequest extends Request {
     }
 
     /**
+     * @return header
+     */
+    public String getHeader() {
+        return this.header;
+    }
+
+    /**
      * @return moduleName
      */
     public String getModuleName() {
@@ -84,6 +96,7 @@ public class SendSdkMessageRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendSdkMessageRequest, Builder> {
         private String data; 
+        private String header; 
         private String moduleName; 
         private String operationName; 
         private String userId; 
@@ -95,6 +108,7 @@ public class SendSdkMessageRequest extends Request {
         private Builder(SendSdkMessageRequest request) {
             super(request);
             this.data = request.data;
+            this.header = request.header;
             this.moduleName = request.moduleName;
             this.operationName = request.operationName;
             this.userId = request.userId;
@@ -106,6 +120,15 @@ public class SendSdkMessageRequest extends Request {
         public Builder data(String data) {
             this.putBodyParameter("data", data);
             this.data = data;
+            return this;
+        }
+
+        /**
+         * header.
+         */
+        public Builder header(String header) {
+            this.putBodyParameter("header", header);
+            this.header = header;
             return this;
         }
 

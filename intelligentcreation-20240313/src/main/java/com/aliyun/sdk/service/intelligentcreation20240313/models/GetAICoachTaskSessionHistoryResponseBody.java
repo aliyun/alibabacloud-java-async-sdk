@@ -26,6 +26,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
+    @com.aliyun.core.annotation.NameInMap("pauseDuration")
+    private Long pauseDuration;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -48,6 +51,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         this.conversationList = builder.conversationList;
         this.duration = builder.duration;
         this.endTime = builder.endTime;
+        this.pauseDuration = builder.pauseDuration;
         this.requestId = builder.requestId;
         this.scriptName = builder.scriptName;
         this.startTime = builder.startTime;
@@ -83,6 +87,13 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return pauseDuration
+     */
+    public Long getPauseDuration() {
+        return this.pauseDuration;
     }
 
     /**
@@ -131,6 +142,7 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         private java.util.List<ConversationList> conversationList; 
         private Long duration; 
         private String endTime; 
+        private Long pauseDuration; 
         private String requestId; 
         private String scriptName; 
         private String startTime; 
@@ -159,6 +171,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * pauseDuration.
+         */
+        public Builder pauseDuration(Long pauseDuration) {
+            this.pauseDuration = pauseDuration;
             return this;
         }
 
