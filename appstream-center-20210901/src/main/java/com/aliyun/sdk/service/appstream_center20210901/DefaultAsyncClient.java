@@ -485,6 +485,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> All supported regions instead of available regions are returned by this operation. For more information, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
      */

@@ -91,7 +91,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AppInstanceGroupModels.
+         * <p>The delivery groups.</p>
          */
         public Builder appInstanceGroupModels(java.util.List<AppInstanceGroupModels> appInstanceGroupModels) {
             this.appInstanceGroupModels = appInstanceGroupModels;
@@ -217,10 +217,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             private String appVersionName; 
 
             /**
-             * <p>应用图标。</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></p>
+             * AppIcon.
              */
             public Builder appIcon(String appIcon) {
                 this.appIcon = appIcon;
@@ -244,10 +241,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用版本。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0.0</p>
+             * AppVersion.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -255,10 +249,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用版本名称。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>初始版本</p>
+             * AppVersionName.
              */
             public Builder appVersionName(String appVersionName) {
                 this.appVersionName = appVersionName;
@@ -703,7 +694,10 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIdleAppInstanceAmount.
+             * <p>The maximum number of idle sessions. After you specify a value for this parameter, auto scaling is triggered only if the number of idle sessions in the delivery group is smaller than the specified value and the session usage exceeds the value specified for <code>ScalingUsageThreshold</code>. Otherwise, the system determines that the idle sessions in the delivery group are sufficient and does not perform auto scaling.`` You can use this parameter to flexibly manage auto scaling and reduce costs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
                 this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
@@ -1385,10 +1379,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>策略ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pg-g3k5wa2ms2****</p>
+             * AppPolicyId.
              */
             public Builder appPolicyId(String appPolicyId) {
                 this.appPolicyId = appPolicyId;
@@ -1420,10 +1411,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>售卖模式。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Node</p>
+             * ChargeResourceMode.
              */
             public Builder chargeResourceMode(String chargeResourceMode) {
                 this.chargeResourceMode = chargeResourceMode;
@@ -1471,7 +1459,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * NodePool.
+             * <p>The resource groups.</p>
              */
             public Builder nodePool(java.util.List<NodePool> nodePool) {
                 this.nodePool = nodePool;

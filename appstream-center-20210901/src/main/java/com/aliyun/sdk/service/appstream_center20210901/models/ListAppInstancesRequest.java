@@ -47,6 +47,10 @@ public class ListAppInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private java.util.List<String> status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIdList")
+    private java.util.List<String> userIdList;
+
     private ListAppInstancesRequest(Builder builder) {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
@@ -56,6 +60,7 @@ public class ListAppInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
+        this.userIdList = builder.userIdList;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class ListAppInstancesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return userIdList
+     */
+    public java.util.List<String> getUserIdList() {
+        return this.userIdList;
+    }
+
     public static final class Builder extends Request.Builder<ListAppInstancesRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstanceId; 
@@ -128,6 +140,7 @@ public class ListAppInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List<String> status; 
+        private java.util.List<String> userIdList; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class ListAppInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.status = request.status;
+            this.userIdList = request.userIdList;
         } 
 
         /**
@@ -225,6 +239,15 @@ public class ListAppInstancesRequest extends Request {
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * UserIdList.
+         */
+        public Builder userIdList(java.util.List<String> userIdList) {
+            this.putQueryParameter("UserIdList", userIdList);
+            this.userIdList = userIdList;
             return this;
         }
 

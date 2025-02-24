@@ -229,7 +229,15 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-hangzhou: China (Hangzhou)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -238,7 +246,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * NodeInstanceType.
+         * <p>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu.4c8g.2g</p>
          */
         public Builder nodeInstanceType(String nodeInstanceType) {
             this.putQueryParameter("NodeInstanceType", nodeInstanceType);
@@ -286,7 +297,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

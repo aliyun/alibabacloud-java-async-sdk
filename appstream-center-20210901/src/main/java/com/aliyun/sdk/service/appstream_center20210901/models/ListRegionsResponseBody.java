@@ -55,7 +55,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegionModels.
+         * <p>The region IDs.</p>
          */
         public Builder regionModels(java.util.List<RegionModels> regionModels) {
             this.regionModels = regionModels;
@@ -63,7 +63,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class ListRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -82,7 +82,14 @@ public class ListRegionsRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CloudApp: App Streaming</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
