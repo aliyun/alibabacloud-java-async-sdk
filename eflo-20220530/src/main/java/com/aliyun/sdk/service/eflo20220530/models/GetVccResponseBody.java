@@ -91,7 +91,10 @@ public class GetVccResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -1381,6 +1384,9 @@ public class GetVccResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachErStatus")
         private Boolean attachErStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private Integer bandwidth;
+
         @com.aliyun.core.annotation.NameInMap("BandwidthStr")
         private String bandwidthStr;
 
@@ -1487,6 +1493,7 @@ public class GetVccResponseBody extends TeaModel {
             this.accessPointId = builder.accessPointId;
             this.aliyunRouterInfo = builder.aliyunRouterInfo;
             this.attachErStatus = builder.attachErStatus;
+            this.bandwidth = builder.bandwidth;
             this.bandwidthStr = builder.bandwidthStr;
             this.bgpAsn = builder.bgpAsn;
             this.bgpCidr = builder.bgpCidr;
@@ -1550,6 +1557,13 @@ public class GetVccResponseBody extends TeaModel {
          */
         public Boolean getAttachErStatus() {
             return this.attachErStatus;
+        }
+
+        /**
+         * @return bandwidth
+         */
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         /**
@@ -1794,6 +1808,7 @@ public class GetVccResponseBody extends TeaModel {
             private String accessPointId; 
             private java.util.List<AliyunRouterInfo> aliyunRouterInfo; 
             private Boolean attachErStatus; 
+            private Integer bandwidth; 
             private String bandwidthStr; 
             private String bgpAsn; 
             private String bgpCidr; 
@@ -1864,6 +1879,14 @@ public class GetVccResponseBody extends TeaModel {
              */
             public Builder attachErStatus(Boolean attachErStatus) {
                 this.attachErStatus = attachErStatus;
+                return this;
+            }
+
+            /**
+             * Bandwidth.
+             */
+            public Builder bandwidth(Integer bandwidth) {
+                this.bandwidth = bandwidth;
                 return this;
             }
 

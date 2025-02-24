@@ -91,7 +91,10 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -179,6 +182,9 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SubnetId")
+        private String subnetId;
+
         private Content(Builder builder) {
             this.description = builder.description;
             this.gmtCreate = builder.gmtCreate;
@@ -189,6 +195,7 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             this.privateIpAddress = builder.privateIpAddress;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.subnetId = builder.subnetId;
         }
 
         public static Builder builder() {
@@ -262,6 +269,13 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return subnetId
+         */
+        public String getSubnetId() {
+            return this.subnetId;
+        }
+
         public static final class Builder {
             private String description; 
             private String gmtCreate; 
@@ -272,6 +286,7 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             private String privateIpAddress; 
             private String regionId; 
             private String status; 
+            private String subnetId; 
 
             /**
              * <p>The instance description.</p>
@@ -369,6 +384,14 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SubnetId.
+             */
+            public Builder subnetId(String subnetId) {
+                this.subnetId = subnetId;
                 return this;
             }
 

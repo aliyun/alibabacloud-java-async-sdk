@@ -91,7 +91,13 @@ public class AssignLeniPrivateIpAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details about the access denial.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
