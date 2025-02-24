@@ -1909,6 +1909,62 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunGenerateQuestions  RunGenerateQuestionsRequest
+     * @return RunGenerateQuestionsResponse
+     */
+    @Override
+    public CompletableFuture<RunGenerateQuestionsResponse> runGenerateQuestions(RunGenerateQuestionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunGenerateQuestions").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runGenerateQuestions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunGenerateQuestionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunGenerateQuestionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunGenerateQuestionsResponseBody> runGenerateQuestionsWithResponseIterable(RunGenerateQuestionsRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunGenerateQuestions").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runGenerateQuestions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunGenerateQuestionsResponseBodyIterator iterator = RunGenerateQuestionsResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunHotword  RunHotwordRequest
+     * @return RunHotwordResponse
+     */
+    @Override
+    public CompletableFuture<RunHotwordResponse> runHotword(RunHotwordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunHotword").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runHotword").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunHotwordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunHotwordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunHotwordResponseBody> runHotwordWithResponseIterable(RunHotwordRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunHotword").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runHotword").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunHotwordResponseBodyIterator iterator = RunHotwordResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunKeywordsExtractionGeneration  RunKeywordsExtractionGenerationRequest
      * @return RunKeywordsExtractionGenerationResponse
      */

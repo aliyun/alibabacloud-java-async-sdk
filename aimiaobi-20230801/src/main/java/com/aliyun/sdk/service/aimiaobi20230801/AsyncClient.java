@@ -624,6 +624,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunExpandContentResponseBody> runExpandContentWithResponseIterable(RunExpandContentRequest request);
 
     /**
+     * @param request the request parameters of RunGenerateQuestions  RunGenerateQuestionsRequest
+     * @return RunGenerateQuestionsResponse
+     */
+    CompletableFuture<RunGenerateQuestionsResponse> runGenerateQuestions(RunGenerateQuestionsRequest request);
+
+    ResponseIterable<RunGenerateQuestionsResponseBody> runGenerateQuestionsWithResponseIterable(RunGenerateQuestionsRequest request);
+
+    /**
+     * @param request the request parameters of RunHotword  RunHotwordRequest
+     * @return RunHotwordResponse
+     */
+    CompletableFuture<RunHotwordResponse> runHotword(RunHotwordRequest request);
+
+    ResponseIterable<RunHotwordResponseBody> runHotwordWithResponseIterable(RunHotwordRequest request);
+
+    /**
      * @param request the request parameters of RunKeywordsExtractionGeneration  RunKeywordsExtractionGenerationRequest
      * @return RunKeywordsExtractionGenerationResponse
      */
