@@ -2619,7 +2619,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteVSwitch is deprecated  * @param request  the request parameters of DeleteVSwitch  DeleteVSwitchRequest
+     * @deprecated OpenAPI DeleteVSwitch is deprecated, please use Vpc::2016-04-28::DeleteVSwitch instead.  * @param request  the request parameters of DeleteVSwitch  DeleteVSwitchRequest
      * @return DeleteVSwitchResponse
      */
     @Deprecated
@@ -3342,18 +3342,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>  You can specify multiple request parameters such as <code>RegionId</code>, <code>ZoneId</code>, <code>DiskIds</code>, and <code>InstanceId</code> as filters. The specified parameters are evaluated by using the &quot;AND&quot; operator. If you specify more than one filter, the records that match all filters are returned.</p>
      * <ul>
-     * <li>You can specify multiple request parameters such as <code>RegionId</code>, <code>ZoneId</code>, <code>DiskIds</code>, and <code>InstanceId</code> as filters. The specified parameters are evaluated by using the &quot;AND&quot; operator. If you specify more than one filter, the records that match all filters are returned.</li>
-     * <li>The value of <code>DiskIds</code> is a JSON array. If you do not specify DiskIds, the parameter is not used as a filter condition. If you set <code>DiskIds</code> to an empty JSON array, the parameter is regarded as a valid filter, and an empty result is returned.</li>
-     * <li>You can use one of the following methods to check the responses:<ul>
-     * <li>Method 1: Use <code>NextToken</code> to specify the pagination token. Set the value to the <code>NextToken</code> value that is obtained from the previous query. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.</li>
-     * <li>Method 2: Use <code>PageSize</code> to specify the number of entries to return on each page, and then use <code>PageNumber</code> to specify the number of the page to return.
-     * You can use only one of the preceding methods. If a large number of entries are to be returned, we recommend that you use Method 1. If <code>NextToken</code> is specified, <code>PageSize</code> and <code>PageNumber</code> do not take effect and <code>TotalCount</code> in the response is invalid.</li>
-     * </ul>
-     * </li>
+     * <li>The value of <code>DiskIds</code> is a JSON array. If you do not specify DiskIds, the parameter is not used as a filter. If you set <code>DiskIds</code> to an empty JSON array, the parameter is regarded as a valid filter, and an empty result is returned.</li>
+     * <li>Token-based paged query: Use <code>NextToken</code> to configure the query token. Set the value to the <code>NextToken</code> value returned in the previous call to the DescribeDisks operation. Then, use <code>MaxResults</code> to specify the maximum number of entries to return on each page.</li>
      * <li>You can attach a disk for which the multi-attach feature is enabled to multiple instances. You can query the attachment information of the disk based on the <code>Attachment</code> values in the response.
-     * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</li>
+     * When you call the API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in the required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter formats</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeDisks  DescribeDisksRequest
@@ -3430,6 +3424,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeEipMonitorDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeElasticityAssuranceAutoRenewAttribute  DescribeElasticityAssuranceAutoRenewAttributeRequest
+     * @return DescribeElasticityAssuranceAutoRenewAttributeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeElasticityAssuranceAutoRenewAttributeResponse> describeElasticityAssuranceAutoRenewAttribute(DescribeElasticityAssuranceAutoRenewAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeElasticityAssuranceAutoRenewAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeElasticityAssuranceAutoRenewAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeElasticityAssuranceAutoRenewAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6545,6 +6557,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyElasticityAssuranceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyElasticityAssuranceAutoRenewAttribute  ModifyElasticityAssuranceAutoRenewAttributeRequest
+     * @return ModifyElasticityAssuranceAutoRenewAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyElasticityAssuranceAutoRenewAttributeResponse> modifyElasticityAssuranceAutoRenewAttribute(ModifyElasticityAssuranceAutoRenewAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyElasticityAssuranceAutoRenewAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyElasticityAssuranceAutoRenewAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyElasticityAssuranceAutoRenewAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

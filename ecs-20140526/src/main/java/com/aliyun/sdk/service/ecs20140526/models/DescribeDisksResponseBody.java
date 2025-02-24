@@ -103,7 +103,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * <p>The details about the disks.</p>
+         * <p>Details about the disks.</p>
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -122,7 +122,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -133,7 +135,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>

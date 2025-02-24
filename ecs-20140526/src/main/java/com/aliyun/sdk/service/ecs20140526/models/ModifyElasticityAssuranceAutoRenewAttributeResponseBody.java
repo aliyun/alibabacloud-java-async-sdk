@@ -12,19 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RenewDedicatedHostsResponseBody} extends {@link TeaModel}
+ * {@link ModifyElasticityAssuranceAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
- * <p>RenewDedicatedHostsResponseBody</p>
+ * <p>ModifyElasticityAssuranceAutoRenewAttributeResponseBody</p>
  */
-public class RenewDedicatedHostsResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
-
+public class ModifyElasticityAssuranceAutoRenewAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RenewDedicatedHostsResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
+    private ModifyElasticityAssuranceAutoRenewAttributeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -32,15 +28,8 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RenewDedicatedHostsResponseBody create() {
+    public static ModifyElasticityAssuranceAutoRenewAttributeResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
     }
 
     /**
@@ -51,30 +40,18 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
         private String requestId; 
 
         /**
-         * OrderId.
-         */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2A4EA075-CB5B-41B7-B0EB-70D339F6****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RenewDedicatedHostsResponseBody build() {
-            return new RenewDedicatedHostsResponseBody(this);
+        public ModifyElasticityAssuranceAutoRenewAttributeResponseBody build() {
+            return new ModifyElasticityAssuranceAutoRenewAttributeResponseBody(this);
         } 
 
     } 

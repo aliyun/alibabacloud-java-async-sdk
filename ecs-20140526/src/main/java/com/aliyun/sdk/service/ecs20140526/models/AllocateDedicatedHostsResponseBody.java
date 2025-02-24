@@ -20,11 +20,15 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DedicatedHostIdSets")
     private DedicatedHostIdSets dedicatedHostIdSets;
 
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocateDedicatedHostsResponseBody(Builder builder) {
         this.dedicatedHostIdSets = builder.dedicatedHostIdSets;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -44,6 +48,13 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -52,6 +63,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
 
     public static final class Builder {
         private DedicatedHostIdSets dedicatedHostIdSets; 
+        private String orderId; 
         private String requestId; 
 
         /**
@@ -59,6 +71,14 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
          */
         public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
             this.dedicatedHostIdSets = dedicatedHostIdSets;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 

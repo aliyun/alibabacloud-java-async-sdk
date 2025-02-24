@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PurchaseReservedInstancesOfferingResponseBody</p>
  */
 public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     private ReservedInstanceIdSets reservedInstanceIdSets;
 
     private PurchaseReservedInstancesOfferingResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
         this.reservedInstanceIdSets = builder.reservedInstanceIdSets;
     }
@@ -34,6 +38,13 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
 
     public static PurchaseReservedInstancesOfferingResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -51,8 +62,17 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String orderId; 
         private String requestId; 
         private ReservedInstanceIdSets reservedInstanceIdSets; 
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
 
         /**
          * <p>The request ID.</p>

@@ -896,9 +896,9 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -910,9 +910,9 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page.</p>
-         * <p>Maximum value: 100.</p>
-         * <p>Default value: 10.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>NextToken</code> and <code>MaxResults</code> for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
